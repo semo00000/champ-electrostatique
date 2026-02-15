@@ -2347,12 +2347,11 @@ fc=vec4(col,.88);}`;
             // Long-press: delete selected charge after 500ms
             clearTimeout(_longPressTimer);
             _longPressTimer = setTimeout(() => {
-                if (!_touchMoved && S.selected !== null) {
-                    // Haptic feedback if available
+                if (!_touchMoved && S.sel !== null) {
                     if (navigator.vibrate) navigator.vibrate(30);
-                    S.charges.splice(S.selected, 1);
-                    S.selected = null;
-                    markDirty();
+                    S.charges.splice(S.sel, 1);
+                    S.sel = null;
+                    hideEd(); markDirty(); updSt(); initP();
                 }
             }, 500);
 
@@ -2480,7 +2479,7 @@ fc=vec4(col,.88);}`;
         }
     }
 
-    // ═══ MOBILE TOOLBAR ═══
+    // ═══ MOBILE TOOLBAR (robust touch-first approach for Samsung/iOS) ═══
     const mobileToolbar = document.getElementById('mobile-toolbar');
     const btnMobilePanel = document.getElementById('btn-mobile-panel');
     const rightPanel = document.getElementById('right-panel');
@@ -2488,103 +2487,141 @@ fc=vec4(col,.88);}`;
     const mobPresetsBtn = document.getElementById('mob-presets');
     const mobPresetsPopup = document.getElementById('mob-presets-popup');
     const mobDeleteBtn = document.getElementById('mob-delete');
+    const mobPanelClose = document.getElementById('mobile-panel-close');
+    let _mobPanelOpen = false, _mobPresetsOpen = false;
 
+    function openMobilePanel() {
+        if (!rightPanel) return;
+        _mobPanelOpen = true;
+        rightPanel.classList.add('mobile-open');
+        if (btnMobilePanel) btnMobilePanel.classList.add('active');
+        if (mobileBackdrop) mobileBackdrop.classList.add('active');
+        closeMobilePresets();
+    }
     function closeMobilePanel() {
-        if (rightPanel) rightPanel.classList.remove('mobile-open');
+        if (!rightPanel) return;
+        _mobPanelOpen = false;
+        rightPanel.classList.remove('mobile-open');
         if (btnMobilePanel) btnMobilePanel.classList.remove('active');
         if (mobileBackdrop) mobileBackdrop.classList.remove('active');
     }
-
     function closeMobilePresets() {
+        _mobPresetsOpen = false;
         if (mobPresetsPopup) mobPresetsPopup.style.display = 'none';
         if (mobPresetsBtn) mobPresetsBtn.classList.remove('active');
     }
 
+    // Prevent internal panel taps from propagating to backdrop/document
+    if (rightPanel) {
+        rightPanel.addEventListener('touchstart', e => { e.stopPropagation(); }, { passive: true });
+        rightPanel.addEventListener('click', e => { e.stopPropagation(); });
+    }
+    // Same for the presets popup
+    if (mobPresetsPopup) {
+        mobPresetsPopup.addEventListener('touchstart', e => { e.stopPropagation(); }, { passive: true });
+        mobPresetsPopup.addEventListener('click', e => { e.stopPropagation(); });
+    }
+    // Same for mobile toolbar itself
     if (mobileToolbar) {
-        // Mobile tool buttons — map to desktop tool buttons
-        mobileToolbar.querySelectorAll('[data-tool]').forEach(b => b.addEventListener('click', () => {
-            const toolName = b.dataset.tool;
-            // Map mobile tool names to desktop button IDs
-            const toolMap = { pointer: 'tool-pointer', positive: 'tool-positive', negative: 'tool-negative', probe: 'tool-probe' };
-            const toolBtn = document.getElementById(toolMap[toolName]);
-            if (toolBtn) toolBtn.click();
-            mobileToolbar.querySelectorAll('[data-tool]').forEach(x => x.classList.remove('active'));
-            b.classList.add('active');
-            closeMobilePresets();
-        }));
+        mobileToolbar.addEventListener('touchstart', e => { e.stopPropagation(); }, { passive: true });
     }
 
-    // Mobile delete button
+    // Tool buttons — use both touchend AND click for reliability
+    function handleToolTap(b) {
+        const toolName = b.dataset.tool;
+        const toolMap = { pointer: 'tool-pointer', positive: 'tool-positive', negative: 'tool-negative', probe: 'tool-probe' };
+        const toolBtn = document.getElementById(toolMap[toolName]);
+        if (toolBtn) toolBtn.click();
+        if (mobileToolbar) mobileToolbar.querySelectorAll('[data-tool]').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        closeMobilePresets();
+    }
+    if (mobileToolbar) {
+        mobileToolbar.querySelectorAll('[data-tool]').forEach(b => {
+            b.addEventListener('click', e => { e.stopPropagation(); handleToolTap(b); });
+        });
+    }
+
+    // Delete button  
     if (mobDeleteBtn) {
-        mobDeleteBtn.addEventListener('click', () => {
+        mobDeleteBtn.addEventListener('click', e => {
+            e.stopPropagation();
             if (S.sel !== null) {
                 S.charges.splice(S.sel, 1);
                 S.sel = null;
-                hideEd();
-                markDirty();
-                updSt();
-                initP();
+                hideEd(); markDirty(); updSt(); initP();
             }
         });
     }
 
-    // Mobile presets popup
+    // Presets popup toggle
     if (mobPresetsBtn && mobPresetsPopup) {
-        mobPresetsBtn.addEventListener('click', () => {
-            const isOpen = mobPresetsPopup.style.display !== 'none';
-            if (isOpen) {
+        mobPresetsBtn.addEventListener('click', e => {
+            e.stopPropagation();
+            if (_mobPresetsOpen) {
                 closeMobilePresets();
             } else {
+                _mobPresetsOpen = true;
                 mobPresetsPopup.style.display = 'grid';
                 mobPresetsBtn.classList.add('active');
             }
         });
         mobPresetsPopup.querySelectorAll('.mob-preset-item').forEach(item => {
-            item.addEventListener('click', () => {
+            item.addEventListener('click', e => {
+                e.stopPropagation();
                 const preset = item.dataset.preset;
                 if (preset === 'clear') {
-                    S.charges.length = 0; S.selected = null; markDirty();
+                    S.charges.length = 0; S.sel = null; markDirty();
                 } else {
-                    // Find and click the matching desktop preset button
                     const desktopPreset = document.querySelector(`.preset-btn[data-preset="${preset}"]`) || document.getElementById('preset-' + preset);
                     if (desktopPreset) desktopPreset.click();
                 }
                 closeMobilePresets();
             });
         });
-        // Close presets when tapping outside
-        document.addEventListener('click', e => {
-            if (mobPresetsPopup.style.display !== 'none' && !mobPresetsPopup.contains(e.target) && e.target !== mobPresetsBtn && !mobPresetsBtn.contains(e.target)) {
-                closeMobilePresets();
-            }
+    }
+
+    // Panel hamburger toggle  
+    if (btnMobilePanel) {
+        btnMobilePanel.addEventListener('click', e => {
+            e.stopPropagation();
+            if (_mobPanelOpen) closeMobilePanel(); else openMobilePanel();
         });
     }
 
-    // Mobile panel with backdrop
-    if (btnMobilePanel && rightPanel) {
-        btnMobilePanel.addEventListener('click', () => {
-            const isOpen = rightPanel.classList.contains('mobile-open');
-            if (isOpen) {
-                closeMobilePanel();
-            } else {
-                rightPanel.classList.add('mobile-open');
-                btnMobilePanel.classList.add('active');
-                if (mobileBackdrop) mobileBackdrop.classList.add('active');
-                closeMobilePresets();
-            }
-        });
-    }
-
-    // Backdrop tap closes panel
+    // Backdrop tap closes panel — use touchend for instant response
     if (mobileBackdrop) {
-        mobileBackdrop.addEventListener('click', closeMobilePanel);
+        mobileBackdrop.addEventListener('touchend', e => {
+            e.preventDefault(); e.stopPropagation();
+            closeMobilePanel();
+        }, { passive: false });
+        mobileBackdrop.addEventListener('click', e => { e.stopPropagation(); closeMobilePanel(); });
     }
 
-    // Mobile panel close button (✕ inside panel)
-    const mobPanelClose = document.getElementById('mobile-panel-close');
+    // ✕ button inside panel
     if (mobPanelClose) {
-        mobPanelClose.addEventListener('click', closeMobilePanel);
+        mobPanelClose.addEventListener('click', e => { e.stopPropagation(); closeMobilePanel(); });
     }
+
+    // Swipe right to close panel
+    if (rightPanel) {
+        let _swipeX0 = null;
+        rightPanel.addEventListener('touchstart', e => {
+            if (e.touches.length === 1) _swipeX0 = e.touches[0].clientX;
+        }, { passive: true });
+        rightPanel.addEventListener('touchend', e => {
+            if (_swipeX0 !== null && e.changedTouches.length === 1) {
+                const dx = e.changedTouches[0].clientX - _swipeX0;
+                if (dx > 60) closeMobilePanel(); // swiped right → close
+            }
+            _swipeX0 = null;
+        }, { passive: true });
+    }
+
+    // Close presets on any outside tap (document level)
+    document.addEventListener('click', () => {
+        if (_mobPresetsOpen) closeMobilePresets();
+    });
 
     // ═══ ONBOARDING ═══
     const onboarding = document.getElementById('onboarding-overlay');
