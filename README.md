@@ -255,6 +255,15 @@ L'application est entièrement responsive :
 
 ---
 
-## 📄 Licence
+## � Crédits
+
+| Rôle | Nom |
+|:---|:---|
+| **Architecte & Développeur** | Mohammed Nabalssi |
+| **Pilote (Testeur)** | _à compléter_ |
+
+---
+
+## �📄 Licence
 
 Projet éducatif pour l'enseignement de la physique — Bac Sciences Mathématiques.
