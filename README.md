@@ -10,10 +10,13 @@
 
 ### Méthode 1 : Double-clic (Recommandé — Aucune installation requise !)
 1. **Décompresser** le fichier ZIP
-2. **Double-cliquer** sur `Ouvrir.bat` (ou ouvrir `index.html` directement)
+2. **Double-cliquer** sur `Ouvrir.bat`
 3. C'est tout ! La simulation s'ouvre dans votre navigateur
 
-> **Aucun logiciel à installer.** Pas besoin de Node.js, Python, ou serveur. Ça marche directement.
+> **Aucun logiciel à installer.** Pas besoin de Node.js, Python, ou serveur.
+> Le .bat lance un serveur local automatiquement via PowerShell (intégré à Windows).
+> Si Python est détecté, il l'utilise pour plus de rapidité.
+> **Fonctionne 100% hors-ligne** — toutes les dépendances sont bundlées.
 
 ### Méthode 2 : Serveur local (optionnel, pour développeurs)
 ```bash
@@ -25,18 +28,22 @@ Puis ouvrir : **http://localhost:8765**
 
 ## 🏗️ Architecture
 
-| Fichier | Rôle |
+| Fichier / Dossier | Rôle |
 |:---|:---|
+| `Ouvrir.bat` | **Double-cliquer pour lancer** — serveur local auto (PowerShell/Python) |
 | `index.html` | Structure HTML, panneaux UI, overlays (tour, voix, quiz, golf) |
-| `simulation.js` | Moteur de simulation complet (~4500 lignes) : physique, rendu, interactions, toutes les fonctionnalités |
+| `simulation.js` | Moteur de simulation complet (~4700 lignes) : physique, rendu, interactions |
 | `style.css` | Thèmes sombre/clair, animations, responsive, tour CSS |
+| `lib/katex/` | KaTeX bundlé localement (CSS + JS + 20 polices math) — offline |
+| `lib/fonts/` | Polices Inter & JetBrains Mono (woff2) — offline |
 
 **Stack technique :**
 - **WebGL2** — Shader GLSL (fragment) pour le rendu GPU des cartes thermiques (5 modes)
 - **Canvas 2D** — Lignes de champ, particules, arcs, annotations, paysage 3D
 - **Web Speech API** — Contrôle vocal (reconnaissance) + narration TTS (synthèse)
-- **KaTeX** — Formules LaTeX intégrées dans les quiz et expériences guidées
+- **KaTeX** — Formules LaTeX (bundlé localement, fonctionne hors-ligne)
 - **Web Audio API** — Effets sonores, Theremin synésthétique
+- **PowerShell .NET HttpListener** — Serveur local intégré (aucune installation requise)
 
 ---
 
@@ -162,21 +169,23 @@ Au chargement, le système détecte automatiquement :
 
 | Tier | Nom | GPU typique | Particules | Bloom | DPR max | Arcs |
 |:--:|:---|:---|:--:|:--:|:--:|:--:|
-| 0 | **Ultra-Low** | Intel UHD 620, HD 530 | 80 | ✗ | 1.0 | ✗ |
-| 1 | **Low-Mid** | Intel Iris Xe, AMD intégré | 150 | ✓ | 1.5 | ✓ |
+| 0 | **Potato** | Intel UHD 620, HD 530 | 40 | ✗ | 1.0 | ✗ |
+| 1 | **Low-Mid** | Intel Iris Xe, AMD intégré | 150 | ✗ | 1.0 | ✓ |
 | 2 | **Mid-High** | RX 580, GTX 1050, Arc A380 | 300 | ✓ | 2.0 | ✓ |
 | 3 | **Ultra** | RTX 3060+, RX 6700+, Apple M1+ | 500 | ✓ | 3.0 | ✓ |
 
 ### Optimisations par Tier
-- **Tier 0** : Bloom, glow, trails et grille mineure désactivés. Mode performance auto-activé.
-- **Tier 1** : Flux réduit, mode performance auto-activé.
+- **Tier 0 (Potato)** : Bloom, glow, grille mineure, spawn FX désactivés. Cercles plats (pas de dégradés). Euler au lieu de RK4 pour les lignes de champ (4× plus rapide). Frame-skipping des particules. Pas d'animation en idle. DPR 1.0.
+- **Tier 1** : DPR 1.0, glow/grille mineure désactivés. Frame-skipping des particules.
 - **Tier 2** : Tous les effets actifs, paramètres moyens.
 - **Tier 3** : Qualité maximale, tous les effets à pleine résolution.
 
 ### Auto-Adapt FPS
-- Surveillance continue du framerate (toutes les 15 frames)
-- Si FPS bas persistant → désactive automatiquement bloom, arcs, réduit les particules
-- Objectif : maintenir 30+ FPS sur tous les matériels
+- Surveillance continue du framerate (toutes les 10 frames sur low-end)
+- **Mode urgence** : si FPS < 20 → drop immédiat qualité 0 + désactive bloom/arcs + réduit particules
+- Si FPS < 28 pendant 2 cycles → réduit progressivement qualité et particules
+- Détection de scène statique : skip total du rendu quand rien ne bouge
+- Objectif : maintenir 30+ FPS même sur du matériel très ancien
 
 ### Badge GPU
 Le badge « Carte GPU » dans le panneau droit affiche :
@@ -237,10 +246,12 @@ L'application est entièrement responsive :
 
 ## 🔧 Configuration Requise
 
+- **OS** : Windows 7+ (PowerShell inclus)
 - **Navigateur** : Chrome 90+, Edge 90+, Firefox 90+ (WebGL2 requis)
 - **GPU** : Tout GPU compatible WebGL2 (détection automatique du tier)
 - **RAM** : 2 GB minimum
-- **Réseau** : Aucune connexion requise après le premier chargement (sauf KaTeX CDN)
+- **Réseau** : **Aucun !** Tout est bundlé localement (KaTeX, polices, etc.)
+- **Installation** : **Aucune !** Double-cliquer `Ouvrir.bat` et c'est parti
 
 ---
 
