@@ -2097,6 +2097,11 @@ body.light-theme .mob-preset-item { color: #1a202c; background: rgba(0, 0, 0, 0.
 body.light-theme .mob-preset-item:active { background: rgba(0, 119, 182, 0.1); }
 body.light-theme .mobile-backdrop.active { background: rgba(0, 0, 0, 0.2); }
 
+/* Light theme mobile panel solid background */
+@media (max-width: 768px) {
+    body.light-theme #right-panel { background: #f9fafb !important; }
+}
+
 /* Onboarding overlay */
 body.light-theme #onboarding-overlay { background: rgba(0, 0, 0, 0.35); }
 body.light-theme .onboard-card { background: #ffffff; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15); }
@@ -2189,16 +2194,19 @@ body.presentation #app-header:hover { opacity: 1; }
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         overscroll-behavior-y: contain;
-        touch-action: pan-y;
         transform: translateX(100%);
         visibility: hidden;
         pointer-events: none;
         transition: transform 0.3s var(--ease-out), visibility 0s 0.3s;
-        /* Solid background on mobile to prevent touch bleed-through */
-        background: rgba(10, 14, 24, 0.98) !important;
-        backdrop-filter: blur(28px) saturate(1.5);
-        -webkit-backdrop-filter: blur(28px) saturate(1.5);
+        /* Solid opaque background on mobile to block touch bleed-through */
+        background: #0a0e18 !important;
     }
+
+    /* Kill the animated border pseudo-element on mobile panel — it steals taps */
+    #right-panel::before { display: none !important; }
+
+    /* Ensure all panel children are tappable */
+    #right-panel * { pointer-events: auto; }
 
     #right-panel.mobile-open {
         transform: translateX(0);

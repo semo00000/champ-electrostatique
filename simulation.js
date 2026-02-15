@@ -2331,7 +2331,7 @@ fc=vec4(col,.88);}`;
     // ═══ FEATURE 12: MOBILE TOUCH EVENTS ═══
     // ═══════════════════════════════════════════════════════
     let touches = {}, pinchDist = 0;
-    let _longPressTimer = null, _touchMoved = false, _touchStartPos = null;
+    let _touchMoved = false, _touchStartPos = null;
 
     canvas.addEventListener('touchstart', e => {
         e.preventDefault();
@@ -2344,22 +2344,12 @@ fc=vec4(col,.88);}`;
             S.mouse.x = mx; S.mouse.y = my;
             _touchStartPos = { x: mx, y: my };
 
-            // Long-press: delete selected charge after 500ms
-            clearTimeout(_longPressTimer);
-            _longPressTimer = setTimeout(() => {
-                if (!_touchMoved && S.sel !== null) {
-                    if (navigator.vibrate) navigator.vibrate(30);
-                    S.charges.splice(S.sel, 1);
-                    S.sel = null;
-                    hideEd(); markDirty(); updSt(); initP();
-                }
-            }, 500);
-
             // Simulate mousedown
             const evt = new MouseEvent('mousedown', { clientX: t.clientX, clientY: t.clientY, button: 0 });
             canvas.dispatchEvent(evt);
         } else if (e.touches.length === 2) {
-            clearTimeout(_longPressTimer);
+            // Cancel any drag when second finger lands
+            S.drag = null;
             pinchDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
         }
     }, { passive: false });
@@ -2373,16 +2363,14 @@ fc=vec4(col,.88);}`;
             const mx = t.clientX - r.left, my = t.clientY - r.top;
             S.mouse.x = mx; S.mouse.y = my;
 
-            // Cancel long-press if finger moved more than 10px
-            if (_touchStartPos && Math.hypot(mx - _touchStartPos.x, my - _touchStartPos.y) > 10) {
+            // Mark as moved if finger went more than 4px (more sensitive on mobile)
+            if (_touchStartPos && Math.hypot(mx - _touchStartPos.x, my - _touchStartPos.y) > 4) {
                 _touchMoved = true;
-                clearTimeout(_longPressTimer);
             }
 
             const evt = new MouseEvent('mousemove', { clientX: t.clientX, clientY: t.clientY });
             canvas.dispatchEvent(evt);
         } else if (e.touches.length === 2) {
-            clearTimeout(_longPressTimer);
             const newDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
             if (pinchDist > 0) {
                 const scale = newDist / pinchDist;
@@ -2405,9 +2393,9 @@ fc=vec4(col,.88);}`;
 
     canvas.addEventListener('touchend', e => {
         e.preventDefault();
-        clearTimeout(_longPressTimer);
         const evt = new MouseEvent('mouseup', {});
         canvas.dispatchEvent(evt);
+        S.drag = null; // Force-release any drag
         pinchDist = 0;
         touches._panCx = undefined; touches._panCy = undefined;
         _touchStartPos = null;
@@ -2511,9 +2499,9 @@ fc=vec4(col,.88);}`;
         if (mobPresetsBtn) mobPresetsBtn.classList.remove('active');
     }
 
-    // Prevent internal panel taps from propagating to backdrop/document
+    // Prevent panel taps from bubbling to document (which closes presets)
+    // Only stop click propagation — don't interfere with touchstart (Samsung needs it for scrolling/toggles)
     if (rightPanel) {
-        rightPanel.addEventListener('touchstart', e => { e.stopPropagation(); }, { passive: true });
         rightPanel.addEventListener('click', e => { e.stopPropagation(); });
     }
     // Same for the presets popup
