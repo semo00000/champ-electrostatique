@@ -10,18 +10,19 @@
     <meta name="description"
         content="Simulation interactive GPU du champ électrostatique et du potentiel électrique. WebGL2 accelerated, visualisation temps réel pour Bac SM.">
     <meta name="keywords" content="champ électrostatique, potentiel, Coulomb, simulation, physique, WebGL2">
-    <!-- Fonts: loaded from CDN if online, degrades to system fonts if offline -->
+    <!-- Fonts: bundled locally for offline use, CDN fallback if local fails -->
+    <link rel="stylesheet" href="lib/fonts/fonts.css?v=20260215c">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet" onerror="">
-    <link rel="preload" href="simulation.js?v=20260215b" as="script">
-    <!-- KaTeX: optional, for LaTeX formulas in quiz/experiments. Simulation works fully without it -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" onerror="">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous" onerror=""></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onerror=""></script>
-    <link rel="stylesheet" href="style.css?v=20260215b">
+    <link rel="preload" href="simulation.js?v=20260215c" as="script">
+    <!-- KaTeX: bundled locally for offline use, CDN fallback -->
+    <link rel="stylesheet" href="lib/katex/katex.min.css?v=20260215c">
+    <script defer src="lib/katex/katex.min.js?v=20260215c"></script>
+    <script defer src="lib/katex/auto-render.min.js?v=20260215c"></script>
+    <link rel="stylesheet" href="style.css?v=20260215c">
 </head>
 
 <body>
@@ -833,7 +834,7 @@
         <div class="voice-hint">Dites une commande — ex: « ajoute une charge positive »</div>
     </div>
     <div id="voice-toast" class="voice-toast" style="display:none"></div>
-    <script src="simulation.js?v=20260215b"></script>
+    <script src="simulation.js?v=20260215c"></script>
 </body>
 
 </html>
