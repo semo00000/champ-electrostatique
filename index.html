@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#050910">
+    <meta name="color-scheme" content="dark light">
+    <title>Champ Électrostatique — Simulation Interactive GPU</title>
+    <meta name="description"
+        content="Simulation interactive GPU du champ électrostatique et du potentiel électrique. WebGL2 accelerated, visualisation temps réel pour Bac SM.">
+    <meta name="keywords" content="champ électrostatique, potentiel, Coulomb, simulation, physique, WebGL2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="preload" href="simulation.js?v=20260215" as="script">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5RLHO8BIp/8hwC1Cgm83bXEMECKG3vag3BKqfLUoJHvuIZE0xvD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRjXVN7dV4J+BfQk" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css?v=20260215">
+</head>
+
+<body>
+    <!-- ═══════════════ CINEMATIC SPLASH ═══════════════ -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <div class="splash-icon">
+                <svg viewBox="0 0 80 80" width="80" height="80">
+                    <defs>
+                        <linearGradient id="splashGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00e5ff" />
+                            <stop offset="100%" style="stop-color:#aa00ff" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <circle cx="40" cy="40" r="30" fill="none" stroke="url(#splashGrad)" stroke-width="2"
+                        filter="url(#glow)" />
+                    <circle cx="28" cy="40" r="6" fill="#00e5ff" filter="url(#glow)" />
+                    <circle cx="52" cy="40" r="6" fill="#ff006e" filter="url(#glow)" />
+                </svg>
+            </div>
+            <h1 class="splash-title">Champ Électrostatique</h1>
+            <p class="splash-subtitle">Simulation Interactive · GPU Accelerated</p>
+            <div class="splash-bar-track">
+                <div class="splash-bar"></div>
+            </div>
+            <p class="splash-skip" style="margin-top:16px;font-size:11px;opacity:0.4;cursor:pointer;letter-spacing:1px">Cliquer pour passer</p>
+        </div>
+    </div>
+
+    <!-- ═══════════════ HEADER ═══════════════ -->
+    <header id="app-header" role="banner">
+        <div class="header-left">
+            <div class="logo-mark">
+                <svg viewBox="0 0 32 32" width="28" height="28">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00e5ff" />
+                            <stop offset="100%" style="stop-color:#aa00ff" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="16" cy="16" r="14" fill="none" stroke="url(#logoGrad)" stroke-width="2" />
+                    <circle cx="11" cy="16" r="3" fill="#00e5ff" />
+                    <circle cx="21" cy="16" r="3" fill="#ff006e" />
+                </svg>
+            </div>
+            <div class="header-title">
+                <h1>Champ Électrostatique</h1>
+                <span class="header-subtitle">GPU Accelerated · WebGL2</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <button id="btn-lang" class="icon-btn" title="Langue FR/عر">عر</button>
+            <button id="btn-light" class="icon-btn" title="Mode clair (L)">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <path
+                        d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ═══════════════ MAIN LAYOUT ═══════════════ -->
+    <main id="app-main">
+
+        <!-- ──── LEFT TOOLBAR ──── -->
+        <aside id="toolbar" class="glass-panel" role="toolbar" aria-label="Outils de simulation">
+            <div class="toolbar-section">
+                <div class="toolbar-label">Outils</div>
+                <button id="tool-pointer" class="tool-btn active" title="Sélectionner (1)" data-tool="pointer">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z" />
+                    </svg>
+                    <span>Sélection</span>
+                </button>
+                <button id="tool-positive" class="tool-btn" title="Charge positive (2)" data-tool="positive">
+                    <div class="charge-icon positive">+</div>
+                    <span>Charge +</span>
+                </button>
+                <button id="tool-negative" class="tool-btn" title="Charge négative (3)" data-tool="negative">
+                    <div class="charge-icon negative">−</div>
+                    <span>Charge −</span>
+                </button>
+                <button id="tool-probe" class="tool-btn" title="Sonde (4)" data-tool="probe">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    <span>Sonde</span>
+                </button>
+                <button id="tool-testcharge" class="tool-btn" title="Charge test (5)" data-tool="testcharge">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="4" stroke-dasharray="3 2" />
+                        <path d="M12 2v4m0 12v4M2 12h4m12 0h4" />
+                    </svg>
+                    <span>Test q</span>
+                </button>
+                <button id="tool-gauss" class="tool-btn" title="Surface de Gauss (6)" data-tool="gauss">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="9" stroke-dasharray="4 3" />
+                        <path d="M12 3v2m0 14v2M3 12h2m14 0h2" />
+                    </svg>
+                    <span>Gauss</span>
+                </button>
+                <button id="tool-work" class="tool-btn" title="Travail W = q·ΔV (7)" data-tool="work">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 20L20 4" />
+                        <circle cx="4" cy="20" r="2" fill="currentColor" />
+                        <circle cx="20" cy="4" r="2" fill="currentColor" />
+                        <path d="M10 8l2-2 2 2" />
+                    </svg>
+                    <span>Travail W</span>
+                </button>
+                <button id="tool-freecharge" class="tool-btn" title="Charge libre (8)" data-tool="freecharge">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke-dasharray="2 2" />
+                        <path d="M16 12l3 0" stroke-width="2.5" />
+                        <path d="M18 10l2 2-2 2" fill="currentColor" />
+                    </svg>
+                    <span>Charge libre</span>
+                </button>
+            </div>
+
+            <div class="toolbar-divider"></div>
+
+            <div class="toolbar-section">
+                <div class="toolbar-label">Préréglages</div>
+                <button class="preset-btn" data-preset="dipole"><span
+                        class="preset-icon">⊕⊖</span><span>Dipôle</span></button>
+                <button class="preset-btn" data-preset="capacitor"><span
+                        class="preset-icon">║</span><span>Condensateur</span></button>
+                <button class="preset-btn" data-preset="quadrupole"><span
+                        class="preset-icon">⊞</span><span>Quadripôle</span></button>
+                <button class="preset-btn" data-preset="triangle"><span
+                        class="preset-icon">△</span><span>Triangle</span></button>
+                <button class="preset-btn" data-preset="ring"><span
+                        class="preset-icon">◎</span><span>Anneau</span></button>
+                <button class="preset-btn" data-preset="random"><span
+                        class="preset-icon">⚡</span><span>Aléatoire</span></button>
+                <button class="preset-btn" data-preset="faraday"><span class="preset-icon">⊡</span><span>Cage
+                        Faraday</span></button>
+            </div>
+
+            <div class="toolbar-divider"></div>
+
+            <div class="toolbar-section">
+                <div class="toolbar-label">Actions</div>
+                <button id="btn-clear" class="action-btn danger" title="Tout supprimer (C)">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2" />
+                    </svg>
+                    <span>Effacer tout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- ──── CANVAS CONTAINER ──── -->
+        <div id="canvas-container" role="application" aria-label="Zone de simulation du champ électrostatique">
+            <canvas id="gl-canvas"></canvas>
+            <canvas id="sim-canvas"></canvas>
+            <canvas id="annotation-canvas"></canvas>
+
+            <div id="zoom-controls" class="glass-panel">
+                <button id="btn-zoom-out" class="zoom-btn" title="Zoom -">−</button>
+                <span id="zoom-display" class="mono">100%</span>
+                <button id="btn-zoom-in" class="zoom-btn" title="Zoom +">+</button>
+                <button id="btn-zoom-reset" class="zoom-btn" title="Réinitialiser vue">⤾</button>
+            </div>
+
+            <!-- Probe readout -->
+            <div id="probe-readout" class="glass-panel" style="display:none;">
+                <div class="probe-row"><span class="probe-label">Position</span><span id="probe-pos"
+                        class="probe-value mono">(0, 0) m</span></div>
+                <div class="probe-row"><span class="probe-label">|E⃗|</span><span id="probe-e"
+                        class="probe-value mono">0 N/C</span></div>
+                <div class="probe-row"><span class="probe-label">V</span><span id="probe-v" class="probe-value mono">0
+                        V</span></div>
+                <div class="probe-row"><span class="probe-label">Direction</span><span id="probe-dir"
+                        class="probe-value mono">0°</span></div>
+            </div>
+
+            <!-- Gauss readout -->
+            <div id="gauss-readout" class="glass-panel" style="display:none;">
+                <div class="probe-row"
+                    style="border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:5px;margin-bottom:3px">
+                    <span class="probe-label" style="color:#76ff03;font-size:11px">⊘ Théorème de Gauss</span>
+                </div>
+                <div class="probe-row"><span class="probe-label">Φ (flux)</span><span id="gauss-flux"
+                        class="probe-value mono">0</span></div>
+                <div class="probe-row"><span class="probe-label">Q_enc / ε₀</span><span id="gauss-qenc"
+                        class="probe-value mono">0</span></div>
+                <div class="probe-row"><span class="probe-label">Q_enc</span><span id="gauss-q"
+                        class="probe-value mono">0 μC</span></div>
+                <div class="probe-row"><span class="probe-label">Vérification</span><span id="gauss-verify"
+                        class="probe-value mono">—</span></div>
+            </div>
+
+            <!-- Work readout -->
+            <div id="work-readout" class="glass-panel" style="display:none;">
+                <div class="probe-row"
+                    style="border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:5px;margin-bottom:3px">
+                    <span class="probe-label" style="color:#ffab00;font-size:11px">⚡ Travail W = q·ΔV</span>
+                </div>
+                <div class="probe-row"><span class="probe-label">V(A)</span><span id="work-va"
+                        class="probe-value mono">—</span></div>
+                <div class="probe-row"><span class="probe-label">V(B)</span><span id="work-vb"
+                        class="probe-value mono">—</span></div>
+                <div class="probe-row"><span class="probe-label">ΔV = V(B)−V(A)</span><span id="work-dv"
+                        class="probe-value mono">—</span></div>
+                <div class="probe-row"
+                    style="border-top:1px solid rgba(255,255,255,0.06);padding-top:5px;margin-top:3px">
+                    <span class="probe-label">W = q·ΔV</span><span id="work-w" class="probe-value mono"
+                        style="color:#ffab00;font-size:13px">—</span>
+                </div>
+                <div class="probe-row"><span class="probe-label" style="font-size:9px;opacity:0.5">q_test = 1 μC</span>
+                </div>
+            </div>
+
+            <!-- Free charge info -->
+            <div id="freecharge-readout" class="glass-panel" style="display:none;">
+                <div class="probe-row"
+                    style="border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:5px;margin-bottom:3px">
+                    <span class="probe-label" style="color:#69f0ae;font-size:11px">🚀 Charge libre</span>
+                </div>
+                <div class="probe-row"><span class="probe-label">Position</span><span id="fc-pos"
+                        class="probe-value mono">—</span></div>
+                <div class="probe-row"><span class="probe-label">Vitesse</span><span id="fc-vel"
+                        class="probe-value mono">—</span></div>
+                <div class="probe-row"><span class="probe-label">Énergie K</span><span id="fc-ek"
+                        class="probe-value mono">—</span></div>
+                <div class="probe-row"><span class="probe-label">Énergie P</span><span id="fc-ep"
+                    class="probe-value mono">—</span></div>
+                <div class="probe-row"><span class="probe-label">Énergie totale</span><span id="fc-etot"
+                    class="probe-value mono">—</span></div>
+            </div>
+
+            <!-- Charge editor -->
+            <div id="charge-editor" class="glass-panel" style="display:none;">
+                <div class="editor-title">Modifier la charge</div>
+                <div class="editor-row">
+                    <label for="charge-slider">q =</label>
+                    <input type="range" id="charge-slider" min="-10" max="10" step="0.5" value="1">
+                    <span id="charge-value" class="mono">+1.0 μC</span>
+                </div>
+                <div class="editor-row" style="margin-top:4px">
+                    <label for="charge-numeric" style="font-size:10px">Valeur exacte:</label>
+                    <input type="number" id="charge-numeric" min="-10" max="10" step="0.1" value="1"
+                        style="width:70px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:4px;color:#fff;padding:3px 6px;font:11px 'JetBrains Mono'">
+                    <span style="font-size:10px;opacity:0.5">μC</span>
+                </div>
+                <div class="editor-actions">
+                    <button id="btn-delete-charge" class="action-btn danger small">Supprimer</button>
+                    <button id="btn-close-editor" class="action-btn small">Fermer</button>
+                </div>
+            </div>
+
+            <!-- Status bar -->
+            <div id="status-bar">
+                <span id="status-charges">0 charges</span>
+                <span class="status-sep">•</span>
+                <span id="status-fps">60 fps</span>
+                <span class="status-sep">•</span>
+                <span id="status-mode">Lignes de champ</span>
+                <span class="status-sep">•</span>
+                <span id="status-gpu">WebGL2</span>
+            </div>
+        </div>
+
+        <!-- ──── RIGHT PANEL ──── -->
+        <aside id="right-panel" class="glass-panel" role="complementary" aria-label="Panneau de configuration">
+
+            <!-- ── Quick Actions (moved from header) ── -->
+            <div class="panel-section">
+                <div class="panel-header"><h2>Actions rapides</h2></div>
+                <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:4px">
+                    <button id="btn-undo" class="icon-btn" title="Annuler (Ctrl+Z)">↶</button>
+                    <button id="btn-redo" class="icon-btn" title="Rétablir (Ctrl+Y)">↷</button>
+                    <button id="btn-zoomfit" class="icon-btn" title="Zoom ajusté"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 15h18"/></svg></button>
+                    <button id="btn-minimap" class="icon-btn" title="Mini-carte (M)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><rect x="12" y="12" width="8" height="8" rx="1" fill="currentColor" opacity="0.3"/></svg></button>
+                    <button id="btn-fullscreen" class="icon-btn" title="Plein écran (F)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg></button>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:4px">
+                    <button id="btn-save" class="icon-btn" title="Sauvegarder"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg></button>
+                    <button id="btn-load" class="icon-btn" title="Charger"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
+                    <button id="btn-qr" class="icon-btn" title="Partager QR"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="17" y="17" width="4" height="4"/><line x1="14" y1="14" x2="14" y2="17"/></svg></button>
+                    <button id="btn-screenshot" class="icon-btn" title="Capture d'écran (S)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="3"/></svg></button>
+                </div>
+            </div>
+
+            <div class="panel-divider"></div>
+
+            <!-- ── Modes ── -->
+            <div class="panel-section">
+                <div class="panel-header"><h2>Modes</h2></div>
+                <div style="display:flex;flex-wrap:wrap;gap:4px">
+                    <button id="btn-golf" class="icon-btn" title="Electric Golf ⛳" style="font-size:15px">⛳</button>
+                    <button id="btn-quiz" class="icon-btn" title="Mode Quiz"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg></button>
+                    <button id="btn-guide" class="icon-btn" title="Expériences guidées"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></button>
+                    <button id="btn-present" class="icon-btn" title="Mode présentation (P)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></button>
+                    <button id="btn-voice" class="icon-btn" title="Commande vocale (V)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="1" width="6" height="12" rx="3"/><path d="M19 10v1a7 7 0 01-14 0v-1"/><line x1="12" y1="18" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></button>
+                    <button id="btn-tour" class="icon-btn" title="Visite guidée 🎬" style="font-size:14px">🎬</button>
+                </div>
+            </div>
+
+            <div class="panel-divider"></div>
+
+            <div class="panel-section">
+                <div class="panel-header">
+                    <h2>Visualisation</h2>
+                </div>
+                <div class="toggle-group">
+                    <label class="toggle-row"><input type="checkbox" id="viz-fieldlines" checked><span
+                            class="toggle-switch"></span><span class="toggle-label">Lignes de champ</span><span
+                            class="toggle-color" style="background:#00e5ff"></span></label>
+                    <label class="toggle-row"><input type="checkbox" id="viz-particles" checked><span
+                            class="toggle-switch"></span><span class="toggle-label">Particules animées</span><span
+                            class="toggle-color"
+                            style="background:linear-gradient(90deg,#00e5ff,#aa00ff)"></span></label>
+                    <label class="toggle-row"><input type="checkbox" id="viz-vectors"><span
+                            class="toggle-switch"></span><span class="toggle-label">Champ vectoriel</span><span
+                            class="toggle-color" style="background:#76ff03"></span></label>
+                    <label class="toggle-row"><input type="checkbox" id="viz-equipotential"><span
+                            class="toggle-switch"></span><span class="toggle-label">Équipotentielles</span><span
+                            class="toggle-color" style="background:#ffd600"></span></label>
+                    <label class="toggle-row"><input type="checkbox" id="viz-arcs" checked><span
+                            class="toggle-switch"></span><span class="toggle-label">Arcs électriques</span><span
+                            class="toggle-color" style="background:#88ddff"></span></label>
+                    <label class="toggle-row"><input type="checkbox" id="viz-bloom" checked><span
+                            class="toggle-switch"></span><span class="toggle-label">Effet bloom</span><span
+                            class="toggle-color" style="background:rgba(255,255,255,0.8)"></span></label>
+                    <label class="toggle-row"><input type="checkbox" id="viz-forces"><span
+                            class="toggle-switch"></span><span class="toggle-label">Forces Coulomb</span><span
+                            class="toggle-color" style="background:#ff8800"></span></label>
+                    <label class="toggle-row"><input type="checkbox" id="viz-landscape"><span
+                            class="toggle-switch"></span><span class="toggle-label">Paysage 3D</span><span
+                            class="toggle-color"
+                            style="background:linear-gradient(90deg,#0055ff,#aa00ff,#ff4400)"></span></label>
+                        <label class="toggle-row"><input type="checkbox" id="viz-superposition"><span
+                            class="toggle-switch"></span><span class="toggle-label">Superposition</span><span
+                            class="toggle-color" style="background:#ffffff"></span></label>
+                </div>
+            </div>
+
+            <div class="panel-divider"></div>
+
+            <div class="panel-section">
+                <div class="panel-header">
+                    <h2>Carte GPU</h2><span class="gpu-badge" title="Détection automatique">WebGL2</span>
+                </div>
+                <div class="toggle-group">
+                    <label class="toggle-row"><input type="radio" name="heatmap-mode" id="heatmap-off" value="0"
+                            checked><span class="radio-dot"></span><span class="toggle-label">Désactivée</span></label>
+                    <label class="toggle-row"><input type="radio" name="heatmap-mode" id="heatmap-potential"
+                            value="1"><span class="radio-dot"></span><span class="toggle-label">Potentiel V</span><span
+                            class="toggle-color"
+                            style="background:linear-gradient(90deg,#0055ff,#000,#ff4400)"></span></label>
+                    <label class="toggle-row"><input type="radio" name="heatmap-mode" id="heatmap-fieldmag"
+                            value="2"><span class="radio-dot"></span><span class="toggle-label">Magnitude
+                            |E⃗|</span><span class="toggle-color"
+                            style="background:linear-gradient(90deg,#110022,#aa00ff,#ffffff)"></span></label>
+                    <label class="toggle-row"><input type="radio" name="heatmap-mode" id="heatmap-direction"
+                            value="3"><span class="radio-dot"></span><span class="toggle-label">Direction E⃗</span><span
+                            class="toggle-color"
+                            style="background:linear-gradient(90deg,#ff0000,#ffff00,#00ff00,#00ffff,#0000ff,#ff00ff,#ff0000);border-radius:3px"></span></label>
+                </div>
+            </div>
+
+            <div class="panel-divider"></div>
+
+            <div class="panel-section">
+                <div class="panel-header">
+                    <h2>Paramètres</h2>
+                </div>
+                <div class="slider-group">
+                    <div class="slider-row"><label>Qualité</label><input type="range" id="setting-quality" min="0"
+                            max="3" value="2" step="1"><span id="val-quality" class="mono">Haute</span></div>
+                    <div class="slider-row"><label>Vitesse anim.</label><input type="range" id="setting-speed" min="0.2"
+                            max="3" value="1" step="0.1"><span id="val-speed" class="mono">1.0×</span></div>
+                    <div class="slider-row"><label>Densité lignes</label><input type="range" id="setting-density"
+                            min="4" max="32" value="16" step="2"><span id="val-density" class="mono">16</span></div>
+                    <div class="slider-row"><label>Particules</label><input type="range" id="setting-particles" min="50"
+                            max="800" value="300" step="25"><span id="val-particles" class="mono">300</span></div>
+                    <div class="slider-row"><label>Grille vecteurs</label><input type="range" id="setting-arrows"
+                            min="8" max="40" value="20" step="2"><span id="val-arrows" class="mono">20</span></div>
+                </div>
+                <label class="toggle-row" style="margin-top:6px"><input type="checkbox" id="setting-autoadapt"
+                        checked><span class="toggle-switch"></span><span class="toggle-label">Auto-adapt
+                        FPS</span></label>
+                <label class="toggle-row" style="margin-top:6px"><input type="checkbox" id="setting-perfmode"><span
+                    class="toggle-switch"></span><span class="toggle-label">Mode performance (PC anciens)</span></label>
+                <label class="toggle-row" style="margin-top:6px"><input type="checkbox" id="setting-snap"><span
+                    class="toggle-switch"></span><span class="toggle-label">Grille magnétique</span></label>
+                <label class="toggle-row" style="margin-top:6px"><input type="checkbox" id="setting-sound"><span
+                    class="toggle-switch"></span><span class="toggle-label">Effets sonores</span></label>
+                <label class="toggle-row" style="margin-top:6px"><input type="checkbox" id="setting-mirror"><span
+                    class="toggle-switch"></span><span class="toggle-label">Plan miroir (terre)</span></label>
+                <label class="toggle-row" style="margin-top:6px"><input type="checkbox" id="setting-fieldflow"><span
+                    class="toggle-switch"></span><span class="toggle-label">Flux animé ⟶</span></label>
+                <label class="toggle-row" style="margin-top:6px"><input type="checkbox" id="setting-chromatic"><span
+                    class="toggle-switch"></span><span class="toggle-label">🌀 Distorsion chromatique</span></label>
+                <label class="toggle-row" style="margin-top:6px"><input type="checkbox" id="setting-theremin"><span
+                    class="toggle-switch"></span><span class="toggle-label">🔊 Theremin audio</span></label>
+            </div>
+
+            <div class="panel-divider"></div>
+
+            <div class="panel-section">
+                <div class="panel-header">
+                    <h2>Physique</h2>
+                </div>
+                <div class="physics-readout">
+                    <div class="readout-row"><span class="readout-label">Énergie</span><span id="readout-energy"
+                            class="readout-value mono">0 J</span></div>
+                    <div class="readout-row"><span class="readout-label">Charge totale</span><span id="readout-totalq"
+                            class="readout-value mono">0 μC</span></div>
+                </div>
+            </div>
+
+            <!-- Coulomb Law Panel (auto-appears with 2 charges) -->
+            <div id="coulomb-panel" style="display:none;">
+                <div class="panel-divider"></div>
+                <div class="panel-section">
+                    <div class="panel-header">
+                        <h2>Loi de Coulomb</h2>
+                    </div>
+                    <div class="physics-readout">
+                        <div class="readout-row"><span class="readout-label">q₁</span><span id="coulomb-q1"
+                                class="readout-value mono">—</span></div>
+                        <div class="readout-row"><span class="readout-label">q₂</span><span id="coulomb-q2"
+                                class="readout-value mono">—</span></div>
+                        <div class="readout-row"><span class="readout-label">r</span><span id="coulomb-r"
+                                class="readout-value mono">—</span></div>
+                        <div class="readout-row"
+                            style="border-top:1px solid rgba(255,255,255,0.06);padding-top:4px;margin-top:4px">
+                            <span class="readout-label" style="color:#ff8800;font-weight:700">F = k|q₁q₂|/r²</span>
+                            <span id="coulomb-f" class="readout-value mono"
+                                style="color:#ff8800;font-size:13px">—</span>
+                        </div>
+                        <div id="coulomb-derivation" style="padding:4px 0;border-top:1px solid rgba(255,255,255,0.04);margin-top:4px"></div>
+                        <div class="readout-row"><span class="readout-label"
+                                style="font-size:9px;opacity:0.5">Attractive / Répulsive</span>
+                            <span id="coulomb-type" class="readout-value mono" style="font-size:9px">—</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capacitor overlay panel -->
+            <div id="capacitor-panel" style="display:none;">
+                <div class="panel-divider"></div>
+                <div class="panel-section">
+                    <div class="panel-header">
+                        <h2>Champ uniforme</h2>
+                    </div>
+                    <div class="physics-readout">
+                        <div class="readout-row"><span class="readout-label">ΔV</span><span id="cap-dv"
+                                class="readout-value mono">—</span></div>
+                        <div class="readout-row"><span class="readout-label">d (distance)</span><span id="cap-d"
+                                class="readout-value mono">—</span></div>
+                        <div class="readout-row"
+                            style="border-top:1px solid rgba(255,255,255,0.06);padding-top:4px;margin-top:4px">
+                            <span class="readout-label" style="color:#4fc3f7;font-weight:700">E = ΔV/d</span>
+                            <span id="cap-e" class="readout-value mono" style="color:#4fc3f7;font-size:13px">—</span>
+                        </div>
+                        <div class="readout-row"><span class="readout-label">C (capacité)</span><span id="cap-c"
+                                class="readout-value mono">—</span></div>
+                        <div class="readout-row"><span class="readout-label">U = ½CV²</span><span id="cap-u"
+                                class="readout-value mono">—</span></div>
+                        <div class="readout-row"><span class="readout-label">σ (densité)</span><span id="cap-sigma"
+                                class="readout-value mono">—</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-divider"></div>
+
+            <div class="panel-section formulas-section">
+                <div class="panel-header">
+                    <h2>Formules</h2>
+                </div>
+                <div class="formula-card">
+                    <div class="formula-name">Loi de Coulomb</div>
+                    <div class="formula-latex"></div>
+                </div>
+                <div class="formula-card">
+                    <div class="formula-name">Champ électrique</div>
+                    <div class="formula-latex"></div>
+                </div>
+                <div class="formula-card">
+                    <div class="formula-name">Potentiel électrique</div>
+                    <div class="formula-latex"></div>
+                </div>
+                <div class="formula-card">
+                    <div class="formula-name">Travail de la force</div>
+                    <div class="formula-latex"></div>
+                </div>
+                <div class="formula-card">
+                    <div class="formula-name">Champ uniforme</div>
+                    <div class="formula-latex"></div>
+                </div>
+                <div class="formula-card">
+                    <div class="formula-name">Énergie potentielle</div>
+                    <div class="formula-latex"></div>
+                </div>
+                <div class="formula-card">
+                    <div class="formula-name">Théorème de Gauss</div>
+                    <div class="formula-latex"></div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- ═══════════ MODALS & OVERLAYS ═══════════ -->
+
+    <!-- Save/Load Modal -->
+    <div id="modal-saveload" class="modal-overlay" style="display:none">
+        <div class="modal-box glass-panel">
+            <h3 class="modal-title">💾 Sauvegarder / Charger</h3>
+            <div class="save-slots" id="save-slots"></div>
+            <div class="modal-actions">
+                <button id="btn-save-file" class="modal-btn">📥 Télécharger JSON</button>
+                <label class="modal-btn">📤 Importer JSON<input type="file" id="btn-load-file" accept=".json"
+                        style="display:none"></label>
+                <button class="modal-btn modal-close">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Modal -->
+    <div id="modal-qr" class="modal-overlay" style="display:none">
+        <div class="modal-box glass-panel">
+            <h3 class="modal-title">📱 Partager la configuration</h3>
+            <p style="font-size:12px;color:var(--text-secondary);margin:8px 0">Copiez le lien ci-dessous pour partager votre configuration :</p>
+            <input id="qr-url" class="qr-url-input" readonly>
+            <div class="modal-actions">
+                <button id="btn-copy-url" class="modal-btn">📋 Copier le lien</button>
+                <button id="btn-export-csv" class="modal-btn">📊 Exporter CSV</button>
+                <button class="modal-btn modal-close">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Potential Profile Panel -->
+    <div id="profile-panel" class="glass-panel"
+        style="display:none;position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:20;width:480px;padding:12px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <span style="font-size:11px;font-weight:700;color:var(--text-accent)">Profil V(x) & |E|(x)</span>
+            <div style="display:flex;gap:6px;align-items:center">
+                <button id="profile-csv" class="icon-btn" title="Exporter CSV" style="font-size:11px;padding:2px 8px">📊 CSV</button>
+                <button id="profile-close"
+                    style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:14px">✕</button>
+            </div>
+        </div>
+        <canvas id="profile-canvas" width="460" height="140"
+            style="width:100%;height:140px;border-radius:6px;background:rgba(0,0,0,0.3)"></canvas>
+    </div>
+
+    <!-- Quiz Panel -->
+    <div id="quiz-panel"
+        style="display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px)">
+        <div class="glass-panel"
+            style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:420px;padding:24px">
+            <h3 id="quiz-title" style="font-size:16px;margin-bottom:16px;color:var(--text-accent)"></h3>
+            <p id="quiz-question" style="font-size:14px;margin-bottom:16px;line-height:1.5"></p>
+            <div id="quiz-choices" style="display:flex;flex-direction:column;gap:8px"></div>
+            <div id="quiz-feedback" style="margin-top:12px;font-weight:600;font-size:13px"></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px">
+                <span id="quiz-score" class="mono" style="color:var(--accent-green)"></span>
+                <div style="display:flex;gap:8px">
+                    <button id="quiz-next" class="modal-btn" style="display:none">Suivant →</button>
+                    <button id="quiz-close" class="modal-btn">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guided Experiment Panel -->
+    <div id="guide-panel"
+        style="display:none;position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:20">
+        <div class="glass-panel" style="width:500px;padding:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+                <span id="guide-title" style="font-size:13px;font-weight:700;color:var(--accent-green)"></span>
+                <button id="guide-close"
+                    style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:14px">✕</button>
+            </div>
+            <div id="guide-step-indicator" style="display:flex;gap:6px;margin-bottom:10px"></div>
+            <p id="guide-instruction" style="font-size:13px;line-height:1.5;margin-bottom:12px"></p>
+            <div style="display:flex;justify-content:flex-end;gap:8px">
+                <button id="guide-prev" class="modal-btn" style="display:none">← Précédent</button>
+                <button id="guide-next" class="modal-btn">Suivant →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Annotation Toolbar -->
+    <div id="annotation-bar"
+        style="display:none;position:absolute;top:60px;left:50%;transform:translateX(-50%);z-index:30">
+        <div class="glass-panel" style="display:flex;gap:4px;padding:6px 10px">
+            <button class="ann-btn active" data-ann="pen" title="Stylo">✏️</button>
+            <button class="ann-btn" data-ann="arrow" title="Flèche">➡️</button>
+            <button class="ann-btn" data-ann="text" title="Texte">Aa</button>
+            <button class="ann-btn" data-ann="eraser" title="Effacer">🧹</button>
+            <input type="color" id="ann-color" value="#ff4444"
+                style="width:24px;height:24px;border:none;border-radius:4px;cursor:pointer">
+            <button class="ann-btn" data-ann="clear" title="Tout effacer">🗑️</button>
+            <button class="ann-btn" data-ann="close" title="Fermer">✕</button>
+        </div>
+    </div>
+
+    <!-- Guide Experiment Selector -->
+    <div id="guide-selector" class="modal-overlay" style="display:none">
+        <div class="modal-box glass-panel">
+            <h3 class="modal-title">📖 Expériences Guidées</h3>
+            <div style="display:flex;flex-direction:column;gap:8px;margin:16px 0">
+                <button class="modal-btn guide-start-btn" data-guide="dipole">🔬 Exp. 1 : Explorer le dipôle</button>
+                <button class="modal-btn guide-start-btn" data-guide="coulomb">⚡ Exp. 2 : Loi de Coulomb</button>
+                <button class="modal-btn guide-start-btn" data-guide="capacitor">🔋 Exp. 3 : Condensateur — champ
+                    uniforme</button>
+            </div>
+            <div class="modal-actions"><button class="modal-btn modal-close">Fermer</button></div>
+        </div>
+    </div>
+
+    <input type="file" id="load-file-input" accept=".json" style="display:none">
+
+    <!-- ═══════════════ MOBILE BOTTOM TOOLBAR ═══════════════ -->
+    <nav id="mobile-toolbar" aria-label="Outils mobiles">
+        <button class="mob-tool-btn" data-tool="move" title="Déplacer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 9l-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3M2 12h20M12 2v20"/></svg>
+        </button>
+        <button class="mob-tool-btn" data-tool="add" title="Ajouter charge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        </button>
+        <button class="mob-tool-btn" data-tool="measure" title="Mesurer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"/><path d="M6 8v8"/><path d="M18 8v8"/><path d="M10 10v4"/><path d="M14 10v4"/></svg>
+        </button>
+        <button class="mob-tool-btn" data-tool="profile" title="Profil V(x)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>
+        </button>
+        <button id="btn-mobile-panel" class="mob-tool-btn" title="Panneau">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+        </button>
+    </nav>
+
+    <!-- ═══════════════ ONBOARDING OVERLAY ═══════════════ -->
+    <div id="onboarding-overlay" style="display:none">
+        <div class="onboard-card glass-panel">
+            <h3 style="margin:0 0 12px;font-size:16px;font-weight:700;color:var(--text-accent)">🎓 Bienvenue !</h3>
+            <div class="onboard-tip active" data-step="0">
+                <p style="margin:0;font-size:13px;line-height:1.5">
+                    <strong>Cliquer</strong> sur le canevas pour ajouter des charges.<br>
+                    <strong>Glisser</strong> une charge pour la déplacer.<br>
+                    <strong>Clic droit</strong> pour supprimer.
+                </p>
+            </div>
+            <div class="onboard-tip" data-step="1">
+                <p style="margin:0;font-size:13px;line-height:1.5">
+                    Utilisez les <strong>préréglages</strong> en bas pour explorer des configurations : dipôle, condensateur, quadrupôle…
+                </p>
+            </div>
+            <div class="onboard-tip" data-step="2">
+                <p style="margin:0;font-size:13px;line-height:1.5">
+                    Le <strong>panneau latéral</strong> contrôle les visualisations : champ vectoriel, lignes de champ, équipotentielles, particules…
+                </p>
+            </div>
+            <div class="onboard-tip" data-step="3">
+                <p style="margin:0;font-size:13px;line-height:1.5">
+                    <strong>Raccourcis :</strong> Z/Ctrl+Z undo · Y/Ctrl+Y redo · Espace pause/play · S sauvegarder · Tab afficher les vecteurs
+                </p>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px">
+                <span class="onboard-dots"></span>
+                <div style="display:flex;gap:8px">
+                    <button class="onboard-skip" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:12px">Passer</button>
+                    <button class="onboard-next modal-btn" style="font-size:12px;padding:5px 16px">Suivant →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ COMMAND PALETTE ═══════════ -->
+    <div id="command-palette" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.45);backdrop-filter:blur(4px)">
+        <div class="cmd-palette-box glass-panel" style="position:absolute;top:18%;left:50%;transform:translateX(-50%);width:440px;max-width:92vw;border-radius:var(--radius-lg);overflow:hidden">
+            <input id="cmd-input" type="text" placeholder="Tapez une commande…" autocomplete="off"
+                style="width:100%;padding:14px 18px;border:none;border-bottom:1px solid var(--border-glass);background:transparent;color:var(--text-primary);font-size:15px;font-family:inherit;outline:none">
+            <div id="cmd-results" style="max-height:320px;overflow-y:auto;padding:6px 0"></div>
+        </div>
+    </div>
+
+    <!-- ═══════════ KEYBOARD SHORTCUTS OVERLAY ═══════════ -->
+    <div id="shortcuts-overlay" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px)">
+        <div class="glass-panel" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:520px;max-width:94vw;max-height:85vh;overflow-y:auto;padding:24px;border-radius:var(--radius-lg)">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+                <h3 style="font-size:16px;color:var(--text-accent)">⌨️ Raccourcis clavier</h3>
+                <button id="shortcuts-close" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:18px">✕</button>
+            </div>
+            <div id="shortcuts-list" style="display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:12px"></div>
+        </div>
+    </div>
+
+    <!-- ═══════════ MINIMAP ═══════════ -->
+    <div id="minimap" style="display:none;position:absolute;bottom:42px;right:8px;z-index:30;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--border-glass-bright);box-shadow:var(--shadow-md)">
+        <canvas id="minimap-canvas" width="160" height="120" style="display:block;background:rgba(0,0,0,0.6)"></canvas>
+    </div>
+
+    <!-- ═══════════ CONFETTI CANVAS ═══════════ -->
+    <canvas id="confetti-canvas" style="position:fixed;inset:0;z-index:9999;pointer-events:none;display:none" width="800" height="600"></canvas>
+
+    <!-- ═══════════ THEREMIN INDICATOR ═══════════ -->
+    <div id="theremin-indicator" style="display:none;position:absolute;bottom:42px;left:50%;transform:translateX(-50%);z-index:35;background:rgba(5,9,20,0.85);backdrop-filter:blur(8px);border:1px solid rgba(0,229,255,0.15);border-radius:10px;padding:8px 16px;min-width:200px;font-size:11px;color:var(--text-secondary)">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+            <span style="font-size:14px">🔊</span>
+            <span style="color:var(--text-accent);font-weight:600;font-size:12px">Theremin</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px">
+            <span style="width:32px;font-size:10px;opacity:0.5">V→Hz</span>
+            <div style="flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden">
+                <div id="theremin-freq" style="height:100%;width:50%;background:linear-gradient(90deg,#00e5ff,#aa00ff);border-radius:2px;transition:width 0.08s"></div>
+            </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+            <span style="width:32px;font-size:10px;opacity:0.5">|E|→dB</span>
+            <div style="flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden">
+                <div id="theremin-vol" style="height:100%;width:0%;background:linear-gradient(90deg,#76ff03,#ffd600);border-radius:2px;transition:width 0.08s"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ GOLF HUD ═══════════ -->
+    <div id="golf-hud" style="display:none;position:absolute;top:52px;left:50%;transform:translateX(-50%);z-index:40;flex-direction:column;align-items:center;gap:6px;pointer-events:none">
+        <div style="display:flex;gap:12px;align-items:center;background:rgba(5,9,20,0.9);backdrop-filter:blur(10px);border:1px solid rgba(118,255,3,0.2);border-radius:12px;padding:8px 18px;pointer-events:auto">
+            <span id="golf-level-name" style="font-weight:700;color:#76ff03;font-size:13px"></span>
+            <span id="golf-par" style="font-size:11px;color:var(--text-muted)"></span>
+            <span id="golf-attempts" style="font-size:11px;color:var(--text-muted)"></span>
+            <span id="golf-charges-left" style="font-size:11px;color:var(--text-accent);transition:color 0.3s"></span>
+        </div>
+        <div id="golf-instructions" style="font-size:11px;color:rgba(255,255,255,0.5);text-align:center;max-width:400px"></div>
+        <div style="display:flex;gap:8px;pointer-events:auto">
+            <button id="golf-launch" class="golf-action-btn golf-launch-btn">🚀 Lancer</button>
+            <button id="golf-reset" class="golf-action-btn">🔄 Reset</button>
+            <button id="golf-quit" class="golf-action-btn golf-quit-btn">✕ Quitter</button>
+        </div>
+    </div>
+
+    <!-- ═══════════ GOLF LEVEL SELECTOR ═══════════ -->
+    <div id="golf-selector" class="modal-overlay" style="display:none">
+        <div class="modal-box glass-panel" style="max-width:480px">
+            <h2 class="modal-title" style="display:flex;align-items:center;gap:8px">⛳ Electric Golf <span style="font-size:12px;font-weight:400;opacity:0.5">Guidez la charge !</span></h2>
+            <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px">Placez des charges statiques pour courber la trajectoire de la balle vers le trou. Ressentez $F = qE$ intuitivement !</p>
+            <div id="golf-levels" style="display:flex;flex-direction:column;gap:8px"></div>
+            <button class="modal-close" id="golf-selector-close" style="margin-top:12px">Fermer</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const formulas = [
+                "F = k \\frac{|q_1 \\cdot q_2|}{r^2}",
+                "\\vec{E} = k \\sum_i \\frac{q_i}{r_i^{\\,2}}\\,\\hat{r}_i",
+                "V = k \\sum_i \\frac{q_i}{r_i}",
+                "W = q\\,\\Delta V = q\\,(V_B - V_A)",
+                "E = \\frac{\\Delta V}{d}",
+                "U = k \\sum_{i<j} \\frac{q_i\\,q_j}{r_{ij}}",
+                "\\Phi = \\oint \\vec{E}\\cdot d\\vec{A} = \\frac{Q_{\\text{enc}}}{\\varepsilon_0}"
+            ];
+            document.querySelectorAll(".formula-latex").forEach(function (el, i) {
+                if (formulas[i]) {
+                    katex.render(formulas[i], el, { displayMode: true, throwOnError: false });
+                }
+            });
+        });
+    </script>
+    <!-- ═══════════ AUTO-TOUR ═══════════ -->
+    <div id="tour-overlay" style="display:none">
+        <div id="tour-spotlight"></div>
+        <div id="tour-card">
+            <div id="tour-step-label"></div>
+            <div id="tour-title"></div>
+            <div id="tour-desc"></div>
+            <div id="tour-progress-track"><div id="tour-progress-bar"></div></div>
+            <div id="tour-controls">
+                <button id="tour-skip">Passer le tour ✕</button>
+                <button id="tour-next">Suivant →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Voice Command Overlay -->
+    <div id="voice-overlay" class="voice-overlay" style="display:none">
+        <div class="voice-ring">
+            <div class="voice-ring-inner"></div>
+            <svg class="voice-mic-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="1" width="6" height="12" rx="3"/><path d="M19 10v1a7 7 0 01-14 0v-1"/><line x1="12" y1="18" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        </div>
+        <div id="voice-status" class="voice-status">En écoute…</div>
+        <div id="voice-transcript" class="voice-transcript"></div>
+        <div id="voice-action" class="voice-action"></div>
+        <div class="voice-hint">Dites une commande — ex: « ajoute une charge positive »</div>
+    </div>
+    <div id="voice-toast" class="voice-toast" style="display:none"></div>
+    <script src="simulation.js?v=20260215"></script>
+</body>
+
+</html>
