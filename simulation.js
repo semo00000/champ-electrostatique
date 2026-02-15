@@ -2511,9 +2511,53 @@ fc=vec4(col,.88);}`;
             if (numericInput && S.sel !== null) numericInput.value = S.charges[S.sel].q;
         });
     }
-    // Splash: auto-dismiss after 3s or click to skip
+    // Credits screen: shows before splash, auto-dismiss after 4.5s or click
+    const _credits = document.getElementById('credits-screen');
     const _splash = document.getElementById('splash-screen');
-    if (_splash) {
+    if (_credits) {
+        // Spawn floating particles
+        const particlesContainer = document.getElementById('credits-particles');
+        if (particlesContainer) {
+            for (let i = 0; i < 30; i++) {
+                const p = document.createElement('div');
+                p.className = 'credits-particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.top = Math.random() * 100 + '%';
+                p.style.animationDelay = (Math.random() * 5) + 's';
+                p.style.animationDuration = (4 + Math.random() * 4) + 's';
+                if (Math.random() > 0.5) p.style.background = 'rgba(124, 77, 255, 0.5)';
+                particlesContainer.appendChild(p);
+            }
+        }
+        const dismissCredits = () => {
+            if (_credits.classList.contains('credits-out')) return;
+            _credits.classList.add('credits-out');
+            // Show splash after credits fade
+            if (_splash) {
+                _splash.style.display = 'flex';
+                _splash.style.animation = 'none'; // reset the auto-dismiss timer
+                void _splash.offsetWidth; // force reflow
+                _splash.style.animation = 'splashOut 0.8s var(--ease-out) 3s forwards';
+            }
+            setTimeout(() => {
+                _credits.remove();
+                // Now set up splash dismiss
+                if (_splash) {
+                    const dismissSplash = () => { _splash.classList.add('splash-out'); setTimeout(() => _splash.remove(), 400); };
+                    _splash.addEventListener('click', dismissSplash);
+                    _splash.addEventListener('keydown', dismissSplash);
+                    setTimeout(dismissSplash, 3000);
+                }
+            }, 800);
+        };
+        _credits.addEventListener('click', dismissCredits);
+        document.addEventListener('keydown', function _creditsKey(e) {
+            dismissCredits();
+            document.removeEventListener('keydown', _creditsKey);
+        });
+        setTimeout(dismissCredits, 4500);
+    } else if (_splash) {
+        // Fallback if no credits screen
         const dismissSplash = () => { _splash.classList.add('splash-out'); setTimeout(() => _splash.remove(), 400); };
         _splash.addEventListener('click', dismissSplash);
         _splash.addEventListener('keydown', dismissSplash);
@@ -4654,7 +4698,7 @@ fc=vec4(col,.88);}`;
     if (!localStorage.getItem('esim_toured')) {
         setTimeout(() => {
             startTour();
-        }, 3800); // After splash screen (3s + buffer)
+        }, 8500); // After credits (4.5s) + splash (3s) + buffer
     }
 
     // Add tour button and command palette entry
