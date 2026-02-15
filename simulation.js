@@ -115,23 +115,25 @@
             isLaptop,
             cores,
             memory,
-            // Tier-dependent defaults
-            particleDefault:  [80,  150,  300,  500][tier],
-            bloomDownscale:   [12,   8,    5,    3][tier],
-            gaussSamples:     [60,  100,  200,  280][tier],
-            fieldSteps:       [250, 380,  600,  800][tier],
+            // Tier-dependent defaults (tier 0 = 🥔 ultimate potato mode)
+            particleDefault:  [40,  120,  300,  500][tier],
+            bloomDownscale:   [16,   8,    5,    3][tier],
+            gaussSamples:     [40,  100,  200,  280][tier],
+            fieldSteps:       [180, 350,  600,  800][tier],
             maxChargesGPU:    [8,   16,   32,   32][tier],
-            arrowGrid:        [12,  16,   20,   28][tier],
-            density:          [10,  14,   16,   20][tier],
-            trailLen:         [6,   10,   16,   20][tier],
-            arcDepth:         [3,    4,    5,    6][tier],
-            arcFreq:          [20,  12,    4,    2][tier],
-            dprCap:           [1, 1.5,    2,    3][tier],     // devicePixelRatio cap
-            skipMinorGrid:    tier <= 0,
+            arrowGrid:        [8,   14,   20,   28][tier],
+            density:          [6,   12,   16,   20][tier],
+            trailLen:         [4,    8,   16,   20][tier],
+            arcDepth:         [2,    3,    5,    6][tier],
+            arcFreq:          [30,  15,    4,    2][tier],
+            dprCap:           [1,    1,    2,    3][tier],     // devicePixelRatio cap
+            skipMinorGrid:    tier <= 1,
             skipBloom:        tier <= 0,
-            skipGlow:         tier <= 0,
+            skipGlow:         tier <= 1,
             skipTrails:       tier <= 0,
             reducedFieldFlow: tier <= 1,
+            skipAnimEmptyState: tier <= 0,  // skip pulsing empty state animation
+            skipSpawnFX:      tier <= 0,    // skip particle burst on charge placement
         };
 
         // Log detection results — styled console banner
@@ -281,18 +283,33 @@ fc=vec4(col,.88);}`;
     function debouncedResize() { cancelAnimationFrame(resizeRAF); resizeRAF = requestAnimationFrame(resize); }
     window.addEventListener('resize', debouncedResize); resize();
 
-    // ═══ PHYSICS ═══
+    // ═══ PHYSICS (hot path — fully inlined, zero alloc) ═══
+    // Reusable result objects to avoid GC pressure
+    const _ef = { x: 0, y: 0 };
     function eF(x, y) {
-        let ex = 0, ey = 0; for (const c of S.charges) {
-            const dx = x - c.x, dy = y - c.y, r2 = dx * dx + dy * dy, r = Math.sqrt(r2);
-            if (r < MR) continue; const e = K * c.q * MU / r2; ex += e * dx / r; ey += e * dy / r;
-        } return { x: ex, y: ey };
+        let ex = 0, ey = 0;
+        const chs = S.charges, len = chs.length;
+        for (let i = 0; i < len; i++) {
+            const c = chs[i], dx = x - c.x, dy = y - c.y, r2 = dx * dx + dy * dy;
+            if (r2 < MR * MR) continue;
+            const r = Math.sqrt(r2), e = K * c.q * MU / (r2 * r);  // combined: (K*q*MU/r2) * (1/r)
+            ex += e * dx; ey += e * dy;
+        }
+        _ef.x = ex; _ef.y = ey; return _ef;
+    }
+    // Separate version that returns a NEW object (for cases where result is stored)
+    function eFNew(x, y) {
+        const r = eF(x, y); return { x: r.x, y: r.y };
     }
     function eP(x, y) {
-        let v = 0; for (const c of S.charges) {
-            const dx = x - c.x, dy = y - c.y, r = Math.sqrt(dx * dx + dy * dy);
-            if (r < MR) continue; v += K * c.q * MU / r;
-        } return v;
+        let v = 0;
+        const chs = S.charges, len = chs.length;
+        for (let i = 0; i < len; i++) {
+            const c = chs[i], dx = x - c.x, dy = y - c.y, r2 = dx * dx + dy * dy;
+            if (r2 < MR * MR) continue;
+            v += K * c.q * MU / Math.sqrt(r2);
+        }
+        return v;
     }
     function sysE() {
         let u = 0; for (let i = 0; i < S.charges.length; i++)for (let j = i + 1; j < S.charges.length; j++) {
@@ -314,20 +331,51 @@ fc=vec4(col,.88);}`;
         return v.toExponential(2) + ' ' + u;
     }
 
-    // ═══ FIELD LINE TRACING ═══
+    // ═══ FIELD LINE TRACING (quality-adaptive: Euler on potato, RK4 on high) ═══
     function trace(sx, sy, dir) {
-        const pts = [{ x: sx, y: sy }]; let x = sx, y = sy; const h = FLS * dir;
-        const B = { xn: -viewportW / (2 * SC * S.zoom) - 2, xx: viewportW / (2 * SC * S.zoom) + 2, yn: -viewportH / (2 * SC * S.zoom) - 2, yx: viewportH / (2 * SC * S.zoom) + 2 };
-        const maxSteps = S.set.quality <= 1 ? Math.min(PERF.fieldSteps, 420) : PERF.fieldSteps;
+        const pts = [{ x: sx, y: sy }]; let x = sx, y = sy;
+        const useEuler = S.set.quality <= 1;  // 4x faster on low-end
+        const h = (useEuler ? FLS * 1.8 : FLS) * dir;
+        const invZ = 1 / (SC * S.zoom);
+        const bxn = -viewportW * .5 * invZ - 2, bxx = viewportW * .5 * invZ + 2;
+        const byn = -viewportH * .5 * invZ - 2, byx = viewportH * .5 * invZ + 2;
+        const maxSteps = useEuler ? Math.min(PERF.fieldSteps, 280) : PERF.fieldSteps;
+        const hitR2 = .08 * .08;
+        const chs = S.charges, nC = chs.length;
         for (let i = 0; i < maxSteps; i++) {
-            const e1 = eF(x, y), m1 = Math.hypot(e1.x, e1.y); if (m1 < 1e-3) break; const d1x = e1.x / m1, d1y = e1.y / m1;
-            const e2 = eF(x + .5 * h * d1x, y + .5 * h * d1y), m2 = Math.hypot(e2.x, e2.y); if (m2 < 1e-3) break; const d2x = e2.x / m2, d2y = e2.y / m2;
-            const e3 = eF(x + .5 * h * d2x, y + .5 * h * d2y), m3 = Math.hypot(e3.x, e3.y); if (m3 < 1e-3) break; const d3x = e3.x / m3, d3y = e3.y / m3;
-            const e4 = eF(x + h * d3x, y + h * d3y), m4 = Math.hypot(e4.x, e4.y); if (m4 < 1e-3) break; const d4x = e4.x / m4, d4y = e4.y / m4;
-            x += h * (d1x + 2 * d2x + 2 * d3x + d4x) / 6; y += h * (d1y + 2 * d2y + 2 * d3y + d4y) / 6;
-            let hit = false; for (const c of S.charges) if (Math.hypot(x - c.x, y - c.y) < .08) { hit = true; break; }
-            if (hit) { pts.push({ x, y }); break; } if (x < B.xn || x > B.xx || y < B.yn || y > B.yx) break; pts.push({ x, y });
-        } return pts;
+            const e1 = eF(x, y), e1x = e1.x, e1y = e1.y;
+            const m1 = Math.sqrt(e1x * e1x + e1y * e1y);
+            if (m1 < 1e-3) break;
+            const inv1 = 1 / m1;
+            if (useEuler) {
+                // Simple Euler — 1 eF call vs 4 for RK4
+                x += h * e1x * inv1; y += h * e1y * inv1;
+            } else {
+                // RK4 for accuracy on high quality
+                const d1x = e1x * inv1, d1y = e1y * inv1;
+                const e2 = eF(x + .5 * h * d1x, y + .5 * h * d1y);
+                const m2 = Math.sqrt(e2.x * e2.x + e2.y * e2.y); if (m2 < 1e-3) break;
+                const inv2 = 1 / m2, d2x = e2.x * inv2, d2y = e2.y * inv2;
+                const e3 = eF(x + .5 * h * d2x, y + .5 * h * d2y);
+                const m3 = Math.sqrt(e3.x * e3.x + e3.y * e3.y); if (m3 < 1e-3) break;
+                const inv3 = 1 / m3, d3x = e3.x * inv3, d3y = e3.y * inv3;
+                const e4 = eF(x + h * d3x, y + h * d3y);
+                const m4 = Math.sqrt(e4.x * e4.x + e4.y * e4.y); if (m4 < 1e-3) break;
+                const inv4 = 1 / m4, d4x = e4.x * inv4, d4y = e4.y * inv4;
+                x += h * (d1x + 2 * d2x + 2 * d3x + d4x) / 6;
+                y += h * (d1y + 2 * d2y + 2 * d3y + d4y) / 6;
+            }
+            // Inlined hit test — avoid Math.hypot
+            let hit = false;
+            for (let ci = 0; ci < nC; ci++) {
+                const dx = x - chs[ci].x, dy = y - chs[ci].y;
+                if (dx * dx + dy * dy < hitR2) { hit = true; break; }
+            }
+            if (hit) { pts.push({ x, y }); break; }
+            if (x < bxn || x > bxx || y < byn || y > byx) break;
+            pts.push({ x, y });
+        }
+        return pts;
     }
 
     function arrow(c, x, y, a, sz, col) { c.save(); c.translate(x, y); c.rotate(a); c.beginPath(); c.moveTo(sz, 0); c.lineTo(-sz * .5, -sz * .5); c.lineTo(-sz * .5, sz * .5); c.closePath(); c.fillStyle = col; c.fill(); c.restore(); }
@@ -385,7 +433,9 @@ fc=vec4(col,.88);}`;
 
     function cacheVectors() {
         const c = CC.vx; c.clearRect(0, 0, CC.vc.width, CC.vc.height);
-        const g = S.set.arrowGrid, sx = viewportW / g, sy = viewportH / g;
+        // On potato, use half the grid density
+        const g = S.set.quality <= 0 ? Math.max(8, Math.round(S.set.arrowGrid * .6)) : S.set.arrowGrid;
+        const sx = viewportW / g, sy = viewportH / g;
         for (let gx = 0; gx <= g; gx++)for (let gy = 0; gy <= g; gy++) {
             const px = gx * sx, py = gy * sy, w = p2w(px, py), e = eF(w.x, w.y), m = Math.hypot(e.x, e.y);
             if (m < 10) continue; const lm = Math.log10(m + 1), len = Math.min(sx * .45, lm * 5), a = Math.atan2(-e.y, e.x);
@@ -605,20 +655,35 @@ fc=vec4(col,.88);}`;
         return { x: w.x, y: w.y, life: Math.random() * 180, maxL: 120 + Math.random() * 200, spd: .6 + Math.random() * 1.4, trail: [] };
     }
 
+    // Skip counter for potato mode — update particles every other frame
+    let _particleSkip = 0;
     function updateP() {
+        // On tier 0/1: skip every other frame for 2x speedup
+        if (S.set.quality <= 1) { _particleSkip++; if (_particleSkip & 1) { _renderParticleCache(); return; } }
         const sp = S.set.speed;
-        const B = { xn: -viewportW / (2 * SC * S.zoom) - 1, xx: viewportW / (2 * SC * S.zoom) + 1, yn: -viewportH / (2 * SC * S.zoom) - 1, yx: viewportH / (2 * SC * S.zoom) + 1 };
+        const invZ = 1 / (SC * S.zoom);
+        const bxn = -viewportW * .5 * invZ - 1, bxx = viewportW * .5 * invZ + 1;
+        const byn = -viewportH * .5 * invZ - 1, byx = viewportH * .5 * invZ + 1;
         const maxTrail = PERF.trailLen;
         const showTrails = !PERF.skipTrails;
         const showGlow = !PERF.skipGlow;
         // Batch: collect all dot positions and glow positions first
-        const dots = [], glows = [], trails = [];
+        const dots = _pDots, glows = _pGlows, trails = _pTrails;
+        dots.length = 0; glows.length = 0; trails.length = 0;
+        const chs = S.charges, nC = chs.length;
         for (let i = 0; i < S.particles.length; i++) {
             const p = S.particles[i]; p.life += sp;
-            const e = eF(p.x, p.y), m = Math.hypot(e.x, e.y); if (m > 1e-3) { const ms = p.spd * .0075 * sp; p.x += e.x / m * ms; p.y += e.y / m * ms; }
+            const e = eF(p.x, p.y), ex = e.x, ey = e.y;
+            const m = Math.sqrt(ex * ex + ey * ey);
+            if (m > 1e-3) { const ms = p.spd * .0075 * sp / m; p.x += ex * ms; p.y += ey * ms; }
             if (showTrails) { p.trail.push({ x: p.x, y: p.y }); if (p.trail.length > maxTrail) p.trail.shift(); }
-            let sink = false; for (const c of S.charges) if (c.q < 0 && Math.hypot(p.x - c.x, p.y - c.y) < .08) { sink = true; break; }
-            if (p.life > p.maxL || sink || p.x < B.xn || p.x > B.xx || p.y < B.yn || p.y > B.yx) { S.particles[i] = mkP(); continue; }
+            let sink = false;
+            for (let ci = 0; ci < nC; ci++) {
+                const c = chs[ci]; if (c.q >= 0) continue;
+                const dx = p.x - c.x, dy = p.y - c.y;
+                if (dx * dx + dy * dy < .0064) { sink = true; break; }
+            }
+            if (p.life > p.maxL || sink || p.x < bxn || p.x > bxx || p.y < byn || p.y > byx) { S.particles[i] = mkP(); continue; }
             const lr = p.life / p.maxL, al = lr < .1 ? lr * 10 : lr > .8 ? (1 - lr) * 5 : 1;
             if (al < 0.02) continue;
             const px = w2p(p.x, p.y);
@@ -664,6 +729,23 @@ fc=vec4(col,.88);}`;
             ctx.fill();
         }
     }
+    // Particle render cache for frame-skipping
+    const _pDots = [], _pGlows = [], _pTrails = [];
+    function _renderParticleCache() {
+        // Re-draw last computed positions without recalculating physics
+        const showTrails = !PERF.skipTrails, showGlow = !PERF.skipGlow;
+        if (showTrails) {
+            for (const tr of _pTrails) {
+                if (tr.pts.length < 2) continue;
+                ctx.beginPath(); ctx.moveTo(tr.pts[0].x, tr.pts[0].y);
+                for (let j = 1; j < tr.pts.length; j++) ctx.lineTo(tr.pts[j].x, tr.pts[j].y);
+                ctx.strokeStyle = `rgba(0,200,255,${0.06 + 0.12 * tr.al})`; ctx.lineWidth = 1.5 + tr.al; ctx.stroke();
+            }
+        }
+        ctx.fillStyle = 'rgba(0,220,255,0.75)'; ctx.beginPath();
+        for (const d of _pDots) { ctx.moveTo(d.x + 2, d.y); ctx.arc(d.x, d.y, 2, 0, Math.PI * 2); }
+        ctx.fill();
+    }
 
     // ═══ ARCS ═══
     function genArc(x1, y1, x2, y2, d, dp) {
@@ -672,8 +754,10 @@ fc=vec4(col,.88);}`;
         const l = genArc(x1, y1, mx, my, d * .55, dp - 1), r = genArc(mx, my, x2, y2, d * .55, dp - 1); return [...l.slice(0, -1), ...r];
     }
     function updateArcs() {
-        S.arcT++; const freq = PERF.arcFreq; if (S.arcT % freq !== 0) return; S.arcCache = [];
-        const maxDepth = PERF.arcDepth;
+        S.arcT++;
+        const freq = S.set.quality <= 0 ? PERF.arcFreq * 3 : PERF.arcFreq;
+        if (S.arcT % freq !== 0) return; S.arcCache = [];
+        const maxDepth = S.set.quality <= 0 ? Math.max(2, PERF.arcDepth - 1) : PERF.arcDepth;
         for (let i = 0; i < S.charges.length; i++)for (let j = i + 1; j < S.charges.length; j++) {
             const a = S.charges[i], b = S.charges[j]; if (a.q * b.q >= 0) continue; const d = Math.hypot(a.x - b.x, a.y - b.y); if (d > 3) continue;
             const pa = w2p(a.x, a.y), pb = w2p(b.x, b.y), dp = Math.max(10, 40 * (1 - d / 3));
@@ -681,9 +765,10 @@ fc=vec4(col,.88);}`;
         }
     }
     function renderArcs() {
+        const layers = S.set.quality >= 2 ? [[6, .08], [1.5, .35], [.5, .5]] : [[2, .3], [.5, .5]];  // fewer passes on low-end
         for (const a of S.arcCache) {
             if (a.pts.length < 2) continue;
-            for (const [w, al] of [[6, .08], [1.5, .35], [.5, .5]]) {
+            for (const [w, al] of layers) {
                 ctx.beginPath(); ctx.moveTo(a.pts[0].x, a.pts[0].y);
                 for (let i = 1; i < a.pts.length; i++)ctx.lineTo(a.pts[i].x, a.pts[i].y);
                 ctx.strokeStyle = w > .5 ? `rgba(${w > 2 ? 100 : 180},${w > 2 ? 200 : 230},255,${al * a.i})` : `rgba(255,255,255,${al * a.i})`; ctx.lineWidth = w; ctx.stroke();
@@ -691,10 +776,13 @@ fc=vec4(col,.88);}`;
         }
     }
 
-    // ═══ SPAWN FX ═══
+    // ═══ SPAWN FX (skipped on potato tier) ═══
     function addFX(x, y, pos) {
-        for (let i = 0; i < 3; i++)S.spawnFX.push({ t: 'r', x, y, r: 0, mr: 60 + i * 25, l: 0, ml: 30 + i * 10, c: pos ? '0,229,255' : '255,0,110' });
-        for (let i = 0; i < 12; i++) {
+        if (PERF.skipSpawnFX) return;  // skip completely on potato
+        const nRings = S.set.quality >= 2 ? 3 : 2;
+        const nDots = S.set.quality >= 2 ? 12 : 6;
+        for (let i = 0; i < nRings; i++) S.spawnFX.push({ t: 'r', x, y, r: 0, mr: 60 + i * 25, l: 0, ml: 30 + i * 10, c: pos ? '0,229,255' : '255,0,110' });
+        for (let i = 0; i < nDots; i++) {
             const a = Math.random() * Math.PI * 2, sp = 1 + Math.random() * 3;
             S.spawnFX.push({ t: 'd', x, y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp, l: 0, ml: 20 + Math.random() * 15, c: pos ? '0,229,255' : '255,0,110' });
         }
@@ -710,11 +798,19 @@ fc=vec4(col,.88);}`;
 
     // ═══ TEST CHARGE ═══
     function updateTC() {
+        const chs = S.charges, nC = chs.length;
+        const maxTrail = S.set.quality <= 0 ? 200 : 500;
         for (const tc of S.testCharges) {
-            const e = eF(tc.x, tc.y), m = Math.hypot(e.x, e.y);
-            if (m > 1e-3) { const sp = Math.min(.015, m * 1e-7) * S.set.speed; tc.x += e.x / m * sp; tc.y += e.y / m * sp; }
-            tc.trail.push({ x: tc.x, y: tc.y }); if (tc.trail.length > 500) tc.trail.shift();
-            let kill = false; for (const c of S.charges) if (c.q < 0 && Math.hypot(tc.x - c.x, tc.y - c.y) < .1) { kill = true; break; }
+            const e = eF(tc.x, tc.y), ex = e.x, ey = e.y;
+            const m = Math.sqrt(ex * ex + ey * ey);
+            if (m > 1e-3) { const sp = Math.min(.015, m * 1e-7) * S.set.speed; const inv = sp / m; tc.x += ex * inv; tc.y += ey * inv; }
+            tc.trail.push({ x: tc.x, y: tc.y }); if (tc.trail.length > maxTrail) tc.trail.shift();
+            let kill = false;
+            for (let ci = 0; ci < nC; ci++) {
+                const c = chs[ci]; if (c.q >= 0) continue;
+                const dx = tc.x - c.x, dy = tc.y - c.y;
+                if (dx * dx + dy * dy < .01) { kill = true; break; }
+            }
             if (kill) { tc.dead = true; continue; }
             // Batched trail drawing
             if (tc.trail.length > 2) {
@@ -751,51 +847,65 @@ fc=vec4(col,.88);}`;
         }
     }
 
-    // ═══ CHARGES ═══
+    // ═══ CHARGES (quality-adaptive rendering) ═══
     function renderCh() {
+        const highQ = S.set.quality >= 2;
+        const medQ = S.set.quality >= 1;
         for (let i = 0; i < S.charges.length; i++) {
             const ch = S.charges[i], px = w2p(ch.x, ch.y);
             const pos = ch.q > 0, sel = S.sel === i, col = pos ? '#00e5ff' : '#ff006e', gc = pos ? 'rgba(0,229,255,' : 'rgba(255,0,110,';
-            const sc = Math.min(2, .6 + Math.abs(ch.q) * .15), rad = CR * sc, pulse = .5 + .5 * Math.sin(S.frame * .03 + i * 1.5);
-            // Outer ambient glow (wide and subtle)
-            const gr0 = ctx.createRadialGradient(px.x, px.y, rad * .2, px.x, px.y, rad * 5);
-            gr0.addColorStop(0, gc + (.15 + .08 * pulse) + ')'); gr0.addColorStop(.4, gc + (.05 + .03 * pulse) + ')'); gr0.addColorStop(1, gc + '0)');
-            ctx.fillStyle = gr0; ctx.fillRect(px.x - rad * 5, px.y - rad * 5, rad * 10, rad * 10);
-            // Inner concentrated glow
-            const gr = ctx.createRadialGradient(px.x, px.y, rad * .3, px.x, px.y, rad * 3);
-            gr.addColorStop(0, gc + (.4 + .2 * pulse) + ')'); gr.addColorStop(.5, gc + (.1 + .06 * pulse) + ')'); gr.addColorStop(1, gc + '0)');
-            ctx.fillStyle = gr; ctx.fillRect(px.x - rad * 3, px.y - rad * 3, rad * 6, rad * 6);
+            const sc = Math.min(2, .6 + Math.abs(ch.q) * .15), rad = CR * sc;
+            if (highQ) {
+                // Full premium glow (only on high-end)
+                const pulse = .5 + .5 * Math.sin(S.frame * .03 + i * 1.5);
+                const gr0 = ctx.createRadialGradient(px.x, px.y, rad * .2, px.x, px.y, rad * 5);
+                gr0.addColorStop(0, gc + (.15 + .08 * pulse) + ')'); gr0.addColorStop(.4, gc + (.05 + .03 * pulse) + ')'); gr0.addColorStop(1, gc + '0)');
+                ctx.fillStyle = gr0; ctx.fillRect(px.x - rad * 5, px.y - rad * 5, rad * 10, rad * 10);
+                const gr = ctx.createRadialGradient(px.x, px.y, rad * .3, px.x, px.y, rad * 3);
+                gr.addColorStop(0, gc + (.4 + .2 * pulse) + ')'); gr.addColorStop(.5, gc + (.1 + .06 * pulse) + ')'); gr.addColorStop(1, gc + '0)');
+                ctx.fillStyle = gr; ctx.fillRect(px.x - rad * 3, px.y - rad * 3, rad * 6, rad * 6);
+            } else if (medQ) {
+                // Medium: single simple glow circle
+                ctx.beginPath(); ctx.arc(px.x, px.y, rad * 2.5, 0, Math.PI * 2);
+                ctx.fillStyle = gc + '0.08)'; ctx.fill();
+            }
+            // else: no glow at all on potato
             if (sel) {
                 ctx.beginPath(); ctx.arc(px.x, px.y, rad + 8, 0, Math.PI * 2); ctx.strokeStyle = col; ctx.lineWidth = 2;
                 ctx.setLineDash([4, 4]); ctx.lineDashOffset = -S.frame * .5; ctx.stroke(); ctx.setLineDash([]);
-                // Selection glow ring
-                ctx.beginPath(); ctx.arc(px.x, px.y, rad + 8, 0, Math.PI * 2);
-                ctx.strokeStyle = gc + '0.15)'; ctx.lineWidth = 6; ctx.stroke();
             }
-            // Main charge body with premium gradient
-            const mg = ctx.createRadialGradient(px.x - rad * .25, px.y - rad * .25, 0, px.x, px.y, rad);
-            mg.addColorStop(0, pos ? '#66f5ff' : '#ff6099'); mg.addColorStop(.5, col); mg.addColorStop(1, pos ? '#007888' : '#8a003a');
-            ctx.beginPath(); ctx.arc(px.x, px.y, rad, 0, Math.PI * 2); ctx.fillStyle = mg; ctx.fill();
-            // Subtle rim light
-            ctx.strokeStyle = 'rgba(255,255,255,0.18)'; ctx.lineWidth = 1; ctx.stroke();
-            // Specular highlight
-            const hl = ctx.createRadialGradient(px.x - rad * .3, px.y - rad * .35, 0, px.x - rad * .15, px.y - rad * .2, rad * .6);
-            hl.addColorStop(0, 'rgba(255,255,255,0.35)'); hl.addColorStop(1, 'rgba(255,255,255,0)');
-            ctx.fillStyle = hl; ctx.beginPath(); ctx.arc(px.x, px.y, rad, 0, Math.PI * 2); ctx.fill();
-            // Sign label with color-blind-friendly shape
+            // Main body: simple gradient on medium+, flat circle on potato
+            if (medQ) {
+                const mg = ctx.createRadialGradient(px.x - rad * .25, px.y - rad * .25, 0, px.x, px.y, rad);
+                mg.addColorStop(0, pos ? '#66f5ff' : '#ff6099'); mg.addColorStop(.5, col); mg.addColorStop(1, pos ? '#007888' : '#8a003a');
+                ctx.beginPath(); ctx.arc(px.x, px.y, rad, 0, Math.PI * 2); ctx.fillStyle = mg; ctx.fill();
+                ctx.strokeStyle = 'rgba(255,255,255,0.18)'; ctx.lineWidth = 1; ctx.stroke();
+            } else {
+                // Potato: flat colored circle, no gradients at all
+                ctx.beginPath(); ctx.arc(px.x, px.y, rad, 0, Math.PI * 2);
+                ctx.fillStyle = col; ctx.fill();
+                ctx.strokeStyle = 'rgba(255,255,255,0.25)'; ctx.lineWidth = 1; ctx.stroke();
+            }
+            if (highQ) {
+                // Specular highlight only on high quality
+                const hl = ctx.createRadialGradient(px.x - rad * .3, px.y - rad * .35, 0, px.x - rad * .15, px.y - rad * .2, rad * .6);
+                hl.addColorStop(0, 'rgba(255,255,255,0.35)'); hl.addColorStop(1, 'rgba(255,255,255,0)');
+                ctx.fillStyle = hl; ctx.beginPath(); ctx.arc(px.x, px.y, rad, 0, Math.PI * 2); ctx.fill();
+            }
+            // Sign label
             ctx.fillStyle = '#fff'; ctx.font = `bold ${12 * sc | 0}px Inter`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
             ctx.fillText(pos ? '+' : '−', px.x, px.y + 1);
-            // Color-blind indicator: diamond for +, square for −
-            ctx.strokeStyle = 'rgba(255,255,255,0.3)'; ctx.lineWidth = 1.5;
-            if (pos) {
-                // Diamond shape outline
-                ctx.beginPath();
-                ctx.moveTo(px.x, px.y - rad - 2); ctx.lineTo(px.x + 4, px.y - rad - 6);
-                ctx.lineTo(px.x, px.y - rad - 10); ctx.lineTo(px.x - 4, px.y - rad - 6);
-                ctx.closePath(); ctx.stroke();
-            } else {
-                // Square shape outline
-                ctx.strokeRect(px.x - 3, px.y - rad - 9, 6, 6);
+            // Color-blind indicators only on medium+
+            if (medQ) {
+                ctx.strokeStyle = 'rgba(255,255,255,0.3)'; ctx.lineWidth = 1.5;
+                if (pos) {
+                    ctx.beginPath();
+                    ctx.moveTo(px.x, px.y - rad - 2); ctx.lineTo(px.x + 4, px.y - rad - 6);
+                    ctx.lineTo(px.x, px.y - rad - 10); ctx.lineTo(px.x - 4, px.y - rad - 6);
+                    ctx.closePath(); ctx.stroke();
+                } else {
+                    ctx.strokeRect(px.x - 3, px.y - rad - 9, 6, 6);
+                }
             }
             ctx.font = '10px "JetBrains Mono"'; ctx.fillStyle = 'rgba(255,255,255,0.6)';
             ctx.fillText((ch.q > 0 ? '+' : '') + ch.q.toFixed(1) + ' μC', px.x, px.y + rad + 14);
@@ -832,25 +942,31 @@ fc=vec4(col,.88);}`;
         ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over'; ctx.restore();
     }
 
-    // ═══ AUTO-ADAPT ═══
+    // ═══ AUTO-ADAPT (aggressive: targets 30fps minimum, reacts faster on potato) ═══
     let adaptT = 0, lowFpsStreak = 0;
     function autoAdapt() {
-        if (!S.set.autoAdapt) return; adaptT++; if (adaptT % 15 !== 0) return;
+        if (!S.set.autoAdapt) return;
+        adaptT++;
+        const checkInterval = S.set.quality <= 1 ? 10 : 15;  // check more often on low-end
+        if (adaptT % checkInterval !== 0) return;
 
-        if (S.fps < 24) {
+        if (S.fps < 20) {
+            // EMERGENCY: fps critically low
+            lowFpsStreak += 2;
+            if (S.set.quality > 0) { S.set.quality = 0; applyQuality(); S.dirty = true; }
+            if (S.viz.bloom) { S.viz.bloom = false; const el = document.getElementById('viz-bloom'); if (el) el.checked = false; }
+            if (S.viz.arcs) { S.viz.arcs = false; const el = document.getElementById('viz-arcs'); if (el) el.checked = false; }
+            if (S.set.particleN > 50) { S.set.particleN = Math.max(30, S.set.particleN - 80); initP(); }
+        } else if (S.fps < 28) {
             lowFpsStreak++;
-            // Aggressive: drop quality immediately
             if (S.set.quality > 0) { S.set.quality--; applyQuality(); S.dirty = true; }
-            // If still struggling at quality 0, reduce particles and density
-            else if (lowFpsStreak > 3) {
-                if (S.set.particleN > 50) { S.set.particleN = Math.max(50, S.set.particleN - 50); initP(); }
+            else if (lowFpsStreak > 2) {
+                if (S.set.particleN > 50) { S.set.particleN = Math.max(30, S.set.particleN - 40); initP(); }
                 if (S.viz.bloom) { S.viz.bloom = false; const el = document.getElementById('viz-bloom'); if (el) el.checked = false; }
-                if (S.viz.arcs && lowFpsStreak > 6) { S.viz.arcs = false; const el = document.getElementById('viz-arcs'); if (el) el.checked = false; }
+                if (S.viz.arcs && lowFpsStreak > 4) { S.viz.arcs = false; const el = document.getElementById('viz-arcs'); if (el) el.checked = false; }
                 lowFpsStreak = 0;
             }
-        } else if (S.fps < 30 && S.set.quality > 0) {
-            S.set.quality--; applyQuality(); S.dirty = true;
-        } else if (S.fps > 55 && S.set.quality < 3) {
+        } else if (S.fps > 58 && S.set.quality < 3) {
             lowFpsStreak = 0;
             S.set.quality++; applyQuality(); S.dirty = true;
         } else {
@@ -862,8 +978,9 @@ fc=vec4(col,.88);}`;
         DOM['val-quality'].textContent = S.qualNames[S.set.quality];
     }
 
-    // ═══ MAIN LOOP ═══
+    // ═══ MAIN LOOP (optimized with frame budget & static-frame skip) ═══
     let lastT = performance.now(), frameBudgetOver = false;
+    let _staticFrames = 0;  // count frames where nothing animates
     function render(t) {
         const frameStart = performance.now();
         updateViewport();
@@ -872,8 +989,9 @@ fc=vec4(col,.88);}`;
             S.fps = Math.round(S.fpsF / ((t - S.fpsT) / 1e3));
             DOM['status-fps'].textContent = S.fps + ' fps'; S.fpsT = t; S.fpsF = 0;
         }
-        // Smooth zoom interpolation (spring physics)
-        if (Math.abs(zoomTarget - S.zoom) > 0.001) {
+        // Smooth zoom interpolation
+        const zoomDelta = Math.abs(zoomTarget - S.zoom);
+        if (zoomDelta > 0.001) {
             zoomVelocity += (zoomTarget - S.zoom) * ZOOM_SPRING;
             zoomVelocity *= ZOOM_DAMP;
             S.zoom += zoomVelocity;
@@ -881,6 +999,13 @@ fc=vec4(col,.88);}`;
             if (DOM['zoom-display']) DOM['zoom-display'].textContent = Math.round(S.zoom * 100) + '%';
         } else { S.zoom = zoomTarget; zoomVelocity = 0; }
         autoAdapt();
+        // Static scene detection: if no particles, arcs, test charges, or animations, skip re-rendering
+        const hasAnim = S.viz.particles || S.viz.arcs || S.testCharges.length > 0 || S.freeCharge || S.spawnFX.length > 0 || zoomDelta > 0.001;
+        if (!hasAnim && !S.dirty && _staticFrames > 2) {
+            // Skip render entirely — scene is static
+            requestAnimationFrame(render); return;
+        }
+        if (!hasAnim) _staticFrames++; else _staticFrames = 0;
         ctx.clearRect(0, 0, viewportW, viewportH);
         renderGL();
         if (S.charges.length > 0) {
@@ -934,8 +1059,11 @@ fc=vec4(col,.88);}`;
             ctx.font = '400 11px Inter'; ctx.fillStyle = lt ? `rgba(0,0,0,${bPulse * 1.2})` : `rgba(255,255,255,${bPulse * 0.6})`;
             ctx.fillText('Sélectionnez un outil (2/3) ou un préréglage dans la barre latérale', viewportW / 2, viewportH / 2 + 58);
         }
-        // Frame budget guard: if this frame took > 20ms, skip bloom next frame
-        frameBudgetOver = (performance.now() - frameStart) > 20;
+        // Frame budget guard: if this frame took > 18ms, skip expensive stuff next frame
+        const frameTime = performance.now() - frameStart;
+        frameBudgetOver = frameTime > 18;
+        // On potato, also force-skip if frame > 25ms
+        if (S.set.quality <= 0 && frameTime > 25) frameBudgetOver = true;
         // Run post-render hooks (mirror plane, snap grid, field flow, etc.)
         for (let hi = 0; hi < postRenderHooks.length; hi++) {
             try { postRenderHooks[hi](); } catch (e) { console.warn('PostRender hook error:', e); }
@@ -2187,9 +2315,10 @@ fc=vec4(col,.88);}`;
         // Label
         ctx.font = '600 12px Inter'; ctx.textAlign = 'center'; ctx.fillStyle = 'rgba(118,255,3,0.5)';
         ctx.fillText('E ≈ 0', center.x, center.y - 5);
-        // Compute actual E at center
-        const eInside = eF(cx, cy), eOutside = eF(cx + avgR * 1.5, cy);
-        const eIn = Math.hypot(eInside.x, eInside.y), eOut = Math.hypot(eOutside.x, eOutside.y);
+        // Compute actual E at center (extract primitives before next eF call — shared _ef object)
+        const _ei = eF(cx, cy), eix = _ei.x, eiy = _ei.y;
+        const _eo = eF(cx + avgR * 1.5, cy);
+        const eIn = Math.hypot(eix, eiy), eOut = Math.hypot(_eo.x, _eo.y);
         ctx.font = '9px JetBrains Mono'; ctx.fillStyle = 'rgba(118,255,3,0.35)';
         ctx.fillText(`E_in: ${fmtSI(eIn, 'N/C')}`, center.x, center.y + 10);
         ctx.fillText(`E_out: ${fmtSI(eOut, 'N/C')}`, center.x, center.y + 22);
