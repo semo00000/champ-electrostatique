@@ -2175,7 +2175,7 @@ body.presentation #app-header:hover { opacity: 1; }
 
     /* ─── Right panel: slide-over drawer ─── */
     #right-panel {
-        display: none;
+        display: flex;
         position: fixed;
         right: 0;
         top: 0;
@@ -2187,29 +2187,33 @@ body.presentation #app-header:hover { opacity: 1; }
         padding-bottom: 70px; /* above mobile toolbar */
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+        touch-action: pan-y;
         transform: translateX(100%);
-        transition: transform 0.3s var(--ease-out);
+        visibility: hidden;
+        transition: transform 0.3s var(--ease-out), visibility 0s linear 0.3s;
+        pointer-events: none;
     }
 
     #right-panel.mobile-open {
-        display: flex;
         transform: translateX(0);
-        animation: panelSlideIn 0.3s var(--ease-out) forwards;
-    }
-
-    @keyframes panelSlideIn {
-        from { transform: translateX(100%); }
-        to { transform: translateX(0); }
+        visibility: visible;
+        transition: transform 0.3s var(--ease-out), visibility 0s linear 0s;
+        pointer-events: auto;
     }
 
     /* Backdrop behind panel */
     .mobile-backdrop {
         display: none;
         position: fixed;
-        inset: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 60px; /* don't cover mobile toolbar */
         background: rgba(0, 0, 0, 0.5);
         z-index: 199;
         -webkit-tap-highlight-color: transparent;
+        touch-action: none;
     }
 
     .mobile-backdrop.active { display: block; }
@@ -2226,12 +2230,13 @@ body.presentation #app-header:hover { opacity: 1; }
         backdrop-filter: blur(28px) saturate(1.5);
         -webkit-backdrop-filter: blur(28px) saturate(1.5);
         border-top: 1px solid var(--border-glass);
-        z-index: 150;
+        z-index: 250; /* above panel & backdrop */
         align-items: center;
         justify-content: space-evenly;
         padding: 0 4px;
         padding-bottom: env(safe-area-inset-bottom, 0px);
         box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.4);
+        touch-action: manipulation;
     }
 
     /* ─── Floating overlays mobile sizing ─── */
@@ -2338,6 +2343,20 @@ body.presentation #app-header:hover { opacity: 1; }
         width: calc(100vw - 16px) !important;
         max-width: none !important;
     }
+
+    /* ─── Mobile panel close button ─── */
+    #mobile-panel-close { display: flex !important; align-items: center; justify-content: center; }
+
+    /* ─── Touch improvements ─── */
+    .toggle-row,
+    .toggle-switch,
+    .icon-btn,
+    .slider-row input[type="range"],
+    .panel-header,
+    .preset-btn,
+    .tool-btn {
+        touch-action: manipulation;
+    }
 }
 
 /* Small phones */
@@ -2407,6 +2426,7 @@ button:focus:not(:focus-visible) {
     cursor: pointer;
     transition: all 0.15s var(--ease-out);
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
     position: relative;
 }
 
@@ -2474,6 +2494,7 @@ button:focus:not(:focus-visible) {
     text-align: left;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
     transition: all 0.15s;
 }
 

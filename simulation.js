@@ -2517,10 +2517,13 @@ fc=vec4(col,.88);}`;
     // Mobile delete button
     if (mobDeleteBtn) {
         mobDeleteBtn.addEventListener('click', () => {
-            if (S.selected !== null) {
-                S.charges.splice(S.selected, 1);
-                S.selected = null;
+            if (S.sel !== null) {
+                S.charges.splice(S.sel, 1);
+                S.sel = null;
+                hideEd();
                 markDirty();
+                updSt();
+                initP();
             }
         });
     }
@@ -2575,6 +2578,12 @@ fc=vec4(col,.88);}`;
     // Backdrop tap closes panel
     if (mobileBackdrop) {
         mobileBackdrop.addEventListener('click', closeMobilePanel);
+    }
+
+    // Mobile panel close button (✕ inside panel)
+    const mobPanelClose = document.getElementById('mobile-panel-close');
+    if (mobPanelClose) {
+        mobPanelClose.addEventListener('click', closeMobilePanel);
     }
 
     // ═══ ONBOARDING ═══
