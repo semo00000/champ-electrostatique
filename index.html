@@ -10,16 +10,18 @@
     <meta name="description"
         content="Simulation interactive GPU du champ électrostatique et du potentiel électrique. WebGL2 accelerated, visualisation temps réel pour Bac SM.">
     <meta name="keywords" content="champ électrostatique, potentiel, Coulomb, simulation, physique, WebGL2">
+    <!-- Fonts: loaded from CDN if online, degrades to system fonts if offline -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="preload" href="simulation.js?v=20260215" as="script">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5RLHO8BIp/8hwC1Cgm83bXEMECKG3vag3BKqfLUoJHvuIZE0xvD" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRjXVN7dV4J+BfQk" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css?v=20260215">
+        rel="stylesheet" onerror="">
+    <link rel="preload" href="simulation.js?v=20260215b" as="script">
+    <!-- KaTeX: optional, for LaTeX formulas in quiz/experiments. Simulation works fully without it -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" onerror="">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous" onerror=""></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onerror=""></script>
+    <link rel="stylesheet" href="style.css?v=20260215b">
 </head>
 
 <body>
@@ -785,6 +787,8 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // KaTeX is optional — formulas render when online, plain text fallback when offline
+            if (typeof katex === 'undefined') { console.log('[INFO] KaTeX not loaded (offline?) — formulas shown as plain text'); return; }
             const formulas = [
                 "F = k \\frac{|q_1 \\cdot q_2|}{r^2}",
                 "\\vec{E} = k \\sum_i \\frac{q_i}{r_i^{\\,2}}\\,\\hat{r}_i",
@@ -796,7 +800,8 @@
             ];
             document.querySelectorAll(".formula-latex").forEach(function (el, i) {
                 if (formulas[i]) {
-                    katex.render(formulas[i], el, { displayMode: true, throwOnError: false });
+                    try { katex.render(formulas[i], el, { displayMode: true, throwOnError: false }); }
+                    catch(e) { /* keep plain text fallback */ }
                 }
             });
         });
@@ -828,7 +833,7 @@
         <div class="voice-hint">Dites une commande — ex: « ajoute une charge positive »</div>
     </div>
     <div id="voice-toast" class="voice-toast" style="display:none"></div>
-    <script src="simulation.js?v=20260215"></script>
+    <script src="simulation.js?v=20260215b"></script>
 </body>
 
 </html>

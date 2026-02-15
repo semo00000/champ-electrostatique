@@ -8,22 +8,18 @@
 
 ## 🚀 Démarrage Rapide
 
-### Option 1 : Serveur Python (Recommandé)
+### Méthode 1 : Double-clic (Recommandé — Aucune installation requise !)
+1. **Décompresser** le fichier ZIP
+2. **Double-cliquer** sur `Ouvrir.bat` (ou ouvrir `index.html` directement)
+3. C'est tout ! La simulation s'ouvre dans votre navigateur
+
+> **Aucun logiciel à installer.** Pas besoin de Node.js, Python, ou serveur. Ça marche directement.
+
+### Méthode 2 : Serveur local (optionnel, pour développeurs)
 ```bash
-cd "champ elctrostatique"
 python -m http.server 8765
 ```
 Puis ouvrir : **http://localhost:8765**
-
-### Option 2 : Serveur Node.js
-```bash
-npx -y serve . -l 3000
-```
-Puis ouvrir : **http://localhost:3000**
-
-### Option 3 : Ouverture Directe
-Ouvrir `index.html` directement dans Chrome, Edge ou Firefox.
-> *Note : Certaines fonctionnalités (export, modules) peuvent être limitées sans serveur HTTP.*
 
 ---
 
