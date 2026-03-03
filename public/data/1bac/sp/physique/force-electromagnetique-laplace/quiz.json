@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La force de Laplace s'exerce sur :",
+        "ar": "قوة لابلاس تؤثر على :"
+      },
+      "choices": [
+        { "fr": "Un conducteur parcouru par un courant, placé dans un champ magnétique", "ar": "ناقل يمر فيه تيار، موضوع في حقل مغناطيسي" },
+        { "fr": "Tout conducteur, même sans courant", "ar": "أي ناقل، حتى بدون تيار" },
+        { "fr": "Une charge électrique au repos", "ar": "شحنة كهربائية ساكنة" },
+        { "fr": "Un aimant isolé", "ar": "مغناطيس معزول" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "La force de Laplace nécessite deux conditions : un courant dans le conducteur ET un champ magnétique extérieur non parallèle.",
+        "ar": "قوة لابلاس تتطلب شرطين: تيار في الناقل وحقل مغناطيسي خارجي غير مواز."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'expression de la force de Laplace est :",
+        "ar": "تعبير قوة لابلاس هو :"
+      },
+      "choices": [
+        { "fr": "F = BIl·sin(α)", "ar": "F = BIl·sin(α)" },
+        { "fr": "F = BIl·cos(α)", "ar": "F = BIl·cos(α)" },
+        { "fr": "F = BIl²", "ar": "F = BIl²" },
+        { "fr": "F = B²Il", "ar": "F = B²Il" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "F = BIl·sin(α), où α est l'angle entre le conducteur et la direction du champ magnétique B.",
+        "ar": "F = BIl·sin(α)، حيث α الزاوية بين الناقل واتجاه الحقل المغناطيسي B."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un fil de longueur l = 40 cm, parcouru par un courant I = 5 A, est perpendiculaire à un champ B = 0,2 T. Calculer la force de Laplace en Newtons.",
+        "ar": "سلك طوله l = 40 cm، يمر فيه تيار I = 5 A، عمودي على حقل B = 0.2 T. احسب قوة لابلاس بالنيوتن."
+      },
+      "answer": 0.4,
+      "tolerance": 0.01,
+      "unit": "N",
+      "hint": {
+        "fr": "Perpendiculaire : α = 90°, sin(90°) = 1. F = BIl. N'oubliez pas la conversion cm → m.",
+        "ar": "عمودي: α = 90°، sin(90°) = 1. F = BIl. لا تنسَ التحويل cm → m."
+      },
+      "explanation": {
+        "fr": "l = 0,4 m. F = BIl = 0,2 × 5 × 0,4 = 0,4 N.",
+        "ar": "l = 0.4 m. F = BIl = 0.2 × 5 × 0.4 = 0.4 N."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quand le conducteur est parallèle au champ magnétique, la force de Laplace est :",
+        "ar": "عندما يكون الناقل موازياً للحقل المغناطيسي، قوة لابلاس تكون :"
+      },
+      "choices": [
+        { "fr": "Nulle", "ar": "معدومة" },
+        { "fr": "Maximale", "ar": "أقصى" },
+        { "fr": "Égale à BIl", "ar": "تساوي BIl" },
+        { "fr": "Dépend du courant uniquement", "ar": "تعتمد على التيار فقط" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Si le conducteur est parallèle à B, α = 0° et sin(0°) = 0, donc F = BIl × 0 = 0 N. Il n'y a pas de force.",
+        "ar": "إذا كان الناقل موازياً لـ B، α = 0° و sin(0°) = 0، إذن F = BIl × 0 = 0 N. لا توجد قوة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un conducteur de 50 cm fait un angle de 30° avec un champ B = 0,5 T. Le courant est I = 3 A. Calculer F en Newtons.",
+        "ar": "ناقل طوله 50 cm يصنع زاوية 30° مع حقل B = 0.5 T. التيار I = 3 A. احسب F بالنيوتن."
+      },
+      "answer": 0.375,
+      "tolerance": 0.01,
+      "unit": "N",
+      "hint": {
+        "fr": "F = BIl·sin(α). sin(30°) = 0,5. l = 0,5 m.",
+        "ar": "F = BIl·sin(α). sin(30°) = 0.5. l = 0.5 m."
+      },
+      "explanation": {
+        "fr": "F = 0,5 × 3 × 0,5 × sin(30°) = 0,75 × 0,5 = 0,375 N.",
+        "ar": "F = 0.5 × 3 × 0.5 × sin(30°) = 0.75 × 0.5 = 0.375 N."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La direction de la force de Laplace est :",
+        "ar": "اتجاه قوة لابلاس هو :"
+      },
+      "choices": [
+        { "fr": "Perpendiculaire au plan formé par le courant et le champ magnétique", "ar": "عمودي على المستوى المكوّن من التيار والحقل المغناطيسي" },
+        { "fr": "Parallèle au courant", "ar": "مواز للتيار" },
+        { "fr": "Parallèle au champ magnétique", "ar": "مواز للحقل المغناطيسي" },
+        { "fr": "Dans le sens du courant", "ar": "في اتجاه التيار" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "La force de Laplace F = Il × B est le produit vectoriel, donc perpendiculaire au plan contenant I et B.",
+        "ar": "قوة لابلاس F = Il × B هي جداء متجهي، إذن عمودية على المستوى الذي يحتوي I و B."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'unité du champ magnétique B dans le système international est :",
+        "ar": "وحدة الحقل المغناطيسي B في النظام الدولي هي :"
+      },
+      "choices": [
+        { "fr": "Le Tesla (T)", "ar": "التسلا (T)" },
+        { "fr": "Le Gauss (G)", "ar": "الغاوس (G)" },
+        { "fr": "Le Newton (N)", "ar": "النيوتن (N)" },
+        { "fr": "Le Weber (Wb)", "ar": "الويبر (Wb)" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Le Tesla (T) est l'unité SI du champ magnétique. 1 T = 1 N/(A·m). Le Gauss est une ancienne unité : 1 T = 10⁴ G.",
+        "ar": "التسلا (T) هي وحدة SI للحقل المغناطيسي. 1 T = 1 N/(A·m). الغاوس وحدة قديمة: 1 T = 10⁴ G."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Dans un moteur, un conducteur de 10 cm perpendiculaire à B = 0,8 T porte un courant I = 6 A. Calculer la force de Laplace en Newtons.",
+        "ar": "في محرك، ناقل طوله 10 cm عمودي على B = 0.8 T يحمل تياراً I = 6 A. احسب قوة لابلاس بالنيوتن."
+      },
+      "answer": 0.48,
+      "tolerance": 0.01,
+      "unit": "N",
+      "hint": {
+        "fr": "F = BIl avec l = 0,1 m (perpendiculaire donc sin(90°) = 1).",
+        "ar": "F = BIl مع l = 0.1 m (عمودي إذن sin(90°) = 1)."
+      },
+      "explanation": {
+        "fr": "F = BIl = 0,8 × 6 × 0,1 = 0,48 N.",
+        "ar": "F = BIl = 0.8 × 6 × 0.1 = 0.48 N."
+      }
+    }
+  ]
+}

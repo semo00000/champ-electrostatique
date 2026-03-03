@@ -1,0 +1,158 @@
+{
+  "id": "echanges-cellulaires",
+  "title": {
+    "fr": "Les échanges cellulaires",
+    "ar": "التبادلات الخلوية"
+  },
+  "objectives": {
+    "fr": [
+      "Décrire la structure de la membrane plasmique selon le modèle de la mosaïque fluide",
+      "Expliquer le transport passif : diffusion simple, diffusion facilitée et osmose",
+      "Expliquer le transport actif et le rôle de l'ATP",
+      "Décrire l'endocytose et l'exocytose",
+      "Distinguer les différents types d'échanges cellulaires"
+    ],
+    "ar": [
+      "وصف بنية الغشاء الهيولي حسب نموذج الفسيفساء المائعة",
+      "شرح النقل السلبي: الانتشار البسيط والانتشار الميسر والتناضح",
+      "شرح النقل النشيط ودور الـ ATP",
+      "وصف الإدخال الخلوي والإخراج الخلوي",
+      "التمييز بين مختلف أنواع التبادلات الخلوية"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Structure de la membrane plasmique",
+        "ar": "1. بنية الغشاء الهيولي (البلازمي)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La membrane plasmique est une structure fine (7 à 8 nm d'épaisseur) qui délimite la cellule et contrôle les échanges entre le milieu intracellulaire (cytoplasme) et le milieu extracellulaire. Selon le modèle de la mosaïque fluide proposé par Singer et Nicolson en 1972, elle est constituée d'une bicouche de phospholipides dans laquelle sont insérées des protéines.",
+        "ar": "الغشاء الهيولي بنية رقيقة (سمكها 7 إلى 8 نانومتر) تحدّ الخلية وتتحكم في التبادلات بين الوسط داخل الخلوي (الهيولى) والوسط خارج الخلوي. حسب نموذج الفسيفساء المائعة الذي اقترحه سينجر ونيكولسون سنة 1972، يتكون من طبقة مزدوجة من الفوسفوليبيدات تتخللها بروتينات."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Phospholipide", "ar": "فوسفوليبيد" },
+      "text": {
+        "fr": "Molécule amphiphile possédant une tête hydrophile (polaire, attirée par l'eau) et deux queues hydrophobes (apolaires, repoussant l'eau). Les phospholipides s'organisent spontanément en bicouche dans l'eau.",
+        "ar": "جزيئة مزدوجة الألفة تملك رأسا محبا للماء (قطبي) وذيلين كارهين للماء (لاقطبيين). تنتظم الفوسفوليبيدات تلقائيا في طبقة مزدوجة في الماء."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Bicouche phospholipidique : constitue la barrière de base, semi-perméable",
+          "Protéines intrinsèques (transmembranaires) : traversent toute la membrane, servent de canaux ou transporteurs",
+          "Protéines extrinsèques (périphériques) : fixées sur une face de la membrane",
+          "Cholestérol : stabilise la fluidité de la membrane (cellules animales)",
+          "Glycocalyx : glucides liés aux protéines (glycoprotéines) ou lipides (glycolipides) sur la face externe, impliqués dans la reconnaissance cellulaire"
+        ],
+        "ar": [
+          "الطبقة المزدوجة الفوسفوليبيدية: تشكل الحاجز الأساسي، نصف نفوذ",
+          "بروتينات جوهرية (عابرة للغشاء): تعبر كل الغشاء، تعمل كقنوات أو ناقلات",
+          "بروتينات سطحية (محيطية): مثبتة على أحد وجهي الغشاء",
+          "الكوليسترول: يثبت سيولة الغشاء (الخلايا الحيوانية)",
+          "الغلايكوكاليكس: سكريات مرتبطة بالبروتينات أو الليبيدات على الوجه الخارجي"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Le transport passif",
+        "ar": "2. النقل السلبي"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Transport passif", "ar": "النقل السلبي" },
+      "text": {
+        "fr": "Déplacement de substances à travers la membrane dans le sens du gradient de concentration (du milieu le plus concentré vers le milieu le moins concentré). Il ne nécessite pas d'apport d'énergie (ATP).",
+        "ar": "انتقال المواد عبر الغشاء في اتجاه تدرج التركيز (من الوسط الأكثر تركيزا نحو الوسط الأقل تركيزا). لا يحتاج إلى طاقة (ATP)."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La diffusion simple est le passage direct de petites molécules non chargées (O₂, CO₂, éthanol) à travers la bicouche lipidique, dans le sens du gradient de concentration. La diffusion facilitée fait intervenir des protéines membranaires (canaux ioniques ou perméases) pour le passage de molécules polaires ou d'ions (glucose, ions Na⁺, K⁺, Cl⁻) qui ne peuvent pas traverser la bicouche seuls.",
+        "ar": "الانتشار البسيط هو مرور مباشر للجزيئات الصغيرة غير المشحونة (O₂, CO₂, إيثانول) عبر الطبقة المزدوجة الليبيدية في اتجاه تدرج التركيز. الانتشار الميسّر يتدخل فيه بروتينات غشائية (قنوات أيونية أو بيرمياز) لمرور الجزيئات القطبية أو الأيونات (الجلوكوز، أيونات Na⁺, K⁺, Cl⁻)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. L'osmose",
+        "ar": "3. التناضح (الأسموز)"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Osmose", "ar": "التناضح" },
+      "text": {
+        "fr": "Diffusion de l'eau (solvant) à travers une membrane semi-perméable, du milieu hypotonique (moins concentré en solutés) vers le milieu hypertonique (plus concentré en solutés), afin d'équilibrer les concentrations.",
+        "ar": "انتشار الماء (المذيب) عبر غشاء نصف نفوذ، من الوسط ناقص التوتر (أقل تركيزا في المذاب) نحو الوسط مفرط التوتر (أكثر تركيزا في المذاب)، لتحقيق التوازن في التركيز."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "En milieu hypotonique, la cellule absorbe de l'eau et gonfle (turgescence chez les végétaux, lyse chez les cellules animales). En milieu hypertonique, la cellule perd de l'eau et se rétracte (plasmolyse chez les végétaux, crénation chez les animaux). En milieu isotonique, il n'y a pas de mouvement net d'eau.",
+        "ar": "في وسط ناقص التوتر، تمتص الخلية الماء وتنتفخ (انتباج عند النباتات، انحلال عند الخلايا الحيوانية). في وسط مفرط التوتر، تفقد الخلية الماء وتنكمش (البلزمة عند النباتات). في وسط متساوي التوتر، لا توجد حركة صافية للماء."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Le transport actif",
+        "ar": "4. النقل النشيط"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Transport actif", "ar": "النقل النشيط" },
+      "text": {
+        "fr": "Déplacement de substances contre le gradient de concentration (du milieu le moins concentré vers le milieu le plus concentré). Il nécessite un apport d'énergie sous forme d'ATP et fait intervenir des protéines transporteuses spécifiques appelées pompes.",
+        "ar": "انتقال المواد عكس تدرج التركيز (من الوسط الأقل تركيزا نحو الوسط الأكثر تركيزا). يحتاج إلى طاقة على شكل ATP ويتدخل فيه بروتينات ناقلة خاصة تسمى المضخات."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'exemple le plus important est la pompe Na⁺/K⁺–ATPase : elle expulse 3 ions Na⁺ hors de la cellule et fait entrer 2 ions K⁺ dans la cellule, en hydrolysant une molécule d'ATP. Ce mécanisme maintient le potentiel de membrane et est essentiel au fonctionnement des cellules nerveuses et musculaires.",
+        "ar": "أهم مثال هو مضخة Na⁺/K⁺–ATPase: تطرد 3 أيونات Na⁺ خارج الخلية وتُدخل 2 أيون K⁺ داخل الخلية، مع تحلل جزيئة ATP واحدة. هذه الآلية تحافظ على جهد الغشاء وهي أساسية لعمل الخلايا العصبية والعضلية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Endocytose et exocytose",
+        "ar": "5. الإدخال الخلوي والإخراج الخلوي"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour les grosses molécules ou particules qui ne peuvent traverser la membrane, la cellule utilise le transport vésiculaire. L'endocytose est l'entrée de substances dans la cellule par invagination de la membrane formant une vésicule intracellulaire. On distingue la phagocytose (grosses particules solides), la pinocytose (gouttelettes de liquide) et l'endocytose médiée par récepteur (molécules spécifiques). L'exocytose est le processus inverse : une vésicule intracellulaire fusionne avec la membrane pour libérer son contenu à l'extérieur.",
+        "ar": "بالنسبة للجزيئات الكبيرة أو الجسيمات التي لا تستطيع عبور الغشاء، تستعمل الخلية النقل الحويصلي. الإدخال الخلوي هو دخول مواد إلى الخلية عبر انغماد الغشاء مكوّنا حويصلة داخل خلوية. نميز البلعمة (جسيمات صلبة كبيرة)، والاحتساء (قطيرات سائلة) والإدخال بوساطة مستقبلات. الإخراج الخلوي هو العملية العكسية: حويصلة داخل خلوية تلتحم مع الغشاء لتحرير محتواها إلى الخارج."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Résumé des types de transport : Transport passif (sans ATP) = diffusion simple + diffusion facilitée + osmose. Transport actif (avec ATP) = pompes ioniques. Transport vésiculaire = endocytose + exocytose.",
+        "ar": "ملخص أنواع النقل: النقل السلبي (بدون ATP) = انتشار بسيط + انتشار ميسر + تناضح. النقل النشيط (مع ATP) = مضخات أيونية. النقل الحويصلي = إدخال خلوي + إخراج خلوي."
+      }
+    }
+  ]
+}

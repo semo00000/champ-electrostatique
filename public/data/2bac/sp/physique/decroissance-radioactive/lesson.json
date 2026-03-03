@@ -1,0 +1,175 @@
+{
+  "id": "decroissance-radioactive",
+  "title": { "fr": "La Décroissance Radioactive", "ar": "التناقص الإشعاعي" },
+  "objectives": {
+    "fr": [
+      "Connaître les différents types de radioactivité (α, β⁻, β⁺, γ)",
+      "Appliquer les lois de conservation (Z, A) dans les réactions nucléaires",
+      "Énoncer et appliquer la loi de décroissance radioactive N(t) = N₀·e^(−λt)",
+      "Définir et calculer la demi-vie t₁/₂ et la constante radioactive λ",
+      "Calculer l'activité d'un échantillon radioactif A = λN",
+      "Appliquer la datation au carbone 14"
+    ],
+    "ar": [
+      "معرفة أنواع النشاط الإشعاعي المختلفة (α، β⁻، β⁺، γ)",
+      "تطبيق قوانين الانحفاظ (Z، A) في التفاعلات النووية",
+      "صياغة وتطبيق قانون التناقص الإشعاعي N(t) = N₀·e^(−λt)",
+      "تعريف وحساب عمر النصف t₁/₂ والثابت الإشعاعي λ",
+      "حساب نشاط عينة مشعة A = λN",
+      "تطبيق التأريخ بالكربون 14"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Stabilité et instabilité des noyaux", "ar": "1. استقرار وعدم استقرار النوى" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un noyau atomique $^{A}_{Z}X$ est constitué de Z protons et de N = A − Z neutrons. Les noyaux stables se situent dans la «vallée de stabilité» du diagramme (N, Z). Pour les noyaux légers, la stabilité correspond à N ≈ Z, tandis que pour les noyaux lourds, il faut un excès de neutrons (N > Z). Les noyaux situés en dehors de cette zone sont radioactifs : ils se transforment spontanément pour se rapprocher de la stabilité.",
+        "ar": "النواة الذرية $^{A}_{Z}X$ تتكون من Z بروتون و N = A − Z نيوترون. النوى المستقرة تقع في «وادي الاستقرار» في مخطط (N, Z). بالنسبة للنوى الخفيفة، الاستقرار يوافق N ≈ Z، بينما للنوى الثقيلة يلزم فائض في النيوترونات (N > Z). النوى خارج هذه المنطقة تكون مشعة: تتحول تلقائياً للاقتراب من الاستقرار."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Les types de radioactivité", "ar": "2. أنواع النشاط الإشعاعي" }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "<strong>Radioactivité α</strong> : émission d'un noyau d'hélium $^{4}_{2}He$. Le noyau père perd 2 protons et 2 neutrons : $^{A}_{Z}X \\to ^{A-4}_{Z-2}Y + ^{4}_{2}He$. Concerne les noyaux lourds (A > 200).",
+          "<strong>Radioactivité β⁻</strong> : émission d'un électron $^{\\;0}_{-1}e$ et d'un antineutrino. Un neutron se transforme en proton : $^{A}_{Z}X \\to ^{A}_{Z+1}Y + ^{\\;0}_{-1}e + \\bar{\\nu}_e$. Concerne les noyaux ayant un excès de neutrons.",
+          "<strong>Radioactivité β⁺</strong> : émission d'un positon $^{0}_{+1}e$ et d'un neutrino. Un proton se transforme en neutron : $^{A}_{Z}X \\to ^{A}_{Z-1}Y + ^{0}_{+1}e + \\nu_e$. Concerne les noyaux ayant un excès de protons.",
+          "<strong>Rayonnement γ</strong> : émission d'un photon très énergétique. Le noyau passe d'un état excité à un état fondamental sans changement de Z ni de A : $^{A}_{Z}X^* \\to ^{A}_{Z}X + \\gamma$."
+        ],
+        "ar": [
+          "<strong>إشعاع α</strong>: إصدار نواة الهيليوم $^{4}_{2}He$. $^{A}_{Z}X \\to ^{A-4}_{Z-2}Y + ^{4}_{2}He$. يخص النوى الثقيلة (A > 200).",
+          "<strong>إشعاع β⁻</strong>: إصدار إلكترون $^{\\;0}_{-1}e$ ومضاد نيوترينو. $^{A}_{Z}X \\to ^{A}_{Z+1}Y + ^{\\;0}_{-1}e + \\bar{\\nu}_e$. يخص النوى ذات فائض النيوترونات.",
+          "<strong>إشعاع β⁺</strong>: إصدار بوزيترون $^{0}_{+1}e$ ونيوترينو. $^{A}_{Z}X \\to ^{A}_{Z-1}Y + ^{0}_{+1}e + \\nu_e$. يخص النوى ذات فائض البروتونات.",
+          "<strong>إشعاع γ</strong>: إصدار فوتون عالي الطاقة. $^{A}_{Z}X^* \\to ^{A}_{Z}X + \\gamma$. لا تغيير في Z أو A."
+        ]
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Lois de conservation (lois de Soddy) : dans toute réaction nucléaire, il y a conservation du nombre de masse A (nombre de nucléons) et conservation du numéro atomique Z (charge électrique). La radioactivité est un phénomène spontané, aléatoire, indépendant de la température et de la pression.",
+        "ar": "قوانين الانحفاظ (قوانين سودي): في كل تفاعل نووي، هناك انحفاظ عدد الكتلة A (عدد النوكليونات) وانحفاظ العدد الذري Z (الشحنة الكهربائية). النشاط الإشعاعي ظاهرة تلقائية، عشوائية، مستقلة عن درجة الحرارة والضغط."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Loi de décroissance radioactive", "ar": "3. قانون التناقص الإشعاعي" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La désintégration radioactive est un phénomène aléatoire au niveau microscopique, mais statistiquement prévisible pour un grand nombre de noyaux. La vitesse de désintégration est proportionnelle au nombre de noyaux présents, ce qui conduit à l'équation différentielle $\\frac{dN}{dt} = -\\lambda N$, dont la solution est une exponentielle décroissante :",
+        "ar": "التفكك الإشعاعي ظاهرة عشوائية على المستوى المجهري، لكنها قابلة للتنبؤ إحصائياً لعدد كبير من النوى. سرعة التفكك تتناسب مع عدد النوى الموجودة، مما يؤدي إلى المعادلة التفاضلية $\\frac{dN}{dt} = -\\lambda N$، التي حلها دالة أسية متناقصة:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "N(t) = N_0 \\cdot e^{-\\lambda t}",
+      "note": {
+        "fr": "N₀ = nombre initial de noyaux à t = 0, λ = constante radioactive (en s⁻¹), t = temps (en s). La constante λ caractérise chaque radionucléide : plus λ est grand, plus la désintégration est rapide.",
+        "ar": "N₀ = العدد الابتدائي للنوى عند t = 0، λ = الثابت الإشعاعي (بوحدة s⁻¹)، t = الزمن (بوحدة s). الثابت λ يميز كل نظير مشع: كلما كان λ أكبر، كان التفكك أسرع."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Demi-vie (période radioactive)", "ar": "4. عمر النصف (الدور الإشعاعي)" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Demi-vie t₁/₂", "ar": "عمر النصف t₁/₂" },
+      "text": {
+        "fr": "La demi-vie $t_{1/2}$ est la durée au bout de laquelle la moitié des noyaux radioactifs initialement présents se sont désintégrés. Après une demi-vie, $N(t_{1/2}) = \\frac{N_0}{2}$. Après n demi-vies : $N = \\frac{N_0}{2^n}$.",
+        "ar": "عمر النصف $t_{1/2}$ هو المدة التي يتفكك بعدها نصف النوى المشعة الموجودة ابتداءً. بعد عمر نصف واحد: $N(t_{1/2}) = \\frac{N_0}{2}$. بعد n عمر نصف: $N = \\frac{N_0}{2^n}$."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "t_{1/2} = \\frac{\\ln 2}{\\lambda} = \\frac{0{,}693}{\\lambda}",
+      "note": {
+        "fr": "Relation fondamentale entre la demi-vie et la constante radioactive. On peut aussi écrire : λ = ln2/t₁/₂. Après 7 demi-vies, il reste moins de 1% des noyaux initiaux.",
+        "ar": "العلاقة الأساسية بين عمر النصف والثابت الإشعاعي. يمكن أيضاً كتابة: λ = ln2/t₁/₂. بعد 7 أعمار نصف، يتبقى أقل من 1% من النوى الابتدائية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Activité radioactive", "ar": "5. النشاط الإشعاعي" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'activité $A$ d'un échantillon radioactif est le nombre de désintégrations par seconde. Elle se mesure en becquerels (Bq) : 1 Bq = 1 désintégration par seconde. L'ancienne unité est le curie : 1 Ci = 3,7 × 10¹⁰ Bq. L'activité est proportionnelle au nombre de noyaux restants et décroît avec la même loi exponentielle :",
+        "ar": "النشاط $A$ لعينة مشعة هو عدد التفككات في الثانية. يُقاس بالبيكريل (Bq): 1 Bq = تفكك واحد في الثانية. الوحدة القديمة هي الكوري: 1 Ci = 3.7 × 10¹⁰ Bq. النشاط يتناسب مع عدد النوى المتبقية ويتناقص بنفس القانون الأسي:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "A(t) = \\lambda \\cdot N(t) = A_0 \\cdot e^{-\\lambda t} \\quad \\text{avec} \\quad A_0 = \\lambda \\cdot N_0",
+      "note": {
+        "fr": "A en Bq, λ en s⁻¹, N = nombre de noyaux. A₀ = λ·N₀ est l'activité initiale. L'activité obéit à la même loi de décroissance que N(t).",
+        "ar": "A بوحدة Bq، λ بوحدة s⁻¹، N = عدد النوى. A₀ = λ·N₀ هو النشاط الابتدائي. النشاط يخضع لنفس قانون التناقص مثل N(t)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Datation au carbone 14", "ar": "6. التأريخ بالكربون 14" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le carbone 14 ($^{14}_6C$) est un isotope radioactif du carbone produit dans la haute atmosphère par l'action des rayons cosmiques sur l'azote 14. Sa demi-vie est $t_{1/2} = 5730\\,ans$ et il se désintègre par radioactivité β⁻ : $^{14}_6C \\to ^{14}_7N + ^{\\;0}_{-1}e + \\bar{\\nu}_e$. Tout organisme vivant absorbe du $^{14}C$ et maintient un rapport $^{14}C/^{12}C$ constant. À la mort de l'organisme, le $^{14}C$ n'est plus renouvelé et sa quantité décroît selon la loi de décroissance.",
+        "ar": "الكربون 14 ($^{14}_6C$) هو نظير مشع للكربون ينتج في أعلى الغلاف الجوي بفعل الأشعة الكونية على الآزوت 14. عمر نصفه $t_{1/2} = 5730\\,سنة$ ويتفكك بنشاط إشعاعي β⁻: $^{14}_6C \\to ^{14}_7N + ^{\\;0}_{-1}e + \\bar{\\nu}_e$. كل كائن حي يمتص $^{14}C$ ويحافظ على نسبة $^{14}C/^{12}C$ ثابتة. عند موت الكائن، لا يتجدد $^{14}C$ وتتناقص كميته وفق قانون التناقص."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "t = \\frac{t_{1/2}}{\\ln 2} \\ln\\left(\\frac{A_0}{A(t)}\\right) = \\frac{1}{\\lambda}\\ln\\left(\\frac{N_0}{N(t)}\\right)",
+      "note": {
+        "fr": "Formule de datation : t = âge de l'échantillon, A₀ = activité initiale (organisme vivant), A(t) = activité mesurée actuellement. Méthode valable pour des âges entre 100 et 50 000 ans.",
+        "ar": "صيغة التأريخ: t = عمر العينة، A₀ = النشاط الابتدائي (كائن حي)، A(t) = النشاط المقاس حالياً. الطريقة صالحة لأعمار بين 100 و 50000 سنة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "7. Exemples d'application", "ar": "7. أمثلة تطبيقية" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 1 : Calcul de demi-vie", "ar": "مثال 1: حساب عمر النصف" },
+      "problem": {
+        "fr": "Un échantillon radioactif a une constante radioactive $\\lambda = 2{,}31 \\times 10^{-4}\\,s^{-1}$. Calculer sa demi-vie en minutes.",
+        "ar": "عينة مشعة لها ثابت إشعاعي $\\lambda = 2{,}31 \\times 10^{-4}\\,s^{-1}$. احسب عمر نصفها بالدقائق."
+      },
+      "solution": {
+        "fr": "On applique la formule reliant t₁/₂ et λ.",
+        "latex": "t_{1/2} = \\frac{\\ln 2}{\\lambda} = \\frac{0{,}693}{2{,}31 \\times 10^{-4}} = 3000\\,s = 50\\,\\text{min}"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 2 : Datation au carbone 14", "ar": "مثال 2: التأريخ بالكربون 14" },
+      "problem": {
+        "fr": "Un échantillon de bois ancien a une activité en carbone 14 égale à $A = 10\\,Bq$. L'activité d'un échantillon identique de bois actuel est $A_0 = 80\\,Bq$. La demi-vie du carbone 14 est $t_{1/2} = 5730\\,ans$. Déterminer l'âge du bois ancien.",
+        "ar": "عينة خشب قديم لها نشاط كربون 14 يساوي $A = 10\\,Bq$. نشاط عينة مماثلة من خشب حالي هو $A_0 = 80\\,Bq$. عمر النصف للكربون 14 هو $t_{1/2} = 5730\\,سنة$. حدد عمر الخشب القديم."
+      },
+      "solution": {
+        "fr": "On utilise la formule de datation.",
+        "latex": "t = \\frac{t_{1/2}}{\\ln 2}\\ln\\left(\\frac{A_0}{A}\\right) = \\frac{5730}{0{,}693} \\times \\ln\\left(\\frac{80}{10}\\right) = 8268 \\times \\ln(8) = 8268 \\times 2{,}079 \\approx 17\\,190\\,\\text{ans}"
+      }
+    }
+  ]
+}

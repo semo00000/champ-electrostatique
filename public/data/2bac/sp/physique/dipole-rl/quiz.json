@@ -1,0 +1,98 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est l'unité de l'inductance L dans le système international ?",
+        "ar": "ما هي وحدة الحث L في النظام الدولي؟"
+      },
+      "choices": [
+        { "fr": "Le Farad (F)" },
+        { "fr": "Le Henry (H)" },
+        { "fr": "Le Tesla (T)" },
+        { "fr": "Le Weber (Wb)" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "L'inductance L d'une bobine s'exprime en Henry (H) dans le système international. 1 H = 1 V·s/A = 1 Ω·s."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Dans un circuit RL série soumis à un échelon de tension E, quelle est l'expression du courant i(t) lors de la phase de croissance ?",
+        "ar": "في دارة RL متوالية خاضعة لرتبة توتر E، ما هو تعبير التيار i(t) أثناء مرحلة التزايد؟"
+      },
+      "choices": [
+        { "fr": "i(t) = (E/R) · e^(−t/τ)" },
+        { "fr": "i(t) = (E/R)(1 − e^(−t/τ))" },
+        { "fr": "i(t) = E·(1 − e^(−t/τ))" },
+        { "fr": "i(t) = (E/L)(1 − e^(−t/τ))" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Lors de l'établissement du courant dans un circuit RL, la solution de l'équation différentielle E = Ri + L(di/dt) avec i(0) = 0 est i(t) = (E/R)(1 − e^(−t/τ)) avec τ = L/R."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un circuit RL a une inductance L = 0,5 H et une résistance R = 100 Ω. Calculer la constante de temps τ en millisecondes (ms).",
+        "ar": "دارة RL لها حث L = 0,5 H ومقاومة R = 100 Ω. احسب ثابت الزمن τ بالميلي ثانية (ms)."
+      },
+      "answer": 5,
+      "tolerance": 0.1,
+      "unit": "ms",
+      "explanation": {
+        "fr": "τ = L/R = 0,5/100 = 5×10⁻³ s = 5 ms."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Après combien de constantes de temps (approximativement) le régime permanent est-il considéré comme établi dans un circuit RL ?",
+        "ar": "بعد كم تقريبًا من ثوابت الزمن يُعتبر النظام الدائم قد تأسس في دارة RL؟"
+      },
+      "choices": [
+        { "fr": "Après 2τ" },
+        { "fr": "Après 3τ" },
+        { "fr": "Après 5τ" },
+        { "fr": "Après 10τ" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "Le régime permanent est pratiquement établi après 5τ, car e⁻⁵ ≈ 0,0067, soit moins de 1% d'écart par rapport à la valeur finale."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Une bobine d'inductance L = 0,4 H est parcourue par un courant I = 2 A en régime permanent. Calculer l'énergie magnétique emmagasinée E_L en joules (J).",
+        "ar": "وشيعة حثها L = 0,4 H يمر بها تيار I = 2 A في النظام الدائم. احسب الطاقة المغناطيسية المخزنة E_L بالجول (J)."
+      },
+      "answer": 0.8,
+      "tolerance": 0.01,
+      "unit": "J",
+      "explanation": {
+        "fr": "E_L = ½LI² = ½ × 0,4 × (2)² = ½ × 0,4 × 4 = 0,8 J."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La loi de Lenz stipule que la f.é.m. d'auto-induction dans une bobine :",
+        "ar": "ينص قانون لينز على أن القوة المحركة الكهربائية للحث الذاتي في وشيعة:"
+      },
+      "choices": [
+        { "fr": "Amplifie la variation du courant qui la traverse" },
+        { "fr": "S'oppose à la variation du courant qui la traverse" },
+        { "fr": "Est toujours nulle en régime permanent" },
+        { "fr": "Est proportionnelle au carré du courant" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "La loi de Lenz indique que la f.é.m. d'auto-induction e = −L(di/dt) s'oppose toujours à la variation du courant qui l'a créée. Le signe négatif traduit cette opposition."
+      }
+    }
+  ]
+}

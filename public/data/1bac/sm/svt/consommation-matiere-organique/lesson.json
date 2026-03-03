@@ -1,0 +1,180 @@
+{
+  "id": "consommation-matiere-organique",
+  "title": {
+    "fr": "La consommation de la matière organique et flux d'énergie",
+    "ar": "استهلاك المادة العضوية وتدفق الطاقة"
+  },
+  "objectives": {
+    "fr": [
+      "Écrire et interpréter l'équation bilan de la respiration cellulaire",
+      "Décrire les étapes de la respiration : glycolyse, cycle de Krebs, chaîne respiratoire",
+      "Comprendre le bilan énergétique de la respiration cellulaire",
+      "Distinguer la fermentation alcoolique et la fermentation lactique",
+      "Comparer le rendement énergétique de la respiration et de la fermentation"
+    ],
+    "ar": [
+      "كتابة وتفسير المعادلة الإجمالية للتنفس الخلوي",
+      "وصف مراحل التنفس: تحلل الجلوكوز، دورة كريبس، السلسلة التنفسية",
+      "فهم الحصيلة الطاقية للتنفس الخلوي",
+      "التمييز بين التخمر الكحولي والتخمر اللبني",
+      "مقارنة المردود الطاقي للتنفس والتخمر"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. La respiration cellulaire : équation bilan",
+        "ar": "1. التنفس الخلوي: المعادلة الإجمالية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La respiration cellulaire est l'ensemble des réactions métaboliques qui permettent aux cellules de dégrader le glucose (et d'autres molécules organiques) en présence de dioxygène O₂ pour produire de l'énergie sous forme d'ATP. Elle se déroule principalement dans les mitochondries.",
+        "ar": "التنفس الخلوي هو مجموع التفاعلات الأيضية التي تمكن الخلايا من تفكيك الجلوكوز (ومواد عضوية أخرى) بوجود ثنائي الأكسجين O₂ لإنتاج الطاقة على شكل ATP. يجري أساسا في الميتوكوندريات."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\rightarrow 6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{énergie (ATP)}",
+      "note": {
+        "fr": "Équation bilan de la respiration cellulaire aérobique",
+        "ar": "المعادلة الإجمالية للتنفس الخلوي الهوائي"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La respiration cellulaire produit environ 36 à 38 molécules d'ATP par molécule de glucose oxydée. C'est le mécanisme le plus efficace de production d'énergie dans les cellules.",
+        "ar": "ينتج التنفس الخلوي حوالي 36 إلى 38 جزيئة ATP لكل جزيئة جلوكوز مؤكسدة. إنها الآلية الأكثر فعالية لإنتاج الطاقة في الخلايا."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. La glycolyse",
+        "ar": "2. تحلل الجلوكوز (الحلمأة السكرية)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La glycolyse est la première étape de la respiration cellulaire. Elle se déroule dans le cytoplasme (hyaloplasme) et ne nécessite pas d'oxygène. Une molécule de glucose (6 carbones) est dégradée en deux molécules d'acide pyruvique (pyruvate, 3 carbones chacune). La glycolyse produit un bilan net de 2 ATP et 2 NADH,H⁺.",
+        "ar": "تحلل الجلوكوز هو المرحلة الأولى من التنفس الخلوي. يجري في الهيولى (السيتوبلازم) ولا يحتاج إلى الأكسجين. تُفكك جزيئة جلوكوز واحدة (6 كربونات) إلى جزيئتين من حمض البيروفيك (بيروفات، 3 كربونات لكل واحدة). ينتج عن تحلل الجلوكوز حصيلة صافية من 2 ATP و 2 NADH,H⁺."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{C}_6\\text{H}_{12}\\text{O}_6 + 2\\text{NAD}^+ + 2\\text{ADP} + 2\\text{P}_i \\rightarrow 2\\text{CH}_3\\text{COCOOH} + 2\\text{NADH,H}^+ + 2\\text{ATP}",
+      "note": {
+        "fr": "Bilan simplifié de la glycolyse : glucose → 2 pyruvates + 2 ATP + 2 NADH,H⁺",
+        "ar": "الحصيلة المبسطة لتحلل الجلوكوز: جلوكوز → 2 بيروفات + 2 ATP + 2 NADH,H⁺"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Le cycle de Krebs",
+        "ar": "3. دورة كريبس"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le cycle de Krebs (cycle de l'acide citrique) se déroule dans la matrice mitochondriale. Le pyruvate est d'abord transformé en acétyl-CoA (décarboxylation oxydative), qui entre dans le cycle. Pour chaque acétyl-CoA, le cycle produit 1 ATP (GTP), 3 NADH,H⁺ et 1 FADH₂, avec libération de 2 CO₂. Pour une molécule de glucose (2 pyruvates), le cycle de Krebs tourne deux fois.",
+        "ar": "تجري دورة كريبس (دورة حمض الستريك) في مطرس الميتوكوندري. يتحول البيروفات أولا إلى أسيتيل-CoA (نزع كربوكسيل تأكسدي)، الذي يدخل الدورة. لكل أسيتيل-CoA تنتج الدورة 1 ATP (GTP)، 3 NADH,H⁺ و 1 FADH₂، مع تحرير 2 CO₂. بالنسبة لجزيئة جلوكوز واحدة (2 بيروفات)، تدور دورة كريبس مرتين."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Décarboxylation du pyruvate : 1 pyruvate → 1 acétyl-CoA + 1 CO₂ + 1 NADH,H⁺",
+          "Bilan par tour de cycle : 1 acétyl-CoA → 2 CO₂ + 3 NADH,H⁺ + 1 FADH₂ + 1 ATP",
+          "Bilan pour 1 glucose (2 tours) : 4 CO₂ + 6 NADH,H⁺ + 2 FADH₂ + 2 ATP",
+          "En incluant la décarboxylation : 6 CO₂ + 8 NADH,H⁺ + 2 FADH₂ + 2 ATP"
+        ],
+        "ar": [
+          "نزع كربوكسيل البيروفات: 1 بيروفات → 1 أسيتيل-CoA + 1 CO₂ + 1 NADH,H⁺",
+          "حصيلة كل دورة: 1 أسيتيل-CoA → 2 CO₂ + 3 NADH,H⁺ + 1 FADH₂ + 1 ATP",
+          "حصيلة لجزيئة جلوكوز (دورتان): 4 CO₂ + 6 NADH,H⁺ + 2 FADH₂ + 2 ATP",
+          "مع نزع الكربوكسيل: 6 CO₂ + 8 NADH,H⁺ + 2 FADH₂ + 2 ATP"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. La chaîne respiratoire et phosphorylation oxydative",
+        "ar": "4. السلسلة التنفسية والفسفرة التأكسدية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La chaîne respiratoire se situe dans la membrane interne de la mitochondrie. Les coenzymes réduits (NADH,H⁺ et FADH₂) cèdent leurs électrons à une série de transporteurs membranaires. L'énergie libérée sert à pomper des protons H⁺ dans l'espace intermembranaire, créant un gradient électrochimique. Le retour des protons par l'ATP synthase permet la synthèse d'ATP (phosphorylation oxydative). L'accepteur final des électrons est l'O₂ qui est réduit en H₂O.",
+        "ar": "توجد السلسلة التنفسية في الغشاء الداخلي للميتوكوندري. تمنح الأنزيمات المساعدة المختزلة (NADH,H⁺ و FADH₂) إلكتروناتها لسلسلة من الناقلات الغشائية. الطاقة المحررة تُستعمل لضخ بروتونات H⁺ في الفضاء بين الغشائي. عودة البروتونات عبر ATP سينتاز تمكن من تركيب ATP (الفسفرة التأكسدية). المستقبل النهائي للإلكترونات هو O₂ الذي يُختزل إلى H₂O."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Bilan énergétique complet pour 1 glucose : Glycolyse (2 ATP + 2 NADH,H⁺) + Cycle de Krebs (2 ATP + 8 NADH,H⁺ + 2 FADH₂) + Chaîne respiratoire (environ 34 ATP). Total : ~36-38 ATP.",
+        "ar": "الحصيلة الطاقية الكاملة لجزيئة جلوكوز واحدة: تحلل الجلوكوز (2 ATP + 2 NADH,H⁺) + دورة كريبس (2 ATP + 8 NADH,H⁺ + 2 FADH₂) + السلسلة التنفسية (~34 ATP). المجموع: ~36-38 ATP."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Les fermentations",
+        "ar": "5. التخمرات"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La fermentation est une voie métabolique anaérobique (sans O₂) qui suit la glycolyse. Elle permet de régénérer le NAD⁺ nécessaire à la glycolyse quand l'O₂ est absent. Elle est beaucoup moins efficace que la respiration (2 ATP seulement par glucose).",
+        "ar": "التخمر هو مسار أيضي لا هوائي (بدون O₂) يأتي بعد تحلل الجلوكوز. يمكّن من تجديد NAD⁺ الضروري لتحلل الجلوكوز عندما يغيب O₂. وهو أقل فعالية بكثير من التنفس (2 ATP فقط لكل جلوكوز)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{C}_6\\text{H}_{12}\\text{O}_6 \\rightarrow 2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{CO}_2 + 2\\text{ATP}",
+      "note": {
+        "fr": "Fermentation alcoolique : glucose → éthanol + CO₂ (levures)",
+        "ar": "التخمر الكحولي: جلوكوز → إيثانول + CO₂ (خمائر)"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{C}_6\\text{H}_{12}\\text{O}_6 \\rightarrow 2\\text{CH}_3\\text{CHOHCOOH} + 2\\text{ATP}",
+      "note": {
+        "fr": "Fermentation lactique : glucose → acide lactique (muscles, bactéries)",
+        "ar": "التخمر اللبني: جلوكوز → حمض اللبن (عضلات، بكتيريا)"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Fermentation alcoolique : réalisée par les levures (Saccharomyces). Applications : boulangerie (CO₂ fait lever la pâte), vinification, brasserie",
+          "Fermentation lactique : réalisée par certaines bactéries et les muscles en effort intense. Applications : yaourt, fromage",
+          "Bilan énergétique de la fermentation : 2 ATP par glucose (contre 36-38 pour la respiration)",
+          "Rendement énergétique : respiration ~40%, fermentation ~2%"
+        ],
+        "ar": [
+          "التخمر الكحولي: تقوم به الخمائر (Saccharomyces). تطبيقات: الخبز (CO₂ يرفع العجين)، صناعة النبيذ",
+          "التخمر اللبني: تقوم به بعض البكتيريا والعضلات أثناء المجهود الشديد. تطبيقات: اللبن، الجبن",
+          "الحصيلة الطاقية للتخمر: 2 ATP لكل جلوكوز (مقابل 36-38 للتنفس)",
+          "المردود الطاقي: التنفس ~40%، التخمر ~2%"
+        ]
+      }
+    }
+  ]
+}

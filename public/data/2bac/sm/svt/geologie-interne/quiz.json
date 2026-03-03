@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est la couche ductile du manteau supérieur sur laquelle reposent les plaques lithosphériques ?",
+        "ar": "ما هي الطبقة اللدنة من الوشاح العلوي التي ترتكز عليها الصفائح الصخرية؟"
+      },
+      "choices": [
+        { "fr": "La croûte continentale", "ar": "القشرة القارية" },
+        { "fr": "L'asthénosphère", "ar": "الأثينوسفير" },
+        { "fr": "Le noyau externe", "ar": "النواة الخارجية" },
+        { "fr": "La mésosphère", "ar": "الميزوسفير" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "L'asthénosphère est la zone ductile (partiellement fondue) du manteau supérieur, située sous la lithosphère rigide. C'est sur cette couche que les plaques tectoniques glissent et se déplacent. Sa plasticité permet les courants de convection.",
+        "ar": "الأثينوسفير هو المنطقة اللدنة (المنصهرة جزئيًا) من الوشاح العلوي، الواقعة تحت الغلاف الصخري الصلب. على هذه الطبقة تنزلق الصفائح التكتونية وتتحرك. لدونتها تسمح بتيارات الحمل."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel argument a utilisé Wegener pour soutenir sa théorie de la dérive des continents ?",
+        "ar": "أي حجة استخدمها فيغنر لدعم نظريته عن زحزحة القارات؟"
+      },
+      "choices": [
+        { "fr": "L'étude des ondes sismiques P et S", "ar": "دراسة الموجات الزلزالية P و S" },
+        { "fr": "La complémentarité des côtes et les fossiles identiques sur des continents éloignés", "ar": "تكامل السواحل والأحافير المتطابقة على قارات بعيدة" },
+        { "fr": "La mesure GPS des vitesses des plaques", "ar": "قياس GPS لسرعات الصفائح" },
+        { "fr": "L'étude des bandes magnétiques océaniques", "ar": "دراسة الأشرطة المغناطيسية المحيطية" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Wegener a utilisé la complémentarité des côtes (Afrique–Amérique du Sud), la présence de fossiles identiques sur des continents séparés (Mesosaurus, Glossopteris), des preuves paléoclimatiques et la continuité des structures géologiques. Les bandes magnétiques et le GPS sont venus plus tard.",
+        "ar": "استخدم فيغنر تكامل السواحل (إفريقيا–أمريكا الجنوبية)، ووجود أحافير متطابقة على قارات منفصلة (ميزوصوروس، غلوسوبتيريس)، وأدلة مناخية قديمة واستمرارية البنيات الجيولوجية. الأشرطة المغناطيسية و GPS جاءت لاحقًا."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Au niveau d'une dorsale médio-océanique, on observe :",
+        "ar": "على مستوى عرف محيطي وسطي، نلاحظ:"
+      },
+      "choices": [
+        { "fr": "La destruction de la croûte océanique", "ar": "تدمير القشرة المحيطية" },
+        { "fr": "La collision de deux continents", "ar": "تصادم قارتين" },
+        { "fr": "La création de nouvelle croûte océanique par remontée de magma", "ar": "خلق قشرة محيطية جديدة بصعود الصهير" },
+        { "fr": "La formation d'une fosse océanique", "ar": "تكوين خندق محيطي" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Les dorsales médio-océaniques sont des limites divergentes où le magma remonte de l'asthénosphère, se solidifie et crée une nouvelle croûte océanique (basalte). Les plaques s'éloignent de part et d'autre de la dorsale. Les fosses se forment aux zones de subduction (convergence).",
+        "ar": "الأعراف المحيطية الوسطى هي حدود متباعدة حيث يصعد الصهير من الأثينوسفير ويتصلب ويخلق قشرة محيطية جديدة (بازلت). تتباعد الصفائح على جانبي العرف. الخنادق تتكون في مناطق الاندساس (التقارب)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Lors d'une subduction océan-continent, que se passe-t-il ?",
+        "ar": "أثناء اندساس محيط-قارة، ماذا يحدث؟"
+      },
+      "choices": [
+        { "fr": "Les deux plaques s'éloignent l'une de l'autre", "ar": "الصفيحتان تتباعدان عن بعضهما" },
+        { "fr": "La plaque océanique plonge sous la plaque continentale, formant une fosse et un volcanisme explosif", "ar": "الصفيحة المحيطية تغوص تحت الصفيحة القارية مكوّنةً خندقًا وبركانية انفجارية" },
+        { "fr": "Une chaîne de montagnes de collision se forme", "ar": "تتكون سلسلة جبلية تصادمية" },
+        { "fr": "Les plaques coulissent latéralement", "ar": "الصفائح تنزلق جانبيًا" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Lors d'une subduction, la plaque océanique (plus dense) plonge sous la plaque continentale, créant une fosse océanique. La fusion partielle de la plaque plongeante produit un magma visqueux (andésite), responsable d'un volcanisme explosif. Exemple : la cordillère des Andes.",
+        "ar": "أثناء الاندساس، الصفيحة المحيطية (الأكثر كثافة) تغوص تحت الصفيحة القارية، مُنشئةً خندقًا محيطيًا. الانصهار الجزئي للصفيحة الغائصة ينتج صهيرًا لزجًا (أنديزيت)، مسؤولًا عن بركانية انفجارية. مثال: سلسلة الأنديز."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La faille de San Andreas est un exemple de :",
+        "ar": "فالق سان أندرياس هو مثال على:"
+      },
+      "choices": [
+        { "fr": "Limite divergente", "ar": "حد متباعد" },
+        { "fr": "Limite convergente (subduction)", "ar": "حد متقارب (اندساس)" },
+        { "fr": "Limite transformante (coulissante)", "ar": "حد محاذي (منزلق)" },
+        { "fr": "Point chaud", "ar": "نقطة حرارة" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "La faille de San Andreas en Californie est une faille transformante où la plaque pacifique glisse vers le nord-ouest par rapport à la plaque nord-américaine. Il n'y a ni création ni destruction de croûte, mais une forte activité sismique.",
+        "ar": "فالق سان أندرياس في كاليفورنيا هو فالق محاذي حيث تنزلق الصفيحة الهادئة نحو الشمال الغربي بالنسبة للصفيحة الأمريكية الشمالية. لا يوجد خلق ولا تدمير للقشرة، لكن نشاطًا زلزاليًا قويًا."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel type d'onde sismique ne se propage pas dans les milieux liquides ?",
+        "ar": "أي نوع من الموجات الزلزالية لا ينتشر في الأوساط السائلة؟"
+      },
+      "choices": [
+        { "fr": "Les ondes P (compression)", "ar": "الموجات P (الانضغاطية)" },
+        { "fr": "Les ondes S (cisaillement)", "ar": "الموجات S (القصية)" },
+        { "fr": "Les ondes L (Love)", "ar": "موجات L (لوف)" },
+        { "fr": "Les ondes R (Rayleigh)", "ar": "موجات R (رايلي)" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Les ondes S (secondaires ou de cisaillement) ne se propagent pas dans les milieux liquides car les liquides ne résistent pas au cisaillement. C'est grâce à l'arrêt des ondes S au noyau externe qu'on a découvert que celui-ci est liquide (discontinuité de Gutenberg à 2 900 km).",
+        "ar": "الموجات S (الثانوية أو القصية) لا تنتشر في الأوساط السائلة لأن السوائل لا تقاوم القص. بفضل توقف الموجات S عند النواة الخارجية اكتُشف أنها سائلة (انقطاع غوتنبرغ على عمق 2900 كم)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le moteur principal du mouvement des plaques tectoniques est :",
+        "ar": "المحرك الرئيسي لحركة الصفائح التكتونية هو:"
+      },
+      "choices": [
+        { "fr": "La rotation de la Terre", "ar": "دوران الأرض" },
+        { "fr": "L'attraction de la Lune", "ar": "جاذبية القمر" },
+        { "fr": "Les courants de convection dans le manteau", "ar": "تيارات الحمل في الوشاح" },
+        { "fr": "Les vents de surface", "ar": "الرياح السطحية" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Les courants de convection thermique dans le manteau sont le moteur principal. La chaleur interne (radioactivité, chaleur résiduelle) fait monter le matériau chaud aux dorsales et descendre le matériau refroidi aux zones de subduction, entraînant les plaques dans leur mouvement.",
+        "ar": "تيارات الحمل الحراري في الوشاح هي المحرك الرئيسي. الحرارة الداخلية (النشاط الإشعاعي، الحرارة المتبقية) تجعل المادة الحارة تصعد عند الأعراف والمادة الباردة تنزل عند مناطق الاندساس، مما يجرّ الصفائح في حركتها."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Les bandes magnétiques symétriques de part et d'autre d'une dorsale médio-océanique prouvent :",
+        "ar": "الأشرطة المغناطيسية المتناظرة على جانبي عرف محيطي وسطي تثبت:"
+      },
+      "choices": [
+        { "fr": "Que le champ magnétique terrestre est constant", "ar": "أن الحقل المغناطيسي الأرضي ثابت" },
+        { "fr": "Que les continents dérivent mais pas les océans", "ar": "أن القارات تنجرف لكن ليس المحيطات" },
+        { "fr": "L'expansion continue des fonds océaniques à partir de la dorsale", "ar": "التوسع المستمر لقاع المحيط انطلاقًا من العرف" },
+        { "fr": "Que le noyau terrestre est solide", "ar": "أن نواة الأرض صلبة" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Les inversions du champ magnétique sont enregistrées dans les basaltes lors de leur formation à la dorsale. La symétrie des bandes magnétiques par rapport à la dorsale prouve que la croûte se forme continuellement à la dorsale et s'éloigne de manière symétrique (seafloor spreading).",
+        "ar": "تُسجَّل انقلابات الحقل المغناطيسي في البازلت أثناء تكوينه عند العرف. تناظر الأشرطة المغناطيسية بالنسبة للعرف يثبت أن القشرة تتكون باستمرار عند العرف وتبتعد بشكل متناظر (التوسع المحيطي)."
+      }
+    }
+  ]
+}

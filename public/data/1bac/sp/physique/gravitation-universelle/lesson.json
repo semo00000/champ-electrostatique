@@ -1,0 +1,158 @@
+{
+  "id": "gravitation-universelle",
+  "title": {
+    "fr": "La gravitation universelle",
+    "ar": "الجاذبية الكونية"
+  },
+  "objectives": {
+    "fr": [
+      "Énoncer la loi de gravitation universelle de Newton",
+      "Calculer la force gravitationnelle entre deux masses",
+      "Définir le champ de gravitation et calculer son intensité",
+      "Distinguer poids et force gravitationnelle",
+      "Comprendre le mouvement des satellites"
+    ],
+    "ar": [
+      "صياغة قانون الجاذبية الكونية لنيوتن",
+      "حساب قوة الجاذبية بين كتلتين",
+      "تعريف حقل الجاذبية وحساب شدته",
+      "التمييز بين الوزن وقوة الجاذبية",
+      "فهم حركة الأقمار الاصطناعية"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. La loi de gravitation universelle de Newton",
+        "ar": "1. قانون الجاذبية الكونية لنيوتن"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "En 1687, Isaac Newton énonce la loi de la gravitation universelle : deux corps ponctuels de masses m₁ et m₂, séparés par une distance d, exercent l'un sur l'autre des forces attractives de même intensité, portées par la droite qui les joint.",
+        "ar": "في عام 1687، صاغ إسحاق نيوتن قانون الجاذبية الكونية: جسمان نقطيّان كتلتاهما m₁ و m₂، يفصل بينهما مسافة d، يؤثر كل منهما على الآخر بقوى تجاذب متساوية الشدة، محمولة على المستقيم الواصل بينهما."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "F = G \\frac{m_1 \\cdot m_2}{d^2}",
+      "note": {
+        "fr": "G = 6,674 × 10⁻¹¹ N·m²·kg⁻² est la constante de gravitation universelle. F en Newtons (N), m en kg, d en m.",
+        "ar": "G = 6.674 × 10⁻¹¹ N·m²·kg⁻² هي ثابتة الجاذبية الكونية. F بالنيوتن (N)، m بالكيلوغرام، d بالمتر."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Les forces gravitationnelles sont toujours attractives. Elles vérifient le principe des actions réciproques (3ème loi de Newton) : F(A/B) = -F(B/A).",
+        "ar": "قوى الجاذبية دائماً قوى تجاذب. وهي تحقق مبدأ الفعل ورد الفعل (قانون نيوتن الثالث): F(A/B) = -F(B/A)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Le champ de gravitation",
+        "ar": "2. حقل الجاذبية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Champ de gravitation",
+        "ar": "حقل الجاذبية"
+      },
+      "text": {
+        "fr": "Le champ de gravitation créé par un corps de masse M en un point situé à la distance r de son centre est un vecteur dirigé vers le centre du corps, d'intensité g.",
+        "ar": "حقل الجاذبية الذي ينشئه جسم كتلته M في نقطة تبعد مسافة r عن مركزه هو شعاع موجّه نحو مركز الجسم، شدته g."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "g = G \\frac{M}{r^2}",
+      "note": {
+        "fr": "g s'exprime en N/kg ou m/s². À la surface de la Terre : g₀ ≈ 9,8 N/kg avec M_T = 5,97 × 10²⁴ kg et R_T = 6371 km.",
+        "ar": "g يُعبَّر عنه بـ N/kg أو m/s². على سطح الأرض: g₀ ≈ 9.8 N/kg حيث M_T = 5.97 × 10²⁴ kg و R_T = 6371 km."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Poids et force gravitationnelle",
+        "ar": "3. الوزن وقوة الجاذبية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le poids d'un objet de masse m à la surface de la Terre est la force gravitationnelle exercée par la Terre sur cet objet. On a P = mg₀. Le poids varie avec l'altitude h au-dessus de la surface terrestre.",
+        "ar": "وزن جسم كتلته m على سطح الأرض هو قوة الجاذبية التي تمارسها الأرض على هذا الجسم. لدينا P = mg₀. يتغير الوزن مع الارتفاع h فوق سطح الأرض."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "P(h) = G \\frac{M_T \\cdot m}{(R_T + h)^2} = m \\cdot g(h)",
+      "note": {
+        "fr": "À la surface (h = 0) : P = mg₀. Plus on s'éloigne de la Terre, plus le poids diminue.",
+        "ar": "على السطح (h = 0): P = mg₀. كلما ابتعدنا عن الأرض، نقص الوزن."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Calcul de la force gravitationnelle Terre-Lune",
+        "ar": "مثال: حساب قوة الجاذبية بين الأرض والقمر"
+      },
+      "problem": {
+        "fr": "Calculer la force gravitationnelle entre la Terre (M_T = 5,97 × 10²⁴ kg) et la Lune (M_L = 7,35 × 10²² kg) sachant que la distance Terre-Lune est d = 3,84 × 10⁸ m.",
+        "ar": "احسب قوة الجاذبية بين الأرض (M_T = 5.97 × 10²⁴ kg) والقمر (M_L = 7.35 × 10²² kg) علماً أن المسافة بين الأرض والقمر هي d = 3.84 × 10⁸ m."
+      },
+      "solution": {
+        "fr": "On applique la loi de Newton :\nF = G × (M_T × M_L) / d²\nF = 6,674 × 10⁻¹¹ × (5,97 × 10²⁴ × 7,35 × 10²²) / (3,84 × 10⁸)²\nF = 6,674 × 10⁻¹¹ × 4,388 × 10⁴⁷ / 1,475 × 10¹⁷\nF ≈ 1,98 × 10²⁰ N",
+        "latex": "F = G \\frac{M_T \\cdot M_L}{d^2} = 6{,}674 \\times 10^{-11} \\times \\frac{5{,}97 \\times 10^{24} \\times 7{,}35 \\times 10^{22}}{(3{,}84 \\times 10^{8})^2} \\approx 1{,}98 \\times 10^{20} \\text{ N}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Mouvement des satellites",
+        "ar": "4. حركة الأقمار الاصطناعية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un satellite en orbite circulaire autour de la Terre à l'altitude h est soumis uniquement à la force gravitationnelle. La deuxième loi de Newton appliquée au satellite donne l'égalité entre la force gravitationnelle et la force centripète nécessaire au mouvement circulaire.",
+        "ar": "قمر اصطناعي في مدار دائري حول الأرض على ارتفاع h يخضع فقط لقوة الجاذبية. تطبيق قانون نيوتن الثاني على القمر يعطي التساوي بين قوة الجاذبية والقوة الجاذبة المركزية اللازمة للحركة الدائرية."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "v = \\sqrt{\\frac{G \\cdot M_T}{R_T + h}}",
+      "note": {
+        "fr": "La vitesse orbitale du satellite ne dépend pas de sa masse. Plus l'altitude est grande, plus la vitesse est faible.",
+        "ar": "السرعة المدارية للقمر الاصطناعي لا تعتمد على كتلته. كلما زاد الارتفاع، قلّت السرعة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "T = 2\\pi \\sqrt{\\frac{(R_T + h)^3}{G \\cdot M_T}}",
+      "note": {
+        "fr": "T est la période de révolution du satellite. Pour un satellite géostationnaire : T = 24 h et h ≈ 36 000 km.",
+        "ar": "T هي دورة القمر الاصطناعي. بالنسبة لقمر ثابت بالنسبة للأرض: T = 24 h و h ≈ 36 000 km."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Les lois de Kepler s'appliquent au mouvement des planètes et satellites : 1) Loi des orbites (ellipses), 2) Loi des aires (aires égales en temps égaux), 3) Loi des périodes : T²/a³ = constante.",
+        "ar": "قوانين كبلر تنطبق على حركة الكواكب والأقمار: 1) قانون المدارات (إهليلجية)، 2) قانون المساحات (مساحات متساوية في أزمنة متساوية)، 3) قانون الدورات: T²/a³ = ثابت."
+      }
+    }
+  ]
+}

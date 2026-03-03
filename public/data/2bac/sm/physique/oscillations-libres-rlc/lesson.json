@@ -1,0 +1,192 @@
+{
+  "id": "oscillations-libres-rlc",
+  "title": {
+    "fr": "Oscillations libres dans un circuit RLC série",
+    "ar": "التذبذبات الحرة في دارة RLC متوالية"
+  },
+  "objectives": {
+    "fr": [
+      "Établir l'équation différentielle d'un circuit RLC série",
+      "Déterminer la fréquence propre f₀ = 1/(2π√(LC))",
+      "Distinguer les différents régimes d'oscillation : pseudo-périodique, apériodique et critique",
+      "Définir et calculer le facteur de qualité Q",
+      "Analyser les échanges d'énergie dans un circuit LC idéal",
+      "Interpréter l'influence de R sur l'amortissement"
+    ],
+    "ar": [
+      "إنشاء المعادلة التفاضلية لدارة RLC متوالية",
+      "تحديد التردد الذاتي f₀ = 1/(2π√(LC))",
+      "التمييز بين مختلف أنظمة التذبذب: شبه دوري، لادوري وحرج",
+      "تعريف وحساب عامل الجودة Q",
+      "تحليل التبادلات الطاقية في دارة LC مثالية",
+      "تفسير تأثير R على التخامد"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Circuit LC idéal : oscillations libres non amorties",
+        "ar": "1. دارة LC مثالية: تذبذبات حرة غير مخمدة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "On considère un condensateur de capacité C, initialement chargé sous une tension U₀, qu'on relie à une bobine idéale d'inductance L (résistance nulle). Les oscillations résultantes sont périodiques et non amorties. En appliquant la loi des mailles : u_C + u_L = 0, ce qui donne :",
+        "ar": "نعتبر مكثفة سعتها C، مشحونة ابتدائيًا تحت توتر U₀، نربطها بوشيعة مثالية حثها L (مقاومة منعدمة). التذبذبات الناتجة دورية وغير مخمدة. بتطبيق قانون المتسلسلات: u_C + u_L = 0، مما يعطي:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\frac{d^2q}{dt^2} + \\frac{1}{LC}\\,q = 0",
+      "note": {
+        "fr": "Équation différentielle d'un oscillateur harmonique, avec q la charge du condensateur"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La pulsation propre ω₀ et la fréquence propre f₀ de ce circuit sont :",
+        "ar": "النبض الذاتي ω₀ والتردد الذاتي f₀ لهذه الدارة هما:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\omega_0 = \\frac{1}{\\sqrt{LC}} \\qquad;\\qquad f_0 = \\frac{1}{2\\pi\\sqrt{LC}} \\qquad;\\qquad T_0 = 2\\pi\\sqrt{LC}",
+      "note": {
+        "fr": "ω₀ en rad/s, f₀ en Hz, T₀ en s, L en H, C en F"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La solution générale est q(t) = Q_m·cos(ω₀t + φ), où Q_m est l'amplitude maximale de la charge et φ la phase initiale déterminée par les conditions initiales.",
+        "ar": "الحل العام هو q(t) = Q_m·cos(ω₀t + φ)، حيث Q_m هي السعة القصوى للشحنة وφ الطور الابتدائي المحدد بالشروط الابتدائية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Échanges d'énergie dans le circuit LC",
+        "ar": "2. التبادلات الطاقية في دارة LC"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Dans un circuit LC idéal, l'énergie totale se conserve et oscille entre énergie électrique (dans le condensateur) et énergie magnétique (dans la bobine) :",
+        "ar": "في دارة LC مثالية، الطاقة الكلية تنحفظ وتتذبذب بين الطاقة الكهربائية (في المكثفة) والطاقة المغناطيسية (في الوشيعة):"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_{totale} = E_C + E_L = \\frac{1}{2}\\frac{q^2}{C} + \\frac{1}{2}Li^2 = \\frac{Q_m^2}{2C} = \\text{constante}",
+      "note": {
+        "fr": "L'énergie totale reste constante : il y a transfert périodique entre E_C et E_L"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Quand l'énergie électrique E_C est maximale (condensateur complètement chargé, i = 0), l'énergie magnétique E_L est nulle, et inversement. L'énergie oscille à la fréquence 2f₀.",
+        "ar": "عندما تكون الطاقة الكهربائية E_C أقصى (المكثفة مشحونة كليًا، i = 0)، تكون الطاقة المغناطيسية E_L منعدمة، والعكس صحيح. الطاقة تتذبذب بتردد 2f₀."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Circuit RLC série : oscillations amorties",
+        "ar": "3. دارة RLC متوالية: تذبذبات مخمدة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Lorsqu'on ajoute une résistance R dans le circuit, l'énergie totale diminue au cours du temps car elle est dissipée par effet Joule dans R. L'équation différentielle devient :",
+        "ar": "عند إضافة مقاومة R في الدارة، تتناقص الطاقة الكلية مع الزمن لأنها تتبدد بتأثير جول في R. المعادلة التفاضلية تصبح:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\frac{d^2q}{dt^2} + \\frac{R}{L}\\frac{dq}{dt} + \\frac{1}{LC}\\,q = 0",
+      "note": {
+        "fr": "Équation différentielle du second ordre avec amortissement (terme en dq/dt)"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Les trois régimes d'oscillation",
+        "ar": "4. أنظمة التذبذب الثلاثة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le comportement du circuit dépend de la valeur de R par rapport à la résistance critique R_c = 2√(L/C). On distingue le discriminant Δ de l'équation caractéristique r² + (R/L)r + 1/(LC) = 0 :",
+        "ar": "يعتمد سلوك الدارة على قيمة R مقارنة بالمقاومة الحرجة R_c = 2√(L/C). نميز المميز Δ للمعادلة المميزة:"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Régime pseudo-périodique (R < R_c) : oscillations amorties dont l'amplitude décroît exponentiellement. La pseudo-période T est légèrement supérieure à T₀.",
+          "Régime critique (R = R_c = 2√(L/C)) : le retour à l'équilibre est le plus rapide possible sans oscillation. C'est le régime de transition.",
+          "Régime apériodique (R > R_c) : pas d'oscillation, le système retourne lentement à l'équilibre de manière exponentielle."
+        ],
+        "ar": [
+          "النظام شبه الدوري (R < R_c): تذبذبات مخمدة تتناقص سعتها أسيًا. شبه الدور T أكبر قليلاً من T₀.",
+          "النظام الحرج (R = R_c = 2√(L/C)): العودة إلى التوازن تكون الأسرع بدون تذبذب.",
+          "النظام اللادوري (R > R_c): لا تذبذب، يعود النظام ببطء إلى التوازن بطريقة أسية."
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Facteur de qualité",
+        "ar": "5. عامل الجودة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Facteur de qualité Q", "ar": "عامل الجودة Q" },
+      "text": {
+        "fr": "Le facteur de qualité Q caractérise l'amortissement du circuit RLC. Plus Q est grand, plus les oscillations persistent longtemps et moins l'amortissement est important."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "Q = \\frac{1}{R}\\sqrt{\\frac{L}{C}} = \\frac{L\\omega_0}{R} = \\frac{1}{RC\\omega_0}",
+      "note": {
+        "fr": "Q est sans dimension. Le régime critique correspond à Q = 1/2."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Exemple d'application",
+        "ar": "6. مثال تطبيقي"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Circuit RLC série" },
+      "problem": {
+        "fr": "Un circuit RLC série est constitué d'un condensateur C = 1 μF, d'une bobine L = 0,1 H et d'un résistor R = 20 Ω. Calculer : 1) La fréquence propre f₀. 2) La résistance critique R_c. 3) Le facteur de qualité Q. 4) Le régime d'oscillation."
+      },
+      "solution": {
+        "fr": "1) f₀ = 1/(2π√(LC)) = 1/(2π√(0,1 × 10⁻⁶)) = 1/(2π × 3,162×10⁻⁴) ≈ 503 Hz.\n2) R_c = 2√(L/C) = 2√(0,1/10⁻⁶) = 2√(10⁵) = 2 × 316,2 ≈ 632 Ω.\n3) Q = (1/R)√(L/C) = (1/20)√(10⁵) = 316,2/20 ≈ 15,8.\n4) Comme R = 20 Ω < R_c = 632 Ω, le régime est pseudo-périodique. De plus, Q >> 1 donc les oscillations sont très peu amorties.",
+        "latex": "f_0 = \\frac{1}{2\\pi\\sqrt{0{,}1 \\times 10^{-6}}} \\approx 503\\text{ Hz} \\quad;\\quad R_c = 2\\sqrt{\\frac{L}{C}} \\approx 632\\text{ }\\Omega \\quad;\\quad Q = \\frac{1}{R}\\sqrt{\\frac{L}{C}} \\approx 15{,}8"
+      }
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "id": "dipole-rl",
+  "title": {
+    "fr": "Dipôle RL",
+    "ar": "ثنائي القطب RL"
+  },
+  "objectives": {
+    "fr": [
+      "Connaître le rôle d'une bobine dans un circuit électrique",
+      "Établir et exploiter l'équation différentielle du circuit RL",
+      "Déterminer la constante de temps τ = L/R",
+      "Étudier la réponse du circuit RL à un échelon de tension (croissance et décroissance du courant)",
+      "Calculer l'énergie emmagasinée dans une bobine",
+      "Comprendre et appliquer la loi de Lenz"
+    ],
+    "ar": [
+      "معرفة دور الوشيعة في دارة كهربائية",
+      "إنشاء واستثمار المعادلة التفاضلية لدارة RL",
+      "تحديد ثابت الزمن τ = L/R",
+      "دراسة استجابة دارة RL لرتبة توتر (تزايد وتناقص التيار)",
+      "حساب الطاقة المخزنة في وشيعة",
+      "فهم وتطبيق قانون لينز"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. La bobine : auto-inductance et tension",
+        "ar": "1. الوشيعة: الحث الذاتي والتوتر"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Bobine (inductance)", "ar": "الوشيعة (المحاثة)" },
+      "text": {
+        "fr": "Une bobine est un composant passif constitué d'un enroulement de fil conducteur. Elle est caractérisée par son inductance L (en Henry, H) et sa résistance interne r. Lorsqu'elle est traversée par un courant variable, elle crée une force électromotrice (f.é.m.) d'auto-induction qui s'oppose à la variation du courant."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La tension aux bornes d'une bobine idéale (de résistance interne nulle r = 0) est donnée par :",
+        "ar": "التوتر بين طرفي وشيعة مثالية (ذات مقاومة داخلية منعدمة r = 0) يُعطى بـ:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "u_L = L \\frac{di}{dt}",
+      "note": {
+        "fr": "où L est l'inductance en Henry (H), i le courant en Ampère (A), et t le temps en secondes (s)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour une bobine réelle de résistance interne r, la tension aux bornes est :",
+        "ar": "بالنسبة لوشيعة حقيقية ذات مقاومة داخلية r، التوتر بين طرفيها هو:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "u_{bobine} = L \\frac{di}{dt} + r \\cdot i",
+      "note": {
+        "fr": "r est la résistance interne de la bobine (Ω)"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Loi de Lenz : La f.é.m. d'auto-induction s'oppose toujours à la cause qui lui a donné naissance, c'est-à-dire à la variation du courant qui la traverse. C'est le signe négatif dans e = −L(di/dt).",
+        "ar": "قانون لينز: القوة المحركة الكهربائية للحث الذاتي تعاكس دائمًا السبب الذي أنشأها، أي تغير شدة التيار الذي يمر عبرها."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Établissement du courant dans un circuit RL (réponse à un échelon de tension)",
+        "ar": "2. تأسيس التيار في دارة RL (الاستجابة لرتبة التوتر)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "On considère un circuit série constitué d'un générateur idéal de tension (f.é.m. E), d'un résistor de résistance R et d'une bobine idéale d'inductance L. À l'instant t = 0, on ferme l'interrupteur. En appliquant la loi des mailles :",
+        "ar": "نعتبر دارة متوالية تتكون من مولد مثالي للتوتر (ق.م.ك E) ومقاومة R ووشيعة مثالية حثها L. عند اللحظة t = 0، نغلق القاطع. بتطبيق قانون المتسلسلات:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E = Ri + L\\frac{di}{dt}",
+      "note": {
+        "fr": "Équation différentielle du premier ordre régissant l'établissement du courant"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La solution de cette équation différentielle, avec la condition initiale i(0) = 0, est :",
+        "ar": "حل هذه المعادلة التفاضلية، مع الشرط الابتدائي i(0) = 0، هو:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "i(t) = \\frac{E}{R}\\left(1 - e^{-\\frac{t}{\\tau}}\\right)",
+      "note": {
+        "fr": "avec τ = L/R la constante de temps du circuit RL"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Constante de temps τ", "ar": "ثابت الزمن τ" },
+      "text": {
+        "fr": "La constante de temps du circuit RL est τ = L/R. Elle s'exprime en secondes (s). Elle représente la durée au bout de laquelle le courant atteint 63% de sa valeur maximale I₀ = E/R. Le régime permanent est pratiquement établi après t ≈ 5τ."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Rupture du courant dans un circuit RL (décroissance)",
+        "ar": "3. انقطاع التيار في دارة RL (التناقص)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Lorsqu'on ouvre le circuit (on supprime le générateur et on ferme le circuit RL sur lui-même), le courant ne s'annule pas brutalement grâce à la bobine. L'équation différentielle devient :",
+        "ar": "عند فتح الدارة (نزيل المولد ونغلق الدارة RL على نفسها)، لا ينعدم التيار فجأة بفضل الوشيعة. المعادلة التفاضلية تصبح:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "0 = Ri + L\\frac{di}{dt} \\quad \\Rightarrow \\quad i(t) = I_0 \\cdot e^{-\\frac{t}{\\tau}}",
+      "note": {
+        "fr": "avec I₀ = E/R le courant initial et τ = L/R"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La tension aux bornes de la bobine vaut alors u_L = −RI₀·e^(−t/τ). Le signe négatif traduit la loi de Lenz : la bobine se comporte comme un générateur qui maintient le courant en s'opposant à sa diminution.",
+        "ar": "التوتر بين طرفي الوشيعة يساوي حينئذ u_L = −RI₀·e^(−t/τ). الإشارة السالبة تعبر عن قانون لينز: الوشيعة تتصرف كمولد يحافظ على التيار بمعاكسة تناقصه."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Énergie emmagasinée dans une bobine",
+        "ar": "4. الطاقة المخزنة في وشيعة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Une bobine parcourue par un courant i emmagasine de l'énergie sous forme magnétique. Cette énergie est :",
+        "ar": "وشيعة يمر بها تيار i تخزن طاقة على شكل مغناطيسي. هذه الطاقة هي:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_L = \\frac{1}{2} L i^2",
+      "note": {
+        "fr": "E_L en joules (J), L en henry (H), i en ampères (A)"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Lors de l'établissement du courant, la bobine emmagasine de l'énergie magnétique. Lors de la rupture, elle restitue cette énergie au circuit sous forme de chaleur dissipée dans la résistance R. L'énergie totale dissipée dans R lors de la rupture est E = ½LI₀².",
+        "ar": "أثناء تأسيس التيار، تخزن الوشيعة طاقة مغناطيسية. وأثناء الانقطاع، تعيد هذه الطاقة إلى الدارة على شكل حرارة تتبدد في المقاومة R."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Exemple d'application",
+        "ar": "5. مثال تطبيقي"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Établissement du courant dans un circuit RL" },
+      "problem": {
+        "fr": "Un circuit RL série est alimenté par un générateur de f.é.m. E = 12 V. La résistance totale du circuit est R = 40 Ω et l'inductance de la bobine est L = 0,2 H. Calculer : 1) La constante de temps τ. 2) L'intensité du courant en régime permanent I₀. 3) L'intensité du courant à t = τ. 4) L'énergie emmagasinée en régime permanent."
+      },
+      "solution": {
+        "fr": "1) τ = L/R = 0,2/40 = 5×10⁻³ s = 5 ms.\n2) I₀ = E/R = 12/40 = 0,3 A.\n3) i(τ) = I₀(1 − e⁻¹) = 0,3 × 0,632 = 0,19 A.\n4) E_L = ½LI₀² = ½ × 0,2 × (0,3)² = 9×10⁻³ J = 9 mJ.",
+        "latex": "\\tau = \\frac{L}{R} = \\frac{0{,}2}{40} = 5 \\times 10^{-3}\\text{ s} \\quad;\\quad I_0 = \\frac{E}{R} = 0{,}3\\text{ A} \\quad;\\quad E_L = \\frac{1}{2}LI_0^2 = 9 \\times 10^{-3}\\text{ J}"
+      }
+    }
+  ]
+}

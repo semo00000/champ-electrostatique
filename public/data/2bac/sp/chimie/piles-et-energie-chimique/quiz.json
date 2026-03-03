@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Dans une pile électrochimique, l'oxydation a lieu :",
+        "ar": "في عمود كهروكيميائي، تحدث الأكسدة:"
+      },
+      "choices": [
+        { "fr": "À la cathode (pôle +)", "ar": "عند المهبط (القطب +)" },
+        { "fr": "À l'anode (pôle -)", "ar": "عند المصعد (القطب -)" },
+        { "fr": "Dans le pont salin", "ar": "في الجسر الملحي" },
+        { "fr": "Aux deux électrodes simultanément", "ar": "عند القطبين في آن واحد" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "L'oxydation (perte d'électrons) a lieu à l'anode, qui constitue le pôle négatif de la pile. La réduction (gain d'électrons) a lieu à la cathode (pôle +).",
+        "ar": "الأكسدة (فقدان الإلكترونات) تحدث عند المصعد، الذي يشكل القطب السالب للعمود. الاختزال (اكتساب الإلكترونات) يحدث عند المهبط (القطب +)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La f.é.m. standard de la pile Daniell Zn-Cu vaut :",
+        "ar": "القوة المحركة الكهربائية المعيارية لعمود دانيال Zn-Cu تساوي:"
+      },
+      "choices": [
+        { "fr": "0,34 V", "ar": "0,34 V" },
+        { "fr": "0,76 V", "ar": "0,76 V" },
+        { "fr": "1,10 V", "ar": "1,10 V" },
+        { "fr": "0,42 V", "ar": "0,42 V" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "E° = E°(Cu²⁺/Cu) - E°(Zn²⁺/Zn) = 0,34 - (-0,76) = 1,10 V. Le cuivre est la cathode (potentiel plus élevé) et le zinc est l'anode (potentiel plus bas).",
+        "ar": "E° = E°(Cu²⁺/Cu) - E°(Zn²⁺/Zn) = 0,34 - (-0,76) = 1,10 V. النحاس هو المهبط (الجهد الأعلى) والزنك هو المصعد (الجهد الأدنى)."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer le potentiel de l'électrode Zn²⁺/Zn pour [Zn²⁺] = 0,10 mol/L. E°(Zn²⁺/Zn) = -0,76 V.",
+        "ar": "احسب جهد قطب Zn²⁺/Zn عندما [Zn²⁺] = 0,10 mol/L. المعطى E°(Zn²⁺/Zn) = -0,76 V."
+      },
+      "answer": -0.79,
+      "tolerance": 0.01,
+      "unit": "V",
+      "hint": {
+        "fr": "Utiliser la relation de Nernst : E = E° + (0,06/n)×log[Zn²⁺] avec n = 2.",
+        "ar": "استخدم علاقة نرنست: E = E° + (0,06/n)×log[Zn²⁺] مع n = 2."
+      },
+      "explanation": {
+        "fr": "E = E° + (0,06/2)×log(0,10) = -0,76 + 0,03×(-1) = -0,76 - 0,03 = -0,79 V.",
+        "ar": "E = E° + (0,06/2)×log(0,10) = -0,76 + 0,03×(-1) = -0,76 - 0,03 = -0,79 V."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le rôle du pont salin dans une pile est :",
+        "ar": "دور الجسر الملحي في العمود هو:"
+      },
+      "choices": [
+        { "fr": "Permettre le passage des électrons entre les deux solutions", "ar": "السماح بمرور الإلكترونات بين المحلولين" },
+        { "fr": "Assurer la continuité du circuit et la neutralité électrique des solutions", "ar": "ضمان استمرارية الدارة والحياد الكهربائي للمحاليل" },
+        { "fr": "Augmenter la f.é.m. de la pile", "ar": "زيادة القوة المحركة الكهربائية للعمود" },
+        { "fr": "Empêcher toute réaction chimique", "ar": "منع أي تفاعل كيميائي" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le pont salin assure la continuité électrique du circuit en permettant la migration d'ions entre les deux compartiments. Il maintient la neutralité électrique des solutions : les anions migrent vers l'anode et les cations vers la cathode.",
+        "ar": "يضمن الجسر الملحي استمرارية الدارة الكهربائية بالسماح بهجرة الأيونات بين الحجرتين. يحافظ على الحياد الكهربائي للمحاليل: الأنيونات تهاجر نحو المصعد والكاتيونات نحو المهبط."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Une pile débite un courant de 0,20 A pendant 2 heures. Quelle charge électrique Q (en C) a-t-elle débitée ?",
+        "ar": "يُقدّم عمود تياراً بشدة 0,20 A لمدة ساعتين. ما الشحنة الكهربائية Q (بالكولوم) التي قدّمها؟"
+      },
+      "answer": 1440,
+      "tolerance": 10,
+      "unit": "C",
+      "hint": {
+        "fr": "Q = I × Δt. Convertir le temps en secondes : 2 h = 7200 s.",
+        "ar": "Q = I × Δt. حوّل الزمن إلى ثوانٍ: 2 h = 7200 s."
+      },
+      "explanation": {
+        "fr": "Δt = 2 × 3600 = 7200 s. Q = I × Δt = 0,20 × 7200 = 1440 C.",
+        "ar": "Δt = 2 × 3600 = 7200 s. Q = I × Δt = 0,20 × 7200 = 1440 C."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Dans la pile Daniell, lors de son fonctionnement :",
+        "ar": "في عمود دانيال أثناء عمله:"
+      },
+      "choices": [
+        { "fr": "La masse de l'électrode de zinc augmente", "ar": "تزداد كتلة قطب الزنك" },
+        { "fr": "La masse de l'électrode de cuivre diminue", "ar": "تنقص كتلة قطب النحاس" },
+        { "fr": "La concentration de Cu²⁺ augmente", "ar": "يزداد تركيز Cu²⁺" },
+        { "fr": "La masse de l'électrode de cuivre augmente et celle de zinc diminue", "ar": "تزداد كتلة قطب النحاس وتنقص كتلة قطب الزنك" }
+      ],
+      "answer": 3,
+      "explanation": {
+        "fr": "Le zinc s'oxyde (Zn → Zn²⁺ + 2e⁻) : la lame de zinc perd de la masse. Le cuivre se dépose (Cu²⁺ + 2e⁻ → Cu) : la lame de cuivre gagne de la masse. La concentration de Zn²⁺ augmente et celle de Cu²⁺ diminue.",
+        "ar": "الزنك يتأكسد (Zn → Zn²⁺ + 2e⁻): صفيحة الزنك تفقد من كتلتها. النحاس يترسب (Cu²⁺ + 2e⁻ → Cu): صفيحة النحاس تكتسب كتلة. تركيز Zn²⁺ يزداد وتركيز Cu²⁺ ينقص."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer la f.é.m. standard d'une pile Ag-Cu sachant que E°(Ag⁺/Ag) = +0,80 V et E°(Cu²⁺/Cu) = +0,34 V.",
+        "ar": "احسب القوة المحركة الكهربائية المعيارية لعمود Ag-Cu علماً أن E°(Ag⁺/Ag) = +0,80 V وE°(Cu²⁺/Cu) = +0,34 V."
+      },
+      "answer": 0.46,
+      "tolerance": 0.01,
+      "unit": "V",
+      "hint": {
+        "fr": "E° = E°(cathode) - E°(anode). L'argent a le potentiel le plus élevé.",
+        "ar": "E° = E°(المهبط) - E°(المصعد). الفضة لها الجهد الأعلى."
+      },
+      "explanation": {
+        "fr": "L'argent a le potentiel le plus élevé : cathode = Ag. Le cuivre a le potentiel le plus bas : anode = Cu. E° = E°(Ag⁺/Ag) - E°(Cu²⁺/Cu) = 0,80 - 0,34 = 0,46 V.",
+        "ar": "الفضة لها الجهد الأعلى: مهبط = Ag. النحاس له الجهد الأدنى: مصعد = Cu. E° = E°(Ag⁺/Ag) - E°(Cu²⁺/Cu) = 0,80 - 0,34 = 0,46 V."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Une pile contient 0,050 mol de zinc comme réactif limitant. Combien de moles d'électrons sont échangées au total lorsque la pile est complètement usée ?",
+        "ar": "يحتوي عمود على 0,050 mol من الزنك كمتفاعل محدّ. كم مولاً من الإلكترونات يتم تبادلها إجمالاً عند نفاد العمود تماماً؟"
+      },
+      "answer": 0.10,
+      "tolerance": 0.005,
+      "unit": "mol",
+      "hint": {
+        "fr": "Zn → Zn²⁺ + 2e⁻ : chaque mole de zinc donne 2 moles d'électrons.",
+        "ar": "Zn → Zn²⁺ + 2e⁻ : كل مول من الزنك يعطي 2 مول من الإلكترونات."
+      },
+      "explanation": {
+        "fr": "D'après la demi-équation Zn → Zn²⁺ + 2e⁻, chaque mole de zinc libère 2 moles d'électrons. ne = 2 × 0,050 = 0,10 mol.",
+        "ar": "من نصف المعادلة Zn → Zn²⁺ + 2e⁻، كل مول من الزنك يحرر 2 مول من الإلكترونات. ne = 2 × 0,050 = 0,10 mol."
+      }
+    }
+  ]
+}

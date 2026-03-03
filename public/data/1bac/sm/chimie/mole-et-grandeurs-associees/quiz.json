@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le nombre d'Avogadro N_A vaut :",
+        "ar": "عدد أفوغادرو N_A يساوي:"
+      },
+      "choices": [
+        { "fr": "6,022 × 10²³ mol⁻¹", "ar": "6,022 × 10²³ mol⁻¹" },
+        { "fr": "6,022 × 10²² mol⁻¹", "ar": "6,022 × 10²² mol⁻¹" },
+        { "fr": "22,4 mol⁻¹", "ar": "22,4 mol⁻¹" },
+        { "fr": "6,022 × 10⁻²³ mol⁻¹", "ar": "6,022 × 10⁻²³ mol⁻¹" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Le nombre d'Avogadro est N_A = 6,022 × 10²³ mol⁻¹. C'est le nombre d'entités élémentaires contenues dans une mole de matière.",
+        "ar": "عدد أفوغادرو هو N_A = 6,022 × 10²³ mol⁻¹. هو عدد الكيانات الأولية الموجودة في مول واحد من المادة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Quelle est la masse molaire du glucose C₆H₁₂O₆ en g/mol ? (M(C)=12, M(H)=1, M(O)=16)",
+        "ar": "ما الكتلة المولية للجلوكوز C₆H₁₂O₆ بـ g/mol؟ (M(C)=12, M(H)=1, M(O)=16)"
+      },
+      "answer": 180,
+      "tolerance": 0,
+      "unit": "g/mol",
+      "hint": {
+        "fr": "Additionnez : 6×M(C) + 12×M(H) + 6×M(O).",
+        "ar": "اجمع: 6×M(C) + 12×M(H) + 6×M(O)."
+      },
+      "explanation": {
+        "fr": "M(C₆H₁₂O₆) = 6×12 + 12×1 + 6×16 = 72 + 12 + 96 = 180 g/mol.",
+        "ar": "M(C₆H₁₂O₆) = 6×12 + 12×1 + 6×16 = 72 + 12 + 96 = 180 g/mol."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le volume molaire d'un gaz dans les CNTP (0°C, 1 atm) vaut :",
+        "ar": "الحجم المولي لغاز في الشروط النظامية (0°C, 1 atm) يساوي:"
+      },
+      "choices": [
+        { "fr": "11,2 L/mol", "ar": "11,2 L/mol" },
+        { "fr": "22,4 L/mol", "ar": "22,4 L/mol" },
+        { "fr": "44,8 L/mol", "ar": "44,8 L/mol" },
+        { "fr": "Cela dépend du gaz", "ar": "يعتمد على الغاز" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Dans les CNTP (0°C, 1 atm), le volume molaire de tout gaz parfait est V_m = 22,4 L/mol. C'est une constante universelle indépendante de la nature du gaz (loi d'Avogadro).",
+        "ar": "في الشروط النظامية (0°C, 1 atm)، الحجم المولي لأي غاز مثالي هو V_m = 22,4 L/mol. هي ثابتة عامة مستقلة عن طبيعة الغاز (قانون أفوغادرو)."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On dissout 4 g de NaOH (M = 40 g/mol) dans 500 mL de solution. Quelle est la concentration C en mol/L ?",
+        "ar": "نذيب 4 g من NaOH (M = 40 g/mol) في 500 mL من محلول. ما قيمة التركيز C بـ mol/L؟"
+      },
+      "answer": 0.2,
+      "tolerance": 0.01,
+      "unit": "mol/L",
+      "hint": {
+        "fr": "Calculez d'abord n = m/M, puis C = n/V (en litres).",
+        "ar": "احسب أولا n = m/M، ثم C = n/V (باللتر)."
+      },
+      "explanation": {
+        "fr": "n = m/M = 4/40 = 0,1 mol. V = 500 mL = 0,5 L. C = n/V = 0,1/0,5 = 0,2 mol/L.",
+        "ar": "n = m/M = 4/40 = 0,1 mol. V = 500 mL = 0,5 L. C = n/V = 0,1/0,5 = 0,2 mol/L."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Quel volume (en L) occupe 0,5 mol de gaz dans les CNTP ?",
+        "ar": "ما الحجم (بـ L) الذي يشغله 0,5 mol من غاز في الشروط النظامية؟"
+      },
+      "answer": 11.2,
+      "tolerance": 0.1,
+      "unit": "L",
+      "hint": {
+        "fr": "V = n × V_m avec V_m = 22,4 L/mol.",
+        "ar": "V = n × V_m مع V_m = 22,4 L/mol."
+      },
+      "explanation": {
+        "fr": "V = n × V_m = 0,5 × 22,4 = 11,2 L.",
+        "ar": "V = n × V_m = 0,5 × 22,4 = 11,2 L."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La relation entre la quantité de matière n, la masse m et la masse molaire M est :",
+        "ar": "العلاقة بين كمية المادة n والكتلة m والكتلة المولية M هي:"
+      },
+      "choices": [
+        { "fr": "n = m × M", "ar": "n = m × M" },
+        { "fr": "n = m / M", "ar": "n = m / M" },
+        { "fr": "n = M / m", "ar": "n = M / m" },
+        { "fr": "n = m + M", "ar": "n = m + M" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "n = m/M est la relation fondamentale. n est en mol, m en grammes et M en g/mol. On peut aussi écrire : m = n × M.",
+        "ar": "n = m/M هي العلاقة الأساسية. n بالمول، m بالغرام و M بـ g/mol. يمكن أيضا كتابة: m = n × M."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Combien de molécules contient 0,25 mol d'eau ? (Donner l'exposant de 10, sachant que N = n × N_A)",
+        "ar": "كم جزيئة يحتوي 0,25 mol من الماء؟ (أعط أس 10، علما أن N = n × N_A)"
+      },
+      "answer": 1.506e23,
+      "tolerance": 1e21,
+      "unit": "molécules",
+      "hint": {
+        "fr": "N = n × N_A = 0,25 × 6,022 × 10²³.",
+        "ar": "N = n × N_A = 0,25 × 6,022 × 10²³."
+      },
+      "explanation": {
+        "fr": "N = n × N_A = 0,25 × 6,022 × 10²³ = 1,506 × 10²³ molécules.",
+        "ar": "N = n × N_A = 0,25 × 6,022 × 10²³ = 1,506 × 10²³ جزيئة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Quelle masse (en g) représente 2 mol de H₂SO₄ ? (M(H)=1, M(S)=32, M(O)=16)",
+        "ar": "ما الكتلة (بـ g) التي تمثلها 2 mol من H₂SO₄؟ (M(H)=1, M(S)=32, M(O)=16)"
+      },
+      "answer": 196,
+      "tolerance": 0,
+      "unit": "g",
+      "hint": {
+        "fr": "Calculez M(H₂SO₄) puis m = n × M.",
+        "ar": "احسب M(H₂SO₄) ثم m = n × M."
+      },
+      "explanation": {
+        "fr": "M(H₂SO₄) = 2×1 + 32 + 4×16 = 2 + 32 + 64 = 98 g/mol. m = n × M = 2 × 98 = 196 g.",
+        "ar": "M(H₂SO₄) = 2×1 + 32 + 4×16 = 2 + 32 + 64 = 98 g/mol. m = n × M = 2 × 98 = 196 g."
+      }
+    }
+  ]
+}

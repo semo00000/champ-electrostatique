@@ -1,0 +1,332 @@
+{
+  "id": "arithmetique",
+  "title": {
+    "fr": "Arithmétique dans ℤ",
+    "ar": "الحسابيات في ℤ"
+  },
+  "objectives": {
+    "fr": [
+      "Maîtriser la divisibilité et la division euclidienne dans ℤ",
+      "Calculer le PGCD de deux entiers par l'algorithme d'Euclide",
+      "Appliquer le théorème de Bézout et le lemme de Gauss",
+      "Décomposer un entier en produit de facteurs premiers",
+      "Résoudre des problèmes de congruences"
+    ],
+    "ar": [
+      "إتقان القسمة والقسمة الإقليدية في ℤ",
+      "حساب القاسم المشترك الأكبر لعددين صحيحين باستخدام خوارزمية إقليدس",
+      "تطبيق مبرهنة بيزو ومبرهنة غوص",
+      "تفكيك عدد صحيح إلى جداء عوامل أولية",
+      "حل مسائل التطابقات"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Divisibilité dans ℤ",
+        "ar": "1. القسمة في ℤ"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Divisibilité",
+        "ar": "القسمة"
+      },
+      "text": {
+        "fr": "Soient a et b deux entiers relatifs avec a ≠ 0. On dit que a divise b (noté a | b) s'il existe un entier k ∈ ℤ tel que b = k × a. On dit alors que a est un diviseur de b, et que b est un multiple de a.",
+        "ar": "ليكن a و b عددين صحيحين نسبيين حيث a ≠ 0. نقول إن a يقسم b (ونكتب a | b) إذا وُجد عدد صحيح k ∈ ℤ بحيث b = k × a. نقول حينئذ إن a قاسم لـ b، وإن b مضاعف لـ a."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Si a | b et a | c, alors a | (b + c) et a | (b − c)",
+          "Si a | b, alors a | (b × k) pour tout entier k ∈ ℤ",
+          "Si a | b et b | c, alors a | c (transitivité)",
+          "Si a | b et b | a, alors a = ±b",
+          "Tout entier n ≠ 0 divise 0, et 1 divise tout entier"
+        ],
+        "ar": [
+          "إذا كان a | b و a | c، فإن a | (b + c) و a | (b − c)",
+          "إذا كان a | b، فإن a | (b × k) لكل عدد صحيح k ∈ ℤ",
+          "إذا كان a | b و b | c، فإن a | c (التعدي)",
+          "إذا كان a | b و b | a، فإن a = ±b",
+          "كل عدد صحيح n ≠ 0 يقسم 0، و 1 يقسم كل عدد صحيح"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Division euclidienne",
+        "ar": "2. القسمة الإقليدية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Division euclidienne",
+        "ar": "القسمة الإقليدية"
+      },
+      "text": {
+        "fr": "Pour tout couple (a, b) d'entiers avec b > 0, il existe un unique couple (q, r) d'entiers tels que a = b × q + r avec 0 ≤ r < b. L'entier q est le quotient et r est le reste de la division euclidienne de a par b.",
+        "ar": "لكل زوج (a, b) من الأعداد الصحيحة حيث b > 0، يوجد زوج وحيد (q, r) من الأعداد الصحيحة بحيث a = b × q + r مع 0 ≤ r < b. العدد الصحيح q هو الخارج و r هو الباقي في القسمة الإقليدية لـ a على b."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "a = b \\times q + r \\quad \\text{avec} \\quad 0 \\leq r < b",
+      "note": {
+        "fr": "Théorème de la division euclidienne : existence et unicité du couple (q, r)",
+        "ar": "مبرهنة القسمة الإقليدية: وجود ووحدانية الزوج (q, r)"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Division euclidienne",
+        "ar": "مثال: القسمة الإقليدية"
+      },
+      "problem": {
+        "fr": "Effectuer la division euclidienne de 157 par 12.",
+        "ar": "أنجز القسمة الإقليدية لـ 157 على 12."
+      },
+      "solution": {
+        "fr": "On a 157 = 12 × 13 + 1. Donc q = 13 et r = 1. Vérification : 0 ≤ 1 < 12.",
+        "latex": "157 = 12 \\times 13 + 1 \\quad (q = 13,\\; r = 1)"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. PGCD et algorithme d'Euclide",
+        "ar": "3. القاسم المشترك الأكبر وخوارزمية إقليدس"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "PGCD",
+        "ar": "القاسم المشترك الأكبر (ق.م.أ)"
+      },
+      "text": {
+        "fr": "Le PGCD (Plus Grand Commun Diviseur) de deux entiers a et b non tous les deux nuls, noté PGCD(a, b), est le plus grand entier naturel qui divise à la fois a et b. Si PGCD(a, b) = 1, on dit que a et b sont premiers entre eux.",
+        "ar": "القاسم المشترك الأكبر (ق.م.أ) لعددين صحيحين a و b ليسا معدومين معًا، ويُرمز له بـ PGCD(a, b)، هو أكبر عدد طبيعي يقسم كلًا من a و b. إذا كان PGCD(a, b) = 1، نقول إن a و b أوليان فيما بينهما."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'algorithme d'Euclide permet de calculer le PGCD de deux entiers par divisions euclidiennes successives. Le principe repose sur la propriété : PGCD(a, b) = PGCD(b, r) où r est le reste de la division de a par b. On itère jusqu'à obtenir un reste nul ; le dernier reste non nul est le PGCD.",
+        "ar": "تتيح خوارزمية إقليدس حساب القاسم المشترك الأكبر لعددين صحيحين بإجراء قسمات إقليدية متتالية. يعتمد المبدأ على الخاصية: PGCD(a, b) = PGCD(b, r) حيث r هو باقي قسمة a على b. نكرر العملية حتى نحصل على باقٍ معدوم؛ آخر باقٍ غير معدوم هو ق.م.أ."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Algorithme d'Euclide",
+        "ar": "مثال: خوارزمية إقليدس"
+      },
+      "problem": {
+        "fr": "Calculer PGCD(252, 198) par l'algorithme d'Euclide.",
+        "ar": "احسب PGCD(252, 198) باستخدام خوارزمية إقليدس."
+      },
+      "solution": {
+        "fr": "252 = 198 × 1 + 54, puis 198 = 54 × 3 + 36, puis 54 = 36 × 1 + 18, puis 36 = 18 × 2 + 0. Donc PGCD(252, 198) = 18.",
+        "latex": "252 = 198 \\times 1 + 54 \\\\ 198 = 54 \\times 3 + 36 \\\\ 54 = 36 \\times 1 + 18 \\\\ 36 = 18 \\times 2 + 0 \\\\ \\Rightarrow \\text{PGCD}(252,\\,198) = 18"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{PPCM}(a,b) = \\frac{|a \\times b|}{\\text{PGCD}(a,b)}",
+      "note": {
+        "fr": "Relation fondamentale entre PGCD et PPCM (Plus Petit Commun Multiple)",
+        "ar": "العلاقة الأساسية بين القاسم المشترك الأكبر والمضاعف المشترك الأصغر"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Théorème de Bézout et lemme de Gauss",
+        "ar": "4. مبرهنة بيزو ومبرهنة غوص"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Théorème de Bézout",
+        "ar": "مبرهنة بيزو"
+      },
+      "text": {
+        "fr": "Soient a et b deux entiers non tous les deux nuls, et d = PGCD(a, b). Il existe deux entiers u et v tels que a × u + b × v = d. En particulier, a et b sont premiers entre eux si et seulement s'il existe u, v ∈ ℤ tels que a × u + b × v = 1.",
+        "ar": "ليكن a و b عددين صحيحين ليسا معدومين معًا، و d = PGCD(a, b). يوجد عددان صحيحان u و v بحيث a × u + b × v = d. بشكل خاص، a و b أوليان فيما بينهما إذا وفقط إذا وُجد u, v ∈ ℤ بحيث a × u + b × v = 1."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\exists\\, (u, v) \\in \\mathbb{Z}^2 : \\quad a \\cdot u + b \\cdot v = \\gcd(a,\\, b)",
+      "note": {
+        "fr": "Identité de Bézout — les coefficients u et v se trouvent en remontant l'algorithme d'Euclide",
+        "ar": "متطابقة بيزو — يمكن إيجاد المعاملين u و v بالرجوع في خوارزمية إقليدس"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Coefficients de Bézout",
+        "ar": "مثال: معاملات بيزو"
+      },
+      "problem": {
+        "fr": "Trouver u et v tels que 252u + 198v = 18 (sachant que PGCD(252, 198) = 18).",
+        "ar": "أوجد u و v بحيث 252u + 198v = 18 (علمًا أن PGCD(252, 198) = 18)."
+      },
+      "solution": {
+        "fr": "En remontant l'algorithme d'Euclide : 18 = 54 − 36 × 1 = 54 − (198 − 54 × 3) = 4 × 54 − 198 = 4(252 − 198) − 198 = 4 × 252 − 5 × 198. Donc u = 4 et v = −5.",
+        "latex": "18 = 4 \\times 252 + (-5) \\times 198 \\quad \\Rightarrow \\quad u = 4,\\; v = -5"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Lemme de Gauss",
+        "ar": "مبرهنة غوص"
+      },
+      "text": {
+        "fr": "Si a divise le produit b × c et si PGCD(a, b) = 1 (a et b premiers entre eux), alors a divise c. Ce lemme est un outil fondamental pour les démonstrations en arithmétique.",
+        "ar": "إذا كان a يقسم الجداء b × c وكان PGCD(a, b) = 1 (أي a و b أوليان فيما بينهما)، فإن a يقسم c. هذه المبرهنة أداة أساسية في البراهين الحسابية."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Corollaire de Gauss : Si a | c et b | c avec PGCD(a, b) = 1, alors (a × b) | c. Autre corollaire : si p est premier et p | (a × b), alors p | a ou p | b.",
+        "ar": "نتيجة غوص: إذا كان a | c و b | c مع PGCD(a, b) = 1، فإن (a × b) | c. نتيجة أخرى: إذا كان p أوليًا و p | (a × b)، فإن p | a أو p | b."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Nombres premiers et théorème fondamental",
+        "ar": "5. الأعداد الأولية والمبرهنة الأساسية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Nombre premier",
+        "ar": "عدد أولي"
+      },
+      "text": {
+        "fr": "Un entier naturel p ≥ 2 est premier s'il admet exactement deux diviseurs positifs : 1 et lui-même. Les premiers nombres premiers sont : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31. Le nombre 2 est le seul nombre premier pair. Il existe une infinité de nombres premiers (théorème d'Euclide).",
+        "ar": "العدد الطبيعي p ≥ 2 يكون أوليًا إذا كان له قاسمان موجبان فقط: 1 ونفسه. الأعداد الأولية الأولى هي: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31. العدد 2 هو العدد الأولي الزوجي الوحيد. يوجد عدد لانهائي من الأعداد الأولية (مبرهنة إقليدس)."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour vérifier si n est premier, il suffit de tester la divisibilité par tous les nombres premiers p tels que p² ≤ n. Si aucun ne divise n, alors n est premier.",
+        "ar": "للتحقق مما إذا كان n أوليًا، يكفي اختبار قابلية القسمة على جميع الأعداد الأولية p بحيث p² ≤ n. إذا لم يقسم أي منها n، فإن n أولي."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Théorème fondamental de l'arithmétique",
+        "ar": "المبرهنة الأساسية في الحسابيات"
+      },
+      "text": {
+        "fr": "Tout entier naturel n ≥ 2 se décompose de manière unique (à l'ordre près) en un produit de facteurs premiers : n = p₁^α₁ × p₂^α₂ × ... × pₖ^αₖ où les pᵢ sont des nombres premiers distincts rangés par ordre croissant et les αᵢ des entiers naturels ≥ 1.",
+        "ar": "كل عدد طبيعي n ≥ 2 يتفكك بشكل وحيد (باستثناء ترتيب العوامل) إلى جداء عوامل أولية: n = p₁^α₁ × p₂^α₂ × ... × pₖ^αₖ حيث pᵢ أعداد أولية متمايزة مرتبة تصاعديًا و αᵢ أعداد طبيعية ≥ 1."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "n = p_1^{\\alpha_1} \\times p_2^{\\alpha_2} \\times \\cdots \\times p_k^{\\alpha_k}",
+      "note": {
+        "fr": "Le nombre de diviseurs de n est d(n) = (α₁+1)(α₂+1)...(αₖ+1)",
+        "ar": "عدد قواسم n هو d(n) = (α₁+1)(α₂+1)...(αₖ+1)"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Décomposition en facteurs premiers",
+        "ar": "مثال: التفكيك إلى جداء عوامل أولية"
+      },
+      "problem": {
+        "fr": "Décomposer 360 en produit de facteurs premiers et en déduire le nombre de ses diviseurs.",
+        "ar": "فكّك العدد 360 إلى جداء عوامل أولية واستنتج عدد قواسمه."
+      },
+      "solution": {
+        "fr": "360 = 2³ × 3² × 5¹. Le nombre de diviseurs est (3+1)(2+1)(1+1) = 4 × 3 × 2 = 24 diviseurs.",
+        "latex": "360 = 2^3 \\times 3^2 \\times 5^1 \\\\ d(360) = (3+1)(2+1)(1+1) = 24"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Congruences dans ℤ",
+        "ar": "6. التطابقات في ℤ"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Congruence",
+        "ar": "التطابق"
+      },
+      "text": {
+        "fr": "Soient a, b deux entiers et n un entier naturel ≥ 2. On dit que a est congru à b modulo n (noté a ≡ b [n]) si n divise (a − b), c'est-à-dire si a et b ont le même reste dans la division euclidienne par n.",
+        "ar": "ليكن a و b عددين صحيحين و n عددًا طبيعيًا ≥ 2. نقول إن a مطابق لـ b بتردد n (ونكتب a ≡ b [n]) إذا كان n يقسم (a − b)، أي إذا كان لـ a و b نفس الباقي في القسمة الإقليدية على n."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Si a ≡ b [n] et c ≡ d [n], alors a + c ≡ b + d [n]",
+          "Si a ≡ b [n] et c ≡ d [n], alors a × c ≡ b × d [n]",
+          "Si a ≡ b [n], alors aᵏ ≡ bᵏ [n] pour tout k ∈ ℕ",
+          "a ≡ 0 [n] si et seulement si n | a"
+        ],
+        "ar": [
+          "إذا كان a ≡ b [n] و c ≡ d [n]، فإن a + c ≡ b + d [n]",
+          "إذا كان a ≡ b [n] و c ≡ d [n]، فإن a × c ≡ b × d [n]",
+          "إذا كان a ≡ b [n]، فإن aᵏ ≡ bᵏ [n] لكل k ∈ ℕ",
+          "a ≡ 0 [n] إذا وفقط إذا n | a"
+        ]
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Critères de divisibilité par congruences : un entier est divisible par 3 (ou 9) si la somme de ses chiffres est divisible par 3 (ou 9). Un entier est divisible par 11 si la somme alternée de ses chiffres est divisible par 11. Ces critères se démontrent en utilisant 10 ≡ 1 [3] et 10 ≡ −1 [11].",
+        "ar": "معايير القسمة بالتطابقات: عدد صحيح يقبل القسمة على 3 (أو 9) إذا كان مجموع أرقامه يقبل القسمة على 3 (أو 9). عدد صحيح يقبل القسمة على 11 إذا كان المجموع المتناوب لأرقامه يقبل القسمة على 11. تُبرهن هذه المعايير باستخدام 10 ≡ 1 [3] و 10 ≡ −1 [11]."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Congruences",
+        "ar": "مثال: التطابقات"
+      },
+      "problem": {
+        "fr": "Déterminer le reste de la division euclidienne de 2¹⁰⁰ par 7.",
+        "ar": "حدد باقي القسمة الإقليدية لـ 2¹⁰⁰ على 7."
+      },
+      "solution": {
+        "fr": "On a 2³ = 8 ≡ 1 [7]. Or 100 = 3 × 33 + 1, donc 2¹⁰⁰ = (2³)³³ × 2¹ ≡ 1³³ × 2 ≡ 2 [7]. Le reste est 2.",
+        "latex": "2^3 = 8 \\equiv 1 \\pmod{7} \\\\ 100 = 3 \\times 33 + 1 \\\\ 2^{100} = (2^3)^{33} \\times 2^1 \\equiv 1^{33} \\times 2 \\equiv 2 \\pmod{7}"
+      }
+    }
+  ]
+}

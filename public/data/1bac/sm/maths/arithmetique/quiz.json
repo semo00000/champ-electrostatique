@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer PGCD(84, 36) en utilisant l'algorithme d'Euclide.",
+        "ar": "احسب PGCD(84, 36) باستخدام خوارزمية إقليدس."
+      },
+      "answer": 12,
+      "tolerance": 0,
+      "unit": "",
+      "hint": {
+        "fr": "Effectuez les divisions successives : 84 = 36 × 2 + 12, puis continuez.",
+        "ar": "أنجز القسمات المتتالية: 84 = 36 × 2 + 12، ثم أكمل."
+      },
+      "explanation": {
+        "fr": "84 = 36 × 2 + 12 ; 36 = 12 × 3 + 0. Le dernier reste non nul est 12, donc PGCD(84, 36) = 12.",
+        "ar": "84 = 36 × 2 + 12 ؛ 36 = 12 × 3 + 0. آخر باقٍ غير معدوم هو 12، إذن PGCD(84, 36) = 12."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer PPCM(12, 18).",
+        "ar": "احسب PPCM(12, 18) (المضاعف المشترك الأصغر)."
+      },
+      "answer": 36,
+      "tolerance": 0,
+      "unit": "",
+      "hint": {
+        "fr": "Utilisez la formule PPCM(a,b) = |a×b| / PGCD(a,b). Commencez par calculer PGCD(12,18) = 6.",
+        "ar": "استخدم الصيغة PPCM(a,b) = |a×b| / PGCD(a,b). ابدأ بحساب PGCD(12,18) = 6."
+      },
+      "explanation": {
+        "fr": "PGCD(12, 18) = 6. Donc PPCM(12, 18) = (12 × 18) / 6 = 216 / 6 = 36.",
+        "ar": "PGCD(12, 18) = 6. إذن PPCM(12, 18) = (12 × 18) / 6 = 216 / 6 = 36."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Lequel de ces nombres est premier ?",
+        "ar": "أي من هذه الأعداد أولي؟"
+      },
+      "choices": [
+        { "fr": "51", "ar": "51" },
+        { "fr": "37", "ar": "37" },
+        { "fr": "49", "ar": "49" },
+        { "fr": "39", "ar": "39" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "37 est premier (divisible uniquement par 1 et 37). 51 = 3 × 17, 49 = 7², 39 = 3 × 13.",
+        "ar": "37 عدد أولي (يقبل القسمة فقط على 1 و 37). 51 = 3 × 17، 49 = 7²، 39 = 3 × 13."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La décomposition en facteurs premiers de 360 est :",
+        "ar": "تفكيك العدد 360 إلى جداء عوامل أولية هو:"
+      },
+      "choices": [
+        { "fr": "2³ × 3² × 5", "ar": "2³ × 3² × 5" },
+        { "fr": "2² × 3² × 10", "ar": "2² × 3² × 10" },
+        { "fr": "4 × 9 × 10", "ar": "4 × 9 × 10" },
+        { "fr": "2³ × 3 × 15", "ar": "2³ × 3 × 15" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "360 = 8 × 45 = 2³ × 9 × 5 = 2³ × 3² × 5. Les autres choix ne sont pas des produits de facteurs premiers.",
+        "ar": "360 = 8 × 45 = 2³ × 9 × 5 = 2³ × 3² × 5. الخيارات الأخرى ليست جداء عوامل أولية."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Quel est le reste de la division euclidienne de 2⁸ par 5 ?",
+        "ar": "ما هو باقي القسمة الإقليدية لـ 2⁸ على 5؟"
+      },
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "",
+      "hint": {
+        "fr": "Calculez les puissances de 2 modulo 5 : 2⁴ = 16 ≡ ? [5].",
+        "ar": "احسب قوى 2 بتردد 5: 2⁴ = 16 ≡ ? [5]."
+      },
+      "explanation": {
+        "fr": "2⁴ = 16 ≡ 1 [5]. Donc 2⁸ = (2⁴)² ≡ 1² = 1 [5]. Le reste est 1.",
+        "ar": "2⁴ = 16 ≡ 1 [5]. إذن 2⁸ = (2⁴)² ≡ 1² = 1 [5]. الباقي هو 1."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "D'après le théorème de Bézout, si PGCD(a, b) = 1, alors :",
+        "ar": "حسب مبرهنة بيزو، إذا كان PGCD(a, b) = 1، فإن:"
+      },
+      "choices": [
+        { "fr": "a divise b", "ar": "a يقسم b" },
+        { "fr": "Il existe u, v ∈ ℤ tels que au + bv = 1", "ar": "يوجد u, v ∈ ℤ بحيث au + bv = 1" },
+        { "fr": "a + b est premier", "ar": "a + b عدد أولي" },
+        { "fr": "a × b = 1", "ar": "a × b = 1" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le théorème de Bézout affirme que si a et b sont premiers entre eux (PGCD = 1), il existe des entiers u et v tels que au + bv = 1. C'est l'identité de Bézout.",
+        "ar": "تنص مبرهنة بيزو على أنه إذا كان a و b أوليين فيما بينهما (PGCD = 1)، فإنه يوجد عددان صحيحان u و v بحيث au + bv = 1. هذه هي متطابقة بيزو."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Si 7 divise 3 × n et PGCD(7, 3) = 1, que peut-on conclure par le lemme de Gauss ?",
+        "ar": "إذا كان 7 يقسم 3 × n و PGCD(7, 3) = 1، ماذا نستنتج بمبرهنة غوص؟"
+      },
+      "choices": [
+        { "fr": "7 divise 3", "ar": "7 يقسم 3" },
+        { "fr": "3 divise n", "ar": "3 يقسم n" },
+        { "fr": "7 divise n", "ar": "7 يقسم n" },
+        { "fr": "n divise 7", "ar": "n يقسم 7" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Par le lemme de Gauss : si a | (b × c) et PGCD(a, b) = 1, alors a | c. Ici 7 | (3n) et PGCD(7, 3) = 1, donc 7 | n.",
+        "ar": "بمبرهنة غوص: إذا كان a | (b × c) و PGCD(a, b) = 1، فإن a | c. هنا 7 | (3n) و PGCD(7, 3) = 1، إذن 7 | n."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Combien de diviseurs positifs possède le nombre 72 ?",
+        "ar": "كم عدد القواسم الموجبة للعدد 72؟"
+      },
+      "answer": 12,
+      "tolerance": 0,
+      "unit": "",
+      "hint": {
+        "fr": "Décomposez 72 en facteurs premiers, puis utilisez la formule d(n) = (α₁+1)(α₂+1)...",
+        "ar": "فكّك 72 إلى عوامل أولية، ثم استخدم الصيغة d(n) = (α₁+1)(α₂+1)..."
+      },
+      "explanation": {
+        "fr": "72 = 2³ × 3². Le nombre de diviseurs est d(72) = (3+1)(2+1) = 4 × 3 = 12.",
+        "ar": "72 = 2³ × 3². عدد القواسم هو d(72) = (3+1)(2+1) = 4 × 3 = 12."
+      }
+    }
+  ]
+}

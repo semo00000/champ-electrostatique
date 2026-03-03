@@ -1,0 +1,200 @@
+{
+  "id": "champ-magnetique",
+  "title": { "fr": "Le Champ Magnétique", "ar": "الحقل المغناطيسي" },
+  "objectives": {
+    "fr": [
+      "Définir le champ magnétique et ses caractéristiques",
+      "Connaître les propriétés des lignes de champ magnétique",
+      "Décrire le champ magnétique terrestre",
+      "Calculer le champ magnétique d'un solénoïde",
+      "Calculer le champ magnétique d'un fil rectiligne",
+      "Appliquer la règle de la main droite"
+    ],
+    "ar": [
+      "تعريف الحقل المغناطيسي وخصائصه",
+      "معرفة خصائص خطوط الحقل المغناطيسي",
+      "وصف الحقل المغناطيسي الأرضي",
+      "حساب الحقل المغناطيسي لملف لولبي",
+      "حساب الحقل المغناطيسي لسلك مستقيم",
+      "تطبيق قاعدة اليد اليمنى"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Notion de champ magnétique", "ar": "1. مفهوم الحقل المغناطيسي" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Champ magnétique", "ar": "الحقل المغناطيسي" },
+      "text": {
+        "fr": "Le champ magnétique $\\vec{B}$ est une grandeur vectorielle qui caractérise l'état magnétique d'une région de l'espace. Il est créé par des aimants ou par des courants électriques. Son intensité se mesure en Tesla (T).",
+        "ar": "الحقل المغناطيسي $\\vec{B}$ هو كمية شعاعية تميز الحالة المغناطيسية لمنطقة في الفضاء. يُنشأ بواسطة مغانط أو تيارات كهربائية. شدته تُقاس بالتسلا (T)."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le champ magnétique agit sur les aimants, les aiguilles aimantées et les charges en mouvement. On le met en évidence expérimentalement à l'aide de limaille de fer ou d'une aiguille aimantée (boussole).",
+        "ar": "يؤثر الحقل المغناطيسي على المغانط والإبر المغناطيسية والشحنات المتحركة. نكشفه تجريبيا بواسطة برادة الحديد أو إبرة مغناطيسية (بوصلة)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Lignes de champ magnétique", "ar": "2. خطوط الحقل المغناطيسي" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Lignes de champ", "ar": "خطوط الحقل" },
+      "text": {
+        "fr": "Les lignes de champ magnétique sont des courbes dont la tangente en chaque point donne la direction du vecteur $\\vec{B}$. Elles sont orientées par convention du pôle Nord vers le pôle Sud à l'extérieur de l'aimant.",
+        "ar": "خطوط الحقل المغناطيسي هي منحنيات يعطي المماس لها في كل نقطة اتجاه الشعاع $\\vec{B}$. تكون موجهة اصطلاحا من القطب الشمالي نحو القطب الجنوبي خارج المغناطيس."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Les lignes de champ magnétique sont des courbes <strong>fermées</strong> (contrairement aux lignes de champ électrique)",
+          "Elles sortent du pôle Nord et entrent par le pôle Sud (à l'extérieur de l'aimant)",
+          "Deux lignes de champ ne se croisent jamais",
+          "La densité des lignes est proportionnelle à l'intensité du champ $B$",
+          "Le champ est <strong>uniforme</strong> quand les lignes sont parallèles, équidistantes et de même sens"
+        ],
+        "ar": [
+          "خطوط الحقل المغناطيسي هي منحنيات <strong>مغلقة</strong> (على عكس خطوط الحقل الكهربائي)",
+          "تخرج من القطب الشمالي وتدخل من القطب الجنوبي (خارج المغناطيس)",
+          "لا يتقاطع خطان من خطوط الحقل أبدا",
+          "كثافة الخطوط تتناسب مع شدة الحقل $B$",
+          "الحقل يكون <strong>منتظما</strong> عندما تكون الخطوط متوازية ومتساوية البعد ومن نفس الاتجاه"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Le champ magnétique terrestre", "ar": "3. الحقل المغناطيسي الأرضي" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La Terre se comporte comme un gigantesque aimant. Le pôle Nord magnétique (vers lequel pointe une boussole) est en réalité proche du pôle Sud géographique. Le champ magnétique terrestre a une intensité d'environ $B_T \\approx 5 \\times 10^{-5}\\,T = 50\\,\\mu T$ et possède une composante horizontale $B_h$ et une composante verticale.",
+        "ar": "تتصرف الأرض كمغناطيس عملاق. القطب الشمالي المغناطيسي (الذي تشير إليه البوصلة) هو في الواقع قريب من القطب الجنوبي الجغرافي. شدة الحقل المغناطيسي الأرضي حوالي $B_T \\approx 5 \\times 10^{-5}\\,T = 50\\,\\mu T$ وله مركبة أفقية $B_h$ ومركبة شاقولية."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "L'angle entre le Nord géographique et le Nord magnétique s'appelle la déclinaison magnétique. L'angle entre le champ magnétique et l'horizontale s'appelle l'inclinaison magnétique.",
+        "ar": "الزاوية بين الشمال الجغرافي والشمال المغناطيسي تُسمى الانحراف المغناطيسي. الزاوية بين الحقل المغناطيسي والأفقي تُسمى الميل المغناطيسي."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Champ magnétique créé par un solénoïde", "ar": "4. الحقل المغناطيسي المنشأ بواسطة ملف لولبي" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un solénoïde est une bobine formée de $N$ spires enroulées régulièrement sur un cylindre de longueur $L$. Quand un courant $I$ le traverse, il crée un champ magnétique uniforme à l'intérieur.",
+        "ar": "الملف اللولبي هو وشيعة مكونة من $N$ لفة ملفوفة بانتظام على أسطوانة طولها $L$. عندما يمر فيه تيار $I$، ينشئ حقلا مغناطيسيا منتظما في داخله."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "B = \\mu_0 \\cdot n \\cdot I = \\mu_0 \\cdot \\frac{N}{L} \\cdot I",
+      "note": {
+        "fr": "B en Tesla (T), μ₀ = 4π × 10⁻⁷ T·m/A (perméabilité du vide), n = N/L = nombre de spires par unité de longueur (en m⁻¹), I en Ampères.",
+        "ar": "B بالتسلا (T)، μ₀ = 4π × 10⁻⁷ T·m/A (نفاذية الفراغ)، n = N/L = عدد اللفات لكل وحدة طول (بوحدة m⁻¹)، I بالأمبير."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "À l'intérieur d'un solénoïde long, le champ est uniforme, parallèle à l'axe du solénoïde. Pour déterminer le sens de $\\vec{B}$, on utilise la règle de la main droite : si les doigts s'enroulent dans le sens du courant, le pouce indique le sens de $\\vec{B}$ (pôle Nord).",
+        "ar": "داخل ملف لولبي طويل، الحقل منتظم ومواز لمحور الملف. لتحديد اتجاه $\\vec{B}$، نستخدم قاعدة اليد اليمنى: إذا التفت الأصابع في اتجاه التيار، يشير الإبهام إلى اتجاه $\\vec{B}$ (القطب الشمالي)."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 1 : Champ d'un solénoïde", "ar": "مثال 1: حقل ملف لولبي" },
+      "problem": {
+        "fr": "Un solénoïde de longueur $L = 20\\,cm$ comporte $N = 500$ spires et est traversé par un courant $I = 2\\,A$. Calculer le champ magnétique à l'intérieur du solénoïde.",
+        "ar": "ملف لولبي طوله $L = 20\\,cm$ يضم $N = 500$ لفة ويمر فيه تيار $I = 2\\,A$. احسب الحقل المغناطيسي داخل الملف."
+      },
+      "solution": {
+        "fr": "",
+        "latex": "B = \\mu_0 \\frac{N}{L} I = 4\\pi \\times 10^{-7} \\times \\frac{500}{0{,}2} \\times 2 = 4\\pi \\times 10^{-7} \\times 5000 \\approx 6{,}28 \\times 10^{-3}\\,T \\approx 6{,}3\\,mT"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Champ magnétique créé par un fil rectiligne", "ar": "5. الحقل المغناطيسي المنشأ بواسطة سلك مستقيم" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un fil rectiligne infini parcouru par un courant $I$ crée un champ magnétique dont les lignes sont des cercles centrés sur le fil. L'intensité du champ diminue en $1/r$ avec la distance au fil.",
+        "ar": "سلك مستقيم لانهائي يمر فيه تيار $I$ ينشئ حقلا مغناطيسيا خطوطه دوائر مركزها السلك. شدة الحقل تتناقص بنسبة $1/r$ مع البعد عن السلك."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "B = \\frac{\\mu_0 I}{2\\pi r}",
+      "note": {
+        "fr": "B en T, μ₀ = 4π × 10⁻⁷ T·m/A, I en A, r = distance au fil en m. Le sens de B est donné par la règle de la main droite : le pouce dans le sens du courant, les doigts indiquent le sens de B.",
+        "ar": "B بالتسلا، μ₀ = 4π × 10⁻⁷ T·m/A، I بالأمبير، r = البعد عن السلك بالمتر. اتجاه B يُعطى بقاعدة اليد اليمنى."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 2 : Champ d'un fil rectiligne", "ar": "مثال 2: حقل سلك مستقيم" },
+      "problem": {
+        "fr": "Un fil rectiligne long est parcouru par un courant $I = 10\\,A$. Calculer le champ magnétique à une distance $r = 5\\,cm$ du fil.",
+        "ar": "سلك مستقيم طويل يمر فيه تيار $I = 10\\,A$. احسب الحقل المغناطيسي على بُعد $r = 5\\,cm$ من السلك."
+      },
+      "solution": {
+        "fr": "",
+        "latex": "B = \\frac{\\mu_0 I}{2\\pi r} = \\frac{4\\pi \\times 10^{-7} \\times 10}{2\\pi \\times 0{,}05} = \\frac{4 \\times 10^{-6}}{0{,}1} = 4 \\times 10^{-5}\\,T = 40\\,\\mu T"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Règle de la main droite", "ar": "6. قاعدة اليد اليمنى" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La règle de la main droite permet de déterminer le sens du champ magnétique créé par un courant :",
+        "ar": "قاعدة اليد اليمنى تسمح بتحديد اتجاه الحقل المغناطيسي المنشأ بواسطة تيار:"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "<strong>Fil rectiligne</strong> : le pouce de la main droite pointe dans le sens du courant ; les doigts recourbés indiquent le sens de rotation de $\\vec{B}$",
+          "<strong>Solénoïde</strong> : les doigts de la main droite s'enroulent dans le sens du courant ; le pouce indique le sens de $\\vec{B}$ à l'intérieur (direction du pôle Nord)",
+          "<strong>Spire circulaire</strong> : même règle que le solénoïde, le pouce donne le sens de $\\vec{B}$ au centre de la spire"
+        ],
+        "ar": [
+          "<strong>سلك مستقيم</strong>: إبهام اليد اليمنى يشير في اتجاه التيار؛ الأصابع المنحنية تشير إلى اتجاه دوران $\\vec{B}$",
+          "<strong>ملف لولبي</strong>: أصابع اليد اليمنى تلتف في اتجاه التيار؛ الإبهام يشير إلى اتجاه $\\vec{B}$ في الداخل (اتجاه القطب الشمالي)",
+          "<strong>لفة دائرية</strong>: نفس القاعدة كالملف اللولبي، الإبهام يعطي اتجاه $\\vec{B}$ في مركز اللفة"
+        ]
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "L'unité SI du champ magnétique est le Tesla (T). Ordres de grandeur : champ terrestre ≈ 50 μT, aimant de réfrigérateur ≈ 5 mT, IRM médicale ≈ 1,5 à 3 T, aimant de laboratoire ≈ 10 T.",
+        "ar": "وحدة النظام الدولي للحقل المغناطيسي هي التسلا (T). رتب القيم: الحقل الأرضي ≈ 50 μT، مغناطيس ثلاجة ≈ 5 mT، التصوير بالرنين المغناطيسي ≈ 1,5 إلى 3 T."
+      }
+    }
+  ]
+}

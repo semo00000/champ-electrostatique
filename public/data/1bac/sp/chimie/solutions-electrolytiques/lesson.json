@@ -1,0 +1,177 @@
+{
+  "id": "solutions-electrolytiques",
+  "title": {
+    "fr": "Les solutions electrolytiques",
+    "ar": "المحاليل الإلكتروليتية"
+  },
+  "objectives": {
+    "fr": [
+      "Distinguer les electrolytes forts des electrolytes faibles",
+      "Ecrire les equations de dissolution ionique",
+      "Calculer les concentrations ioniques dans une solution",
+      "Appliquer la condition d'electroneutralite",
+      "Comprendre la conductivite des solutions ioniques"
+    ],
+    "ar": [
+      "التمييز بين الإلكتروليتات القوية والضعيفة",
+      "كتابة معادلات التفكك الأيوني",
+      "حساب التراكيز الأيونية في محلول",
+      "تطبيق شرط الحياد الكهربائي",
+      "فهم ناقلية المحاليل الأيونية"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Les electrolytes et la dissolution ionique",
+        "ar": "1. الإلكتروليتات والتفكك الأيوني"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Electrolyte" },
+      "text": { "fr": "Un electrolyte est une substance qui, dissoute dans l'eau, produit des ions et rend la solution conductrice du courant electrique. On distingue les electrolytes forts (dissociation totale) et les electrolytes faibles (dissociation partielle)." }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Lorsqu'un compose ionique comme le chlorure de sodium (NaCl) est dissous dans l'eau, il se dissocie completement en ions Na⁺ et Cl⁻. Cette dissociation est totale : NaCl est un electrolyte fort. En revanche, l'acide ethanoique CH₃COOH ne se dissocie que partiellement dans l'eau : c'est un electrolyte faible.",
+        "ar": "عند إذابة مركب أيوني مثل كلوريد الصوديوم (NaCl) في الماء، ينفصل كليا إلى أيونات Na⁺ و Cl⁻. هذا التفكك كلي: NaCl إلكتروليت قوي. بينما حمض الإيثانويك CH₃COOH لا ينفصل إلا جزئيا في الماء: إنه إلكتروليت ضعيف."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Exemples d'electrolytes forts : NaCl, HCl, NaOH, KNO₃, H₂SO₄. Exemples d'electrolytes faibles : CH₃COOH, NH₃, HF.",
+        "ar": "أمثلة على الإلكتروليتات القوية: NaCl, HCl, NaOH, KNO₃, H₂SO₄. أمثلة على الإلكتروليتات الضعيفة: CH₃COOH, NH₃, HF."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Equations de dissolution",
+        "ar": "2. معادلات الذوبان"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'equation de dissolution d'un solide ionique dans l'eau s'ecrit en montrant la dissociation en ions. L'eau joue le role de solvant et intervient par solvatation (hydratation) des ions.",
+        "ar": "تُكتب معادلة ذوبان مادة أيونية صلبة في الماء بإظهار التفكك إلى أيونات. يلعب الماء دور المذيب ويتدخل عبر إماهة الأيونات."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{NaCl}_{(s)} \\xrightarrow{\\text{H}_2\\text{O}} \\text{Na}^+_{(aq)} + \\text{Cl}^-_{(aq)}",
+      "note": { "fr": "Dissolution du chlorure de sodium (dissociation totale)" }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{CaCl}_{2(s)} \\xrightarrow{\\text{H}_2\\text{O}} \\text{Ca}^{2+}_{(aq)} + 2\\text{Cl}^-_{(aq)}",
+      "note": { "fr": "Dissolution du chlorure de calcium : noter les coefficients stoechiometriques" }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{Al}_2(\\text{SO}_4)_{3(s)} \\xrightarrow{\\text{H}_2\\text{O}} 2\\text{Al}^{3+}_{(aq)} + 3\\text{SO}_4^{2-}_{(aq)}",
+      "note": { "fr": "Dissolution du sulfate d'aluminium" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Concentration molaire et concentration ionique",
+        "ar": "3. التركيز المولي والتركيز الأيوني"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Concentration molaire apportee" },
+      "text": { "fr": "La concentration molaire apportee C d'un solute est la quantite de matiere n de solute dissoute par litre de solution : C = n/V, exprimee en mol/L (ou mol·L⁻¹)." }
+    },
+    {
+      "type": "formula",
+      "latex": "C = \\frac{n}{V} = \\frac{m}{M \\cdot V}",
+      "note": { "fr": "C : concentration (mol/L), n : quantite de matiere (mol), V : volume de solution (L), m : masse (g), M : masse molaire (g/mol)" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "A partir de l'equation de dissolution et de la concentration apportee C, on peut calculer la concentration de chaque ion en solution. Si la dissolution de CaCl₂ a une concentration C, alors [Ca²⁺] = C et [Cl⁻] = 2C, car chaque unite formulaire libere 1 ion Ca²⁺ et 2 ions Cl⁻.",
+        "ar": "انطلاقا من معادلة الذوبان والتركيز المولي C، يمكن حساب تركيز كل أيون في المحلول. إذا كان تركيز CaCl₂ هو C، فإن [Ca²⁺] = C و [Cl⁻] = 2C، لأن كل وحدة صيغية تحرر أيون Ca²⁺ واحد و2 أيون Cl⁻."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Calcul des concentrations ioniques" },
+      "problem": { "fr": "On dissout 5,85 g de NaCl (M = 58,5 g/mol) dans 500 mL d'eau. Calculer la concentration molaire apportee C et les concentrations des ions Na⁺ et Cl⁻." },
+      "solution": {
+        "fr": "n = m/M = 5,85/58,5 = 0,1 mol. V = 0,5 L. C = n/V = 0,1/0,5 = 0,2 mol/L. D'apres l'equation NaCl → Na⁺ + Cl⁻ : [Na⁺] = C = 0,2 mol/L et [Cl⁻] = C = 0,2 mol/L.",
+        "latex": "C = \\frac{0{,}1}{0{,}5} = 0{,}2 \\text{ mol/L} \\quad \\Rightarrow \\quad [\\text{Na}^+] = [\\text{Cl}^-] = 0{,}2 \\text{ mol/L}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Electroneutralite d'une solution",
+        "ar": "4. الحياد الكهربائي للمحلول"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Toute solution electrolytique est electriquement neutre : la somme des charges positives est egale a la somme des charges negatives. C'est la condition d'electroneutralite.",
+        "ar": "كل محلول إلكتروليتي يكون متعادلا كهربائيا: مجموع الشحنات الموجبة يساوي مجموع الشحنات السالبة. هذا هو شرط الحياد الكهربائي."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\sum_i z_i^+ \\cdot [\\text{cation}_i] = \\sum_j |z_j^-| \\cdot [\\text{anion}_j]",
+      "note": { "fr": "Condition d'electroneutralite : z est la valeur absolue de la charge de l'ion" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Application de l'electroneutralite" },
+      "problem": { "fr": "Une solution contient les ions Ca²⁺ a [Ca²⁺] = 0,05 mol/L et les ions Cl⁻. Determiner [Cl⁻] par electroneutralite." },
+      "solution": {
+        "fr": "2 × [Ca²⁺] = 1 × [Cl⁻], donc [Cl⁻] = 2 × 0,05 = 0,10 mol/L.",
+        "latex": "2[\\text{Ca}^{2+}] = [\\text{Cl}^-] \\quad \\Rightarrow \\quad [\\text{Cl}^-] = 2 \\times 0{,}05 = 0{,}10 \\text{ mol/L}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Conductivite des solutions electrolytiques",
+        "ar": "5. ناقلية المحاليل الإلكتروليتية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La conductivite σ (sigma) d'une solution depend de la nature et de la concentration des ions presents. Elle s'exprime en S/m (siemens par metre) ou S·m⁻¹. Plus la concentration en ions est elevee, plus la conductivite est grande. Chaque ion i contribue a la conductivite selon sa conductivite molaire ionique λᵢ.",
+        "ar": "تعتمد الناقلية σ (سيغما) لمحلول على طبيعة وتركيز الأيونات الموجودة. تُعبَّر بوحدة S/m (سيمنس لكل متر). كلما زاد تركيز الأيونات، زادت الناقلية. يساهم كل أيون i في الناقلية حسب الناقلية المولية الأيونية λᵢ."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\sigma = \\sum_i \\lambda_i \\cdot [X_i]",
+      "note": { "fr": "σ : conductivite (S·m⁻¹), λᵢ : conductivite molaire ionique (S·m²·mol⁻¹), [Xᵢ] : concentration de l'ion i (mol·m⁻³)" }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "λ(H₃O⁺) = 349,8 × 10⁻⁴ S·m²·mol⁻¹ (le plus conducteur)",
+          "λ(OH⁻) = 198,3 × 10⁻⁴ S·m²·mol⁻¹",
+          "λ(Na⁺) = 50,1 × 10⁻⁴ S·m²·mol⁻¹",
+          "λ(Cl⁻) = 76,3 × 10⁻⁴ S·m²·mol⁻¹",
+          "La conductivite augmente avec la temperature"
+        ]
+      }
+    }
+  ]
+}

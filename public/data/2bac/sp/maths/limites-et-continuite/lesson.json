@@ -1,0 +1,171 @@
+{
+  "id": "limites-et-continuite",
+  "title": {
+    "fr": "Limites et continuité",
+    "ar": "النهايات والاستمرارية"
+  },
+  "objectives": {
+    "fr": [
+      "Calculer la limite d'une fonction en un point ou à l'infini",
+      "Comprendre la définition formelle (ε-δ) de la limite",
+      "Définir la continuité d'une fonction en un point et sur un intervalle",
+      "Appliquer le théorème des valeurs intermédiaires (TVI)",
+      "Étudier la continuité de fonctions composées"
+    ],
+    "ar": [
+      "حساب نهاية دالة في نقطة أو عند اللانهاية",
+      "فهم التعريف الصوري (ε-δ) للنهاية",
+      "تعريف استمرارية دالة في نقطة وعلى مجال",
+      "تطبيق مبرهنة القيم الوسيطية",
+      "دراسة استمرارية الدوال المركبة"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Limite d'une fonction – Définition formelle",
+        "ar": "١. نهاية دالة – التعريف الصوري"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Limite finie en un point (définition ε-δ)" },
+      "text": { "fr": "On dit que f admet pour limite ℓ quand x tend vers a si : pour tout ε > 0, il existe δ > 0 tel que pour tout x du domaine, |x − a| < δ ⟹ |f(x) − ℓ| < ε." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\lim_{x \\to a} f(x) = \\ell \\iff \\forall \\varepsilon > 0, \\; \\exists \\delta > 0, \\; |x - a| < \\delta \\Rightarrow |f(x) - \\ell| < \\varepsilon",
+      "note": { "fr": "Définition formelle de la limite" }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Intuitivement, on peut rendre f(x) aussi proche de ℓ qu'on le souhaite, pourvu que x soit suffisamment proche de a." }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Limite infinie" },
+      "text": { "fr": "On dit que lim f(x) = +∞ quand x → a si : pour tout A > 0, il existe δ > 0 tel que |x − a| < δ ⟹ f(x) > A." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Opérations sur les limites et formes indéterminées",
+        "ar": "٢. العمليات على النهايات والأشكال غير المحددة"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "lim(f + g) = lim f + lim g (sauf forme indéterminée +∞ − ∞)",
+          "lim(f × g) = lim f × lim g (sauf forme indéterminée 0 × ∞)",
+          "lim(f/g) = lim f / lim g si lim g ≠ 0 (sauf formes 0/0 ou ∞/∞)",
+          "Formes indéterminées : +∞ − ∞, 0 × ∞, 0/0, ∞/∞, 1^∞, 0⁰, ∞⁰"
+        ]
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Lever une indétermination" },
+      "problem": { "fr": "Calculer lim(x→1) (x² − 1)/(x − 1)." },
+      "solution": {
+        "fr": "Forme 0/0. On factorise : (x² − 1)/(x − 1) = (x − 1)(x + 1)/(x − 1) = x + 1 pour x ≠ 1. Donc lim = 1 + 1 = 2.",
+        "latex": "\\lim_{x \\to 1} \\frac{x^2 - 1}{x - 1} = \\lim_{x \\to 1} \\frac{(x-1)(x+1)}{x-1} = \\lim_{x \\to 1} (x+1) = 2"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Continuité d'une fonction",
+        "ar": "٣. استمرارية دالة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Continuité en un point" },
+      "text": { "fr": "f est continue en a si f est définie en a et lim(x→a) f(x) = f(a). De manière équivalente : pour tout ε > 0, il existe δ > 0 tel que |x − a| < δ ⟹ |f(x) − f(a)| < ε." }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Continuité sur un intervalle" },
+      "text": { "fr": "f est continue sur un intervalle I si elle est continue en tout point de I. On note C⁰(I) l'ensemble des fonctions continues sur I." }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Les fonctions polynomiales, rationnelles (sur leur domaine), trigonométriques, exponentielles et logarithmiques sont continues sur leur domaine de définition." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Types de discontinuités",
+        "ar": "٤. أنواع عدم الاستمرارية"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Discontinuité de première espèce : les limites à gauche et à droite existent mais sont différentes (saut)",
+          "Discontinuité de deuxième espèce : au moins une des limites latérales est infinie ou n'existe pas",
+          "Discontinuité éliminable : lim(x→a) f(x) = ℓ existe mais f(a) ≠ ℓ ou f n'est pas définie en a"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Théorème des valeurs intermédiaires (TVI)",
+        "ar": "٥. مبرهنة القيم الوسيطية"
+      }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Théorème des valeurs intermédiaires : Si f est continue sur [a, b] et si k est un réel compris entre f(a) et f(b), alors il existe au moins un c ∈ [a, b] tel que f(c) = k." }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Corollaire (TVI pour les zéros) : Si f est continue sur [a, b] et si f(a)·f(b) < 0, alors il existe c ∈ ]a, b[ tel que f(c) = 0. Si de plus f est strictement monotone, ce c est unique." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Application du TVI" },
+      "problem": { "fr": "Montrer que l'équation x³ + x − 1 = 0 admet une unique solution dans [0, 1]." },
+      "solution": {
+        "fr": "Posons f(x) = x³ + x − 1. f est continue sur [0, 1], f(0) = −1 < 0 et f(1) = 1 > 0. Par le TVI, il existe c ∈ ]0, 1[ tel que f(c) = 0. De plus f'(x) = 3x² + 1 > 0, donc f est strictement croissante : la solution est unique.",
+        "latex": "f(0) = -1 < 0, \\quad f(1) = 1 > 0, \\quad f'(x) = 3x^2 + 1 > 0"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Continuité et composition",
+        "ar": "٦. الاستمرارية والتركيب"
+      }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Si g est continue en a et f est continue en g(a), alors f ∘ g est continue en a." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\lim_{x \\to a} f(g(x)) = f\\left(\\lim_{x \\to a} g(x)\\right) = f(g(a))",
+      "note": { "fr": "Propriété de la composition de fonctions continues" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Continuité d'une composée" },
+      "problem": { "fr": "Montrer que h(x) = √(x² + 1) est continue sur ℝ." },
+      "solution": {
+        "fr": "Posons g(x) = x² + 1 (polynôme, donc continue sur ℝ) et f(t) = √t (continue sur [0, +∞[). Comme g(x) ≥ 1 > 0, h = f ∘ g est continue sur ℝ.",
+        "latex": "h = f \\circ g \\text{ avec } g(x) = x^2+1 \\text{ et } f(t) = \\sqrt{t}"
+      }
+    }
+  ]
+}

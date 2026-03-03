@@ -1,0 +1,220 @@
+{
+  "id": "courant-electrique-continu",
+  "title": { "fr": "Le Courant Électrique Continu", "ar": "التيار الكهربائي المستمر" },
+  "objectives": {
+    "fr": [
+      "Définir l'intensité du courant électrique et la tension",
+      "Énoncer et appliquer la loi d'Ohm",
+      "Calculer la puissance et l'énergie électrique",
+      "Analyser les circuits série et parallèle",
+      "Appliquer les lois de Kirchhoff"
+    ],
+    "ar": [
+      "تعريف شدة التيار الكهربائي والتوتر",
+      "صياغة وتطبيق قانون أوم",
+      "حساب الاستطاعة والطاقة الكهربائية",
+      "تحليل الدارات على التسلسل والتفرع",
+      "تطبيق قوانين كيرشوف"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Intensité du courant électrique", "ar": "1. شدة التيار الكهربائي" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Courant électrique", "ar": "التيار الكهربائي" },
+      "text": {
+        "fr": "Le courant électrique est un mouvement ordonné de porteurs de charge (électrons dans un métal, ions dans une solution). L'intensité du courant $I$ mesure le débit de charge à travers une section du conducteur.",
+        "ar": "التيار الكهربائي هو حركة منتظمة لحاملات الشحنة (إلكترونات في معدن، أيونات في محلول). شدة التيار $I$ تقيس تدفق الشحنة عبر مقطع الموصل."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "I = \\frac{Q}{t} = \\frac{dq}{dt}",
+      "note": {
+        "fr": "I en Ampères (A), Q en Coulombs (C), t en secondes (s). Le sens conventionnel du courant est du + vers le − à l'extérieur du générateur.",
+        "ar": "I بالأمبير (A)، Q بالكولوم (C)، t بالثانية (s). الاتجاه الاصطلاحي للتيار من + نحو − خارج المولد."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le courant est mesuré à l'aide d'un ampèremètre branché en série dans le circuit. Le sens conventionnel du courant est opposé au sens de déplacement des électrons.",
+        "ar": "يُقاس التيار بواسطة أمبيرمتر يُوصل على التسلسل في الدارة. الاتجاه الاصطلاحي للتيار معاكس لاتجاه حركة الإلكترونات."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Tension électrique", "ar": "2. التوتر الكهربائي" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Tension électrique", "ar": "التوتر الكهربائي" },
+      "text": {
+        "fr": "La tension électrique (ou différence de potentiel) $U_{AB} = V_A - V_B$ entre deux points A et B d'un circuit représente l'énergie transférée par unité de charge entre ces deux points. Elle se mesure en Volts (V).",
+        "ar": "التوتر الكهربائي (أو فرق الكمون) $U_{AB} = V_A - V_B$ بين نقطتين A و B في دارة يمثل الطاقة المنقولة لكل وحدة شحنة بين هاتين النقطتين. يُقاس بالفولت (V)."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La tension se mesure à l'aide d'un voltmètre branché en dérivation (en parallèle) aux bornes du dipôle.",
+        "ar": "يُقاس التوتر بواسطة فولتمتر يُوصل على التوازي (بالتفرع) على مربطي ثنائي القطب."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Résistance et loi d'Ohm", "ar": "3. المقاومة وقانون أوم" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Résistance électrique", "ar": "المقاومة الكهربائية" },
+      "text": {
+        "fr": "La résistance $R$ d'un conducteur ohmique (résistor) caractérise sa capacité à s'opposer au passage du courant. Elle se mesure en Ohms (Ω). Un conducteur ohmique obéit à la loi d'Ohm.",
+        "ar": "المقاومة $R$ لموصل أومي (مقاوم) تميز قدرته على معارضة مرور التيار. تُقاس بالأوم (Ω). الموصل الأومي يخضع لقانون أوم."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "U = R \\cdot I",
+      "note": {
+        "fr": "U en Volts (V), R en Ohms (Ω), I en Ampères (A). La caractéristique U(I) d'un conducteur ohmique est une droite passant par l'origine de pente R.",
+        "ar": "U بالفولت (V)، R بالأوم (Ω)، I بالأمبير (A). الميزة U(I) لموصل أومي هي مستقيم يمر من المبدأ ميله R."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La résistance d'un fil conducteur dépend de sa nature (résistivité $\\rho$), de sa longueur $L$ et de sa section $S$ : $R = \\rho \\frac{L}{S}$.",
+        "ar": "مقاومة سلك موصل تعتمد على طبيعته (المقاومية $\\rho$)، طوله $L$ ومقطعه $S$: $R = \\rho \\frac{L}{S}$."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Association de résistances", "ar": "4. تجميع المقاومات" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "En série, les résistances s'ajoutent. En parallèle, ce sont les inverses qui s'ajoutent :",
+        "ar": "على التسلسل، تُجمع المقاومات. على التوازي، تُجمع مقلوبات المقاومات:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "R_{série} = R_1 + R_2 + \\cdots + R_n",
+      "note": {
+        "fr": "En série : même courant I dans toutes les résistances, les tensions s'ajoutent : $U = U_1 + U_2 + \\cdots$",
+        "ar": "على التسلسل: نفس التيار I في جميع المقاومات، التوترات تُجمع: $U = U_1 + U_2 + \\cdots$"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\frac{1}{R_{parallèle}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\cdots + \\frac{1}{R_n}",
+      "note": {
+        "fr": "En parallèle : même tension U aux bornes de toutes les résistances, les courants s'ajoutent : $I = I_1 + I_2 + \\cdots$",
+        "ar": "على التوازي: نفس التوتر U على مربطي جميع المقاومات، التيارات تُجمع: $I = I_1 + I_2 + \\cdots$"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Lois de Kirchhoff", "ar": "5. قوانين كيرشوف" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Loi des nœuds (1ère loi de Kirchhoff)", "ar": "قانون العقد (قانون كيرشوف الأول)" },
+      "text": {
+        "fr": "La somme des intensités des courants qui arrivent à un nœud est égale à la somme des intensités des courants qui en partent : $\\sum I_{entrant} = \\sum I_{sortant}$. Cette loi traduit la conservation de la charge.",
+        "ar": "مجموع شدات التيارات الداخلة إلى عقدة يساوي مجموع شدات التيارات الخارجة منها: $\\sum I_{داخل} = \\sum I_{خارج}$. يعبر هذا القانون عن انحفاظ الشحنة."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Loi des mailles (2ème loi de Kirchhoff)", "ar": "قانون الحلقات (قانون كيرشوف الثاني)" },
+      "text": {
+        "fr": "Dans une maille fermée d'un circuit, la somme algébrique des tensions est nulle : $\\sum U = 0$. On choisit un sens de parcours et on affecte un signe + ou − selon le sens.",
+        "ar": "في حلقة مغلقة من دارة، المجموع الجبري للتوترات يساوي صفرا: $\\sum U = 0$. نختار اتجاه مرور ونعطي إشارة + أو − حسب الاتجاه."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Puissance et énergie électrique", "ar": "6. الاستطاعة والطاقة الكهربائية" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La puissance électrique consommée par un dipôle est le produit de la tension à ses bornes par l'intensité du courant qui le traverse :",
+        "ar": "الاستطاعة الكهربائية المستهلكة من طرف ثنائي قطب هي جداء التوتر على مربطيه في شدة التيار المار فيه:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "P = U \\cdot I",
+      "note": {
+        "fr": "P en Watts (W), U en Volts (V), I en Ampères (A). Pour un conducteur ohmique : $P = RI^2 = \\frac{U^2}{R}$ (effet Joule).",
+        "ar": "P بالواط (W)، U بالفولت (V)، I بالأمبير (A). لموصل أومي: $P = RI^2 = \\frac{U^2}{R}$ (تأثير جول)."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'énergie électrique consommée pendant une durée $t$ est : $E = P \\cdot t = U \\cdot I \\cdot t$. Elle se mesure en Joules (J) ou en kilowattheures (kWh) : $1\\,kWh = 3{,}6 \\times 10^6\\,J$.",
+        "ar": "الطاقة الكهربائية المستهلكة خلال مدة $t$ هي: $E = P \\cdot t = U \\cdot I \\cdot t$. تُقاس بالجول (J) أو بالكيلوواط ساعة (kWh): $1\\,kWh = 3{,}6 \\times 10^6\\,J$."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "7. Générateur et récepteur", "ar": "7. المولد والمستقبل" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un générateur (pile, batterie) est caractérisé par sa force électromotrice (f.é.m.) $E$ et sa résistance interne $r$. La tension à ses bornes en fonctionnement : $U = E - rI$.",
+        "ar": "المولد (بطارية) يتميز بقوته الكهرمحركة (ق.ك.م.) $E$ ومقاومته الداخلية $r$. التوتر على مربطيه أثناء الاشتغال: $U = E - rI$."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "U_{générateur} = E - r \\cdot I",
+      "note": {
+        "fr": "E = f.é.m. en V, r = résistance interne en Ω, I = courant débité en A. La tension diminue quand le courant augmente.",
+        "ar": "E = ق.ك.م. بالفولت، r = المقاومة الداخلية بالأوم، I = التيار المقدم بالأمبير."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un récepteur (moteur) est caractérisé par sa force contre-électromotrice $E'$ et sa résistance interne $r'$. La tension à ses bornes : $U = E' + r'I$.",
+        "ar": "المستقبل (محرك) يتميز بقوته الكهرمحركة المضادة $E'$ ومقاومته الداخلية $r'$. التوتر على مربطيه: $U = E' + r'I$."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Circuit série simple", "ar": "مثال: دارة تسلسلية بسيطة" },
+      "problem": {
+        "fr": "Un générateur de f.é.m. $E = 12\\,V$ et de résistance interne $r = 1\\,\\Omega$ alimente deux résistances en série $R_1 = 3\\,\\Omega$ et $R_2 = 8\\,\\Omega$. Calculer l'intensité du courant et la tension aux bornes de chaque résistance.",
+        "ar": "مولد قوته الكهرمحركة $E = 12\\,V$ ومقاومته الداخلية $r = 1\\,\\Omega$ يغذي مقاومتين على التسلسل $R_1 = 3\\,\\Omega$ و $R_2 = 8\\,\\Omega$. احسب شدة التيار والتوتر على مربطي كل مقاومة."
+      },
+      "solution": {
+        "fr": "Loi des mailles : $E = (r + R_1 + R_2) \\cdot I$.",
+        "latex": "I = \\frac{E}{r + R_1 + R_2} = \\frac{12}{1 + 3 + 8} = 1\\,A \\\\[6pt] U_1 = R_1 \\cdot I = 3 \\times 1 = 3\\,V \\\\[6pt] U_2 = R_2 \\cdot I = 8 \\times 1 = 8\\,V"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "L'effet Joule : tout conducteur ohmique traversé par un courant dissipe de l'énergie sous forme de chaleur. La puissance dissipée est $P_J = R \\cdot I^2$. C'est un effet irréversible.",
+        "ar": "تأثير جول: كل موصل أومي يمر فيه تيار يبدد طاقة على شكل حرارة. الاستطاعة المبددة هي $P_J = R \\cdot I^2$. هذا تأثير لا رجعي."
+      }
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "id": "electrostatique",
+  "title": { "fr": "Le Champ Électrostatique", "ar": "الحقل الكهروستاتيكي" },
+  "objectives": {
+    "fr": [
+      "Connaître les propriétés de la charge électrique",
+      "Énoncer et appliquer la loi de Coulomb",
+      "Définir le champ électrostatique et calculer ses caractéristiques",
+      "Appliquer le principe de superposition",
+      "Connaître les propriétés des lignes de champ",
+      "Définir le potentiel électrique et les surfaces équipotentielles",
+      "Calculer le travail de la force électrostatique",
+      "Connaître le théorème de Gauss"
+    ],
+    "ar": [
+      "معرفة خصائص الشحنة الكهربائية",
+      "صياغة وتطبيق قانون كولوم",
+      "تعريف الحقل الكهروستاتيكي وحساب خصائصه",
+      "تطبيق مبدأ التراكب",
+      "معرفة خصائص خطوط الحقل",
+      "تعريف الكمون الكهربائي والسطوح متساوية الكمون",
+      "حساب شغل القوة الكهروستاتيكية",
+      "معرفة نظرية غاوس"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. La charge électrique", "ar": "1. الشحنة الكهربائية" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La matière est constituée d'atomes contenant des protons (charge positive) et des électrons (charge négative). La charge électrique est une propriété fondamentale de la matière. Elle est notée $q$ et se mesure en Coulombs (C).",
+        "ar": "تتكون المادة من ذرات تحتوي على بروتونات (شحنة موجبة) وإلكترونات (شحنة سالبة). الشحنة الكهربائية خاصية أساسية للمادة، يُرمز لها بـ $q$ وتُقاس بالكولوم (C)."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Quantification de la charge", "ar": "تكمية الشحنة" },
+      "text": {
+        "fr": "La charge électrique est quantifiée : toute charge est un multiple entier de la charge élémentaire $e = 1{,}6 \\times 10^{-19}$ C. On écrit $q = n \\cdot e$ avec $n \\in \\mathbb{Z}$.",
+        "ar": "الشحنة الكهربائية مكماة: كل شحنة هي مضاعف صحيح للشحنة العنصرية $e = 1{,}6 \\times 10^{-19}$ C."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La charge électrique se conserve : dans un système isolé, la charge totale reste constante. On ne peut ni créer ni détruire de charge, seulement la transférer.",
+        "ar": "الشحنة الكهربائية تنحفظ: في جملة معزولة، تبقى الشحنة الكلية ثابتة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. La loi de Coulomb", "ar": "2. قانون كولوم" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Deux charges ponctuelles $q_1$ et $q_2$, séparées par une distance $r$, exercent l'une sur l'autre des forces électrostatiques de même intensité, de même direction (la droite joignant les deux charges) mais de sens opposés.",
+        "ar": "شحنتان نقطيتان $q_1$ و $q_2$ مفصولتان بمسافة $r$، تؤثران على بعضهما البعض بقوتين كهروستاتيكيتين متساويتين في الشدة ومتعاكستين في الاتجاه."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\vec{F}_{1/2} = k \\frac{q_1 \\cdot q_2}{r^2} \\vec{u}_{12}",
+      "note": {
+        "fr": "k = 8,99 × 10⁹ N·m²/C² (constante de Coulomb), r = distance entre les charges, $\\vec{u}_{12}$ = vecteur unitaire de q₁ vers q₂",
+        "ar": "k = 8.99 × 10⁹ N·m²/C² (ثابت كولوم)، r = المسافة بين الشحنتين"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La constante de Coulomb peut aussi s'écrire $k = \\frac{1}{4\\pi\\varepsilon_0}$ où $\\varepsilon_0 = 8{,}85 \\times 10^{-12}$ F/m est la permittivité du vide.",
+        "ar": "يمكن كتابة ثابت كولوم أيضا $k = \\frac{1}{4\\pi\\varepsilon_0}$ حيث $\\varepsilon_0 = 8{,}85 \\times 10^{-12}$ F/m هي سماحية الفراغ."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Si $q_1 \\cdot q_2 > 0$ (charges de même signe) : la force est <strong>répulsive</strong>",
+          "Si $q_1 \\cdot q_2 < 0$ (charges de signes opposés) : la force est <strong>attractive</strong>"
+        ],
+        "ar": [
+          "إذا $q_1 \\cdot q_2 > 0$ (شحنات من نفس الإشارة): القوة <strong>تنافرية</strong>",
+          "إذا $q_1 \\cdot q_2 < 0$ (شحنات مختلفة الإشارة): القوة <strong>تجاذبية</strong>"
+        ]
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 1 : Force de Coulomb", "ar": "مثال 1: قوة كولوم" },
+      "problem": {
+        "fr": "Calculer la force entre deux charges $q_1 = 2\\,\\mu C$ et $q_2 = -3\\,\\mu C$ séparées par une distance $d = 10\\,cm$. Préciser si la force est attractive ou répulsive.",
+        "ar": "احسب القوة بين شحنتين $q_1 = 2\\,\\mu C$ و $q_2 = -3\\,\\mu C$ مفصولتين بمسافة $d = 10\\,cm$."
+      },
+      "solution": {
+        "fr": "Les charges sont de signes opposés donc la force est attractive.",
+        "latex": "F = k\\frac{|q_1 \\cdot q_2|}{r^2} = 8{,}99 \\times 10^9 \\times \\frac{2 \\times 10^{-6} \\times 3 \\times 10^{-6}}{(0{,}1)^2} = 8{,}99 \\times 10^9 \\times \\frac{6 \\times 10^{-12}}{10^{-2}} = 5{,}39\\,\\text{N}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Le champ électrostatique", "ar": "3. الحقل الكهروستاتيكي" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Champ électrostatique", "ar": "الحقل الكهروستاتيكي" },
+      "text": {
+        "fr": "Le champ électrostatique $\\vec{E}$ en un point M est défini comme la force exercée sur une charge d'épreuve positive $q_0$ placée en ce point, divisée par cette charge : $\\vec{E}(M) = \\frac{\\vec{F}}{q_0}$. Il se mesure en N/C ou en V/m.",
+        "ar": "الحقل الكهروستاتيكي $\\vec{E}$ في نقطة M يُعرّف بالقوة المؤثرة على شحنة اختبار موجبة $q_0$ موضوعة في تلك النقطة، مقسومة على هذه الشحنة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\vec{E}(M) = \\frac{\\vec{F}}{q_0}",
+      "note": {
+        "fr": "E en N/C (ou V/m), F en N, q₀ en C. Le champ est une grandeur vectorielle indépendante de la charge d'épreuve.",
+        "ar": "E بوحدة N/C (أو V/m)، F بوحدة N، q₀ بوحدة C."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le champ créé par une charge ponctuelle $q$ à une distance $r$ a pour norme :",
+        "ar": "شدة الحقل المُنشأ بواسطة شحنة نقطية $q$ على مسافة $r$ هي:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E = k \\frac{|q|}{r^2}",
+      "note": {
+        "fr": "Le champ est dirigé radialement : vers l'extérieur si q > 0, vers la charge si q < 0.",
+        "ar": "يكون الحقل شعاعيا: نحو الخارج إذا q > 0، نحو الشحنة إذا q < 0."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 2 : Calcul du champ", "ar": "مثال 2: حساب الحقل" },
+      "problem": {
+        "fr": "Calculer la norme du champ électrostatique créé par une charge $q = 5\\,\\mu C$ en un point M situé à $r = 20\\,cm$ de la charge.",
+        "ar": "احسب شدة الحقل الكهروستاتيكي المُنشأ بواسطة شحنة $q = 5\\,\\mu C$ في نقطة M تبعد $r = 20\\,cm$ عن الشحنة."
+      },
+      "solution": {
+        "fr": "",
+        "latex": "E = k\\frac{|q|}{r^2} = 8{,}99 \\times 10^9 \\times \\frac{5 \\times 10^{-6}}{(0{,}2)^2} = 8{,}99 \\times 10^9 \\times \\frac{5 \\times 10^{-6}}{4 \\times 10^{-2}} \\approx 1{,}12 \\times 10^6\\,\\text{N/C} = 1124\\,\\text{kN/C}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Principe de superposition", "ar": "4. مبدأ التراكب" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le champ total en un point M, créé par un ensemble de charges $q_1, q_2, \\ldots, q_n$, est la somme vectorielle des champs individuels :",
+        "ar": "الحقل الكلي في نقطة M، المُنشأ بواسطة مجموعة شحنات $q_1, q_2, \\ldots, q_n$، هو المجموع الشعاعي للحقول الفردية:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\vec{E}(M) = \\sum_{i=1}^{n} \\vec{E}_i(M) = \\sum_{i=1}^{n} k \\frac{q_i}{r_i^2} \\vec{u}_i",
+      "note": {
+        "fr": "Chaque charge contribue indépendamment au champ total. On additionne les vecteurs, pas les normes.",
+        "ar": "كل شحنة تساهم بشكل مستقل في الحقل الكلي. نجمع الأشعة وليس الشدات."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Lignes de champ", "ar": "5. خطوط الحقل" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Lignes de champ électrique", "ar": "خطوط الحقل الكهربائي" },
+      "text": {
+        "fr": "Les lignes de champ sont des courbes dont la tangente en chaque point a la direction du vecteur champ $\\vec{E}$. Elles sont orientées dans le sens du champ.",
+        "ar": "خطوط الحقل هي منحنيات يكون المماس لها في كل نقطة في اتجاه شعاع الحقل $\\vec{E}$."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Les lignes de champ sortent des charges positives et entrent dans les charges négatives",
+          "Deux lignes de champ ne se croisent jamais",
+          "La densité des lignes est proportionnelle à l'intensité du champ",
+          "Les lignes de champ sont perpendiculaires aux surfaces équipotentielles"
+        ],
+        "ar": [
+          "خطوط الحقل تخرج من الشحنات الموجبة وتدخل في الشحنات السالبة",
+          "لا يتقاطع خطان من خطوط الحقل أبدا",
+          "كثافة الخطوط تتناسب مع شدة الحقل",
+          "خطوط الحقل عمودية على السطوح متساوية الكمون"
+        ]
+      }
+    },
+    {
+      "type": "simulation-link",
+      "simulation": "champ-electrostatique",
+      "caption": {
+        "fr": "Visualisez les lignes de champ, les équipotentielles et le champ vectoriel en temps réel avec notre simulation GPU interactive.",
+        "ar": "تصوّر خطوط الحقل والسطوح متساوية الكمون والحقل الشعاعي في الزمن الحقيقي مع محاكاتنا التفاعلية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Le potentiel électrique", "ar": "6. الكمون الكهربائي" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le potentiel électrique $V$ est une grandeur scalaire qui caractérise l'état électrique d'un point de l'espace. Il est lié au champ électrostatique et permet de calculer le travail des forces électriques.",
+        "ar": "الكمون الكهربائي $V$ هو كمية قياسية تميز الحالة الكهربائية لنقطة في الفضاء."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "V(M) = k \\frac{q}{r}",
+      "note": {
+        "fr": "V en Volts (V), q en Coulombs (C), r en mètres (m). Le potentiel est positif pour q > 0, négatif pour q < 0.",
+        "ar": "V بالفولت (V)، q بالكولوم (C)، r بالمتر (m)."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour un ensemble de charges, le potentiel total est la somme algébrique (et non vectorielle) des potentiels individuels : $V(M) = \\sum_{i} k\\frac{q_i}{r_i}$.",
+        "ar": "لمجموعة شحنات، الكمون الكلي هو المجموع الجبري (وليس الشعاعي) للكمونات الفردية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "7. Surfaces équipotentielles", "ar": "7. السطوح متساوية الكمون" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Surface équipotentielle", "ar": "سطح متساوي الكمون" },
+      "text": {
+        "fr": "Une surface équipotentielle est l'ensemble des points de l'espace ayant le même potentiel électrique. Le travail de la force électrostatique pour déplacer une charge le long d'une surface équipotentielle est nul.",
+        "ar": "السطح متساوي الكمون هو مجموعة النقاط في الفضاء التي لها نفس الكمون الكهربائي."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Les lignes de champ sont toujours perpendiculaires aux surfaces équipotentielles. Le champ $\\vec{E}$ est dirigé des potentiels élevés vers les potentiels faibles.",
+        "ar": "خطوط الحقل دائما عمودية على السطوح متساوية الكمون. الحقل $\\vec{E}$ موجه من الكمون المرتفع نحو الكمون المنخفض."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "8. Travail de la force électrostatique", "ar": "8. شغل القوة الكهروستاتيكية" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le travail de la force électrostatique pour déplacer une charge $q$ d'un point A à un point B ne dépend que des positions A et B, pas du chemin suivi. La force électrostatique est donc une force conservative.",
+        "ar": "شغل القوة الكهروستاتيكية لنقل شحنة $q$ من نقطة A إلى نقطة B لا يعتمد إلا على الموضعين A و B، وليس على المسار المتبع."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "W_{A \\to B} = q \\cdot (V_A - V_B)",
+      "note": {
+        "fr": "W en Joules (J), q en Coulombs (C), V en Volts (V). Si W > 0, le travail est moteur ; si W < 0, le travail est résistant.",
+        "ar": "W بالجول (J)، q بالكولوم (C)، V بالفولت (V)."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 3 : Calcul du travail", "ar": "مثال 3: حساب الشغل" },
+      "problem": {
+        "fr": "Une charge $q = 3\\,\\mu C$ se déplace d'un point A où $V_A = 200\\,V$ à un point B où $V_B = 50\\,V$. Calculer le travail de la force électrostatique.",
+        "ar": "شحنة $q = 3\\,\\mu C$ تنتقل من نقطة A حيث $V_A = 200\\,V$ إلى نقطة B حيث $V_B = 50\\,V$. احسب شغل القوة الكهروستاتيكية."
+      },
+      "solution": {
+        "fr": "Le travail est positif, donc moteur : la force aide au déplacement.",
+        "latex": "W_{A \\to B} = q(V_A - V_B) = 3 \\times 10^{-6} \\times (200 - 50) = 3 \\times 10^{-6} \\times 150 = 4{,}5 \\times 10^{-4}\\,\\text{J} = 0{,}45\\,\\text{mJ}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "9. Énergie potentielle électrostatique", "ar": "9. طاقة الوضع الكهروستاتيكية" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'énergie potentielle d'interaction entre deux charges ponctuelles $q_1$ et $q_2$ séparées par une distance $r$ est :",
+        "ar": "طاقة الوضع للتفاعل بين شحنتين نقطيتين $q_1$ و $q_2$ مفصولتين بمسافة $r$ هي:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_p = k \\frac{q_1 \\cdot q_2}{r}",
+      "note": {
+        "fr": "Ep en Joules (J). Si Ep > 0 (charges de même signe), le système tend à augmenter la distance. Si Ep < 0 (charges opposées), le système tend à rapprocher les charges.",
+        "ar": "Ep بالجول (J). إذا Ep > 0 الجملة تميل لزيادة المسافة. إذا Ep < 0 الجملة تميل لتقريب الشحنات."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "On peut aussi écrire l'énergie potentielle d'une charge $q$ dans un potentiel $V$ : $E_p = q \\cdot V$. Le travail de la force est lié à la variation d'énergie potentielle par : $W_{A \\to B} = E_{p,A} - E_{p,B} = -\\Delta E_p$.",
+        "ar": "يمكن أيضا كتابة طاقة الوضع لشحنة $q$ في كمون $V$: $E_p = q \\cdot V$."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "10. Théorème de Gauss", "ar": "10. نظرية غاوس" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le théorème de Gauss établit une relation fondamentale entre le flux du champ électrostatique à travers une surface fermée (surface de Gauss) et la charge totale enfermée à l'intérieur de cette surface.",
+        "ar": "تُقيم نظرية غاوس علاقة أساسية بين تدفق الحقل الكهروستاتيكي عبر سطح مغلق (سطح غاوس) والشحنة الكلية المحتواة داخل هذا السطح."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\Phi = \\oint_S \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{enc}}{\\varepsilon_0}",
+      "note": {
+        "fr": "Φ = flux en V·m (ou N·m²/C), Qenc = charge totale enfermée, ε₀ = 8,85 × 10⁻¹² F/m (permittivité du vide)",
+        "ar": "Φ = التدفق بوحدة V·m، Qenc = الشحنة الكلية المحتواة، ε₀ = 8.85 × 10⁻¹² F/m (سماحية الفراغ)"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Le théorème de Gauss est particulièrement utile pour calculer le champ électrostatique dans les situations à haute symétrie (sphérique, cylindrique, plane). Il permet de passer de la charge au champ de manière élégante.",
+        "ar": "نظرية غاوس مفيدة بشكل خاص لحساب الحقل الكهروستاتيكي في حالات التماثل (كروي، أسطواني، مستوي)."
+      }
+    },
+    {
+      "type": "simulation-link",
+      "simulation": "champ-electrostatique",
+      "caption": {
+        "fr": "Vérifiez le théorème de Gauss de manière interactive : tracez une surface de Gauss autour de charges et observez que le flux est proportionnel à la charge intérieure.",
+        "ar": "تحقق من نظرية غاوس بشكل تفاعلي: ارسم سطح غاوس حول الشحنات ولاحظ أن التدفق يتناسب مع الشحنة الداخلية."
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est la valeur de cos(π/3) ?" },
+      "choices": [
+        { "fr": "√3/2" },
+        { "fr": "1/2" },
+        { "fr": "√2/2" },
+        { "fr": "0" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "cos(π/3) = cos(60°) = 1/2. C'est une valeur remarquable à connaître." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "La formule sin(2a) est égale à :" },
+      "choices": [
+        { "fr": "2sin(a)cos(a)" },
+        { "fr": "sin²(a) + cos²(a)" },
+        { "fr": "2sin²(a)" },
+        { "fr": "cos²(a) - sin²(a)" }
+      ],
+      "correct": 0,
+      "explanation": { "fr": "La formule de l'angle double pour le sinus est sin(2a) = 2sin(a)cos(a)." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Convertir 120° en radians. Donner le résultat sous la forme kπ/n (donner la valeur de k/n en fraction décimale, sachant que 120° = (2/3)π, donner 2/3 arrondi à 0.01)." },
+      "answer": 0.67,
+      "tolerance": 0.01,
+      "unit": "×π rad",
+      "hint": { "fr": "Utilisez la formule : angle en radians = angle en degrés × π/180." },
+      "explanation": { "fr": "120° × π/180 = 2π/3. Donc k/n = 2/3 ≈ 0.667." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est la valeur de cos(π/4 + π/4), c'est-à-dire cos(π/2) ?" },
+      "choices": [
+        { "fr": "1" },
+        { "fr": "0" },
+        { "fr": "-1" },
+        { "fr": "√2/2" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "cos(π/2) = 0. On peut aussi le vérifier par la formule d'addition : cos(π/4+π/4) = cos²(π/4) - sin²(π/4) = 1/2 - 1/2 = 0." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Les solutions de l'équation sin(x) = 0 sont :" },
+      "choices": [
+        { "fr": "x = kπ, k ∈ ℤ" },
+        { "fr": "x = π/2 + kπ, k ∈ ℤ" },
+        { "fr": "x = 2kπ, k ∈ ℤ" },
+        { "fr": "x = π/2 + 2kπ, k ∈ ℤ" }
+      ],
+      "correct": 0,
+      "explanation": { "fr": "sin(x) = 0 quand x = 0 + 2kπ ou x = π + 2kπ, ce qui se simplifie en x = kπ pour k ∈ ℤ." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Laquelle de ces égalités est une forme de cos(2a) ?" },
+      "choices": [
+        { "fr": "2cos(a)sin(a)" },
+        { "fr": "1 - 2sin²(a)" },
+        { "fr": "sin²(a) + cos²(a)" },
+        { "fr": "2cos²(a) + 1" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "cos(2a) = cos²a - sin²a = 2cos²a - 1 = 1 - 2sin²a. La réponse correcte est 1 - 2sin²(a)." }
+    }
+  ]
+}

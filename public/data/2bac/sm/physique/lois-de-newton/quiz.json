@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La première loi de Newton (principe d'inertie) stipule qu'un corps isolé dans un référentiel galiléen :",
+        "ar": "ينص القانون الأول لنيوتن (مبدأ العطالة) على أن جسمًا معزولاً في مرجع غاليلي:"
+      },
+      "choices": [
+        { "fr": "Est toujours au repos" },
+        { "fr": "Se déplace avec une accélération constante" },
+        { "fr": "Reste au repos ou se déplace en mouvement rectiligne uniforme" },
+        { "fr": "Subit toujours une force de frottement" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "Le principe d'inertie stipule que dans un référentiel galiléen, si la résultante des forces est nulle, le corps conserve son état de repos ou de mouvement rectiligne uniforme."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Une force résultante de 15 N agit sur un objet de masse 3 kg. Calculer l'accélération de l'objet en m/s².",
+        "ar": "قوة محصلة مقدارها 15 N تؤثر على جسم كتلته 3 kg. احسب تسارع الجسم بـ m/s²."
+      },
+      "answer": 5,
+      "tolerance": 0.1,
+      "unit": "m/s²",
+      "explanation": {
+        "fr": "D'après la 2e loi de Newton : a = ΣF/m = 15/3 = 5 m/s²."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Selon la troisième loi de Newton, si un objet A exerce une force de 10 N sur un objet B, alors :",
+        "ar": "حسب القانون الثالث لنيوتن، إذا أثر جسم A بقوة 10 N على جسم B، فإن:"
+      },
+      "choices": [
+        { "fr": "B exerce une force de 10 N sur A dans le même sens" },
+        { "fr": "B exerce une force de 10 N sur A dans le sens opposé" },
+        { "fr": "B exerce une force de 5 N sur A dans le sens opposé" },
+        { "fr": "B n'exerce aucune force sur A" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "La troisième loi de Newton (action-réaction) stipule que F⃗(A/B) = −F⃗(B/A). Les deux forces sont de même intensité (10 N), de même direction, mais de sens opposés."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un bloc de 4 kg glisse sans frottement sur un plan incliné à 37° par rapport à l'horizontale. Calculer l'accélération du bloc en m/s². (g = 9,8 m/s², sin 37° = 0,6)",
+        "ar": "قالب كتلته 4 kg ينزلق بدون احتكاك على مستوى مائل بزاوية 37° مع الأفقي. احسب تسارع القالب بـ m/s². (g = 9,8 m/s², sin 37° = 0,6)"
+      },
+      "answer": 5.88,
+      "tolerance": 0.1,
+      "unit": "m/s²",
+      "explanation": {
+        "fr": "Sur un plan incliné sans frottement, a = g·sinα = 9,8 × sin(37°) = 9,8 × 0,6 = 5,88 m/s². L'accélération ne dépend pas de la masse."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Un livre est posé sur une table. La réaction normale N de la table sur le livre et le poids P du livre :",
+        "ar": "كتاب موضوع على طاولة. رد الفعل العمودي N للطاولة على الكتاب ووزن الكتاب P:"
+      },
+      "choices": [
+        { "fr": "Forment un couple action-réaction au sens de la 3e loi de Newton" },
+        { "fr": "Se compensent mais ne sont pas un couple action-réaction" },
+        { "fr": "Ne se compensent pas" },
+        { "fr": "S'exercent sur des corps différents" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "N et P se compensent (ΣF = 0, le livre est en équilibre), mais NE forment PAS un couple action-réaction. Le poids P est exercé par la Terre sur le livre, et la réaction N est exercée par la table sur le livre. Les deux forces s'exercent sur le même corps (le livre). Le couple action-réaction du poids est l'attraction du livre sur la Terre."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Dans une machine d'Atwood, deux masses m₁ = 5 kg et m₂ = 3 kg sont reliées par un fil passant sur une poulie idéale. Calculer l'accélération du système en m/s². (g = 9,8 m/s²)",
+        "ar": "في آلة أتوود، كتلتان m₁ = 5 kg و m₂ = 3 kg مربوطتان بخيط يمر عبر بكرة مثالية. احسب تسارع النظام بـ m/s². (g = 9,8 m/s²)"
+      },
+      "answer": 2.45,
+      "tolerance": 0.05,
+      "unit": "m/s²",
+      "explanation": {
+        "fr": "a = (m₁ − m₂)g/(m₁ + m₂) = (5 − 3) × 9,8/(5 + 3) = 2 × 9,8/8 = 19,6/8 = 2,45 m/s²."
+      }
+    }
+  ]
+}

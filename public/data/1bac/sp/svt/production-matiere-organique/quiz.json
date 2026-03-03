@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "L'equation bilan de la photosynthese est :" },
+      "choices": [
+        { "fr": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O" },
+        { "fr": "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂" },
+        { "fr": "6CO₂ + 12H₂O → C₆H₁₂O₆ + 6O₂ + 6H₂O" },
+        { "fr": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "La photosynthese utilise le CO₂ et l'eau pour synthetiser du glucose et liberer de l'O₂ en presence de lumiere : 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂. La premiere equation est celle de la respiration (reaction inverse)." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "La phase claire de la photosynthese se deroule dans :" },
+      "choices": [
+        { "fr": "Le stroma du chloroplaste" },
+        { "fr": "Les thylakoides du chloroplaste" },
+        { "fr": "La matrice mitochondriale" },
+        { "fr": "Le cytoplasme" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "La phase claire (reactions photochimiques) se deroule dans les thylakoides ou sont localises les pigments photosynthetiques et les photosystemes. La phase sombre (cycle de Calvin) se deroule dans le stroma." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "L'O₂ libere lors de la photosynthese provient de :" },
+      "choices": [
+        { "fr": "La decomposition du CO₂" },
+        { "fr": "La photolyse de l'eau (H₂O)" },
+        { "fr": "La respiration des cellules vegetales" },
+        { "fr": "Le cycle de Calvin" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "L'O₂ libere provient de la photolyse de l'eau : 2H₂O → O₂ + 4H⁺ + 4e⁻. Cette reaction a lieu pendant la phase claire dans les thylakoides. Cela a ete demontre par des experiences avec de l'eau marquee a l'isotope ¹⁸O." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Un organisme autotrophe est un organisme qui :" },
+      "choices": [
+        { "fr": "Se nourrit d'autres organismes vivants" },
+        { "fr": "Synthetise sa matiere organique a partir de matiere minerale" },
+        { "fr": "Decompose la matiere organique morte" },
+        { "fr": "Vit en symbiose avec d'autres organismes" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Un autotrophe produit sa propre matiere organique a partir de matiere minerale (CO₂, H₂O, sels mineraux) en utilisant une source d'energie. Les plantes vertes sont des photoautotrophes (utilisant la lumiere)." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Dans une chaine alimentaire, quel pourcentage approximatif de l'energie est transfere d'un niveau trophique au suivant ?" },
+      "choices": [
+        { "fr": "1%" },
+        { "fr": "10%" },
+        { "fr": "50%" },
+        { "fr": "90%" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Environ 10% de l'energie d'un niveau trophique est transferee au niveau suivant. Les 90% restants sont perdus principalement sous forme de chaleur par la respiration cellulaire, ou dans la matiere non consommee ou non assimilee." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "L'enzyme cle qui fixe le CO₂ lors du cycle de Calvin est :" },
+      "choices": [
+        { "fr": "L'ATP synthase" },
+        { "fr": "La RuBisCO" },
+        { "fr": "La chlorophyllase" },
+        { "fr": "La catalase" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "La RuBisCO (ribulose-1,5-bisphosphate carboxylase/oxygenase) est l'enzyme qui fixe le CO₂ sur le RuBP (ribulose-1,5-bisphosphate) lors de la premiere etape du cycle de Calvin. C'est l'enzyme la plus abondante sur Terre." }
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est l'unité de la vitesse angulaire dans le Système International ?",
+        "ar": "ما هي وحدة السرعة الزاوية في النظام الدولي؟"
+      },
+      "choices": [
+        { "fr": "tour/min", "ar": "دورة/دقيقة" },
+        { "fr": "rad/s", "ar": "راد/ث" },
+        { "fr": "degré/s", "ar": "درجة/ث" },
+        { "fr": "m/s", "ar": "م/ث" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Dans le SI, la vitesse angulaire $\\omega$ se mesure en rad/s. Le tour/min est une unité pratique mais pas SI. On convertit : $\\omega = 2\\pi N$ avec $N$ en tours/s.",
+        "ar": "في النظام الدولي، السرعة الزاوية $\\omega$ تُقاس بالراد/ث."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le moment d'inertie d'un disque plein homogène de masse $m$ et de rayon $R$ par rapport à son axe de symétrie est :",
+        "ar": "عزم القصور لقرص مصمت متجانس كتلته $m$ ونصف قطره $R$ بالنسبة لمحور تماثله هو:"
+      },
+      "choices": [
+        { "fr": "$J = mR^2$", "ar": "$J = mR^2$" },
+        { "fr": "$J = \\frac{1}{2}mR^2$", "ar": "$J = \\frac{1}{2}mR^2$" },
+        { "fr": "$J = \\frac{2}{5}mR^2$", "ar": "$J = \\frac{2}{5}mR^2$" },
+        { "fr": "$J = \\frac{1}{3}mR^2$", "ar": "$J = \\frac{1}{3}mR^2$" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Le moment d'inertie d'un disque plein homogène par rapport à son axe de symétrie est $J = \\frac{1}{2}mR^2$. La formule $J = mR^2$ correspond à un anneau, $\\frac{2}{5}mR^2$ à une sphère pleine, et $\\frac{1}{3}mR^2$ à une tige par une extrémité.",
+        "ar": "عزم القصور لقرص مصمت متجانس بالنسبة لمحور تماثله هو $J = \\frac{1}{2}mR^2$."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un solide en rotation uniforme effectue $N = 600$ tours par minute. Calculer sa vitesse angulaire $\\omega$ en rad/s (arrondir à 0,1 près).",
+        "ar": "جسم صلب في دوران منتظم ينجز $N = 600$ دورة في الدقيقة. احسب سرعته الزاوية $\\omega$ بالراد/ث."
+      },
+      "answer": 62.8,
+      "tolerance": 0.2,
+      "unit": "rad/s",
+      "hint": {
+        "fr": "Convertir N en tours/s puis appliquer $\\omega = 2\\pi N$.",
+        "ar": "حوّل N إلى دورة/ث ثم طبق $\\omega = 2\\pi N$."
+      },
+      "explanation": {
+        "fr": "$N = \\frac{600}{60} = 10\\,tours/s$, donc $\\omega = 2\\pi \\times 10 = 20\\pi \\approx 62{,}8\\,rad/s$."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un disque plein de masse $m = 2\\,kg$ et de rayon $R = 0{,}1\\,m$ tourne à $\\omega = 50\\,rad/s$. Calculer son énergie cinétique de rotation en Joules (arrondir à 0,1 J).",
+        "ar": "قرص مصمت كتلته $m = 2\\,kg$ ونصف قطره $R = 0{,}1\\,m$ يدور بسرعة زاوية $\\omega = 50\\,rad/s$. احسب طاقته الحركية بالجول."
+      },
+      "answer": 25.0,
+      "tolerance": 0.5,
+      "unit": "J",
+      "hint": {
+        "fr": "Calculer d'abord $J = \\frac{1}{2}mR^2$ puis $E_c = \\frac{1}{2}J\\omega^2$.",
+        "ar": "احسب أولا $J = \\frac{1}{2}mR^2$ ثم $E_c = \\frac{1}{2}J\\omega^2$."
+      },
+      "explanation": {
+        "fr": "$J = \\frac{1}{2} \\times 2 \\times (0{,}1)^2 = 0{,}01\\,kg \\cdot m^2$. $E_c = \\frac{1}{2} \\times 0{,}01 \\times 50^2 = \\frac{1}{2} \\times 0{,}01 \\times 2500 = 12{,}5\\,J$."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La relation fondamentale de la dynamique de rotation s'écrit :",
+        "ar": "العلاقة الأساسية لديناميك الدوران تُكتب:"
+      },
+      "choices": [
+        { "fr": "$\\sum F = m \\cdot a$", "ar": "$\\sum F = m \\cdot a$" },
+        { "fr": "$\\sum \\mathcal{M} = J \\cdot \\alpha$", "ar": "$\\sum \\mathcal{M} = J \\cdot \\alpha$" },
+        { "fr": "$E_c = \\frac{1}{2}J\\omega^2$", "ar": "$E_c = \\frac{1}{2}J\\omega^2$" },
+        { "fr": "$\\omega = \\frac{d\\theta}{dt}$", "ar": "$\\omega = \\frac{d\\theta}{dt}$" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "La relation fondamentale de la dynamique de rotation est $\\sum \\mathcal{M}_{\\Delta} = J_{\\Delta} \\cdot \\alpha$. C'est l'analogue de $\\sum F = ma$ en translation. Les autres propositions sont respectivement : la 2ème loi de Newton en translation, l'énergie cinétique de rotation, et la définition de la vitesse angulaire.",
+        "ar": "العلاقة الأساسية لديناميك الدوران هي $\\sum \\mathcal{M}_{\\Delta} = J_{\\Delta} \\cdot \\alpha$، وهي مكافئ $\\sum F = ma$ في الانسحاب."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Une roue de moment d'inertie $J = 0{,}5\\,kg \\cdot m^2$ est soumise à un couple de moment total $\\mathcal{M} = 2\\,N \\cdot m$. Calculer l'accélération angulaire $\\alpha$ en rad/s².",
+        "ar": "عجلة عزم قصورها $J = 0{,}5\\,kg \\cdot m^2$ خاضعة لمزدوجة عزمها الكلي $\\mathcal{M} = 2\\,N \\cdot m$. احسب التسارع الزاوي $\\alpha$ بالراد/ث²."
+      },
+      "answer": 4,
+      "tolerance": 0.1,
+      "unit": "rad/s²",
+      "hint": {
+        "fr": "Appliquer $\\mathcal{M} = J \\cdot \\alpha$, donc $\\alpha = \\frac{\\mathcal{M}}{J}$.",
+        "ar": "طبق $\\mathcal{M} = J \\cdot \\alpha$، إذن $\\alpha = \\frac{\\mathcal{M}}{J}$."
+      },
+      "explanation": {
+        "fr": "$\\alpha = \\frac{\\mathcal{M}}{J} = \\frac{2}{0{,}5} = 4\\,rad/s^2$."
+      }
+    }
+  ]
+}

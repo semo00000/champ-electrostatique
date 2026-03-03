@@ -1,0 +1,109 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La lumière est une onde :",
+        "ar": "الضوء هو موجة:"
+      },
+      "choices": [
+        { "fr": "Mécanique longitudinale", "ar": "ميكانيكية طولية" },
+        { "fr": "Mécanique transversale", "ar": "ميكانيكية مستعرضة" },
+        { "fr": "Électromagnétique qui ne se propage que dans les milieux matériels", "ar": "كهرومغناطيسية لا تنتشر إلا في الأوساط المادية" },
+        { "fr": "Électromagnétique qui peut se propager dans le vide", "ar": "كهرومغناطيسية يمكنها الانتشار في الفراغ" }
+      ],
+      "correct": 3,
+      "explanation": {
+        "fr": "La lumière est une onde électromagnétique. Contrairement aux ondes mécaniques, elle n'a pas besoin de milieu matériel et peut se propager dans le vide à la vitesse $c = 3 \\times 10^8\\,m/s$.",
+        "ar": "الضوء موجة كهرومغناطيسية. على عكس الموجات الميكانيكية، لا يحتاج إلى وسط مادي ويمكنه الانتشار في الفراغ."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un rayon lumineux passe de l'air ($n_1 = 1{,}00$) au verre ($n_2 = 1{,}50$) avec un angle d'incidence $\\theta_1 = 30°$. Calculer l'angle de réfraction $\\theta_2$ en degrés (arrondir à 0,1° près).",
+        "ar": "شعاع ضوئي ينتقل من الهواء ($n_1 = 1{,}00$) إلى الزجاج ($n_2 = 1{,}50$) بزاوية ورود $\\theta_1 = 30°$. احسب زاوية الانكسار $\\theta_2$ بالدرجات."
+      },
+      "answer": 19.5,
+      "tolerance": 0.3,
+      "unit": "°",
+      "hint": {
+        "fr": "Appliquez la loi de Snell-Descartes : $n_1\\sin\\theta_1 = n_2\\sin\\theta_2$, donc $\\sin\\theta_2 = \\frac{n_1\\sin\\theta_1}{n_2}$",
+        "ar": "طبق قانون سنيل-ديكارت: $n_1\\sin\\theta_1 = n_2\\sin\\theta_2$"
+      },
+      "explanation": {
+        "fr": "$\\sin\\theta_2 = \\frac{1{,}00 \\times \\sin 30°}{1{,}50} = \\frac{0{,}500}{1{,}50} = 0{,}333 \\Rightarrow \\theta_2 = \\arcsin(0{,}333) \\approx 19{,}5°$"
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Lors de la dispersion de la lumière blanche par un prisme, quelle couleur est la plus déviée ?",
+        "ar": "عند تبدد الضوء الأبيض بواسطة موشور، أي لون ينحرف أكثر؟"
+      },
+      "choices": [
+        { "fr": "Le rouge", "ar": "الأحمر" },
+        { "fr": "Le jaune", "ar": "الأصفر" },
+        { "fr": "Le vert", "ar": "الأخضر" },
+        { "fr": "Le violet", "ar": "البنفسجي" }
+      ],
+      "correct": 3,
+      "explanation": {
+        "fr": "Le violet a la plus petite longueur d'onde du spectre visible et l'indice de réfraction est d'autant plus grand que λ est petit ($n_{violet} > n_{rouge}$). Le violet est donc la couleur la plus déviée par le prisme.",
+        "ar": "للبنفسجي أصغر طول موجي في الطيف المرئي، ومعامل الانكسار يكون أكبر كلما كان λ أصغر ($n_{بنفسجي} > n_{أحمر}$). لذلك البنفسجي هو اللون الأكثر انحرافا."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un laser de longueur d'onde $\\lambda = 650\\,nm$ éclaire une fente de largeur $a = 0{,}2\\,mm$. L'écran est à $D = 3\\,m$. Calculer la largeur de la tache centrale en centimètres (arrondir à 0,1 cm).",
+        "ar": "ليزر بطول موجي $\\lambda = 650\\,nm$ يضيء شقا بعرض $a = 0{,}2\\,mm$. الشاشة على بعد $D = 3\\,m$. احسب عرض البقعة المركزية بالسنتيمترات."
+      },
+      "answer": 1.95,
+      "tolerance": 0.1,
+      "unit": "cm",
+      "hint": {
+        "fr": "Utilisez $L = \\frac{2D\\lambda}{a}$",
+        "ar": "استخدم $L = \\frac{2D\\lambda}{a}$"
+      },
+      "explanation": {
+        "fr": "$L = \\frac{2D\\lambda}{a} = \\frac{2 \\times 3 \\times 650 \\times 10^{-9}}{0{,}2 \\times 10^{-3}} = \\frac{3{,}9 \\times 10^{-6}}{2 \\times 10^{-4}} = 1{,}95 \\times 10^{-2}\\,m = 1{,}95\\,cm$"
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Dans une expérience de Young, les fentes sont séparées de $a = 0{,}5\\,mm$ et l'écran est à $D = 2\\,m$. La longueur d'onde utilisée est $\\lambda = 500\\,nm$. Calculer l'interfrange $i$ en millimètres.",
+        "ar": "في تجربة يونغ، الشقان يفصلهما $a = 0{,}5\\,mm$ والشاشة على بعد $D = 2\\,m$. الطول الموجي المستخدم $\\lambda = 500\\,nm$. احسب البين-هدبي $i$ بالميليمترات."
+      },
+      "answer": 2.0,
+      "tolerance": 0.1,
+      "unit": "mm",
+      "hint": {
+        "fr": "Utilisez la formule de l'interfrange : $i = \\frac{\\lambda D}{a}$",
+        "ar": "استخدم صيغة البين-هدبي: $i = \\frac{\\lambda D}{a}$"
+      },
+      "explanation": {
+        "fr": "$i = \\frac{\\lambda D}{a} = \\frac{500 \\times 10^{-9} \\times 2}{0{,}5 \\times 10^{-3}} = \\frac{10^{-6}}{5 \\times 10^{-4}} = 2{,}0 \\times 10^{-3}\\,m = 2{,}0\\,mm$"
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Lors de la diffraction par une fente, si on diminue la largeur de la fente :",
+        "ar": "عند الحيود بواسطة شق، إذا أنقصنا عرض الشق:"
+      },
+      "choices": [
+        { "fr": "La tache centrale devient plus étroite", "ar": "البقعة المركزية تصبح أضيق" },
+        { "fr": "La tache centrale devient plus large", "ar": "البقعة المركزية تصبح أعرض" },
+        { "fr": "La tache centrale ne change pas", "ar": "البقعة المركزية لا تتغير" },
+        { "fr": "La diffraction disparaît", "ar": "الحيود يختفي" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "D'après la formule $L = \\frac{2D\\lambda}{a}$, la largeur de la tache centrale est inversement proportionnelle à la largeur $a$ de la fente. Plus la fente est étroite, plus la diffraction est importante et la tache centrale est large.",
+        "ar": "حسب الصيغة $L = \\frac{2D\\lambda}{a}$، عرض البقعة المركزية يتناسب عكسيا مع عرض الشق $a$. كلما كان الشق أضيق، كان الحيود أكبر والبقعة المركزية أعرض."
+      }
+    }
+  ]
+}

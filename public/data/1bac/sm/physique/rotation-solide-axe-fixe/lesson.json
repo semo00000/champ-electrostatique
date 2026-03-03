@@ -1,0 +1,244 @@
+{
+  "id": "rotation-solide-axe-fixe",
+  "title": { "fr": "Rotation d'un Solide autour d'un Axe Fixe", "ar": "دوران جسم صلب حول محور ثابت" },
+  "objectives": {
+    "fr": [
+      "Définir la vitesse angulaire et l'accélération angulaire",
+      "Connaître le moment d'inertie d'un solide par rapport à un axe",
+      "Appliquer la relation fondamentale de la dynamique de rotation",
+      "Calculer l'énergie cinétique de rotation",
+      "Appliquer le théorème du moment cinétique"
+    ],
+    "ar": [
+      "تعريف السرعة الزاوية والتسارع الزاوي",
+      "معرفة عزم القصور لجسم صلب بالنسبة لمحور",
+      "تطبيق العلاقة الأساسية لديناميك الدوران",
+      "حساب الطاقة الحركية للدوران",
+      "تطبيق مبرهنة العزم الحركي"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Repérage angulaire et vitesse angulaire", "ar": "1. التحديد الزاوي والسرعة الزاوية" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La position d'un solide en rotation autour d'un axe fixe est repérée par un angle $\\theta$ (en radians) mesuré par rapport à une position de référence. Lorsque le solide tourne, cet angle varie au cours du temps.",
+        "ar": "يُحدد موضع جسم صلب في دوران حول محور ثابت بزاوية $\\theta$ (بالراديان) مقاسة بالنسبة لموضع مرجعي. عندما يدور الجسم الصلب، تتغير هذه الزاوية بدلالة الزمن."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Vitesse angulaire", "ar": "السرعة الزاوية" },
+      "text": {
+        "fr": "La vitesse angulaire $\\omega$ est la dérivée de l'angle $\\theta$ par rapport au temps. Elle caractérise la rapidité de rotation du solide et se mesure en rad/s.",
+        "ar": "السرعة الزاوية $\\omega$ هي مشتقة الزاوية $\\theta$ بالنسبة للزمن. تميز سرعة دوران الجسم الصلب وتُقاس بالراد/ث."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\omega = \\frac{d\\theta}{dt}",
+      "note": {
+        "fr": "ω en rad/s, θ en rad, t en s. Si ω > 0, la rotation est dans le sens positif (trigonométrique). Si ω < 0, la rotation est dans le sens négatif.",
+        "ar": "ω بالراد/ث، θ بالراديان، t بالثانية. إذا ω > 0 الدوران في الاتجاه الموجب."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La relation entre la vitesse angulaire $\\omega$ et la fréquence de rotation $N$ (en tours/s) est : $\\omega = 2\\pi N$. De même, la période de rotation $T$ est : $T = \\frac{1}{N} = \\frac{2\\pi}{\\omega}$.",
+        "ar": "العلاقة بين السرعة الزاوية $\\omega$ وتواتر الدوران $N$ (بالدورة/ث) هي: $\\omega = 2\\pi N$. كذلك دور الدوران هو: $T = \\frac{1}{N} = \\frac{2\\pi}{\\omega}$."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Accélération angulaire", "ar": "2. التسارع الزاوي" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Accélération angulaire", "ar": "التسارع الزاوي" },
+      "text": {
+        "fr": "L'accélération angulaire $\\alpha$ est la dérivée de la vitesse angulaire par rapport au temps. Elle traduit la variation de la vitesse de rotation.",
+        "ar": "التسارع الزاوي $\\alpha$ هو مشتقة السرعة الزاوية بالنسبة للزمن. يعبر عن تغير سرعة الدوران."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\alpha = \\frac{d\\omega}{dt} = \\frac{d^2\\theta}{dt^2}",
+      "note": {
+        "fr": "α en rad/s². Si α et ω sont de même signe, le mouvement est accéléré. Si α et ω sont de signes opposés, le mouvement est décéléré.",
+        "ar": "α بالراد/ث². إذا كان α و ω من نفس الإشارة، الحركة متسارعة. إذا كانا مختلفي الإشارة، الحركة متباطئة."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Pour une rotation uniforme : $\\omega = \\text{cte}$ et $\\alpha = 0$. Pour une rotation uniformément variée : $\\alpha = \\text{cte}$, et on a les équations analogues à la cinématique rectiligne : $\\omega(t) = \\omega_0 + \\alpha t$ et $\\theta(t) = \\theta_0 + \\omega_0 t + \\frac{1}{2}\\alpha t^2$.",
+        "ar": "في الدوران المنتظم: $\\omega = \\text{ثابتة}$ و $\\alpha = 0$. في الدوران المتغير بانتظام: $\\alpha = \\text{ثابت}$، ولدينا: $\\omega(t) = \\omega_0 + \\alpha t$ و $\\theta(t) = \\theta_0 + \\omega_0 t + \\frac{1}{2}\\alpha t^2$."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Moment d'inertie", "ar": "3. عزم القصور (عزم العطالة)" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Moment d'inertie", "ar": "عزم القصور" },
+      "text": {
+        "fr": "Le moment d'inertie $J$ (ou $I$) d'un solide par rapport à un axe de rotation (Δ) mesure la résistance du solide à la mise en rotation autour de cet axe. Il dépend de la masse du solide et de la répartition de cette masse par rapport à l'axe.",
+        "ar": "عزم القصور $J$ (أو $I$) لجسم صلب بالنسبة لمحور دوران (Δ) يقيس مقاومة الجسم الصلب للدوران حول هذا المحور. يعتمد على كتلة الجسم وتوزيع هذه الكتلة بالنسبة للمحور."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "J_{\\Delta} = \\sum_i m_i \\cdot r_i^2",
+      "note": {
+        "fr": "J en kg·m², mᵢ = masse du point matériel i, rᵢ = distance du point i à l'axe Δ. Pour un solide continu : $J = \\int r^2 \\, dm$.",
+        "ar": "J بوحدة kg·m²، mᵢ = كتلة النقطة المادية i، rᵢ = بُعد النقطة i عن المحور Δ."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Moments d'inertie de quelques solides homogènes courants :",
+        "ar": "عزوم قصور بعض الأجسام الصلبة المتجانسة الشائعة:"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "<strong>Anneau ou cylindre creux</strong> de masse $m$, rayon $R$ : $J = mR^2$",
+          "<strong>Disque ou cylindre plein</strong> de masse $m$, rayon $R$ : $J = \\frac{1}{2}mR^2$",
+          "<strong>Sphère pleine</strong> de masse $m$, rayon $R$ : $J = \\frac{2}{5}mR^2$",
+          "<strong>Tige mince</strong> de masse $m$, longueur $L$, axe en son centre : $J = \\frac{1}{12}mL^2$",
+          "<strong>Tige mince</strong> de masse $m$, longueur $L$, axe à une extrémité : $J = \\frac{1}{3}mL^2$"
+        ],
+        "ar": [
+          "<strong>حلقة أو أسطوانة مجوفة</strong> كتلتها $m$، نصف قطرها $R$: $J = mR^2$",
+          "<strong>قرص أو أسطوانة مصمتة</strong> كتلتها $m$، نصف قطرها $R$: $J = \\frac{1}{2}mR^2$",
+          "<strong>كرة مصمتة</strong> كتلتها $m$، نصف قطرها $R$: $J = \\frac{2}{5}mR^2$",
+          "<strong>قضيب رقيق</strong> كتلته $m$، طوله $L$، المحور في مركزه: $J = \\frac{1}{12}mL^2$",
+          "<strong>قضيب رقيق</strong> كتلته $m$، طوله $L$، المحور في طرفه: $J = \\frac{1}{3}mL^2$"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Moment d'une force par rapport à un axe", "ar": "4. عزم قوة بالنسبة لمحور" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Moment d'une force", "ar": "عزم قوة" },
+      "text": {
+        "fr": "Le moment d'une force $\\vec{F}$ par rapport à un axe (Δ) mesure l'aptitude de cette force à faire tourner le solide autour de cet axe. Il est défini par $\\mathcal{M}_{\\Delta}(\\vec{F}) = \\pm F \\cdot d$, où $d$ est le bras de levier (distance perpendiculaire entre l'axe et la ligne d'action de la force).",
+        "ar": "عزم قوة $\\vec{F}$ بالنسبة لمحور (Δ) يقيس قدرة هذه القوة على تدوير الجسم الصلب حول هذا المحور. يُعرّف بـ $\\mathcal{M}_{\\Delta}(\\vec{F}) = \\pm F \\cdot d$، حيث $d$ هو ذراع العتلة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\mathcal{M}_{\\Delta}(\\vec{F}) = \\pm F \\cdot d",
+      "note": {
+        "fr": "M en N·m, F en N, d en m. Le signe est + si la force tend à faire tourner dans le sens positif, − sinon. Si la droite d'action passe par l'axe, le moment est nul.",
+        "ar": "M بوحدة N·m، F بالنيوتن، d بالمتر. الإشارة + إذا كانت القوة تميل لتدوير في الاتجاه الموجب، − خلاف ذلك."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Relation fondamentale de la dynamique de rotation", "ar": "5. العلاقة الأساسية لديناميك الدوران" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La relation fondamentale de la dynamique de rotation est l'analogue de la deuxième loi de Newton ($\\vec{F} = m\\vec{a}$) pour la rotation. Elle relie la somme des moments des forces extérieures au produit du moment d'inertie par l'accélération angulaire.",
+        "ar": "العلاقة الأساسية لديناميك الدوران هي المكافئ للقانون الثاني لنيوتن ($\\vec{F} = m\\vec{a}$) بالنسبة للدوران. تربط مجموع عزوم القوى الخارجية بجداء عزم القصور والتسارع الزاوي."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\sum \\mathcal{M}_{\\Delta}(\\vec{F}_{ext}) = J_{\\Delta} \\cdot \\alpha",
+      "note": {
+        "fr": "ΣM en N·m, J en kg·m², α en rad/s². C'est l'analogue de ΣF = ma en translation.",
+        "ar": "ΣM بوحدة N·m، J بوحدة kg·m²، α بوحدة rad/s². هذا مكافئ لـ ΣF = ma في الانسحاب."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 1 : Poulie avec masse suspendue", "ar": "مثال 1: بكرة بكتلة معلقة" },
+      "problem": {
+        "fr": "Une poulie de rayon $R = 10\\,cm$ et de moment d'inertie $J = 0{,}02\\,kg \\cdot m^2$ est soumise au moment d'une force de tension d'un fil supportant une masse. Si l'accélération angulaire vaut $\\alpha = 5\\,rad/s^2$, calculer le moment résultant des forces.",
+        "ar": "بكرة نصف قطرها $R = 10\\,cm$ وعزم قصورها $J = 0{,}02\\,kg \\cdot m^2$ خاضعة لعزم قوة شد خيط يحمل كتلة. إذا كان التسارع الزاوي $\\alpha = 5\\,rad/s^2$، احسب العزم الناتج للقوى."
+      },
+      "solution": {
+        "fr": "On applique la relation fondamentale :",
+        "latex": "\\mathcal{M} = J \\cdot \\alpha = 0{,}02 \\times 5 = 0{,}1\\,\\text{N·m}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Énergie cinétique de rotation", "ar": "6. الطاقة الحركية للدوران" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'énergie cinétique de rotation est l'analogue de l'énergie cinétique de translation $E_c = \\frac{1}{2}mv^2$. Elle dépend du moment d'inertie et de la vitesse angulaire.",
+        "ar": "الطاقة الحركية للدوران هي المكافئ لطاقة الحركة الانسحابية $E_c = \\frac{1}{2}mv^2$. تعتمد على عزم القصور والسرعة الزاوية."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_c = \\frac{1}{2} J \\omega^2",
+      "note": {
+        "fr": "Ec en Joules (J), J en kg·m², ω en rad/s. Analogue de Ec = ½mv² en translation.",
+        "ar": "Ec بالجول (J)، J بوحدة kg·m²، ω بالراد/ث."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 2 : Énergie cinétique d'un volant", "ar": "مثال 2: الطاقة الحركية لحذافة" },
+      "problem": {
+        "fr": "Un volant d'inertie (disque plein) de masse $m = 5\\,kg$ et de rayon $R = 20\\,cm$ tourne à $N = 1200\\,tours/min$. Calculer son énergie cinétique de rotation.",
+        "ar": "حذافة (قرص مصمت) كتلتها $m = 5\\,kg$ ونصف قطرها $R = 20\\,cm$ تدور بتواتر $N = 1200\\,دورة/دقيقة$. احسب طاقتها الحركية."
+      },
+      "solution": {
+        "fr": "On calcule d'abord $J$ puis $\\omega$ :",
+        "latex": "J = \\frac{1}{2}mR^2 = \\frac{1}{2} \\times 5 \\times (0{,}2)^2 = 0{,}1\\,kg \\cdot m^2 \\\\[6pt] \\omega = 2\\pi N = 2\\pi \\times \\frac{1200}{60} = 40\\pi \\approx 125{,}7\\,rad/s \\\\[6pt] E_c = \\frac{1}{2}J\\omega^2 = \\frac{1}{2} \\times 0{,}1 \\times (40\\pi)^2 \\approx 789{,}6\\,J"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "7. Théorème de l'énergie cinétique (rotation)", "ar": "7. مبرهنة الطاقة الحركية (الدوران)" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La variation de l'énergie cinétique de rotation entre deux instants est égale à la somme des travaux des moments des forces extérieures :",
+        "ar": "تغير الطاقة الحركية للدوران بين لحظتين يساوي مجموع أشغال عزوم القوى الخارجية:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\Delta E_c = \\frac{1}{2}J\\omega_f^2 - \\frac{1}{2}J\\omega_i^2 = \\sum W(\\mathcal{M}_{\\Delta})",
+      "note": {
+        "fr": "Le travail d'un moment constant M pour un angle Δθ vaut : W = M·Δθ.",
+        "ar": "شغل عزم ثابت M لزاوية Δθ يساوي: W = M·Δθ."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Tableau des analogies translation-rotation : masse ↔ moment d'inertie, vitesse v ↔ vitesse angulaire ω, accélération a ↔ accélération angulaire α, force F ↔ moment M, Ec = ½mv² ↔ Ec = ½Jω², F = ma ↔ M = Jα.",
+        "ar": "جدول التناظرات انسحاب-دوران: الكتلة ↔ عزم القصور، السرعة v ↔ السرعة الزاوية ω، التسارع a ↔ التسارع الزاوي α، القوة F ↔ العزم M، Ec = ½mv² ↔ Ec = ½Jω²، F = ma ↔ M = Jα."
+      }
+    }
+  ]
+}

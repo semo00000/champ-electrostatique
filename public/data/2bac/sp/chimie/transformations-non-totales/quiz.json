@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Une transformation chimique est non totale si :" },
+      "choices": [
+        { "fr": "Le réactif limitant est entièrement consommé à l'état final" },
+        { "fr": "Tous les réactifs et produits coexistent à l'état final d'équilibre" },
+        { "fr": "La réaction ne démarre jamais" },
+        { "fr": "Il n'y a pas de produit formé" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Dans une transformation non totale, le système atteint un état d'équilibre où tous les réactifs et produits coexistent. Le réactif limitant n'est pas entièrement consommé et l'avancement final xf < xmax." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Le taux d'avancement final τ d'une réaction totale vaut :" },
+      "choices": [
+        { "fr": "τ = 0" },
+        { "fr": "τ < 1" },
+        { "fr": "τ = 1" },
+        { "fr": "τ > 1" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "Pour une transformation totale, l'avancement final xf est égal à l'avancement maximal xmax, donc τ = xf/xmax = 1 (soit 100%). Le réactif limitant a été entièrement consommé." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "On dissout de l'acide éthanoïque à C = 0,050 mol/L. Le pH mesuré est 3,1. Quel est le taux d'avancement τ (en %) ?" },
+      "answer": 1.6,
+      "tolerance": 0.2,
+      "unit": "%",
+      "hint": { "fr": "τ = [H₃O⁺]/C avec [H₃O⁺] = 10⁻ᵖᴴ" },
+      "explanation": { "fr": "[H₃O⁺] = 10⁻³·¹ = 7,94×10⁻⁴ mol/L. τ = [H₃O⁺]/C = 7,94×10⁻⁴/0,050 = 0,016 soit 1,6%. La dissociation de l'acide éthanoïque est très limitée : c'est un acide faible." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "À l'état d'équilibre chimique :" },
+      "choices": [
+        { "fr": "Les réactions directe et inverse sont arrêtées" },
+        { "fr": "Les concentrations des réactifs sont nulles" },
+        { "fr": "Les vitesses des réactions directe et inverse sont égales" },
+        { "fr": "Seule la réaction inverse se produit" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "L'équilibre chimique est un état dynamique : les réactions directe et inverse se produisent toujours, mais avec la même vitesse. Cela explique que les concentrations restent constantes sans que les réactions soient arrêtées." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "L'estérification d'un acide carboxylique avec un alcool primaire en proportions équimolaires atteint un taux d'avancement d'environ :" },
+      "choices": [
+        { "fr": "100%" },
+        { "fr": "50%" },
+        { "fr": "67%" },
+        { "fr": "33%" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "L'estérification est une réaction non totale. En partant de quantités équimolaires d'un acide carboxylique et d'un alcool primaire, le taux d'avancement final est d'environ 67%. Ce taux ne dépend pas des quantités initiales mais de la nature de l'alcool." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Pour une réaction A + B → C, si n₀(A) = 0,20 mol, n₀(B) = 0,30 mol et xf = 0,15 mol, quel est τ (en %) ?" },
+      "answer": 75,
+      "tolerance": 1,
+      "unit": "%",
+      "hint": { "fr": "Trouver d'abord xmax à partir du réactif limitant, puis calculer τ = xf/xmax." },
+      "explanation": { "fr": "Le réactif limitant est A (coefficient 1) : xmax = n₀(A)/1 = 0,20 mol. Pour B : xmax = 0,30/1 = 0,30 mol. Donc xmax = min(0,20 ; 0,30) = 0,20 mol. τ = xf/xmax = 0,15/0,20 = 0,75 soit 75%." }
+    }
+  ]
+}

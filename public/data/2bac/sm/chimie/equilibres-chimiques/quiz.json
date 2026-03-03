@@ -1,0 +1,73 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Pour la réaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g), si on augmente la pression totale, l'équilibre se déplace :" },
+      "choices": [
+        { "fr": "Dans le sens direct (formation de NH₃)" },
+        { "fr": "Dans le sens inverse (décomposition de NH₃)" },
+        { "fr": "L'équilibre n'est pas modifié" },
+        { "fr": "La constante K augmente" }
+      ],
+      "correct": 0,
+      "explanation": { "fr": "Δn = 2 − (1+3) = −2 < 0. Une augmentation de pression déplace l'équilibre dans le sens qui diminue le nombre de moles de gaz, ici le sens direct (2 moles de NH₃ au lieu de 4 moles de réactifs gazeux). K ne change pas car la température est constante." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Pour une réaction exothermique, quand la température augmente :" },
+      "choices": [
+        { "fr": "K augmente et l'équilibre se déplace dans le sens direct" },
+        { "fr": "K diminue et l'équilibre se déplace dans le sens inverse" },
+        { "fr": "K reste constante mais l'équilibre se déplace" },
+        { "fr": "K augmente et l'équilibre se déplace dans le sens inverse" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Pour une réaction exothermique (ΔrH° < 0), l'augmentation de T favorise le sens endothermique, c'est-à-dire le sens inverse. La constante K diminue avec l'augmentation de température." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Une solution tampon est constituée de :" },
+      "choices": [
+        { "fr": "Un acide fort et une base forte en quantités égales" },
+        { "fr": "Un acide faible et sa base conjuguée en quantités comparables" },
+        { "fr": "Un sel dissous dans de l'eau pure" },
+        { "fr": "Un acide fort dissous dans un grand volume d'eau" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Une solution tampon est un mélange d'un acide faible AH et de sa base conjuguée A⁻ en quantités du même ordre de grandeur. Elle résiste aux variations de pH lors de l'ajout de petites quantités d'acide ou de base." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer le pH d'une solution tampon contenant [CH₃COO⁻] = 0,20 mol/L et [CH₃COOH] = 0,10 mol/L. Le pKa du couple CH₃COOH/CH₃COO⁻ est 4,75." },
+      "answer": 5.05,
+      "tolerance": 0.05,
+      "unit": "",
+      "hint": { "fr": "Utiliser la formule de Henderson-Hasselbalch : pH = pKa + log([A⁻]/[AH])" },
+      "explanation": { "fr": "pH = pKa + log([CH₃COO⁻]/[CH₃COOH]) = 4,75 + log(0,20/0,10) = 4,75 + log(2) = 4,75 + 0,30 = 5,05." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "La relation entre Kp et Kc pour un équilibre gazeux est Kp = Kc·(RT/P°)^Δn. Si Δn = 0, alors :" },
+      "choices": [
+        { "fr": "Kp = 0" },
+        { "fr": "Kp = Kc" },
+        { "fr": "Kp = Kc·RT" },
+        { "fr": "Kp = Kc/RT" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Si Δn = 0 (même nombre de moles gazeuses de chaque côté), alors (RT/P°)⁰ = 1, donc Kp = Kc. C'est le cas par exemple de la réaction H₂(g) + I₂(g) ⇌ 2HI(g) où Δn = 2 − 2 = 0." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quand le pH d'une solution tampon est égal au pKa du couple acide/base, cela signifie que :" },
+      "choices": [
+        { "fr": "[AH] est très supérieur à [A⁻]" },
+        { "fr": "[A⁻] est très supérieur à [AH]" },
+        { "fr": "[AH] = [A⁻]" },
+        { "fr": "Seul l'acide est présent en solution" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "D'après Henderson-Hasselbalch : pH = pKa + log([A⁻]/[AH]). Si pH = pKa, alors log([A⁻]/[AH]) = 0, ce qui implique [A⁻]/[AH] = 1, donc [AH] = [A⁻]. L'acide et sa base conjuguée sont en concentrations égales." }
+    }
+  ]
+}

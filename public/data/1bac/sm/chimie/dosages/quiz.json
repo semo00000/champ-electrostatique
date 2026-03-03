@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "À l'équivalence d'un dosage, les réactifs sont :",
+        "ar": "عند نقطة التكافؤ في معايرة، تكون المتفاعلات:"
+      },
+      "choices": [
+        { "fr": "Tous en excès", "ar": "كلها زائدة" },
+        { "fr": "Mélangés dans les proportions stoechiométriques", "ar": "مخلوطة بالنسب الستوكيومترية" },
+        { "fr": "Tous consommés sauf un", "ar": "كلها مستهلكة إلا واحدا" },
+        { "fr": "En concentrations toujours égales", "ar": "بتركيزات متساوية دائما" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "À l'équivalence, les réactifs ont été mélangés dans les proportions stoechiométriques exactes : n(A)/a = n(B)/b. Les deux réactifs sont entièrement consommés.",
+        "ar": "عند التكافؤ، تكون المتفاعلات مخلوطة بالنسب الستوكيومترية الدقيقة: n(A)/a = n(B)/b. يُستهلك المتفاعلان كليا."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On dose 25 mL de HCl (CA inconnue) par NaOH à Ct = 0,05 mol/L. L'équivalence est à Vt,eq = 20 mL. Quelle est CA en mol/L ?",
+        "ar": "نعاير 25 mL من HCl (CA مجهول) بـ NaOH بتركيز Ct = 0,05 mol/L. التكافؤ عند Vt,eq = 20 mL. ما قيمة CA بـ mol/L؟"
+      },
+      "answer": 0.04,
+      "tolerance": 0.001,
+      "unit": "mol/L",
+      "hint": {
+        "fr": "Réaction mole à mole (a = b = 1) : CA × VA = Ct × Vt,eq.",
+        "ar": "تفاعل مول لمول (a = b = 1): CA × VA = Ct × Vt,eq."
+      },
+      "explanation": {
+        "fr": "CA = Ct × Vt,eq / VA = 0,05 × 20 / 25 = 0,04 mol/L.",
+        "ar": "CA = Ct × Vt,eq / VA = 0,05 × 20 / 25 = 0,04 mol/L."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel indicateur coloré est le plus adapté pour un dosage acide fort / base forte (pH équivalence = 7) ?",
+        "ar": "أي كاشف لوني أنسب لمعايرة حمض قوي / قاعدة قوية (pH التكافؤ = 7)؟"
+      },
+      "choices": [
+        { "fr": "Phénolphtaléine (zone de virage 8,2-10)", "ar": "فينول فتالين (منطقة الانقلاب 8,2-10)" },
+        { "fr": "Hélianthine (zone de virage 3,1-4,4)", "ar": "هليانتين (منطقة الانقلاب 3,1-4,4)" },
+        { "fr": "Bleu de bromothymol (zone de virage 6,0-7,6)", "ar": "أزرق البروموتيمول (منطقة الانقلاب 6,0-7,6)" },
+        { "fr": "Rouge de méthyle (zone de virage 4,2-6,2)", "ar": "أحمر الميثيل (منطقة الانقلاب 4,2-6,2)" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Le bleu de bromothymol (BBT) a une zone de virage (6,0-7,6) qui contient le pH = 7 de l'équivalence acide fort / base forte. C'est donc l'indicateur le plus adapté.",
+        "ar": "أزرق البروموتيمول (BBT) له منطقة انقلاب (6,0-7,6) تحتوي على pH = 7 لتكافؤ حمض قوي / قاعدة قوية. إنه الكاشف الأنسب."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Lors d'un dosage permanganimétrique des ions Fe²⁺, l'équivalence est repérée par :",
+        "ar": "خلال معايرة برمنغنية لأيونات Fe²⁺، تُحدد نقطة التكافؤ بـ:"
+      },
+      "choices": [
+        { "fr": "La disparition de la couleur violette", "ar": "اختفاء اللون البنفسجي" },
+        { "fr": "La persistance de la couleur violette du KMnO₄", "ar": "استمرار اللون البنفسجي لـ KMnO₄" },
+        { "fr": "L'apparition d'un précipité blanc", "ar": "ظهور راسب أبيض" },
+        { "fr": "Un dégagement gazeux", "ar": "انبعاث غازي" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Avant l'équivalence, MnO₄⁻ (violet) est entièrement consommé par Fe²⁺. Après l'équivalence, il reste du MnO₄⁻ en excès qui colore la solution en violet/rose de manière persistante.",
+        "ar": "قبل التكافؤ، يُستهلك MnO₄⁻ (بنفسجي) كليا بواسطة Fe²⁺. بعد التكافؤ، يبقى MnO₄⁻ زائد يلون المحلول بالبنفسجي/الوردي بشكل مستمر."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On dose 10 mL de Fe²⁺ par KMnO₄ (Ct = 0,04 mol/L). L'équivalence est à Vt,eq = 8 mL. Sachant que MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O, quelle est [Fe²⁺] en mol/L ?",
+        "ar": "نعاير 10 mL من Fe²⁺ بـ KMnO₄ (Ct = 0,04 mol/L). التكافؤ عند Vt,eq = 8 mL. علما أن MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O، ما قيمة [Fe²⁺] بـ mol/L؟"
+      },
+      "answer": 0.16,
+      "tolerance": 0.005,
+      "unit": "mol/L",
+      "hint": {
+        "fr": "À l'équivalence : 5 × n(MnO₄⁻) = n(Fe²⁺), donc C × V = 5 × Ct × Vt,eq.",
+        "ar": "عند التكافؤ: 5 × n(MnO₄⁻) = n(Fe²⁺)، إذن C × V = 5 × Ct × Vt,eq."
+      },
+      "explanation": {
+        "fr": "n(Fe²⁺) = 5 × n(MnO₄⁻) = 5 × Ct × Vt,eq = 5 × 0,04 × 0,008 = 1,6 × 10⁻³ mol. [Fe²⁺] = 1,6 × 10⁻³ / 0,01 = 0,16 mol/L.",
+        "ar": "n(Fe²⁺) = 5 × n(MnO₄⁻) = 5 × Ct × Vt,eq = 5 × 0,04 × 0,008 = 1,6 × 10⁻³ mol. [Fe²⁺] = 1,6 × 10⁻³ / 0,01 = 0,16 mol/L."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Pour qu'une réaction chimique puisse servir de réaction de dosage, elle doit être :",
+        "ar": "لكي يصلح تفاعل كيميائي كتفاعل معايرة، يجب أن يكون:"
+      },
+      "choices": [
+        { "fr": "Lente et totale", "ar": "بطيئا وتاما" },
+        { "fr": "Rapide, totale et unique", "ar": "سريعا وتاما ووحيدا" },
+        { "fr": "Rapide et partielle", "ar": "سريعا وجزئيا" },
+        { "fr": "Lente, totale et unique", "ar": "بطيئا وتاما ووحيدا" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Une réaction de dosage doit être : rapide (résultat immédiat), totale (tous les réactifs consommés à l'équivalence) et unique (pas de réactions parasites).",
+        "ar": "تفاعل المعايرة يجب أن يكون: سريعا (نتيجة فورية)، تاما (كل المتفاعلات مستهلكة عند التكافؤ) ووحيدا (بدون تفاعلات جانبية)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le suivi pH-métrique d'un dosage acide-base permet de repérer l'équivalence par :",
+        "ar": "المتابعة بقياس pH لمعايرة حمض-قاعدة تسمح بتحديد التكافؤ بـ:"
+      },
+      "choices": [
+        { "fr": "Un palier de pH", "ar": "مستوى pH" },
+        { "fr": "Un saut brusque de pH", "ar": "قفزة مفاجئة في pH" },
+        { "fr": "Un dégagement de gaz", "ar": "انبعاث غاز" },
+        { "fr": "Un changement de température", "ar": "تغير في الحرارة" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "L'équivalence d'un dosage acide-base se caractérise par un saut brusque de pH sur la courbe pH = f(V). Le point d'inflexion de ce saut correspond au point d'équivalence. On peut utiliser la méthode des tangentes pour le déterminer précisément.",
+        "ar": "يتميز تكافؤ معايرة حمض-قاعدة بقفزة مفاجئة في pH على منحنى pH = f(V). نقطة الانعطاف لهذه القفزة تقابل نقطة التكافؤ."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On dose 20 mL d'acide sulfurique H₂SO₄ (diacide, CA inconnue) par NaOH à 0,1 mol/L. L'équivalence est atteinte pour Vt,eq = 30 mL. Sachant que H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O, calculer CA.",
+        "ar": "نعاير 20 mL من حمض الكبريتيك H₂SO₄ (ثنائي الحمض، CA مجهول) بـ NaOH بتركيز 0,1 mol/L. التكافؤ يتحقق عند Vt,eq = 30 mL. علما أن H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O، احسب CA."
+      },
+      "answer": 0.075,
+      "tolerance": 0.002,
+      "unit": "mol/L",
+      "hint": {
+        "fr": "À l'équivalence : n(H₂SO₄)/1 = n(NaOH)/2, donc CA × VA = Ct × Vt,eq / 2.",
+        "ar": "عند التكافؤ: n(H₂SO₄)/1 = n(NaOH)/2، إذن CA × VA = Ct × Vt,eq / 2."
+      },
+      "explanation": {
+        "fr": "À l'équivalence : CA × VA = Ct × Vt,eq / 2. CA = (0,1 × 30) / (2 × 20) = 3 / 40 = 0,075 mol/L.",
+        "ar": "عند التكافؤ: CA × VA = Ct × Vt,eq / 2. CA = (0,1 × 30) / (2 × 20) = 3 / 40 = 0,075 mol/L."
+      }
+    }
+  ]
+}

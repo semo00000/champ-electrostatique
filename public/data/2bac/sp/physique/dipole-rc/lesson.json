@@ -1,0 +1,177 @@
+{
+  "id": "dipole-rc",
+  "title": { "fr": "Le Dipôle RC", "ar": "ثنائي القطب RC" },
+  "objectives": {
+    "fr": [
+      "Connaître le fonctionnement d'un condensateur et sa capacité C",
+      "Établir les équations différentielles de charge et de décharge du condensateur",
+      "Déterminer les expressions de u_C(t) et i(t) lors de la charge et de la décharge",
+      "Définir et calculer la constante de temps τ = RC",
+      "Calculer l'énergie emmagasinée dans un condensateur E = ½Cu²",
+      "Exploiter graphiquement les courbes de charge et de décharge"
+    ],
+    "ar": [
+      "معرفة عمل المكثف وسعته C",
+      "إثبات المعادلات التفاضلية لشحن وتفريغ المكثف",
+      "تحديد تعبيرات u_C(t) و i(t) أثناء الشحن والتفريغ",
+      "تعريف وحساب ثابت الزمن τ = RC",
+      "حساب الطاقة المخزنة في المكثف E = ½Cu²",
+      "استثمار بيانياً منحنيات الشحن والتفريغ"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Le condensateur", "ar": "1. المكثف" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Condensateur", "ar": "المكثف" },
+      "text": {
+        "fr": "Un condensateur est un composant électrique constitué de deux armatures conductrices (plaques) séparées par un isolant (diélectrique). Il est capable d'emmagasiner des charges électriques et de l'énergie sous forme électrostatique. Sa capacité $C$ se mesure en farads (F). En pratique, on utilise des sous-multiples : μF (10⁻⁶ F), nF (10⁻⁹ F), pF (10⁻¹² F).",
+        "ar": "المكثف هو عنصر كهربائي يتكون من صفيحتين ناقلتين (لوحتين) مفصولتين بعازل (عازل كهربائي). يمكنه تخزين شحنات كهربائية وطاقة على شكل كهروستاتيكي. سعته $C$ تُقاس بالفاراد (F). عملياً نستخدم أجزاء: μF (10⁻⁶ F)، nF (10⁻⁹ F)، pF (10⁻¹² F)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "q = C \\cdot u_C \\qquad ; \\qquad i = C \\frac{du_C}{dt}",
+      "note": {
+        "fr": "q = charge du condensateur (en C), C = capacité (en F), u_C = tension aux bornes (en V). Le courant i est proportionnel à la dérivée de la tension. Si u_C est constante, i = 0 : le condensateur bloque le courant continu en régime permanent.",
+        "ar": "q = شحنة المكثف (بالكولوم C)، C = السعة (بالفاراد F)، u_C = التوتر بين الطرفين (بالفولت V). التيار i يتناسب مع مشتقة التوتر. إذا كان u_C ثابتاً، i = 0: المكثف يمنع التيار المستمر في النظام الدائم."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Charge du condensateur à travers une résistance", "ar": "2. شحن المكثف عبر مقاومة" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "On considère un circuit série comprenant un générateur de tension continue $E$, une résistance $R$ et un condensateur de capacité $C$ initialement déchargé ($u_C(0) = 0$). En appliquant la loi des mailles : $E = u_R + u_C = Ri + u_C$. En utilisant $i = C\\frac{du_C}{dt}$, on obtient l'équation différentielle du premier ordre :",
+        "ar": "نعتبر دارة على التسلسل تتضمن مولد توتر مستمر $E$، مقاومة $R$ ومكثف بسعة $C$ مفرغ ابتداءً ($u_C(0) = 0$). بتطبيق قانون المنعطفات: $E = u_R + u_C = Ri + u_C$. باستعمال $i = C\\frac{du_C}{dt}$، نحصل على المعادلة التفاضلية من الدرجة الأولى:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "RC\\frac{du_C}{dt} + u_C = E",
+      "note": {
+        "fr": "Équation différentielle du premier ordre à coefficients constants avec second membre. Condition initiale : u_C(0) = 0.",
+        "ar": "معادلة تفاضلية من الدرجة الأولى بمعاملات ثابتة مع طرف ثانٍ. الشرط الابتدائي: u_C(0) = 0."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La solution de cette équation différentielle, avec la condition initiale $u_C(0) = 0$, donne les expressions de la tension et du courant lors de la charge :",
+        "ar": "حل هذه المعادلة التفاضلية، مع الشرط الابتدائي $u_C(0) = 0$، يعطي تعبيرات التوتر والتيار أثناء الشحن:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "u_C(t) = E\\left(1 - e^{-t/\\tau}\\right) \\qquad ; \\qquad i(t) = \\frac{E}{R}\\,e^{-t/\\tau}",
+      "note": {
+        "fr": "τ = RC est la constante de temps. u_C croît de 0 vers E (asymptote). i décroît de E/R vers 0. La charge : q(t) = CE(1 − e^(−t/τ)) = Q_max(1 − e^(−t/τ)) avec Q_max = CE.",
+        "ar": "τ = RC هو ثابت الزمن. u_C يتزايد من 0 نحو E (مقارب). i يتناقص من E/R نحو 0. الشحنة: q(t) = CE(1 − e^(−t/τ)) = Q_max(1 − e^(−t/τ)) مع Q_max = CE."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Décharge du condensateur à travers une résistance", "ar": "3. تفريغ المكثف عبر مقاومة" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Si le condensateur est initialement chargé sous la tension $E$ et qu'on le décharge à travers la résistance $R$ seule (sans générateur), la loi des mailles donne : $u_R + u_C = 0$, soit $Ri + u_C = 0$. L'équation différentielle est alors homogène (sans second membre) :",
+        "ar": "إذا كان المكثف مشحوناً ابتداءً تحت توتر $E$ وفرّغناه عبر المقاومة $R$ وحدها (بدون مولد)، قانون المنعطفات يعطي: $u_R + u_C = 0$، أي $Ri + u_C = 0$. المعادلة التفاضلية تكون حينئذ متجانسة (بدون طرف ثانٍ):"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "RC\\frac{du_C}{dt} + u_C = 0",
+      "note": {
+        "fr": "Condition initiale : u_C(0) = E (condensateur chargé).",
+        "ar": "الشرط الابتدائي: u_C(0) = E (مكثف مشحون)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "u_C(t) = E \\cdot e^{-t/\\tau} \\qquad ; \\qquad i(t) = -\\frac{E}{R}\\,e^{-t/\\tau}",
+      "note": {
+        "fr": "u_C décroît exponentiellement de E vers 0. Le courant est négatif (sens inverse de la charge) : le condensateur restitue les charges stockées. La charge : q(t) = CE·e^(−t/τ).",
+        "ar": "u_C يتناقص أسياً من E نحو 0. التيار سالب (اتجاه معاكس للشحن): المكثف يعيد الشحنات المخزنة. الشحنة: q(t) = CE·e^(−t/τ)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Constante de temps τ = RC", "ar": "4. ثابت الزمن τ = RC" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Constante de temps τ", "ar": "ثابت الزمن τ" },
+      "text": {
+        "fr": "La constante de temps $\\tau = R \\cdot C$ caractérise la rapidité de charge ou de décharge du condensateur. Elle s'exprime en secondes (s) car Ω × F = (V/A) × (C/V) = s. Plus τ est petit, plus le régime transitoire est court. On considère que le condensateur est totalement chargé (ou déchargé) après environ $5\\tau$ (99,3% de la valeur finale).",
+        "ar": "ثابت الزمن $\\tau = R \\cdot C$ يميز سرعة شحن أو تفريغ المكثف. يُعبّر عنه بالثواني (s) لأن Ω × F = s. كلما كان τ أصغر، كان النظام العابر أقصر. نعتبر أن المكثف مشحون (أو مفرغ) بالكامل بعد حوالي $5\\tau$ (99.3% من القيمة النهائية)."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Détermination graphique de τ : (1) La tangente à l'origine de la courbe u_C(t) lors de la charge coupe l'asymptote horizontale (y = E) à l'instant t = τ. (2) Lors de la décharge, la tangente à l'origine coupe l'axe des temps à t = τ. (3) Valeurs remarquables : à t = τ, charge → u_C = 63% de E ; décharge → u_C = 37% de E.",
+        "ar": "التحديد البياني لـ τ: (1) المماس في الأصل لمنحنى u_C(t) أثناء الشحن يقطع المقارب الأفقي (y = E) عند t = τ. (2) أثناء التفريغ، المماس في الأصل يقطع محور الأزمنة عند t = τ. (3) قيم مميزة: عند t = τ، شحن → u_C = 63% من E ; تفريغ → u_C = 37% من E."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Énergie emmagasinée dans le condensateur", "ar": "5. الطاقة المخزنة في المكثف" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un condensateur chargé emmagasine de l'énergie sous forme de champ électrique entre ses armatures. Cette énergie est restituée lors de la décharge. Pendant la charge, une partie de l'énergie fournie par le générateur est dissipée par effet Joule dans la résistance (E_Joule = ½CE²), et l'autre moitié est stockée dans le condensateur.",
+        "ar": "المكثف المشحون يخزن طاقة على شكل حقل كهربائي بين صفيحتيه. هذه الطاقة تُسترد أثناء التفريغ. أثناء الشحن، جزء من الطاقة المقدمة من المولد يُبدد بتأثير جول في المقاومة (E_Joule = ½CE²)، والنصف الآخر يُخزن في المكثف."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_C = \\frac{1}{2}C u_C^2 = \\frac{q^2}{2C} = \\frac{1}{2}q \\cdot u_C",
+      "note": {
+        "fr": "E_C en Joules (J), C en Farads (F), u_C en Volts (V), q en Coulombs (C). Les trois expressions sont équivalentes grâce à q = Cu_C.",
+        "ar": "E_C بالجول (J)، C بالفاراد (F)، u_C بالفولت (V)، q بالكولوم (C). التعبيرات الثلاثة متكافئة بفضل q = Cu_C."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Exemples d'application", "ar": "6. أمثلة تطبيقية" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 1 : Constante de temps et tension lors de la charge", "ar": "مثال 1: ثابت الزمن والتوتر أثناء الشحن" },
+      "problem": {
+        "fr": "Un circuit RC est constitué d'une résistance $R = 10\\,k\\Omega$ et d'un condensateur $C = 47\\,\\mu F$, alimenté par un générateur $E = 12\\,V$. Calculer τ, la tension $u_C$ à l'instant $t = \\tau$ et la charge maximale $Q_{max}$.",
+        "ar": "دارة RC تتكون من مقاومة $R = 10\\,k\\Omega$ ومكثف $C = 47\\,\\mu F$، مغذاة بمولد $E = 12\\,V$. احسب τ، والتوتر $u_C$ عند اللحظة $t = \\tau$ والشحنة القصوى $Q_{max}$."
+      },
+      "solution": {
+        "fr": "On calcule τ puis on applique les formules.",
+        "latex": "\\tau = R \\cdot C = 10 \\times 10^3 \\times 47 \\times 10^{-6} = 0{,}47\\,s \\\\[6pt] u_C(\\tau) = E(1 - e^{-1}) = 12 \\times 0{,}632 \\approx 7{,}58\\,V \\\\[6pt] Q_{max} = CE = 47 \\times 10^{-6} \\times 12 = 564\\,\\mu C"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 2 : Énergie emmagasinée", "ar": "مثال 2: الطاقة المخزنة" },
+      "problem": {
+        "fr": "Un condensateur de capacité $C = 100\\,\\mu F$ est chargé sous une tension $U = 24\\,V$. Calculer l'énergie emmagasinée.",
+        "ar": "مكثف بسعة $C = 100\\,\\mu F$ مشحون تحت توتر $U = 24\\,V$. احسب الطاقة المخزنة."
+      },
+      "solution": {
+        "fr": "On applique la formule de l'énergie stockée.",
+        "latex": "E_C = \\frac{1}{2}CU^2 = \\frac{1}{2} \\times 100 \\times 10^{-6} \\times (24)^2 = \\frac{1}{2} \\times 100 \\times 10^{-6} \\times 576 = 28{,}8\\,mJ"
+      }
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "id": "dosages-acido-basiques",
+  "title": {
+    "fr": "Dosages acido-basiques",
+    "ar": "المعايرات الحمضية-القاعدية"
+  },
+  "objectives": {
+    "fr": [
+      "Comprendre le principe d'un dosage (titrage) acido-basique",
+      "Déterminer le point d'équivalence sur une courbe pH-métrique",
+      "Exploiter la relation à l'équivalence pour calculer une concentration inconnue",
+      "Identifier la demi-équivalence et en déduire le pKa",
+      "Choisir un indicateur coloré approprié",
+      "Tracer et interpréter une courbe de dosage pH = f(V)"
+    ],
+    "ar": [
+      "فهم مبدأ المعايرة الحمضية-القاعدية",
+      "تحديد نقطة التكافؤ على منحنى pH-حجم",
+      "استغلال علاقة التكافؤ لحساب تركيز مجهول",
+      "تحديد نصف التكافؤ واستنتاج pKa",
+      "اختيار كاشف لوني مناسب",
+      "رسم وتفسير منحنى المعايرة pH = f(V)"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Principe du dosage acido-basique",
+        "ar": "1. مبدأ المعايرة الحمضية-القاعدية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Dosage (titrage)", "ar": "المعايرة (التحديد)" },
+      "text": {
+        "fr": "Un dosage acido-basique consiste à déterminer la concentration inconnue d'un acide (ou d'une base) en solution en le faisant réagir avec une solution de base (ou d'acide) de concentration connue, appelée solution titrante. La réaction de dosage doit être rapide, totale et unique.",
+        "ar": "تتمثل المعايرة الحمضية-القاعدية في تحديد التركيز المجهول لحمض (أو قاعدة) في محلول بجعله يتفاعل مع محلول قاعدة (أو حمض) معلوم التركيز، يسمى المحلول المعاير. يجب أن يكون تفاعل المعايرة سريعاً وتاماً ووحيداً."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Montage expérimental : on place la solution à doser (analyte) dans un bécher avec un pH-mètre. La solution titrante est placée dans une burette graduée. On ajoute progressivement la solution titrante tout en mesurant le pH après chaque ajout.",
+        "ar": "التركيب التجريبي: نضع المحلول المراد معايرته في كأس مع جهاز قياس pH. يوضع المحلول المعاير في سحاحة مدرجة. نضيف تدريجياً المحلول المعاير مع قياس pH بعد كل إضافة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Le point d'équivalence",
+        "ar": "2. نقطة التكافؤ"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Équivalence", "ar": "التكافؤ" },
+      "text": {
+        "fr": "Le point d'équivalence est atteint lorsque les réactifs (acide et base) ont été mélangés dans les proportions stœchiométriques. À l'équivalence, le réactif titré et le réactif titrant ont été entièrement consommés. On note VE le volume de solution titrante versé à l'équivalence.",
+        "ar": "تتحقق نقطة التكافؤ عندما يتم خلط المتفاعلات (الحمض والقاعدة) بالنسب الستوكيومترية. عند التكافؤ، يُستهلك المتفاعل المعاير والمتفاعل المعاير بالكامل. نرمز بـ VE لحجم المحلول المعاير المضاف عند التكافؤ."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "C_A \\cdot V_A = C_B \\cdot V_E",
+      "note": {
+        "fr": "Relation à l'équivalence pour un monoacide + monobase. CA et VA sont la concentration et le volume de l'acide, CB et VE sont la concentration de la base titrante et le volume versé à l'équivalence. Cette relation permet de calculer la concentration inconnue.",
+        "ar": "علاقة التكافؤ لأحادي حمض + أحادي قاعدة. CA وVA هما تركيز وحجم الحمض، CB وVE هما تركيز القاعدة المعايرة وحجمها المضاف عند التكافؤ. تسمح هذه العلاقة بحساب التركيز المجهول."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Courbe de dosage pH = f(V)",
+        "ar": "3. منحنى المعايرة pH = f(V)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La courbe de dosage présente trois zones caractéristiques : (1) Avant l'équivalence : le réactif titré est en excès, le pH varie lentement. (2) Au voisinage de l'équivalence : le pH varie brusquement (saut de pH). Le point d'équivalence E se situe au milieu du saut de pH. (3) Après l'équivalence : le réactif titrant est en excès, le pH varie à nouveau lentement.",
+        "ar": "يقدم منحنى المعايرة ثلاث مناطق مميزة: (1) قبل التكافؤ: المتفاعل المعاير في فائض، يتغير pH ببطء. (2) في جوار التكافؤ: يتغير pH بشكل مفاجئ (قفزة pH). تقع نقطة التكافؤ E في منتصف القفزة. (3) بعد التكافؤ: المتفاعل المعاير في فائض، يتغير pH ببطء من جديد."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Méthode des tangentes : pour déterminer le point d'équivalence, on trace deux tangentes parallèles à la courbe de part et d'autre du saut de pH, puis la droite parallèle équidistante. Le point d'intersection de cette droite avec la courbe est le point d'équivalence E. On peut aussi utiliser la méthode de la dérivée : VE correspond au maximum de |dpH/dV|.",
+        "ar": "طريقة المماسات: لتحديد نقطة التكافؤ، نرسم مماسين متوازيين للمنحنى على جانبي قفزة pH، ثم المستقيم الموازي المتساوي البعد. نقطة تقاطع هذا المستقيم مع المنحنى هي نقطة التكافؤ E. يمكن أيضاً استخدام طريقة المشتقة: VE يوافق القيمة القصوى لـ |dpH/dV|."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. La demi-équivalence",
+        "ar": "4. نصف التكافؤ"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La demi-équivalence est atteinte lorsque le volume de solution titrante versé est V = VE/2. À ce point, pour le dosage d'un acide faible par une base forte, on a [AH] = [A⁻]. D'après Henderson-Hasselbalch : pH₁/₂ = pKa. La demi-équivalence permet donc de déterminer expérimentalement le pKa du couple acide/base.",
+        "ar": "يتحقق نصف التكافؤ عندما يكون حجم المحلول المعاير المضاف V = VE/2. عند هذه النقطة، لمعايرة حمض ضعيف بقاعدة قوية، يكون [AH] = [A⁻]. حسب هندرسون-هاسلبالخ: pH₁/₂ = pKa. يسمح نصف التكافؤ إذن بتحديد pKa تجريبياً."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{À } V = \\frac{V_E}{2} : \\quad pH = pK_a",
+      "note": {
+        "fr": "Valable uniquement pour le dosage d'un acide faible par une base forte (ou d'une base faible par un acide fort). À la demi-équivalence, la solution constitue une solution tampon.",
+        "ar": "صالح فقط لمعايرة حمض ضعيف بقاعدة قوية (أو قاعدة ضعيفة بحمض قوي). عند نصف التكافؤ، يشكل المحلول محلولاً منظماً."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Indicateurs colorés acido-basiques",
+        "ar": "5. الكواشف اللونية الحمضية-القاعدية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un indicateur coloré acido-basique est un couple acide/base faible dont la forme acide HIn et la forme basique In⁻ ont des couleurs différentes. Sa zone de virage est centrée sur son pKi et s'étend approximativement de pKi - 1 à pKi + 1.",
+        "ar": "الكاشف اللوني الحمضي-القاعدي هو زوج حمض/قاعدة ضعيف تكون لصيغته الحمضية HIn وصيغته القاعدية In⁻ ألوان مختلفة. تتمركز منطقة تحوله حول pKi وتمتد تقريباً من pKi - 1 إلى pKi + 1."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Hélianthine (méthyl-orange) : zone de virage 3,1 - 4,4 (rouge → jaune)",
+          "Bleu de bromothymol (BBT) : zone de virage 6,0 - 7,6 (jaune → bleu)",
+          "Phénolphtaléine : zone de virage 8,2 - 10,0 (incolore → rose)"
+        ],
+        "ar": [
+          "الهليانتين (ميثيل أورانج): منطقة التحول 3,1 - 4,4 (أحمر → أصفر)",
+          "أزرق البروموثيمول (BBT): منطقة التحول 6,0 - 7,6 (أصفر → أزرق)",
+          "الفينولفتالين: منطقة التحول 8,2 - 10,0 (عديم اللون → وردي)"
+        ]
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Choix de l'indicateur : l'indicateur coloré est bien choisi si sa zone de virage contient le pH à l'équivalence. Exemples : dosage acide fort/base forte (pHE ≈ 7) → BBT ; dosage acide faible/base forte (pHE > 7) → phénolphtaléine ; dosage base faible/acide fort (pHE < 7) → hélianthine.",
+        "ar": "اختيار الكاشف: يكون الكاشف اللوني مناسباً إذا كانت منطقة تحوله تحتوي على pH التكافؤ. أمثلة: معايرة حمض قوي/قاعدة قوية (pHE ≈ 7) → BBT؛ معايرة حمض ضعيف/قاعدة قوية (pHE > 7) → فينولفتالين؛ معايرة قاعدة ضعيفة/حمض قوي (pHE < 7) → هليانتين."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Dosage d'un acide faible par une base forte", "ar": "مثال: معايرة حمض ضعيف بقاعدة قوية" },
+      "problem": {
+        "fr": "On dose V_A = 20,0 mL d'une solution d'acide éthanoïque de concentration C_A inconnue par une solution de soude de concentration C_B = 0,10 mol/L. Le volume à l'équivalence est V_E = 15,0 mL. Calculer C_A.",
+        "ar": "نعاير V_A = 20,0 mL من محلول حمض الإيثانويك بتركيز C_A مجهول بواسطة محلول هيدروكسيد الصوديوم بتركيز C_B = 0,10 mol/L. حجم التكافؤ V_E = 15,0 mL. احسب C_A."
+      },
+      "solution": {
+        "fr": "À l'équivalence : C_A × V_A = C_B × V_E. Donc C_A = C_B × V_E / V_A = 0,10 × 15,0 / 20,0 = 0,075 mol/L.",
+        "latex": "C_A = \\frac{C_B \\times V_E}{V_A} = \\frac{0{,}10 \\times 15{,}0}{20{,}0} = 0{,}075 \\text{ mol/L}"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Exploitation de la demi-équivalence", "ar": "مثال: استغلال نصف التكافؤ" },
+      "problem": {
+        "fr": "Lors du dosage précédent, on lit pH = 4,8 pour V = VE/2 = 7,5 mL. En déduire le pKa du couple CH₃COOH/CH₃COO⁻.",
+        "ar": "خلال المعايرة السابقة، نقرأ pH = 4,8 عند V = VE/2 = 7,5 mL. استنتج pKa الزوج CH₃COOH/CH₃COO⁻."
+      },
+      "solution": {
+        "fr": "À la demi-équivalence, [CH₃COOH] = [CH₃COO⁻], donc d'après Henderson-Hasselbalch : pH = pKa + log(1) = pKa. Ainsi pKa = 4,8. C'est la valeur tabulée du pKa de l'acide éthanoïque.",
+        "latex": "pH_{1/2} = pK_a = 4{,}8"
+      }
+    }
+  ]
+}

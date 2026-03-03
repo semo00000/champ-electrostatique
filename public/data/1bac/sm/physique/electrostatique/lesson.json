@@ -1,0 +1,151 @@
+{
+  "id": "electrostatique",
+  "title": {
+    "fr": "Introduction à l'électrostatique",
+    "ar": "مدخل إلى الكهرباء الساكنة"
+  },
+  "objectives": {
+    "fr": [
+      "Comprendre la notion de charge électrique",
+      "Distinguer les deux types de charges (positive et négative)",
+      "Connaître les modes d'électrisation",
+      "Énoncer la loi de Coulomb",
+      "Calculer la force électrostatique entre deux charges ponctuelles",
+      "Comprendre la notion de champ électrostatique"
+    ],
+    "ar": [
+      "فهم مفهوم الشحنة الكهربائية",
+      "التمييز بين نوعي الشحنات (الموجبة والسالبة)",
+      "معرفة طرق الكهربة",
+      "صياغة قانون كولوم",
+      "حساب القوة الكهروسكونية بين شحنتين نقطيتين",
+      "فهم مفهوم الحقل الكهروسكوني"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. La charge électrique",
+        "ar": "1. الشحنة الكهربائية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Charge électrique",
+        "ar": "الشحنة الكهربائية"
+      },
+      "text": {
+        "fr": "La charge électrique est une propriété fondamentale de la matière. Il existe deux types de charges : positive (+) et négative (-). L'unité de charge dans le SI est le Coulomb (C). La charge élémentaire est e = 1,6 × 10⁻¹⁹ C (charge du proton).",
+        "ar": "الشحنة الكهربائية خاصية أساسية للمادة. هناك نوعان من الشحنات: موجبة (+) وسالبة (-). وحدة الشحنة في النظام الدولي هي الكولوم (C). الشحنة الأولية هي e = 1.6 × 10⁻¹⁹ C (شحنة البروتون)."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La charge électrique est quantifiée : toute charge est un multiple entier de la charge élémentaire e. La charge est conservée : la charge totale d'un système isolé reste constante. Les charges de même signe se repoussent, les charges de signes contraires s'attirent.",
+        "ar": "الشحنة الكهربائية مكمّاة: كل شحنة هي مضاعف صحيح للشحنة الأولية e. الشحنة محفوظة: الشحنة الكلية لجملة معزولة تبقى ثابتة. الشحنات المتماثلة تتنافر، والشحنات المختلفة تتجاذب."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Modes d'électrisation",
+        "ar": "2. طرق الكهربة"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Électrisation par frottement : transfert d'électrons entre deux corps frottés l'un contre l'autre (ex : règle en plastique frottée avec un tissu)",
+          "Électrisation par contact : transfert de charges par contact direct entre un corps chargé et un corps neutre",
+          "Électrisation par influence (induction) : redistribution des charges dans un conducteur sous l'effet d'un corps chargé voisin, sans contact"
+        ],
+        "ar": [
+          "الكهربة بالدلك: انتقال الإلكترونات بين جسمين يُدلكان ببعضهما (مثال: مسطرة بلاستيكية تُدلك بقماش)",
+          "الكهربة بالتماس: انتقال الشحنات بالتماس المباشر بين جسم مشحون وجسم متعادل",
+          "الكهربة بالتأثير: إعادة توزيع الشحنات في ناقل تحت تأثير جسم مشحون قريب، بدون تماس"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Loi de Coulomb",
+        "ar": "3. قانون كولوم"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "En 1785, Charles-Augustin de Coulomb établit la loi qui porte son nom. Deux charges ponctuelles q₁ et q₂, séparées par une distance d, exercent l'une sur l'autre des forces électrostatiques de même intensité, portées par la droite qui les joint.",
+        "ar": "في عام 1785، وضع شارل أوغستان دي كولوم القانون الذي يحمل اسمه. شحنتان نقطيتان q₁ و q₂، تفصل بينهما مسافة d، تؤثر كل منهما على الأخرى بقوى كهروسكونية متساوية الشدة، محمولة على المستقيم الواصل بينهما."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "F = k \\frac{|q_1| \\cdot |q_2|}{d^2}",
+      "note": {
+        "fr": "k = 9 × 10⁹ N·m²·C⁻² est la constante de Coulomb. F en Newtons (N), q en Coulombs (C), d en mètres (m). On a aussi k = 1/(4πε₀) avec ε₀ = 8,85 × 10⁻¹² C²·N⁻¹·m⁻².",
+        "ar": "k = 9 × 10⁹ N·m²·C⁻² هي ثابتة كولوم. F بالنيوتن (N)، q بالكولوم (C)، d بالمتر (m). ولدينا أيضاً k = 1/(4πε₀) حيث ε₀ = 8.85 × 10⁻¹² C²·N⁻¹·m⁻²."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Si les charges sont de même signe, la force est répulsive (les charges se repoussent). Si les charges sont de signes opposés, la force est attractive (les charges s'attirent).",
+        "ar": "إذا كانت الشحنتان من نفس الإشارة، تكون القوة تنافرية (الشحنات تتنافر). إذا كانت الشحنتان من إشارتين مختلفتين، تكون القوة تجاذبية (الشحنات تتجاذب)."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Calcul de la force de Coulomb",
+        "ar": "مثال: حساب قوة كولوم"
+      },
+      "problem": {
+        "fr": "Deux charges ponctuelles q₁ = +3 μC et q₂ = -5 μC sont séparées par une distance d = 10 cm. Calculer l'intensité de la force électrostatique. Préciser sa nature (attractive ou répulsive).",
+        "ar": "شحنتان نقطيتان q₁ = +3 μC و q₂ = -5 μC تفصل بينهما مسافة d = 10 cm. احسب شدة القوة الكهروسكونية. حدد طبيعتها (تجاذبية أو تنافرية)."
+      },
+      "solution": {
+        "fr": "q₁ = 3 × 10⁻⁶ C, q₂ = 5 × 10⁻⁶ C, d = 0,1 m\nF = k × |q₁| × |q₂| / d²\nF = 9 × 10⁹ × 3 × 10⁻⁶ × 5 × 10⁻⁶ / (0,1)²\nF = 9 × 10⁹ × 15 × 10⁻¹² / 10⁻²\nF = 135 × 10⁻³ / 10⁻² = 13,5 N\nLes charges sont de signes opposés → force attractive.",
+        "latex": "F = k \\frac{|q_1| \\cdot |q_2|}{d^2} = 9 \\times 10^{9} \\times \\frac{3 \\times 10^{-6} \\times 5 \\times 10^{-6}}{(0{,}1)^2} = 13{,}5 \\text{ N (attractive)}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Introduction au champ électrostatique",
+        "ar": "4. مدخل إلى الحقل الكهروسكوني"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Une charge Q crée autour d'elle un champ électrostatique E. Toute charge q placée dans ce champ subit une force F = qE. Le champ électrique créé par une charge ponctuelle Q à la distance r est radial et son intensité vaut :",
+        "ar": "شحنة Q تُنشئ حولها حقلاً كهروسكونياً E. كل شحنة q توضع في هذا الحقل تخضع لقوة F = qE. الحقل الكهربائي الذي تنشئه شحنة نقطية Q على بعد r شعاعي وشدته تساوي :"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E = k \\frac{|Q|}{d^2}",
+      "note": {
+        "fr": "E s'exprime en N/C ou V/m. Le champ est dirigé de la charge positive vers l'extérieur (s'éloigne), et de l'extérieur vers une charge négative (se rapproche).",
+        "ar": "E يُعبَّر عنه بـ N/C أو V/m. الحقل موجّه من الشحنة الموجبة نحو الخارج (يبتعد)، ومن الخارج نحو الشحنة السالبة (يقترب)."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Analogie avec la gravitation : la loi de Coulomb (F = kq₁q₂/d²) a la même structure que la loi de gravitation de Newton (F = Gm₁m₂/d²). Mais la force électrostatique peut être attractive OU répulsive, tandis que la gravitation est toujours attractive.",
+        "ar": "تشابه مع الجاذبية: قانون كولوم (F = kq₁q₂/d²) له نفس بنية قانون الجاذبية لنيوتن (F = Gm₁m₂/d²). لكن القوة الكهروسكونية يمكن أن تكون تجاذبية أو تنافرية، بينما الجاذبية دائماً تجاذبية."
+      }
+    }
+  ]
+}

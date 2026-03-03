@@ -1,0 +1,251 @@
+{
+  "id": "geometrie-dans-lespace",
+  "title": {
+    "fr": "Géométrie dans l'Espace",
+    "ar": "الهندسة في الفضاء"
+  },
+  "objectives": {
+    "fr": [
+      "Manipuler les vecteurs dans l'espace (somme, produit par un scalaire, norme)",
+      "Calculer le produit scalaire et déterminer l'orthogonalité de deux vecteurs",
+      "Calculer le produit vectoriel et l'utiliser pour trouver un vecteur normal",
+      "Ecrire les équations paramétriques d'une droite et l'équation cartésienne d'un plan",
+      "Calculer les distances (point-plan, point-droite) et étudier les positions relatives"
+    ],
+    "ar": [
+      "استعمال الأشعة في الفضاء (المجموع، الجداء بعدد، المعيار)",
+      "حساب الجداء السلمي وتحديد تعامد شعاعين",
+      "حساب الجداء الشعاعي واستعماله لإيجاد شعاع ناظمي",
+      "كتابة المعادلات الوسيطية لمستقيم والمعادلة الديكارتية لمستوى",
+      "حساب المسافات (نقطة-مستوى، نقطة-مستقيم) ودراسة الأوضاع النسبية"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Vecteurs dans l'espace",
+        "ar": "1. الأشعة في الفضاء"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Vecteur dans un repère orthonormé de l'espace",
+        "ar": "شعاع في معلم متعامد ممنظم في الفضاء"
+      },
+      "text": {
+        "fr": "Dans un repère orthonormé (O, i, j, k) de l'espace, tout vecteur u est défini par ses trois composantes u = (x, y, z). La norme (longueur) du vecteur est ||u|| = sqrt(x² + y² + z²). Deux vecteurs sont colinéaires si l'un est un multiple scalaire de l'autre.",
+        "ar": "في معلم متعامد ممنظم (O, i, j, k) للفضاء، كل شعاع u يُعرّف بمركباته الثلاث u = (x, y, z). معيار (طول) الشعاع هو ||u|| = sqrt(x² + y² + z²). شعاعان يكونان متوازيين إذا كان أحدهما مضاعفا عدديا للآخر."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\vec{u} = \\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix}, \\qquad \\|\\vec{u}\\| = \\sqrt{x^2 + y^2 + z^2}",
+      "note": {
+        "fr": "Composantes et norme d'un vecteur dans l'espace",
+        "ar": "مركبات ومعيار شعاع في الفضاء"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Produit scalaire dans l'espace",
+        "ar": "2. الجداء السلمي في الفضاء"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Produit scalaire",
+        "ar": "الجداء السلمي"
+      },
+      "text": {
+        "fr": "Le produit scalaire de u = (x₁, y₁, z₁) et v = (x₂, y₂, z₂) est u·v = x₁x₂ + y₁y₂ + z₁z₂. Il vérifie aussi u·v = ||u||·||v||·cos(u, v), où (u, v) est l'angle entre les deux vecteurs.",
+        "ar": "الجداء السلمي لـ u = (x₁, y₁, z₁) و v = (x₂, y₂, z₂) هو u·v = x₁x₂ + y₁y₂ + z₁z₂. يحقق أيضا u·v = ||u||·||v||·cos(u, v)، حيث (u, v) هي الزاوية بين الشعاعين."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\vec{u} \\cdot \\vec{v} = x_1 x_2 + y_1 y_2 + z_1 z_2 = \\|\\vec{u}\\| \\, \\|\\vec{v}\\| \\cos(\\vec{u}, \\vec{v})",
+      "note": {
+        "fr": "Produit scalaire : expression analytique et expression géométrique",
+        "ar": "الجداء السلمي: التعبير التحليلي والتعبير الهندسي"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Deux vecteurs u et v sont orthogonaux si et seulement si leur produit scalaire est nul : u ⊥ v si et seulement si u·v = 0. Le produit scalaire permet aussi de calculer l'angle entre deux vecteurs : cos(u,v) = (u·v)/(||u||·||v||).",
+        "ar": "شعاعان u و v متعامدان إذا وفقط إذا كان جداؤهما السلمي منعدما: u ⊥ v إذا وفقط إذا u·v = 0. الجداء السلمي يمكّن أيضا من حساب الزاوية بين شعاعين: cos(u,v) = (u·v)/(||u||·||v||)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Produit vectoriel",
+        "ar": "3. الجداء الشعاعي (الاتجاهي)"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Produit vectoriel",
+        "ar": "الجداء الشعاعي"
+      },
+      "text": {
+        "fr": "Le produit vectoriel de u et v est le vecteur u ∧ v, perpendiculaire au plan formé par u et v, dont la norme est ||u||·||v||·sin(u,v). Il est nul si et seulement si u et v sont colinéaires. Le produit vectoriel est anticommutatif : u ∧ v = −(v ∧ u).",
+        "ar": "الجداء الشعاعي لـ u و v هو الشعاع u ∧ v، العمودي على المستوى المحدد بـ u و v، معياره ||u||·||v||·sin(u,v). يكون منعدما إذا وفقط إذا كان u و v متوازيين. الجداء الشعاعي مضاد للتبديل: u ∧ v = −(v ∧ u)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\vec{u} \\wedge \\vec{v} = \\begin{pmatrix} y_1 z_2 - z_1 y_2 \\\\ z_1 x_2 - x_1 z_2 \\\\ x_1 y_2 - y_1 x_2 \\end{pmatrix}",
+      "note": {
+        "fr": "Formule du produit vectoriel en coordonnées cartésiennes",
+        "ar": "صيغة الجداء الشعاعي بالإحداثيات الديكارتية"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 1 : Calcul d'un produit vectoriel",
+        "ar": "مثال 1: حساب جداء شعاعي"
+      },
+      "problem": {
+        "fr": "Calculer u ∧ v avec u = (1, 2, 3) et v = (4, 5, 6).",
+        "ar": "احسب u ∧ v حيث u = (1, 2, 3) و v = (4, 5, 6)."
+      },
+      "solution": {
+        "fr": "u ∧ v = (2×6 − 3×5, 3×4 − 1×6, 1×5 − 2×4) = (12 − 15, 12 − 6, 5 − 8) = (−3, 6, −3).",
+        "latex": "\\vec{u} \\wedge \\vec{v} = \\begin{pmatrix} 12-15 \\\\ 12-6 \\\\ 5-8 \\end{pmatrix} = \\begin{pmatrix} -3 \\\\ 6 \\\\ -3 \\end{pmatrix}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Equations paramétriques d'une droite",
+        "ar": "4. المعادلات الوسيطية لمستقيم"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Une droite (D) passant par le point A(a₁, a₂, a₃) et de vecteur directeur u = (α, β, γ) est l'ensemble des points M(x, y, z) tels que AM est colinéaire à u. Sa représentation paramétrique est donnée par les trois équations ci-dessous, où t parcourt ℝ.",
+        "ar": "المستقيم (D) المار من النقطة A(a₁, a₂, a₃) وذو الشعاع الموجه u = (α, β, γ) هو مجموعة النقاط M(x, y, z) بحيث AM موازي لـ u. تمثيله الوسيطي يُعطى بالمعادلات الثلاث أدناه، حيث t يجتاز ℝ."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "(D) : \\begin{cases} x = a_1 + \\alpha t \\\\ y = a_2 + \\beta t \\\\ z = a_3 + \\gamma t \\end{cases}, \\quad t \\in \\mathbb{R}",
+      "note": {
+        "fr": "Equations paramétriques d'une droite passant par A et dirigée par u",
+        "ar": "المعادلات الوسيطية لمستقيم مار من A وموجه بـ u"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Equation cartésienne d'un plan",
+        "ar": "5. المعادلة الديكارتية لمستوى"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Equation cartésienne d'un plan",
+        "ar": "المعادلة الديكارتية لمستوى"
+      },
+      "text": {
+        "fr": "Un plan (P) de vecteur normal n = (a, b, c) passant par le point A(x₀, y₀, z₀) a pour équation : a(x − x₀) + b(y − y₀) + c(z − z₀) = 0, qui se simplifie en ax + by + cz + d = 0 avec d = −(ax₀ + by₀ + cz₀).",
+        "ar": "المستوى (P) ذو الشعاع الناظمي n = (a, b, c) المار من النقطة A(x₀, y₀, z₀) معادلته: a(x − x₀) + b(y − y₀) + c(z − z₀) = 0، التي تُبسّط إلى ax + by + cz + d = 0 حيث d = −(ax₀ + by₀ + cz₀)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "(P) : ax + by + cz + d = 0 \\quad \\text{avec } \\vec{n} = \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix}",
+      "note": {
+        "fr": "Le vecteur normal au plan est directement lu dans les coefficients (a, b, c)",
+        "ar": "الشعاع الناظمي للمستوى يُقرأ مباشرة من المعاملات (a, b, c)"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 2 : Déterminer l'équation d'un plan",
+        "ar": "مثال 2: تحديد معادلة مستوى"
+      },
+      "problem": {
+        "fr": "Trouver l'équation du plan passant par A(1, 0, 2) de vecteur normal n = (2, −1, 3).",
+        "ar": "جد معادلة المستوى المار من A(1, 0, 2) ذي الشعاع الناظمي n = (2, −1, 3)."
+      },
+      "solution": {
+        "fr": "2(x − 1) + (−1)(y − 0) + 3(z − 2) = 0, soit 2x − y + 3z − 2 − 6 = 0, c'est-à-dire 2x − y + 3z − 8 = 0.",
+        "latex": "2(x-1) - (y-0) + 3(z-2) = 0 \\implies 2x - y + 3z - 8 = 0"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Distances dans l'espace",
+        "ar": "6. المسافات في الفضاء"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "d(M_0, P) = \\frac{|ax_0 + by_0 + cz_0 + d|}{\\sqrt{a^2 + b^2 + c^2}}",
+      "note": {
+        "fr": "Distance d'un point M₀(x₀, y₀, z₀) au plan (P) : ax + by + cz + d = 0",
+        "ar": "مسافة نقطة M₀(x₀, y₀, z₀) عن المستوى (P): ax + by + cz + d = 0"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 3 : Distance d'un point à un plan",
+        "ar": "مثال 3: مسافة نقطة عن مستوى"
+      },
+      "problem": {
+        "fr": "Calculer la distance du point M(1, 2, 3) au plan 2x − y + 2z − 1 = 0.",
+        "ar": "احسب مسافة النقطة M(1, 2, 3) عن المستوى 2x − y + 2z − 1 = 0."
+      },
+      "solution": {
+        "fr": "d = |2(1) − 1(2) + 2(3) − 1| / sqrt(2² + (−1)² + 2²) = |2 − 2 + 6 − 1| / sqrt(4 + 1 + 4) = 5/3.",
+        "latex": "d = \\frac{|2(1) - 1(2) + 2(3) - 1|}{\\sqrt{4+1+4}} = \\frac{|2 - 2 + 6 - 1|}{3} = \\frac{5}{3}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "7. Positions relatives de droites et plans",
+        "ar": "7. الأوضاع النسبية للمستقيمات والمستويات"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Deux plans sont parallèles si et seulement si leurs vecteurs normaux sont colinéaires",
+          "Deux plans sont perpendiculaires si et seulement si leurs vecteurs normaux sont orthogonaux (produit scalaire nul)",
+          "Une droite est parallèle à un plan si et seulement si son vecteur directeur est orthogonal au vecteur normal du plan",
+          "Une droite est perpendiculaire à un plan si et seulement si son vecteur directeur est colinéaire au vecteur normal du plan",
+          "L'intersection de deux plans non parallèles est une droite dont le vecteur directeur est le produit vectoriel de leurs vecteurs normaux"
+        ],
+        "ar": [
+          "مستويان متوازيان إذا وفقط إذا كان شعاعاهما الناظميان متوازيين",
+          "مستويان متعامدان إذا وفقط إذا كان شعاعاهما الناظميان متعامدين (الجداء السلمي منعدم)",
+          "مستقيم مواز لمستوى إذا وفقط إذا كان شعاعه الموجه متعامدا مع الشعاع الناظمي للمستوى",
+          "مستقيم عمودي على مستوى إذا وفقط إذا كان شعاعه الموجه موازيا للشعاع الناظمي للمستوى",
+          "تقاطع مستويين غير متوازيين هو مستقيم شعاعه الموجه هو الجداء الشعاعي لشعاعيهما الناظميين"
+        ]
+      }
+    }
+  ]
+}

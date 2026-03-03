@@ -1,0 +1,112 @@
+{
+  "id": "geometrie-analytique",
+  "title": { "fr": "Géométrie analytique dans le plan", "ar": "الهندسة التحليلية في المستوى" },
+  "objectives": {
+    "fr": [
+      "Établir l'équation d'une droite sous différentes formes",
+      "Calculer la distance d'un point à une droite",
+      "Écrire l'équation d'un cercle et identifier son centre et son rayon",
+      "Déterminer l'intersection de deux droites",
+      "Reconnaître les conditions de parallélisme et de perpendicularité"
+    ],
+    "ar": [
+      "إنشاء معادلة مستقيم بأشكال مختلفة",
+      "حساب المسافة من نقطة إلى مستقيم",
+      "كتابة معادلة دائرة وتحديد مركزها وشعاعها",
+      "تحديد تقاطع مستقيمين",
+      "التعرف على شروط التوازي والتعامد"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Équations de droites", "ar": "١. معادلات المستقيمات" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Équation cartésienne d'une droite" },
+      "text": { "fr": "Toute droite du plan admet une équation de la forme ax + by + c = 0 (a et b non tous les deux nuls). Le vecteur n(a, b) est un vecteur normal à la droite, et le vecteur u(-b, a) est un vecteur directeur." }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Forme réduite : si b ≠ 0, on peut écrire y = mx + p, où m = -a/b est la pente (coefficient directeur) et p = -c/b est l'ordonnée à l'origine. Équation passant par A(x₁,y₁) de pente m : y - y₁ = m(x - x₁).",
+        "ar": "الشكل المختزل: إذا كان b ≠ 0، يمكن كتابة y = mx + p، حيث m هو الميل و p هو الترتيب عند الأصل."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Parallélisme et perpendicularité", "ar": "٢. التوازي والتعامد" }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Soient D₁ : a₁x + b₁y + c₁ = 0 et D₂ : a₂x + b₂y + c₂ = 0. D₁ ∥ D₂ ⟺ a₁b₂ - a₂b₁ = 0 (vecteurs normaux colinéaires). D₁ ⊥ D₂ ⟺ a₁a₂ + b₁b₂ = 0 (vecteurs normaux orthogonaux). En termes de pentes : D₁ ∥ D₂ ⟺ m₁ = m₂ et D₁ ⊥ D₂ ⟺ m₁ × m₂ = -1.",
+        "ar": "D₁ ∥ D₂ ⟺ a₁b₂ - a₂b₁ = 0. D₁ ⊥ D₂ ⟺ a₁a₂ + b₁b₂ = 0. بالميول: m₁ = m₂ للتوازي و m₁ × m₂ = -1 للتعامد."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Distance d'un point à une droite", "ar": "٣. المسافة من نقطة إلى مستقيم" }
+    },
+    {
+      "type": "formula",
+      "latex": "d(M_0, D) = \\frac{|ax_0 + by_0 + c|}{\\sqrt{a^2 + b^2}}",
+      "note": { "fr": "Distance du point M₀(x₀, y₀) à la droite D : ax + by + c = 0." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Distance point-droite" },
+      "problem": { "fr": "Calculer la distance du point A(1, 3) à la droite D : 3x - 4y + 5 = 0." },
+      "solution": { "fr": "d = |3(1) - 4(3) + 5| / √(9+16) = |3 - 12 + 5| / 5 = |-4| / 5 = 4/5 = 0.8.", "latex": "d(A, D) = \\frac{|3 \\times 1 - 4 \\times 3 + 5|}{\\sqrt{3^2+4^2}} = \\frac{|-4|}{5} = \\frac{4}{5}" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Intersection de deux droites", "ar": "٤. تقاطع مستقيمين" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le point d'intersection de deux droites D₁ : a₁x + b₁y + c₁ = 0 et D₂ : a₂x + b₂y + c₂ = 0 (non parallèles) s'obtient en résolvant le système de deux équations à deux inconnues. Si le déterminant a₁b₂ - a₂b₁ ≠ 0, il existe un unique point d'intersection.",
+        "ar": "نقطة تقاطع مستقيمين غير متوازيين تُحصل بحل جملة معادلتين بمجهولين."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Équation d'un cercle", "ar": "٥. معادلة الدائرة" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Cercle" },
+      "text": { "fr": "Le cercle de centre Ω(a, b) et de rayon r > 0 a pour équation : (x - a)² + (y - b)² = r². Sous forme développée : x² + y² - 2ax - 2by + (a² + b² - r²) = 0." }
+    },
+    {
+      "type": "formula",
+      "latex": "(x-a)^2 + (y-b)^2 = r^2",
+      "note": { "fr": "Équation du cercle de centre Ω(a,b) et de rayon r." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Identifier un cercle" },
+      "problem": { "fr": "Déterminer le centre et le rayon du cercle d'équation x² + y² - 6x + 4y - 12 = 0." },
+      "solution": { "fr": "On complète les carrés : (x² - 6x + 9) + (y² + 4y + 4) = 12 + 9 + 4 = 25. Donc (x-3)² + (y+2)² = 25. Le centre est Ω(3, -2) et le rayon est r = 5.", "latex": "(x-3)^2 + (y+2)^2 = 25 \\;\\Rightarrow\\; \\Omega(3,-2),\\; r = 5" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Position relative droite-cercle", "ar": "٦. الوضع النسبي لمستقيم ودائرة" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Soit un cercle C de centre Ω et de rayon r, et une droite D. On calcule d = d(Ω, D). Si d > r : D et C sont disjoints (aucune intersection). Si d = r : D est tangente à C (un point d'intersection). Si d < r : D est sécante à C (deux points d'intersection).",
+        "ar": "إذا كان d > r: المستقيم والدائرة منفصلان. إذا كان d = r: المستقيم مماس للدائرة. إذا كان d < r: المستقيم قاطع للدائرة."
+      }
+    }
+  ]
+}

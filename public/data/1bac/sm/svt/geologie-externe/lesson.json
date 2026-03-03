@@ -1,0 +1,186 @@
+{
+  "id": "geologie-externe",
+  "title": {
+    "fr": "La géologie externe : érosion, transport et sédimentation",
+    "ar": "الجيولوجيا الخارجية: التعرية والنقل والترسب"
+  },
+  "objectives": {
+    "fr": [
+      "Comprendre les processus d'altération et d'érosion des roches",
+      "Distinguer l'altération physique et l'altération chimique",
+      "Décrire les agents et modes de transport des sédiments",
+      "Expliquer le processus de sédimentation et la formation des roches sédimentaires",
+      "Comprendre le cycle de l'eau et son rôle en géologie externe"
+    ],
+    "ar": [
+      "فهم عمليات تحلل وتعرية الصخور",
+      "التمييز بين التجوية الفيزيائية والتجوية الكيميائية",
+      "وصف عوامل وطرق نقل الرواسب",
+      "شرح عملية الترسب وتكوّن الصخور الرسوبية",
+      "فهم دورة الماء ودورها في الجيولوجيا الخارجية"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. L'altération des roches",
+        "ar": "1. تجوية الصخور"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Altération", "ar": "التجوية" },
+      "text": {
+        "fr": "L'altération est la dégradation des roches en surface sous l'action d'agents atmosphériques (eau, température, vent, êtres vivants). On distingue l'altération physique (mécanique) et l'altération chimique.",
+        "ar": "التجوية هي تفكك الصخور على السطح تحت تأثير العوامل المناخية (الماء، الحرارة، الرياح، الكائنات الحية). نميز بين التجوية الفيزيائية (الميكانيكية) والتجوية الكيميائية."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'altération physique (mécanique) fragmente les roches sans modifier leur composition chimique. Ses principaux mécanismes sont : la gélifraction (l'eau gèle dans les fissures, augmente de volume de 9% et fait éclater la roche), la thermoclastie (les variations de température dilatent et contractent la roche), et l'action des racines des plantes qui pénètrent dans les fissures.",
+        "ar": "التجوية الفيزيائية (الميكانيكية) تفتت الصخور دون تغيير تركيبها الكيميائي. آلياتها الأساسية هي: التجمد-الذوبان (يتجمد الماء في الشقوق ويزداد حجمه بـ 9%)، التكسر الحراري (تغيرات الحرارة تمدد وتقلص الصخرة)، وفعل جذور النباتات."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'altération chimique modifie la composition minéralogique des roches. L'hydrolyse est le mécanisme principal : l'eau réagit avec les minéraux silicatés (feldspaths) pour former des minéraux argileux. La dissolution concerne les roches calcaires : CaCO₃ + H₂O + CO₂ → Ca²⁺ + 2HCO₃⁻. L'oxydation transforme les minéraux ferromagnésiens en oxydes de fer.",
+        "ar": "التجوية الكيميائية تغير التركيب المعدني للصخور. الحلمأة هي الآلية الأساسية: يتفاعل الماء مع المعادن السيليكاتية (فلسبارات) لتكوين معادن طينية. الإذابة تخص الصخور الكلسية: CaCO₃ + H₂O + CO₂ → Ca²⁺ + 2HCO₃⁻. الأكسدة تحول المعادن الحديدومغنيزية إلى أكاسيد الحديد."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{CaCO}_3 + \\text{H}_2\\text{O} + \\text{CO}_2 \\rightarrow \\text{Ca}^{2+} + 2\\text{HCO}_3^-",
+      "note": {
+        "fr": "Dissolution du calcaire par les eaux chargées en CO₂ (formation du karst)",
+        "ar": "إذابة الكلس بالمياه المحملة بـ CO₂ (تكوين الكارست)"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. L'érosion",
+        "ar": "2. التعرية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Érosion", "ar": "التعرية" },
+      "text": {
+        "fr": "L'érosion est l'enlèvement et le transport des produits de l'altération par des agents d'érosion : l'eau (courante, pluie, marine), le vent, la glace (glaciers) et la gravité.",
+        "ar": "التعرية هي إزالة ونقل نواتج التجوية بواسطة عوامل التعرية: الماء (الجاري، المطر، البحري)، الرياح، الجليد (المجلدات) والجاذبية."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Érosion hydrique : la plus importante, creuse des vallées, forme des gorges et des méandres",
+          "Érosion éolienne : le vent transporte les particules fines (sable, limon), important en zones arides",
+          "Érosion glaciaire : les glaciers arrachent et transportent d'énormes blocs (moraines)",
+          "Érosion marine : les vagues et courants érodent les côtes (falaises, plages)"
+        ],
+        "ar": [
+          "التعرية المائية: الأهم، تحفر الأودية وتشكل الخوانق والمنعطفات",
+          "التعرية الريحية: ينقل الريح الجسيمات الدقيقة، مهمة في المناطق الجافة",
+          "التعرية الجليدية: تقتلع المجلدات وتنقل كتلا ضخمة (ركامات)",
+          "التعرية البحرية: تعري الأمواج والتيارات السواحل"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Le transport des sédiments",
+        "ar": "3. نقل الرواسب"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Les produits de l'érosion sont transportés vers les bassins de sédimentation. Le transport par l'eau se fait selon trois modes : en dissolution (ions dissous comme Ca²⁺, HCO₃⁻), en suspension (particules fines : argiles, limons) et par charriage (particules grossières roulées sur le fond : galets, sable grossier). La capacité de transport dépend de la vitesse du courant.",
+        "ar": "تُنقل نواتج التعرية نحو أحواض الترسب. يتم النقل بالماء حسب ثلاثة أنماط: بالإذابة (أيونات مذابة)، بالتعليق (جسيمات دقيقة: طين، طمي) وبالجر (جسيمات خشنة تتدحرج على القاع). تعتمد قدرة النقل على سرعة التيار."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Plus le courant est rapide, plus il peut transporter de grosses particules. Quand la vitesse diminue, les éléments les plus lourds se déposent en premier (granoclassement ou tri granulométrique).",
+        "ar": "كلما كان التيار أسرع، زادت الجسيمات الكبيرة التي يمكنه نقلها. عندما تنخفض السرعة، تتوضع العناصر الأثقل أولا (التصنيف الحبيبي)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. La sédimentation et les roches sédimentaires",
+        "ar": "4. الترسب والصخور الرسوبية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La sédimentation est le dépôt des particules transportées lorsque l'agent de transport perd son énergie. Les sédiments s'accumulent en couches (strates) et subissent la diagenèse : compaction (sous le poids des couches supérieures) et cimentation (cristallisation de minéraux entre les grains). Ce processus transforme les sédiments meubles en roches sédimentaires consolidées.",
+        "ar": "الترسب هو توضع الجسيمات المنقولة عندما يفقد عامل النقل طاقته. تتراكم الرواسب في طبقات وتخضع للتحجر: الانضغاط (تحت ثقل الطبقات العلوية) والتلحيم (تبلور معادن بين الحبيبات). هذه العملية تحول الرواسب الهشة إلى صخور رسوبية متماسكة."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Roches détritiques : formées de débris (grès = sable cimenté, conglomérat = galets cimentés, argile)",
+          "Roches chimiques : formées par précipitation (sel gemme NaCl, gypse, calcaire chimique)",
+          "Roches biochimiques : formées par des organismes vivants (calcaire à fossiles, craie, charbon, pétrole)"
+        ],
+        "ar": [
+          "صخور حتاتية: مكونة من حطام (حجر رملي، كونغلوميرا، طين)",
+          "صخور كيميائية: مكونة بالترسيب الكيميائي (ملح صخري، جبس، كلس كيميائي)",
+          "صخور بيوكيميائية: مكونة بفعل كائنات حية (كلس بالمستحثات، طباشير، فحم، بترول)"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Le cycle de l'eau et facteurs d'érosion",
+        "ar": "5. دورة الماء وعوامل التعرية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le cycle de l'eau est le moteur principal de la géologie externe. L'eau s'évapore, se condense en nuages, retombe sous forme de précipitations. Une partie ruisselle en surface (rivières), une partie s'infiltre dans le sol (nappes phréatiques). Les facteurs influençant l'érosion sont : le climat (régions humides = altération chimique, régions arides = altération physique), la nature de la roche, la pente et le relief, la végétation (les racines retiennent le sol) et l'activité humaine.",
+        "ar": "دورة الماء هي المحرك الرئيسي للجيولوجيا الخارجية. يتبخر الماء، يتكاثف في سحب، ويتساقط. جزء يسيل على السطح (أنهار)، جزء يتسرب في التربة (فرشات مائية). العوامل المؤثرة في التعرية هي: المناخ، طبيعة الصخرة، الانحدار والتضاريس، الغطاء النباتي والنشاط البشري."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Fossiles et principe de superposition",
+        "ar": "6. المستحاثات ومبدأ التراكب"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Fossile", "ar": "المستحاثة" },
+      "text": {
+        "fr": "Reste ou trace d'organisme conservé dans les roches sédimentaires. Les fossiles permettent de dater les couches géologiques (biostratigraphie) et de reconstituer les paléoenvironnements.",
+        "ar": "بقايا أو أثر كائن حي محفوظ في الصخور الرسوبية. تسمح المستحاثات بتأريخ الطبقات الجيولوجية وإعادة بناء البيئات القديمة."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Résumé du cycle sédimentaire : Altération → Érosion → Transport → Sédimentation → Diagenèse → Roche sédimentaire. Principe de superposition : dans une série non déformée, les couches les plus anciennes sont en bas et les plus récentes en haut.",
+        "ar": "ملخص الدورة الرسوبية: تجوية → تعرية → نقل → ترسب → تحجر → صخرة رسوبية. مبدأ التراكب: في سلسلة غير مشوهة، الطبقات الأقدم في الأسفل والأحدث في الأعلى."
+      }
+    }
+  ]
+}

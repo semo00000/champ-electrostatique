@@ -1,0 +1,109 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La longueur d'onde λ d'une onde périodique représente :",
+        "ar": "الطول الموجي λ لموجة دورية يمثل:"
+      },
+      "choices": [
+        { "fr": "La distance parcourue par l'onde pendant une demi-période", "ar": "المسافة التي تقطعها الموجة خلال نصف دور" },
+        { "fr": "La plus petite distance entre deux points vibrant en phase", "ar": "أصغر مسافة بين نقطتين تهتزان بنفس الطور" },
+        { "fr": "La distance entre un nœud et un ventre", "ar": "المسافة بين عقدة وبطن" },
+        { "fr": "L'amplitude maximale de l'onde", "ar": "السعة القصوى للموجة" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "La longueur d'onde λ est la plus petite distance entre deux points du milieu vibrant en phase (même élongation, même vitesse au même instant). Elle est aussi égale à la distance parcourue par l'onde pendant une période T : λ = v·T.",
+        "ar": "الطول الموجي λ هو أصغر مسافة بين نقطتين من الوسط تهتزان بنفس الطور. وتساوي أيضا المسافة التي تقطعها الموجة خلال دور واحد: λ = v·T."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Une onde sonore de fréquence $f = 680\\,Hz$ se propage dans l'air à $v = 340\\,m/s$. Calculer la longueur d'onde λ en mètres.",
+        "ar": "موجة صوتية بتردد $f = 680\\,Hz$ تنتشر في الهواء بسرعة $v = 340\\,m/s$. احسب الطول الموجي λ بالأمتار."
+      },
+      "answer": 0.5,
+      "tolerance": 0.01,
+      "unit": "m",
+      "hint": {
+        "fr": "Utilisez $\\lambda = \\frac{v}{f}$",
+        "ar": "استخدم $\\lambda = \\frac{v}{f}$"
+      },
+      "explanation": {
+        "fr": "$\\lambda = \\frac{v}{f} = \\frac{340}{680} = 0{,}5\\,m$"
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Deux points M₁ et M₂ d'un milieu de propagation vibrent en opposition de phase si la distance $d = |x_2 - x_1|$ entre eux vérifie :",
+        "ar": "نقطتان M₁ و M₂ من وسط الانتشار تهتزان بتعاكس الطور إذا كانت المسافة $d = |x_2 - x_1|$ بينهما تحقق:"
+      },
+      "choices": [
+        { "fr": "$d = n\\lambda$ (n entier non nul)", "ar": "$d = n\\lambda$ (n عدد صحيح غير معدوم)" },
+        { "fr": "$d = (2n+1)\\frac{\\lambda}{2}$", "ar": "$d = (2n+1)\\frac{\\lambda}{2}$" },
+        { "fr": "$d = \\frac{\\lambda}{4}$", "ar": "$d = \\frac{\\lambda}{4}$" },
+        { "fr": "$d = n\\frac{\\lambda}{3}$", "ar": "$d = n\\frac{\\lambda}{3}$" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Deux points vibrent en opposition de phase lorsque le déphasage entre eux est un multiple impair de π : $\\Delta\\varphi = (2n+1)\\pi$. Comme $\\Delta\\varphi = \\frac{2\\pi}{\\lambda}d$, on obtient $d = (2n+1)\\frac{\\lambda}{2}$.",
+        "ar": "تهتز نقطتان بتعاكس الطور عندما يكون فرق الطور بينهما مضاعفا فرديا لـ π. بما أن $\\Delta\\varphi = \\frac{2\\pi}{\\lambda}d$، نحصل على $d = (2n+1)\\frac{\\lambda}{2}$."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un vibreur de fréquence $f = 25\\,Hz$ génère une onde de célérité $v = 2\\,m/s$. Quelle est la période T en millisecondes ?",
+        "ar": "مهتز بتردد $f = 25\\,Hz$ ينتج موجة بسرعة $v = 2\\,m/s$. ما هو الدور T بالميلي ثانية؟"
+      },
+      "answer": 40,
+      "tolerance": 0.5,
+      "unit": "ms",
+      "hint": {
+        "fr": "Utilisez $T = \\frac{1}{f}$",
+        "ar": "استخدم $T = \\frac{1}{f}$"
+      },
+      "explanation": {
+        "fr": "$T = \\frac{1}{f} = \\frac{1}{25} = 0{,}04\\,s = 40\\,ms$"
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Une onde sinusoïdale de fréquence $f = 200\\,Hz$ se propage à $v = 40\\,m/s$. Calculer la longueur d'onde λ en centimètres.",
+        "ar": "موجة جيبية بتردد $f = 200\\,Hz$ تنتشر بسرعة $v = 40\\,m/s$. احسب الطول الموجي λ بالسنتيمترات."
+      },
+      "answer": 20,
+      "tolerance": 0.5,
+      "unit": "cm",
+      "hint": {
+        "fr": "Calculez $\\lambda = \\frac{v}{f}$ puis convertissez en cm",
+        "ar": "احسب $\\lambda = \\frac{v}{f}$ ثم حوّل إلى cm"
+      },
+      "explanation": {
+        "fr": "$\\lambda = \\frac{v}{f} = \\frac{40}{200} = 0{,}2\\,m = 20\\,cm$"
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Dans une onde stationnaire, la distance entre deux nœuds consécutifs est égale à :",
+        "ar": "في الموجة المستقرة، المسافة بين عقدتين متتاليتين تساوي:"
+      },
+      "choices": [
+        { "fr": "$\\lambda$", "ar": "$\\lambda$" },
+        { "fr": "$\\frac{\\lambda}{2}$", "ar": "$\\frac{\\lambda}{2}$" },
+        { "fr": "$\\frac{\\lambda}{4}$", "ar": "$\\frac{\\lambda}{4}$" },
+        { "fr": "$2\\lambda$", "ar": "$2\\lambda$" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Dans une onde stationnaire, les nœuds sont situés aux positions où $\\sin(kx) = 0$, soit $x = n\\frac{\\lambda}{2}$. La distance entre deux nœuds consécutifs est donc $\\frac{\\lambda}{2}$.",
+        "ar": "في الموجة المستقرة، تقع العقد عند المواضع حيث $\\sin(kx) = 0$، أي $x = n\\frac{\\lambda}{2}$. المسافة بين عقدتين متتاليتين هي $\\frac{\\lambda}{2}$."
+      }
+    }
+  ]
+}

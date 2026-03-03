@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'expression de l'énergie cinétique d'un solide de masse m en translation à la vitesse v est :",
+        "ar": "تعبير الطاقة الحركية لجسم صلب كتلته m في انسحاب بسرعة v هو :"
+      },
+      "choices": [
+        { "fr": "Ec = ½mv²", "ar": "Ec = ½mv²" },
+        { "fr": "Ec = mv²", "ar": "Ec = mv²" },
+        { "fr": "Ec = ½mv", "ar": "Ec = ½mv" },
+        { "fr": "Ec = 2mv²", "ar": "Ec = 2mv²" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "L'énergie cinétique de translation est Ec = ½mv², avec m en kg et v en m/s.",
+        "ar": "الطاقة الحركية الانسحابية هي Ec = ½mv²، حيث m بالكيلوغرام و v بـ m/s."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer l'énergie cinétique d'une voiture de masse 1500 kg roulant à 72 km/h. Réponse en kJ.",
+        "ar": "احسب الطاقة الحركية لسيارة كتلتها 1500 kg تسير بسرعة 72 km/h. الجواب بـ kJ."
+      },
+      "answer": 300,
+      "tolerance": 1,
+      "unit": "kJ",
+      "hint": {
+        "fr": "Convertir d'abord la vitesse : 72 km/h = 72/3,6 = 20 m/s. Puis Ec = ½mv².",
+        "ar": "حوّل السرعة أولاً: 72 km/h = 72/3.6 = 20 m/s. ثم Ec = ½mv²."
+      },
+      "explanation": {
+        "fr": "v = 72/3,6 = 20 m/s. Ec = ½ × 1500 × 20² = ½ × 1500 × 400 = 300 000 J = 300 kJ.",
+        "ar": "v = 72/3.6 = 20 m/s. Ec = ½ × 1500 × 20² = ½ × 1500 × 400 = 300 000 J = 300 kJ."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le théorème de l'énergie cinétique énonce que :",
+        "ar": "مبرهنة الطاقة الحركية تنص على أن :"
+      },
+      "choices": [
+        { "fr": "La variation d'énergie cinétique est égale à la somme des travaux des forces extérieures", "ar": "تغير الطاقة الحركية يساوي مجموع أشغال القوى الخارجية" },
+        { "fr": "L'énergie cinétique est toujours conservée", "ar": "الطاقة الحركية محفوظة دائماً" },
+        { "fr": "L'énergie cinétique est égale au travail du poids seul", "ar": "الطاقة الحركية تساوي شغل الثقل فقط" },
+        { "fr": "La somme des forces extérieures est nulle", "ar": "مجموع القوى الخارجية معدوم" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Le TEC : ΔEc = Ec(B) - Ec(A) = Σ W_AB(F_ext). C'est la relation fondamentale entre énergie et travail.",
+        "ar": "مبرهنة الطاقة الحركية: ΔEc = Ec(B) - Ec(A) = Σ W_AB(F_ext). هي العلاقة الأساسية بين الطاقة والشغل."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un bloc de 4 kg part du repos et glisse sans frottement sur un plan incliné de hauteur 5 m. Calculer sa vitesse en bas du plan en m/s. (g = 9,8 m/s²)",
+        "ar": "كتلة 4 kg تنطلق من السكون وتنزلق بدون احتكاك على مستوى مائل ارتفاعه 5 m. احسب سرعتها أسفل المستوى بـ m/s. (g = 9.8 m/s²)"
+      },
+      "answer": 9.90,
+      "tolerance": 0.1,
+      "unit": "m/s",
+      "hint": {
+        "fr": "Par le TEC sans frottement : ½mv² = mgh, donc v = √(2gh).",
+        "ar": "بمبرهنة الطاقة الحركية بدون احتكاك: ½mv² = mgh، إذن v = √(2gh)."
+      },
+      "explanation": {
+        "fr": "TEC : ½mv² - 0 = mgh. Donc v = √(2gh) = √(2 × 9,8 × 5) = √98 ≈ 9,90 m/s. La masse se simplifie.",
+        "ar": "مبرهنة الطاقة الحركية: ½mv² - 0 = mgh. إذن v = √(2gh) = √(2 × 9.8 × 5) = √98 ≈ 9.90 m/s. تتبسط الكتلة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Si la vitesse d'un corps est triplée, son énergie cinétique est :",
+        "ar": "إذا تضاعفت سرعة جسم ثلاث مرات، فإن طاقته الحركية تصبح :"
+      },
+      "choices": [
+        { "fr": "Multipliée par 9", "ar": "مضروبة في 9" },
+        { "fr": "Multipliée par 3", "ar": "مضروبة في 3" },
+        { "fr": "Multipliée par 6", "ar": "مضروبة في 6" },
+        { "fr": "Inchangée", "ar": "لا تتغير" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Ec = ½mv². Si v → 3v, alors Ec → ½m(3v)² = 9 × ½mv². L'énergie cinétique est multipliée par 9.",
+        "ar": "Ec = ½mv². إذا v → 3v، فإن Ec → ½m(3v)² = 9 × ½mv². الطاقة الحركية تُضرب في 9."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Une voiture de 1000 kg roule à 108 km/h. Elle freine avec une force constante de 5000 N. Calculer la distance de freinage en mètres.",
+        "ar": "سيارة كتلتها 1000 kg تسير بسرعة 108 km/h. تكبح بقوة ثابتة 5000 N. احسب مسافة الكبح بالمتر."
+      },
+      "answer": 90,
+      "tolerance": 1,
+      "unit": "m",
+      "hint": {
+        "fr": "v₀ = 108/3,6 = 30 m/s. TEC : 0 - ½mv₀² = -f·d, d'où d = ½mv₀²/f.",
+        "ar": "v₀ = 108/3.6 = 30 m/s. مبرهنة الطاقة الحركية: 0 - ½mv₀² = -f·d، ومنه d = ½mv₀²/f."
+      },
+      "explanation": {
+        "fr": "v₀ = 30 m/s. TEC : -½mv₀² = -f·d. d = ½mv₀²/f = ½ × 1000 × 900 / 5000 = 450000/5000 = 90 m.",
+        "ar": "v₀ = 30 m/s. مبرهنة الطاقة الحركية: d = ½mv₀²/f = ½ × 1000 × 900 / 5000 = 450000/5000 = 90 m."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'énergie cinétique d'un corps au repos est :",
+        "ar": "الطاقة الحركية لجسم ساكن هي :"
+      },
+      "choices": [
+        { "fr": "Nulle", "ar": "معدومة" },
+        { "fr": "Positive", "ar": "موجبة" },
+        { "fr": "Négative", "ar": "سالبة" },
+        { "fr": "Infinie", "ar": "لانهائية" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Au repos, v = 0, donc Ec = ½m × 0² = 0 J. L'énergie cinétique est nulle.",
+        "ar": "في حالة السكون، v = 0، إذن Ec = ½m × 0² = 0 J. الطاقة الحركية معدومة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un projectile de 50 g a une énergie cinétique de 400 J. Calculer sa vitesse en m/s.",
+        "ar": "قذيفة كتلتها 50 g لها طاقة حركية 400 J. احسب سرعتها بـ m/s."
+      },
+      "answer": 126.5,
+      "tolerance": 1,
+      "unit": "m/s",
+      "hint": {
+        "fr": "Ec = ½mv² donc v = √(2Ec/m). Attention : m = 50 g = 0,05 kg.",
+        "ar": "Ec = ½mv² إذن v = √(2Ec/m). انتبه: m = 50 g = 0.05 kg."
+      },
+      "explanation": {
+        "fr": "m = 0,05 kg. v = √(2Ec/m) = √(2 × 400 / 0,05) = √(16000) ≈ 126,5 m/s.",
+        "ar": "m = 0.05 kg. v = √(2Ec/m) = √(2 × 400 / 0.05) = √(16000) ≈ 126.5 m/s."
+      }
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "id": "fonctions-exponentielles",
+  "title": {
+    "fr": "Fonctions exponentielles",
+    "ar": "الدوال الأسية"
+  },
+  "objectives": {
+    "fr": [
+      "Définir la fonction exponentielle comme réciproque de ln",
+      "Connaître les propriétés algébriques de exp",
+      "Calculer la dérivée de eˣ et de fonctions composées",
+      "Étudier les limites et les croissances comparées avec exp",
+      "Mener l'étude complète de x ↦ eˣ",
+      "Modéliser la croissance et la décroissance exponentielles"
+    ],
+    "ar": [
+      "تعريف الدالة الأسية كمعكوسة للوغاريتم",
+      "معرفة الخاصيات الجبرية للدالة الأسية",
+      "حساب مشتقة eˣ والدوال المركبة",
+      "دراسة النهايات والنمو المقارن مع exp",
+      "إنجاز دراسة كاملة للدالة x ↦ eˣ",
+      "نمذجة النمو والتناقص الأسيين"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Définition de la fonction exponentielle",
+        "ar": "١. تعريف الدالة الأسية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Fonction exponentielle" },
+      "text": { "fr": "La fonction exponentielle, notée exp ou x ↦ eˣ, est la fonction réciproque (bijection réciproque) de la fonction ln. Autrement dit : y = eˣ ⟺ x = ln(y), pour x ∈ ℝ et y > 0." }
+    },
+    {
+      "type": "formula",
+      "latex": "e^{\\ln x} = x \\quad (x > 0), \\qquad \\ln(e^x) = x \\quad (x \\in \\mathbb{R})",
+      "note": { "fr": "Relations fondamentales entre exp et ln" }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "La fonction exponentielle est définie sur ℝ et à valeurs dans ]0, +∞[. Elle est continue, dérivable, strictement croissante, et ne s'annule jamais : eˣ > 0 pour tout x." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Propriétés algébriques",
+        "ar": "٢. الخاصيات الجبرية"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "e^{a+b} = e^a \\cdot e^b, \\qquad e^{a-b} = \\frac{e^a}{e^b}, \\qquad (e^a)^n = e^{na}, \\qquad e^0 = 1",
+      "note": { "fr": "Propriétés algébriques de l'exponentielle" }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Ces propriétés découlent directement des propriétés de ln. Par exemple, ln(eᵃ·eᵇ) = ln(eᵃ) + ln(eᵇ) = a + b = ln(eᵃ⁺ᵇ), donc eᵃ·eᵇ = eᵃ⁺ᵇ." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Dérivée de l'exponentielle",
+        "ar": "٣. مشتقة الدالة الأسية"
+      }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "La fonction exponentielle est sa propre dérivée : (eˣ)' = eˣ. C'est l'unique fonction f telle que f' = f et f(0) = 1." }
+    },
+    {
+      "type": "formula",
+      "latex": "(e^x)' = e^x, \\qquad (e^{u(x)})' = u'(x) \\cdot e^{u(x)}",
+      "note": { "fr": "Dérivée de l'exponentielle et de la composée" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Dérivée d'une composée exponentielle" },
+      "problem": { "fr": "Calculer la dérivée de f(x) = e^(2x² − 3x)." },
+      "solution": {
+        "fr": "On pose u(x) = 2x² − 3x, donc u'(x) = 4x − 3. Ainsi f'(x) = (4x − 3)e^(2x² − 3x).",
+        "latex": "f'(x) = (4x - 3) \\, e^{2x^2 - 3x}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Limites et croissances comparées",
+        "ar": "٤. النهايات والنمو المقارن"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\lim_{x \\to +\\infty} e^x = +\\infty, \\qquad \\lim_{x \\to -\\infty} e^x = 0",
+      "note": { "fr": "Limites aux bornes" }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Croissances comparées : l'exponentielle domine toute puissance de x. Pour tout n ∈ ℕ : lim(x→+∞) eˣ/xⁿ = +∞ et lim(x→−∞) xⁿ·eˣ = 0." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\lim_{x \\to +\\infty} \\frac{e^x}{x^n} = +\\infty, \\qquad \\lim_{x \\to -\\infty} x^n \\, e^x = 0, \\qquad \\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1",
+      "note": { "fr": "Limites de croissances comparées" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Étude complète de x ↦ eˣ",
+        "ar": "٥. دراسة كاملة للدالة x ↦ eˣ"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Domaine : ℝ, ensemble image : ]0, +∞[",
+          "exp est continue et infiniment dérivable sur ℝ",
+          "(eˣ)' = eˣ > 0 : exp est strictement croissante sur ℝ",
+          "e⁰ = 1, e¹ = e ≈ 2,718",
+          "Limites : lim(x→−∞) eˣ = 0 (asymptote horizontale y = 0), lim(x→+∞) eˣ = +∞",
+          "(eˣ)'' = eˣ > 0 : la courbe est convexe (concavité tournée vers le haut)",
+          "La courbe passe par (0, 1) avec une tangente de pente 1"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Exponentielle de base a et applications",
+        "ar": "٦. الدالة الأسية ذات الأساس a والتطبيقات"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Exponentielle de base a" },
+      "text": { "fr": "Pour a > 0, on définit aˣ = e^(x·ln(a)). En particulier : (aˣ)' = ln(a)·aˣ." }
+    },
+    {
+      "type": "formula",
+      "latex": "a^x = e^{x \\ln a}, \\qquad (a^x)' = \\ln(a) \\cdot a^x",
+      "note": { "fr": "Exponentielle de base quelconque" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "7. Croissance et décroissance exponentielles",
+        "ar": "٧. النمو والتناقص الأسيان"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Un phénomène suit une croissance exponentielle si la quantité s'écrit N(t) = N₀·eᵏᵗ avec k > 0 (croissance) ou k < 0 (décroissance). Le temps de demi-vie est t₁/₂ = ln(2)/|k|." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Décroissance radioactive" },
+      "problem": { "fr": "Une substance radioactive a une constante de décroissance k = −0,1 an⁻¹. Quel est son temps de demi-vie ?" },
+      "solution": {
+        "fr": "t₁/₂ = ln(2)/|k| = ln(2)/0,1 ≈ 6,93 ans.",
+        "latex": "t_{1/2} = \\frac{\\ln 2}{|k|} = \\frac{\\ln 2}{0{,}1} \\approx 6{,}93 \\text{ ans}"
+      }
+    }
+  ]
+}

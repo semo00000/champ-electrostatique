@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'équation 4Fe + 3O₂ → 2Fe₂O₃ signifie que :",
+        "ar": "المعادلة 4Fe + 3O₂ → 2Fe₂O₃ تعني أن:"
+      },
+      "choices": [
+        { "fr": "4 g de Fe réagissent avec 3 g de O₂", "ar": "4 g من Fe تتفاعل مع 3 g من O₂" },
+        { "fr": "4 mol de Fe réagissent avec 3 mol de O₂ pour former 2 mol de Fe₂O₃", "ar": "4 mol من Fe تتفاعل مع 3 mol من O₂ لتكوين 2 mol من Fe₂O₃" },
+        { "fr": "4 atomes de Fe réagissent avec 3 atomes de O₂", "ar": "4 ذرات من Fe تتفاعل مع 3 ذرات من O₂" },
+        { "fr": "Le fer et l'oxygène ne réagissent pas", "ar": "الحديد والأكسجين لا يتفاعلان" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Les coefficients stoechiométriques indiquent les proportions en moles : 4 mol de Fe réagissent avec 3 mol de O₂ pour former 2 mol de Fe₂O₃. Ce ne sont pas des masses !",
+        "ar": "المعاملات الستوكيومترية تشير إلى النسب بالمول: 4 mol من Fe تتفاعل مع 3 mol من O₂ لتكوين 2 mol من Fe₂O₃. ليست كتلا!"
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le réactif limitant est celui qui :",
+        "ar": "المتفاعل المحد هو الذي:"
+      },
+      "choices": [
+        { "fr": "Est présent en plus grande quantité", "ar": "يوجد بأكبر كمية" },
+        { "fr": "Est entièrement consommé en premier", "ar": "يُستهلك كليا أولا" },
+        { "fr": "A la plus grande masse molaire", "ar": "له أكبر كتلة مولية" },
+        { "fr": "Est toujours un gaz", "ar": "يكون دائما غازا" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le réactif limitant est celui qui est entièrement consommé à la fin de la réaction. Il détermine la quantité maximale de produit formé. L'autre réactif est en excès.",
+        "ar": "المتفاعل المحد هو الذي يُستهلك كليا في نهاية التفاعل. يحدد الكمية القصوى من الناتج المتكوّن. المتفاعل الآخر يكون زائدا."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Pour identifier le réactif limitant dans aA + bB → produits, on compare :",
+        "ar": "لتحديد المتفاعل المحد في aA + bB → نواتج، نقارن:"
+      },
+      "choices": [
+        { "fr": "Les masses m(A) et m(B)", "ar": "الكتلتين m(A) و m(B)" },
+        { "fr": "Les rapports n(A)/a et n(B)/b", "ar": "النسبتين n(A)/a و n(B)/b" },
+        { "fr": "Les masses molaires M(A) et M(B)", "ar": "الكتلتين المولتين M(A) و M(B)" },
+        { "fr": "Les volumes V(A) et V(B)", "ar": "الحجمين V(A) و V(B)" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "On compare n(A)/a et n(B)/b. Le réactif limitant est celui pour lequel ce rapport est le plus petit. Ce rapport correspond à l'avancement maximal si ce réactif était seul limitant.",
+        "ar": "نقارن n(A)/a و n(B)/b. المتفاعل المحد هو الذي تكون هذه النسبة الأصغر بالنسبة له."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Pour 2H₂ + O₂ → 2H₂O, si on part de 4 mol de H₂ et 3 mol de O₂, quel est l'avancement maximal x_max (en mol) ?",
+        "ar": "للتفاعل 2H₂ + O₂ → 2H₂O، إذا انطلقنا من 4 mol من H₂ و 3 mol من O₂، ما قيمة التقدم الأقصى x_max (بـ mol)؟"
+      },
+      "answer": 2,
+      "tolerance": 0,
+      "unit": "mol",
+      "hint": {
+        "fr": "Comparez n(H₂)/2 et n(O₂)/1. Le plus petit est x_max.",
+        "ar": "قارن n(H₂)/2 و n(O₂)/1. الأصغر هو x_max."
+      },
+      "explanation": {
+        "fr": "n(H₂)/2 = 4/2 = 2 ; n(O₂)/1 = 3/1 = 3. Le plus petit est 2, donc x_max = 2 mol. H₂ est le réactif limitant.",
+        "ar": "n(H₂)/2 = 4/2 = 2 ; n(O₂)/1 = 3/1 = 3. الأصغر هو 2، إذن x_max = 2 mol. H₂ هو المتفاعل المحد."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Lors de l'équilibrage d'une équation chimique, on conserve :",
+        "ar": "عند موازنة معادلة كيميائية، نحافظ على:"
+      },
+      "choices": [
+        { "fr": "Le nombre de molécules de chaque côté", "ar": "عدد الجزيئات في كل طرف" },
+        { "fr": "Le nombre d'atomes de chaque élément et les charges", "ar": "عدد ذرات كل عنصر والشحنات" },
+        { "fr": "La masse molaire de chaque espèce", "ar": "الكتلة المولية لكل نوع" },
+        { "fr": "Le volume de chaque réactif", "ar": "حجم كل متفاعل" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "L'équilibrage respecte la conservation de la matière : même nombre d'atomes de chaque élément des deux côtés, et même charge totale (pour les réactions ioniques).",
+        "ar": "الموازنة تحترم بقاء المادة: نفس عدد ذرات كل عنصر في الطرفين، ونفس الشحنة الكلية (للتفاعلات الأيونية)."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Le rendement d'une réaction est de 80%. Si la quantité théorique de produit est 5 mol, quelle quantité est réellement obtenue (en mol) ?",
+        "ar": "مردود تفاعل هو 80%. إذا كانت الكمية النظرية للناتج 5 mol، ما الكمية المحصل عليها فعلا (بـ mol)؟"
+      },
+      "answer": 4,
+      "tolerance": 0,
+      "unit": "mol",
+      "hint": {
+        "fr": "n_obtenu = rendement × n_théorique / 100.",
+        "ar": "n_المحصل = المردود × n_النظري / 100."
+      },
+      "explanation": {
+        "fr": "n_obtenu = 80% × 5 = 0,80 × 5 = 4 mol. Le rendement est toujours inférieur ou égal à 100% en pratique.",
+        "ar": "n_المحصل = 80% × 5 = 0,80 × 5 = 4 mol. المردود دائما أقل من أو يساوي 100% عمليا."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'avancement x d'une réaction est nul quand :",
+        "ar": "تقدم التفاعل x يكون منعدما عندما:"
+      },
+      "choices": [
+        { "fr": "La réaction est terminée", "ar": "ينتهي التفاعل" },
+        { "fr": "La réaction n'a pas encore commencé", "ar": "لم يبدأ التفاعل بعد" },
+        { "fr": "Tous les réactifs sont consommés", "ar": "تُستهلك كل المتفاعلات" },
+        { "fr": "Le rendement est de 100%", "ar": "المردود يساوي 100%" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "L'avancement x = 0 à l'instant initial (la réaction n'a pas encore commencé). x augmente au cours de la réaction jusqu'à atteindre x_max quand le réactif limitant est entièrement consommé.",
+        "ar": "التقدم x = 0 في اللحظة الابتدائية (لم يبدأ التفاعل بعد). يزداد x خلال التفاعل حتى يبلغ x_max عندما يُستهلك المتفاعل المحد كليا."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Pour la réaction N₂ + 3H₂ → 2NH₃, les proportions stoechiométriques des réactifs sont :",
+        "ar": "للتفاعل N₂ + 3H₂ → 2NH₃، النسب الستوكيومترية للمتفاعلات هي:"
+      },
+      "choices": [
+        { "fr": "1 mol de N₂ pour 1 mol de H₂", "ar": "1 mol من N₂ لـ 1 mol من H₂" },
+        { "fr": "1 mol de N₂ pour 3 mol de H₂", "ar": "1 mol من N₂ لـ 3 mol من H₂" },
+        { "fr": "3 mol de N₂ pour 1 mol de H₂", "ar": "3 mol من N₂ لـ 1 mol من H₂" },
+        { "fr": "2 mol de N₂ pour 3 mol de H₂", "ar": "2 mol من N₂ لـ 3 mol من H₂" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "D'après l'équation N₂ + 3H₂ → 2NH₃, il faut 1 mol de N₂ pour 3 mol de H₂. Les coefficients stoechiométriques donnent directement les rapports molaires.",
+        "ar": "حسب المعادلة N₂ + 3H₂ → 2NH₃، نحتاج 1 mol من N₂ لـ 3 mol من H₂. المعاملات الستوكيومترية تعطي مباشرة النسب المولية."
+      }
+    }
+  ]
+}

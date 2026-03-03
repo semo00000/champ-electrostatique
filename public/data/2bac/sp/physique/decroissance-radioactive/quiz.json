@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Lors d'une désintégration α, le noyau père émet :",
+        "ar": "أثناء تفكك α، تصدر النواة الأم:"
+      },
+      "choices": [
+        { "fr": "Un électron", "ar": "إلكترون" },
+        { "fr": "Un positon", "ar": "بوزيترون" },
+        { "fr": "Un noyau d'hélium $^{4}_{2}He$", "ar": "نواة هيليوم $^{4}_{2}He$" },
+        { "fr": "Un photon γ uniquement", "ar": "فوتون γ فقط" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "La radioactivité α consiste en l'émission d'un noyau d'hélium $^{4}_{2}He$ (2 protons + 2 neutrons). Le noyau fils a un nombre de masse diminué de 4 et un numéro atomique diminué de 2 : $^{A}_{Z}X \\to ^{A-4}_{Z-2}Y + ^{4}_{2}He$.",
+        "ar": "النشاط الإشعاعي α يتمثل في إصدار نواة هيليوم $^{4}_{2}He$ (2 بروتون + 2 نيوترون). النواة البنت لها عدد كتلي أقل بـ 4 وعدد ذري أقل بـ 2."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le cobalt 60 ($^{60}_{27}Co$) subit une désintégration β⁻. Le noyau fils est :",
+        "ar": "الكوبالت 60 ($^{60}_{27}Co$) يخضع لتفكك β⁻. النواة البنت هي:"
+      },
+      "choices": [
+        { "fr": "$^{60}_{26}Fe$ (fer)", "ar": "$^{60}_{26}Fe$ (حديد)" },
+        { "fr": "$^{60}_{28}Ni$ (nickel)", "ar": "$^{60}_{28}Ni$ (نيكل)" },
+        { "fr": "$^{56}_{25}Mn$ (manganèse)", "ar": "$^{56}_{25}Mn$ (منغنيز)" },
+        { "fr": "$^{59}_{27}Co$ (cobalt)", "ar": "$^{59}_{27}Co$ (كوبالت)" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "En désintégration β⁻, un neutron se transforme en proton : Z augmente de 1 et A ne change pas. Le noyau fils est donc $^{60}_{28}Ni$ : $^{60}_{27}Co \\to ^{60}_{28}Ni + ^{\\;0}_{-1}e + \\bar{\\nu}_e$.",
+        "ar": "في تفكك β⁻، يتحول نيوترون إلى بروتون: Z يزداد بـ 1 و A لا يتغير. النواة البنت هي $^{60}_{28}Ni$."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "La demi-vie de l'iode 131 est $t_{1/2} = 8\\,jours$. Calculer la constante radioactive λ en $s^{-1}$ (donner la réponse en multiple de $10^{-7}$, arrondir à 0,1).",
+        "ar": "عمر النصف لليود 131 هو $t_{1/2} = 8\\,أيام$. احسب الثابت الإشعاعي λ بوحدة $s^{-1}$ (أعط الإجابة بمضاعف $10^{-7}$، قرّب إلى 0.1)."
+      },
+      "answer": 10.0,
+      "tolerance": 0.2,
+      "unit": "× 10⁻⁷ s⁻¹",
+      "hint": {
+        "fr": "Convertissez d'abord t₁/₂ en secondes : $8 \\times 24 \\times 3600 = 691200\\,s$, puis $\\lambda = \\frac{\\ln 2}{t_{1/2}}$.",
+        "ar": "حوّل أولاً t₁/₂ إلى ثوانٍ: $8 \\times 24 \\times 3600 = 691200\\,s$، ثم $\\lambda = \\frac{\\ln 2}{t_{1/2}}$."
+      },
+      "explanation": {
+        "fr": "$t_{1/2} = 8 \\times 86400 = 691200\\,s$ ; $\\lambda = \\frac{0{,}693}{691200} = 1{,}00 \\times 10^{-6}\\,s^{-1} = 10{,}0 \\times 10^{-7}\\,s^{-1}$.",
+        "ar": "$t_{1/2} = 8 \\times 86400 = 691200\\,s$ ; $\\lambda = \\frac{0{,}693}{691200} = 1{,}00 \\times 10^{-6}\\,s^{-1} = 10{,}0 \\times 10^{-7}\\,s^{-1}$."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La loi de décroissance radioactive $N(t) = N_0 e^{-\\lambda t}$ montre que le nombre de noyaux :",
+        "ar": "قانون التناقص الإشعاعي $N(t) = N_0 e^{-\\lambda t}$ يبين أن عدد النوى:"
+      },
+      "choices": [
+        { "fr": "Décroît linéairement avec le temps", "ar": "يتناقص خطياً مع الزمن" },
+        { "fr": "Décroît exponentiellement avec le temps", "ar": "يتناقص أسياً مع الزمن" },
+        { "fr": "Reste constant au cours du temps", "ar": "يبقى ثابتاً مع الزمن" },
+        { "fr": "Croît exponentiellement avec le temps", "ar": "يتزايد أسياً مع الزمن" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La fonction $e^{-\\lambda t}$ est une exponentielle décroissante. Le nombre de noyaux radioactifs décroît donc de manière exponentielle avec le temps. Plus λ est grand, plus la décroissance est rapide.",
+        "ar": "الدالة $e^{-\\lambda t}$ دالة أسية متناقصة. عدد النوى المشعة يتناقص إذن بشكل أسي مع الزمن. كلما كان λ أكبر، كان التناقص أسرع."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un échantillon contient initialement $N_0 = 6{,}4 \\times 10^{10}$ noyaux radioactifs de demi-vie $t_{1/2} = 2\\,h$. Combien de noyaux reste-t-il après $t = 6\\,h$ ? Donner la réponse en milliards (× 10⁹).",
+        "ar": "عينة تحتوي ابتداءً على $N_0 = 6{,}4 \\times 10^{10}$ نواة مشعة بعمر نصف $t_{1/2} = 2\\,h$. كم نواة تبقى بعد $t = 6\\,h$؟ أعط الإجابة بالمليارات (× 10⁹)."
+      },
+      "answer": 8.0,
+      "tolerance": 0.1,
+      "unit": "× 10⁹",
+      "hint": {
+        "fr": "Après $n$ demi-vies : $N = \\frac{N_0}{2^n}$. Calculez d'abord le nombre de demi-vies : $n = \\frac{t}{t_{1/2}}$.",
+        "ar": "بعد $n$ عمر نصف: $N = \\frac{N_0}{2^n}$. احسب أولاً عدد أعمار النصف: $n = \\frac{t}{t_{1/2}}$."
+      },
+      "explanation": {
+        "fr": "$n = \\frac{6}{2} = 3$ demi-vies. $N = \\frac{N_0}{2^3} = \\frac{6{,}4 \\times 10^{10}}{8} = 8{,}0 \\times 10^{9}$.",
+        "ar": "$n = \\frac{6}{2} = 3$ أعمار نصف. $N = \\frac{N_0}{2^3} = \\frac{6{,}4 \\times 10^{10}}{8} = 8{,}0 \\times 10^{9}$."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un échantillon a une activité initiale $A_0 = 800\\,Bq$. Quelle est son activité après 3 demi-vies ? Répondre en becquerels.",
+        "ar": "عينة لها نشاط ابتدائي $A_0 = 800\\,Bq$. ما هو نشاطها بعد 3 أعمار نصف؟ أجب بالبيكريل."
+      },
+      "answer": 100,
+      "tolerance": 1,
+      "unit": "Bq",
+      "hint": {
+        "fr": "L'activité suit la même loi que N(t) : après n demi-vies, $A = \\frac{A_0}{2^n}$.",
+        "ar": "النشاط يتبع نفس قانون N(t): بعد n عمر نصف، $A = \\frac{A_0}{2^n}$."
+      },
+      "explanation": {
+        "fr": "$A = \\frac{A_0}{2^3} = \\frac{800}{8} = 100\\,Bq$.",
+        "ar": "$A = \\frac{A_0}{2^3} = \\frac{800}{8} = 100\\,Bq$."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La datation au carbone 14 est basée sur le fait que :",
+        "ar": "التأريخ بالكربون 14 يعتمد على أن:"
+      },
+      "choices": [
+        { "fr": "Le rapport ¹⁴C/¹²C augmente après la mort de l'organisme", "ar": "نسبة ¹⁴C/¹²C تزداد بعد موت الكائن" },
+        { "fr": "Le rapport ¹⁴C/¹²C diminue après la mort car le ¹⁴C se désintègre sans être renouvelé", "ar": "نسبة ¹⁴C/¹²C تتناقص بعد الموت لأن ¹⁴C يتفكك بدون تجديد" },
+        { "fr": "Le ¹⁴C est stable et ne se désintègre jamais", "ar": "¹⁴C مستقر ولا يتفكك أبداً" },
+        { "fr": "Le ¹²C est radioactif et se désintègre après la mort", "ar": "¹²C مشع ويتفكك بعد الموت" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Tant que l'organisme est vivant, il échange du carbone avec l'atmosphère et le rapport ¹⁴C/¹²C reste constant. À la mort, le ¹⁴C n'est plus renouvelé et se désintègre progressivement ($t_{1/2} = 5730$ ans). En mesurant le rapport actuel, on détermine l'âge de l'échantillon.",
+        "ar": "طالما الكائن حي، يتبادل الكربون مع الغلاف الجوي وتبقى نسبة ¹⁴C/¹²C ثابتة. عند الموت، لا يتجدد ¹⁴C ويتفكك تدريجياً ($t_{1/2} = 5730$ سنة). بقياس النسبة الحالية، نحدد عمر العينة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un échantillon archéologique a une activité en ¹⁴C égale à $A = 6{,}8\\,Bq$. L'activité d'un organisme vivant identique est $A_0 = 13{,}6\\,Bq$. Sachant que $t_{1/2} = 5730\\,ans$, calculer l'âge de l'échantillon en années.",
+        "ar": "عينة أثرية لها نشاط ¹⁴C يساوي $A = 6{,}8\\,Bq$. نشاط كائن حي مماثل هو $A_0 = 13{,}6\\,Bq$. علماً أن $t_{1/2} = 5730\\,سنة$، احسب عمر العينة بالسنوات."
+      },
+      "answer": 5730,
+      "tolerance": 50,
+      "unit": "ans",
+      "hint": {
+        "fr": "Utilisez $t = \\frac{t_{1/2}}{\\ln 2}\\ln\\left(\\frac{A_0}{A}\\right)$. Remarquez que $\\frac{A_0}{A} = 2$.",
+        "ar": "استخدم $t = \\frac{t_{1/2}}{\\ln 2}\\ln\\left(\\frac{A_0}{A}\\right)$. لاحظ أن $\\frac{A_0}{A} = 2$."
+      },
+      "explanation": {
+        "fr": "$t = \\frac{5730}{\\ln 2}\\ln\\left(\\frac{13{,}6}{6{,}8}\\right) = \\frac{5730}{0{,}693} \\times \\ln(2) = \\frac{5730}{0{,}693} \\times 0{,}693 = 5730\\,ans$. L'activité est divisée par 2, donc il s'est écoulé exactement une demi-vie.",
+        "ar": "$t = \\frac{5730}{\\ln 2}\\ln\\left(\\frac{13{,}6}{6{,}8}\\right) = \\frac{5730}{0{,}693} \\times \\ln(2) = 5730\\,سنة$. النشاط انقسم على 2، إذن مر بالضبط عمر نصف واحد."
+      }
+    }
+  ]
+}

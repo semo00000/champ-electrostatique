@@ -1,0 +1,170 @@
+{
+  "id": "production-matiere-organique",
+  "title": {
+    "fr": "La production de la matière organique",
+    "ar": "إنتاج المادة العضوية"
+  },
+  "objectives": {
+    "fr": [
+      "Écrire et interpréter l'équation bilan de la photosynthèse",
+      "Décrire la structure du chloroplaste",
+      "Distinguer la phase claire et la phase sombre de la photosynthèse",
+      "Comprendre le cycle de Calvin et la fixation du CO₂",
+      "Différencier autotrophes et hétérotrophes"
+    ],
+    "ar": [
+      "كتابة وتفسير المعادلة الإجمالية للتركيب الضوئي",
+      "وصف بنية الصانعة الخضراء (البلاست الأخضر)",
+      "التمييز بين المرحلة الضوئية والمرحلة اللاضوئية للتركيب الضوئي",
+      "فهم دورة كالفن وتثبيت CO₂",
+      "التفريق بين ذاتيات التغذية وغيريات التغذية"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. La photosynthèse : équation bilan",
+        "ar": "1. التركيب الضوئي: المعادلة الإجمالية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La photosynthèse est le processus par lequel les organismes autotrophes (plantes, algues, cyanobactéries) convertissent l'énergie lumineuse en énergie chimique stockée dans les molécules organiques (glucose). Elle se déroule dans les chloroplastes des cellules végétales, en utilisant le CO₂ de l'atmosphère et l'eau du sol.",
+        "ar": "التركيب الضوئي هو العملية التي تحوّل بها الكائنات ذاتية التغذية (النباتات، الطحالب، البكتيريا الزرقاء) الطاقة الضوئية إلى طاقة كيميائية مخزنة في الجزيئات العضوية (الجلوكوز). يجري في الصانعات الخضراء للخلايا النباتية، باستعمال CO₂ من الجو والماء من التربة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "6\\text{CO}_2 + 6\\text{H}_2\\text{O} \\xrightarrow{\\text{lumière}} \\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2",
+      "note": {
+        "fr": "Équation bilan de la photosynthèse",
+        "ar": "المعادلة الإجمالية للتركيب الضوئي"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La photosynthèse est l'inverse de la respiration cellulaire. Elle absorbe du CO₂ et libère de l'O₂, tandis que la respiration absorbe de l'O₂ et libère du CO₂. La photosynthèse nécessite de la lumière comme source d'énergie.",
+        "ar": "التركيب الضوئي هو عكس التنفس الخلوي. يمتص CO₂ ويحرر O₂، بينما التنفس يمتص O₂ ويحرر CO₂. يحتاج التركيب الضوئي إلى الضوء كمصدر للطاقة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Structure du chloroplaste",
+        "ar": "2. بنية الصانعة الخضراء"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le chloroplaste est un organite à double membrane présent dans les cellules végétales. Il contient un système de membranes internes : les thylakoïdes, qui sont empilés en grana (pluriel de granum). Les thylakoïdes contiennent les pigments photosynthétiques (chlorophylles a et b, caroténoïdes). Le liquide interne du chloroplaste s'appelle le stroma.",
+        "ar": "الصانعة الخضراء عضية ذات غشاء مزدوج توجد في الخلايا النباتية. تحتوي على نظام أغشية داخلية: التيلاكويدات، التي تتراكم في حبيبات (غرانا). تحتوي التيلاكويدات على الأصبغة الضوئية (الكلوروفيل a و b، الكاروتينويدات). السائل الداخلي للصانعة الخضراء يسمى اللحمة (ستروما)."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Membrane externe : perméable aux petites molécules",
+          "Membrane interne : contrôle les échanges",
+          "Thylakoïdes : membranes internes contenant les pigments et les photosystèmes (lieu de la phase claire)",
+          "Grana : empilements de thylakoïdes",
+          "Stroma : liquide interne riche en enzymes (lieu de la phase sombre / cycle de Calvin)",
+          "Chlorophylle a : pigment principal (absorbe la lumière rouge et bleue)",
+          "Chlorophylle b et caroténoïdes : pigments accessoires"
+        ],
+        "ar": [
+          "الغشاء الخارجي: نفوذ للجزيئات الصغيرة",
+          "الغشاء الداخلي: يتحكم في التبادلات",
+          "التيلاكويدات: أغشية داخلية تحمل الأصبغة والأنظمة الضوئية (مكان المرحلة الضوئية)",
+          "الغرانا: تراكمات من التيلاكويدات",
+          "اللحمة (ستروما): سائل داخلي غني بالإنزيمات (مكان المرحلة اللاضوئية / دورة كالفن)",
+          "الكلوروفيل a: الصبغة الرئيسية",
+          "الكلوروفيل b والكاروتينويدات: أصبغة مساعدة"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. La phase claire (réactions photochimiques)",
+        "ar": "3. المرحلة الضوئية (التفاعلات الضوكيميائية)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La phase claire se déroule dans les thylakoïdes et nécessite de la lumière. Les pigments chlorophylliens captent l'énergie lumineuse et l'utilisent pour : (1) photolyser l'eau (H₂O → 2H⁺ + ½O₂ + 2e⁻), libérant l'O₂, (2) transporter des électrons le long d'une chaîne de transporteurs, (3) synthétiser du NADPH,H⁺ (pouvoir réducteur) et de l'ATP par photophosphorylation.",
+        "ar": "تجري المرحلة الضوئية في التيلاكويدات وتحتاج إلى الضوء. تلتقط الأصبغة الكلوروفيلية الطاقة الضوئية وتستعملها لـ: (1) التحليل الضوئي للماء محررة O₂، (2) نقل الإلكترونات عبر سلسلة ناقلات، (3) تركيب NADPH,H⁺ (قدرة اختزالية) و ATP بالفسفرة الضوئية."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "2\\text{H}_2\\text{O} \\xrightarrow{\\text{lumière}} \\text{O}_2 + 4\\text{H}^+ + 4e^-",
+      "note": {
+        "fr": "Photolyse de l'eau : l'O₂ libéré provient de l'eau (et non du CO₂)",
+        "ar": "التحليل الضوئي للماء: O₂ المحرر يأتي من الماء (وليس من CO₂)"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. La phase sombre (cycle de Calvin)",
+        "ar": "4. المرحلة اللاضوئية (دورة كالفن)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La phase sombre se déroule dans le stroma du chloroplaste. Elle n'a pas besoin directement de lumière mais utilise les produits de la phase claire (ATP et NADPH,H⁺). Le cycle de Calvin fixe le CO₂ atmosphérique sur une molécule à 5 carbones (RuBP, ribulose-1,5-bisphosphate) grâce à l'enzyme RuBisCO, pour former des molécules à 3 carbones (G3P), qui servent à synthétiser le glucose et d'autres molécules organiques.",
+        "ar": "تجري المرحلة اللاضوئية في لحمة الصانعة الخضراء. لا تحتاج مباشرة إلى الضوء لكنها تستعمل نواتج المرحلة الضوئية (ATP و NADPH,H⁺). تثبت دورة كالفن CO₂ الجوي على جزيئة ذات 5 كربونات (RuBP) بفضل إنزيم RuBisCO، لتكوين جزيئات ذات 3 كربونات (G3P)، التي تُستعمل لتركيب الجلوكوز وجزيئات عضوية أخرى."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Résumé : Phase claire (thylakoïdes) : lumière + H₂O → O₂ + ATP + NADPH,H⁺. Phase sombre (stroma) : CO₂ + ATP + NADPH,H⁺ → glucose (C₆H₁₂O₆). Les deux phases sont complémentaires et couplées.",
+        "ar": "ملخص: المرحلة الضوئية (تيلاكويدات): ضوء + H₂O → O₂ + ATP + NADPH,H⁺. المرحلة اللاضوئية (ستروما): CO₂ + ATP + NADPH,H⁺ → جلوكوز. المرحلتان متكاملتان ومزدوجتان."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Autotrophes, hétérotrophes et chaînes alimentaires",
+        "ar": "5. ذاتيات التغذية، غيريات التغذية والسلاسل الغذائية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Autotrophe", "ar": "ذاتي التغذية" },
+      "text": {
+        "fr": "Organisme qui synthétise sa propre matière organique à partir de matière minérale (CO₂, H₂O, sels minéraux) en utilisant une source d'énergie (lumière pour les photoautotrophes). Les plantes, algues et cyanobactéries sont des producteurs primaires.",
+        "ar": "كائن يركب مادته العضوية انطلاقا من مادة معدنية (CO₂, H₂O, أملاح معدنية) باستعمال مصدر طاقة (الضوء لذاتيات التغذية الضوئية). النباتات والطحالب والبكتيريا الزرقاء هي المنتجون الأوليون."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Hétérotrophe", "ar": "غيري التغذية" },
+      "text": {
+        "fr": "Organisme qui a besoin de consommer de la matière organique produite par d'autres organismes pour synthétiser sa propre matière organique. Les animaux, champignons et la plupart des bactéries sont hétérotrophes.",
+        "ar": "كائن يحتاج إلى استهلاك مادة عضوية منتجة من كائنات أخرى لتركيب مادته العضوية. الحيوانات والفطريات ومعظم البكتيريا غيرية التغذية."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{Productivité nette} = \\text{Productivité brute} - \\text{Respiration}",
+      "note": {
+        "fr": "La productivité nette est la matière organique effectivement stockée par un niveau trophique",
+        "ar": "الإنتاجية الصافية هي المادة العضوية المخزنة فعليا من طرف مستوى غذائي"
+      }
+    }
+  ]
+}

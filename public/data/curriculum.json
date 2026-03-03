@@ -1,0 +1,894 @@
+{
+  "years": {
+    "1bac": {
+      "title": { "fr": "1ère BAC", "ar": "الأولى باكالوريا" },
+      "filieres": {
+        "sm": {
+          "title": { "fr": "Sciences Mathématiques", "ar": "علوم رياضية" },
+          "subjects": {
+            "physique": {
+              "title": { "fr": "Physique", "ar": "الفيزياء" },
+              "topics": [
+                {
+                  "id": "gravitation-universelle",
+                  "title": { "fr": "Gravitation universelle", "ar": "الجاذبية الكونية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "travail-et-energie",
+                  "title": { "fr": "Travail et énergie", "ar": "الشغل والطاقة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "travail-et-energie-cinetique",
+                  "title": { "fr": "Travail et énergie cinétique", "ar": "الشغل والطاقة الحركية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "travail-et-energie-potentielle",
+                  "title": { "fr": "Travail et énergie potentielle", "ar": "الشغل وطاقة الوضع" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "energie-mecanique",
+                  "title": { "fr": "Énergie mécanique", "ar": "الطاقة الميكانيكية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "rotation-solide-axe-fixe",
+                  "title": { "fr": "Rotation d'un solide autour d'un axe fixe", "ar": "دوران جسم صلب حول محور ثابت" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "courant-electrique-continu",
+                  "title": { "fr": "Courant électrique continu", "ar": "التيار الكهربائي المستمر" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "champ-magnetique",
+                  "title": { "fr": "Champ magnétique", "ar": "المجال المغناطيسي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "force-electromagnetique-laplace",
+                  "title": { "fr": "Force électromagnétique (Laplace)", "ar": "القوة الكهرومغناطيسية (لابلاس)" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            },
+            "chimie": {
+              "title": { "fr": "Chimie", "ar": "الكيمياء" },
+              "topics": [
+                {
+                  "id": "especes-chimiques",
+                  "title": { "fr": "Les espèces chimiques", "ar": "الأنواع الكيميائية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "extraction-separation-identification",
+                  "title": { "fr": "Extraction, séparation et identification", "ar": "الاستخلاص والفصل والتعرف" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "mole-et-grandeurs-associees",
+                  "title": { "fr": "La mole et les grandeurs associées", "ar": "المول والمقادير المرتبطة به" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "reaction-chimique-stoechiometrie",
+                  "title": { "fr": "Réaction chimique et stœchiométrie", "ar": "التفاعل الكيميائي والحسابات الستوكيومترية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "solutions-electrolytiques",
+                  "title": { "fr": "Solutions électrolytiques", "ar": "المحاليل الإلكتروليتية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "reactions-acido-basiques",
+                  "title": { "fr": "Réactions acido-basiques", "ar": "التفاعلات حمض-قاعدة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "reactions-oxydoreduction",
+                  "title": { "fr": "Réactions d'oxydoréduction", "ar": "تفاعلات الأكسدة-الاختزال" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "dosages",
+                  "title": { "fr": "Dosages", "ar": "المعايرات" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            },
+            "maths": {
+              "title": { "fr": "Mathématiques", "ar": "الرياضيات" },
+              "topics": [
+                {
+                  "id": "logique-et-ensembles",
+                  "title": { "fr": "Logique et ensembles", "ar": "المنطق والمجموعات" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "suites-numeriques",
+                  "title": { "fr": "Suites numériques", "ar": "المتتاليات العددية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "limites-de-fonctions",
+                  "title": { "fr": "Limites de fonctions", "ar": "نهايات الدوال" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "derivation-et-etude-de-fonctions",
+                  "title": { "fr": "Dérivation et étude de fonctions", "ar": "الاشتقاق ودراسة الدوال" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "calcul-trigonometrique",
+                  "title": { "fr": "Calcul trigonométrique", "ar": "الحساب المثلثي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "produit-scalaire",
+                  "title": { "fr": "Produit scalaire", "ar": "الجداء السلمي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "geometrie-analytique",
+                  "title": { "fr": "Géométrie analytique", "ar": "الهندسة التحليلية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "denombrement",
+                  "title": { "fr": "Dénombrement", "ar": "التعداد" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "arithmetique",
+                  "title": { "fr": "Arithmétique", "ar": "الحسابيات" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            },
+            "svt": {
+              "title": { "fr": "Sciences de la Vie et de la Terre", "ar": "علوم الحياة والأرض" },
+              "topics": [
+                {
+                  "id": "echanges-cellulaires",
+                  "title": { "fr": "Échanges cellulaires", "ar": "التبادلات الخلوية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "consommation-matiere-organique",
+                  "title": { "fr": "Consommation de la matière organique", "ar": "استهلاك المادة العضوية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "production-matiere-organique",
+                  "title": { "fr": "Production de la matière organique", "ar": "إنتاج المادة العضوية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "geologie-externe",
+                  "title": { "fr": "Géologie externe", "ar": "الجيولوجيا الخارجية" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            }
+          }
+        },
+        "sp": {
+          "title": { "fr": "Sciences Physiques", "ar": "علوم فيزيائية" },
+          "subjects": {
+            "physique": {
+              "title": { "fr": "Physique", "ar": "الفيزياء" },
+              "topics": [
+                {
+                  "id": "gravitation-universelle",
+                  "title": { "fr": "Gravitation universelle", "ar": "الجاذبية الكونية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "travail-et-energie",
+                  "title": { "fr": "Travail et énergie", "ar": "الشغل والطاقة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "travail-et-energie-cinetique",
+                  "title": { "fr": "Travail et énergie cinétique", "ar": "الشغل والطاقة الحركية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "travail-et-energie-potentielle",
+                  "title": { "fr": "Travail et énergie potentielle", "ar": "الشغل وطاقة الوضع" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "energie-mecanique",
+                  "title": { "fr": "Énergie mécanique", "ar": "الطاقة الميكانيكية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "rotation-solide-axe-fixe",
+                  "title": { "fr": "Rotation d'un solide autour d'un axe fixe", "ar": "دوران جسم صلب حول محور ثابت" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "courant-electrique-continu",
+                  "title": { "fr": "Courant électrique continu", "ar": "التيار الكهربائي المستمر" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "champ-magnetique",
+                  "title": { "fr": "Champ magnétique", "ar": "المجال المغناطيسي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "force-electromagnetique-laplace",
+                  "title": { "fr": "Force électromagnétique (Laplace)", "ar": "القوة الكهرومغناطيسية (لابلاس)" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            },
+            "chimie": {
+              "title": { "fr": "Chimie", "ar": "الكيمياء" },
+              "topics": [
+                {
+                  "id": "especes-chimiques",
+                  "title": { "fr": "Les espèces chimiques", "ar": "الأنواع الكيميائية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "extraction-separation-identification",
+                  "title": { "fr": "Extraction, séparation et identification", "ar": "الاستخلاص والفصل والتعرف" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "mole-et-grandeurs-associees",
+                  "title": { "fr": "La mole et les grandeurs associées", "ar": "المول والمقادير المرتبطة به" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "reaction-chimique-stoechiometrie",
+                  "title": { "fr": "Réaction chimique et stœchiométrie", "ar": "التفاعل الكيميائي والحسابات الستوكيومترية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "solutions-electrolytiques",
+                  "title": { "fr": "Solutions électrolytiques", "ar": "المحاليل الإلكتروليتية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "reactions-acido-basiques",
+                  "title": { "fr": "Réactions acido-basiques", "ar": "التفاعلات حمض-قاعدة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "reactions-oxydoreduction",
+                  "title": { "fr": "Réactions d'oxydoréduction", "ar": "تفاعلات الأكسدة-الاختزال" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "dosages",
+                  "title": { "fr": "Dosages", "ar": "المعايرات" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            },
+            "maths": {
+              "title": { "fr": "Mathématiques", "ar": "الرياضيات" },
+              "topics": [
+                {
+                  "id": "logique-et-ensembles",
+                  "title": { "fr": "Logique et ensembles", "ar": "المنطق والمجموعات" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "suites-numeriques",
+                  "title": { "fr": "Suites numériques", "ar": "المتتاليات العددية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "limites-de-fonctions",
+                  "title": { "fr": "Limites de fonctions", "ar": "نهايات الدوال" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "derivation-et-etude-de-fonctions",
+                  "title": { "fr": "Dérivation et étude de fonctions", "ar": "الاشتقاق ودراسة الدوال" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "calcul-trigonometrique",
+                  "title": { "fr": "Calcul trigonométrique", "ar": "الحساب المثلثي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "produit-scalaire",
+                  "title": { "fr": "Produit scalaire", "ar": "الجداء السلمي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "geometrie-analytique",
+                  "title": { "fr": "Géométrie analytique", "ar": "الهندسة التحليلية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "denombrement",
+                  "title": { "fr": "Dénombrement", "ar": "التعداد" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            },
+            "svt": {
+              "title": { "fr": "Sciences de la Vie et de la Terre", "ar": "علوم الحياة والأرض" },
+              "topics": [
+                {
+                  "id": "echanges-cellulaires",
+                  "title": { "fr": "Échanges cellulaires", "ar": "التبادلات الخلوية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "consommation-matiere-organique",
+                  "title": { "fr": "Consommation de la matière organique", "ar": "استهلاك المادة العضوية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "production-matiere-organique",
+                  "title": { "fr": "Production de la matière organique", "ar": "إنتاج المادة العضوية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "geologie-externe",
+                  "title": { "fr": "Géologie externe", "ar": "الجيولوجيا الخارجية" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "2bac": {
+      "title": { "fr": "2ème BAC", "ar": "الثانية باكالوريا" },
+      "filieres": {
+        "sm": {
+          "title": { "fr": "Sciences Mathématiques", "ar": "علوم رياضية" },
+          "subjects": {
+            "physique": {
+              "title": { "fr": "Physique", "ar": "الفيزياء" },
+              "topics": [
+                {
+                  "id": "ondes-mecaniques-progressives",
+                  "title": { "fr": "Ondes mécaniques progressives", "ar": "الموجات الميكانيكية المتوالية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "ondes-mecaniques-progressives-periodiques",
+                  "title": { "fr": "Ondes mécaniques progressives périodiques", "ar": "الموجات الميكانيكية المتوالية الدورية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "propagation-onde-lumineuse",
+                  "title": { "fr": "Propagation d'une onde lumineuse", "ar": "انتشار موجة ضوئية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "decroissance-radioactive",
+                  "title": { "fr": "Décroissance radioactive", "ar": "التناقص الإشعاعي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "noyaux-masse-et-energie",
+                  "title": { "fr": "Noyaux, masse et énergie", "ar": "النوى والكتلة والطاقة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "dipole-rc",
+                  "title": { "fr": "Dipôle RC", "ar": "ثنائي القطب RC" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "dipole-rl",
+                  "title": { "fr": "Dipôle RL", "ar": "ثنائي القطب RL" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "oscillations-libres-rlc",
+                  "title": { "fr": "Oscillations libres (RLC)", "ar": "التذبذبات الحرة (RLC)" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "champ-electrostatique",
+                  "title": { "fr": "Champ électrostatique", "ar": "المجال الكهرساكن" },
+                  "status": "complete",
+                  "simulation": "champ-electrostatique"
+                },
+                {
+                  "id": "champ-magnetique-2bac",
+                  "title": { "fr": "Champ magnétique", "ar": "المجال المغناطيسي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "lois-de-newton",
+                  "title": { "fr": "Lois de Newton", "ar": "قوانين نيوتن" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "applications-lois-de-newton",
+                  "title": { "fr": "Applications des lois de Newton", "ar": "تطبيقات قوانين نيوتن" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            },
+            "chimie": {
+              "title": { "fr": "Chimie", "ar": "الكيمياء" },
+              "topics": [
+                {
+                  "id": "transformations-rapides-et-lentes",
+                  "title": { "fr": "Transformations rapides et lentes", "ar": "التحولات السريعة والبطيئة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "suivi-temporel-transformation",
+                  "title": { "fr": "Suivi temporel d'une transformation", "ar": "التتبع الزمني لتحول كيميائي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "transformations-non-totales",
+                  "title": { "fr": "Transformations non totales", "ar": "التحولات غير التامة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "sens-evolution-spontanee",
+                  "title": { "fr": "Sens d'évolution spontanée", "ar": "اتجاه التطور التلقائي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "equilibres-chimiques",
+                  "title": { "fr": "Équilibres chimiques", "ar": "التوازنات الكيميائية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "transformations-acido-basiques",
+                  "title": { "fr": "Transformations associées aux réactions acido-basiques", "ar": "التحولات المقرونة بالتفاعلات حمض-قاعدة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "dosages-acido-basiques",
+                  "title": { "fr": "Dosages acido-basiques", "ar": "المعايرات حمض-قاعدة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "piles-et-energie-chimique",
+                  "title": { "fr": "Piles et énergie chimique", "ar": "الأعمدة والطاقة الكيميائية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "esterification-et-hydrolyse",
+                  "title": { "fr": "Estérification et hydrolyse", "ar": "الأسترة والحلمأة" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            },
+            "maths": {
+              "title": { "fr": "Mathématiques", "ar": "الرياضيات" },
+              "topics": [
+                {
+                  "id": "suites-numeriques-approfondissement",
+                  "title": { "fr": "Suites numériques (approfondissement)", "ar": "المتتاليات العددية (تعميق)" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "limites-et-continuite",
+                  "title": { "fr": "Limites et continuité", "ar": "النهايات والاتصال" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "derivabilite-et-etude-de-fonctions",
+                  "title": { "fr": "Dérivabilité et étude de fonctions", "ar": "الاشتقاقية ودراسة الدوال" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "fonctions-logarithmiques",
+                  "title": { "fr": "Fonctions logarithmiques", "ar": "الدوال اللوغاريتمية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "fonctions-exponentielles",
+                  "title": { "fr": "Fonctions exponentielles", "ar": "الدوال الأسية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "fonctions-primitives-calcul-integral",
+                  "title": { "fr": "Fonctions primitives et calcul intégral", "ar": "الدوال الأصلية والحساب التكاملي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "equations-differentielles",
+                  "title": { "fr": "Équations différentielles", "ar": "المعادلات التفاضلية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "nombres-complexes",
+                  "title": { "fr": "Nombres complexes", "ar": "الأعداد العقدية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "geometrie-dans-lespace",
+                  "title": { "fr": "Géométrie dans l'espace", "ar": "الهندسة الفضائية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "probabilites",
+                  "title": { "fr": "Probabilités", "ar": "الاحتمالات" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            },
+            "svt": {
+              "title": { "fr": "Sciences de la Vie et de la Terre", "ar": "علوم الحياة والأرض" },
+              "topics": [
+                {
+                  "id": "consommation-matiere-organique-flux-energie",
+                  "title": { "fr": "Consommation de la matière organique et flux d'énergie", "ar": "استهلاك المادة العضوية وتدفق الطاقة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "nature-mecanisme-expression-materiel-genetique",
+                  "title": { "fr": "Nature et mécanisme de l'expression du matériel génétique", "ar": "طبيعة وآلية تعبير المادة الوراثية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "genetique-humaine",
+                  "title": { "fr": "Génétique humaine", "ar": "الوراثة البشرية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "immunologie",
+                  "title": { "fr": "Immunologie", "ar": "علم المناعة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "geologie-interne",
+                  "title": { "fr": "Géologie interne", "ar": "الجيولوجيا الداخلية" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            }
+          }
+        },
+        "sp": {
+          "title": { "fr": "Sciences Physiques", "ar": "علوم فيزيائية" },
+          "subjects": {
+            "physique": {
+              "title": { "fr": "Physique", "ar": "الفيزياء" },
+              "topics": [
+                {
+                  "id": "ondes-mecaniques-progressives",
+                  "title": { "fr": "Ondes mécaniques progressives", "ar": "الموجات الميكانيكية المتوالية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "ondes-mecaniques-progressives-periodiques",
+                  "title": { "fr": "Ondes mécaniques progressives périodiques", "ar": "الموجات الميكانيكية المتوالية الدورية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "propagation-onde-lumineuse",
+                  "title": { "fr": "Propagation d'une onde lumineuse", "ar": "انتشار موجة ضوئية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "decroissance-radioactive",
+                  "title": { "fr": "Décroissance radioactive", "ar": "التناقص الإشعاعي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "noyaux-masse-et-energie",
+                  "title": { "fr": "Noyaux, masse et énergie", "ar": "النوى والكتلة والطاقة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "dipole-rc",
+                  "title": { "fr": "Dipôle RC", "ar": "ثنائي القطب RC" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "dipole-rl",
+                  "title": { "fr": "Dipôle RL", "ar": "ثنائي القطب RL" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "oscillations-libres-rlc",
+                  "title": { "fr": "Oscillations libres (RLC)", "ar": "التذبذبات الحرة (RLC)" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "champ-electrostatique",
+                  "title": { "fr": "Champ électrostatique", "ar": "المجال الكهرساكن" },
+                  "status": "complete",
+                  "simulation": "champ-electrostatique"
+                },
+                {
+                  "id": "champ-magnetique-2bac",
+                  "title": { "fr": "Champ magnétique", "ar": "المجال المغناطيسي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "lois-de-newton",
+                  "title": { "fr": "Lois de Newton", "ar": "قوانين نيوتن" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "applications-lois-de-newton",
+                  "title": { "fr": "Applications des lois de Newton", "ar": "تطبيقات قوانين نيوتن" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            },
+            "chimie": {
+              "title": { "fr": "Chimie", "ar": "الكيمياء" },
+              "topics": [
+                {
+                  "id": "transformations-rapides-et-lentes",
+                  "title": { "fr": "Transformations rapides et lentes", "ar": "التحولات السريعة والبطيئة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "suivi-temporel-transformation",
+                  "title": { "fr": "Suivi temporel d'une transformation", "ar": "التتبع الزمني لتحول كيميائي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "transformations-non-totales",
+                  "title": { "fr": "Transformations non totales", "ar": "التحولات غير التامة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "sens-evolution-spontanee",
+                  "title": { "fr": "Sens d'évolution spontanée", "ar": "اتجاه التطور التلقائي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "equilibres-chimiques",
+                  "title": { "fr": "Équilibres chimiques", "ar": "التوازنات الكيميائية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "transformations-acido-basiques",
+                  "title": { "fr": "Transformations associées aux réactions acido-basiques", "ar": "التحولات المقرونة بالتفاعلات حمض-قاعدة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "dosages-acido-basiques",
+                  "title": { "fr": "Dosages acido-basiques", "ar": "المعايرات حمض-قاعدة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "piles-et-energie-chimique",
+                  "title": { "fr": "Piles et énergie chimique", "ar": "الأعمدة والطاقة الكيميائية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "esterification-et-hydrolyse",
+                  "title": { "fr": "Estérification et hydrolyse", "ar": "الأسترة والحلمأة" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            },
+            "maths": {
+              "title": { "fr": "Mathématiques", "ar": "الرياضيات" },
+              "topics": [
+                {
+                  "id": "suites-numeriques-approfondissement",
+                  "title": { "fr": "Suites numériques (approfondissement)", "ar": "المتتاليات العددية (تعميق)" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "limites-et-continuite",
+                  "title": { "fr": "Limites et continuité", "ar": "النهايات والاتصال" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "derivabilite-et-etude-de-fonctions",
+                  "title": { "fr": "Dérivabilité et étude de fonctions", "ar": "الاشتقاقية ودراسة الدوال" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "fonctions-logarithmiques",
+                  "title": { "fr": "Fonctions logarithmiques", "ar": "الدوال اللوغاريتمية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "fonctions-exponentielles",
+                  "title": { "fr": "Fonctions exponentielles", "ar": "الدوال الأسية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "fonctions-primitives-calcul-integral",
+                  "title": { "fr": "Fonctions primitives et calcul intégral", "ar": "الدوال الأصلية والحساب التكاملي" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "equations-differentielles",
+                  "title": { "fr": "Équations différentielles", "ar": "المعادلات التفاضلية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "geometrie-dans-lespace",
+                  "title": { "fr": "Géométrie dans l'espace", "ar": "الهندسة الفضائية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "probabilites",
+                  "title": { "fr": "Probabilités", "ar": "الاحتمالات" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            },
+            "svt": {
+              "title": { "fr": "Sciences de la Vie et de la Terre", "ar": "علوم الحياة والأرض" },
+              "topics": [
+                {
+                  "id": "consommation-matiere-organique-flux-energie",
+                  "title": { "fr": "Consommation de la matière organique et flux d'énergie", "ar": "استهلاك المادة العضوية وتدفق الطاقة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "nature-mecanisme-expression-materiel-genetique",
+                  "title": { "fr": "Nature et mécanisme de l'expression du matériel génétique", "ar": "طبيعة وآلية تعبير المادة الوراثية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "genetique-humaine",
+                  "title": { "fr": "Génétique humaine", "ar": "الوراثة البشرية" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "immunologie",
+                  "title": { "fr": "Immunologie", "ar": "علم المناعة" },
+                  "status": "complete",
+                  "simulation": null
+                },
+                {
+                  "id": "geologie-interne",
+                  "title": { "fr": "Géologie interne", "ar": "الجيولوجيا الداخلية" },
+                  "status": "complete",
+                  "simulation": null
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

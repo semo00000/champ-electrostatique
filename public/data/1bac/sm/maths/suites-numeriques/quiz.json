@@ -1,0 +1,67 @@
+{
+  "questions": [
+    {
+      "type": "numeric",
+      "question": { "fr": "Soit (uₙ) une suite arithmétique avec u₀ = 7 et r = -3. Calculer u₆." },
+      "answer": -11,
+      "tolerance": 0,
+      "unit": "",
+      "hint": { "fr": "Utilisez la formule uₙ = u₀ + n·r." },
+      "explanation": { "fr": "u₆ = u₀ + 6r = 7 + 6×(-3) = 7 - 18 = -11." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer la somme S = 1 + 2 + 3 + ... + 100." },
+      "answer": 5050,
+      "tolerance": 0,
+      "unit": "",
+      "hint": { "fr": "C'est la somme d'une suite arithmétique de premier terme 1, dernier terme 100, et de 100 termes." },
+      "explanation": { "fr": "S = 100 × (1 + 100) / 2 = 100 × 101 / 2 = 5050." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Soit (uₙ) une suite géométrique de raison q = 1/2 et u₀ = 8. Que vaut u₃ ?" },
+      "choices": [
+        { "fr": "1" },
+        { "fr": "2" },
+        { "fr": "4" },
+        { "fr": "1/2" }
+      ],
+      "correct": 0,
+      "explanation": { "fr": "u₃ = u₀ × q³ = 8 × (1/2)³ = 8 × 1/8 = 1." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Une suite géométrique de raison q converge vers 0 si et seulement si :" },
+      "choices": [
+        { "fr": "q > 1" },
+        { "fr": "|q| < 1" },
+        { "fr": "q < 0" },
+        { "fr": "q = 1" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "La suite (qⁿ) converge vers 0 si et seulement si |q| < 1, c'est-à-dire -1 < q < 1." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Soit (uₙ) géométrique avec u₀ = 3 et q = 2. Calculer S₃ = u₀ + u₁ + u₂ + u₃." },
+      "answer": 45,
+      "tolerance": 0,
+      "unit": "",
+      "hint": { "fr": "S₃ = u₀ · (1 - q⁴)/(1 - q) avec 4 termes (de u₀ à u₃)." },
+      "explanation": { "fr": "S₃ = 3 × (1 - 2⁴)/(1 - 2) = 3 × (1 - 16)/(-1) = 3 × 15 = 45." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "La suite définie par uₙ = (-1)ⁿ est :" },
+      "choices": [
+        { "fr": "Convergente vers 0" },
+        { "fr": "Croissante" },
+        { "fr": "Ni convergente ni divergente vers +∞ ou -∞ (elle oscille)" },
+        { "fr": "Convergente vers 1" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "La suite alterne entre 1 et -1 : u₀=1, u₁=-1, u₂=1, ... Elle n'a pas de limite, elle oscille." }
+    }
+  ]
+}

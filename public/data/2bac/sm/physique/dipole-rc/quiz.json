@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La constante de temps d'un circuit RC est :",
+        "ar": "ثابت الزمن لدارة RC هو:"
+      },
+      "choices": [
+        { "fr": "$\\tau = R + C$", "ar": "$\\tau = R + C$" },
+        { "fr": "$\\tau = R / C$", "ar": "$\\tau = R / C$" },
+        { "fr": "$\\tau = R \\cdot C$", "ar": "$\\tau = R \\cdot C$" },
+        { "fr": "$\\tau = C / R$", "ar": "$\\tau = C / R$" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "La constante de temps d'un circuit RC est le produit $\\tau = R \\cdot C$. En unités SI : Ω × F = (V/A) × (C/V) = C/A = s. Elle caractérise la durée du régime transitoire.",
+        "ar": "ثابت الزمن لدارة RC هو الجداء $\\tau = R \\cdot C$. بالوحدات الدولية: Ω × F = s. يميز مدة النظام العابر."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un circuit RC possède $R = 4{,}7\\,k\\Omega$ et $C = 10\\,\\mu F$. Calculer la constante de temps τ en millisecondes.",
+        "ar": "دارة RC فيها $R = 4{,}7\\,k\\Omega$ و $C = 10\\,\\mu F$. احسب ثابت الزمن τ بالميلي ثانية."
+      },
+      "answer": 47,
+      "tolerance": 0.5,
+      "unit": "ms",
+      "hint": {
+        "fr": "$\\tau = R \\times C$. Attention aux unités : $k\\Omega = 10^3\\,\\Omega$ et $\\mu F = 10^{-6}\\,F$.",
+        "ar": "$\\tau = R \\times C$. انتبه للوحدات: $k\\Omega = 10^3\\,\\Omega$ و $\\mu F = 10^{-6}\\,F$."
+      },
+      "explanation": {
+        "fr": "$\\tau = R \\times C = 4{,}7 \\times 10^3 \\times 10 \\times 10^{-6} = 47 \\times 10^{-3}\\,s = 47\\,ms$.",
+        "ar": "$\\tau = R \\times C = 4{,}7 \\times 10^3 \\times 10 \\times 10^{-6} = 47 \\times 10^{-3}\\,s = 47\\,ms$."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Lors de la charge d'un condensateur à travers une résistance, la tension $u_C(t)$ :",
+        "ar": "أثناء شحن مكثف عبر مقاومة، التوتر $u_C(t)$:"
+      },
+      "choices": [
+        { "fr": "Croît linéairement jusqu'à E", "ar": "يتزايد خطياً حتى E" },
+        { "fr": "Croît exponentiellement vers E : $u_C = E(1 - e^{-t/\\tau})$", "ar": "يتزايد أسياً نحو E: $u_C = E(1 - e^{-t/\\tau})$" },
+        { "fr": "Décroît exponentiellement : $u_C = E \\cdot e^{-t/\\tau}$", "ar": "يتناقص أسياً: $u_C = E \\cdot e^{-t/\\tau}$" },
+        { "fr": "Reste constante égale à E", "ar": "يبقى ثابتاً يساوي E" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Lors de la charge, la tension aux bornes du condensateur croît selon $u_C(t) = E(1 - e^{-t/\\tau})$, partant de 0 et tendant asymptotiquement vers E. La décharge, elle, suit $u_C(t) = E \\cdot e^{-t/\\tau}$.",
+        "ar": "أثناء الشحن، التوتر بين طرفي المكثف يتزايد وفق $u_C(t) = E(1 - e^{-t/\\tau})$، ينطلق من 0 ويقترب تدريجياً من E. أما التفريغ فيتبع $u_C(t) = E \\cdot e^{-t/\\tau}$."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un condensateur de capacité $C = 220\\,\\mu F$ est chargé sous $U = 10\\,V$. Calculer l'énergie emmagasinée en millijoules.",
+        "ar": "مكثف بسعة $C = 220\\,\\mu F$ مشحون تحت $U = 10\\,V$. احسب الطاقة المخزنة بالميلي جول."
+      },
+      "answer": 11,
+      "tolerance": 0.5,
+      "unit": "mJ",
+      "hint": {
+        "fr": "Utilisez $E_C = \\frac{1}{2}CU^2$.",
+        "ar": "استخدم $E_C = \\frac{1}{2}CU^2$."
+      },
+      "explanation": {
+        "fr": "$E_C = \\frac{1}{2} \\times 220 \\times 10^{-6} \\times (10)^2 = \\frac{1}{2} \\times 220 \\times 10^{-6} \\times 100 = 11 \\times 10^{-3}\\,J = 11\\,mJ$.",
+        "ar": "$E_C = \\frac{1}{2} \\times 220 \\times 10^{-6} \\times (10)^2 = 11 \\times 10^{-3}\\,J = 11\\,mJ$."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "On considère que le condensateur est pratiquement complètement chargé après :",
+        "ar": "نعتبر أن المكثف مشحون بالكامل تقريباً بعد:"
+      },
+      "choices": [
+        { "fr": "$t = \\tau$", "ar": "$t = \\tau$" },
+        { "fr": "$t = 2\\tau$", "ar": "$t = 2\\tau$" },
+        { "fr": "$t = 3\\tau$", "ar": "$t = 3\\tau$" },
+        { "fr": "$t = 5\\tau$", "ar": "$t = 5\\tau$" }
+      ],
+      "answer": 3,
+      "explanation": {
+        "fr": "A $t = 5\\tau$, la tension atteint $u_C = E(1 - e^{-5}) \\approx 0{,}993 \\cdot E$, soit 99,3% de E. On considère donc que le condensateur est pratiquement complètement chargé après $5\\tau$.",
+        "ar": "عند $t = 5\\tau$، التوتر يصل إلى $u_C = E(1 - e^{-5}) \\approx 0{,}993 \\cdot E$، أي 99.3% من E. لذلك نعتبر أن المكثف مشحون بالكامل تقريباً بعد $5\\tau$."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un circuit RC avec $E = 9\\,V$, $R = 1\\,k\\Omega$, $C = 100\\,\\mu F$. Calculer la tension $u_C$ aux bornes du condensateur à l'instant $t = 0{,}1\\,s$ lors de la charge. Arrondir à 0,1 V.",
+        "ar": "دارة RC مع $E = 9\\,V$، $R = 1\\,k\\Omega$، $C = 100\\,\\mu F$. احسب التوتر $u_C$ بين طرفي المكثف عند اللحظة $t = 0{,}1\\,s$ أثناء الشحن. قرّب إلى 0.1 V."
+      },
+      "answer": 5.7,
+      "tolerance": 0.2,
+      "unit": "V",
+      "hint": {
+        "fr": "Calculez d'abord $\\tau = RC$, puis $u_C = E(1 - e^{-t/\\tau})$.",
+        "ar": "احسب أولاً $\\tau = RC$، ثم $u_C = E(1 - e^{-t/\\tau})$."
+      },
+      "explanation": {
+        "fr": "$\\tau = 1000 \\times 100 \\times 10^{-6} = 0{,}1\\,s$. Donc $t/\\tau = 1$. $u_C = 9 \\times (1 - e^{-1}) = 9 \\times 0{,}632 \\approx 5{,}7\\,V$.",
+        "ar": "$\\tau = 1000 \\times 100 \\times 10^{-6} = 0{,}1\\,s$. إذن $t/\\tau = 1$. $u_C = 9 \\times (1 - e^{-1}) = 9 \\times 0{,}632 \\approx 5{,}7\\,V$."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'équation différentielle de la décharge d'un condensateur à travers une résistance R est :",
+        "ar": "المعادلة التفاضلية لتفريغ مكثف عبر مقاومة R هي:"
+      },
+      "choices": [
+        { "fr": "$RC\\frac{du_C}{dt} + u_C = E$", "ar": "$RC\\frac{du_C}{dt} + u_C = E$" },
+        { "fr": "$RC\\frac{du_C}{dt} + u_C = 0$", "ar": "$RC\\frac{du_C}{dt} + u_C = 0$" },
+        { "fr": "$RC\\frac{du_C}{dt} - u_C = 0$", "ar": "$RC\\frac{du_C}{dt} - u_C = 0$" },
+        { "fr": "$\\frac{du_C}{dt} + RCu_C = 0$", "ar": "$\\frac{du_C}{dt} + RCu_C = 0$" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Lors de la décharge (sans générateur), la loi des mailles donne $u_R + u_C = 0$, soit $Ri + u_C = 0$. Avec $i = C\\frac{du_C}{dt}$, on obtient $RC\\frac{du_C}{dt} + u_C = 0$. C'est une équation différentielle homogène (sans second membre).",
+        "ar": "أثناء التفريغ (بدون مولد)، قانون المنعطفات يعطي $u_R + u_C = 0$، أي $Ri + u_C = 0$. مع $i = C\\frac{du_C}{dt}$، نحصل على $RC\\frac{du_C}{dt} + u_C = 0$. هذه معادلة تفاضلية متجانسة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un condensateur $C = 47\\,\\mu F$ chargé sous $E = 12\\,V$ se décharge à travers $R = 10\\,k\\Omega$. Quelle est la tension $u_C$ (en V) après un temps $t = 2\\tau$ ? Arrondir à 0,1 V.",
+        "ar": "مكثف $C = 47\\,\\mu F$ مشحون تحت $E = 12\\,V$ يتفرغ عبر $R = 10\\,k\\Omega$. ما هو التوتر $u_C$ (بالفولت) بعد زمن $t = 2\\tau$؟ قرّب إلى 0.1 V."
+      },
+      "answer": 1.6,
+      "tolerance": 0.2,
+      "unit": "V",
+      "hint": {
+        "fr": "Lors de la décharge : $u_C(t) = E \\cdot e^{-t/\\tau}$. Pour $t = 2\\tau$ : $u_C = E \\cdot e^{-2}$.",
+        "ar": "أثناء التفريغ: $u_C(t) = E \\cdot e^{-t/\\tau}$. عند $t = 2\\tau$: $u_C = E \\cdot e^{-2}$."
+      },
+      "explanation": {
+        "fr": "$u_C(2\\tau) = E \\cdot e^{-2} = 12 \\times 0{,}1353 \\approx 1{,}6\\,V$. Après $2\\tau$, le condensateur a perdu environ 86,5% de sa tension initiale.",
+        "ar": "$u_C(2\\tau) = E \\cdot e^{-2} = 12 \\times 0{,}1353 \\approx 1{,}6\\,V$. بعد $2\\tau$، فقد المكثف حوالي 86.5% من توتره الابتدائي."
+      }
+    }
+  ]
+}

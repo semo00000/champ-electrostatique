@@ -1,0 +1,137 @@
+{
+  "id": "sens-evolution-spontanee",
+  "title": {
+    "fr": "Sens d'évolution spontanée d'un système chimique",
+    "ar": "اتجاه التطور التلقائي لجملة كيميائية"
+  },
+  "objectives": {
+    "fr": [
+      "Définir le quotient de réaction Qr",
+      "Connaître la constante d'équilibre K",
+      "Utiliser le critère d'évolution spontanée : comparer Qr et K",
+      "Prévoir le sens d'évolution d'un système chimique",
+      "Comprendre le principe de Le Chatelier"
+    ],
+    "ar": [
+      "تعريف حاصل التفاعل Qr",
+      "معرفة ثابت التوازن K",
+      "استخدام معيار التطور التلقائي: مقارنة Qr و K",
+      "التنبؤ باتجاه تطور جملة كيميائية",
+      "فهم مبدأ لوشاتولييه"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Quotient de réaction Qr",
+        "ar": "1. حاصل التفاعل Qr"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Pour une réaction en solution aqueuse aA + bB ⇌ cC + dD, le quotient de réaction Qr est une grandeur sans dimension qui caractérise la composition du système à un instant donné. Il s'écrit en fonction des concentrations effectives des espèces dissoutes, chaque concentration étant élevée à la puissance de son coefficient stœchiométrique." }
+    },
+    {
+      "type": "formula",
+      "latex": "Q_r = \\frac{[C]^c \\cdot [D]^d}{[A]^a \\cdot [B]^b}",
+      "note": { "fr": "Les concentrations sont exprimées en mol·L⁻¹ et divisées par la concentration de référence C° = 1 mol·L⁻¹ (Qr est sans dimension). Les solides purs et le solvant (eau) n'apparaissent pas dans l'expression de Qr." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Constante d'équilibre K",
+        "ar": "2. ثابت التوازن K"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Constante d'équilibre K" },
+      "text": { "fr": "La constante d'équilibre K est la valeur du quotient de réaction Qr à l'état d'équilibre. K ne dépend que de la température et de l'équation de la réaction. Elle ne dépend ni des concentrations initiales, ni du volume, ni de la présence d'un catalyseur." }
+    },
+    {
+      "type": "formula",
+      "latex": "K = Q_{r,\\text{éq}} = \\frac{[C]_{\\text{éq}}^c \\cdot [D]_{\\text{éq}}^d}{[A]_{\\text{éq}}^a \\cdot [B]_{\\text{éq}}^b}",
+      "note": { "fr": "K est sans dimension. Une grande valeur de K (K >> 1) favorise les produits. Une petite valeur (K << 1) favorise les réactifs." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Critère d'évolution spontanée",
+        "ar": "3. معيار التطور التلقائي"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Le sens d'évolution spontanée d'un système chimique est déterminé par la comparaison entre le quotient de réaction initial Qr,i et la constante d'équilibre K." }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Si Qr,i < K : le système évolue dans le sens direct (sens 1, formation des produits). L'avancement x augmente jusqu'à ce que Qr atteigne K.",
+          "Si Qr,i > K : le système évolue dans le sens inverse (sens 2, formation des réactifs). L'avancement x diminue jusqu'à ce que Qr atteigne K.",
+          "Si Qr,i = K : le système est déjà à l'état d'équilibre. Il n'évolue dans aucun sens macroscopiquement."
+        ]
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Le système chimique évolue toujours spontanément dans le sens qui rapproche Qr de K. À l'équilibre, Qr = K et le système n'évolue plus macroscopiquement.",
+        "ar": "يتطور النظام الكيميائي دائما تلقائيا في الاتجاه الذي يقرب Qr من K. عند التوازن، Qr = K ولا يتطور النظام ماكروسكوبيا."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Principe de Le Chatelier",
+        "ar": "4. مبدأ لوشاتولييه"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Principe de Le Chatelier" },
+      "text": { "fr": "Lorsqu'on modifie un facteur d'équilibre (concentration, pression, température) d'un système en équilibre, le système évolue dans le sens qui tend à s'opposer à la modification imposée, de manière à atteindre un nouvel état d'équilibre." }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Ajout d'un réactif : Qr diminue (Qr < K), le système évolue dans le sens direct pour consommer l'excès de réactif.",
+          "Ajout d'un produit : Qr augmente (Qr > K), le système évolue dans le sens inverse.",
+          "Retrait d'un produit : Qr diminue (Qr < K), le système évolue dans le sens direct.",
+          "Attention : l'ajout d'un solvant (dilution) fait varier toutes les concentrations et nécessite un recalcul complet de Qr."
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Application : prévoir le sens d'évolution",
+        "ar": "5. تطبيق: التنبؤ باتجاه التطور"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Réaction entre l'acide éthanoïque et l'eau" },
+      "problem": { "fr": "La réaction CH₃COOH(aq) + H₂O(l) ⇌ CH₃COO⁻(aq) + H₃O⁺(aq) a pour constante d'équilibre K = 1,8×10⁻⁵ à 25°C. On prépare une solution avec [CH₃COOH] = 0,10 mol/L, [CH₃COO⁻] = 0,010 mol/L et [H₃O⁺] = 0,010 mol/L. Dans quel sens évolue le système ?" },
+      "solution": {
+        "fr": "Calculons Qr,i = [CH₃COO⁻]·[H₃O⁺]/[CH₃COOH] = (0,010 × 0,010)/0,10 = 1,0×10⁻³. Comparons : Qr,i = 1,0×10⁻³ > K = 1,8×10⁻⁵. Donc Qr,i > K : le système évolue dans le sens inverse (sens 2), c'est-à-dire dans le sens de la formation de CH₃COOH.",
+        "latex": "Q_{r,i} = \\frac{[CH_3COO^-] \\cdot [H_3O^+]}{[CH_3COOH]} = \\frac{0{,}010 \\times 0{,}010}{0{,}10} = 1{,}0 \\times 10^{-3} > K"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Attention : la constante K change si on inverse l'équation (K' = 1/K) ou si on multiplie les coefficients par un facteur n (K' = Kⁿ). Il faut toujours préciser l'équation associée à la valeur de K.",
+        "ar": "انتباه: يتغير الثابت K إذا عكسنا المعادلة (K' = 1/K) أو إذا ضربنا المعاملات بعامل n (K' = Kⁿ). يجب دائما تحديد المعادلة المرتبطة بقيمة K."
+      }
+    }
+  ]
+}

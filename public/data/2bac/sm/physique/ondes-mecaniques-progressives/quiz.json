@@ -1,0 +1,110 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Une onde mécanique progressive transporte :",
+        "ar": "الموجة الميكانيكية المتقدمة تنقل:"
+      },
+      "choices": [
+        { "fr": "De la matière uniquement", "ar": "المادة فقط" },
+        { "fr": "De l'énergie uniquement, sans transport de matière", "ar": "الطاقة فقط، دون نقل المادة" },
+        { "fr": "De la matière et de l'énergie", "ar": "المادة والطاقة" },
+        { "fr": "Ni matière ni énergie", "ar": "لا المادة ولا الطاقة" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Une onde mécanique progressive transporte de l'énergie sans transport de matière. Les particules du milieu oscillent autour de leur position d'équilibre sans se déplacer dans la direction de propagation.",
+        "ar": "تنقل الموجة الميكانيكية المتقدمة الطاقة دون نقل المادة. تتأرجح جسيمات الوسط حول موضع توازنها."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Une onde sonore dans l'air est une onde :",
+        "ar": "الموجة الصوتية في الهواء هي موجة:"
+      },
+      "choices": [
+        { "fr": "Transversale", "ar": "مستعرضة" },
+        { "fr": "Longitudinale", "ar": "طولية" },
+        { "fr": "Électromagnétique", "ar": "كهرومغناطيسية" },
+        { "fr": "Transversale et longitudinale à la fois", "ar": "مستعرضة وطولية في نفس الوقت" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "L'onde sonore est une onde longitudinale : la perturbation (compression/dilatation de l'air) se fait dans la même direction que la propagation.",
+        "ar": "الموجة الصوتية هي موجة طولية: الاضطراب (انضغاط/تمدد الهواء) يكون في نفس اتجاه الانتشار."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un son se propage dans l'air à $v = 340\\,m/s$. Calculer le retard temporel entre deux points distants de $d = 170\\,m$. Donner la réponse en secondes.",
+        "ar": "ينتشر صوت في الهواء بسرعة $v = 340\\,m/s$. احسب التأخر الزمني بين نقطتين تبعدان $d = 170\\,m$. أعط الإجابة بالثواني."
+      },
+      "answer": 0.5,
+      "tolerance": 0.01,
+      "unit": "s",
+      "hint": {
+        "fr": "Utilisez la relation $\\tau = \\frac{d}{v}$",
+        "ar": "استخدم العلاقة $\\tau = \\frac{d}{v}$"
+      },
+      "explanation": {
+        "fr": "$\\tau = \\frac{d}{v} = \\frac{170}{340} = 0{,}5\\,s$"
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La célérité d'une onde mécanique dépend principalement :",
+        "ar": "تعتمد سرعة الموجة الميكانيكية أساسا على:"
+      },
+      "choices": [
+        { "fr": "De l'amplitude de la perturbation", "ar": "سعة الاضطراب" },
+        { "fr": "De la forme de la perturbation", "ar": "شكل الاضطراب" },
+        { "fr": "Des propriétés du milieu de propagation", "ar": "خصائص وسط الانتشار" },
+        { "fr": "De la durée de la perturbation", "ar": "مدة الاضطراب" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "La célérité d'une onde mécanique dépend uniquement des propriétés du milieu (élasticité, densité, température, etc.). Elle ne dépend ni de l'amplitude ni de la forme de la perturbation.",
+        "ar": "تعتمد سرعة الموجة الميكانيكية فقط على خصائص الوسط (المرونة، الكثافة، الحرارة...). لا تعتمد على السعة ولا الشكل."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Lors d'un orage, l'éclair est observé $t = 4\\,s$ avant le tonnerre. La célérité du son est $v = 340\\,m/s$. Quelle est la distance de l'orage en mètres ?",
+        "ar": "أثناء عاصفة رعدية، يُرى البرق قبل $t = 4\\,s$ من الرعد. سرعة الصوت $v = 340\\,m/s$. ما هي مسافة العاصفة بالأمتار؟"
+      },
+      "answer": 1360,
+      "tolerance": 10,
+      "unit": "m",
+      "hint": {
+        "fr": "La lumière se propage quasi instantanément. Le retard est dû au temps de propagation du son : $d = v \\times t$",
+        "ar": "ينتشر الضوء بشكل شبه آني. التأخر ناتج عن زمن انتشار الصوت: $d = v \\times t$"
+      },
+      "explanation": {
+        "fr": "$d = v \\times t = 340 \\times 4 = 1360\\,m$"
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le front d'onde d'une perturbation ponctuelle dans un milieu homogène et isotrope à deux dimensions est :",
+        "ar": "جبهة الموجة لاضطراب نقطي في وسط متجانس ومتماثل الخواص في بعدين هي:"
+      },
+      "choices": [
+        { "fr": "Une droite", "ar": "خط مستقيم" },
+        { "fr": "Un cercle centré sur la source", "ar": "دائرة مركزها المنبع" },
+        { "fr": "Une ellipse", "ar": "قطع ناقص" },
+        { "fr": "Une parabole", "ar": "قطع مكافئ" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Dans un milieu homogène et isotrope, la perturbation se propage à la même vitesse dans toutes les directions. Les points atteints en même temps forment donc un cercle (2D) ou une sphère (3D) centré sur la source.",
+        "ar": "في وسط متجانس ومتماثل الخواص، ينتشر الاضطراب بنفس السرعة في جميع الاتجاهات. النقاط التي يصلها في نفس اللحظة تشكل دائرة (2D) أو كرة (3D) مركزها المنبع."
+      }
+    }
+  ]
+}

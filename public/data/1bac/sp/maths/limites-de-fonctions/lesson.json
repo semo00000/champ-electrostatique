@@ -1,0 +1,115 @@
+{
+  "id": "limites-de-fonctions",
+  "title": { "fr": "Limites de fonctions", "ar": "نهايات الدوال" },
+  "objectives": {
+    "fr": [
+      "Calculer la limite d'une fonction en un point et à l'infini",
+      "Reconnaître et lever les formes indéterminées",
+      "Appliquer les théorèmes de comparaison et d'encadrement (gendarmes)",
+      "Déterminer les asymptotes horizontales, verticales et obliques",
+      "Utiliser les opérations sur les limites"
+    ],
+    "ar": [
+      "حساب نهاية دالة عند نقطة وفي اللانهاية",
+      "التعرف على الأشكال غير المحددة ورفعها",
+      "تطبيق مبرهنات المقارنة والحصر (الدركيين)",
+      "تحديد المقاربات الأفقية والعمودية والمائلة",
+      "استخدام العمليات على النهايات"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Limite d'une fonction en un point", "ar": "١. نهاية دالة عند نقطة" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Limite finie en un point" },
+      "text": { "fr": "On dit que f admet pour limite ℓ quand x tend vers a, et on note lim(x→a) f(x) = ℓ, si f(x) peut être rendu aussi proche de ℓ que l'on veut pourvu que x soit suffisamment proche de a." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\lim_{x \\to a} f(x) = \\ell \\;\\Leftrightarrow\\; \\forall \\varepsilon > 0,\\; \\exists \\delta > 0,\\; |x - a| < \\delta \\Rightarrow |f(x) - \\ell| < \\varepsilon",
+      "note": { "fr": "Définition formelle de la limite (pour information, non exigible au BAC)." }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "On distingue la limite à gauche lim(x→a⁻) f(x) et la limite à droite lim(x→a⁺) f(x). La limite existe si et seulement si les limites à gauche et à droite existent et sont égales.",
+        "ar": "نميز بين النهاية من اليسار والنهاية من اليمين. النهاية موجودة إذا وفقط إذا كانت النهايتان من اليسار واليمين موجودتين ومتساويتين."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Limite d'une fonction à l'infini", "ar": "٢. نهاية دالة في اللانهاية" }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "lim(x→+∞) 1/x = 0 et lim(x→-∞) 1/x = 0",
+          "lim(x→+∞) xⁿ = +∞ pour n ≥ 1",
+          "lim(x→+∞) √x = +∞",
+          "Pour un polynôme P(x) = aₙxⁿ + ... + a₀, lim(x→±∞) P(x) = lim(x→±∞) aₙxⁿ",
+          "Pour une fraction rationnelle, on factorise par le terme de plus haut degré"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Formes indéterminées", "ar": "٣. الأشكال غير المحددة" }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Les sept formes indéterminées sont : 0/0, ∞/∞, ∞ - ∞, 0 × ∞, 1^∞, 0⁰, ∞⁰. Pour lever l'indétermination, on peut factoriser, conjuguer, ou utiliser des limites de référence.",
+        "ar": "الأشكال غير المحددة السبعة هي: 0/0, ∞/∞, ∞ - ∞, 0 × ∞, 1^∞, 0⁰, ∞⁰. لرفع عدم التحديد، نستعمل التحليل أو المرافق أو النهايات المرجعية."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Lever une forme indéterminée 0/0" },
+      "problem": { "fr": "Calculer lim(x→1) (x² - 1)/(x - 1)." },
+      "solution": { "fr": "On factorise : (x² - 1)/(x - 1) = (x-1)(x+1)/(x-1) = x+1 pour x ≠ 1. Donc lim(x→1) (x² - 1)/(x - 1) = 1 + 1 = 2.", "latex": "\\lim_{x \\to 1} \\frac{x^2-1}{x-1} = \\lim_{x \\to 1} \\frac{(x-1)(x+1)}{x-1} = \\lim_{x \\to 1} (x+1) = 2" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Théorèmes de comparaison", "ar": "٤. مبرهنات المقارنة" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Théorème des gendarmes (encadrement)" },
+      "text": { "fr": "Si g(x) ≤ f(x) ≤ h(x) au voisinage de a, et si lim(x→a) g(x) = lim(x→a) h(x) = ℓ, alors lim(x→a) f(x) = ℓ." }
+    },
+    {
+      "type": "formula",
+      "latex": "g(x) \\leq f(x) \\leq h(x) \\;\\text{ et }\\; \\lim_{x \\to a} g(x) = \\lim_{x \\to a} h(x) = \\ell \\;\\Rightarrow\\; \\lim_{x \\to a} f(x) = \\ell",
+      "note": { "fr": "Théorème des gendarmes." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Asymptotes", "ar": "٥. المقاربات" }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Asymptote horizontale : la droite y = ℓ est AH si lim(x→±∞) f(x) = ℓ",
+          "Asymptote verticale : la droite x = a est AV si lim(x→a) f(x) = ±∞",
+          "Asymptote oblique : la droite y = mx + p est AO si lim(x→±∞) [f(x) - (mx+p)] = 0, avec m = lim(x→±∞) f(x)/x et p = lim(x→±∞) [f(x) - mx]"
+        ]
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Détermination d'asymptotes" },
+      "problem": { "fr": "Déterminer les asymptotes de f(x) = (2x² + 1)/(x - 1)." },
+      "solution": { "fr": "Asymptote verticale : x = 1 (car lim(x→1) f(x) = ±∞). Division euclidienne : f(x) = 2x + 2 + 3/(x-1). Donc y = 2x + 2 est asymptote oblique car lim(x→±∞) [f(x) - (2x+2)] = lim 3/(x-1) = 0.", "latex": "f(x) = 2x + 2 + \\frac{3}{x-1} \\;\\Rightarrow\\; \\text{AO : } y = 2x+2,\\; \\text{AV : } x = 1" }
+    }
+  ]
+}

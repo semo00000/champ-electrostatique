@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est l'expression de la force de gravitation universelle entre deux masses m₁ et m₂ séparées d'une distance d ?",
+        "ar": "ما هو تعبير قوة الجاذبية الكونية بين كتلتين m₁ و m₂ تفصلهما مسافة d ؟"
+      },
+      "choices": [
+        { "fr": "F = G·m₁·m₂/d²", "ar": "F = G·m₁·m₂/d²" },
+        { "fr": "F = G·m₁·m₂/d", "ar": "F = G·m₁·m₂/d" },
+        { "fr": "F = G·m₁·m₂·d²", "ar": "F = G·m₁·m₂·d²" },
+        { "fr": "F = G·(m₁+m₂)/d²", "ar": "F = G·(m₁+m₂)/d²" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "La loi de Newton s'énonce : F = G·m₁·m₂/d². La force est proportionnelle au produit des masses et inversement proportionnelle au carré de la distance.",
+        "ar": "قانون نيوتن ينص على: F = G·m₁·m₂/d². القوة تتناسب طردياً مع جداء الكتلتين وعكسياً مع مربع المسافة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est la valeur de la constante de gravitation universelle G ?",
+        "ar": "ما هي قيمة ثابتة الجاذبية الكونية G ؟"
+      },
+      "choices": [
+        { "fr": "6,674 × 10⁻¹¹ N·m²·kg⁻²", "ar": "6.674 × 10⁻¹¹ N·m²·kg⁻²" },
+        { "fr": "9,8 N·kg⁻¹", "ar": "9.8 N·kg⁻¹" },
+        { "fr": "6,674 × 10¹¹ N·m²·kg⁻²", "ar": "6.674 × 10¹¹ N·m²·kg⁻²" },
+        { "fr": "6,022 × 10²³ mol⁻¹", "ar": "6.022 × 10²³ mol⁻¹" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "G = 6,674 × 10⁻¹¹ N·m²·kg⁻² est la constante de gravitation universelle, mesurée par Cavendish.",
+        "ar": "G = 6.674 × 10⁻¹¹ N·m²·kg⁻² هي ثابتة الجاذبية الكونية، قاسها كافنديش."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Si la distance entre deux corps est doublée, la force gravitationnelle est :",
+        "ar": "إذا تضاعفت المسافة بين جسمين، فإن قوة الجاذبية تصبح :"
+      },
+      "choices": [
+        { "fr": "divisée par 4", "ar": "مقسومة على 4" },
+        { "fr": "divisée par 2", "ar": "مقسومة على 2" },
+        { "fr": "multipliée par 2", "ar": "مضروبة في 2" },
+        { "fr": "multipliée par 4", "ar": "مضروبة في 4" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "F est inversement proportionnelle à d². Si d est doublée (×2), alors F est divisée par 2² = 4.",
+        "ar": "F تتناسب عكسياً مع d². إذا تضاعفت d (×2)، فإن F تُقسم على 2² = 4."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer l'intensité du champ de gravitation terrestre à une altitude h = 400 km au-dessus de la surface. On donne : M_T = 5,97 × 10²⁴ kg, R_T = 6371 km, G = 6,674 × 10⁻¹¹ N·m²·kg⁻². Donner la réponse en N/kg.",
+        "ar": "احسب شدة حقل الجاذبية الأرضية على ارتفاع h = 400 km فوق السطح. المعطيات: M_T = 5.97 × 10²⁴ kg، R_T = 6371 km، G = 6.674 × 10⁻¹¹ N·m²·kg⁻². أعطِ الجواب بـ N/kg."
+      },
+      "answer": 8.69,
+      "tolerance": 0.1,
+      "unit": "N/kg",
+      "hint": {
+        "fr": "Utilisez g = G·M_T/(R_T+h)² avec R_T+h = 6771 km = 6,771 × 10⁶ m.",
+        "ar": "استخدم g = G·M_T/(R_T+h)² مع R_T+h = 6771 km = 6.771 × 10⁶ m."
+      },
+      "explanation": {
+        "fr": "g = G·M_T/(R_T+h)² = 6,674×10⁻¹¹ × 5,97×10²⁴ / (6,771×10⁶)² = 3,984×10¹⁴ / 4,585×10¹³ ≈ 8,69 N/kg.",
+        "ar": "g = G·M_T/(R_T+h)² = 6.674×10⁻¹¹ × 5.97×10²⁴ / (6.771×10⁶)² = 3.984×10¹⁴ / 4.585×10¹³ ≈ 8.69 N/kg."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La vitesse orbitale d'un satellite en orbite circulaire dépend de :",
+        "ar": "السرعة المدارية لقمر اصطناعي في مدار دائري تعتمد على :"
+      },
+      "choices": [
+        { "fr": "La masse de la Terre et l'altitude du satellite", "ar": "كتلة الأرض وارتفاع القمر الاصطناعي" },
+        { "fr": "La masse du satellite uniquement", "ar": "كتلة القمر الاصطناعي فقط" },
+        { "fr": "La masse du satellite et son altitude", "ar": "كتلة القمر الاصطناعي وارتفاعه" },
+        { "fr": "La taille du satellite", "ar": "حجم القمر الاصطناعي" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "v = √(G·M_T/(R_T+h)). La vitesse orbitale ne dépend que de M_T et de l'altitude h, pas de la masse du satellite.",
+        "ar": "v = √(G·M_T/(R_T+h)). السرعة المدارية تعتمد فقط على M_T والارتفاع h، وليس على كتلة القمر الاصطناعي."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer la force gravitationnelle entre la Terre (M_T = 5,97 × 10²⁴ kg) et un objet de masse m = 70 kg posé sur sa surface (R_T = 6371 km). Réponse en N.",
+        "ar": "احسب قوة الجاذبية بين الأرض (M_T = 5.97 × 10²⁴ kg) وجسم كتلته m = 70 kg موضوع على سطحها (R_T = 6371 km). الجواب بالنيوتن."
+      },
+      "answer": 686,
+      "tolerance": 5,
+      "unit": "N",
+      "hint": {
+        "fr": "F = G·M_T·m/R_T². C'est aussi le poids P = mg₀.",
+        "ar": "F = G·M_T·m/R_T². هذا أيضاً الوزن P = mg₀."
+      },
+      "explanation": {
+        "fr": "F = 6,674×10⁻¹¹ × 5,97×10²⁴ × 70 / (6,371×10⁶)² = 2,788×10¹⁶ / 4,059×10¹³ ≈ 687 N. On retrouve bien P = mg ≈ 70 × 9,8 = 686 N.",
+        "ar": "F = 6.674×10⁻¹¹ × 5.97×10²⁴ × 70 / (6.371×10⁶)² ≈ 687 N. نجد بالفعل P = mg ≈ 70 × 9.8 = 686 N."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Un satellite géostationnaire a une période de révolution de :",
+        "ar": "قمر اصطناعي ثابت بالنسبة للأرض له دورة مقدارها :"
+      },
+      "choices": [
+        { "fr": "24 heures", "ar": "24 ساعة" },
+        { "fr": "12 heures", "ar": "12 ساعة" },
+        { "fr": "90 minutes", "ar": "90 دقيقة" },
+        { "fr": "365 jours", "ar": "365 يوماً" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Un satellite géostationnaire tourne à la même vitesse angulaire que la Terre. Sa période est donc T = 24 h, et il reste fixe au-dessus d'un point de l'équateur.",
+        "ar": "القمر الثابت بالنسبة للأرض يدور بنفس السرعة الزاوية للأرض. دورته إذن T = 24 h، ويبقى ثابتاً فوق نقطة على خط الاستواء."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer la vitesse orbitale d'un satellite en orbite circulaire à 200 km d'altitude. On donne G = 6,674 × 10⁻¹¹ N·m²·kg⁻², M_T = 5,97 × 10²⁴ kg, R_T = 6371 km. Réponse en km/s.",
+        "ar": "احسب السرعة المدارية لقمر اصطناعي في مدار دائري على ارتفاع 200 km. المعطيات: G = 6.674 × 10⁻¹¹ N·m²·kg⁻²، M_T = 5.97 × 10²⁴ kg، R_T = 6371 km. الجواب بـ km/s."
+      },
+      "answer": 7.79,
+      "tolerance": 0.1,
+      "unit": "km/s",
+      "hint": {
+        "fr": "v = √(G·M_T/(R_T+h)) avec R_T + h = 6571 km = 6,571 × 10⁶ m.",
+        "ar": "v = √(G·M_T/(R_T+h)) مع R_T + h = 6571 km = 6.571 × 10⁶ m."
+      },
+      "explanation": {
+        "fr": "v = √(6,674×10⁻¹¹ × 5,97×10²⁴ / 6,571×10⁶) = √(3,984×10¹⁴ / 6,571×10⁶) = √(6,063×10⁷) ≈ 7790 m/s ≈ 7,79 km/s.",
+        "ar": "v = √(6.674×10⁻¹¹ × 5.97×10²⁴ / 6.571×10⁶) = √(6.063×10⁷) ≈ 7790 m/s ≈ 7.79 km/s."
+      }
+    }
+  ]
+}

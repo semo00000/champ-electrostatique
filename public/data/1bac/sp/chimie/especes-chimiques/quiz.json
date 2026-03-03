@@ -1,0 +1,97 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Qu'est-ce qu'un corps pur ?", "ar": "ما هو الجسم الخالص؟" },
+      "choices": [
+        { "fr": "Un corps constitué d'une seule espèce chimique", "ar": "جسم يتكون من نوع كيميائي واحد" },
+        { "fr": "Un corps constitué de plusieurs espèces chimiques", "ar": "جسم يتكون من عدة أنواع كيميائية" },
+        { "fr": "Un corps qui ne contient pas d'eau", "ar": "جسم لا يحتوي على الماء" },
+        { "fr": "Un corps transparent", "ar": "جسم شفاف" }
+      ],
+      "answer": 0,
+      "explanation": { "fr": "Un corps pur est constitué d'une seule espèce chimique, comme l'eau distillée (uniquement H₂O).", "ar": "الجسم الخالص يتكون من نوع كيميائي واحد فقط." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle propriété physique permet d'identifier une espèce chimique ?", "ar": "ما الخاصية الفيزيائية التي تسمح بتحديد نوع كيميائي؟" },
+      "choices": [
+        { "fr": "La température de fusion", "ar": "درجة حرارة الانصهار" },
+        { "fr": "La couleur du récipient", "ar": "لون الإناء" },
+        { "fr": "Le prix du produit", "ar": "ثمن المنتج" },
+        { "fr": "Le nom du fabricant", "ar": "اسم الصانع" }
+      ],
+      "answer": 0,
+      "explanation": { "fr": "La température de fusion est une propriété physique caractéristique qui permet d'identifier une espèce chimique.", "ar": "درجة حرارة الانصهار خاصية فيزيائية مميزة تسمح بتحديد النوع الكيميائي." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Un mélange homogène est :", "ar": "الخليط المتجانس هو:" },
+      "choices": [
+        { "fr": "Un mélange où on ne distingue qu'une seule phase", "ar": "خليط لا نميز فيه إلا طورا واحدا" },
+        { "fr": "Un mélange où on distingue plusieurs phases", "ar": "خليط نميز فيه عدة أطوار" },
+        { "fr": "Un corps pur simple", "ar": "جسم خالص بسيط" },
+        { "fr": "Un mélange de gaz uniquement", "ar": "خليط غازات فقط" }
+      ],
+      "answer": 0,
+      "explanation": { "fr": "Un mélange homogène présente une seule phase visible, comme l'eau salée.", "ar": "الخليط المتجانس يقدم طورا واحدا مرئيا، مثل الماء المالح." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "La masse volumique est définie par :", "ar": "الكتلة الحجمية تُعرّف بـ:" },
+      "choices": [
+        { "fr": "$\\rho = m/V$", "ar": "$\\rho = m/V$" },
+        { "fr": "$\\rho = V/m$", "ar": "$\\rho = V/m$" },
+        { "fr": "$\\rho = m \\times V$", "ar": "$\\rho = m \\times V$" },
+        { "fr": "$\\rho = m - V$", "ar": "$\\rho = m - V$" }
+      ],
+      "answer": 0,
+      "explanation": { "fr": "La masse volumique est le rapport de la masse sur le volume : $\\rho = m/V$, en kg/m³ ou g/mL.", "ar": "الكتلة الحجمية هي نسبة الكتلة إلى الحجم." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Une espèce chimique synthétique est :", "ar": "النوع الكيميائي المصنع هو:" },
+      "choices": [
+        { "fr": "Fabriquée par l'homme", "ar": "مصنوع من طرف الإنسان" },
+        { "fr": "Trouvée uniquement dans la nature", "ar": "يوجد فقط في الطبيعة" },
+        { "fr": "Toujours dangereuse", "ar": "دائما خطير" },
+        { "fr": "Toujours gazeuse", "ar": "دائما غازي" }
+      ],
+      "answer": 0,
+      "explanation": { "fr": "Une espèce synthétique est fabriquée par l'homme en laboratoire ou en usine.", "ar": "النوع المصنع يُصنع من طرف الإنسان في المختبر أو المصنع." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Lors du changement d'état d'un corps pur, la température :", "ar": "أثناء تغير حالة جسم خالص، درجة الحرارة:" },
+      "choices": [
+        { "fr": "Reste constante (palier)", "ar": "تبقى ثابتة (مستوى)" },
+        { "fr": "Augmente toujours", "ar": "تزداد دائما" },
+        { "fr": "Diminue toujours", "ar": "تنقص دائما" },
+        { "fr": "Varie aléatoirement", "ar": "تتغير عشوائيا" }
+      ],
+      "answer": 0,
+      "explanation": { "fr": "Un corps pur présente un palier de température lors d'un changement d'état.", "ar": "الجسم الخالص يقدم مستوى في درجة الحرارة أثناء تغير الحالة." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "L'eau pure bout à quelle température (en °C) sous pression atmosphérique normale ?", "ar": "عند أي درجة حرارة (°C) يغلي الماء الخالص تحت الضغط الجوي العادي؟" },
+      "answer": 100,
+      "tolerance": 0,
+      "unit": "°C",
+      "hint": { "fr": "C'est une valeur de référence fondamentale.", "ar": "قيمة مرجعية أساسية." },
+      "explanation": { "fr": "L'eau pure bout à exactement 100°C sous pression atmosphérique normale (1 atm).", "ar": "الماء الخالص يغلي عند 100°C تحت الضغط الجوي العادي." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "L'indice de réfraction d'un milieu est :", "ar": "قرينة انكسار وسط هي:" },
+      "choices": [
+        { "fr": "Le rapport c/v (vitesse lumière dans le vide / dans le milieu)", "ar": "نسبة c/v (سرعة الضوء في الفراغ / في الوسط)" },
+        { "fr": "La vitesse de la lumière dans le milieu", "ar": "سرعة الضوء في الوسط" },
+        { "fr": "La masse volumique du milieu", "ar": "الكتلة الحجمية للوسط" },
+        { "fr": "La température du milieu", "ar": "درجة حرارة الوسط" }
+      ],
+      "answer": 0,
+      "explanation": { "fr": "$n = c/v$ où c est la vitesse de la lumière dans le vide et v dans le milieu.", "ar": "$n = c/v$ حيث c سرعة الضوء في الفراغ و v في الوسط." }
+    }
+  ]
+}

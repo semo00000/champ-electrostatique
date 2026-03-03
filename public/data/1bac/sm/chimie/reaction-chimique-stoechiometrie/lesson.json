@@ -1,0 +1,149 @@
+{
+  "id": "reaction-chimique-stoechiometrie",
+  "title": {
+    "fr": "Réaction chimique et stoechiométrie",
+    "ar": "التفاعل الكيميائي والستوكيومترية"
+  },
+  "objectives": {
+    "fr": [
+      "Écrire et équilibrer une équation chimique",
+      "Comprendre les coefficients stoechiométriques et les proportions molaires",
+      "Identifier le réactif limitant et le réactif en excès",
+      "Calculer l'avancement maximal d'une réaction",
+      "Déterminer le rendement d'une réaction chimique"
+    ],
+    "ar": [
+      "كتابة وموازنة معادلة كيميائية",
+      "فهم المعاملات الستوكيومترية والنسب المولية",
+      "تحديد المتفاعل المحد والمتفاعل الزائد",
+      "حساب التقدم الأقصى لتفاعل",
+      "تحديد مردود تفاعل كيميائي"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. L'équation chimique équilibrée",
+        "ar": "1. المعادلة الكيميائية الموزونة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Une réaction chimique est une transformation au cours de laquelle des réactifs disparaissent et des produits apparaissent. L'équation chimique traduit cette transformation en respectant la conservation des éléments et des charges électriques. Les coefficients stoechiométriques (nombres devant les formules) indiquent les proportions molaires dans lesquelles les réactifs réagissent et les produits se forment.",
+        "ar": "التفاعل الكيميائي هو تحول يختفي خلاله المتفاعلات وتظهر النواتج. المعادلة الكيميائية تترجم هذا التحول مع احترام بقاء العناصر والشحنات الكهربائية. المعاملات الستوكيومترية (الأعداد أمام الصيغ) تشير إلى النسب المولية التي يتفاعل بها المتفاعلات وتتكون بها النواتج."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Équilibrer une équation", "ar": "مثال: موازنة معادلة" },
+      "problem": {
+        "fr": "Équilibrer : Fe + O₂ → Fe₂O₃",
+        "ar": "وازن: Fe + O₂ → Fe₂O₃"
+      },
+      "solution": {
+        "fr": "4Fe + 3O₂ → 2Fe₂O₃. On vérifie : 4 Fe à gauche = 2×2 = 4 Fe à droite ; 3×2 = 6 O à gauche = 2×3 = 6 O à droite.",
+        "latex": "4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Stoechiométrie et proportions molaires",
+        "ar": "2. الستوكيومترية والنسب المولية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour la réaction : aA + bB → cC + dD, les coefficients a, b, c, d indiquent que a moles de A réagissent avec b moles de B pour donner c moles de C et d moles de D. On peut écrire les relations : n(A)/a = n(B)/b (proportions stoechiométriques). Si les réactifs ne sont pas dans les proportions stoechiométriques, l'un sera en excès et l'autre sera limitant.",
+        "ar": "بالنسبة للتفاعل: aA + bB → cC + dD، المعاملات a, b, c, d تشير إلى أن a مول من A تتفاعل مع b مول من B لتعطي c مول من C و d مول من D. يمكن كتابة العلاقات: n(A)/a = n(B)/b (النسب الستوكيومترية). إذا لم تكن المتفاعلات بالنسب الستوكيومترية، سيكون أحدها زائدا والآخر محدا."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Le réactif limitant",
+        "ar": "3. المتفاعل المحد"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Réactif limitant", "ar": "المتفاعل المحد" },
+      "text": {
+        "fr": "Le réactif limitant est celui qui est entièrement consommé à la fin de la réaction. Il détermine la quantité maximale de produit formé. L'autre réactif est en excès : il n'est pas entièrement consommé.",
+        "ar": "المتفاعل المحد هو الذي يُستهلك كليا في نهاية التفاعل. يحدد الكمية القصوى من الناتج المتكوّن. المتفاعل الآخر يكون زائدا: لا يُستهلك كليا."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour déterminer le réactif limitant dans aA + bB → produits, on compare n(A)/a et n(B)/b. Le réactif limitant est celui pour lequel le rapport n/coefficient est le plus petit. Si n(A)/a < n(B)/b, alors A est le réactif limitant.",
+        "ar": "لتحديد المتفاعل المحد في aA + bB → نواتج، نقارن n(A)/a و n(B)/b. المتفاعل المحد هو الذي تكون نسبة n/المعامل الأصغر. إذا كان n(A)/a < n(B)/b، فإن A هو المتفاعل المحد."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. L'avancement de la réaction",
+        "ar": "4. تقدم التفاعل"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Avancement (x)", "ar": "التقدم (x)" },
+      "text": {
+        "fr": "L'avancement x (en mol) mesure la progression de la réaction. Pour aA + bB → cC + dD : n(A) = n₀(A) - a·x, n(B) = n₀(B) - b·x, n(C) = c·x, n(D) = d·x. L'avancement maximal x_max est atteint quand le réactif limitant est épuisé.",
+        "ar": "التقدم x (بالمول) يقيس تطور التفاعل. لتفاعل aA + bB → cC + dD: n(A) = n₀(A) - a·x، n(B) = n₀(B) - b·x، n(C) = c·x، n(D) = d·x. التقدم الأقصى x_max يتحقق عندما ينفد المتفاعل المحد."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "x_{\\max} = \\min\\left(\\frac{n_0(A)}{a}, \\frac{n_0(B)}{b}\\right)",
+      "note": {
+        "fr": "L'avancement maximal est le plus petit des rapports n₀/coefficient",
+        "ar": "التقدم الأقصى هو الأصغر من نسب n₀/المعامل"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Rendement d'une réaction",
+        "ar": "5. مردود التفاعل"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\eta = \\frac{n_{\\text{obtenu}}}{n_{\\text{théorique}}} \\times 100\\%",
+      "note": {
+        "fr": "Le rendement compare la quantité réellement obtenue à la quantité maximale théorique",
+        "ar": "المردود يقارن الكمية المحصل عليها فعليا بالكمية النظرية القصوى"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Réactif limitant et avancement", "ar": "مثال: المتفاعل المحد والتقدم" },
+      "problem": {
+        "fr": "Pour 2H₂ + O₂ → 2H₂O, on part de 3 mol de H₂ et 2 mol de O₂. Quel est le réactif limitant et x_max ?",
+        "ar": "للتفاعل 2H₂ + O₂ → 2H₂O، ننطلق من 3 mol من H₂ و 2 mol من O₂. ما المتفاعل المحد و x_max؟"
+      },
+      "solution": {
+        "fr": "n(H₂)/2 = 3/2 = 1,5 mol ; n(O₂)/1 = 2/1 = 2 mol. Le plus petit est 1,5, donc H₂ est limitant. x_max = 1,5 mol. n(H₂O)_max = 2 × 1,5 = 3 mol.",
+        "latex": "\\frac{n(\\text{H}_2)}{2} = 1{,}5 < \\frac{n(\\text{O}_2)}{1} = 2 \\quad \\Rightarrow \\quad x_{\\max} = 1{,}5 \\text{ mol}"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Pour résoudre un problème de stoechiométrie : (1) Écrire et équilibrer l'équation. (2) Calculer les quantités de matière initiales. (3) Identifier le réactif limitant. (4) Calculer x_max. (5) En déduire les quantités finales de tous les réactifs et produits.",
+        "ar": "لحل مسألة ستوكيومترية: (1) كتابة وموازنة المعادلة. (2) حساب كميات المادة الابتدائية. (3) تحديد المتفاعل المحد. (4) حساب x_max. (5) استنتاج الكميات النهائية لجميع المتفاعلات والنواتج."
+      }
+    }
+  ]
+}

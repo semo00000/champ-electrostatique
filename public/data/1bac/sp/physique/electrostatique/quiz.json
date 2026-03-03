@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La charge élémentaire e vaut :",
+        "ar": "الشحنة الأولية e تساوي :"
+      },
+      "choices": [
+        { "fr": "1,6 × 10⁻¹⁹ C", "ar": "1.6 × 10⁻¹⁹ C" },
+        { "fr": "9,1 × 10⁻³¹ C", "ar": "9.1 × 10⁻³¹ C" },
+        { "fr": "1,6 × 10¹⁹ C", "ar": "1.6 × 10¹⁹ C" },
+        { "fr": "6,02 × 10²³ C", "ar": "6.02 × 10²³ C" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "La charge élémentaire est e = 1,6 × 10⁻¹⁹ C. C'est la charge d'un proton (positive) ou d'un électron (négative : -e).",
+        "ar": "الشحنة الأولية هي e = 1.6 × 10⁻¹⁹ C. إنها شحنة بروتون (موجبة) أو إلكترون (سالبة: -e)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Deux charges de même signe :",
+        "ar": "شحنتان من نفس الإشارة :"
+      },
+      "choices": [
+        { "fr": "Se repoussent", "ar": "تتنافران" },
+        { "fr": "S'attirent", "ar": "تتجاذبان" },
+        { "fr": "N'interagissent pas", "ar": "لا تتفاعلان" },
+        { "fr": "S'annulent", "ar": "تتلاشيان" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Les charges de même signe (++ ou --) se repoussent. Les charges de signes opposés (+−) s'attirent.",
+        "ar": "الشحنات المتماثلة الإشارة (++ أو --) تتنافر. الشحنات المختلفة الإشارة (+−) تتجاذب."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La loi de Coulomb s'énonce :",
+        "ar": "قانون كولوم ينص على :"
+      },
+      "choices": [
+        { "fr": "F = k·|q₁|·|q₂|/d²", "ar": "F = k·|q₁|·|q₂|/d²" },
+        { "fr": "F = k·|q₁|·|q₂|/d", "ar": "F = k·|q₁|·|q₂|/d" },
+        { "fr": "F = k·|q₁|·|q₂|·d²", "ar": "F = k·|q₁|·|q₂|·d²" },
+        { "fr": "F = k·(|q₁|+|q₂|)/d²", "ar": "F = k·(|q₁|+|q₂|)/d²" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "La loi de Coulomb : F = k·|q₁|·|q₂|/d². La force est proportionnelle au produit des valeurs absolues des charges et inversement proportionnelle au carré de la distance.",
+        "ar": "قانون كولوم: F = k·|q₁|·|q₂|/d². القوة تتناسب طردياً مع جداء القيم المطلقة للشحنات وعكسياً مع مربع المسافة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer la force électrostatique entre deux charges q₁ = 2 μC et q₂ = 4 μC séparées de 20 cm. (k = 9 × 10⁹ N·m²·C⁻²). Réponse en N.",
+        "ar": "احسب القوة الكهروسكونية بين شحنتين q₁ = 2 μC و q₂ = 4 μC تفصل بينهما 20 cm. (k = 9 × 10⁹ N·m²·C⁻²). الجواب بالنيوتن."
+      },
+      "answer": 1.8,
+      "tolerance": 0.1,
+      "unit": "N",
+      "hint": {
+        "fr": "F = k·q₁·q₂/d². Convertir les μC en C (1 μC = 10⁻⁶ C) et les cm en m.",
+        "ar": "F = k·q₁·q₂/d². حوّل الμC إلى C (1 μC = 10⁻⁶ C) و cm إلى m."
+      },
+      "explanation": {
+        "fr": "F = 9×10⁹ × 2×10⁻⁶ × 4×10⁻⁶ / (0,2)² = 9×10⁹ × 8×10⁻¹² / 0,04 = 72×10⁻³ / 0,04 = 1,8 N.",
+        "ar": "F = 9×10⁹ × 2×10⁻⁶ × 4×10⁻⁶ / (0.2)² = 9×10⁹ × 8×10⁻¹² / 0.04 = 72×10⁻³ / 0.04 = 1.8 N."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La valeur de la constante de Coulomb k est :",
+        "ar": "قيمة ثابتة كولوم k هي :"
+      },
+      "choices": [
+        { "fr": "9 × 10⁹ N·m²·C⁻²", "ar": "9 × 10⁹ N·m²·C⁻²" },
+        { "fr": "6,674 × 10⁻¹¹ N·m²·kg⁻²", "ar": "6.674 × 10⁻¹¹ N·m²·kg⁻²" },
+        { "fr": "3 × 10⁸ m/s", "ar": "3 × 10⁸ m/s" },
+        { "fr": "8,85 × 10⁻¹² C²·N⁻¹·m⁻²", "ar": "8.85 × 10⁻¹² C²·N⁻¹·m⁻²" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "k = 9 × 10⁹ N·m²·C⁻² est la constante de Coulomb. La deuxième valeur est G (gravitation), la troisième c (lumière), la quatrième ε₀ (permittivité du vide).",
+        "ar": "k = 9 × 10⁹ N·m²·C⁻² هي ثابتة كولوم. القيمة الثانية هي G (الجاذبية)، الثالثة c (الضوء)، الرابعة ε₀ (سماحية الفراغ)."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer l'intensité du champ électrique créé par une charge Q = 5 μC à une distance d = 30 cm. (k = 9 × 10⁹ N·m²·C⁻²). Réponse en kN/C.",
+        "ar": "احسب شدة الحقل الكهربائي الذي تنشئه شحنة Q = 5 μC على بعد d = 30 cm. (k = 9 × 10⁹ N·m²·C⁻²). الجواب بـ kN/C."
+      },
+      "answer": 500,
+      "tolerance": 5,
+      "unit": "kN/C",
+      "hint": {
+        "fr": "E = k·|Q|/d². Q = 5 × 10⁻⁶ C, d = 0,3 m.",
+        "ar": "E = k·|Q|/d². Q = 5 × 10⁻⁶ C، d = 0.3 m."
+      },
+      "explanation": {
+        "fr": "E = 9×10⁹ × 5×10⁻⁶ / (0,3)² = 45×10³ / 0,09 = 500×10³ N/C = 500 kN/C.",
+        "ar": "E = 9×10⁹ × 5×10⁻⁶ / (0.3)² = 45×10³ / 0.09 = 500×10³ N/C = 500 kN/C."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'électrisation par frottement consiste à :",
+        "ar": "الكهربة بالدلك تتمثل في :"
+      },
+      "choices": [
+        { "fr": "Transférer des électrons d'un corps à un autre par frottement", "ar": "نقل إلكترونات من جسم إلى آخر بالدلك" },
+        { "fr": "Créer des charges à partir de rien", "ar": "إنشاء شحنات من العدم" },
+        { "fr": "Détruire des charges", "ar": "تدمير شحنات" },
+        { "fr": "Chauffer les deux corps", "ar": "تسخين الجسمين" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Le frottement transfère des électrons d'un corps à l'autre. Un corps perd des électrons (devient +), l'autre en gagne (devient -). La charge totale est conservée.",
+        "ar": "الدلك ينقل إلكترونات من جسم إلى آخر. جسم يفقد إلكترونات (يصبح +)، والآخر يكسبها (يصبح -). الشحنة الكلية محفوظة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Si on double la distance entre deux charges, la force électrostatique est divisée par combien ?",
+        "ar": "إذا ضاعفنا المسافة بين شحنتين، تُقسم القوة الكهروسكونية على كم ?"
+      },
+      "answer": 4,
+      "tolerance": 0,
+      "unit": "",
+      "hint": {
+        "fr": "F est inversement proportionnelle à d². Si d → 2d, alors F → F/(2²).",
+        "ar": "F تتناسب عكسياً مع d². إذا d → 2d، فإن F → F/(2²)."
+      },
+      "explanation": {
+        "fr": "F ∝ 1/d². Si d est doublée : F' = k·q₁·q₂/(2d)² = F/4. La force est divisée par 4.",
+        "ar": "F ∝ 1/d². إذا تضاعفت d: F' = k·q₁·q₂/(2d)² = F/4. القوة تُقسم على 4."
+      }
+    }
+  ]
+}

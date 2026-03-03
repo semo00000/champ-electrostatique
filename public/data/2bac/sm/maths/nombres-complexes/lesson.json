@@ -1,0 +1,249 @@
+{
+  "id": "nombres-complexes",
+  "title": {
+    "fr": "Nombres Complexes",
+    "ar": "الأعداد المركبة"
+  },
+  "objectives": {
+    "fr": [
+      "Ecrire un nombre complexe sous forme algébrique z = a + bi",
+      "Calculer le module, le conjugué et l'argument d'un nombre complexe",
+      "Ecrire un nombre complexe sous forme trigonométrique et exponentielle (formule d'Euler)",
+      "Appliquer la formule de De Moivre pour calculer des puissances",
+      "Déterminer les racines n-ièmes de l'unité et résoudre z^n = w"
+    ],
+    "ar": [
+      "كتابة عدد مركب على الشكل الجبري z = a + bi",
+      "حساب المعامل والمرافق والعمدة لعدد مركب",
+      "كتابة عدد مركب على الشكل المثلثي والشكل الأسي (صيغة أويلر)",
+      "تطبيق صيغة دو موافر لحساب القوى",
+      "تحديد الجذور النونية للوحدة وحل z^n = w"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Forme algébrique z = a + bi",
+        "ar": "1. الشكل الجبري z = a + bi"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Nombre complexe",
+        "ar": "عدد مركب"
+      },
+      "text": {
+        "fr": "Un nombre complexe est un élément de la forme z = a + bi, où a et b sont des réels et i est l'unité imaginaire vérifiant i² = −1. On appelle a = Re(z) la partie réelle et b = Im(z) la partie imaginaire. L'ensemble des nombres complexes est noté ℂ.",
+        "ar": "العدد المركب هو عنصر من الشكل z = a + bi، حيث a و b عددان حقيقيان و i هو الوحدة التخيلية التي تحقق i² = −1. نسمي a = Re(z) الجزء الحقيقي و b = Im(z) الجزء التخيلي. مجموعة الأعداد المركبة يُرمز لها بـ ℂ."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Les opérations sur les nombres complexes s'effectuent comme pour les réels, en utilisant la règle i² = −1. Deux nombres complexes z₁ = a₁ + b₁i et z₂ = a₂ + b₂i sont égaux si et seulement si a₁ = a₂ et b₁ = b₂. Le produit est z₁·z₂ = (a₁a₂ − b₁b₂) + (a₁b₂ + a₂b₁)i.",
+        "ar": "العمليات على الأعداد المركبة تُجرى كما في الأعداد الحقيقية، باستعمال القاعدة i² = −1. عددان مركبان z₁ = a₁ + b₁i و z₂ = a₂ + b₂i متساويان إذا وفقط إذا a₁ = a₂ و b₁ = b₂. الجداء هو z₁·z₂ = (a₁a₂ − b₁b₂) + (a₁b₂ + a₂b₁)i."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Module et conjugué",
+        "ar": "2. المعامل والمرافق"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Module d'un nombre complexe",
+        "ar": "معامل عدد مركب"
+      },
+      "text": {
+        "fr": "Le module de z = a + bi est |z| = √(a² + b²). Géométriquement, c'est la distance du point M(a, b) à l'origine O dans le plan complexe. Propriété fondamentale : |z|² = z·z̄ = a² + b².",
+        "ar": "معامل z = a + bi هو |z| = √(a² + b²). هندسيا، هو المسافة من النقطة M(a, b) إلى الأصل O في المستوى المركب. الخاصية الأساسية: |z|² = z·z̄ = a² + b²."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "|z| = \\sqrt{a^2 + b^2}, \\qquad |z|^2 = z \\cdot \\bar{z} = a^2 + b^2",
+      "note": {
+        "fr": "Module et propriété fondamentale reliant z, son conjugué et son module",
+        "ar": "المعامل والخاصية الأساسية التي تربط z بمرافقه ومعامله"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Conjugué",
+        "ar": "المرافق"
+      },
+      "text": {
+        "fr": "Le conjugué de z = a + bi est z̄ = a − bi. Propriétés principales : z + z̄ = 2·Re(z), z − z̄ = 2i·Im(z), conjugué(z₁·z₂) = z̄₁·z̄₂, conjugué(z₁ + z₂) = z̄₁ + z̄₂, et z·z̄ = |z|².",
+        "ar": "مرافق z = a + bi هو z̄ = a − bi. الخاصيات الرئيسية: z + z̄ = 2·Re(z)، z − z̄ = 2i·Im(z)، مرافق(z₁·z₂) = z̄₁·z̄₂، مرافق(z₁ + z₂) = z̄₁ + z̄₂، و z·z̄ = |z|²."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Argument et forme trigonométrique",
+        "ar": "3. العمدة والشكل المثلثي"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Argument d'un nombre complexe",
+        "ar": "عمدة عدد مركب"
+      },
+      "text": {
+        "fr": "L'argument de z ≠ 0, noté arg(z), est l'angle θ ∈ ]−π, π] que fait le vecteur OM avec l'axe des abscisses. Il est défini modulo 2π. On a cos(θ) = a/|z| et sin(θ) = b/|z|.",
+        "ar": "عمدة z ≠ 0، ويُرمز لها arg(z)، هي الزاوية θ ∈ ]−π, π] التي يصنعها الشعاع OM مع محور الأفاصيل. تُعرّف بمعامل 2π. لدينا cos(θ) = a/|z| و sin(θ) = b/|z|."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Forme trigonométrique : tout nombre complexe z ≠ 0 s'écrit z = r(cosθ + i·sinθ) où r = |z| > 0 et θ = arg(z). Formule d'Euler : e^{iθ} = cosθ + i·sinθ, donc z = r·e^{iθ}.",
+        "ar": "الشكل المثلثي: كل عدد مركب z ≠ 0 يُكتب z = r(cosθ + i·sinθ) حيث r = |z| > 0 و θ = arg(z). صيغة أويلر: e^{iθ} = cosθ + i·sinθ، إذن z = r·e^{iθ}."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "z = r(\\cos\\theta + i\\sin\\theta) = r\\,e^{i\\theta}, \\quad r = |z|, \\; \\theta = \\arg(z)",
+      "note": {
+        "fr": "Formes trigonométrique et exponentielle (Euler) d'un nombre complexe",
+        "ar": "الشكل المثلثي والشكل الأسي (أويلر) لعدد مركب"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 1 : Conversion en forme trigonométrique",
+        "ar": "مثال 1: التحويل إلى الشكل المثلثي"
+      },
+      "problem": {
+        "fr": "Ecrire z = 1 + i sous forme trigonométrique et exponentielle.",
+        "ar": "اكتب z = 1 + i على الشكل المثلثي والشكل الأسي."
+      },
+      "solution": {
+        "fr": "|z| = √(1² + 1²) = √2. On a cos(θ) = 1/√2 et sin(θ) = 1/√2, donc θ = π/4. Ainsi z = √2(cos(π/4) + i·sin(π/4)) = √2·e^{iπ/4}.",
+        "latex": "z = \\sqrt{2}\\left(\\cos\\frac{\\pi}{4} + i\\sin\\frac{\\pi}{4}\\right) = \\sqrt{2}\\,e^{i\\pi/4}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Opérations en forme trigonométrique",
+        "ar": "4. العمليات بالشكل المثلثي"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "z_1 \\cdot z_2 = r_1 r_2 \\, e^{i(\\theta_1 + \\theta_2)}, \\qquad \\frac{z_1}{z_2} = \\frac{r_1}{r_2} \\, e^{i(\\theta_1 - \\theta_2)}",
+      "note": {
+        "fr": "Multiplication : les modules se multiplient et les arguments s'ajoutent. Division : les modules se divisent et les arguments se soustraient.",
+        "ar": "الضرب: المعاملات تُضرب والعمدات تُجمع. القسمة: المعاملات تُقسم والعمدات تُطرح."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "|z₁·z₂| = |z₁|·|z₂| et arg(z₁·z₂) = arg(z₁) + arg(z₂) [2π]",
+          "|z₁/z₂| = |z₁|/|z₂| et arg(z₁/z₂) = arg(z₁) − arg(z₂) [2π]",
+          "|z^n| = |z|^n et arg(z^n) = n·arg(z) [2π]"
+        ],
+        "ar": [
+          "|z₁·z₂| = |z₁|·|z₂| و arg(z₁·z₂) = arg(z₁) + arg(z₂) [2π]",
+          "|z₁/z₂| = |z₁|/|z₂| و arg(z₁/z₂) = arg(z₁) − arg(z₂) [2π]",
+          "|z^n| = |z|^n و arg(z^n) = n·arg(z) [2π]"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Formule de De Moivre",
+        "ar": "5. صيغة دو موافر"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Formule de De Moivre : pour tout entier n ∈ ℤ, (cosθ + i·sinθ)^n = cos(nθ) + i·sin(nθ). Cette formule permet de développer cos(nθ) et sin(nθ) en puissances de cosθ et sinθ (linéarisation).",
+        "ar": "صيغة دو موافر: لكل عدد صحيح n ∈ ℤ، (cosθ + i·sinθ)^n = cos(nθ) + i·sin(nθ). هذه الصيغة تمكن من تطوير cos(nθ) و sin(nθ) بدلالة قوى cosθ و sinθ (التخطيط)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "(\\cos\\theta + i\\sin\\theta)^n = \\cos(n\\theta) + i\\sin(n\\theta), \\quad \\forall n \\in \\mathbb{Z}",
+      "note": {
+        "fr": "Formule de De Moivre",
+        "ar": "صيغة دو موافر"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 2 : Application de De Moivre pour linéariser cos(3θ)",
+        "ar": "مثال 2: تطبيق صيغة دو موافر لتخطيط cos(3θ)"
+      },
+      "problem": {
+        "fr": "Exprimer cos(3θ) et sin(3θ) en fonction de cosθ et sinθ.",
+        "ar": "عبّر عن cos(3θ) و sin(3θ) بدلالة cosθ و sinθ."
+      },
+      "solution": {
+        "fr": "Par De Moivre : (cosθ + i·sinθ)³ = cos(3θ) + i·sin(3θ). En développant le cube par le binôme de Newton : cos³θ + 3i·cos²θ·sinθ − 3cosθ·sin²θ − i·sin³θ. En identifiant parties réelle et imaginaire : cos(3θ) = cos³θ − 3cosθ·sin²θ = 4cos³θ − 3cosθ et sin(3θ) = 3cos²θ·sinθ − sin³θ = 3sinθ − 4sin³θ.",
+        "latex": "\\cos(3\\theta) = 4\\cos^3\\theta - 3\\cos\\theta, \\quad \\sin(3\\theta) = 3\\sin\\theta - 4\\sin^3\\theta"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Racines n-ièmes de l'unité",
+        "ar": "6. الجذور النونية للوحدة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Racines n-ièmes de l'unité",
+        "ar": "الجذور النونية للوحدة"
+      },
+      "text": {
+        "fr": "Les racines n-ièmes de l'unité sont les n solutions de l'équation z^n = 1 dans ℂ. Elles sont données par ω_k = e^{2ikπ/n} pour k = 0, 1, ..., n−1. Ces n points forment un polygone régulier à n côtés inscrit dans le cercle unité.",
+        "ar": "الجذور النونية للوحدة هي الحلول n للمعادلة z^n = 1 في ℂ. تُعطى بالصيغة ω_k = e^{2ikπ/n} حيث k = 0, 1, ..., n−1. هذه النقاط n تشكل مضلعا منتظما ذا n أضلاع مرسوما في الدائرة الوحدة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "z^n = 1 \\iff z = \\omega_k = e^{\\frac{2ik\\pi}{n}}, \\quad k \\in \\{0, 1, \\ldots, n-1\\}",
+      "note": {
+        "fr": "Les n racines n-ièmes de l'unité. Leur somme vaut 0 : ω₀ + ω₁ + ... + ω_{n−1} = 0.",
+        "ar": "الجذور النونية n للوحدة. مجموعها يساوي 0: ω₀ + ω₁ + ... + ω_{n−1} = 0."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 3 : Racines cubiques de l'unité",
+        "ar": "مثال 3: الجذور التكعيبية للوحدة"
+      },
+      "problem": {
+        "fr": "Déterminer les trois racines cubiques de 1 sous forme algébrique.",
+        "ar": "حدد الجذور التكعيبية الثلاثة للعدد 1 على الشكل الجبري."
+      },
+      "solution": {
+        "fr": "z³ = 1 donne z_k = e^{2ikπ/3} pour k = 0, 1, 2. Soit : z₀ = 1, z₁ = e^{2iπ/3} = cos(2π/3) + i·sin(2π/3) = −1/2 + i√3/2, z₂ = e^{4iπ/3} = cos(4π/3) + i·sin(4π/3) = −1/2 − i√3/2. On note souvent j = z₁ et j² = z₂, avec 1 + j + j² = 0.",
+        "latex": "z_0 = 1, \\quad z_1 = j = -\\frac{1}{2} + i\\frac{\\sqrt{3}}{2}, \\quad z_2 = j^2 = -\\frac{1}{2} - i\\frac{\\sqrt{3}}{2}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "id": "lois-de-newton",
+  "title": {
+    "fr": "Lois de Newton",
+    "ar": "قوانين نيوتن"
+  },
+  "objectives": {
+    "fr": [
+      "Énoncer et appliquer les trois lois de Newton",
+      "Définir un référentiel galiléen (inertiel)",
+      "Dresser un bilan des forces (diagramme de corps libre)",
+      "Appliquer la deuxième loi de Newton : ΣF⃗ = ma⃗",
+      "Identifier et calculer le poids, la réaction normale, la friction et la tension",
+      "Résoudre des problèmes de mécanique sur le plan incliné et les systèmes de poulies"
+    ],
+    "ar": [
+      "صياغة وتطبيق قوانين نيوتن الثلاثة",
+      "تعريف مرجع غاليلي (عطالي)",
+      "إنجاز جرد القوى (مخطط الجسم الحر)",
+      "تطبيق القانون الثاني لنيوتن: ΣF⃗ = ma⃗",
+      "تحديد وحساب الوزن، رد الفعل العمودي، الاحتكاك والتوتر",
+      "حل مسائل ميكانيكية على المستوى المائل وأنظمة البكرات"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Référentiels galiléens",
+        "ar": "1. المراجع الغاليلية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Référentiel galiléen (inertiel)", "ar": "المرجع الغاليلي (العطالي)" },
+      "text": {
+        "fr": "Un référentiel galiléen est un référentiel dans lequel un corps isolé (non soumis à des forces ou soumis à des forces qui se compensent) est soit au repos, soit en mouvement rectiligne uniforme. Les lois de Newton ne sont valables que dans un référentiel galiléen. Le référentiel terrestre est considéré comme galiléen pour des expériences de courte durée."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Première loi de Newton : principe d'inertie",
+        "ar": "2. القانون الأول لنيوتن: مبدأ العطالة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Dans un référentiel galiléen, tout corps persévère dans son état de repos ou de mouvement rectiligne uniforme si et seulement si la somme vectorielle des forces extérieures qui s'exercent sur lui est nulle :",
+        "ar": "في مرجع غاليلي، كل جسم يبقى في حالة سكون أو حركة مستقيمية منتظمة إذا وفقط إذا كان مجموع القوى الخارجية المؤثرة عليه منعدمًا:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\sum \\vec{F}_{ext} = \\vec{0} \\quad \\Leftrightarrow \\quad \\vec{v} = \\text{constante (ou } \\vec{0}\\text{)}",
+      "note": {
+        "fr": "Ce principe définit aussi les référentiels galiléens"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Deuxième loi de Newton : principe fondamental de la dynamique",
+        "ar": "3. القانون الثاني لنيوتن: المبدأ الأساسي للديناميك"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Dans un référentiel galiléen, la somme vectorielle des forces extérieures appliquées à un corps est égale au produit de sa masse par son vecteur accélération :",
+        "ar": "في مرجع غاليلي، مجموع القوى الخارجية المطبقة على جسم يساوي جداء كتلته في شعاع تسارعه:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\sum \\vec{F}_{ext} = m\\vec{a}",
+      "note": {
+        "fr": "m en kg, a⃗ en m/s², F en Newton (N). 1 N = 1 kg·m/s²"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "L'accélération est dans le même sens et la même direction que la résultante des forces. La masse m est le coefficient d'inertie : plus elle est grande, plus il est difficile de modifier le mouvement du corps.",
+        "ar": "التسارع يكون في نفس اتجاه ومنحى محصلة القوى. الكتلة m هي معامل العطالة: كلما كانت أكبر، كان تغيير حركة الجسم أصعب."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Troisième loi de Newton : principe des actions réciproques",
+        "ar": "4. القانون الثالث لنيوتن: مبدأ الفعل ورد الفعل"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Si un corps A exerce une force F⃗(A/B) sur un corps B, alors B exerce simultanément sur A une force F⃗(B/A) telle que :",
+        "ar": "إذا أثر جسم A بقوة F⃗(A/B) على جسم B، فإن B يؤثر في نفس الوقت على A بقوة F⃗(B/A) بحيث:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\vec{F}_{A/B} = -\\vec{F}_{B/A}",
+      "note": {
+        "fr": "Les deux forces ont la même droite d'action, la même intensité, mais des sens opposés. Elles s'exercent sur deux corps différents."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Bilan des forces et diagramme de corps libre",
+        "ar": "5. جرد القوى ومخطط الجسم الحر"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Avant d'appliquer la deuxième loi de Newton, il faut identifier toutes les forces extérieures agissant sur le système étudié. Les forces les plus courantes sont :",
+        "ar": "قبل تطبيق القانون الثاني لنيوتن، يجب تحديد جميع القوى الخارجية المؤثرة على الجملة المدروسة. القوى الأكثر شيوعًا هي:"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Poids : P⃗ = mg⃗ (vertical, vers le bas, g ≈ 9,8 m/s²)",
+          "Réaction normale du support : N⃗ (perpendiculaire à la surface de contact)",
+          "Force de frottement : f⃗ (tangente à la surface, opposée au mouvement ou à sa tendance, f = μN)",
+          "Tension d'un fil : T⃗ (le long du fil, dirigée vers l'extérieur du système)",
+          "Force appliquée extérieure : F⃗ (direction et sens donnés par l'énoncé)"
+        ],
+        "ar": [
+          "الوزن: P⃗ = mg⃗ (شاقولي، نحو الأسفل، g ≈ 9,8 m/s²)",
+          "رد الفعل العمودي للسند: N⃗ (عمودي على سطح التماس)",
+          "قوة الاحتكاك: f⃗ (مماسة للسطح، معاكسة للحركة أو ميلها، f = μN)",
+          "توتر الخيط: T⃗ (على طول الخيط، موجه نحو خارج الجملة)",
+          "القوة الخارجية المطبقة: F⃗ (الاتجاه والمنحى معطيان في النص)"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Application : le plan incliné",
+        "ar": "6. تطبيق: المستوى المائل"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Mouvement sur un plan incliné sans frottement" },
+      "problem": {
+        "fr": "Un bloc de masse m = 2 kg est posé sur un plan incliné d'angle α = 30° par rapport à l'horizontale, sans frottement. 1) Faire le bilan des forces. 2) Déterminer l'accélération du bloc. 3) Calculer la réaction normale N."
+      },
+      "solution": {
+        "fr": "1) Forces : Poids P⃗ = mg⃗ et réaction normale N⃗. En projetant sur l'axe du plan (x parallèle au plan, vers le bas) et l'axe perpendiculaire (y) :\n2) Axe x : mg·sinα = ma → a = g·sinα = 9,8 × sin(30°) = 9,8 × 0,5 = 4,9 m/s².\n3) Axe y : N − mg·cosα = 0 → N = mg·cosα = 2 × 9,8 × cos(30°) = 2 × 9,8 × 0,866 = 16,97 N.",
+        "latex": "a = g\\sin\\alpha = 9{,}8 \\times \\sin 30° = 4{,}9\\text{ m/s}^2 \\quad;\\quad N = mg\\cos\\alpha = 2 \\times 9{,}8 \\times \\cos 30° \\approx 17{,}0\\text{ N}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "7. Application : système de poulies",
+        "ar": "7. تطبيق: نظام البكرات"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour un système de deux masses m₁ et m₂ reliées par un fil inextensible passant sur une poulie idéale (machine d'Atwood), avec m₁ > m₂ :\n- L'accélération du système est a = (m₁ − m₂)g/(m₁ + m₂)\n- La tension du fil est T = 2m₁m₂g/(m₁ + m₂)",
+        "ar": "بالنسبة لنظام كتلتين m₁ و m₂ مرتبطتين بخيط غير قابل للتمدد يمر عبر بكرة مثالية (آلة أتوود)، مع m₁ > m₂:\n- تسارع النظام هو a = (m₁ − m₂)g/(m₁ + m₂)\n- توتر الخيط هو T = 2m₁m₂g/(m₁ + m₂)"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "a = \\frac{(m_1 - m_2)\\,g}{m_1 + m_2} \\qquad;\\qquad T = \\frac{2m_1 m_2\\,g}{m_1 + m_2}",
+      "note": {
+        "fr": "Machine d'Atwood : poulie idéale (sans masse, sans frottement), fil inextensible et de masse négligeable"
+      }
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "especes-chimiques",
+  "title": { "fr": "Les Espèces Chimiques", "ar": "الأنواع الكيميائية" },
+  "objectives": {
+    "fr": [
+      "Distinguer corps pur et mélange",
+      "Connaître les différents types d'espèces chimiques",
+      "Identifier les espèces chimiques naturelles et synthétiques",
+      "Connaître les propriétés physiques caractéristiques d'une espèce chimique"
+    ],
+    "ar": [
+      "التمييز بين الجسم الخالص والخليط",
+      "معرفة الأنواع المختلفة للأنواع الكيميائية",
+      "تحديد الأنواع الكيميائية الطبيعية والمصنعة",
+      "معرفة الخصائص الفيزيائية المميزة لنوع كيميائي"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Qu'est-ce qu'une espèce chimique ?", "ar": "1. ما هو النوع الكيميائي؟" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Espèce chimique", "ar": "النوع الكيميائي" },
+      "text": {
+        "fr": "Une espèce chimique est un ensemble d'entités moléculaires, ioniques ou atomiques identiques. Chaque espèce chimique est caractérisée par sa formule chimique, son nom et ses propriétés physiques et chimiques.",
+        "ar": "النوع الكيميائي هو مجموعة من الكيانات الجزيئية أو الأيونية أو الذرية المتماثلة."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "<strong>Espèce moléculaire</strong> : formée de molécules (ex : $H_2O$, $C_6H_{12}O_6$)",
+          "<strong>Espèce ionique</strong> : formée d'ions (ex : $Na^+$, $Cl^-$, $NaCl$)",
+          "<strong>Espèce atomique</strong> : formée d'atomes libres (ex : $He$, $Ne$)"
+        ],
+        "ar": [
+          "<strong>نوع جزيئي</strong>: مكون من جزيئات (مثل: $H_2O$)",
+          "<strong>نوع أيوني</strong>: مكون من أيونات (مثل: $Na^+$، $Cl^-$)",
+          "<strong>نوع ذري</strong>: مكون من ذرات حرة (مثل: $He$)"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Corps pur et mélange", "ar": "2. الجسم الخالص والخليط" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Corps pur", "ar": "الجسم الخالص" },
+      "text": {
+        "fr": "Un corps pur est constitué d'une seule espèce chimique. Exemple : l'eau distillée (uniquement $H_2O$), le fer pur (uniquement $Fe$).",
+        "ar": "الجسم الخالص يتكون من نوع كيميائي واحد فقط. مثال: الماء المقطر ($H_2O$ فقط)."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Mélange", "ar": "الخليط" },
+      "text": {
+        "fr": "Un mélange est constitué de plusieurs espèces chimiques. Il peut être homogène (une seule phase visible, ex : eau salée) ou hétérogène (plusieurs phases visibles, ex : eau + huile).",
+        "ar": "الخليط يتكون من عدة أنواع كيميائية. يمكن أن يكون متجانسا (طور واحد مرئي) أو غير متجانس (عدة أطوار مرئية)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Propriétés physiques caractéristiques", "ar": "3. الخصائص الفيزيائية المميزة" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Chaque espèce chimique possède des propriétés physiques qui permettent de l'identifier :",
+        "ar": "لكل نوع كيميائي خصائص فيزيائية تسمح بتحديد هويته:"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "<strong>Température de fusion</strong> $T_f$ : température à laquelle le solide se transforme en liquide",
+          "<strong>Température d'ébullition</strong> $T_{eb}$ : température à laquelle le liquide se transforme en gaz",
+          "<strong>Masse volumique</strong> $\\rho = \\frac{m}{V}$ : masse par unité de volume (kg/m³ ou g/mL)",
+          "<strong>Indice de réfraction</strong> $n$ : rapport de la vitesse de la lumière dans le vide sur celle dans le milieu",
+          "<strong>Solubilité</strong> : quantité maximale pouvant être dissoute dans un solvant"
+        ],
+        "ar": [
+          "<strong>درجة حرارة الانصهار</strong> $T_f$",
+          "<strong>درجة حرارة الغليان</strong> $T_{eb}$",
+          "<strong>الكتلة الحجمية</strong> $\\rho = \\frac{m}{V}$",
+          "<strong>قرينة الانكسار</strong> $n$",
+          "<strong>قابلية الذوبان</strong>"
+        ]
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Un corps pur a une température de fusion et d'ébullition précises (paliers sur les courbes de changement d'état). Un mélange n'a pas de palier net : la température varie pendant le changement d'état.",
+        "ar": "للجسم الخالص درجة انصهار وغليان محددة. الخليط ليس له مستوى واضح."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Espèces naturelles et synthétiques", "ar": "4. الأنواع الطبيعية والمصنعة" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Les espèces chimiques naturelles se trouvent dans la nature (ex : acide citrique dans le citron, vanilline dans la vanille). Les espèces synthétiques sont fabriquées par l'homme en laboratoire ou en usine. Une espèce synthétique peut être identique à une espèce naturelle (ex : vanilline de synthèse) ou n'avoir aucun équivalent naturel (ex : nylon, PVC).",
+        "ar": "الأنواع الكيميائية الطبيعية توجد في الطبيعة. الأنواع المصنعة يصنعها الإنسان في المختبر أو المصنع."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Identification par les propriétés physiques", "ar": "مثال: التعرف بالخصائص الفيزيائية" },
+      "problem": {
+        "fr": "Un liquide incolore a une température d'ébullition de 78°C et une masse volumique de 0,79 g/mL. Identifier ce liquide.",
+        "ar": "سائل عديم اللون له درجة غليان 78°C وكتلة حجمية 0.79 g/mL. حدد هذا السائل."
+      },
+      "solution": {
+        "fr": "En comparant avec les tables de données : $T_{eb} = 78°C$ et $\\rho = 0{,}79\\,g/mL$ correspondent à l'éthanol ($C_2H_5OH$). L'eau a $T_{eb} = 100°C$ et $\\rho = 1{,}00\\,g/mL$, ce n'est donc pas de l'eau."
+      }
+    }
+  ]
+}

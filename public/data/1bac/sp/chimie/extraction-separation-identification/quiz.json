@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Pour réaliser une extraction liquide-liquide, les deux solvants doivent être :",
+        "ar": "لإنجاز استخلاص سائل-سائل، يجب أن يكون المذيبان:"
+      },
+      "choices": [
+        { "fr": "Miscibles et de même densité", "ar": "قابلين للامتزاج وبنفس الكثافة" },
+        { "fr": "Non miscibles et de densités différentes", "ar": "غير قابلين للامتزاج وبكثافات مختلفة" },
+        { "fr": "De même température d'ébullition", "ar": "بنفس درجة الغليان" },
+        { "fr": "Tous les deux organiques", "ar": "عضويين معا" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Pour une extraction liquide-liquide dans une ampoule à décanter, les deux solvants doivent être non miscibles (former deux phases distinctes) et de densités différentes pour pouvoir les séparer.",
+        "ar": "للاستخلاص سائل-سائل في قمع الفصل، يجب أن يكون المذيبان غير قابلين للامتزاج (يشكلان طورين مختلفين) وبكثافات مختلفة لتمكين الفصل."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "En chromatographie sur couche mince (CCM), le rapport frontal Rf d'une espèce est :",
+        "ar": "في الكروماتوغرافيا على طبقة رقيقة (CCM)، النسبة الأمامية Rf لنوع هي:"
+      },
+      "choices": [
+        { "fr": "Le rapport de la distance parcourue par l'espèce sur la distance parcourue par l'éluant", "ar": "نسبة المسافة المقطوعة من النوع على المسافة المقطوعة من المُسيّل" },
+        { "fr": "La masse de l'espèce divisée par le volume", "ar": "كتلة النوع مقسومة على الحجم" },
+        { "fr": "Toujours supérieur à 1", "ar": "دائما أكبر من 1" },
+        { "fr": "Le rapport de la masse sur la masse molaire", "ar": "نسبة الكتلة على الكتلة المولية" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Rf = distance parcourue par l'espèce / distance parcourue par le front de l'éluant. C'est un nombre compris entre 0 et 1, caractéristique d'une espèce dans des conditions données.",
+        "ar": "Rf = المسافة المقطوعة من النوع / المسافة المقطوعة من جبهة المُسيّل. هو عدد بين 0 و 1، مميز لنوع في شروط معينة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La distillation permet de séparer les composants d'un mélange en exploitant :",
+        "ar": "يمكّن التقطير من فصل مكونات خليط باستغلال:"
+      },
+      "choices": [
+        { "fr": "La différence de solubilité", "ar": "اختلاف الذوبانية" },
+        { "fr": "La différence de température d'ébullition", "ar": "اختلاف درجة الغليان" },
+        { "fr": "La différence de couleur", "ar": "اختلاف اللون" },
+        { "fr": "La différence de masse molaire uniquement", "ar": "اختلاف الكتلة المولية فقط" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La distillation sépare les composants d'un mélange homogène en exploitant leurs différentes températures d'ébullition. Le composant le plus volatil (Teb la plus basse) s'évapore en premier.",
+        "ar": "يفصل التقطير مكونات خليط متجانس باستغلال اختلاف درجات غليانها. المكون الأكثر تطايرا (أدنى Teb) يتبخر أولا."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Un corps pur se caractérise par :",
+        "ar": "يتميز الجسم الخالص بـ:"
+      },
+      "choices": [
+        { "fr": "Une température de changement d'état qui varie pendant la transformation", "ar": "درجة حرارة تغير الحالة تتغير أثناء التحول" },
+        { "fr": "Un palier de température net lors du changement d'état", "ar": "مستوى واضح لدرجة الحرارة أثناء تغير الحالة" },
+        { "fr": "Plusieurs taches en CCM", "ar": "عدة بقع في CCM" },
+        { "fr": "L'absence de température d'ébullition", "ar": "غياب درجة الغليان" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Un corps pur présente un palier (plateau) net de température lors d'un changement d'état. Un mélange, lui, n'a pas de palier net : la température continue de varier pendant la transformation.",
+        "ar": "يُظهر الجسم الخالص مستوى واضحا لدرجة الحرارة أثناء تغير الحالة. الخليط لا يملك مستوى واضحا: الحرارة تستمر في التغير أثناء التحول."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'hydrodistillation est principalement utilisée pour :",
+        "ar": "يُستعمل التقطير المائي أساسا لـ:"
+      },
+      "choices": [
+        { "fr": "Purifier l'eau du robinet", "ar": "تنقية ماء الصنبور" },
+        { "fr": "Extraire les huiles essentielles des plantes", "ar": "استخلاص الزيوت الأساسية من النباتات" },
+        { "fr": "Séparer le sel de l'eau de mer", "ar": "فصل الملح عن ماء البحر" },
+        { "fr": "Identifier les ions en solution", "ar": "التعرف على الأيونات في المحلول" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "L'hydrodistillation (entraînement à la vapeur d'eau) est la méthode classique pour extraire les huiles essentielles des plantes aromatiques. La vapeur d'eau entraîne les molécules volatiles de l'huile essentielle.",
+        "ar": "التقطير المائي (الجر ببخار الماء) هو الطريقة الكلاسيكية لاستخلاص الزيوت الأساسية من النباتات العطرية. يجر بخار الماء الجزيئات المتطايرة للزيت الأساسي."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La recristallisation est une technique qui permet de :",
+        "ar": "إعادة التبلور تقنية تمكن من:"
+      },
+      "choices": [
+        { "fr": "Séparer deux liquides non miscibles", "ar": "فصل سائلين غير قابلين للامتزاج" },
+        { "fr": "Purifier un solide en exploitant la variation de sa solubilité avec la température", "ar": "تنقية مادة صلبة باستغلال تغير ذوبانيتها مع الحرارة" },
+        { "fr": "Identifier un gaz", "ar": "التعرف على غاز" },
+        { "fr": "Mesurer la masse volumique", "ar": "قياس الكتلة الحجمية" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La recristallisation purifie un solide en le dissolvant dans un minimum de solvant chaud, puis en le faisant cristalliser lentement par refroidissement. Les impuretés restent en solution car elles sont en plus faible quantité.",
+        "ar": "تنقي إعادة التبلور مادة صلبة بإذابتها في أقل كمية من مذيب ساخن، ثم تبليرها ببطء بالتبريد. تبقى الشوائب في المحلول لأنها بكمية أقل."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "En CCM, une espèce a migré de 3,6 cm et le front de l'éluant de 6,0 cm. Quel est le Rf de cette espèce ?",
+        "ar": "في CCM، هاجر نوع كيميائي مسافة 3,6 cm وجبهة المُسيّل 6,0 cm. ما قيمة Rf لهذا النوع؟"
+      },
+      "answer": 0.6,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": {
+        "fr": "Rf = distance de l'espèce / distance de l'éluant.",
+        "ar": "Rf = مسافة النوع / مسافة المُسيّل."
+      },
+      "explanation": {
+        "fr": "Rf = 3,6 / 6,0 = 0,60. Ce rapport frontal est sans unité et compris entre 0 et 1.",
+        "ar": "Rf = 3,6 / 6,0 = 0,60. هذه النسبة الأمامية بدون وحدة ومحصورة بين 0 و 1."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Lors d'une extraction par solvant, l'espèce chimique extraite passe préférentiellement dans :",
+        "ar": "أثناء الاستخلاص بالمذيب، ينتقل النوع الكيميائي المستخلص تفضيليا إلى:"
+      },
+      "choices": [
+        { "fr": "Le solvant dans lequel elle est la moins soluble", "ar": "المذيب الذي يكون فيه أقل ذوبانية" },
+        { "fr": "Le solvant dans lequel elle est la plus soluble", "ar": "المذيب الذي يكون فيه أكثر ذوبانية" },
+        { "fr": "Le solvant le plus dense systématiquement", "ar": "المذيب الأكثر كثافة دائما" },
+        { "fr": "Le solvant le plus volatil", "ar": "المذيب الأكثر تطايرا" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "L'espèce chimique passe dans le solvant où elle est la plus soluble. C'est le principe fondamental de l'extraction : le soluté se répartit entre les deux solvants en fonction de sa solubilité dans chacun d'eux.",
+        "ar": "ينتقل النوع الكيميائي إلى المذيب الذي يكون فيه أكثر ذوبانية. هذا هو المبدأ الأساسي للاستخلاص: يتوزع المذاب بين المذيبين حسب ذوبانيته في كل منهما."
+      }
+    }
+  ]
+}

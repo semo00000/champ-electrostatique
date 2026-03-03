@@ -1,0 +1,155 @@
+{
+  "id": "reactions-oxydoreduction",
+  "title": {
+    "fr": "Les reactions d'oxydoreduction",
+    "ar": "تفاعلات الأكسدة والاختزال"
+  },
+  "objectives": {
+    "fr": [
+      "Definir l'oxydation et la reduction",
+      "Identifier l'oxydant et le reducteur dans une reaction",
+      "Ecrire les demi-equations electroniques",
+      "Identifier les couples oxydant/reducteur (Ox/Red)",
+      "Equilibrer les equations d'oxydoreduction",
+      "Connaitre la classification electrochimique des metaux"
+    ],
+    "ar": [
+      "تعريف الأكسدة والاختزال",
+      "تحديد المؤكسد والمختزل في تفاعل",
+      "كتابة أنصاف المعادلات الإلكترونية",
+      "تحديد أزواج مؤكسد/مختزل (Ox/Red)",
+      "موازنة معادلات الأكسدة والاختزال",
+      "معرفة التصنيف الكهروكيميائي للمعادن"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Definitions fondamentales",
+        "ar": "1. التعريفات الأساسية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Oxydation" },
+      "text": { "fr": "L'oxydation est une perte d'electrons par une espece chimique. L'espece qui perd des electrons est le reducteur (Red) : elle est oxydee." }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Reduction" },
+      "text": { "fr": "La reduction est un gain d'electrons par une espece chimique. L'espece qui gagne des electrons est l'oxydant (Ox) : elle est reduite." }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Moyen mnemotechnique : le Reducteur est un Donneur d'electrons, l'Oxydant est un Accepteur d'electrons. Une reaction d'oxydoreduction est un transfert d'electrons du reducteur vers l'oxydant.",
+        "ar": "وسيلة للتذكر: المختزل هو مانح للإلكترونات، المؤكسد هو مستقبل للإلكترونات. تفاعل الأكسدة-الاختزال هو انتقال إلكترونات من المختزل إلى المؤكسد."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Couples oxydant/reducteur",
+        "ar": "2. أزواج مؤكسد/مختزل"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un couple oxydant/reducteur (Ox/Red) est constitue de deux especes qui se transforment l'une en l'autre par gain ou perte d'electrons. La demi-equation electronique s'ecrit : Ox + n e⁻ ⇌ Red.",
+        "ar": "يتكون زوج مؤكسد/مختزل (Ox/Red) من نوعين كيميائيين يتحول أحدهما إلى الآخر بفقدان أو اكتساب إلكترونات. نصف المعادلة الإلكترونية تُكتب: Ox + n e⁻ ⇌ Red."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{Ox} + n\\,e^- \\rightleftharpoons \\text{Red}",
+      "note": { "fr": "Demi-equation electronique generique du couple Ox/Red" }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Cu²⁺/Cu : Cu²⁺ + 2e⁻ ⇌ Cu",
+          "Zn²⁺/Zn : Zn²⁺ + 2e⁻ ⇌ Zn",
+          "Fe³⁺/Fe²⁺ : Fe³⁺ + e⁻ ⇌ Fe²⁺",
+          "Ag⁺/Ag : Ag⁺ + e⁻ ⇌ Ag",
+          "MnO₄⁻/Mn²⁺ : MnO₄⁻ + 8H⁺ + 5e⁻ ⇌ Mn²⁺ + 4H₂O",
+          "I₂/I⁻ : I₂ + 2e⁻ ⇌ 2I⁻"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Equilibrage des demi-equations en milieu acide",
+        "ar": "3. موازنة أنصاف المعادلات في وسط حمضي"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour equilibrer une demi-equation en milieu acide, on suit les etapes : (1) equilibrer les atomes de l'element principal, (2) equilibrer les atomes d'oxygene en ajoutant H₂O, (3) equilibrer les atomes d'hydrogene en ajoutant H⁺, (4) equilibrer les charges en ajoutant des electrons e⁻.",
+        "ar": "لموازنة نصف معادلة في وسط حمضي، نتبع المراحل: (1) موازنة ذرات العنصر الرئيسي، (2) موازنة ذرات الأكسجين بإضافة H₂O، (3) موازنة ذرات الهيدروجين بإضافة H⁺، (4) موازنة الشحنات بإضافة إلكترونات e⁻."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Equilibrage du couple MnO₄⁻/Mn²⁺" },
+      "problem": { "fr": "Equilibrer la demi-equation du couple MnO₄⁻/Mn²⁺ en milieu acide." },
+      "solution": {
+        "fr": "Etape 1 : Mn est deja equilibre. Etape 2 : 4 atomes O a gauche → ajouter 4H₂O a droite. Etape 3 : 8H a droite → ajouter 8H⁺ a gauche. Etape 4 : charge a gauche = -1+8 = +7, a droite = +2 → ajouter 5e⁻ a gauche.",
+        "latex": "\\text{MnO}_4^- + 8\\text{H}^+ + 5e^- \\rightarrow \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Ecriture de l'equation bilan d'oxydoreduction",
+        "ar": "4. كتابة المعادلة الإجمالية للأكسدة والاختزال"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour obtenir l'equation bilan, on combine les deux demi-equations de sorte que les electrons s'eliminent. On multiplie chaque demi-equation par un coefficient adequat pour que le nombre d'electrons cedes soit egal au nombre d'electrons captes.",
+        "ar": "للحصول على المعادلة الإجمالية، نجمع نصفي المعادلتين بحيث تُحذف الإلكترونات. نضرب كل نصف معادلة بمعامل مناسب ليكون عدد الإلكترونات المفقودة مساويا لعدد الإلكترونات المكتسبة."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Reaction entre le zinc et le cuivre" },
+      "problem": { "fr": "Ecrire l'equation bilan de la reaction entre le zinc metallique Zn et les ions cuivre Cu²⁺." },
+      "solution": {
+        "fr": "Demi-equations : Zn → Zn²⁺ + 2e⁻ (oxydation) et Cu²⁺ + 2e⁻ → Cu (reduction). Le nombre d'electrons est deja egal (2e⁻). Equation bilan : Zn + Cu²⁺ → Zn²⁺ + Cu.",
+        "latex": "\\text{Zn} + \\text{Cu}^{2+} \\rightarrow \\text{Zn}^{2+} + \\text{Cu}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Classification electrochimique des metaux",
+        "ar": "5. التصنيف الكهروكيميائي للمعادن"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Les metaux sont classes selon leur pouvoir reducteur. Un metal plus reducteur peut deplacer un metal moins reducteur de sa solution. L'ordre de pouvoir reducteur decroissant (classification simplifiee) est : Li > K > Ca > Na > Mg > Al > Zn > Fe > Ni > Sn > Pb > H₂ > Cu > Ag > Pt > Au.",
+        "ar": "تُصنَّف المعادن حسب قدرتها الاختزالية. المعدن الأكثر اختزالا يمكنه أن يُزيح معدنا أقل اختزالا من محلوله. ترتيب القدرة الاختزالية التنازلي (مبسط): Li > K > Ca > Na > Mg > Al > Zn > Fe > Ni > Sn > Pb > H₂ > Cu > Ag > Pt > Au."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Un metal situe au-dessus de l'hydrogene dans la classification peut reagir avec un acide pour liberer du dihydrogene H₂. Exemple : Zn + 2H⁺ → Zn²⁺ + H₂. Le cuivre, situe en dessous de H₂, ne reagit pas avec les acides non oxydants.",
+        "ar": "المعدن الموجود فوق الهيدروجين في التصنيف يمكنه التفاعل مع حمض لتحرير ثنائي الهيدروجين H₂. مثال: Zn + 2H⁺ → Zn²⁺ + H₂. النحاس الموجود تحت H₂ لا يتفاعل مع الأحماض غير المؤكسدة."
+      }
+    }
+  ]
+}

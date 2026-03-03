@@ -1,0 +1,204 @@
+{
+  "id": "applications-lois-de-newton",
+  "title": {
+    "fr": "Applications des lois de Newton",
+    "ar": "تطبيقات قوانين نيوتن"
+  },
+  "objectives": {
+    "fr": [
+      "Étudier le mouvement d'un projectile dans un champ de pesanteur uniforme",
+      "Analyser le mouvement circulaire et l'accélération centripète a = v²/r",
+      "Appliquer les lois de Newton au mouvement des satellites et à la mécanique orbitale",
+      "Étudier l'oscillateur harmonique (système masse-ressort)",
+      "Énoncer et appliquer la loi de Hooke F = −kx",
+      "Déterminer la période des oscillations T = 2π√(m/k)"
+    ],
+    "ar": [
+      "دراسة حركة قذيفة في حقل ثقالي منتظم",
+      "تحليل الحركة الدائرية والتسارع المركزي a = v²/r",
+      "تطبيق قوانين نيوتن على حركة الأقمار الاصطناعية والميكانيكا المدارية",
+      "دراسة المتذبذب التوافقي (نظام كتلة-نابض)",
+      "صياغة وتطبيق قانون هوك F = −kx",
+      "تحديد دور التذبذبات T = 2π√(m/k)"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Mouvement d'un projectile",
+        "ar": "1. حركة قذيفة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "On étudie un projectile lancé avec une vitesse initiale v₀ faisant un angle α avec l'horizontale, dans un champ de pesanteur uniforme g⃗. On néglige les frottements de l'air. D'après la 2e loi de Newton : ma⃗ = mg⃗, donc a⃗ = g⃗. En projetant sur les axes Ox (horizontal) et Oy (vertical ascendant) :",
+        "ar": "ندرس قذيفة أُطلقت بسرعة ابتدائية v₀ تصنع زاوية α مع الأفقي، في حقل ثقالي منتظم g⃗. نهمل احتكاكات الهواء. حسب القانون الثاني لنيوتن: ma⃗ = mg⃗، إذن a⃗ = g⃗. بالإسقاط على المحورين Ox (أفقي) و Oy (شاقولي صاعد):"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\begin{cases} x(t) = v_0 \\cos\\alpha \\cdot t \\\\ y(t) = v_0 \\sin\\alpha \\cdot t - \\frac{1}{2}g t^2 \\end{cases}",
+      "note": {
+        "fr": "Équations horaires du mouvement. Le mouvement horizontal est uniforme, le mouvement vertical est uniformément varié."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'équation de la trajectoire s'obtient en éliminant t. C'est une parabole. La portée horizontale et la hauteur maximale sont :",
+        "ar": "معادلة المسار تُحصل بحذف t. إنها قطع مكافئ. المدى الأفقي والارتفاع الأقصى هما:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "x_{max} = \\frac{v_0^2 \\sin 2\\alpha}{g} \\qquad;\\qquad y_{max} = \\frac{v_0^2 \\sin^2\\alpha}{2g}",
+      "note": {
+        "fr": "La portée est maximale pour α = 45°"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Mouvement circulaire uniforme",
+        "ar": "2. الحركة الدائرية المنتظمة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un corps en mouvement circulaire uniforme de rayon r et de vitesse v possède une accélération centripète dirigée vers le centre du cercle. D'après la 2e loi de Newton, cette accélération est due à une force centripète :",
+        "ar": "جسم في حركة دائرية منتظمة نصف قطرها r وسرعتها v يملك تسارعًا مركزيًا موجهًا نحو مركز الدائرة. حسب القانون الثاني لنيوتن، هذا التسارع ناتج عن قوة مركزية:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "a_c = \\frac{v^2}{r} = \\omega^2 r \\qquad;\\qquad F_c = m\\frac{v^2}{r}",
+      "note": {
+        "fr": "ω = v/r est la vitesse angulaire en rad/s. La période T = 2πr/v = 2π/ω"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "L'accélération centripète change la direction de la vitesse mais pas sa norme. Elle est toujours dirigée vers le centre de la trajectoire circulaire. Cette force centripète peut être la gravité (satellites), la tension d'un fil (pendule conique), ou la friction (virage).",
+        "ar": "التسارع المركزي يغير اتجاه السرعة لكن ليس قيمتها المطلقة. يكون دائمًا موجهًا نحو مركز المسار الدائري. هذه القوة المركزية يمكن أن تكون الجاذبية (أقمار اصطناعية)، أو توتر خيط (بندول مخروطي)، أو الاحتكاك (منعطف)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Satellites et mécanique orbitale",
+        "ar": "3. الأقمار الاصطناعية والميكانيكا المدارية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un satellite de masse m en orbite circulaire de rayon r autour de la Terre (masse M_T) est soumis uniquement à la force gravitationnelle. En appliquant la 2e loi de Newton et en égalant la force gravitationnelle à la force centripète :",
+        "ar": "قمر اصطناعي كتلته m في مدار دائري نصف قطره r حول الأرض (كتلتها M_T) يخضع فقط للقوة الثقالية. بتطبيق القانون الثاني لنيوتن ومساواة القوة الثقالية بالقوة المركزية:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "G\\frac{M_T m}{r^2} = m\\frac{v^2}{r} \\quad \\Rightarrow \\quad v = \\sqrt{\\frac{GM_T}{r}}",
+      "note": {
+        "fr": "G = 6,674×10⁻¹¹ N·m²/kg². La vitesse orbitale ne dépend pas de la masse du satellite."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La troisième loi de Kepler relie la période orbitale T au rayon de l'orbite r :",
+        "ar": "القانون الثالث لكيبلر يربط الدور المداري T بنصف قطر المدار r:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "T^2 = \\frac{4\\pi^2}{GM_T}\\,r^3",
+      "note": {
+        "fr": "3e loi de Kepler pour une orbite circulaire. T²/r³ = constante pour tous les satellites d'un même astre"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Oscillateur harmonique : système masse-ressort",
+        "ar": "4. المتذبذب التوافقي: نظام كتلة-نابض"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "On considère un solide de masse m attaché à un ressort de raideur k sur un plan horizontal sans frottement. Lorsqu'on écarte le solide de sa position d'équilibre d'une distance x, le ressort exerce une force de rappel donnée par la loi de Hooke :",
+        "ar": "نعتبر جسمًا صلبًا كتلته m مربوطًا بنابض صلابته k على مستوى أفقي بدون احتكاك. عند إزاحة الجسم عن موضع توازنه بمسافة x، يمارس النابض قوة إرجاع تعطى بقانون هوك:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "F = -kx",
+      "note": {
+        "fr": "k : constante de raideur du ressort en N/m, x : élongation (écart par rapport à la position d'équilibre) en m. Le signe − indique que la force est de rappel."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Loi de Hooke", "ar": "قانون هوك" },
+      "text": {
+        "fr": "La loi de Hooke stipule que la force exercée par un ressort est proportionnelle à l'élongation x et de sens opposé à celle-ci : F = −kx. Elle est valable tant que le ressort reste dans son domaine d'élasticité (déformation réversible)."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "En appliquant la 2e loi de Newton : ma = −kx, ce qui donne l'équation différentielle de l'oscillateur harmonique :",
+        "ar": "بتطبيق القانون الثاني لنيوتن: ma = −kx، مما يعطي المعادلة التفاضلية للمتذبذب التوافقي:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\frac{d^2x}{dt^2} + \\frac{k}{m}\\,x = 0 \\qquad \\Rightarrow \\qquad \\omega_0 = \\sqrt{\\frac{k}{m}}",
+      "note": {
+        "fr": "Solution : x(t) = X_m·cos(ω₀t + φ), oscillation sinusoïdale de pulsation ω₀"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La période propre des oscillations est :",
+        "ar": "الدور الذاتي للتذبذبات هو:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "T_0 = 2\\pi\\sqrt{\\frac{m}{k}}",
+      "note": {
+        "fr": "T₀ en secondes (s), m en kg, k en N/m. La période ne dépend pas de l'amplitude."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Exemples d'application",
+        "ar": "5. أمثلة تطبيقية"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Projectile et oscillateur harmonique" },
+      "problem": {
+        "fr": "1) Un ballon est lancé avec v₀ = 20 m/s sous un angle α = 60° avec l'horizontale. Calculer la portée et la hauteur maximale. (g = 9,8 m/s²)\n2) Un ressort de raideur k = 200 N/m supporte une masse m = 0,5 kg. Calculer la période des oscillations."
+      },
+      "solution": {
+        "fr": "1) Portée : x_max = v₀²·sin(2α)/g = (20)²×sin(120°)/9,8 = 400×0,866/9,8 ≈ 35,3 m.\nHauteur max : y_max = v₀²·sin²α/(2g) = 400×(sin60°)²/19,6 = 400×0,75/19,6 ≈ 15,3 m.\n2) T₀ = 2π√(m/k) = 2π√(0,5/200) = 2π√(2,5×10⁻³) = 2π × 0,05 = 0,314 s.",
+        "latex": "x_{max} = \\frac{v_0^2 \\sin 120°}{g} \\approx 35{,}3\\text{ m} \\quad;\\quad y_{max} = \\frac{v_0^2 \\sin^2 60°}{2g} \\approx 15{,}3\\text{ m} \\quad;\\quad T_0 = 2\\pi\\sqrt{\\frac{0{,}5}{200}} \\approx 0{,}314\\text{ s}"
+      }
+    }
+  ]
+}

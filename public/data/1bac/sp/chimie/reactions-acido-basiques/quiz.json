@@ -1,0 +1,67 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Selon Bronsted, une base est une espece chimique qui :" },
+      "choices": [
+        { "fr": "Cede un proton H⁺" },
+        { "fr": "Capte un proton H⁺" },
+        { "fr": "Cede un electron" },
+        { "fr": "Capte un electron" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Selon la theorie de Bronsted, une base est un accepteur de proton H⁺. Un acide est un donneur de proton H⁺." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Quel est le pH d'une solution de HCl (acide fort) de concentration C = 5 × 10⁻³ mol/L ?" },
+      "answer": 2.3,
+      "tolerance": 0.05,
+      "unit": "",
+      "hint": { "fr": "HCl est un acide fort, donc [H₃O⁺] = C. Utilisez pH = -log C." },
+      "explanation": { "fr": "HCl est un acide fort : [H₃O⁺] = C = 5 × 10⁻³ mol/L. pH = -log(5 × 10⁻³) = -log 5 - log 10⁻³ = -0,70 + 3 = 2,30." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est la base conjuguee de l'acide NH₄⁺ ?" },
+      "choices": [
+        { "fr": "NH₃" },
+        { "fr": "NH₂⁻" },
+        { "fr": "N₂H₄" },
+        { "fr": "OH⁻" }
+      ],
+      "correct": 0,
+      "explanation": { "fr": "Le couple acide/base est NH₄⁺/NH₃. L'ion ammonium NH₄⁺ cede un proton pour donner l'ammoniac NH₃ qui est sa base conjuguee : NH₄⁺ ⇌ NH₃ + H⁺." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Le pH d'une solution est 3. Quelle est la concentration en ions OH⁻ en mol/L ? (Donnée : Ke = 10⁻¹⁴)" },
+      "answer": 1e-11,
+      "tolerance": 1e-13,
+      "unit": "mol/L",
+      "hint": { "fr": "Calculez d'abord [H₃O⁺] = 10⁻pH puis utilisez Ke = [H₃O⁺]·[OH⁻]." },
+      "explanation": { "fr": "[H₃O⁺] = 10⁻³ mol/L. Ke = [H₃O⁺]·[OH⁻] = 10⁻¹⁴. Donc [OH⁻] = 10⁻¹⁴/10⁻³ = 10⁻¹¹ mol/L." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "L'eau est dite amphotere car :" },
+      "choices": [
+        { "fr": "Elle est a la fois solvant et solute" },
+        { "fr": "Elle peut jouer le role d'acide et de base" },
+        { "fr": "Elle a un pH egal a 7" },
+        { "fr": "Elle conduit le courant electrique" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "L'eau est amphotere (ou amphiprote) car elle appartient a deux couples : H₃O⁺/H₂O (elle est la base) et H₂O/OH⁻ (elle est l'acide). Elle peut donc ceder ou capter un proton." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Quel est le pH d'une solution de NaOH (base forte) de concentration C = 0,001 mol/L a 25°C ?" },
+      "answer": 11,
+      "tolerance": 0.05,
+      "unit": "",
+      "hint": { "fr": "NaOH est une base forte : [OH⁻] = C. Utilisez pH = 14 + log C." },
+      "explanation": { "fr": "NaOH est une base forte : [OH⁻] = C = 10⁻³ mol/L. pOH = -log(10⁻³) = 3. pH = 14 - pOH = 14 - 3 = 11." }
+    }
+  ]
+}

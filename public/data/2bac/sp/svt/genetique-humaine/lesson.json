@@ -1,0 +1,232 @@
+{
+  "id": "genetique-humaine",
+  "title": {
+    "fr": "La génétique humaine",
+    "ar": "الوراثة البشرية"
+  },
+  "objectives": {
+    "fr": [
+      "Appliquer les lois de Mendel à l'hérédité humaine",
+      "Analyser un arbre généalogique (pedigree) pour déterminer le mode de transmission",
+      "Distinguer transmission autosomique dominante, récessive et liée au sexe",
+      "Comprendre la génétique des groupes sanguins ABO et Rhésus",
+      "Connaître les principales maladies génétiques humaines"
+    ],
+    "ar": [
+      "تطبيق قوانين مندل على الوراثة البشرية",
+      "تحليل شجرة النسب لتحديد نمط الانتقال",
+      "التمييز بين الانتقال الصبغي الجسمي السائد والمتنحي والمرتبط بالجنس",
+      "فهم وراثة الزمر الدموية ABO و Rh",
+      "معرفة الأمراض الوراثية البشرية الرئيسية"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Rappel des lois de Mendel",
+        "ar": "1. تذكير بقوانين مندل"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Première loi de Mendel (uniformité)",
+        "ar": "قانون مندل الأول (التوحد)"
+      },
+      "text": {
+        "fr": "Lorsqu'on croise deux lignées pures différant par un seul caractère, tous les individus de la première génération (F1) sont identiques entre eux et présentent le phénotype du parent portant l'allèle dominant. L'allèle dominant masque l'expression de l'allèle récessif chez les hétérozygotes.",
+        "ar": "عند تزاوج سلالتين نقيتين تختلفان في صفة واحدة، تكون جميع أفراد الجيل الأول (F1) متماثلة فيما بينها وتُظهر النمط الظاهري للأب الحامل للأليل السائد. الأليل السائد يحجب تعبير الأليل المتنحي عند متغايري اللواقح."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Deuxième loi de Mendel (ségrégation)",
+        "ar": "قانون مندل الثاني (الانعزال)"
+      },
+      "text": {
+        "fr": "Lors de la formation des gamètes, les deux allèles d'un même gène se séparent de façon égale, de sorte que chaque gamète ne reçoit qu'un seul allèle. En F2 (croisement F1 × F1), on obtient les proportions phénotypiques 3/4 dominant : 1/4 récessif pour un caractère monohybride.",
+        "ar": "أثناء تكوين الأمشاج، ينعزل أليلا نفس المورثة بالتساوي، بحيث يتلقى كل مشيج أليلًا واحدًا فقط. في الجيل F2 (تزاوج F1 × F1)، نحصل على النسب الظاهرية 3/4 سائد : 1/4 متنحي لصفة أحادية الهجونة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Analyse d'un arbre généalogique (pedigree)",
+        "ar": "2. تحليل شجرة النسب"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'arbre généalogique (ou pedigree) est l'outil principal de la génétique humaine. Il représente la transmission d'un caractère à travers les générations d'une famille. Conventions : un carré représente un homme, un cercle une femme ; les symboles pleins (colorés) désignent les individus atteints, les symboles vides les individus sains. Un trait horizontal relie les couples, un trait vertical relie parents et enfants.",
+        "ar": "شجرة النسب هي الأداة الرئيسية في الوراثة البشرية. تُمثّل انتقال صفة عبر أجيال عائلة. الاصطلاحات: المربع يمثل الذكر، الدائرة تمثل الأنثى؛ الرموز الممتلئة (الملونة) تدل على الأفراد المصابين، والرموز الفارغة تدل على الأفراد السليمين. خط أفقي يربط بين الزوجين، وخط عمودي يربط الآباء بالأبناء."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Si deux parents sains ont un enfant atteint → la maladie est récessive",
+          "Si un parent atteint a tous ses enfants atteints (en croisement avec homozygote) → la maladie peut être dominante",
+          "Si seuls les garçons sont atteints et la mère est porteuse → transmission récessive liée au X",
+          "Un père atteint ne transmet jamais la maladie liée au X à ses fils (il transmet Y)"
+        ],
+        "ar": [
+          "إذا كان أبوان سليمان أنجبا طفلًا مصابًا ← المرض متنحي",
+          "إذا كان أب مصاب وجميع أبنائه مصابون (تزاوج مع متماثل اللواقح) ← المرض قد يكون سائدًا",
+          "إذا كان الذكور فقط مصابين والأم حاملة ← انتقال متنحي مرتبط بالصبغي X",
+          "الأب المصاب لا ينقل أبدًا المرض المرتبط بـ X لأبنائه الذكور (ينقل لهم Y)"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Transmission autosomique dominante",
+        "ar": "3. الانتقال الصبغي الجسمي السائد"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Maladie autosomique dominante",
+        "ar": "مرض صبغي جسمي سائد"
+      },
+      "text": {
+        "fr": "Le gène responsable est situé sur un autosome (chromosome non sexuel). Un seul allèle muté suffit pour exprimer la maladie (phénotype malade chez les hétérozygotes Aa). Les deux sexes sont atteints de manière égale. Un parent atteint (Aa) transmet la maladie à environ 50% de ses enfants. Exemples : chorée de Huntington, brachydactylie.",
+        "ar": "المورثة المسؤولة تقع على صبغي جسمي (غير جنسي). أليل واحد متحور يكفي للتعبير عن المرض (النمط الظاهري المريض عند متغايري اللواقح Aa). يصاب الجنسان بالتساوي. الأب المصاب (Aa) ينقل المرض لحوالي 50% من أبنائه. أمثلة: رقص هنتنغتون، قصر الأصابع."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Transmission autosomique récessive",
+        "ar": "4. الانتقال الصبغي الجسمي المتنحي"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Maladie autosomique récessive",
+        "ar": "مرض صبغي جسمي متنحي"
+      },
+      "text": {
+        "fr": "Le gène est sur un autosome et il faut deux copies de l'allèle muté (homozygote aa) pour exprimer la maladie. Les hétérozygotes (Aa) sont porteurs sains. Deux parents porteurs sains (Aa × Aa) ont 1/4 de risque d'avoir un enfant atteint. La maladie saute souvent des générations. Les mariages consanguins augmentent le risque. Exemples : drépanocytose (anémie falciforme), mucoviscidose, phénylcétonurie.",
+        "ar": "المورثة على صبغي جسمي ويجب وجود نسختين من الأليل المتحور (متماثل اللواقح aa) للتعبير عن المرض. متغايرو اللواقح (Aa) حاملون سليمون. أبوان حاملان (Aa × Aa) لديهما احتمال 1/4 لإنجاب طفل مصاب. المرض غالبًا يقفز أجيالًا. زواج الأقارب يزيد الخطر. أمثلة: فقر الدم المنجلي، التليف الكيسي، بيلة الفينيل كيتون."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Croisement de porteurs sains",
+        "ar": "مثال: تزاوج حاملين سليمين"
+      },
+      "problem": {
+        "fr": "Deux parents sains pour la drépanocytose (Aa × Aa) ont des enfants. Quelles sont les proportions génotypiques et phénotypiques attendues ?",
+        "ar": "أبوان سليمان حاملان لفقر الدم المنجلي (Aa × Aa) ينجبان أطفالًا. ما هي النسب الوراثية والظاهرية المتوقعة؟"
+      },
+      "solution": {
+        "fr": "Échiquier de croisement : 1/4 AA (sain), 2/4 Aa (porteur sain), 1/4 aa (atteint). Proportions phénotypiques : 3/4 sains, 1/4 atteint.",
+        "latex": "Aa \\times Aa \\;\\to\\; \\frac{1}{4}\\,AA + \\frac{2}{4}\\,Aa + \\frac{1}{4}\\,aa"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Transmission liée au sexe",
+        "ar": "5. الانتقال المرتبط بالجنس"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Hérédité liée au chromosome X",
+        "ar": "الوراثة المرتبطة بالصبغي X"
+      },
+      "text": {
+        "fr": "Le gène est porté par le chromosome X. Chez l'homme (XY), un seul allèle récessif sur le X suffit pour exprimer la maladie (hémizygote). Chez la femme (XX), il faut deux allèles récessifs pour être atteinte ; avec un seul, elle est porteuse saine. Les mères porteuses transmettent la maladie à 50% de leurs fils. Exemples classiques : daltonisme, hémophilie, myopathie de Duchenne.",
+        "ar": "المورثة محمولة على الصبغي X. عند الذكر (XY)، أليل متنحي واحد على X يكفي للتعبير عن المرض (نصفي اللواقح). عند الأنثى (XX)، يجب وجود أليلين متنحيين للإصابة؛ بأليل واحد تكون حاملة سليمة. الأمهات الحاملات ينقلن المرض لـ 50% من أبنائهن الذكور. أمثلة كلاسيكية: عمى الألوان، الناعور (الهيموفيليا)، حثل دوشين العضلي."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Critères de reconnaissance d'une maladie récessive liée à l'X : atteint surtout les garçons, transmise par la mère porteuse, un père atteint a des filles toutes porteuses et des fils tous sains, la maladie ne se transmet jamais de père en fils.",
+        "ar": "معايير التعرف على مرض متنحي مرتبط بـ X: يصيب بشكل رئيسي الذكور، ينتقل عبر الأم الحاملة، الأب المصاب بناته كلهن حاملات وأبناؤه كلهم سليمون، المرض لا ينتقل أبدًا من أب لابنه."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Les groupes sanguins",
+        "ar": "6. الزمر الدموية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Système ABO",
+        "ar": "النظام ABO"
+      },
+      "text": {
+        "fr": "Le système ABO est gouverné par un gène situé sur le chromosome 9, avec trois allèles : Iᴬ, Iᴮ et i. Les allèles Iᴬ et Iᴮ sont codominants entre eux et dominants sur i. Les génotypes possibles : groupe A (Iᴬ Iᴬ ou Iᴬ i), groupe B (Iᴮ Iᴮ ou Iᴮ i), groupe AB (Iᴬ Iᴮ, codominance), groupe O (ii). C'est un exemple de polyallélie et de codominance.",
+        "ar": "نظام ABO تتحكم فيه مورثة على الصبغي 9، بثلاثة أليلات: Iᴬ و Iᴮ و i. الأليلان Iᴬ و Iᴮ سائدان مشتركان فيما بينهما وسائدان على i. الأنماط الوراثية الممكنة: الزمرة A (Iᴬ Iᴬ أو Iᴬ i)، الزمرة B (Iᴮ Iᴮ أو Iᴮ i)، الزمرة AB (Iᴬ Iᴮ، سيادة مشتركة)، الزمرة O (ii). هذا مثال على تعدد الأليلات والسيادة المشتركة."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Système Rhésus (Rh)",
+        "ar": "النظام الريزوسي (Rh)"
+      },
+      "text": {
+        "fr": "Le facteur Rhésus est déterminé par un gène avec deux allèles principaux : Rh⁺ (dominant, noté D) et Rh⁻ (récessif, noté d). Les individus DD ou Dd sont Rh⁺, seuls les individus dd sont Rh⁻. L'incompatibilité Rh peut poser problème lors de la grossesse si la mère est Rh⁻ et le fœtus Rh⁺.",
+        "ar": "يُحدَّد عامل الريزوس بمورثة ذات أليلين رئيسيين: Rh⁺ (سائد، يُرمز D) و Rh⁻ (متنحي، يُرمز d). الأفراد DD أو Dd هم Rh⁺، وحدهم الأفراد dd هم Rh⁻. عدم توافق Rh قد يسبب مشاكل أثناء الحمل إذا كانت الأم Rh⁻ والجنين Rh⁺."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "7. Maladies génétiques et anomalies chromosomiques",
+        "ar": "7. الأمراض الوراثية والشذوذات الصبغية"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Drépanocytose : autosomique récessive, mutation du gène de l'hémoglobine (HbS), fréquente en Afrique",
+          "Hémophilie : récessive liée au X, déficit en facteur de coagulation VIII ou IX",
+          "Daltonisme : récessif lié au X, incapacité à distinguer certaines couleurs (rouge/vert)",
+          "Trisomie 21 (syndrome de Down) : anomalie chromosomique (3 chromosomes 21), non héréditaire",
+          "Syndrome de Turner (45, X0) : monosomie du X chez la femme",
+          "Syndrome de Klinefelter (47, XXY) : trisomie des gonosomes chez l'homme"
+        ],
+        "ar": [
+          "فقر الدم المنجلي: صبغي جسمي متنحي، طفرة في مورثة الهيموغلوبين (HbS)، شائع في إفريقيا",
+          "الناعور (الهيموفيليا): متنحي مرتبط بـ X، نقص في عامل التخثر VIII أو IX",
+          "عمى الألوان: متنحي مرتبط بـ X، عدم القدرة على تمييز بعض الألوان (أحمر/أخضر)",
+          "تثلث الصبغي 21 (متلازمة داون): شذوذ صبغي (3 صبغيات 21)، غير وراثي",
+          "متلازمة تيرنر (45, X0): أحادية الصبغي X عند الأنثى",
+          "متلازمة كلاينفلتر (47, XXY): تثلث الصبغيات الجنسية عند الذكر"
+        ]
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Le conseil génétique permet d'évaluer le risque de transmission des maladies héréditaires dans une famille. Il s'appuie sur l'analyse de l'arbre généalogique, le mode de transmission identifié et éventuellement des tests génétiques. Le diagnostic prénatal (amniocentèse, choriocentèse) permet de détecter certaines anomalies chromosomiques chez le fœtus.",
+        "ar": "يتيح الاستشارة الوراثية تقييم خطر انتقال الأمراض الوراثية في عائلة. تعتمد على تحليل شجرة النسب ونمط الانتقال المحدد وربما اختبارات وراثية. التشخيص قبل الولادة (بزل السائل الأمنيوسي، خزعة الزغابات المشيمية) يسمح بالكشف عن بعض الشذوذات الصبغية عند الجنين."
+      }
+    }
+  ]
+}

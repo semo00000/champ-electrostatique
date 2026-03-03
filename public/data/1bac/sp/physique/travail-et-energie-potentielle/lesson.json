@@ -1,0 +1,145 @@
+{
+  "id": "travail-et-energie-potentielle",
+  "title": {
+    "fr": "Énergie potentielle",
+    "ar": "الطاقة الكامنة"
+  },
+  "objectives": {
+    "fr": [
+      "Définir l'énergie potentielle de pesanteur",
+      "Calculer l'énergie potentielle de pesanteur Epp = mgh",
+      "Définir l'énergie potentielle élastique",
+      "Calculer l'énergie potentielle élastique Epe = ½kx²",
+      "Relier le travail d'une force conservative à la variation d'énergie potentielle"
+    ],
+    "ar": [
+      "تعريف طاقة الوضع الثقالية",
+      "حساب طاقة الوضع الثقالية Epp = mgh",
+      "تعريف طاقة الوضع المرنة",
+      "حساب طاقة الوضع المرنة Epe = ½kx²",
+      "ربط شغل قوة محافظة بتغير طاقة الوضع"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Énergie potentielle de pesanteur",
+        "ar": "1. طاقة الوضع الثقالية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Énergie potentielle de pesanteur",
+        "ar": "طاقة الوضع الثقالية"
+      },
+      "text": {
+        "fr": "L'énergie potentielle de pesanteur d'un corps de masse m situé à une altitude z par rapport à un niveau de référence est l'énergie qu'il possède du fait de sa position dans le champ de pesanteur.",
+        "ar": "طاقة الوضع الثقالية لجسم كتلته m على ارتفاع z بالنسبة لمستوى مرجعي هي الطاقة التي يمتلكها بسبب موضعه في حقل الثقالة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_{pp} = m \\cdot g \\cdot z",
+      "note": {
+        "fr": "Epp en Joules (J), m en kg, g ≈ 9,8 m/s², z en m (altitude par rapport au niveau de référence). L'énergie potentielle dépend du choix du niveau de référence.",
+        "ar": "Epp بالجول (J)، m بالكيلوغرام، g ≈ 9.8 m/s²، z بالمتر (ارتفاع بالنسبة للمستوى المرجعي). طاقة الوضع تعتمد على اختيار المستوى المرجعي."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le travail du poids entre deux positions A et B est lié à la variation d'énergie potentielle de pesanteur par la relation : W_AB(P) = Epp(A) - Epp(B) = -ΔEpp. Le poids est une force conservative car son travail ne dépend que des positions initiale et finale.",
+        "ar": "شغل الثقل بين موضعين A و B مرتبط بتغير طاقة الوضع الثقالية بالعلاقة: W_AB(P) = Epp(A) - Epp(B) = -ΔEpp. الثقل قوة محافظة لأن شغلها يعتمد فقط على الموضعين الابتدائي والنهائي."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "W_{AB}(\\vec{P}) = E_{pp}(A) - E_{pp}(B) = mg(z_A - z_B) = -\\Delta E_{pp}",
+      "note": {
+        "fr": "Le travail du poids est l'opposé de la variation d'énergie potentielle de pesanteur.",
+        "ar": "شغل الثقل هو معكوس تغير طاقة الوضع الثقالية."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Le choix du niveau de référence (z = 0) est arbitraire. Il faut toujours le préciser. L'énergie potentielle peut être positive, négative ou nulle selon ce choix. Cependant, la variation d'énergie potentielle ΔEpp est indépendante du choix du niveau de référence.",
+        "ar": "اختيار المستوى المرجعي (z = 0) اعتباطي. يجب دائماً تحديده. طاقة الوضع يمكن أن تكون موجبة أو سالبة أو معدومة حسب هذا الاختيار. ومع ذلك، تغير طاقة الوضع ΔEpp مستقل عن اختيار المستوى المرجعي."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Énergie potentielle de pesanteur",
+        "ar": "مثال: طاقة الوضع الثقالية"
+      },
+      "problem": {
+        "fr": "Un livre de masse m = 0,8 kg est posé sur une étagère à 2 m du sol. Calculer son énergie potentielle de pesanteur en prenant le sol comme référence. (g = 9,8 m/s²)",
+        "ar": "كتاب كتلته m = 0.8 kg موضوع على رف على ارتفاع 2 m من الأرض. احسب طاقة وضعه الثقالية باعتبار الأرض مرجعاً. (g = 9.8 m/s²)"
+      },
+      "solution": {
+        "fr": "Epp = m·g·z = 0,8 × 9,8 × 2 = 15,68 J",
+        "latex": "E_{pp} = m \\cdot g \\cdot z = 0{,}8 \\times 9{,}8 \\times 2 = 15{,}68 \\text{ J}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Énergie potentielle élastique",
+        "ar": "2. طاقة الوضع المرنة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Énergie potentielle élastique",
+        "ar": "طاقة الوضع المرنة"
+      },
+      "text": {
+        "fr": "L'énergie potentielle élastique d'un ressort de raideur k, déformé d'un allongement x par rapport à sa position d'équilibre (longueur naturelle), est l'énergie stockée dans le ressort.",
+        "ar": "طاقة الوضع المرنة لنابض صلابته k، مشوّه باستطالة x بالنسبة لموضع توازنه (الطول الطبيعي)، هي الطاقة المخزنة في النابض."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_{pe} = \\frac{1}{2} k x^2",
+      "note": {
+        "fr": "Epe en Joules (J), k en N/m (constante de raideur du ressort), x en m (déformation par rapport à la longueur naturelle). Epe est toujours positive ou nulle.",
+        "ar": "Epe بالجول (J)، k بـ N/m (ثابت صلابة النابض)، x بالمتر (التشوه بالنسبة للطول الطبيعي). Epe دائماً موجبة أو معدومة."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La force de rappel du ressort est F = -kx (loi de Hooke). C'est une force conservative. Son travail est lié à la variation d'énergie potentielle élastique : W_AB(F_ressort) = Epe(A) - Epe(B) = ½kx_A² - ½kx_B².",
+        "ar": "قوة استرجاع النابض هي F = -kx (قانون هوك). إنها قوة محافظة. شغلها مرتبط بتغير طاقة الوضع المرنة: W_AB(F_ressort) = Epe(A) - Epe(B) = ½kx_A² - ½kx_B²."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Énergie potentielle élastique",
+        "ar": "مثال: طاقة الوضع المرنة"
+      },
+      "problem": {
+        "fr": "Un ressort de raideur k = 200 N/m est comprimé de x = 15 cm. Calculer l'énergie potentielle élastique stockée.",
+        "ar": "نابض صلابته k = 200 N/m مضغوط بمقدار x = 15 cm. احسب طاقة الوضع المرنة المخزنة."
+      },
+      "solution": {
+        "fr": "x = 15 cm = 0,15 m\nEpe = ½kx² = ½ × 200 × (0,15)² = ½ × 200 × 0,0225 = 2,25 J",
+        "latex": "E_{pe} = \\frac{1}{2} k x^2 = \\frac{1}{2} \\times 200 \\times (0{,}15)^2 = 2{,}25 \\text{ J}"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La force de rappel du ressort et le poids sont des forces conservatives : leur travail ne dépend que des positions initiale et finale, pas du chemin suivi. À chaque force conservative, on peut associer une énergie potentielle.",
+        "ar": "قوة استرجاع النابض والثقل قوتان محافظتان: شغلهما يعتمد فقط على الموضعين الابتدائي والنهائي وليس على المسار المتبع. لكل قوة محافظة يمكن إشراك طاقة وضع."
+      }
+    }
+  ]
+}

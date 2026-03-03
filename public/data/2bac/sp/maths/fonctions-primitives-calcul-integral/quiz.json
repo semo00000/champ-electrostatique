@@ -1,0 +1,67 @@
+{
+  "questions": [
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer ∫₁³ 2x dx." },
+      "answer": 8,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": { "fr": "Une primitive de 2x est x²." },
+      "explanation": { "fr": "∫₁³ 2x dx = [x²]₁³ = 9 − 1 = 8." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est une primitive de f(x) = 1/x sur ]0, +∞[ ?" },
+      "choices": [
+        { "fr": "F(x) = x²/2" },
+        { "fr": "F(x) = ln(x)" },
+        { "fr": "F(x) = −1/x²" },
+        { "fr": "F(x) = eˣ" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "La dérivée de ln(x) est 1/x pour x > 0. Donc ln(x) est une primitive de 1/x." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "La relation de Chasles pour les intégrales affirme que :" },
+      "choices": [
+        { "fr": "∫ₐᵇ f·g dx = ∫ₐᵇ f dx · ∫ₐᵇ g dx" },
+        { "fr": "∫ₐᵇ f dx = ∫ₐᶜ f dx + ∫ᶜᵇ f dx" },
+        { "fr": "∫ₐᵇ f dx = ∫ₐᵇ g dx si f = g" },
+        { "fr": "∫ₐᵇ f dx = f(b) − f(a)" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "La relation de Chasles permet de découper une intégrale en deux sous-intégrales : ∫ₐᵇ f dx = ∫ₐᶜ f dx + ∫ᶜᵇ f dx pour tout c entre a et b." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer ∫₀^π sin(x) dx." },
+      "answer": 2,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": { "fr": "Une primitive de sin(x) est −cos(x)." },
+      "explanation": { "fr": "∫₀^π sin(x)dx = [−cos(x)]₀^π = −cos(π) − (−cos(0)) = −(−1) + 1 = 2." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer ∫₀¹ x·eˣ dx en utilisant l'intégration par parties." },
+      "answer": 1,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": { "fr": "Poser u = x et v' = eˣ." },
+      "explanation": { "fr": "IPP avec u = x, v' = eˣ : ∫₀¹ xeˣdx = [xeˣ]₀¹ − ∫₀¹ eˣdx = e − (e − 1) = 1." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est une primitive de f(x) = cos(2x) ?" },
+      "choices": [
+        { "fr": "F(x) = sin(2x)" },
+        { "fr": "F(x) = sin(2x)/2" },
+        { "fr": "F(x) = 2sin(2x)" },
+        { "fr": "F(x) = −sin(2x)/2" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "On vérifie : [sin(2x)/2]' = 2cos(2x)/2 = cos(2x). C'est bien f(x)." }
+    }
+  ]
+}

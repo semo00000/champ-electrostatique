@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'expression de l'énergie potentielle de pesanteur d'un corps de masse m à l'altitude z est :",
+        "ar": "تعبير طاقة الوضع الثقالية لجسم كتلته m على ارتفاع z هو :"
+      },
+      "choices": [
+        { "fr": "Epp = mgz", "ar": "Epp = mgz" },
+        { "fr": "Epp = ½mv²", "ar": "Epp = ½mv²" },
+        { "fr": "Epp = ½kx²", "ar": "Epp = ½kx²" },
+        { "fr": "Epp = mgz²", "ar": "Epp = mgz²" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "L'énergie potentielle de pesanteur est Epp = mgz, proportionnelle à l'altitude z par rapport au niveau de référence.",
+        "ar": "طاقة الوضع الثقالية هي Epp = mgz، متناسبة مع الارتفاع z بالنسبة للمستوى المرجعي."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer l'énergie potentielle de pesanteur d'un objet de 10 kg placé à 8 m de hauteur. Référence : le sol. (g = 9,8 m/s²). Réponse en J.",
+        "ar": "احسب طاقة الوضع الثقالية لجسم كتلته 10 kg على ارتفاع 8 m. المرجع: الأرض. (g = 9.8 m/s²). الجواب بالجول."
+      },
+      "answer": 784,
+      "tolerance": 1,
+      "unit": "J",
+      "hint": {
+        "fr": "Epp = m·g·z = 10 × 9,8 × 8.",
+        "ar": "Epp = m·g·z = 10 × 9.8 × 8."
+      },
+      "explanation": {
+        "fr": "Epp = m·g·z = 10 × 9,8 × 8 = 784 J.",
+        "ar": "Epp = m·g·z = 10 × 9.8 × 8 = 784 J."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'énergie potentielle de pesanteur dépend :",
+        "ar": "طاقة الوضع الثقالية تعتمد على :"
+      },
+      "choices": [
+        { "fr": "Du choix du niveau de référence", "ar": "اختيار المستوى المرجعي" },
+        { "fr": "De la vitesse du corps", "ar": "سرعة الجسم" },
+        { "fr": "Du chemin parcouru", "ar": "المسار المقطوع" },
+        { "fr": "De la forme du corps", "ar": "شكل الجسم" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Epp = mgz dépend de l'altitude z, mesurée par rapport au niveau de référence choisi. Le choix de ce niveau est arbitraire.",
+        "ar": "Epp = mgz تعتمد على الارتفاع z، المقاس بالنسبة للمستوى المرجعي المختار. اختيار هذا المستوى اعتباطي."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'expression de l'énergie potentielle élastique d'un ressort de raideur k déformé de x est :",
+        "ar": "تعبير طاقة الوضع المرنة لنابض صلابته k مشوّه بمقدار x هو :"
+      },
+      "choices": [
+        { "fr": "Epe = ½kx²", "ar": "Epe = ½kx²" },
+        { "fr": "Epe = kx", "ar": "Epe = kx" },
+        { "fr": "Epe = ½kx", "ar": "Epe = ½kx" },
+        { "fr": "Epe = kx²", "ar": "Epe = kx²" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "L'énergie potentielle élastique est Epe = ½kx², toujours positive ou nulle.",
+        "ar": "طاقة الوضع المرنة هي Epe = ½kx²، دائماً موجبة أو معدومة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un ressort de raideur k = 500 N/m est étiré de 20 cm. Calculer l'énergie potentielle élastique en Joules.",
+        "ar": "نابض صلابته k = 500 N/m ممدد بمقدار 20 cm. احسب طاقة الوضع المرنة بالجول."
+      },
+      "answer": 10,
+      "tolerance": 0.1,
+      "unit": "J",
+      "hint": {
+        "fr": "x = 20 cm = 0,2 m. Epe = ½kx².",
+        "ar": "x = 20 cm = 0.2 m. Epe = ½kx²."
+      },
+      "explanation": {
+        "fr": "Epe = ½ × 500 × (0,2)² = ½ × 500 × 0,04 = 10 J.",
+        "ar": "Epe = ½ × 500 × (0.2)² = ½ × 500 × 0.04 = 10 J."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La relation entre le travail du poids et la variation d'énergie potentielle de pesanteur est :",
+        "ar": "العلاقة بين شغل الثقل وتغير طاقة الوضع الثقالية هي :"
+      },
+      "choices": [
+        { "fr": "W(P) = -ΔEpp = Epp(A) - Epp(B)", "ar": "W(P) = -ΔEpp = Epp(A) - Epp(B)" },
+        { "fr": "W(P) = ΔEpp = Epp(B) - Epp(A)", "ar": "W(P) = ΔEpp = Epp(B) - Epp(A)" },
+        { "fr": "W(P) = Epp(A) + Epp(B)", "ar": "W(P) = Epp(A) + Epp(B)" },
+        { "fr": "W(P) = Epp(A) × Epp(B)", "ar": "W(P) = Epp(A) × Epp(B)" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Le travail d'une force conservative est l'opposé de la variation d'énergie potentielle : W(P) = -ΔEpp = Epp(A) - Epp(B).",
+        "ar": "شغل قوة محافظة هو معكوس تغير طاقة الوضع: W(P) = -ΔEpp = Epp(A) - Epp(B)."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un objet de 2 kg descend de 12 m de hauteur. Calculer le travail du poids (g = 9,8 m/s²). Réponse en J.",
+        "ar": "جسم كتلته 2 kg ينزل 12 m من الارتفاع. احسب شغل الثقل (g = 9.8 m/s²). الجواب بالجول."
+      },
+      "answer": 235.2,
+      "tolerance": 1,
+      "unit": "J",
+      "hint": {
+        "fr": "W(P) = mg(z_A - z_B) = mg × h (l'objet descend).",
+        "ar": "W(P) = mg(z_A - z_B) = mg × h (الجسم ينزل)."
+      },
+      "explanation": {
+        "fr": "L'objet descend de 12 m, donc z_A - z_B = 12 m. W(P) = 2 × 9,8 × 12 = 235,2 J. Le travail est moteur.",
+        "ar": "الجسم ينزل 12 m، إذن z_A - z_B = 12 m. W(P) = 2 × 9.8 × 12 = 235.2 J. الشغل محرّك."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Une force est dite conservative si :",
+        "ar": "تُسمى قوة محافظة إذا :"
+      },
+      "choices": [
+        { "fr": "Son travail ne dépend que des positions initiale et finale", "ar": "كان شغلها يعتمد فقط على الموضعين الابتدائي والنهائي" },
+        { "fr": "Son travail est toujours positif", "ar": "كان شغلها دائماً موجباً" },
+        { "fr": "Son travail dépend du chemin suivi", "ar": "كان شغلها يعتمد على المسار المتبع" },
+        { "fr": "Son travail est toujours nul", "ar": "كان شغلها دائماً معدوماً" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Une force conservative a un travail qui ne dépend que des positions de départ et d'arrivée, pas du chemin suivi. Exemples : poids, force du ressort.",
+        "ar": "شغل القوة المحافظة يعتمد فقط على موضعي الانطلاق والوصول وليس على المسار. أمثلة: الثقل، قوة النابض."
+      }
+    }
+  ]
+}

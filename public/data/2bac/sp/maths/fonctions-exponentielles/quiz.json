@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Simplifier e^(ln 5)." },
+      "choices": [
+        { "fr": "ln 5" },
+        { "fr": "5" },
+        { "fr": "e⁵" },
+        { "fr": "5e" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Par définition de la réciproque, e^(ln x) = x pour tout x > 0. Donc e^(ln 5) = 5." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est la dérivée de f(x) = e^(3x) ?" },
+      "choices": [
+        { "fr": "e^(3x)" },
+        { "fr": "3e^(3x)" },
+        { "fr": "3xe^(3x−1)" },
+        { "fr": "e^(3x)/3" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "On applique (e^u)' = u'·e^u avec u = 3x, donc u' = 3. f'(x) = 3e^(3x)." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer lim(x→−∞) x²·eˣ." },
+      "answer": 0,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": { "fr": "Utiliser le résultat de croissance comparée : xⁿ·eˣ → 0 quand x → −∞." },
+      "explanation": { "fr": "Par la croissance comparée, pour tout n ∈ ℕ, lim(x→−∞) xⁿ·eˣ = 0. Ici n = 2, donc la limite est 0." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Résoudre eˣ = 3." },
+      "choices": [
+        { "fr": "x = 3" },
+        { "fr": "x = e³" },
+        { "fr": "x = ln 3" },
+        { "fr": "x = log₁₀(3)" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "eˣ = 3 ⟹ ln(eˣ) = ln(3) ⟹ x = ln 3 ≈ 1,099." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Soit f(x) = xeˣ. Calculer f'(0)." },
+      "answer": 1,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": { "fr": "Utiliser la règle du produit : f'(x) = eˣ + xeˣ." },
+      "explanation": { "fr": "f'(x) = (x)'·eˣ + x·(eˣ)' = eˣ + xeˣ = (1 + x)eˣ. Donc f'(0) = (1 + 0)·e⁰ = 1." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est l'asymptote de la courbe de eˣ ?" },
+      "choices": [
+        { "fr": "y = 1" },
+        { "fr": "x = 0" },
+        { "fr": "y = 0 (asymptote horizontale en −∞)" },
+        { "fr": "Pas d'asymptote" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "lim(x→−∞) eˣ = 0. La droite y = 0 (axe des abscisses) est asymptote horizontale en −∞." }
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer le produit scalaire de u = (1, −2, 3) et v = (4, 0, −1).",
+        "ar": "احسب الجداء السلمي لـ u = (1, −2, 3) و v = (4, 0, −1)."
+      },
+      "answer": 1,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": {
+        "fr": "u·v = x₁x₂ + y₁y₂ + z₁z₂.",
+        "ar": "u·v = x₁x₂ + y₁y₂ + z₁z₂."
+      },
+      "explanation": {
+        "fr": "u·v = 1×4 + (−2)×0 + 3×(−1) = 4 + 0 − 3 = 1.",
+        "ar": "u·v = 1×4 + (−2)×0 + 3×(−1) = 4 + 0 − 3 = 1."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel est le vecteur normal au plan 3x − 2y + z − 5 = 0 ?",
+        "ar": "ما هو الشعاع الناظمي للمستوى 3x − 2y + z − 5 = 0 ؟"
+      },
+      "choices": [
+        { "fr": "(3, −2, 1)", "ar": "(3, −2, 1)" },
+        { "fr": "(3, −2, −5)", "ar": "(3, −2, −5)" },
+        { "fr": "(−3, 2, −1)", "ar": "(−3, 2, −1)" },
+        { "fr": "(3, 2, 1)", "ar": "(3, 2, 1)" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Dans l'équation ax + by + cz + d = 0, le vecteur normal est n = (a, b, c) = (3, −2, 1). Le coefficient d n'intervient pas dans le vecteur normal.",
+        "ar": "في المعادلة ax + by + cz + d = 0، الشعاع الناظمي هو n = (a, b, c) = (3, −2, 1). المعامل d لا يتدخل في الشعاع الناظمي."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer la distance du point M(0, 0, 0) au plan x + y + z − 3 = 0. Arrondir à 0,001.",
+        "ar": "احسب مسافة النقطة M(0, 0, 0) عن المستوى x + y + z − 3 = 0. قرّب إلى 0.001."
+      },
+      "answer": 1.732,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": {
+        "fr": "d = |ax₀ + by₀ + cz₀ + d| / sqrt(a² + b² + c²).",
+        "ar": "d = |ax₀ + by₀ + cz₀ + d| / sqrt(a² + b² + c²)."
+      },
+      "explanation": {
+        "fr": "d = |0 + 0 + 0 − 3| / sqrt(1 + 1 + 1) = 3/sqrt(3) = sqrt(3) ≈ 1,732.",
+        "ar": "d = |0 + 0 + 0 − 3| / sqrt(1 + 1 + 1) = 3/sqrt(3) = sqrt(3) ≈ 1.732."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Les plans 2x + y − z = 1 et 4x + 2y − 2z = 7 sont :",
+        "ar": "المستويان 2x + y − z = 1 و 4x + 2y − 2z = 7 هما:"
+      },
+      "choices": [
+        { "fr": "Confondus", "ar": "منطبقان" },
+        { "fr": "Sécants", "ar": "متقاطعان" },
+        { "fr": "Parallèles distincts", "ar": "متوازيان ومختلفان" },
+        { "fr": "Perpendiculaires", "ar": "متعامدان" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Le vecteur normal du premier plan est n₁ = (2, 1, −1) et celui du second est n₂ = (4, 2, −2) = 2·n₁. Les normales sont colinéaires, donc les plans sont parallèles. Comme 7 ≠ 2×1, ils sont distincts.",
+        "ar": "الشعاع الناظمي للمستوى الأول هو n₁ = (2, 1, −1) والثاني n₂ = (4, 2, −2) = 2·n₁. الشعاعان الناظميان متوازيان، إذن المستويان متوازيان. بما أن 7 ≠ 2×1، فهما مختلفان."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La représentation paramétrique de la droite passant par A(1, 0, −1) et de vecteur directeur u = (2, 3, 1) est :",
+        "ar": "التمثيل الوسيطي للمستقيم المار من A(1, 0, −1) وذي الشعاع الموجه u = (2, 3, 1) هو:"
+      },
+      "choices": [
+        { "fr": "x = 1 + 2t, y = 3t, z = −1 + t", "ar": "x = 1 + 2t, y = 3t, z = −1 + t" },
+        { "fr": "x = 2 + t, y = 3 + t, z = 1 − t", "ar": "x = 2 + t, y = 3 + t, z = 1 − t" },
+        { "fr": "2x + 3y + z = 0", "ar": "2x + 3y + z = 0" },
+        { "fr": "x = 1 + t, y = 2t, z = −1 + 3t", "ar": "x = 1 + t, y = 2t, z = −1 + 3t" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Les équations paramétriques sont x = a₁ + αt, y = a₂ + βt, z = a₃ + γt. Avec A(1,0,−1) et u = (2,3,1) : x = 1 + 2t, y = 0 + 3t = 3t, z = −1 + t.",
+        "ar": "المعادلات الوسيطية هي x = a₁ + αt, y = a₂ + βt, z = a₃ + γt. مع A(1,0,−1) و u = (2,3,1): x = 1 + 2t, y = 0 + 3t = 3t, z = −1 + t."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer la norme du vecteur u = (2, −1, 2).",
+        "ar": "احسب معيار الشعاع u = (2, −1, 2)."
+      },
+      "answer": 3,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": {
+        "fr": "||u|| = sqrt(x² + y² + z²).",
+        "ar": "||u|| = sqrt(x² + y² + z²)."
+      },
+      "explanation": {
+        "fr": "||u|| = sqrt(4 + 1 + 4) = sqrt(9) = 3.",
+        "ar": "||u|| = sqrt(4 + 1 + 4) = sqrt(9) = 3."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Les vecteurs u = (1, 2, −1) et v = (3, −1, 1) sont-ils orthogonaux ?",
+        "ar": "هل الشعاعان u = (1, 2, −1) و v = (3, −1, 1) متعامدان؟"
+      },
+      "choices": [
+        { "fr": "Oui, car u·v = 0", "ar": "نعم، لأن u·v = 0" },
+        { "fr": "Non, car u·v = 2", "ar": "لا، لأن u·v = 2" },
+        { "fr": "Non, car u·v = −2", "ar": "لا، لأن u·v = −2" },
+        { "fr": "Oui, car u·v = 1", "ar": "نعم، لأن u·v = 1" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "u·v = 1×3 + 2×(−1) + (−1)×1 = 3 − 2 − 1 = 0. Le produit scalaire est nul, donc les vecteurs sont orthogonaux.",
+        "ar": "u·v = 1×3 + 2×(−1) + (−1)×1 = 3 − 2 − 1 = 0. الجداء السلمي منعدم، إذن الشعاعان متعامدان."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer la troisième composante du produit vectoriel u ∧ v avec u = (1, 0, 0) et v = (0, 1, 0).",
+        "ar": "احسب المركبة الثالثة للجداء الشعاعي u ∧ v حيث u = (1, 0, 0) و v = (0, 1, 0)."
+      },
+      "answer": 1,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": {
+        "fr": "La troisième composante de u ∧ v est x₁y₂ − y₁x₂.",
+        "ar": "المركبة الثالثة لـ u ∧ v هي x₁y₂ − y₁x₂."
+      },
+      "explanation": {
+        "fr": "u ∧ v = (0×0 − 0×1, 0×0 − 1×0, 1×1 − 0×0) = (0, 0, 1). La troisième composante est 1. On retrouve i ∧ j = k.",
+        "ar": "u ∧ v = (0×0 − 0×1, 0×0 − 1×0, 1×1 − 0×0) = (0, 0, 1). المركبة الثالثة هي 1. نجد i ∧ j = k."
+      }
+    }
+  ]
+}

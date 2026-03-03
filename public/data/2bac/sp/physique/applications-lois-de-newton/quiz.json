@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La trajectoire d'un projectile lancé dans un champ de pesanteur uniforme, en négligeant les frottements, est :",
+        "ar": "مسار قذيفة أُطلقت في حقل ثقالي منتظم، مع إهمال الاحتكاكات، هو:"
+      },
+      "choices": [
+        { "fr": "Un cercle" },
+        { "fr": "Une droite" },
+        { "fr": "Une parabole" },
+        { "fr": "Une hyperbole" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "En éliminant t des équations horaires x(t) = v₀·cosα·t et y(t) = v₀·sinα·t − ½gt², on obtient y = x·tanα − gx²/(2v₀²cos²α), qui est l'équation d'une parabole."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un objet de masse 2 kg tourne en mouvement circulaire uniforme de rayon r = 0,5 m à la vitesse v = 4 m/s. Calculer la force centripète en newtons (N).",
+        "ar": "جسم كتلته 2 kg يدور في حركة دائرية منتظمة نصف قطرها r = 0,5 m بسرعة v = 4 m/s. احسب القوة المركزية بالنيوتن (N)."
+      },
+      "answer": 64,
+      "tolerance": 0.5,
+      "unit": "N",
+      "explanation": {
+        "fr": "F_c = mv²/r = 2 × (4)²/0,5 = 2 × 16/0,5 = 2 × 32 = 64 N."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La vitesse orbitale d'un satellite en orbite circulaire autour de la Terre :",
+        "ar": "السرعة المدارية لقمر اصطناعي في مدار دائري حول الأرض:"
+      },
+      "choices": [
+        { "fr": "Augmente avec le rayon de l'orbite" },
+        { "fr": "Diminue lorsque le rayon de l'orbite augmente" },
+        { "fr": "Est indépendante du rayon de l'orbite" },
+        { "fr": "Dépend de la masse du satellite" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "v = √(GM_T/r). La vitesse orbitale diminue quand r augmente. Elle ne dépend pas de la masse du satellite, seulement de la masse de la Terre et du rayon de l'orbite."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un ressort de raideur k = 50 N/m est attaché à une masse m = 0,2 kg. Calculer la période des oscillations libres T₀ en secondes (s).",
+        "ar": "نابض صلابته k = 50 N/m مربوط بكتلة m = 0,2 kg. احسب دور التذبذبات الحرة T₀ بالثواني (s)."
+      },
+      "answer": 0.397,
+      "tolerance": 0.01,
+      "unit": "s",
+      "explanation": {
+        "fr": "T₀ = 2π√(m/k) = 2π√(0,2/50) = 2π√(0,004) = 2π × 0,0632 = 0,397 s."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La loi de Hooke F = −kx est valable :",
+        "ar": "قانون هوك F = −kx يكون صالحًا:"
+      },
+      "choices": [
+        { "fr": "Pour toute déformation du ressort, même au-delà de la limite d'élasticité" },
+        { "fr": "Uniquement dans le domaine d'élasticité du ressort (déformation réversible)" },
+        { "fr": "Uniquement pour les ressorts en compression" },
+        { "fr": "Uniquement pour les grandes déformations" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "La loi de Hooke est une loi linéaire valable uniquement dans le domaine d'élasticité du ressort, c'est-à-dire tant que la déformation est réversible. Au-delà de la limite d'élasticité, la relation n'est plus linéaire."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un projectile est lancé à v₀ = 30 m/s avec un angle α = 45° par rapport à l'horizontale. Calculer la portée maximale en mètres (m). (g = 9,8 m/s²)",
+        "ar": "قذيفة أُطلقت بسرعة v₀ = 30 m/s بزاوية α = 45° مع الأفقي. احسب المدى الأقصى بالأمتار (m). (g = 9,8 m/s²)"
+      },
+      "answer": 91.8,
+      "tolerance": 1,
+      "unit": "m",
+      "explanation": {
+        "fr": "Pour α = 45°, sin(2α) = sin(90°) = 1. La portée : x_max = v₀²·sin(2α)/g = (30)² × 1/9,8 = 900/9,8 ≈ 91,8 m."
+      }
+    }
+  ]
+}

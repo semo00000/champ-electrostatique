@@ -1,0 +1,232 @@
+{
+  "id": "immunologie",
+  "title": {
+    "fr": "L'immunologie",
+    "ar": "علم المناعة"
+  },
+  "objectives": {
+    "fr": [
+      "Distinguer immunité innée et immunité adaptative",
+      "Décrire les mécanismes de la réponse immunitaire innée",
+      "Expliquer la réponse immunitaire humorale (lymphocytes B et anticorps)",
+      "Expliquer la réponse immunitaire cellulaire (lymphocytes T)",
+      "Comprendre le principe de la vaccination et les dysfonctionnements immunitaires"
+    ],
+    "ar": [
+      "التمييز بين المناعة الطبيعية والمناعة المكتسبة",
+      "وصف آليات الاستجابة المناعية الطبيعية",
+      "شرح الاستجابة المناعية الخلطية (اللمفاويات B والأجسام المضادة)",
+      "شرح الاستجابة المناعية الخلوية (اللمفاويات T)",
+      "فهم مبدأ التلقيح والاختلالات المناعية"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. L'immunité innée (non spécifique)",
+        "ar": "1. المناعة الطبيعية (غير النوعية)"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Immunité innée",
+        "ar": "المناعة الطبيعية"
+      },
+      "text": {
+        "fr": "L'immunité innée est la première ligne de défense de l'organisme. Elle est présente dès la naissance, non spécifique (elle agit de la même manière contre tous les agents pathogènes) et ne possède pas de mémoire immunitaire. Elle comprend des barrières physiques et chimiques, la réaction inflammatoire et la phagocytose.",
+        "ar": "المناعة الطبيعية هي خط الدفاع الأول للجسم. تكون موجودة منذ الولادة، غير نوعية (تعمل بنفس الطريقة ضد جميع العوامل الممرضة) ولا تملك ذاكرة مناعية. تشمل الحواجز الفيزيائية والكيميائية، والتفاعل الالتهابي والبلعمة."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Barrières mécaniques : peau (épiderme), muqueuses, cils des voies respiratoires",
+          "Barrières chimiques : lysozyme (larmes, salive), acidité gastrique (pH 2), sueur",
+          "Barrières biologiques : flore commensale (microbiote) qui empêche la colonisation par les pathogènes"
+        ],
+        "ar": [
+          "حواجز ميكانيكية: الجلد (البشرة)، الأغشية المخاطية، أهداب المسالك التنفسية",
+          "حواجز كيميائية: الليزوزيم (الدموع، اللعاب)، حموضة المعدة (pH 2)، العرق",
+          "حواجز بيولوجية: الفلورا المتعايشة (الميكروبيوت) التي تمنع استعمار الممرضات"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Réaction inflammatoire",
+        "ar": "التفاعل الالتهابي"
+      },
+      "text": {
+        "fr": "La réaction inflammatoire est déclenchée lors d'une lésion tissulaire ou d'une infection. Elle se manifeste par quatre signes cardinaux : rougeur, chaleur, gonflement (œdème) et douleur. Les cellules endommagées libèrent des médiateurs chimiques (histamine, prostaglandines) qui provoquent la vasodilatation et attirent les leucocytes par chimiotactisme.",
+        "ar": "يُحرَّض التفاعل الالتهابي عند حدوث إصابة نسيجية أو عدوى. يتجلى بأربع علامات أساسية: الاحمرار، الحرارة، التورم (الوذمة) والألم. تُطلق الخلايا المتضررة وسائط كيميائية (الهيستامين، البروستاغلاندينات) تسبب توسع الأوعية وتجذب الكريات البيضاء بالانجذاب الكيميائي."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Phagocytose",
+        "ar": "البلعمة"
+      },
+      "text": {
+        "fr": "La phagocytose est le mécanisme par lequel certaines cellules (phagocytes) englobent et détruisent les corps étrangers. Les principales cellules phagocytaires sont : les macrophages, les granulocytes neutrophiles et les cellules dendritiques. Les étapes sont : adhésion, ingestion (formation du phagosome), digestion (fusion avec le lysosome) et rejet des déchets.",
+        "ar": "البلعمة هي الآلية التي تقوم بها خلايا معينة (البالعات) بابتلاع وتدمير الأجسام الغريبة. الخلايا البالعة الرئيسية هي: البلاعم، والخلايا المحببة العَدِلة، والخلايا التغصنية. المراحل هي: الالتصاق، الابتلاع (تكوين الجسيم البلعمي)، الهضم (الاندماج مع الجسيم الحال) وطرح الفضلات."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. L'immunité adaptative (spécifique)",
+        "ar": "2. المناعة المكتسبة (النوعية)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'immunité adaptative se met en place lorsque l'immunité innée ne suffit pas à éliminer l'agent pathogène. Elle est spécifique (dirigée contre un antigène précis), possède une mémoire immunitaire (réponse secondaire plus rapide et plus intense) et fait intervenir les lymphocytes B et T. La reconnaissance de l'antigène est assurée par des récepteurs spécifiques : les anticorps membranaires (BCR) des lymphocytes B et les récepteurs TCR des lymphocytes T.",
+        "ar": "تتأسس المناعة المكتسبة عندما لا تكفي المناعة الطبيعية للقضاء على العامل الممرض. هي نوعية (موجهة ضد مستضد محدد)، تملك ذاكرة مناعية (استجابة ثانوية أسرع وأشد) وتتدخل فيها اللمفاويات B و T. يتم التعرف على المستضد بواسطة مستقبلات نوعية: الأجسام المضادة الغشائية (BCR) للمفاويات B ومستقبلات TCR للمفاويات T."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Réponse immunitaire humorale",
+        "ar": "3. الاستجابة المناعية الخلطية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Réponse humorale (à médiation par les anticorps)",
+        "ar": "الاستجابة الخلطية (بوساطة الأجسام المضادة)"
+      },
+      "text": {
+        "fr": "La réponse humorale est assurée par les lymphocytes B. Après reconnaissance de l'antigène, les lymphocytes B activés se multiplient (sélection clonale) et se différencient en plasmocytes sécréteurs d'anticorps et en lymphocytes B mémoire. Les anticorps (immunoglobulines) sont des protéines en forme de Y qui se lient spécifiquement aux antigènes pour les neutraliser.",
+        "ar": "تُؤمَّن الاستجابة الخلطية بواسطة اللمفاويات B. بعد التعرف على المستضد، تتكاثر اللمفاويات B المنشطة (الانتقاء النسيلي) وتتمايز إلى خلايا بلازمية مُفرزة للأجسام المضادة ولمفاويات B ذاكرة. الأجسام المضادة (الغلوبولينات المناعية) هي بروتينات على شكل Y ترتبط بشكل نوعي بالمستضدات لتحييدها."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Neutralisation : les anticorps bloquent les sites actifs des pathogènes",
+          "Agglutination : les anticorps forment des complexes immuns avec les antigènes",
+          "Opsonisation : les anticorps facilitent la phagocytose en marquant les pathogènes",
+          "Activation du complément : cascade de protéines aboutissant à la lyse des cellules cibles"
+        ],
+        "ar": [
+          "التحييد: الأجسام المضادة تحجب المواقع الفعالة للممرضات",
+          "التراص: الأجسام المضادة تكوّن معقدات مناعية مع المستضدات",
+          "الطهاية (الأبسنة): الأجسام المضادة تسهل البلعمة بوسم الممرضات",
+          "تنشيط المتممة: سلسلة من البروتينات تؤدي إلى حل الخلايا المستهدفة"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Réponse immunitaire cellulaire",
+        "ar": "4. الاستجابة المناعية الخلوية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Réponse cellulaire (à médiation cellulaire)",
+        "ar": "الاستجابة الخلوية (بوساطة الخلايا)"
+      },
+      "text": {
+        "fr": "La réponse cellulaire fait intervenir les lymphocytes T. Les lymphocytes T cytotoxiques (T8 ou T CD8+) détruisent directement les cellules infectées par des virus ou les cellules cancéreuses en libérant des perforines et des granzymes. Les lymphocytes T auxiliaires (T4 ou T CD4+) coordonnent la réponse immunitaire en sécrétant des interleukines qui stimulent les lymphocytes B et T8.",
+        "ar": "تتدخل في الاستجابة الخلوية اللمفاويات T. اللمفاويات T السامة (T8 أو T CD8+) تدمر مباشرة الخلايا المصابة بالفيروسات أو الخلايا السرطانية بإفراز البرفورينات والغرانزيمات. اللمفاويات T المساعدة (T4 أو T CD4+) تنسق الاستجابة المناعية بإفراز الأنترلوكينات التي تحفز اللمفاويات B و T8."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Les lymphocytes T CD4+ sont la cible du VIH (virus de l'immunodéficience humaine). La destruction progressive de ces cellules entraîne le SIDA (syndrome d'immunodéficience acquise), caractérisé par l'effondrement du système immunitaire et l'apparition d'infections opportunistes.",
+        "ar": "اللمفاويات T CD4+ هي هدف فيروس VIH (فيروس نقص المناعة البشرية). التدمير التدريجي لهذه الخلايا يؤدي إلى السيدا (متلازمة نقص المناعة المكتسب)، المتميز بانهيار الجهاز المناعي وظهور العدوى الانتهازية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. La vaccination",
+        "ar": "5. التلقيح"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Vaccination",
+        "ar": "التلقيح"
+      },
+      "text": {
+        "fr": "La vaccination consiste à injecter un antigène atténué, inactivé ou un fragment antigénique pour provoquer une réponse immunitaire primaire sans provoquer la maladie. L'organisme produit des lymphocytes mémoire (B et T) qui permettront une réponse secondaire rapide, intense et spécifique lors d'un contact ultérieur avec le vrai pathogène. C'est une immunité active acquise artificiellement.",
+        "ar": "يتمثل التلقيح في حقن مستضد مُضعف أو معطل أو جزء مستضدي لإثارة استجابة مناعية أولية دون التسبب في المرض. ينتج الجسم لمفاويات ذاكرة (B و T) تتيح استجابة ثانوية سريعة وشديدة ونوعية عند التماس اللاحق مع الممرض الحقيقي. إنها مناعة فاعلة مكتسبة اصطناعيًا."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La sérothérapie, contrairement à la vaccination, consiste à injecter directement des anticorps (sérum) préformés. C'est une immunité passive, immédiate mais temporaire, car l'organisme ne produit pas ses propres anticorps ni de cellules mémoire. Elle est utilisée en urgence (morsure de serpent, tétanos).",
+        "ar": "على عكس التلقيح، يتمثل العلاج بالمصل في حقن أجسام مضادة (مصل) جاهزة مباشرة. هي مناعة منفعلة، فورية لكن مؤقتة، لأن الجسم لا ينتج أجسامه المضادة الخاصة ولا خلايا ذاكرة. تُستخدم في الحالات المستعجلة (لدغة أفعى، الكزاز)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Dysfonctionnements du système immunitaire",
+        "ar": "6. اختلالات الجهاز المناعي"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Allergie (hypersensibilité)",
+        "ar": "الحساسية (فرط الحساسية)"
+      },
+      "text": {
+        "fr": "L'allergie est une réaction immunitaire exagérée contre des substances normalement inoffensives (allergènes : pollen, acariens, aliments). Lors du premier contact, l'organisme produit des IgE. Lors d'un second contact, les IgE fixées sur les mastocytes déclenchent la libération massive d'histamine, causant les symptômes allergiques (éternuements, urticaire, asthme, choc anaphylactique).",
+        "ar": "الحساسية هي استجابة مناعية مبالغ فيها ضد مواد غير مؤذية عادةً (مسببات الحساسية: حبوب اللقاح، عث الغبار، الأطعمة). عند التماس الأول ينتج الجسم أجسام IgE. عند التماس الثاني، تُحرّض IgE المثبتة على الخلايا البدينة تحرير كميات كبيرة من الهيستامين، مسببةً أعراض الحساسية (العطس، الشرى، الربو، الصدمة التأقية)."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Maladies auto-immunes",
+        "ar": "أمراض المناعة الذاتية"
+      },
+      "text": {
+        "fr": "Les maladies auto-immunes surviennent lorsque le système immunitaire attaque les propres cellules et tissus de l'organisme (perte de la tolérance au soi). Le système immunitaire produit des auto-anticorps ou des lymphocytes T auto-réactifs. Exemples : diabète de type 1 (destruction des cellules bêta du pancréas), sclérose en plaques, lupus érythémateux.",
+        "ar": "تحدث أمراض المناعة الذاتية عندما يهاجم الجهاز المناعي خلايا وأنسجة الجسم نفسه (فقدان التحمل للذات). ينتج الجهاز المناعي أجسامًا مضادة ذاتية أو لمفاويات T ذاتية التفاعل. أمثلة: السكري من النوع 1 (تدمير خلايا بيتا في البنكرياس)، التصلب المتعدد، الذئبة الحمامية."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "SIDA (VIH)",
+        "ar": "السيدا (فيروس VIH)"
+      },
+      "text": {
+        "fr": "Le VIH (virus de l'immunodéficience humaine) infecte spécifiquement les lymphocytes T CD4+. Le virus se fixe par la protéine gp120 sur le récepteur CD4. Après une phase asymptomatique pouvant durer des années, la destruction progressive des T CD4+ conduit au SIDA, stade où le nombre de T CD4+ chute sous 200/mm³. Le patient devient vulnérable aux infections opportunistes et à certains cancers.",
+        "ar": "فيروس VIH (فيروس نقص المناعة البشرية) يصيب بشكل خاص اللمفاويات T CD4+. يرتبط الفيروس بالبروتين gp120 على المستقبل CD4. بعد مرحلة لاعرضية قد تدوم سنوات، يؤدي التدمير التدريجي لـ T CD4+ إلى السيدا، المرحلة التي ينخفض فيها عدد T CD4+ تحت 200/مم³. يصبح المريض عرضة للعدوى الانتهازية وبعض السرطانات."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Récapitulatif des types d'immunité : l'immunité innée est rapide, non spécifique et sans mémoire. L'immunité adaptative est lente (première fois), spécifique et possède une mémoire. La vaccination exploite la mémoire immunitaire pour protéger l'organisme de façon durable.",
+        "ar": "ملخص أنماط المناعة: المناعة الطبيعية سريعة وغير نوعية وبدون ذاكرة. المناعة المكتسبة بطيئة (أول مرة) ونوعية وتملك ذاكرة. يستغل التلقيح الذاكرة المناعية لحماية الجسم بشكل مستدام."
+      }
+    }
+  ]
+}

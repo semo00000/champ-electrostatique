@@ -1,0 +1,193 @@
+{
+  "id": "ondes-mecaniques-progressives-periodiques",
+  "title": { "fr": "Les Ondes Mécaniques Progressives Périodiques", "ar": "الموجات الميكانيكية المتقدمة الدورية" },
+  "objectives": {
+    "fr": [
+      "Définir une onde mécanique progressive périodique",
+      "Connaître les grandeurs caractéristiques : période, fréquence, longueur d'onde",
+      "Établir la relation λ = v·T = v/f",
+      "Écrire l'équation d'une onde sinusoïdale progressive",
+      "Comprendre la notion de déphasage entre deux points",
+      "Connaître les bases des ondes stationnaires"
+    ],
+    "ar": [
+      "تعريف الموجة الميكانيكية المتقدمة الدورية",
+      "معرفة الكميات المميزة: الدور، التردد، الطول الموجي",
+      "إثبات العلاقة λ = v·T = v/f",
+      "كتابة معادلة موجة جيبية متقدمة",
+      "فهم مفهوم فرق الطور بين نقطتين",
+      "معرفة أساسيات الموجات المستقرة"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Définition et grandeurs caractéristiques", "ar": "1. التعريف والكميات المميزة" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Onde mécanique progressive périodique", "ar": "الموجة الميكانيكية المتقدمة الدورية" },
+      "text": {
+        "fr": "Une onde mécanique progressive périodique est une onde dont la source effectue un mouvement périodique. Chaque point du milieu reproduit le même mouvement avec un retard. Si le mouvement de la source est sinusoïdal, l'onde est dite <strong>sinusoïdale</strong> ou <strong>harmonique</strong>.",
+        "ar": "الموجة الميكانيكية المتقدمة الدورية هي موجة يكون فيها منبعها يؤدي حركة دورية. كل نقطة من الوسط تعيد نفس الحركة بتأخر. إذا كانت حركة المنبع جيبية، تسمى الموجة <strong>جيبية</strong> أو <strong>توافقية</strong>."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Les grandeurs caractéristiques d'une onde périodique sont :",
+        "ar": "الكميات المميزة للموجة الدورية هي:"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "<strong>Période T</strong> : durée d'un motif élémentaire (en secondes, s)",
+          "<strong>Fréquence f</strong> : nombre de motifs par seconde (en Hertz, Hz)",
+          "<strong>Amplitude A</strong> : élongation maximale (en mètres, m)",
+          "<strong>Longueur d'onde λ</strong> : distance parcourue par l'onde pendant une période T"
+        ],
+        "ar": [
+          "<strong>الدور T</strong>: مدة نموذج أولي واحد (بالثواني، s)",
+          "<strong>التردد f</strong>: عدد النماذج في الثانية (بالهرتز، Hz)",
+          "<strong>السعة A</strong>: الاستطالة القصوى (بالمتر، m)",
+          "<strong>الطول الموجي λ</strong>: المسافة التي تقطعها الموجة خلال دور واحد T"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Relations fondamentales", "ar": "2. العلاقات الأساسية" }
+    },
+    {
+      "type": "formula",
+      "latex": "f = \\frac{1}{T}",
+      "note": {
+        "fr": "f en Hz, T en s. La fréquence est l'inverse de la période.",
+        "ar": "f بوحدة Hz، T بوحدة s. التردد هو معكوس الدور."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\lambda = v \\cdot T = \\frac{v}{f}",
+      "note": {
+        "fr": "λ en m, v en m/s, T en s, f en Hz. La longueur d'onde est la distance parcourue par l'onde pendant une période. C'est aussi la plus petite distance entre deux points vibrant en phase.",
+        "ar": "λ بوحدة m، v بوحدة m/s، T بوحدة s، f بوحدة Hz. الطول الموجي هو المسافة التي تقطعها الموجة خلال دور واحد. وهو أيضا أصغر مسافة بين نقطتين تهتزان بنفس الطور."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La longueur d'onde λ est la plus petite distance entre deux points du milieu qui vibrent en phase (avec le même mouvement au même instant). Sur un graphe y(x), λ correspond à la distance entre deux crêtes (ou deux creux) consécutifs.",
+        "ar": "الطول الموجي λ هو أصغر مسافة بين نقطتين من الوسط تهتزان بنفس الطور. على منحنى y(x)، يمثل λ المسافة بين قمتين (أو قعرين) متتاليتين."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Équation d'une onde sinusoïdale progressive", "ar": "3. معادلة الموجة الجيبية المتقدمة" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour une onde sinusoïdale progressive se propageant dans le sens des $x$ positifs, l'élongation d'un point M situé à la distance $x$ de la source S est :",
+        "ar": "بالنسبة لموجة جيبية متقدمة تنتشر في اتجاه $x$ الموجب، استطالة نقطة M تبعد مسافة $x$ عن المنبع S هي:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "y(x,t) = A \\sin\\left(2\\pi\\left(\\frac{t}{T} - \\frac{x}{\\lambda}\\right)\\right)",
+      "note": {
+        "fr": "A = amplitude (m), T = période (s), λ = longueur d'onde (m), x = position du point (m), t = instant (s). On peut aussi écrire y(x,t) = A·sin(ωt - kx) avec ω = 2π/T et k = 2π/λ.",
+        "ar": "A = السعة (m)، T = الدور (s)، λ = الطول الموجي (m). يمكن أيضا كتابة y(x,t) = A·sin(ωt - kx) مع ω = 2π/T و k = 2π/λ."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "<strong>Pulsation</strong> : $\\omega = \\frac{2\\pi}{T} = 2\\pi f$ (en rad/s)",
+          "<strong>Nombre d'onde</strong> : $k = \\frac{2\\pi}{\\lambda}$ (en rad/m)",
+          "<strong>Relation de dispersion</strong> : $v = \\frac{\\omega}{k}$"
+        ],
+        "ar": [
+          "<strong>النبض</strong>: $\\omega = \\frac{2\\pi}{T} = 2\\pi f$ (بوحدة rad/s)",
+          "<strong>عدد الموجة</strong>: $k = \\frac{2\\pi}{\\lambda}$ (بوحدة rad/m)",
+          "<strong>علاقة التبدد</strong>: $v = \\frac{\\omega}{k}$"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Déphasage entre deux points", "ar": "4. فرق الطور بين نقطتين" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Deux points M₁ et M₂, situés respectivement aux distances $x_1$ et $x_2$ de la source, présentent un déphasage :",
+        "ar": "نقطتان M₁ و M₂ تبعدان على التوالي $x_1$ و $x_2$ عن المنبع، يكون فرق الطور بينهما:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\Delta\\varphi = \\frac{2\\pi}{\\lambda}(x_2 - x_1) = k \\cdot \\Delta x",
+      "note": {
+        "fr": "Si Δφ = 2nπ (n entier), les deux points vibrent en phase. Si Δφ = (2n+1)π, ils vibrent en opposition de phase.",
+        "ar": "إذا Δφ = 2nπ (n عدد صحيح)، النقطتان تهتزان بنفس الطور. إذا Δφ = (2n+1)π، تهتزان بتعاكس الطور."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Ondes stationnaires (introduction)", "ar": "5. الموجات المستقرة (مقدمة)" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Lorsqu'une onde progressive sinusoïdale se réfléchit sur un obstacle fixe, la superposition de l'onde incidente et de l'onde réfléchie donne naissance à une <strong>onde stationnaire</strong>. Certains points du milieu restent immobiles : ce sont des <strong>nœuds</strong>. D'autres vibrent avec une amplitude maximale : ce sont des <strong>ventres</strong>.",
+        "ar": "عندما تنعكس موجة جيبية متقدمة على عائق ثابت، فإن تراكب الموجة الساقطة والموجة المنعكسة ينتج <strong>موجة مستقرة</strong>. بعض نقاط الوسط تبقى ساكنة: تسمى <strong>عُقَد</strong>. وأخرى تهتز بسعة قصوى: تسمى <strong>بطون</strong>."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "y(x,t) = 2A\\sin(kx)\\cos(\\omega t)",
+      "note": {
+        "fr": "Nœuds : sin(kx) = 0 ⟹ x = nλ/2. Ventres : |sin(kx)| = 1 ⟹ x = (2n+1)λ/4. La distance entre deux nœuds (ou deux ventres) consécutifs est λ/2.",
+        "ar": "العُقَد: sin(kx) = 0 ⟹ x = nλ/2. البطون: |sin(kx)| = 1 ⟹ x = (2n+1)λ/4. المسافة بين عقدتين (أو بطنين) متتاليتين هي λ/2."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Exemples d'application", "ar": "6. أمثلة تطبيقية" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 1 : Calcul de la longueur d'onde", "ar": "مثال 1: حساب الطول الموجي" },
+      "problem": {
+        "fr": "Un vibreur de fréquence $f = 50\\,Hz$ génère une onde sinusoïdale à la surface de l'eau. La célérité de l'onde est $v = 1{,}5\\,m/s$. Calculer la longueur d'onde λ et la période T.",
+        "ar": "مهتز بتردد $f = 50\\,Hz$ ينتج موجة جيبية على سطح الماء. سرعة الموجة $v = 1{,}5\\,m/s$. احسب الطول الموجي λ والدور T."
+      },
+      "solution": {
+        "fr": "On calcule la période puis la longueur d'onde.",
+        "latex": "T = \\frac{1}{f} = \\frac{1}{50} = 0{,}02\\,s = 20\\,ms \\quad ; \\quad \\lambda = v \\cdot T = 1{,}5 \\times 0{,}02 = 0{,}03\\,m = 3\\,cm"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 2 : Équation de l'onde", "ar": "مثال 2: معادلة الموجة" },
+      "problem": {
+        "fr": "Une onde sinusoïdale se propage le long d'une corde avec une amplitude $A = 2\\,cm$, une fréquence $f = 100\\,Hz$ et une célérité $v = 20\\,m/s$. Écrire l'équation $y(x,t)$ de l'onde.",
+        "ar": "تنتشر موجة جيبية على طول حبل بسعة $A = 2\\,cm$ وتردد $f = 100\\,Hz$ وسرعة $v = 20\\,m/s$. اكتب معادلة الموجة $y(x,t)$."
+      },
+      "solution": {
+        "fr": "On détermine T et λ, puis on écrit l'équation.",
+        "latex": "T = \\frac{1}{100} = 0{,}01\\,s \\quad;\\quad \\lambda = \\frac{v}{f} = \\frac{20}{100} = 0{,}2\\,m \\\\[6pt] y(x,t) = 0{,}02\\,\\sin\\left(2\\pi\\left(\\frac{t}{0{,}01} - \\frac{x}{0{,}2}\\right)\\right) = 0{,}02\\,\\sin(200\\pi t - 10\\pi x) \\quad \\text{(en m)}"
+      }
+    }
+  ]
+}

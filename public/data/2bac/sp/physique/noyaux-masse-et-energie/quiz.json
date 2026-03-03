@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le défaut de masse d'un noyau est :",
+        "ar": "خلل الكتلة لنواة هو:"
+      },
+      "choices": [
+        { "fr": "Toujours négatif", "ar": "دائماً سالب" },
+        { "fr": "Toujours positif", "ar": "دائماً موجب" },
+        { "fr": "Nul pour les noyaux stables", "ar": "معدوم بالنسبة للنوى المستقرة" },
+        { "fr": "Égal à la masse du noyau", "ar": "يساوي كتلة النواة" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le défaut de masse est toujours positif : la masse des nucléons séparés est toujours supérieure à la masse du noyau. La différence de masse correspond à l'énergie de liaison du noyau via $E_\\ell = \\Delta m \\cdot c^2$.",
+        "ar": "خلل الكتلة دائماً موجب: كتلة النوكليونات المنفصلة دائماً أكبر من كتلة النواة. فرق الكتلة يوافق طاقة ربط النواة عبر $E_\\ell = \\Delta m \\cdot c^2$."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer l'énergie de liaison du noyau d'hélium 4 ($^{4}_{2}He$) sachant que son défaut de masse est $\\Delta m = 0{,}03038\\,u$. Donner la réponse en MeV (arrondir à 0,1 MeV). Donnée : $1\\,u \\cdot c^2 = 931{,}5\\,MeV$.",
+        "ar": "احسب طاقة ربط نواة الهيليوم 4 ($^{4}_{2}He$) علماً أن خلل كتلتها $\\Delta m = 0{,}03038\\,u$. أعط الإجابة بالـ MeV (قرّب إلى 0.1 MeV)."
+      },
+      "answer": 28.3,
+      "tolerance": 0.2,
+      "unit": "MeV",
+      "hint": {
+        "fr": "Utilisez $E_\\ell = \\Delta m \\times 931{,}5\\,MeV$.",
+        "ar": "استخدم $E_\\ell = \\Delta m \\times 931{,}5\\,MeV$."
+      },
+      "explanation": {
+        "fr": "$E_\\ell = 0{,}03038 \\times 931{,}5 = 28{,}3\\,MeV$.",
+        "ar": "$E_\\ell = 0{,}03038 \\times 931{,}5 = 28{,}3\\,MeV$."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Sur la courbe d'Aston, le noyau le plus stable est celui qui a :",
+        "ar": "على منحنى أستون، النواة الأكثر استقراراً هي التي لها:"
+      },
+      "choices": [
+        { "fr": "La plus petite énergie de liaison par nucléon", "ar": "أصغر طاقة ربط لكل نوكليون" },
+        { "fr": "La plus grande énergie de liaison par nucléon", "ar": "أكبر طاقة ربط لكل نوكليون" },
+        { "fr": "Le plus grand nombre de masse A", "ar": "أكبر عدد كتلة A" },
+        { "fr": "Le plus petit nombre de masse A", "ar": "أصغر عدد كتلة A" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Plus l'énergie de liaison par nucléon $E_\\ell/A$ est élevée, plus il faut fournir d'énergie pour arracher un nucléon, donc plus le noyau est stable. Le maximum (~8,8 MeV/nucléon) est atteint pour le fer 56 ($^{56}_{26}Fe$).",
+        "ar": "كلما كانت طاقة الربط لكل نوكليون $E_\\ell/A$ أكبر، كانت النواة أكثر استقراراً. القيمة القصوى (~8.8 MeV/نوكليون) عند الحديد 56 ($^{56}_{26}Fe$)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La fusion nucléaire consiste à :",
+        "ar": "الاندماج النووي يتمثل في:"
+      },
+      "choices": [
+        { "fr": "Casser un noyau lourd en noyaux plus légers", "ar": "تكسير نواة ثقيلة إلى نوى أخف" },
+        { "fr": "Assembler deux noyaux légers pour former un noyau plus lourd", "ar": "تجميع نواتين خفيفتين لتشكيل نواة أثقل" },
+        { "fr": "Ajouter des neutrons à un noyau lourd", "ar": "إضافة نيوترونات إلى نواة ثقيلة" },
+        { "fr": "Retirer des protons d'un noyau", "ar": "نزع بروتونات من نواة" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La fusion nucléaire est l'assemblage de noyaux légers (comme l'hydrogène) pour former un noyau plus lourd et plus stable (comme l'hélium). Ce processus libère une grande quantité d'énergie et est à l'origine de l'énergie des étoiles.",
+        "ar": "الاندماج النووي هو تجميع نوى خفيفة (مثل الهيدروجين) لتشكيل نواة أثقل وأكثر استقراراً (مثل الهيليوم). يحرر هذا التفاعل كمية كبيرة من الطاقة وهو مصدر طاقة النجوم."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Lors de la fusion $^{2}_{1}H + ^{3}_{1}H \\to ^{4}_{2}He + ^{1}_{0}n$, la perte de masse est $\\Delta m = 0{,}01888\\,u$. Calculer l'énergie libérée en MeV (arrondir à 0,1 MeV).",
+        "ar": "أثناء اندماج $^{2}_{1}H + ^{3}_{1}H \\to ^{4}_{2}He + ^{1}_{0}n$، نقص الكتلة $\\Delta m = 0{,}01888\\,u$. احسب الطاقة المحررة بالـ MeV (قرّب إلى 0.1)."
+      },
+      "answer": 17.6,
+      "tolerance": 0.2,
+      "unit": "MeV",
+      "hint": {
+        "fr": "Utilisez $E_{lib} = \\Delta m \\times 931{,}5\\,MeV$.",
+        "ar": "استخدم $E_{lib} = \\Delta m \\times 931{,}5\\,MeV$."
+      },
+      "explanation": {
+        "fr": "$E_{lib} = 0{,}01888 \\times 931{,}5 = 17{,}6\\,MeV$.",
+        "ar": "$E_{lib} = 0{,}01888 \\times 931{,}5 = 17{,}6\\,MeV$."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Le noyau de carbone 12 ($^{12}_{6}C$) a une masse de $12{,}0000\\,u$. Calculer le défaut de masse en u (arrondir à 0,001 u). Données : $m_p = 1{,}00728\\,u$, $m_n = 1{,}00866\\,u$.",
+        "ar": "نواة الكربون 12 ($^{12}_{6}C$) لها كتلة $12{,}0000\\,u$. احسب خلل الكتلة بوحدة u (قرّب إلى 0.001 u). المعطيات: $m_p = 1{,}00728\\,u$، $m_n = 1{,}00866\\,u$."
+      },
+      "answer": 0.096,
+      "tolerance": 0.002,
+      "unit": "u",
+      "hint": {
+        "fr": "$\\Delta m = 6 \\times m_p + 6 \\times m_n - m(^{12}C)$.",
+        "ar": "$\\Delta m = 6 \\times m_p + 6 \\times m_n - m(^{12}C)$."
+      },
+      "explanation": {
+        "fr": "$\\Delta m = 6 \\times 1{,}00728 + 6 \\times 1{,}00866 - 12{,}0000 = 6{,}04368 + 6{,}05196 - 12{,}0000 = 0{,}09564 \\approx 0{,}096\\,u$.",
+        "ar": "$\\Delta m = 6 \\times 1{,}00728 + 6 \\times 1{,}00866 - 12{,}0000 = 6{,}04368 + 6{,}05196 - 12{,}0000 = 0{,}09564 \\approx 0{,}096\\,u$."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'énergie libérée lors d'une réaction nucléaire peut se calculer par :",
+        "ar": "الطاقة المحررة خلال تفاعل نووي يمكن حسابها بـ:"
+      },
+      "choices": [
+        { "fr": "$E = \\sum E_{\\ell}(\\text{réactifs}) - \\sum E_{\\ell}(\\text{produits})$", "ar": "$E = \\sum E_{\\ell}(\\text{متفاعلات}) - \\sum E_{\\ell}(\\text{نواتج})$" },
+        { "fr": "$E = \\sum E_{\\ell}(\\text{produits}) - \\sum E_{\\ell}(\\text{réactifs})$", "ar": "$E = \\sum E_{\\ell}(\\text{نواتج}) - \\sum E_{\\ell}(\\text{متفاعلات})$" },
+        { "fr": "$E = \\sum m_{\\text{produits}} \\cdot c^2$", "ar": "$E = \\sum m_{\\text{نواتج}} \\cdot c^2$" },
+        { "fr": "$E = \\sum m_{\\text{réactifs}} \\cdot c^2$", "ar": "$E = \\sum m_{\\text{متفاعلات}} \\cdot c^2$" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "L'énergie libérée est $E_{lib} = \\sum E_{\\ell}(\\text{produits}) - \\sum E_{\\ell}(\\text{réactifs})$, ou de manière équivalente $E_{lib} = (\\sum m_{\\text{réactifs}} - \\sum m_{\\text{produits}}) \\cdot c^2$. Les produits d'une réaction exoénergétique sont plus stables (énergie de liaison plus grande).",
+        "ar": "الطاقة المحررة هي $E_{lib} = \\sum E_{\\ell}(\\text{نواتج}) - \\sum E_{\\ell}(\\text{متفاعلات})$، أو بشكل مكافئ $E_{lib} = (\\sum m_{\\text{متفاعلات}} - \\sum m_{\\text{نواتج}}) \\cdot c^2$. نواتج تفاعل ناشر للطاقة أكثر استقراراً."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Quelle est l'énergie de masse (en MeV) d'un proton de masse $m_p = 1{,}00728\\,u$ ? Donnée : $1\\,u \\cdot c^2 = 931{,}5\\,MeV$. Arrondir à 0,1 MeV.",
+        "ar": "ما هي طاقة كتلة (بالـ MeV) بروتون كتلته $m_p = 1{,}00728\\,u$؟ المعطى: $1\\,u \\cdot c^2 = 931{,}5\\,MeV$. قرّب إلى 0.1 MeV."
+      },
+      "answer": 938.3,
+      "tolerance": 0.2,
+      "unit": "MeV",
+      "hint": {
+        "fr": "L'énergie de masse est $E = m_p \\cdot c^2 = m_p \\times 931{,}5$ en MeV.",
+        "ar": "طاقة الكتلة هي $E = m_p \\cdot c^2 = m_p \\times 931{,}5$ بالـ MeV."
+      },
+      "explanation": {
+        "fr": "$E = 1{,}00728 \\times 931{,}5 = 938{,}3\\,MeV$. C'est l'énergie de masse du proton, soit l'énergie qu'il faudrait pour «créer» un proton à partir du vide.",
+        "ar": "$E = 1{,}00728 \\times 931{,}5 = 938{,}3\\,MeV$. هذه طاقة كتلة البروتون، أي الطاقة اللازمة «لخلق» بروتون من الفراغ."
+      }
+    }
+  ]
+}

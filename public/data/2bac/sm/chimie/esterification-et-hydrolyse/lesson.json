@@ -1,0 +1,190 @@
+{
+  "id": "esterification-et-hydrolyse",
+  "title": {
+    "fr": "Estérification et hydrolyse",
+    "ar": "الأسترة والحلمأة"
+  },
+  "objectives": {
+    "fr": [
+      "Écrire l'équation de la réaction d'estérification et d'hydrolyse",
+      "Connaître les caractéristiques de l'estérification (lente, limitée, athermique)",
+      "Calculer le rendement d'une réaction d'estérification",
+      "Connaître les facteurs influençant l'équilibre (excès de réactif, catalyse, élimination d'un produit)",
+      "Comprendre la saponification des esters (fabrication du savon)",
+      "Identifier les groupes fonctionnels ester, acide carboxylique et alcool"
+    ],
+    "ar": [
+      "كتابة معادلة تفاعل الأسترة والحلمأة",
+      "معرفة خصائص الأسترة (بطيئة، محدودة، لاحرارية)",
+      "حساب مردود تفاعل الأسترة",
+      "معرفة العوامل المؤثرة على التوازن (فائض المتفاعل، الحفز، إزالة ناتج)",
+      "فهم التصبّن (صناعة الصابون)",
+      "تحديد المجموعات الوظيفية: إستر، حمض كربوكسيلي، كحول"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Groupes fonctionnels et nomenclature",
+        "ar": "1. المجموعات الوظيفية والتسمية"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Acide carboxylique : R-COOH (groupe carboxyle). Exemple : acide éthanoïque CH₃COOH.",
+          "Alcool : R-OH (groupe hydroxyle). Exemple : éthanol C₂H₅OH.",
+          "Ester : R-COO-R' (groupe ester). Exemple : éthanoate d'éthyle CH₃COOC₂H₅.",
+          "Nomenclature de l'ester : nom de l'acide remplacé par -oate + de + nom du groupe alkyle de l'alcool."
+        ],
+        "ar": [
+          "حمض كربوكسيلي: R-COOH (مجموعة الكربوكسيل). مثال: حمض الإيثانويك CH₃COOH.",
+          "كحول: R-OH (مجموعة الهيدروكسيل). مثال: الإيثانول C₂H₅OH.",
+          "إستر: R-COO-R' (مجموعة الإستر). مثال: إيثانوات الإيثيل CH₃COOC₂H₅.",
+          "تسمية الإستر: اسم الحمض مع تحويل -يك إلى -ات + اسم مجموعة الألكيل للكحول."
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Réaction d'estérification",
+        "ar": "2. تفاعل الأسترة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Estérification", "ar": "الأسترة" },
+      "text": {
+        "fr": "L'estérification est la réaction entre un acide carboxylique (R-COOH) et un alcool (R'-OH) pour former un ester (R-COO-R') et de l'eau. C'est une réaction lente, limitée (non totale) et athermique.",
+        "ar": "الأسترة هي تفاعل بين حمض كربوكسيلي (R-COOH) وكحول (R'-OH) لتكوين إستر (R-COO-R') وماء. هو تفاعل بطيء ومحدود (غير تام) ولاحراري."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "R\\text{-}COOH + R'\\text{-}OH \\rightleftharpoons R\\text{-}COO\\text{-}R' + H_2O",
+      "note": {
+        "fr": "La double flèche ⇌ indique que la réaction est limitée (équilibre). L'acide carboxylique perd OH et l'alcool perd H pour former l'eau.",
+        "ar": "السهم المزدوج ⇌ يدل على أن التفاعل محدود (توازن). الحمض الكربوكسيلي يفقد OH والكحول يفقد H لتكوين الماء."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Caractéristiques de l'estérification : (1) Lente : elle nécessite plusieurs heures voire jours pour atteindre l'équilibre. (2) Limitée : le taux d'avancement final τ < 1 (la réaction n'est pas totale). (3) Athermique : elle ne libère ni n'absorbe de chaleur (ΔH ≈ 0).",
+        "ar": "خصائص الأسترة: (1) بطيئة: تحتاج عدة ساعات أو أيام للوصول إلى التوازن. (2) محدودة: نسبة التقدم النهائي τ < 1 (التفاعل غير تام). (3) لاحرارية: لا تُطلق ولا تمتص حرارة (ΔH ≈ 0)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Rendement de l'estérification",
+        "ar": "3. مردود الأسترة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le rendement (ou taux d'avancement final) de l'estérification dépend de la classe de l'alcool utilisé lorsque les réactifs sont en proportions équimolaires. Alcool primaire : τ ≈ 67%. Alcool secondaire : τ ≈ 60%. Alcool tertiaire : τ ≈ 5%. Le rendement ne dépend pas de la nature de l'acide carboxylique ni des quantités initiales.",
+        "ar": "يعتمد مردود (أو نسبة التقدم النهائي) الأسترة على رتبة الكحول المستخدم عندما تكون المتفاعلات بنسب متساوية المولات. كحول أولي: τ ≈ 67%. كحول ثانوي: τ ≈ 60%. كحول ثالثي: τ ≈ 5%. لا يعتمد المردود على طبيعة الحمض الكربوكسيلي ولا على الكميات الابتدائية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Réaction d'hydrolyse",
+        "ar": "4. تفاعل الحلمأة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Hydrolyse d'un ester", "ar": "حلمأة إستر" },
+      "text": {
+        "fr": "L'hydrolyse est la réaction inverse de l'estérification : un ester réagit avec l'eau pour donner un acide carboxylique et un alcool. C'est aussi une réaction lente et limitée. L'estérification et l'hydrolyse conduisent au même état d'équilibre.",
+        "ar": "الحلمأة هي التفاعل العكسي للأسترة: يتفاعل الإستر مع الماء لإعطاء حمض كربوكسيلي وكحول. هو أيضاً تفاعل بطيء ومحدود. تؤدي الأسترة والحلمأة إلى نفس حالة التوازن."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "R\\text{-}COO\\text{-}R' + H_2O \\rightleftharpoons R\\text{-}COOH + R'\\text{-}OH",
+      "note": {
+        "fr": "La réaction d'hydrolyse est la réaction inverse de l'estérification. À l'équilibre, les vitesses des deux réactions (directe et inverse) sont égales.",
+        "ar": "تفاعل الحلمأة هو التفاعل العكسي للأسترة. عند التوازن، سرعتا التفاعلين (المباشر والعكسي) متساويتان."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Comment améliorer le rendement ?",
+        "ar": "5. كيف نحسّن المردود؟"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Utiliser un excès de l'un des réactifs (acide ou alcool) pour déplacer l'équilibre vers la formation de l'ester.",
+          "Éliminer l'un des produits au fur et à mesure (distillation de l'ester ou élimination de l'eau par un desséchant) : déplacement de l'équilibre par la loi de Le Chatelier.",
+          "La catalyse (acide sulfurique concentré, H₂SO₄) augmente la vitesse mais ne modifie pas l'état d'équilibre final ni le rendement.",
+          "Remplacer l'acide carboxylique par un anhydride d'acide ou un chlorure d'acyle pour rendre la réaction totale et rapide."
+        ],
+        "ar": [
+          "استخدام فائض من أحد المتفاعلات (الحمض أو الكحول) لإزاحة التوازن نحو تكوين الإستر.",
+          "إزالة أحد النواتج تدريجياً (تقطير الإستر أو إزالة الماء بمادة مجففة): إزاحة التوازن وفق مبدأ لوشاتولييه.",
+          "الحفز (حمض الكبريتيك المركز H₂SO₄) يزيد السرعة لكن لا يغير حالة التوازن النهائية ولا المردود.",
+          "استبدال الحمض الكربوكسيلي بأنهيدريد حمض أو كلوريد أسيل لجعل التفاعل تاماً وسريعاً."
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Saponification des esters",
+        "ar": "6. تصبّن الإسترات"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Saponification", "ar": "التصبّن" },
+      "text": {
+        "fr": "La saponification est la réaction d'un ester avec une base forte (soude NaOH ou potasse KOH) pour donner un ion carboxylate (savon) et un alcool. C'est une réaction totale, lente et exothermique. Elle est utilisée pour fabriquer les savons à partir de corps gras (esters d'acides gras et de glycérol).",
+        "ar": "التصبّن هو تفاعل إستر مع قاعدة قوية (هيدروكسيد الصوديوم NaOH أو هيدروكسيد البوتاسيوم KOH) لإعطاء أيون كربوكسيلات (صابون) وكحول. هو تفاعل تام وبطيء ومُطلق للحرارة. يُستخدم لصناعة الصابون من المواد الدهنية (إسترات الأحماض الدهنية والغليسيرول)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "R\\text{-}COO\\text{-}R' + Na^+_{(aq)} + HO^-_{(aq)} \\rightarrow R\\text{-}COO^-_{(aq)} + Na^+_{(aq)} + R'\\text{-}OH",
+      "note": {
+        "fr": "La saponification est totale (flèche simple →), contrairement à l'hydrolyse qui est limitée (⇌). Le produit R-COO⁻Na⁺ est un savon (sel d'acide gras). La réaction est irréversible.",
+        "ar": "التصبّن تام (سهم بسيط →)، على عكس الحلمأة المحدودة (⇌). الناتج R-COO⁻Na⁺ هو صابون (ملح حمض دهني). التفاعل غير عكسي."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Rendement d'une estérification", "ar": "مثال: مردود تفاعل أسترة" },
+      "problem": {
+        "fr": "On mélange 0,50 mol d'acide éthanoïque avec 0,50 mol d'éthanol (alcool primaire). À l'équilibre, on obtient 0,33 mol d'ester. Calculer le taux d'avancement final τ.",
+        "ar": "نمزج 0,50 mol من حمض الإيثانويك مع 0,50 mol من الإيثانول (كحول أولي). عند التوازن، نحصل على 0,33 mol من الإستر. احسب نسبة التقدم النهائي τ."
+      },
+      "solution": {
+        "fr": "Les réactifs sont en proportions équimolaires, donc xmax = 0,50 mol. xf = 0,33 mol (quantité d'ester formé). τ = xf/xmax = 0,33/0,50 = 0,66 soit 66%. Ce résultat est conforme au rendement attendu pour un alcool primaire (≈ 67%).",
+        "latex": "\\tau = \\frac{x_f}{x_{max}} = \\frac{0{,}33}{0{,}50} = 0{,}66 = 66\\%"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Différences entre hydrolyse et saponification : l'hydrolyse d'un ester est lente, limitée et athermique (elle conduit à un équilibre). La saponification est lente mais totale et exothermique (la réaction va jusqu'au bout car la base forte consomme l'acide formé). La saponification est irréversible.",
+        "ar": "الفروق بين الحلمأة والتصبّن: حلمأة الإستر بطيئة ومحدودة ولاحرارية (تؤدي إلى توازن). التصبّن بطيء لكنه تام ومُطلق للحرارة (التفاعل يكتمل لأن القاعدة القوية تستهلك الحمض المتكوّن). التصبّن غير عكسي."
+      }
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "id": "suites-numeriques-approfondissement",
+  "title": {
+    "fr": "Suites numériques – Approfondissement",
+    "ar": "المتتاليات العددية – تعميق"
+  },
+  "objectives": {
+    "fr": [
+      "Distinguer suites récurrentes et suites explicites",
+      "Étudier la convergence d'une suite monotone bornée",
+      "Calculer la somme d'une série géométrique convergente",
+      "Étudier des suites adjacentes et déterminer leur limite commune"
+    ],
+    "ar": [
+      "التمييز بين المتتاليات التراجعية والمتتاليات الصريحة",
+      "دراسة تقارب متتالية رتيبة ومحدودة",
+      "حساب مجموع متسلسلة هندسية متقاربة",
+      "دراسة المتتاليات المتجاورة وتحديد نهايتها المشتركة"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Suites récurrentes et suites explicites",
+        "ar": "١. المتتاليات التراجعية والمتتاليات الصريحة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Suite explicite" },
+      "text": { "fr": "Une suite (uₙ) est définie explicitement si on dispose d'une formule uₙ = f(n) permettant de calculer directement chaque terme en fonction de n." }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Suite récurrente" },
+      "text": { "fr": "Une suite (uₙ) est définie par récurrence si on connaît u₀ (ou u₁) et une relation uₙ₊₁ = f(uₙ) permettant de calculer chaque terme à partir du précédent." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple de suite récurrente" },
+      "problem": { "fr": "Soit (uₙ) définie par u₀ = 2 et uₙ₊₁ = (uₙ + 3)/2. Calculer u₁, u₂ et u₃." },
+      "solution": {
+        "fr": "u₁ = (2 + 3)/2 = 5/2 ; u₂ = (5/2 + 3)/2 = 11/4 ; u₃ = (11/4 + 3)/2 = 23/8.",
+        "latex": "u_1 = \\frac{2+3}{2} = \\frac{5}{2}, \\quad u_2 = \\frac{\\frac{5}{2}+3}{2} = \\frac{11}{4}, \\quad u_3 = \\frac{\\frac{11}{4}+3}{2} = \\frac{23}{8}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Monotonie et bornitude",
+        "ar": "٢. الرتابة والمحدودية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Suite monotone" },
+      "text": { "fr": "Une suite (uₙ) est croissante si pour tout n ∈ ℕ, uₙ₊₁ ≥ uₙ. Elle est décroissante si pour tout n ∈ ℕ, uₙ₊₁ ≤ uₙ." }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Suite bornée" },
+      "text": { "fr": "Une suite (uₙ) est bornée s'il existe deux réels m et M tels que pour tout n ∈ ℕ, m ≤ uₙ ≤ M." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Théorème de la suite monotone bornée",
+        "ar": "٣. مبرهنة المتتالية الرتيبة المحدودة"
+      }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Théorème : Toute suite croissante et majorée est convergente. Toute suite décroissante et minorée est convergente." }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Ce théorème est fondamental pour prouver l'existence d'une limite sans la connaître explicitement. Pour trouver la valeur de la limite ℓ d'une suite récurrente uₙ₊₁ = f(uₙ), on résout l'équation ℓ = f(ℓ)." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Application du théorème" },
+      "problem": { "fr": "Soit (uₙ) définie par u₀ = 0 et uₙ₊₁ = √(2 + uₙ). Montrer que (uₙ) converge et trouver sa limite." },
+      "solution": {
+        "fr": "1) On montre par récurrence que 0 ≤ uₙ ≤ 2 (bornée) et uₙ₊₁ ≥ uₙ (croissante). 2) Par le théorème, (uₙ) converge vers ℓ vérifiant ℓ = √(2 + ℓ), donc ℓ² = 2 + ℓ, soit ℓ² − ℓ − 2 = 0. On obtient ℓ = 2 (car ℓ ≥ 0).",
+        "latex": "\\ell = \\sqrt{2 + \\ell} \\implies \\ell^2 - \\ell - 2 = 0 \\implies (\\ell - 2)(\\ell + 1) = 0 \\implies \\ell = 2"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Somme d'une série géométrique",
+        "ar": "٤. مجموع متسلسلة هندسية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Soit (uₙ) une suite géométrique de premier terme a et de raison r. La somme partielle des n+1 premiers termes est :" }
+    },
+    {
+      "type": "formula",
+      "latex": "S_n = \\sum_{k=0}^{n} a \\, r^k = a \\cdot \\frac{1 - r^{n+1}}{1 - r} \\quad (r \\neq 1)",
+      "note": { "fr": "Somme partielle d'une suite géométrique" }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Si |r| < 1, la série géométrique converge et sa somme vaut : S = a / (1 − r). Si |r| ≥ 1, la série diverge." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{Si } |r| < 1 : \\quad S = \\sum_{k=0}^{+\\infty} a \\, r^k = \\frac{a}{1 - r}",
+      "note": { "fr": "Somme d'une série géométrique convergente" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Somme d'une série géométrique" },
+      "problem": { "fr": "Calculer la somme S = 1 + 1/3 + 1/9 + 1/27 + ⋯" },
+      "solution": {
+        "fr": "C'est une série géométrique de premier terme a = 1 et de raison r = 1/3. Comme |1/3| < 1, S = 1/(1 − 1/3) = 1/(2/3) = 3/2.",
+        "latex": "S = \\frac{1}{1 - \\frac{1}{3}} = \\frac{1}{\\frac{2}{3}} = \\frac{3}{2}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Suites adjacentes",
+        "ar": "٥. المتتاليات المتجاورة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Suites adjacentes" },
+      "text": { "fr": "Deux suites (uₙ) et (vₙ) sont adjacentes si l'une est croissante, l'autre est décroissante, et si lim(vₙ − uₙ) = 0." }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Théorème des suites adjacentes : Si (uₙ) et (vₙ) sont adjacentes, alors elles convergent vers une même limite ℓ, et pour tout n : uₙ ≤ ℓ ≤ vₙ." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Suites adjacentes" },
+      "problem": { "fr": "Montrer que uₙ = 1 + 1/1! + 1/2! + ⋯ + 1/n! et vₙ = uₙ + 1/n·n! sont adjacentes." },
+      "solution": {
+        "fr": "(uₙ) est croissante car uₙ₊₁ − uₙ = 1/(n+1)! > 0. On montre que (vₙ) est décroissante. De plus, vₙ − uₙ = 1/(n·n!) → 0 quand n → +∞. Donc (uₙ) et (vₙ) sont adjacentes et convergent vers la même limite (qui est e).",
+        "latex": "\\lim_{n \\to +\\infty} (v_n - u_n) = \\lim_{n \\to +\\infty} \\frac{1}{n \\cdot n!} = 0"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Critères de convergence – Résumé",
+        "ar": "٦. معايير التقارب – ملخص"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Suite croissante et majorée ⟹ convergente",
+          "Suite décroissante et minorée ⟹ convergente",
+          "Suite géométrique de raison |r| < 1 ⟹ converge vers 0",
+          "Suites adjacentes ⟹ convergent vers une même limite",
+          "Théorème des gendarmes : si uₙ ≤ wₙ ≤ vₙ et lim uₙ = lim vₙ = ℓ, alors lim wₙ = ℓ"
+        ]
+      }
+    }
+  ]
+}

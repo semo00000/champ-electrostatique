@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel mécanisme fait partie de l'immunité innée ?",
+        "ar": "أي آلية تنتمي إلى المناعة الطبيعية؟"
+      },
+      "choices": [
+        { "fr": "Production d'anticorps spécifiques", "ar": "إنتاج أجسام مضادة نوعية" },
+        { "fr": "Activation des lymphocytes T cytotoxiques", "ar": "تنشيط اللمفاويات T السامة" },
+        { "fr": "Phagocytose par les macrophages", "ar": "البلعمة بواسطة البلاعم" },
+        { "fr": "Sélection clonale des lymphocytes B", "ar": "الانتقاء النسيلي للمفاويات B" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "La phagocytose est un mécanisme de l'immunité innée : les macrophages (et autres phagocytes) englobent et détruisent les pathogènes de manière non spécifique. Les anticorps, les lymphocytes T cytotoxiques et la sélection clonale relèvent de l'immunité adaptative.",
+        "ar": "البلعمة آلية للمناعة الطبيعية: البلاعم (وغيرها من البالعات) تبتلع وتدمر الممرضات بشكل غير نوعي. الأجسام المضادة واللمفاويات T السامة والانتقاء النسيلي تنتمي للمناعة المكتسبة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Les quatre signes cardinaux de la réaction inflammatoire sont :",
+        "ar": "العلامات الأساسية الأربع للتفاعل الالتهابي هي:"
+      },
+      "choices": [
+        { "fr": "Rougeur, chaleur, gonflement, douleur", "ar": "احمرار، حرارة، تورم، ألم" },
+        { "fr": "Fièvre, toux, fatigue, vomissement", "ar": "حمى، سعال، تعب، قيء" },
+        { "fr": "Éternuement, démangeaison, fièvre, rougeur", "ar": "عطس، حكة، حمى، احمرار" },
+        { "fr": "Gonflement, pâleur, froid, engourdissement", "ar": "تورم، شحوب، برودة، خدر" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Les quatre signes cardinaux de l'inflammation sont : rubor (rougeur), calor (chaleur), tumor (gonflement/œdème) et dolor (douleur). Ils sont causés par la vasodilatation et l'afflux de plasma et de leucocytes au site de l'infection.",
+        "ar": "العلامات الأساسية الأربع للالتهاب هي: الاحمرار والحرارة والتورم (الوذمة) والألم. تنتج عن توسع الأوعية وتدفق البلازما والكريات البيضاء إلى موقع العدوى."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel type de cellule produit les anticorps ?",
+        "ar": "أي نوع من الخلايا ينتج الأجسام المضادة؟"
+      },
+      "choices": [
+        { "fr": "Lymphocytes T CD8+", "ar": "اللمفاويات T CD8+" },
+        { "fr": "Macrophages", "ar": "البلاعم" },
+        { "fr": "Plasmocytes (lymphocytes B différenciés)", "ar": "الخلايا البلازمية (لمفاويات B متمايزة)" },
+        { "fr": "Mastocytes", "ar": "الخلايا البدينة" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Les anticorps sont produits par les plasmocytes, qui sont des lymphocytes B activés et différenciés. Chaque plasmocyte sécrète des anticorps spécifiques d'un seul antigène. Les lymphocytes T CD8+ détruisent les cellules infectées par contact direct.",
+        "ar": "تُنتج الأجسام المضادة بواسطة الخلايا البلازمية، وهي لمفاويات B منشطة ومتمايزة. كل خلية بلازمية تفرز أجسامًا مضادة نوعية لمستضد واحد. اللمفاويات T CD8+ تدمر الخلايا المصابة بالتماس المباشر."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le VIH infecte principalement :",
+        "ar": "فيروس VIH يصيب بشكل رئيسي:"
+      },
+      "choices": [
+        { "fr": "Les lymphocytes B", "ar": "اللمفاويات B" },
+        { "fr": "Les lymphocytes T CD4+", "ar": "اللمفاويات T CD4+" },
+        { "fr": "Les macrophages uniquement", "ar": "البلاعم فقط" },
+        { "fr": "Les globules rouges", "ar": "الكريات الحمراء" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le VIH cible spécifiquement les lymphocytes T CD4+ (T auxiliaires) en se fixant sur le récepteur CD4 via sa protéine gp120. La destruction progressive de ces cellules conduit au SIDA et à l'effondrement de l'immunité.",
+        "ar": "يستهدف فيروس VIH بشكل خاص اللمفاويات T CD4+ (المساعدة) بالارتباط بالمستقبل CD4 عبر بروتينه gp120. التدمير التدريجي لهذه الخلايا يؤدي للسيدا وانهيار المناعة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La vaccination permet de :",
+        "ar": "يتيح التلقيح:"
+      },
+      "choices": [
+        { "fr": "Guérir une maladie en cours", "ar": "شفاء مرض قائم" },
+        { "fr": "Injecter des anticorps directement", "ar": "حقن أجسام مضادة مباشرة" },
+        { "fr": "Stimuler la production de cellules mémoire pour une protection future", "ar": "تحفيز إنتاج خلايا ذاكرة للحماية المستقبلية" },
+        { "fr": "Détruire les allergènes dans le corps", "ar": "تدمير مسببات الحساسية في الجسم" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "La vaccination stimule le système immunitaire en présentant un antigène atténué ou inactivé. L'organisme produit des lymphocytes mémoire (B et T) qui assureront une réponse secondaire rapide et efficace lors d'une infection future par le vrai pathogène.",
+        "ar": "يحفز التلقيح الجهاز المناعي بتقديم مستضد مُضعف أو معطل. ينتج الجسم لمفاويات ذاكرة (B و T) تضمن استجابة ثانوية سريعة وفعالة عند العدوى المستقبلية بالممرض الحقيقي."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est la différence principale entre la sérothérapie et la vaccination ?",
+        "ar": "ما هو الفرق الرئيسي بين العلاج بالمصل والتلقيح؟"
+      },
+      "choices": [
+        { "fr": "La sérothérapie est préventive, la vaccination est curative", "ar": "العلاج بالمصل وقائي والتلقيح علاجي" },
+        { "fr": "La sérothérapie apporte une immunité passive temporaire, la vaccination une immunité active durable", "ar": "العلاج بالمصل يوفر مناعة منفعلة مؤقتة، والتلقيح مناعة فاعلة مستدامة" },
+        { "fr": "La vaccination utilise des anticorps, la sérothérapie des antigènes", "ar": "التلقيح يستخدم أجسامًا مضادة والعلاج بالمصل يستخدم مستضدات" },
+        { "fr": "Il n'y a aucune différence", "ar": "لا يوجد أي فرق" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La sérothérapie injecte des anticorps préformés (immunité passive, effet immédiat mais temporaire, pas de mémoire). La vaccination injecte un antigène pour stimuler le système immunitaire (immunité active, effet différé mais durable grâce aux cellules mémoire).",
+        "ar": "العلاج بالمصل يحقن أجسامًا مضادة جاهزة (مناعة منفعلة، تأثير فوري لكن مؤقت، بدون ذاكرة). التلقيح يحقن مستضدًا لتحفيز الجهاز المناعي (مناعة فاعلة، تأثير مؤجل لكن مستدام بفضل خلايا الذاكرة)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'allergie est caractérisée par :",
+        "ar": "تتميز الحساسية بـ:"
+      },
+      "choices": [
+        { "fr": "Une déficience du système immunitaire", "ar": "قصور في الجهاز المناعي" },
+        { "fr": "Une attaque du système immunitaire contre les propres cellules du corps", "ar": "هجوم الجهاز المناعي على خلايا الجسم نفسه" },
+        { "fr": "Une réaction immunitaire exagérée contre des substances normalement inoffensives", "ar": "استجابة مناعية مبالغ فيها ضد مواد غير مؤذية عادةً" },
+        { "fr": "L'absence totale de réponse immunitaire", "ar": "غياب كلي للاستجابة المناعية" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "L'allergie (hypersensibilité) est une réaction exagérée du système immunitaire face à des allergènes inoffensifs (pollen, acariens...). Elle implique les IgE et les mastocytes qui libèrent de l'histamine. L'attaque contre ses propres cellules définit l'auto-immunité.",
+        "ar": "الحساسية (فرط الحساسية) هي استجابة مبالغ فيها للجهاز المناعي تجاه مسببات حساسية غير مؤذية (حبوب اللقاح، عث الغبار...). تتضمن IgE والخلايا البدينة التي تحرر الهيستامين. الهجوم على خلايا الجسم ذاته يُعرّف المناعة الذاتية."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Les lymphocytes T CD8+ (cytotoxiques) détruisent les cellules cibles en libérant :",
+        "ar": "اللمفاويات T CD8+ (السامة) تدمر الخلايا المستهدفة بإفراز:"
+      },
+      "choices": [
+        { "fr": "Des anticorps", "ar": "أجسام مضادة" },
+        { "fr": "De l'histamine", "ar": "الهيستامين" },
+        { "fr": "Des perforines et des granzymes", "ar": "البرفورينات والغرانزيمات" },
+        { "fr": "Des interleukines uniquement", "ar": "الأنترلوكينات فقط" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Les lymphocytes T CD8+ détruisent les cellules infectées par contact direct en libérant des perforines (qui percent la membrane de la cellule cible) et des granzymes (qui déclenchent l'apoptose de la cellule). Ce mécanisme est essentiel contre les infections virales.",
+        "ar": "تدمر اللمفاويات T CD8+ الخلايا المصابة بالتماس المباشر بإفراز البرفورينات (التي تثقب غشاء الخلية المستهدفة) والغرانزيمات (التي تحفز موت الخلية المبرمج). هذه الآلية أساسية ضد العدوى الفيروسية."
+      }
+    }
+  ]
+}

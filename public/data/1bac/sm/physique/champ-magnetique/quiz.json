@@ -1,0 +1,110 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est l'unité du champ magnétique dans le Système International ?",
+        "ar": "ما هي وحدة الحقل المغناطيسي في النظام الدولي؟"
+      },
+      "choices": [
+        { "fr": "Ampère (A)", "ar": "أمبير (A)" },
+        { "fr": "Tesla (T)", "ar": "تسلا (T)" },
+        { "fr": "Gauss (G)", "ar": "غاوس (G)" },
+        { "fr": "Weber (Wb)", "ar": "ويبر (Wb)" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "L'unité SI du champ magnétique est le Tesla (T). Le Gauss est une ancienne unité (1 T = 10⁴ G). Le Weber est l'unité du flux magnétique et l'Ampère est l'unité du courant.",
+        "ar": "وحدة الحقل المغناطيسي في النظام الدولي هي التسلا (T). الغاوس وحدة قديمة (1 T = 10⁴ G)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Les lignes de champ magnétique sont :",
+        "ar": "خطوط الحقل المغناطيسي هي:"
+      },
+      "choices": [
+        { "fr": "Des courbes ouvertes allant du + vers le −", "ar": "منحنيات مفتوحة تمتد من + نحو −" },
+        { "fr": "Des courbes fermées", "ar": "منحنيات مغلقة" },
+        { "fr": "Toujours des droites parallèles", "ar": "دائما خطوط مستقيمة متوازية" },
+        { "fr": "Des courbes qui se croisent aux pôles", "ar": "منحنيات تتقاطع عند الأقطاب" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Contrairement aux lignes de champ électrique (qui partent des charges + et arrivent aux charges −), les lignes de champ magnétique sont toujours des courbes fermées. Il n'existe pas de monopôle magnétique.",
+        "ar": "على عكس خطوط الحقل الكهربائي، خطوط الحقل المغناطيسي هي دائما منحنيات مغلقة. لا وجود لأحادي قطب مغناطيسي."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un solénoïde de longueur $L = 25\\,cm$ possède $N = 1000$ spires et est parcouru par un courant $I = 3\\,A$. Calculer le champ magnétique $B$ à l'intérieur en mT (arrondir à 0,1 mT). On donne $\\mu_0 = 4\\pi \\times 10^{-7}\\,T \\cdot m/A$.",
+        "ar": "ملف لولبي طوله $L = 25\\,cm$ يضم $N = 1000$ لفة ويمر فيه تيار $I = 3\\,A$. احسب الحقل المغناطيسي $B$ في داخله بالميلي تسلا."
+      },
+      "answer": 15.1,
+      "tolerance": 0.2,
+      "unit": "mT",
+      "hint": {
+        "fr": "Utiliser $B = \\mu_0 \\frac{N}{L} I$ avec les unités SI.",
+        "ar": "استخدم $B = \\mu_0 \\frac{N}{L} I$ مع وحدات النظام الدولي."
+      },
+      "explanation": {
+        "fr": "$B = 4\\pi \\times 10^{-7} \\times \\frac{1000}{0{,}25} \\times 3 = 4\\pi \\times 10^{-7} \\times 12000 = 48\\pi \\times 10^{-4} \\approx 15{,}1 \\times 10^{-3}\\,T = 15{,}1\\,mT$."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un fil rectiligne long est parcouru par un courant $I = 20\\,A$. Calculer le champ magnétique $B$ à une distance $r = 10\\,cm$ du fil en μT (arrondir à l'entier).",
+        "ar": "سلك مستقيم طويل يمر فيه تيار $I = 20\\,A$. احسب الحقل المغناطيسي $B$ على بُعد $r = 10\\,cm$ من السلك بالميكرو تسلا."
+      },
+      "answer": 40,
+      "tolerance": 1,
+      "unit": "μT",
+      "hint": {
+        "fr": "Utiliser $B = \\frac{\\mu_0 I}{2\\pi r}$.",
+        "ar": "استخدم $B = \\frac{\\mu_0 I}{2\\pi r}$."
+      },
+      "explanation": {
+        "fr": "$B = \\frac{4\\pi \\times 10^{-7} \\times 20}{2\\pi \\times 0{,}1} = \\frac{4 \\times 10^{-7} \\times 20}{0{,}2} = \\frac{80 \\times 10^{-7}}{0{,}2} = 4 \\times 10^{-5}\\,T = 40\\,\\mu T$."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Pour déterminer le sens du champ magnétique à l'intérieur d'un solénoïde, on utilise la règle de la main droite. Le pouce indique :",
+        "ar": "لتحديد اتجاه الحقل المغناطيسي داخل ملف لولبي، نستخدم قاعدة اليد اليمنى. يشير الإبهام إلى:"
+      },
+      "choices": [
+        { "fr": "Le sens du courant", "ar": "اتجاه التيار" },
+        { "fr": "Le sens du champ $\\vec{B}$ (pôle Nord)", "ar": "اتجاه الحقل $\\vec{B}$ (القطب الشمالي)" },
+        { "fr": "Le pôle Sud du solénoïde", "ar": "القطب الجنوبي للملف اللولبي" },
+        { "fr": "La direction perpendiculaire au champ", "ar": "الاتجاه العمودي على الحقل" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Pour un solénoïde, on enroule les doigts de la main droite dans le sens du courant dans les spires. Le pouce, tendu, indique alors le sens du champ magnétique $\\vec{B}$ à l'intérieur, c'est-à-dire la direction du pôle Nord.",
+        "ar": "بالنسبة للملف اللولبي، نلف أصابع اليد اليمنى في اتجاه التيار في اللفات. الإبهام الممدود يشير إلى اتجاه $\\vec{B}$ في الداخل، أي اتجاه القطب الشمالي."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'intensité du champ magnétique terrestre est de l'ordre de :",
+        "ar": "شدة الحقل المغناطيسي الأرضي تكون من رتبة:"
+      },
+      "choices": [
+        { "fr": "$50\\,T$", "ar": "$50\\,T$" },
+        { "fr": "$50\\,mT$", "ar": "$50\\,mT$" },
+        { "fr": "$50\\,\\mu T$", "ar": "$50\\,\\mu T$" },
+        { "fr": "$50\\,nT$", "ar": "$50\\,nT$" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "Le champ magnétique terrestre a une intensité de l'ordre de $50\\,\\mu T$ ($5 \\times 10^{-5}\\,T$). C'est un champ faible comparé à un aimant permanent (quelques mT à quelques dizaines de mT).",
+        "ar": "الحقل المغناطيسي الأرضي شدته من رتبة $50\\,\\mu T$ ($5 \\times 10^{-5}\\,T$). هو حقل ضعيف مقارنة بمغناطيس دائم."
+      }
+    }
+  ]
+}

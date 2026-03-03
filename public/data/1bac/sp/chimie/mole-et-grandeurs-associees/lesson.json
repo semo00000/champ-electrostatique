@@ -1,0 +1,160 @@
+{
+  "id": "mole-et-grandeurs-associees",
+  "title": {
+    "fr": "La mole et les grandeurs associées",
+    "ar": "المول والمقادير المرتبطة به"
+  },
+  "objectives": {
+    "fr": [
+      "Définir la mole et le nombre d'Avogadro",
+      "Calculer la masse molaire atomique et moléculaire",
+      "Utiliser le volume molaire des gaz (22,4 L/mol dans les CNTP)",
+      "Calculer la concentration molaire d'une solution",
+      "Effectuer des conversions entre masse, quantité de matière et volume"
+    ],
+    "ar": [
+      "تعريف المول وعدد أفوغادرو",
+      "حساب الكتلة المولية الذرية والجزيئية",
+      "استعمال الحجم المولي للغازات (22,4 L/mol في الشروط النظامية)",
+      "حساب التركيز المولي لمحلول",
+      "إجراء التحويلات بين الكتلة وكمية المادة والحجم"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. La mole et le nombre d'Avogadro",
+        "ar": "1. المول وعدد أفوغادرو"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Mole", "ar": "المول" },
+      "text": {
+        "fr": "La mole (symbole : mol) est l'unité de quantité de matière. Une mole contient exactement 6,022 × 10²³ entités élémentaires (atomes, molécules, ions...). Ce nombre est appelé nombre d'Avogadro (N_A).",
+        "ar": "المول (رمزه: mol) هو وحدة كمية المادة. يحتوي مول واحد على 6,022 × 10²³ كيانا أوليا (ذرات، جزيئات، أيونات...) بالضبط. يسمى هذا العدد عدد أفوغادرو (N_A)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "N_A = 6{,}022 \\times 10^{23} \\text{ mol}^{-1}",
+      "note": {
+        "fr": "Nombre d'Avogadro : nombre d'entités dans une mole",
+        "ar": "عدد أفوغادرو: عدد الكيانات في مول واحد"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "n = \\frac{N}{N_A}",
+      "note": {
+        "fr": "n = quantité de matière (mol), N = nombre d'entités, N_A = nombre d'Avogadro",
+        "ar": "n = كمية المادة (mol)، N = عدد الكيانات، N_A = عدد أفوغادرو"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. La masse molaire",
+        "ar": "2. الكتلة المولية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Masse molaire", "ar": "الكتلة المولية" },
+      "text": {
+        "fr": "La masse molaire (M) est la masse d'une mole d'entités. Elle s'exprime en g/mol. La masse molaire atomique est donnée par le tableau périodique (ex : M(C) = 12 g/mol, M(O) = 16 g/mol). La masse molaire moléculaire est la somme des masses molaires atomiques des atomes constituant la molécule.",
+        "ar": "الكتلة المولية (M) هي كتلة مول واحد من الكيانات. تُعبر عنها بـ g/mol. الكتلة المولية الذرية تُعطى في الجدول الدوري (مثال: M(C) = 12 g/mol، M(O) = 16 g/mol). الكتلة المولية الجزيئية هي مجموع الكتل المولية الذرية للذرات المكونة للجزيئة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "n = \\frac{m}{M}",
+      "note": {
+        "fr": "n = quantité de matière (mol), m = masse (g), M = masse molaire (g/mol)",
+        "ar": "n = كمية المادة (mol)، m = الكتلة (g)، M = الكتلة المولية (g/mol)"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Masse molaire de l'eau", "ar": "مثال: الكتلة المولية للماء" },
+      "problem": {
+        "fr": "Calculer la masse molaire de l'eau H₂O.",
+        "ar": "احسب الكتلة المولية للماء H₂O."
+      },
+      "solution": {
+        "fr": "M(H₂O) = 2 × M(H) + M(O) = 2 × 1 + 16 = 18 g/mol.",
+        "latex": "M(\\text{H}_2\\text{O}) = 2 \\times 1 + 16 = 18 \\text{ g/mol}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Le volume molaire des gaz",
+        "ar": "3. الحجم المولي للغازات"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Volume molaire", "ar": "الحجم المولي" },
+      "text": {
+        "fr": "Le volume molaire (V_m) est le volume occupé par une mole de gaz. Dans les conditions normales de température et de pression (CNTP : T = 0°C = 273 K, P = 1 atm), V_m = 22,4 L/mol. Ce volume est le même pour tous les gaz parfaits (loi d'Avogadro).",
+        "ar": "الحجم المولي (V_m) هو الحجم الذي يشغله مول واحد من الغاز. في الشروط النظامية للحرارة والضغط (CNTP: T = 0°C = 273 K، P = 1 atm)، V_m = 22,4 L/mol. هذا الحجم هو نفسه لجميع الغازات المثالية (قانون أفوغادرو)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "n = \\frac{V}{V_m}",
+      "note": {
+        "fr": "n = quantité de matière (mol), V = volume du gaz (L), V_m = volume molaire (22,4 L/mol dans les CNTP)",
+        "ar": "n = كمية المادة (mol)، V = حجم الغاز (L)، V_m = الحجم المولي (22,4 L/mol في CNTP)"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. La concentration molaire",
+        "ar": "4. التركيز المولي"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Concentration molaire", "ar": "التركيز المولي" },
+      "text": {
+        "fr": "La concentration molaire (C) d'un soluté en solution est la quantité de matière de soluté par unité de volume de solution. Elle s'exprime en mol/L.",
+        "ar": "التركيز المولي (C) لمادة مذابة في محلول هو كمية مادة المذاب في وحدة حجم المحلول. يُعبر عنه بـ mol/L."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "C = \\frac{n}{V} = \\frac{m}{M \\cdot V}",
+      "note": {
+        "fr": "C = concentration (mol/L), n = quantité de matière (mol), V = volume de solution (L)",
+        "ar": "C = التركيز (mol/L)، n = كمية المادة (mol)، V = حجم المحلول (L)"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Concentration molaire", "ar": "مثال: التركيز المولي" },
+      "problem": {
+        "fr": "On dissout 5,85 g de NaCl (M = 58,5 g/mol) dans de l'eau pour obtenir 500 mL de solution. Calculer C.",
+        "ar": "نذيب 5,85 g من NaCl (M = 58,5 g/mol) في الماء للحصول على 500 mL من محلول. احسب C."
+      },
+      "solution": {
+        "fr": "n = m/M = 5,85/58,5 = 0,1 mol. C = n/V = 0,1/0,5 = 0,2 mol/L.",
+        "latex": "n = \\frac{5{,}85}{58{,}5} = 0{,}1 \\text{ mol} \\quad ; \\quad C = \\frac{0{,}1}{0{,}5} = 0{,}2 \\text{ mol/L}"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Résumé des formules : n = N/N_A (nombre d'entités), n = m/M (masse), n = V/V_m (volume de gaz), n = C × V (solution). Toutes ces relations permettent de convertir entre les différentes grandeurs associées à la quantité de matière.",
+        "ar": "ملخص الصيغ: n = N/N_A (عدد الكيانات)، n = m/M (الكتلة)، n = V/V_m (حجم الغاز)، n = C × V (المحلول). كل هذه العلاقات تمكن من التحويل بين مختلف المقادير المرتبطة بكمية المادة."
+      }
+    }
+  ]
+}

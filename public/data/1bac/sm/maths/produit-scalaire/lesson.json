@@ -1,0 +1,114 @@
+{
+  "id": "produit-scalaire",
+  "title": { "fr": "Produit scalaire", "ar": "الجداء السلمي" },
+  "objectives": {
+    "fr": [
+      "Connaître la définition géométrique du produit scalaire",
+      "Calculer le produit scalaire à l'aide des coordonnées",
+      "Connaître les propriétés du produit scalaire (bilinéarité, symétrie)",
+      "Utiliser le produit scalaire pour étudier l'orthogonalité",
+      "Calculer la projection orthogonale d'un vecteur",
+      "Appliquer le produit scalaire dans des problèmes géométriques"
+    ],
+    "ar": [
+      "معرفة التعريف الهندسي للجداء السلمي",
+      "حساب الجداء السلمي بواسطة الإحداثيات",
+      "معرفة خصائص الجداء السلمي (الخطية الثنائية، التناظر)",
+      "استخدام الجداء السلمي لدراسة التعامد",
+      "حساب الإسقاط العمودي لشعاع",
+      "تطبيق الجداء السلمي في مسائل هندسية"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Définition géométrique du produit scalaire", "ar": "١. التعريف الهندسي للجداء السلمي" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Produit scalaire" },
+      "text": { "fr": "Le produit scalaire de deux vecteurs u et v est le nombre réel défini par : u·v = ||u|| × ||v|| × cos(θ), où θ est l'angle entre u et v, et ||u||, ||v|| sont les normes des vecteurs." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\| \\times \\|\\vec{v}\\| \\times \\cos(\\theta)",
+      "note": { "fr": "Définition géométrique du produit scalaire, où θ = (u, v)." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Expression analytique", "ar": "٢. التعبير التحليلي" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Dans un repère orthonormé (O, i, j), si u(x₁, y₁) et v(x₂, y₂), le produit scalaire s'écrit : u·v = x₁x₂ + y₁y₂. La norme de u est ||u|| = √(x₁² + y₁²).",
+        "ar": "في معلم متعامد ممنظم (O, i, j)، إذا كان u(x₁, y₁) و v(x₂, y₂)، فإن الجداء السلمي يُكتب: u·v = x₁x₂ + y₁y₂."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\vec{u} \\cdot \\vec{v} = x_1 x_2 + y_1 y_2 \\quad;\\quad \\|\\vec{u}\\| = \\sqrt{x_1^2 + y_1^2}",
+      "note": { "fr": "Expression analytique du produit scalaire et de la norme dans un repère orthonormé." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Propriétés du produit scalaire", "ar": "٣. خصائص الجداء السلمي" }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Symétrie : u·v = v·u",
+          "Bilinéarité : u·(v + w) = u·v + u·w et (λu)·v = λ(u·v)",
+          "Carré scalaire : u·u = ||u||²",
+          "Identités remarquables : ||u+v||² = ||u||² + 2u·v + ||v||² et ||u-v||² = ||u||² - 2u·v + ||v||²",
+          "Formule de polarisation : u·v = (||u+v||² - ||u||² - ||v||²) / 2"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Orthogonalité", "ar": "٤. التعامد" }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Deux vecteurs u et v sont orthogonaux si et seulement si u·v = 0. En coordonnées : u ⊥ v ⟺ x₁x₂ + y₁y₂ = 0.",
+        "ar": "شعاعان u و v متعامدان إذا وفقط إذا كان u·v = 0. بالإحداثيات: u ⊥ v ⟺ x₁x₂ + y₁y₂ = 0."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Vérification d'orthogonalité" },
+      "problem": { "fr": "Les vecteurs u(3, -2) et v(4, 6) sont-ils orthogonaux ?" },
+      "solution": { "fr": "u·v = 3×4 + (-2)×6 = 12 - 12 = 0. Donc u et v sont orthogonaux.", "latex": "\\vec{u} \\cdot \\vec{v} = 3 \\times 4 + (-2) \\times 6 = 12 - 12 = 0 \\;\\Rightarrow\\; \\vec{u} \\perp \\vec{v}" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Projection orthogonale", "ar": "٥. الإسقاط العمودي" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La projection orthogonale du vecteur u sur la direction de v est le vecteur p = [(u·v)/(||v||²)] × v. La composante scalaire de u sur v est u·v / ||v||.",
+        "ar": "الإسقاط العمودي للشعاع u على اتجاه v هو الشعاع p = [(u·v)/(||v||²)] × v."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Applications", "ar": "٦. تطبيقات" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Calcul d'un angle" },
+      "problem": { "fr": "Calculer l'angle entre u(1, √3) et v(√3, 1)." },
+      "solution": { "fr": "u·v = 1×√3 + √3×1 = 2√3. ||u|| = √(1+3) = 2, ||v|| = √(3+1) = 2. cos θ = 2√3/(2×2) = √3/2. Donc θ = π/6 (30°).", "latex": "\\cos\\theta = \\frac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\|\\vec{v}\\|} = \\frac{2\\sqrt{3}}{4} = \\frac{\\sqrt{3}}{2} \\;\\Rightarrow\\; \\theta = \\frac{\\pi}{6}" }
+    }
+  ]
+}

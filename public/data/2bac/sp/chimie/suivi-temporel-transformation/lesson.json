@@ -1,0 +1,126 @@
+{
+  "id": "suivi-temporel-transformation",
+  "title": {
+    "fr": "Suivi temporel d'une transformation chimique",
+    "ar": "التتبع الزمني لتحول كيميائي"
+  },
+  "objectives": {
+    "fr": [
+      "Définir l'avancement x d'une réaction et dresser un tableau d'avancement",
+      "Tracer et exploiter les courbes [C]=f(t) et x=f(t)",
+      "Définir la vitesse volumique de réaction v = (1/V)·dx/dt",
+      "Déterminer le temps de demi-réaction t½",
+      "Connaître les méthodes expérimentales de suivi cinétique"
+    ],
+    "ar": [
+      "تعريف التقدم x لتفاعل وإنجاز جدول التقدم",
+      "رسم واستغلال المنحنيات [C]=f(t) و x=f(t)",
+      "تعريف السرعة الحجمية للتفاعل",
+      "تحديد زمن نصف التفاعل",
+      "معرفة الطرق التجريبية للتتبع الحركي"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Avancement d'une réaction chimique",
+        "ar": "1. تقدم تفاعل كيميائي"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Avancement x" },
+      "text": { "fr": "L'avancement x (en mol) est une grandeur qui permet de décrire l'évolution d'un système chimique au cours du temps. Pour une réaction aA + bB → cC + dD, la quantité de matière de chaque espèce à l'instant t s'exprime en fonction de x : n(A) = n₀(A) − a·x, n(B) = n₀(B) − b·x, n(C) = n₀(C) + c·x, n(D) = n₀(D) + d·x." }
+    },
+    {
+      "type": "formula",
+      "latex": "n_i(t) = n_i(0) + \\nu_i \\cdot x(t)",
+      "note": { "fr": "où νᵢ est le coefficient stœchiométrique algébrique de l'espèce i (négatif pour les réactifs, positif pour les produits)." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Vitesse volumique de réaction",
+        "ar": "2. السرعة الحجمية للتفاعل"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "La vitesse volumique de réaction est définie comme la dérivée de l'avancement par rapport au temps, divisée par le volume du milieu réactionnel. Elle s'exprime en mol·L⁻¹·s⁻¹ (ou mol·L⁻¹·min⁻¹)." }
+    },
+    {
+      "type": "formula",
+      "latex": "v = \\frac{1}{V} \\cdot \\frac{dx}{dt}",
+      "note": { "fr": "v est la vitesse volumique (mol·L⁻¹·s⁻¹), V le volume de la solution (L), x l'avancement (mol), t le temps (s)." }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Pour un réactif R de coefficient stœchiométrique a, la vitesse peut aussi s'exprimer à partir de la concentration : v = −(1/a)·d[R]/dt. Graphiquement, la vitesse à un instant t est proportionnelle au coefficient directeur de la tangente à la courbe x = f(t) en ce point." }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La vitesse de réaction est toujours positive. Elle est maximale à t = 0 (vitesse initiale v₀) et diminue au cours du temps car les concentrations des réactifs diminuent.",
+        "ar": "سرعة التفاعل دائما موجبة. تكون قصوى عند t = 0 (السرعة الابتدائية) وتتناقص مع مرور الزمن لأن تراكيز المتفاعلات تتناقص."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Temps de demi-réaction t½",
+        "ar": "3. زمن نصف التفاعل t½"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Temps de demi-réaction" },
+      "text": { "fr": "Le temps de demi-réaction t½ est la durée au bout de laquelle l'avancement x atteint la moitié de sa valeur finale xf. On a : x(t½) = xf/2. Il permet de caractériser la rapidité d'une transformation chimique." }
+    },
+    {
+      "type": "formula",
+      "latex": "x(t_{1/2}) = \\frac{x_f}{2}",
+      "note": { "fr": "t½ se détermine graphiquement sur la courbe x = f(t) en traçant la droite horizontale x = xf/2 et en lisant l'abscisse correspondante." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Méthodes expérimentales de suivi cinétique",
+        "ar": "4. الطرق التجريبية للتتبع الحركي"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Conductimétrie : mesure de la conductance G ou de la conductivité σ de la solution au cours du temps. Applicable lorsque les concentrations des ions varient (σ = Σ λᵢ·[Xᵢ]).",
+          "Spectrophotométrie : mesure de l'absorbance A d'une solution colorée à une longueur d'onde donnée (loi de Beer-Lambert : A = ε·l·[C]). Applicable si un réactif ou produit est coloré.",
+          "Manométrie : mesure de la pression d'un gaz dans le système. Applicable lorsqu'un gaz est produit ou consommé. En utilisant la loi des gaz parfaits : P·V = n·R·T.",
+          "Titrage (dosage) : prélèvement d'échantillons à différents instants et dosage par une solution titrante. Méthode destructive nécessitant une trempe (refroidissement rapide) pour figer le système.",
+          "pH-métrie : mesure du pH au cours du temps pour les réactions impliquant des espèces acido-basiques. [H₃O⁺] = 10⁻ᵖᴴ."
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Exemple d'application",
+        "ar": "5. مثال تطبيقي"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Suivi par spectrophotométrie de la réaction entre I₂ et S₂O₃²⁻" },
+      "problem": { "fr": "On suit la disparition du diiode I₂ par spectrophotométrie à λ = 470 nm. À t = 0, la concentration en I₂ est [I₂]₀ = 5,0×10⁻³ mol/L dans un volume V = 100 mL. L'absorbance finale est nulle. La courbe A = f(t) montre que A atteint la moitié de sa valeur initiale à t = 180 s. Déterminer t½ et l'avancement maximal." },
+      "solution": {
+        "fr": "D'après la loi de Beer-Lambert, A est proportionnelle à [I₂], donc quand A = A₀/2, on a [I₂] = [I₂]₀/2. Le temps de demi-réaction est t½ = 180 s. L'avancement maximal correspond à la disparition complète de I₂ : xmax = n₀(I₂) = [I₂]₀ × V = 5,0×10⁻³ × 0,100 = 5,0×10⁻⁴ mol.",
+        "latex": "x_{max} = [I_2]_0 \\times V = 5{,}0 \\times 10^{-3} \\times 0{,}100 = 5{,}0 \\times 10^{-4} \\text{ mol}"
+      }
+    }
+  ]
+}

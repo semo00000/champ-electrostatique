@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est la dérivée de f(x) = x³ - 5x + 2 ?" },
+      "choices": [
+        { "fr": "3x² - 5" },
+        { "fr": "3x² + 2" },
+        { "fr": "x² - 5" },
+        { "fr": "3x³ - 5" }
+      ],
+      "correct": 0,
+      "explanation": { "fr": "(x³)' = 3x², (-5x)' = -5, (2)' = 0. Donc f'(x) = 3x² - 5." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "La dérivée de f(x) = (2x+1)³ est :" },
+      "choices": [
+        { "fr": "3(2x+1)²" },
+        { "fr": "6(2x+1)²" },
+        { "fr": "(2x+1)²" },
+        { "fr": "6(2x+1)" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Par la règle de la chaîne : f'(x) = 3(2x+1)² × 2 = 6(2x+1)². On dérive la fonction externe (cube) puis on multiplie par la dérivée de la fonction interne (2x+1, dont la dérivée est 2)." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Soit f(x) = x² - 4x + 3. Calculer f'(2)." },
+      "answer": 0,
+      "tolerance": 0,
+      "unit": "",
+      "hint": { "fr": "Calculez d'abord f'(x) = 2x - 4, puis évaluez en x = 2." },
+      "explanation": { "fr": "f'(x) = 2x - 4. Donc f'(2) = 2(2) - 4 = 0. Le point x = 2 est un extremum de f." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Si f'(x) < 0 pour tout x ∈ ]a, b[, alors sur cet intervalle f est :" },
+      "choices": [
+        { "fr": "Strictement croissante" },
+        { "fr": "Strictement décroissante" },
+        { "fr": "Constante" },
+        { "fr": "Positive" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Une dérivée strictement négative sur un intervalle signifie que la fonction est strictement décroissante sur cet intervalle." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Soit f(x) = x² - 6x + 5. L'équation de la tangente au point x = 1 est y = ax + b. Donner la valeur de a." },
+      "answer": -4,
+      "tolerance": 0,
+      "unit": "",
+      "hint": { "fr": "La pente de la tangente est f'(1). Calculez f'(x) = 2x - 6." },
+      "explanation": { "fr": "f'(x) = 2x - 6, donc f'(1) = 2 - 6 = -4. La pente de la tangente est a = -4." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "La dérivée de f(x) = 1/x est :" },
+      "choices": [
+        { "fr": "1/x²" },
+        { "fr": "-1/x²" },
+        { "fr": "-1/x" },
+        { "fr": "ln(x)" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "f(x) = x⁻¹, donc f'(x) = -x⁻² = -1/x²." }
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "id": "fonctions-primitives-calcul-integral",
+  "title": {
+    "fr": "Fonctions primitives et calcul intégral",
+    "ar": "الدوال الأصلية والحساب التكاملي"
+  },
+  "objectives": {
+    "fr": [
+      "Définir une primitive d'une fonction et connaître la table des primitives usuelles",
+      "Calculer des intégrales définies ∫ₐᵇ f(x)dx",
+      "Appliquer les propriétés de l'intégrale (linéarité, Chasles, positivité)",
+      "Calculer des aires à l'aide de l'intégrale",
+      "Maîtriser les techniques d'intégration par parties et par substitution"
+    ],
+    "ar": [
+      "تعريف دالة أصلية ومعرفة جدول الدوال الأصلية المعتادة",
+      "حساب التكاملات المحددة",
+      "تطبيق خاصيات التكامل",
+      "حساب المساحات بواسطة التكامل",
+      "إتقان تقنيات التكامل بالتجزيء وبالتعويض"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Primitives – Définition et table",
+        "ar": "١. الدوال الأصلية – التعريف والجدول"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Primitive" },
+      "text": { "fr": "Soit f une fonction définie sur un intervalle I. On dit que F est une primitive de f sur I si F est dérivable sur I et F'(x) = f(x) pour tout x ∈ I. Si F est une primitive de f, alors toute primitive de f s'écrit F(x) + C, où C est une constante réelle." }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "f(x) = xⁿ (n ≠ −1) → F(x) = xⁿ⁺¹/(n+1) + C",
+          "f(x) = 1/x → F(x) = ln|x| + C",
+          "f(x) = eˣ → F(x) = eˣ + C",
+          "f(x) = cos(x) → F(x) = sin(x) + C",
+          "f(x) = sin(x) → F(x) = −cos(x) + C",
+          "f(x) = 1/cos²(x) → F(x) = tan(x) + C",
+          "f(x) = 1/√x → F(x) = 2√x + C",
+          "f(x) = u'eᵘ → F(x) = eᵘ + C",
+          "f(x) = u'/u → F(x) = ln|u| + C"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Intégrale définie",
+        "ar": "٢. التكامل المحدد"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Intégrale définie" },
+      "text": { "fr": "Si F est une primitive de f sur [a, b], l'intégrale de f de a à b est : ∫ₐᵇ f(x)dx = F(b) − F(a) = [F(x)]ₐᵇ." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\int_a^b f(x)\\,dx = F(b) - F(a) = \\Big[F(x)\\Big]_a^b",
+      "note": { "fr": "Formule fondamentale du calcul intégral (Newton-Leibniz)" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Calcul d'une intégrale" },
+      "problem": { "fr": "Calculer ∫₀² (3x² − 2x) dx." },
+      "solution": {
+        "fr": "Une primitive de 3x² − 2x est x³ − x². Donc ∫₀² (3x² − 2x)dx = [x³ − x²]₀² = (8 − 4) − (0 − 0) = 4.",
+        "latex": "\\int_0^2 (3x^2 - 2x)\\,dx = \\Big[x^3 - x^2\\Big]_0^2 = (8 - 4) - 0 = 4"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Propriétés de l'intégrale",
+        "ar": "٣. خاصيات التكامل"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\int_a^b [\\alpha f(x) + \\beta g(x)]\\,dx = \\alpha \\int_a^b f(x)\\,dx + \\beta \\int_a^b g(x)\\,dx",
+      "note": { "fr": "Linéarité de l'intégrale" }
+    },
+    {
+      "type": "formula",
+      "latex": "\\int_a^b f(x)\\,dx = \\int_a^c f(x)\\,dx + \\int_c^b f(x)\\,dx",
+      "note": { "fr": "Relation de Chasles" }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Si f ≥ 0 sur [a, b], alors ∫ₐᵇ f(x)dx ≥ 0 (positivité)",
+          "Si f ≤ g sur [a, b], alors ∫ₐᵇ f(x)dx ≤ ∫ₐᵇ g(x)dx (croissance)",
+          "∫ₐᵃ f(x)dx = 0 et ∫ₐᵇ f(x)dx = −∫ᵇₐ f(x)dx",
+          "|∫ₐᵇ f(x)dx| ≤ ∫ₐᵇ |f(x)|dx (inégalité triangulaire)"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Calcul d'aires",
+        "ar": "٤. حساب المساحات"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "L'aire du domaine compris entre la courbe de f, l'axe des abscisses et les droites x = a et x = b est : A = ∫ₐᵇ |f(x)| dx. Si f change de signe, on découpe l'intégrale aux points où f s'annule." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\mathcal{A} = \\int_a^b |f(x)|\\,dx",
+      "note": { "fr": "Aire entre une courbe et l'axe Ox" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Intégration par parties",
+        "ar": "٥. التكامل بالتجزيء"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\int_a^b u(x)\\,v'(x)\\,dx = \\Big[u(x)\\,v(x)\\Big]_a^b - \\int_a^b u'(x)\\,v(x)\\,dx",
+      "note": { "fr": "Formule d'intégration par parties (IPP)" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Intégration par parties" },
+      "problem": { "fr": "Calculer ∫₀¹ x·eˣ dx." },
+      "solution": {
+        "fr": "On pose u = x (u' = 1) et v' = eˣ (v = eˣ). IPP : ∫₀¹ xeˣdx = [xeˣ]₀¹ − ∫₀¹ eˣdx = (1·e − 0) − [eˣ]₀¹ = e − (e − 1) = 1.",
+        "latex": "\\int_0^1 x e^x\\,dx = \\Big[x e^x\\Big]_0^1 - \\int_0^1 e^x\\,dx = e - (e - 1) = 1"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Intégration par substitution",
+        "ar": "٦. التكامل بالتعويض"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\int_a^b f(g(x))\\,g'(x)\\,dx = \\int_{g(a)}^{g(b)} f(t)\\,dt \\quad \\text{en posant } t = g(x)",
+      "note": { "fr": "Formule de changement de variable" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Changement de variable" },
+      "problem": { "fr": "Calculer ∫₀¹ 2x·e^(x²) dx." },
+      "solution": {
+        "fr": "On pose t = x², donc dt = 2x dx. Quand x = 0, t = 0 ; quand x = 1, t = 1. Ainsi ∫₀¹ 2x·e^(x²)dx = ∫₀¹ eᵗ dt = [eᵗ]₀¹ = e − 1.",
+        "latex": "\\int_0^1 2x \\, e^{x^2}\\,dx = \\int_0^1 e^t\\,dt = e - 1"
+      }
+    }
+  ]
+}

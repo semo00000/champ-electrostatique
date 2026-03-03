@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'estérification est une réaction :",
+        "ar": "الأسترة تفاعل:"
+      },
+      "choices": [
+        { "fr": "Rapide, totale et exothermique", "ar": "سريع وتام ومُطلق للحرارة" },
+        { "fr": "Lente, limitée et athermique", "ar": "بطيء ومحدود ولاحراري" },
+        { "fr": "Rapide, limitée et endothermique", "ar": "سريع ومحدود وماص للحرارة" },
+        { "fr": "Lente, totale et athermique", "ar": "بطيء وتام ولاحراري" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "L'estérification est une réaction lente (elle met longtemps à atteindre l'équilibre), limitée (non totale, τ < 1) et athermique (ΔH ≈ 0, elle ne libère ni n'absorbe de chaleur).",
+        "ar": "الأسترة تفاعل بطيء (يستغرق وقتاً طويلاً للوصول إلى التوازن)، محدود (غير تام، τ < 1) ولاحراري (ΔH ≈ 0، لا يُطلق ولا يمتص حرارة)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le produit de la réaction entre l'acide éthanoïque et le méthanol est :",
+        "ar": "ناتج التفاعل بين حمض الإيثانويك والميثانول هو:"
+      },
+      "choices": [
+        { "fr": "Éthanoate de méthyle + eau", "ar": "إيثانوات الميثيل + ماء" },
+        { "fr": "Méthanoate d'éthyle + eau", "ar": "ميثانوات الإيثيل + ماء" },
+        { "fr": "Éthanoate d'éthyle + eau", "ar": "إيثانوات الإيثيل + ماء" },
+        { "fr": "Acide méthanoïque + éthanol", "ar": "حمض الميثانويك + إيثانول" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "CH₃COOH (acide éthanoïque) + CH₃OH (méthanol) ⇌ CH₃COOCH₃ (éthanoate de méthyle) + H₂O. L'ester porte le nom dérivé de l'acide (éthanoate) suivi du groupe alkyle de l'alcool (méthyle).",
+        "ar": "CH₃COOH (حمض الإيثانويك) + CH₃OH (الميثانول) ⇌ CH₃COOCH₃ (إيثانوات الميثيل) + H₂O. يحمل الإستر اسماً مشتقاً من الحمض (إيثانوات) يليه مجموعة الألكيل للكحول (ميثيل)."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On mélange 1,0 mol d'acide éthanoïque avec 1,0 mol de propan-1-ol (alcool primaire). Le rendement à l'équilibre est de 67%. Quelle quantité d'ester (en mol) est formée ?",
+        "ar": "نمزج 1,0 mol من حمض الإيثانويك مع 1,0 mol من البروبان-1-أول (كحول أولي). المردود عند التوازن 67%. ما كمية الإستر المتكوّنة (بالمول)؟"
+      },
+      "answer": 0.67,
+      "tolerance": 0.02,
+      "unit": "mol",
+      "hint": {
+        "fr": "τ = xf/xmax. Les réactifs sont équimolaires donc xmax = 1,0 mol.",
+        "ar": "τ = xf/xmax. المتفاعلات متساوية المولات إذن xmax = 1,0 mol."
+      },
+      "explanation": {
+        "fr": "xmax = 1,0 mol (réactifs équimolaires). τ = 67% = 0,67. xf = τ × xmax = 0,67 × 1,0 = 0,67 mol d'ester formé.",
+        "ar": "xmax = 1,0 mol (متفاعلات متساوية المولات). τ = 67% = 0,67. xf = τ × xmax = 0,67 × 1,0 = 0,67 mol من الإستر المتكوّن."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Pour augmenter le rendement de l'estérification, on peut :",
+        "ar": "لزيادة مردود الأسترة، يمكن:"
+      },
+      "choices": [
+        { "fr": "Ajouter un catalyseur (H₂SO₄)", "ar": "إضافة حفّاز (H₂SO₄)" },
+        { "fr": "Utiliser un excès d'alcool ou éliminer l'eau formée", "ar": "استخدام فائض من الكحول أو إزالة الماء المتكوّن" },
+        { "fr": "Diminuer la température", "ar": "خفض درجة الحرارة" },
+        { "fr": "Augmenter la pression", "ar": "زيادة الضغط" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Pour déplacer l'équilibre vers la formation de l'ester, on peut utiliser un excès de l'un des réactifs ou éliminer un produit (eau ou ester). Le catalyseur accélère la réaction mais ne modifie pas l'équilibre. La température n'a pas d'effet car la réaction est athermique.",
+        "ar": "لإزاحة التوازن نحو تكوين الإستر، يمكن استخدام فائض من أحد المتفاعلات أو إزالة ناتج (ماء أو إستر). الحفّاز يسرّع التفاعل لكن لا يغير التوازن. درجة الحرارة ليس لها تأثير لأن التفاعل لاحراري."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La saponification d'un ester est une réaction :",
+        "ar": "تصبّن الإستر هو تفاعل:"
+      },
+      "choices": [
+        { "fr": "Lente et limitée", "ar": "بطيء ومحدود" },
+        { "fr": "Rapide et totale", "ar": "سريع وتام" },
+        { "fr": "Lente et totale", "ar": "بطيء وتام" },
+        { "fr": "Rapide et limitée", "ar": "سريع ومحدود" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "La saponification est lente (comme l'estérification) mais totale (contrairement à l'hydrolyse), car la base forte HO⁻ réagit totalement avec l'acide formé. Elle est aussi exothermique et irréversible.",
+        "ar": "التصبّن بطيء (كالأسترة) لكنه تام (على عكس الحلمأة)، لأن القاعدة القوية HO⁻ تتفاعل كلياً مع الحمض المتكوّن. وهو أيضاً مُطلق للحرارة وغير عكسي."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'hydrolyse d'un ester donne :",
+        "ar": "حلمأة إستر تعطي:"
+      },
+      "choices": [
+        { "fr": "Un acide carboxylique et un alcool", "ar": "حمض كربوكسيلي وكحول" },
+        { "fr": "Un ion carboxylate et un alcool", "ar": "أيون كربوكسيلات وكحول" },
+        { "fr": "Deux alcools", "ar": "كحولين" },
+        { "fr": "Un acide carboxylique et une amine", "ar": "حمض كربوكسيلي وأمين" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "L'hydrolyse est la réaction inverse de l'estérification : R-COO-R' + H₂O ⇌ R-COOH + R'-OH. Elle redonne l'acide carboxylique et l'alcool. La saponification, quant à elle, donne un ion carboxylate (et non un acide) et un alcool.",
+        "ar": "الحلمأة هي التفاعل العكسي للأسترة: R-COO-R' + H₂O ⇌ R-COOH + R'-OH. تُعيد إعطاء الحمض الكربوكسيلي والكحول. أما التصبّن فيعطي أيون كربوكسيلات (وليس حمض) وكحول."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On mélange 2,0 mol d'acide éthanoïque avec 1,0 mol d'éthanol. Le rendement à l'équilibre est de 90% (excès d'acide). Quelle quantité d'ester est formée (en mol) ?",
+        "ar": "نمزج 2,0 mol من حمض الإيثانويك مع 1,0 mol من الإيثانول. المردود عند التوازن 90% (فائض من الحمض). ما كمية الإستر المتكوّنة (بالمول)؟"
+      },
+      "answer": 0.90,
+      "tolerance": 0.02,
+      "unit": "mol",
+      "hint": {
+        "fr": "Le réactif limitant est l'éthanol (1,0 mol). xmax = 1,0 mol.",
+        "ar": "المتفاعل المحدّ هو الإيثانول (1,0 mol). xmax = 1,0 mol."
+      },
+      "explanation": {
+        "fr": "L'éthanol est le réactif limitant : xmax = 1,0 mol. τ = 90% = 0,90. xf = τ × xmax = 0,90 × 1,0 = 0,90 mol. L'excès d'acide a permis de déplacer l'équilibre et d'augmenter le rendement (de 67% à 90%).",
+        "ar": "الإيثانول هو المتفاعل المحدّ: xmax = 1,0 mol. τ = 90% = 0,90. xf = τ × xmax = 0,90 × 1,0 = 0,90 mol. فائض الحمض أتاح إزاحة التوازن وزيادة المردود (من 67% إلى 90%)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "En partant de quantités équimolaires, le rendement de l'estérification avec un alcool secondaire est d'environ :",
+        "ar": "انطلاقاً من كميات متساوية المولات، مردود الأسترة مع كحول ثانوي يساوي تقريباً:"
+      },
+      "choices": [
+        { "fr": "5%", "ar": "5%" },
+        { "fr": "33%", "ar": "33%" },
+        { "fr": "60%", "ar": "60%" },
+        { "fr": "67%", "ar": "67%" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Le rendement de l'estérification dépend de la classe de l'alcool : alcool primaire ≈ 67%, alcool secondaire ≈ 60%, alcool tertiaire ≈ 5%. L'encombrement stérique de l'alcool joue un rôle déterminant.",
+        "ar": "مردود الأسترة يعتمد على رتبة الكحول: كحول أولي ≈ 67%، كحول ثانوي ≈ 60%، كحول ثالثي ≈ 5%. الإعاقة الفراغية للكحول تلعب دوراً حاسماً."
+      }
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Selon Brønsted, un acide est une espèce chimique qui :",
+        "ar": "حسب برونشتد، الحمض هو نوع كيميائي:"
+      },
+      "choices": [
+        { "fr": "Capte un proton H⁺", "ar": "يلتقط بروتون H⁺" },
+        { "fr": "Cède un proton H⁺", "ar": "يمنح بروتون H⁺" },
+        { "fr": "Cède un électron", "ar": "يمنح إلكترون" },
+        { "fr": "Capte un électron", "ar": "يلتقط إلكترون" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Selon la théorie de Brønsted, un acide est un donneur de proton H⁺. Il cède un proton à une base qui, elle, capte ce proton. Par exemple : CH₃COOH cède H⁺ pour donner CH₃COO⁻.",
+        "ar": "حسب نظرية برونشتد، الحمض هو مانح للبروتون H⁺. يمنح بروتوناً لقاعدة تلتقطه. مثلاً: CH₃COOH يمنح H⁺ ليعطي CH₃COO⁻."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La base conjuguée de l'acide NH₄⁺ est :",
+        "ar": "القاعدة المرافقة للحمض NH₄⁺ هي:"
+      },
+      "choices": [
+        { "fr": "NH₂⁻", "ar": "NH₂⁻" },
+        { "fr": "NH₃", "ar": "NH₃" },
+        { "fr": "N₂H₄", "ar": "N₂H₄" },
+        { "fr": "NO₃⁻", "ar": "NO₃⁻" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le couple acide/base est NH₄⁺/NH₃. L'acide NH₄⁺ cède un proton pour donner sa base conjuguée NH₃ : NH₄⁺ ⇌ NH₃ + H⁺.",
+        "ar": "الزوج حمض/قاعدة هو NH₄⁺/NH₃. الحمض NH₄⁺ يمنح بروتوناً ليعطي قاعدته المرافقة NH₃ : NH₄⁺ ⇌ NH₃ + H⁺."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Quel est le pH d'une solution d'acide chlorhydrique HCl (acide fort) de concentration C = 1,0×10⁻² mol/L ?",
+        "ar": "ما هو pH محلول حمض كلور الماء HCl (حمض قوي) بتركيز C = 1,0×10⁻² mol/L ?"
+      },
+      "answer": 2.0,
+      "tolerance": 0.1,
+      "unit": "",
+      "hint": {
+        "fr": "HCl est un acide fort : dissociation totale. pH = -log C.",
+        "ar": "HCl حمض قوي: تفكك تام. pH = -log C."
+      },
+      "explanation": {
+        "fr": "HCl est un acide fort, sa dissociation est totale : [H₃O⁺] = C = 1,0×10⁻² mol/L. Donc pH = -log(1,0×10⁻²) = 2,0.",
+        "ar": "HCl حمض قوي، تفككه تام: [H₃O⁺] = C = 1,0×10⁻² mol/L. إذن pH = -log(1,0×10⁻²) = 2,0."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Pour un acide faible AH en solution aqueuse, la relation entre pH et la concentration C vérifie :",
+        "ar": "بالنسبة لحمض ضعيف AH في محلول مائي، العلاقة بين pH والتركيز C تحقق:"
+      },
+      "choices": [
+        { "fr": "pH = -log C", "ar": "pH = -log C" },
+        { "fr": "pH < -log C", "ar": "pH < -log C" },
+        { "fr": "pH > -log C", "ar": "pH > -log C" },
+        { "fr": "pH = 14 + log C", "ar": "pH = 14 + log C" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Un acide faible ne se dissocie que partiellement : [H₃O⁺] < C, donc -log[H₃O⁺] > -log C, soit pH > -log C. Pour un acide fort, pH = -log C exactement.",
+        "ar": "الحمض الضعيف لا ينفصل إلا جزئياً: [H₃O⁺] < C، إذن -log[H₃O⁺] > -log C، أي pH > -log C. أما بالنسبة لحمض قوي pH = -log C تماماً."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Le pKa du couple CH₃COOH/CH₃COO⁻ est 4,8. Calculer Ka.",
+        "ar": "pKa الزوج CH₃COOH/CH₃COO⁻ هو 4,8. احسب Ka."
+      },
+      "answer": 1.58e-5,
+      "tolerance": 0.1e-5,
+      "unit": "",
+      "hint": {
+        "fr": "Ka = 10^(-pKa)",
+        "ar": "Ka = 10^(-pKa)"
+      },
+      "explanation": {
+        "fr": "Ka = 10^(-pKa) = 10^(-4,8) = 1,58×10⁻⁵. Cette valeur petite confirme que l'acide éthanoïque est un acide faible.",
+        "ar": "Ka = 10^(-pKa) = 10^(-4,8) = 1,58×10⁻⁵. هذه القيمة الصغيرة تؤكد أن حمض الإيثانويك حمض ضعيف."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Une solution tampon est caractérisée par :",
+        "ar": "يتميز المحلول المنظم بـ:"
+      },
+      "choices": [
+        { "fr": "Un pH qui varie beaucoup par dilution", "ar": "pH يتغير كثيراً بالتخفيف" },
+        { "fr": "Un pH qui varie peu par ajout modéré d'acide ou de base", "ar": "pH يتغير قليلاً عند إضافة كمية معتدلة من حمض أو قاعدة" },
+        { "fr": "Un pH toujours égal à 7", "ar": "pH يساوي دائماً 7" },
+        { "fr": "L'absence d'acide faible dans la solution", "ar": "غياب الحمض الضعيف في المحلول" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Une solution tampon résiste aux variations de pH lors d'ajout modéré d'acide, de base ou lors d'une dilution modérée. Elle est constituée d'un acide faible et de sa base conjuguée en concentrations voisines.",
+        "ar": "المحلول المنظم يقاوم تغيرات pH عند إضافة كمية معتدلة من حمض أو قاعدة أو عند التخفيف المعتدل. يتكون من حمض ضعيف وقاعدته المرافقة بتراكيز متقاربة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On prépare une solution tampon avec [CH₃COOH] = 0,20 mol/L et [CH₃COO⁻] = 0,10 mol/L. Sachant que pKa = 4,8, quel est le pH de cette solution ?",
+        "ar": "نحضّر محلولاً منظماً بـ [CH₃COOH] = 0,20 mol/L و[CH₃COO⁻] = 0,10 mol/L. علماً أن pKa = 4,8، ما هو pH هذا المحلول؟"
+      },
+      "answer": 4.5,
+      "tolerance": 0.1,
+      "unit": "",
+      "hint": {
+        "fr": "Utiliser la relation de Henderson-Hasselbalch : pH = pKa + log([A⁻]/[AH]).",
+        "ar": "استخدم علاقة هندرسون-هاسلبالخ: pH = pKa + log([A⁻]/[AH])."
+      },
+      "explanation": {
+        "fr": "pH = pKa + log([CH₃COO⁻]/[CH₃COOH]) = 4,8 + log(0,10/0,20) = 4,8 + log(0,5) = 4,8 - 0,30 = 4,5.",
+        "ar": "pH = pKa + log([CH₃COO⁻]/[CH₃COOH]) = 4,8 + log(0,10/0,20) = 4,8 + log(0,5) = 4,8 - 0,30 = 4,5."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le pH d'une solution de soude NaOH (base forte) de concentration C = 1,0×10⁻² mol/L vaut :",
+        "ar": "pH محلول هيدروكسيد الصوديوم NaOH (قاعدة قوية) بتركيز C = 1,0×10⁻² mol/L يساوي:"
+      },
+      "choices": [
+        { "fr": "2,0", "ar": "2,0" },
+        { "fr": "7,0", "ar": "7,0" },
+        { "fr": "12,0", "ar": "12,0" },
+        { "fr": "14,0", "ar": "14,0" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "NaOH est une base forte : dissociation totale dans l'eau. [HO⁻] = C = 1,0×10⁻² mol/L. pOH = -log(1,0×10⁻²) = 2,0. pH = 14 - pOH = 14 - 2 = 12,0.",
+        "ar": "NaOH قاعدة قوية: تفكك تام في الماء. [HO⁻] = C = 1,0×10⁻² mol/L. pOH = -log(1,0×10⁻²) = 2,0. pH = 14 - pOH = 14 - 2 = 12,0."
+      }
+    }
+  ]
+}

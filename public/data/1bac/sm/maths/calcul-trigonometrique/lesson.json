@@ -1,0 +1,139 @@
+{
+  "id": "calcul-trigonometrique",
+  "title": { "fr": "Calcul trigonométrique", "ar": "الحساب المثلثي" },
+  "objectives": {
+    "fr": [
+      "Maîtriser le cercle trigonométrique et la mesure en radians",
+      "Connaître les définitions de cos, sin et tan",
+      "Appliquer l'identité fondamentale cos²x + sin²x = 1",
+      "Utiliser les formules d'addition cos(a±b), sin(a±b)",
+      "Appliquer les formules de duplication (angle double)",
+      "Résoudre des équations trigonométriques"
+    ],
+    "ar": [
+      "التحكم في الدائرة المثلثية والقياس بالراديان",
+      "معرفة تعريفات cos و sin و tan",
+      "تطبيق المتطابقة الأساسية cos²x + sin²x = 1",
+      "استخدام صيغ الجمع cos(a±b) و sin(a±b)",
+      "تطبيق صيغ الزاوية المضاعفة",
+      "حل المعادلات المثلثية"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Cercle trigonométrique et radians", "ar": "١. الدائرة المثلثية والراديان" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Radian" },
+      "text": { "fr": "Le radian est l'unité de mesure des angles dans le système international. Un tour complet correspond à 2π radians, soit 360°. On a la correspondance : π rad = 180°. Ainsi 1° = π/180 rad." }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "0° = 0 rad",
+          "30° = π/6 rad",
+          "45° = π/4 rad",
+          "60° = π/3 rad",
+          "90° = π/2 rad",
+          "180° = π rad",
+          "270° = 3π/2 rad",
+          "360° = 2π rad"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Définitions de cos, sin, tan", "ar": "٢. تعريفات cos و sin و tan" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Sur le cercle trigonométrique de centre O et de rayon 1, le point M associé à l'angle x a pour coordonnées (cos x, sin x). La tangente est définie par tan x = sin x / cos x (pour cos x ≠ 0).",
+        "ar": "على الدائرة المثلثية ذات المركز O والشعاع 1، النقطة M المرتبطة بالزاوية x إحداثياتها (cos x, sin x). الظل يُعرّف بـ tan x = sin x / cos x."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Identité fondamentale : cos²x + sin²x = 1 pour tout x ∈ ℝ. De plus : 1 + tan²x = 1/cos²x.",
+        "ar": "المتطابقة الأساسية: cos²x + sin²x = 1 لكل x ∈ ℝ. كذلك: 1 + tan²x = 1/cos²x."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Valeurs remarquables", "ar": "٣. القيم المميزة" }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "cos(0) = 1, sin(0) = 0",
+          "cos(π/6) = √3/2, sin(π/6) = 1/2",
+          "cos(π/4) = √2/2, sin(π/4) = √2/2",
+          "cos(π/3) = 1/2, sin(π/3) = √3/2",
+          "cos(π/2) = 0, sin(π/2) = 1",
+          "cos(π) = -1, sin(π) = 0"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Formules d'addition", "ar": "٤. صيغ الجمع" }
+    },
+    {
+      "type": "formula",
+      "latex": "\\cos(a+b) = \\cos a \\cos b - \\sin a \\sin b \\quad;\\quad \\cos(a-b) = \\cos a \\cos b + \\sin a \\sin b",
+      "note": { "fr": "Formules d'addition pour le cosinus." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\sin(a+b) = \\sin a \\cos b + \\cos a \\sin b \\quad;\\quad \\sin(a-b) = \\sin a \\cos b - \\cos a \\sin b",
+      "note": { "fr": "Formules d'addition pour le sinus." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\tan(a+b) = \\frac{\\tan a + \\tan b}{1 - \\tan a \\tan b}",
+      "note": { "fr": "Formule d'addition pour la tangente (quand elle est définie)." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Formules de duplication (angle double)", "ar": "٥. صيغ الزاوية المضاعفة" }
+    },
+    {
+      "type": "formula",
+      "latex": "\\cos(2a) = \\cos^2 a - \\sin^2 a = 2\\cos^2 a - 1 = 1 - 2\\sin^2 a",
+      "note": { "fr": "Les trois formes de cos(2a)." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\sin(2a) = 2 \\sin a \\cos a",
+      "note": { "fr": "Formule du sinus de l'angle double." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Résolution d'équations trigonométriques", "ar": "٦. حل المعادلات المثلثية" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour résoudre cos x = cos a : x = a + 2kπ ou x = -a + 2kπ (k ∈ ℤ). Pour résoudre sin x = sin a : x = a + 2kπ ou x = π - a + 2kπ (k ∈ ℤ). Pour résoudre tan x = tan a : x = a + kπ (k ∈ ℤ).",
+        "ar": "لحل cos x = cos a: نجد x = a + 2kπ أو x = -a + 2kπ. لحل sin x = sin a: نجد x = a + 2kπ أو x = π - a + 2kπ."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Résolution d'une équation trigonométrique" },
+      "problem": { "fr": "Résoudre dans ℝ : 2cos²x - 1 = 0." },
+      "solution": { "fr": "2cos²x = 1, donc cos²x = 1/2, cos x = ±√2/2. Donc cos x = cos(π/4) ou cos x = cos(3π/4). Solutions : x = π/4 + 2kπ, x = -π/4 + 2kπ, x = 3π/4 + 2kπ, ou x = -3π/4 + 2kπ, soit x = ±π/4 + kπ (k ∈ ℤ).", "latex": "\\cos x = \\pm \\frac{\\sqrt{2}}{2} \\;\\Rightarrow\\; x = \\pm\\frac{\\pi}{4} + k\\pi,\\; k \\in \\mathbb{Z}" }
+    }
+  ]
+}

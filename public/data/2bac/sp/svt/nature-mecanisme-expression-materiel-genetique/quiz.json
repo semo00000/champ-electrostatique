@@ -1,0 +1,112 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est la complementarite des bases dans la molecule d'ADN ?",
+        "ar": "ما هو تكامل القواعد في جزيئة ADN؟"
+      },
+      "choices": [
+        { "fr": "A-G et T-C", "ar": "A-G وT-C" },
+        { "fr": "A-T et G-C", "ar": "A-T وG-C" },
+        { "fr": "A-U et G-C", "ar": "A-U وG-C" },
+        { "fr": "A-C et G-T", "ar": "A-C وG-T" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Dans l'ADN, l'adenine (A) s'apparie avec la thymine (T) par 2 liaisons hydrogene, et la guanine (G) s'apparie avec la cytosine (C) par 3 liaisons hydrogene. C'est la regle de Chargaff. L'appariement A-U existe dans l'ARN.",
+        "ar": "في ADN، يرتبط الأدينين (A) مع التيمين (T) برابطتين هيدروجينيتين، والغوانين (G) يرتبط مع السيتوزين (C) بثلاث روابط هيدروجينية. هذه هي قاعدة شارغاف. الارتباط A-U يوجد في ARN."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'experience de Meselson et Stahl a permis de demontrer que la replication de l'ADN est :",
+        "ar": "سمحت تجربة ميزلسون وستال بإثبات أن تضاعف ADN هو:"
+      },
+      "choices": [
+        { "fr": "Conservative", "ar": "محافظ" },
+        { "fr": "Semi-conservative", "ar": "نصف محافظ" },
+        { "fr": "Dispersive", "ar": "تشتتي" },
+        { "fr": "Aleatoire", "ar": "عشوائي" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "L'experience de Meselson et Stahl (1958) a montre qu'apres une generation en milieu ¹⁴N, toutes les molecules d'ADN sont hybrides (un brin lourd, un brin leger), ce qui confirme le modele semi-conservatif.",
+        "ar": "أثبتت تجربة ميزلسون وستال (1958) أنه بعد جيل واحد في وسط ¹⁴N، جميع جزيئات ADN هجينة (شريط ثقيل وشريط خفيف)، مما يؤكد النموذج نصف المحافظ."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel est le codon initiateur de la traduction et quel acide amine code-t-il ?",
+        "ar": "ما هي رامزة بدء الترجمة وأي حمض أميني تشفره؟"
+      },
+      "choices": [
+        { "fr": "UAA - aucun acide amine (codon stop)", "ar": "UAA - لا حمض أميني (رامزة توقف)" },
+        { "fr": "AUG - methionine", "ar": "AUG - ميثيونين" },
+        { "fr": "GCA - alanine", "ar": "GCA - ألانين" },
+        { "fr": "UUU - phenylalanine", "ar": "UUU - فينيل ألانين" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Le codon AUG est le codon initiateur universel de la traduction. Il code pour l'acide amine methionine (Met). C'est le premier codon lu par le ribosome lors de la synthese proteique.",
+        "ar": "الرامزة AUG هي رامزة البدء العالمية للترجمة. تشفر للحمض الأميني ميثيونين (Met). وهي أول رامزة يقرأها الريبوزوم أثناء تركيب البروتين."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle enzyme catalyse la transcription de l'ADN en ARNm ?",
+        "ar": "ما الإنزيم الذي يحفز استنساخ ADN إلى ARNm؟"
+      },
+      "choices": [
+        { "fr": "ADN polymerase", "ar": "ADN بوليميراز" },
+        { "fr": "ARN polymerase", "ar": "ARN بوليميراز" },
+        { "fr": "Helicase", "ar": "هيليكاز" },
+        { "fr": "Ligase", "ar": "لداز (ليغاز)" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "L'ARN polymerase est l'enzyme qui catalyse la transcription. Elle lit le brin matrice de l'ADN dans le sens 3'→5' et synthetise l'ARNm dans le sens 5'→3'. L'ADN polymerase, quant a elle, intervient dans la replication.",
+        "ar": "ARN بوليميراز هو الإنزيم الذي يحفز الاستنساخ. يقرأ شريط القالب لـ ADN في الاتجاه 3'→5' ويركب ARNm في الاتجاه 5'→3'. أما ADN بوليميراز فيتدخل في التضاعف."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Une mutation par deletion d'un nucleotide entraine :",
+        "ar": "تؤدي طفرة بحذف نوكليوتيد إلى:"
+      },
+      "choices": [
+        { "fr": "Aucun changement dans la proteine", "ar": "لا تغيير في البروتين" },
+        { "fr": "Le changement d'un seul acide amine", "ar": "تغيير حمض أميني واحد فقط" },
+        { "fr": "Un decalage du cadre de lecture et modification de tous les acides amines en aval", "ar": "انزياح إطار القراءة وتغيير جميع الأحماض الأمينية بعدها" },
+        { "fr": "La duplication du gene", "ar": "تضاعف المورثة" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "La deletion d'un nucleotide provoque un decalage du cadre de lecture (frameshift). Tous les codons situes apres la mutation sont modifies, ce qui change la sequence d'acides amines de la proteine et peut introduire un codon stop premature.",
+        "ar": "يسبب حذف نوكليوتيد انزياحا في إطار القراءة. جميع الرامزات الموجودة بعد الطفرة تتغير، مما يغير تسلسل الأحماض الأمينية للبروتين وقد يُدخل رامزة توقف سابقة لأوانها."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le code genetique est dit degenere car :",
+        "ar": "يُقال إن الشفرة الوراثية منحلة لأن:"
+      },
+      "choices": [
+        { "fr": "Il est different chez chaque espece", "ar": "تختلف من نوع لآخر" },
+        { "fr": "Un codon peut coder pour plusieurs acides amines", "ar": "رامزة واحدة يمكنها أن تشفر لعدة أحماض أمينية" },
+        { "fr": "Plusieurs codons peuvent coder pour le meme acide amine", "ar": "عدة رامزات يمكنها أن تشفر لنفس الحمض الأميني" },
+        { "fr": "Les codons se chevauchent", "ar": "الرامزات تتراكب" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "Le code genetique est degenere (ou redondant) car il existe 64 codons possibles pour seulement 20 acides amines. Plusieurs codons differents peuvent donc coder pour le meme acide amine. Par exemple, la leucine est codee par 6 codons differents (UUA, UUG, CUU, CUC, CUA, CUG).",
+        "ar": "الشفرة الوراثية منحلة (أو مكررة) لأنه يوجد 64 رامزة ممكنة لـ 20 حمضا أمينيا فقط. يمكن لعدة رامزات مختلفة أن تشفر لنفس الحمض الأميني. مثلا، يُشفر اللوسين بـ 6 رامزات مختلفة (UUA، UUG، CUU، CUC، CUA، CUG)."
+      }
+    }
+  ]
+}

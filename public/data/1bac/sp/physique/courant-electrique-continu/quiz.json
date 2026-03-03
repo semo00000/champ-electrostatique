@@ -1,0 +1,109 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La loi d'Ohm pour un conducteur ohmique s'écrit :",
+        "ar": "قانون أوم لموصل أومي يُكتب:"
+      },
+      "choices": [
+        { "fr": "$U = R + I$", "ar": "$U = R + I$" },
+        { "fr": "$U = R \\cdot I$", "ar": "$U = R \\cdot I$" },
+        { "fr": "$U = \\frac{R}{I}$", "ar": "$U = \\frac{R}{I}$" },
+        { "fr": "$U = \\frac{I}{R}$", "ar": "$U = \\frac{I}{R}$" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "La loi d'Ohm établit une relation de proportionnalité entre la tension $U$ aux bornes d'un conducteur ohmique et le courant $I$ qui le traverse : $U = R \\cdot I$. La caractéristique $U(I)$ est une droite de pente $R$.",
+        "ar": "قانون أوم يُقيم علاقة تناسب بين التوتر $U$ على مربطي موصل أومي والتيار $I$ المار فيه: $U = R \\cdot I$."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Deux résistances $R_1 = 6\\,\\Omega$ et $R_2 = 12\\,\\Omega$ sont montées en parallèle. Calculer la résistance équivalente en Ohms.",
+        "ar": "مقاومتان $R_1 = 6\\,\\Omega$ و $R_2 = 12\\,\\Omega$ موصلتان على التوازي. احسب المقاومة المكافئة بالأوم."
+      },
+      "answer": 4,
+      "tolerance": 0.1,
+      "unit": "Ω",
+      "hint": {
+        "fr": "En parallèle : $\\frac{1}{R_{eq}} = \\frac{1}{R_1} + \\frac{1}{R_2}$.",
+        "ar": "على التوازي: $\\frac{1}{R_{eq}} = \\frac{1}{R_1} + \\frac{1}{R_2}$."
+      },
+      "explanation": {
+        "fr": "$\\frac{1}{R_{eq}} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2}{12} + \\frac{1}{12} = \\frac{3}{12} = \\frac{1}{4}$, donc $R_{eq} = 4\\,\\Omega$."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La loi des nœuds de Kirchhoff traduit la conservation de :",
+        "ar": "قانون العقد لكيرشوف يعبر عن انحفاظ:"
+      },
+      "choices": [
+        { "fr": "L'énergie", "ar": "الطاقة" },
+        { "fr": "La charge électrique", "ar": "الشحنة الكهربائية" },
+        { "fr": "La tension", "ar": "التوتر" },
+        { "fr": "La résistance", "ar": "المقاومة" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "La loi des nœuds ($\\sum I_{entrant} = \\sum I_{sortant}$) traduit le fait que la charge ne s'accumule pas en un nœud : tout le courant qui arrive doit repartir. La loi des mailles traduit la conservation de l'énergie.",
+        "ar": "قانون العقد ($\\sum I_{داخل} = \\sum I_{خارج}$) يعبر عن أن الشحنة لا تتراكم في عقدة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un appareil électrique fonctionne sous une tension $U = 220\\,V$ et consomme un courant $I = 5\\,A$. Calculer la puissance consommée en Watts.",
+        "ar": "جهاز كهربائي يشتغل تحت توتر $U = 220\\,V$ ويستهلك تيارا $I = 5\\,A$. احسب الاستطاعة المستهلكة بالواط."
+      },
+      "answer": 1100,
+      "tolerance": 1,
+      "unit": "W",
+      "hint": {
+        "fr": "La puissance est $P = U \\cdot I$.",
+        "ar": "الاستطاعة هي $P = U \\cdot I$."
+      },
+      "explanation": {
+        "fr": "$P = U \\cdot I = 220 \\times 5 = 1100\\,W = 1{,}1\\,kW$."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un générateur de f.é.m. $E = 9\\,V$ et de résistance interne $r = 0{,}5\\,\\Omega$ débite un courant $I = 2\\,A$. Quelle est la tension aux bornes du générateur en Volts ?",
+        "ar": "مولد قوته الكهرمحركة $E = 9\\,V$ ومقاومته الداخلية $r = 0{,}5\\,\\Omega$ يقدم تيارا $I = 2\\,A$. ما التوتر على مربطي المولد بالفولت؟"
+      },
+      "answer": 8,
+      "tolerance": 0.1,
+      "unit": "V",
+      "hint": {
+        "fr": "Pour un générateur en fonctionnement : $U = E - rI$.",
+        "ar": "لمولد أثناء الاشتغال: $U = E - rI$."
+      },
+      "explanation": {
+        "fr": "$U = E - rI = 9 - 0{,}5 \\times 2 = 9 - 1 = 8\\,V$."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Dans un circuit série, la grandeur qui est la même pour tous les dipôles est :",
+        "ar": "في دارة تسلسلية، المقدار الذي يكون نفسه لجميع ثنائيات القطب هو:"
+      },
+      "choices": [
+        { "fr": "La tension", "ar": "التوتر" },
+        { "fr": "L'intensité du courant", "ar": "شدة التيار" },
+        { "fr": "La résistance", "ar": "المقاومة" },
+        { "fr": "La puissance", "ar": "الاستطاعة" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Dans un circuit série, il n'y a qu'un seul chemin pour le courant, donc l'intensité est la même en tout point du circuit. La tension, elle, se répartit entre les différents dipôles.",
+        "ar": "في دارة تسلسلية، هناك مسار واحد فقط للتيار، لذلك شدة التيار هي نفسها في كل نقطة من الدارة."
+      }
+    }
+  ]
+}

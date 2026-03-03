@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est la limite de (x² − 4)/(x − 2) quand x → 2 ?" },
+      "choices": [
+        { "fr": "0" },
+        { "fr": "2" },
+        { "fr": "4" },
+        { "fr": "La limite n'existe pas" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "(x² − 4)/(x − 2) = (x − 2)(x + 2)/(x − 2) = x + 2 pour x ≠ 2. La limite quand x → 2 est 2 + 2 = 4." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "f est continue en a signifie que :" },
+      "choices": [
+        { "fr": "f est dérivable en a" },
+        { "fr": "lim(x→a) f(x) = f(a)" },
+        { "fr": "f(a) = 0" },
+        { "fr": "f est définie sur ℝ" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Par définition, f est continue en a si et seulement si f est définie en a et la limite de f(x) quand x → a existe et vaut f(a)." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Soit f continue sur [0, 2] avec f(0) = −3 et f(2) = 5. Par le TVI, que peut-on affirmer ?" },
+      "choices": [
+        { "fr": "f n'a pas de zéro sur [0, 2]" },
+        { "fr": "Il existe c ∈ ]0, 2[ tel que f(c) = 0" },
+        { "fr": "f est dérivable sur [0, 2]" },
+        { "fr": "f est croissante sur [0, 2]" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "f(0) = −3 < 0 et f(2) = 5 > 0, et f est continue. Par le TVI, il existe c ∈ ]0, 2[ tel que f(c) = 0." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer lim(x→+∞) (3x² − x + 2)/(x² + 1)." },
+      "answer": 3,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": { "fr": "Diviser numérateur et dénominateur par x²." },
+      "explanation": { "fr": "On divise par x² : (3 − 1/x + 2/x²)/(1 + 1/x²). Quand x → +∞, cela tend vers 3/1 = 3." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Laquelle est une forme indéterminée ?" },
+      "choices": [
+        { "fr": "3/0⁺ = +∞" },
+        { "fr": "+∞ + ∞ = +∞" },
+        { "fr": "+∞ − ∞" },
+        { "fr": "0 × 5 = 0" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "+∞ − ∞ est une forme indéterminée. On ne peut pas conclure sans calcul supplémentaire (factorisation, conjugué, etc.)." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer lim(x→0) sin(x)/x." },
+      "answer": 1,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": { "fr": "C'est une limite fondamentale à connaître." },
+      "explanation": { "fr": "C'est une limite remarquable : lim(x→0) sin(x)/x = 1. On peut le démontrer géométriquement ou par la règle de L'Hôpital." }
+    }
+  ]
+}

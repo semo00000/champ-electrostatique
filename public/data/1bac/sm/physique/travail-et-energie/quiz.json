@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le travail d'une force constante F lors d'un déplacement AB est donné par :",
+        "ar": "شغل قوة ثابتة F خلال انتقال AB يُعطى بـ :"
+      },
+      "choices": [
+        { "fr": "W = F × AB × cos(α)", "ar": "W = F × AB × cos(α)" },
+        { "fr": "W = F × AB × sin(α)", "ar": "W = F × AB × sin(α)" },
+        { "fr": "W = F × AB", "ar": "W = F × AB" },
+        { "fr": "W = F / AB", "ar": "W = F / AB" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Le travail est le produit scalaire W = F·AB·cos(α), où α est l'angle entre la force et le déplacement.",
+        "ar": "الشغل هو الجداء السلّمي W = F·AB·cos(α)، حيث α الزاوية بين القوة والانتقال."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le travail d'une force perpendiculaire au déplacement est :",
+        "ar": "شغل قوة عمودية على الانتقال يساوي :"
+      },
+      "choices": [
+        { "fr": "Nul (W = 0)", "ar": "معدوم (W = 0)" },
+        { "fr": "Positif", "ar": "موجب" },
+        { "fr": "Négatif", "ar": "سالب" },
+        { "fr": "Infini", "ar": "لانهائي" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Si α = 90°, cos(90°) = 0, donc W = F·AB·cos(90°) = 0. La force ne fournit aucun travail.",
+        "ar": "إذا α = 90°، cos(90°) = 0، إذن W = F·AB·cos(90°) = 0. القوة لا تنجز أي شغل."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Une force F = 50 N tire un objet sur une distance de 10 m avec un angle α = 60° par rapport au déplacement. Calculer le travail en Joules.",
+        "ar": "قوة F = 50 N تسحب جسماً على مسافة 10 m بزاوية α = 60° مع الانتقال. احسب الشغل بالجول."
+      },
+      "answer": 250,
+      "tolerance": 1,
+      "unit": "J",
+      "hint": {
+        "fr": "W = F·d·cos(α). cos(60°) = 0,5.",
+        "ar": "W = F·d·cos(α). cos(60°) = 0.5."
+      },
+      "explanation": {
+        "fr": "W = F·d·cos(α) = 50 × 10 × cos(60°) = 50 × 10 × 0,5 = 250 J.",
+        "ar": "W = F·d·cos(α) = 50 × 10 × cos(60°) = 50 × 10 × 0.5 = 250 J."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un objet de masse m = 3 kg est soulevé verticalement de 5 m. Calculer le travail du poids (g = 9,8 N/kg). Réponse en Joules.",
+        "ar": "جسم كتلته m = 3 kg يُرفع عمودياً مسافة 5 m. احسب شغل الثقل (g = 9.8 N/kg). الجواب بالجول."
+      },
+      "answer": -147,
+      "tolerance": 1,
+      "unit": "J",
+      "hint": {
+        "fr": "W(P) = m·g·(z_A - z_B). Ici le corps monte, donc z_A < z_B.",
+        "ar": "W(P) = m·g·(z_A - z_B). هنا الجسم يصعد، إذن z_A < z_B."
+      },
+      "explanation": {
+        "fr": "Le corps monte de 5 m donc z_A - z_B = -5 m. W(P) = 3 × 9,8 × (-5) = -147 J. Le travail est résistant.",
+        "ar": "الجسم يصعد 5 m إذن z_A - z_B = -5 m. W(P) = 3 × 9.8 × (-5) = -147 J. الشغل مقاوم."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le travail de la force de frottement est toujours :",
+        "ar": "شغل قوة الاحتكاك يكون دائماً :"
+      },
+      "choices": [
+        { "fr": "Négatif (résistant)", "ar": "سالب (مقاوم)" },
+        { "fr": "Positif (moteur)", "ar": "موجب (محرّك)" },
+        { "fr": "Nul", "ar": "معدوم" },
+        { "fr": "Parfois positif, parfois négatif", "ar": "أحياناً موجب وأحياناً سالب" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "La force de frottement est toujours opposée au mouvement (α = 180°), donc cos(180°) = -1 et W < 0.",
+        "ar": "قوة الاحتكاك تكون دائماً معاكسة للحركة (α = 180°)، إذن cos(180°) = -1 و W < 0."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un objet glisse sur 8 m avec une force de frottement f = 15 N. Calculer le travail du frottement en Joules.",
+        "ar": "جسم ينزلق على 8 m بقوة احتكاك f = 15 N. احسب شغل الاحتكاك بالجول."
+      },
+      "answer": -120,
+      "tolerance": 1,
+      "unit": "J",
+      "hint": {
+        "fr": "W(f) = -f × d car la force de frottement est opposée au déplacement.",
+        "ar": "W(f) = -f × d لأن قوة الاحتكاك معاكسة للانتقال."
+      },
+      "explanation": {
+        "fr": "W(f) = -f × d = -15 × 8 = -120 J.",
+        "ar": "W(f) = -f × d = -15 × 8 = -120 J."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'unité de la puissance dans le système international est :",
+        "ar": "وحدة الاستطاعة في النظام الدولي هي :"
+      },
+      "choices": [
+        { "fr": "Le Watt (W)", "ar": "الواط (W)" },
+        { "fr": "Le Joule (J)", "ar": "الجول (J)" },
+        { "fr": "Le Newton (N)", "ar": "النيوتن (N)" },
+        { "fr": "Le Pascal (Pa)", "ar": "الباسكال (Pa)" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "La puissance s'exprime en Watts (W). 1 W = 1 J/s.",
+        "ar": "الاستطاعة تُعبَّر بالواط (W). 1 W = 1 J/s."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un moteur fournit un travail de 6000 J en 20 secondes. Calculer sa puissance moyenne en Watts.",
+        "ar": "محرك ينجز شغلاً مقداره 6000 J في 20 ثانية. احسب استطاعته المتوسطة بالواط."
+      },
+      "answer": 300,
+      "tolerance": 1,
+      "unit": "W",
+      "hint": {
+        "fr": "P = W/Δt.",
+        "ar": "P = W/Δt."
+      },
+      "explanation": {
+        "fr": "P = W/Δt = 6000/20 = 300 W.",
+        "ar": "P = W/Δt = 6000/20 = 300 W."
+      }
+    }
+  ]
+}

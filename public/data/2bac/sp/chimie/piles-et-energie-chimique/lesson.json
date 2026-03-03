@@ -1,0 +1,192 @@
+{
+  "id": "piles-et-energie-chimique",
+  "title": {
+    "fr": "Piles et énergie chimique",
+    "ar": "الأعمدة والطاقة الكيميائية"
+  },
+  "objectives": {
+    "fr": [
+      "Décrire le fonctionnement d'une pile électrochimique (pile Daniell)",
+      "Identifier les réactions aux électrodes (oxydation et réduction)",
+      "Connaître la notion de potentiel d'électrode et de force électromotrice (f.é.m.)",
+      "Classer les couples redox par potentiel standard",
+      "Utiliser la relation de Nernst pour calculer le potentiel d'une électrode",
+      "Calculer la capacité et la durée de fonctionnement d'une pile"
+    ],
+    "ar": [
+      "وصف عمل عمود كهروكيميائي (عمود دانيال)",
+      "تحديد التفاعلات عند الأقطاب (أكسدة واختزال)",
+      "معرفة مفهوم جهد القطب والقوة المحركة الكهربائية",
+      "ترتيب الأزواج المؤكسد-المختزل حسب الجهد المعياري",
+      "استخدام علاقة نرنست لحساب جهد قطب",
+      "حساب سعة ومدة عمل عمود كهروكيميائي"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Principe d'une pile électrochimique",
+        "ar": "1. مبدأ العمود الكهروكيميائي"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Une pile électrochimique convertit l'énergie chimique d'une réaction d'oxydoréduction spontanée en énergie électrique. Elle est constituée de deux demi-piles (électrodes) reliées par un circuit extérieur (fil conducteur) et un pont salin (ou membrane) qui assure la continuité électrique du circuit et la neutralité électrique des solutions.",
+        "ar": "يحول العمود الكهروكيميائي الطاقة الكيميائية لتفاعل أكسدة-اختزال تلقائي إلى طاقة كهربائية. يتكون من نصفي عمود (أقطاب) متصلين بدارة خارجية (سلك ناقل) وجسر ملحي (أو غشاء) يضمن استمرارية الدارة الكهربائية وحياد المحاليل كهربائياً."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. La pile Daniell",
+        "ar": "2. عمود دانيال"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Pile Daniell", "ar": "عمود دانيال" },
+      "text": {
+        "fr": "La pile Daniell est constituée de deux demi-piles : une lame de zinc plongeant dans une solution de sulfate de zinc (Zn²⁺/Zn), et une lame de cuivre plongeant dans une solution de sulfate de cuivre (Cu²⁺/Cu). Le pont salin contient une solution de KCl ou KNO₃.",
+        "ar": "يتكون عمود دانيال من نصفي عمود: صفيحة زنك مغمورة في محلول كبريتات الزنك (Zn²⁺/Zn)، وصفيحة نحاس مغمورة في محلول كبريتات النحاس (Cu²⁺/Cu). يحتوي الجسر الملحي على محلول KCl أو KNO₃."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Anode (pôle -) : électrode de zinc. Oxydation : Zn → Zn²⁺ + 2e⁻",
+          "Cathode (pôle +) : électrode de cuivre. Réduction : Cu²⁺ + 2e⁻ → Cu",
+          "Réaction bilan : Zn + Cu²⁺ → Zn²⁺ + Cu",
+          "Les électrons circulent du zinc vers le cuivre dans le circuit extérieur",
+          "Le pont salin permet la migration des ions pour maintenir l'électroneutralité"
+        ],
+        "ar": [
+          "المصعد (القطب -): قطب الزنك. أكسدة: Zn → Zn²⁺ + 2e⁻",
+          "المهبط (القطب +): قطب النحاس. اختزال: Cu²⁺ + 2e⁻ → Cu",
+          "معادلة التفاعل الإجمالية: Zn + Cu²⁺ → Zn²⁺ + Cu",
+          "تنتقل الإلكترونات من الزنك إلى النحاس في الدارة الخارجية",
+          "يسمح الجسر الملحي بهجرة الأيونات للحفاظ على الكهرمتعادلة"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Force électromotrice (f.é.m.) et potentiel d'électrode",
+        "ar": "3. القوة المحركة الكهربائية والجهد المعياري للقطب"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_{pile} = E_{cathode} - E_{anode} = E^\\circ(Cu^{2+}/Cu) - E^\\circ(Zn^{2+}/Zn)",
+      "note": {
+        "fr": "La f.é.m. de la pile est la différence de potentiel entre la cathode (pôle +) et l'anode (pôle -). Pour la pile Daniell dans les conditions standard : E = 0,34 - (-0,76) = 1,10 V.",
+        "ar": "القوة المحركة الكهربائية للعمود هي فرق الجهد بين المهبط (القطب +) والمصعد (القطب -). لعمود دانيال في الشروط المعيارية: E = 0,34 - (-0,76) = 1,10 V."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "E°(Cu²⁺/Cu) = +0,34 V (par rapport à l'ESH)",
+          "E°(Zn²⁺/Zn) = -0,76 V (par rapport à l'ESH)",
+          "E°(Ag⁺/Ag) = +0,80 V",
+          "E°(Fe²⁺/Fe) = -0,44 V",
+          "E°(Pb²⁺/Pb) = -0,13 V",
+          "E°(H⁺/H₂) = 0,00 V (référence : Électrode Standard à Hydrogène)"
+        ],
+        "ar": [
+          "E°(Cu²⁺/Cu) = +0,34 V (بالنسبة لقطب الهيدروجين المعياري)",
+          "E°(Zn²⁺/Zn) = -0,76 V",
+          "E°(Ag⁺/Ag) = +0,80 V",
+          "E°(Fe²⁺/Fe) = -0,44 V",
+          "E°(Pb²⁺/Pb) = -0,13 V",
+          "E°(H⁺/H₂) = 0,00 V (مرجع: قطب الهيدروجين المعياري)"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Relation de Nernst",
+        "ar": "4. علاقة نرنست"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E = E^\\circ + \\frac{0{,}06}{n} \\log\\frac{[Ox]}{[Red]}",
+      "note": {
+        "fr": "Relation de Nernst simplifiée à 25°C. E° est le potentiel standard du couple Ox/Red, n est le nombre d'électrons échangés, [Ox] et [Red] sont les concentrations des formes oxydée et réduite (en mol/L par rapport à C° = 1 mol/L). Pour un métal solide, son activité est prise égale à 1.",
+        "ar": "علاقة نرنست المبسطة عند 25°C. E° هو الجهد المعياري للزوج Ox/Red، n عدد الإلكترونات المتبادلة، [Ox] و[Red] تراكيز الصيغة المؤكسدة والمختزلة. بالنسبة لمعدن صلب، نشاطه يساوي 1."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Potentiel de l'électrode Cu²⁺/Cu", "ar": "مثال: جهد قطب Cu²⁺/Cu" },
+      "problem": {
+        "fr": "Calculer le potentiel de l'électrode Cu²⁺/Cu pour [Cu²⁺] = 0,010 mol/L. On donne E°(Cu²⁺/Cu) = +0,34 V.",
+        "ar": "احسب جهد قطب Cu²⁺/Cu عندما [Cu²⁺] = 0,010 mol/L. المعطى E°(Cu²⁺/Cu) = +0,34 V."
+      },
+      "solution": {
+        "fr": "E = E° + (0,06/2) × log[Cu²⁺] = 0,34 + 0,03 × log(0,010) = 0,34 + 0,03 × (-2) = 0,34 - 0,06 = 0,28 V.",
+        "latex": "E = 0{,}34 + \\frac{0{,}06}{2}\\log(0{,}010) = 0{,}34 + 0{,}03 \\times (-2) = 0{,}28 \\text{ V}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Polarité et sens du courant",
+        "ar": "5. القطبية واتجاه التيار"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Le pôle + de la pile est l'électrode de plus haut potentiel (cathode, siège de la réduction). Le pôle - est l'électrode de plus bas potentiel (anode, siège de l'oxydation). Le courant conventionnel circule du pôle + au pôle - dans le circuit extérieur (sens inverse des électrons). Dans la pile, les anions migrent vers l'anode et les cations vers la cathode.",
+        "ar": "القطب + للعمود هو القطب ذو الجهد الأعلى (المهبط، مكان الاختزال). القطب - هو القطب ذو الجهد الأدنى (المصعد، مكان الأكسدة). يسري التيار الاصطلاحي من القطب + إلى القطب - في الدارة الخارجية (عكس اتجاه الإلكترونات). في العمود، تهاجر الأنيونات نحو المصعد والكاتيونات نحو المهبط."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Capacité et durée de fonctionnement d'une pile",
+        "ar": "6. سعة ومدة عمل العمود"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "Q = n_e \\times F = I \\times \\Delta t",
+      "note": {
+        "fr": "Q est la charge électrique débitée (en coulombs), ne est la quantité de matière d'électrons échangés (en mol), F = 96500 C/mol est la constante de Faraday, I est l'intensité du courant (en A) et Δt la durée de fonctionnement (en s).",
+        "ar": "Q هي الشحنة الكهربائية المقدمة (بالكولوم)، ne كمية مادة الإلكترونات المتبادلة (بالمول)، F = 96500 C/mol ثابت فاراداي، I شدة التيار (بالأمبير) وΔt مدة العمل (بالثانية)."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Durée de fonctionnement de la pile Daniell", "ar": "مثال: مدة عمل عمود دانيال" },
+      "problem": {
+        "fr": "Une pile Daniell contient initialement n(Zn) = 0,10 mol de zinc et n(Cu²⁺) = 0,20 mol d'ions cuivre. Elle débite un courant constant I = 0,50 A. Calculer la durée maximale de fonctionnement.",
+        "ar": "يحتوي عمود دانيال مبدئياً على n(Zn) = 0,10 mol من الزنك وn(Cu²⁺) = 0,20 mol من أيونات النحاس. يُقدّم تياراً ثابتاً I = 0,50 A. احسب المدة القصوى للعمل."
+      },
+      "solution": {
+        "fr": "Le réactif limitant est le zinc : xmax = 0,10 mol. Pour chaque mole de Zn oxydé, 2 moles d'e⁻ sont échangées : ne = 2 × 0,10 = 0,20 mol. Q = ne × F = 0,20 × 96500 = 19300 C. Δt = Q/I = 19300/0,50 = 38600 s ≈ 10,7 h.",
+        "latex": "\\Delta t = \\frac{n_e \\times F}{I} = \\frac{2 \\times 0{,}10 \\times 96500}{0{,}50} = 38600 \\text{ s} \\approx 10{,}7 \\text{ h}"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La pile cesse de fonctionner lorsque l'un des réactifs est totalement consommé (réactif limitant). À ce moment, le système atteint l'équilibre et la f.é.m. devient nulle (E = 0). La pile est alors usée.",
+        "ar": "يتوقف العمود عن العمل عندما يُستهلك أحد المتفاعلات بالكامل (المتفاعل المحدّ). عند ذلك، يبلغ النظام التوازن وتصبح القوة المحركة الكهربائية معدومة (E = 0). يكون العمود قد نفد."
+      }
+    }
+  ]
+}

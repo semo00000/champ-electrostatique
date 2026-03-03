@@ -1,0 +1,158 @@
+{
+  "id": "force-electromagnetique-laplace",
+  "title": {
+    "fr": "Force électromagnétique de Laplace",
+    "ar": "قوة لابلاس الكهرومغناطيسية"
+  },
+  "objectives": {
+    "fr": [
+      "Décrire l'action d'un champ magnétique sur un conducteur parcouru par un courant",
+      "Énoncer l'expression de la force de Laplace : F = BIl·sin(α)",
+      "Appliquer la règle de la main droite pour déterminer le sens de la force",
+      "Connaître les applications de la force de Laplace (moteur électrique, rail de Laplace)",
+      "Résoudre des problèmes numériques impliquant la force de Laplace"
+    ],
+    "ar": [
+      "وصف تأثير حقل مغناطيسي على ناقل يمر فيه تيار",
+      "صياغة تعبير قوة لابلاس: F = BIl·sin(α)",
+      "تطبيق قاعدة اليد اليمنى لتحديد اتجاه القوة",
+      "معرفة تطبيقات قوة لابلاس (المحرك الكهربائي، سكة لابلاس)",
+      "حل مسائل عددية تتضمن قوة لابلاس"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Mise en évidence de la force de Laplace",
+        "ar": "1. إبراز قوة لابلاس"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Lorsqu'un conducteur rectiligne parcouru par un courant électrique est placé dans un champ magnétique, il subit une force appelée force de Laplace. Cette force est perpendiculaire au plan formé par le conducteur et le champ magnétique.",
+        "ar": "عندما يُوضع ناقل مستقيمي يمر فيه تيار كهربائي في حقل مغناطيسي، فإنه يخضع لقوة تُسمى قوة لابلاس. هذه القوة عمودية على المستوى المكوّن من الناقل والحقل المغناطيسي."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La force de Laplace n'existe que si le conducteur est parcouru par un courant ET placé dans un champ magnétique non parallèle au conducteur.",
+        "ar": "قوة لابلاس لا توجد إلا إذا كان الناقل يمر فيه تيار وموضوعاً في حقل مغناطيسي غير مواز للناقل."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Expression de la force de Laplace",
+        "ar": "2. تعبير قوة لابلاس"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "F = B \\cdot I \\cdot l \\cdot \\sin(\\alpha)",
+      "note": {
+        "fr": "F en Newtons (N), B en Tesla (T) (intensité du champ magnétique), I en Ampères (A), l en mètres (m) (longueur du conducteur dans le champ), α angle entre le conducteur et le champ B.",
+        "ar": "F بالنيوتن (N)، B بالتسلا (T) (شدة الحقل المغناطيسي)، I بالأمبير (A)، l بالمتر (m) (طول الناقل في الحقل)، α الزاوية بين الناقل والحقل B."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Cas particuliers : si le conducteur est perpendiculaire au champ (α = 90°), sin(90°) = 1 et F = BIl (force maximale). Si le conducteur est parallèle au champ (α = 0°), sin(0°) = 0 et F = 0 (pas de force).",
+        "ar": "حالات خاصة: إذا كان الناقل عمودياً على الحقل (α = 90°)، sin(90°) = 1 و F = BIl (القوة القصوى). إذا كان الناقل موازياً للحقل (α = 0°)، sin(0°) = 0 و F = 0 (لا توجد قوة)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Sens de la force de Laplace : règle de la main droite",
+        "ar": "3. اتجاه قوة لابلاس: قاعدة اليد اليمنى"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le sens de la force de Laplace est déterminé par la règle de la main droite (ou règle des trois doigts) : le pouce indique le sens du courant I, l'index indique le sens du champ B, et le majeur indique le sens de la force F. On peut aussi utiliser la règle du bonhomme d'Ampère ou la règle du produit vectoriel : F = Il × B.",
+        "ar": "اتجاه قوة لابلاس يُحدد بقاعدة اليد اليمنى (أو قاعدة الأصابع الثلاثة): الإبهام يشير إلى اتجاه التيار I، السبابة تشير إلى اتجاه الحقل B، والوسطى تشير إلى اتجاه القوة F. يمكن أيضاً استعمال قاعدة رجل أمبير أو قاعدة الجداء المتجهي: F = Il × B."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Règle de la main droite",
+        "ar": "قاعدة اليد اليمنى"
+      },
+      "text": {
+        "fr": "Avec la main droite ouverte : les doigts pointent dans le sens du courant, on les replie vers le sens du champ B, et le pouce écarté indique le sens de la force F (perpendiculaire au plan formé par I et B).",
+        "ar": "باليد اليمنى المفتوحة: الأصابع تشير في اتجاه التيار، نثنيها نحو اتجاه الحقل B، والإبهام المفصول يشير إلى اتجاه القوة F (العمودية على المستوى المكوّن من I و B)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Application : le rail de Laplace",
+        "ar": "4. تطبيق: سكة لابلاس"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le rail de Laplace est un dispositif constitué de deux rails parallèles conducteurs reliés par une barre conductrice mobile. Quand un courant parcourt la barre dans un champ magnétique perpendiculaire, la force de Laplace met la barre en mouvement. Ce principe est à la base du moteur électrique à courant continu.",
+        "ar": "سكة لابلاس جهاز يتكون من سكتين متوازيتين ناقلتين مربوطتين بقضيب ناقل متحرك. عندما يمر تيار في القضيب داخل حقل مغناطيسي عمودي، فإن قوة لابلاس تُحرك القضيب. هذا المبدأ هو أساس المحرك الكهربائي ذي التيار المستمر."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Calcul de la force de Laplace",
+        "ar": "مثال: حساب قوة لابلاس"
+      },
+      "problem": {
+        "fr": "Un conducteur rectiligne de longueur l = 25 cm, parcouru par un courant I = 4 A, est placé perpendiculairement dans un champ magnétique uniforme B = 0,3 T. Calculer l'intensité de la force de Laplace.",
+        "ar": "ناقل مستقيمي طوله l = 25 cm، يمر فيه تيار I = 4 A، موضوع عمودياً في حقل مغناطيسي منتظم B = 0.3 T. احسب شدة قوة لابلاس."
+      },
+      "solution": {
+        "fr": "Le conducteur est perpendiculaire à B, donc α = 90° et sin(90°) = 1.\nl = 25 cm = 0,25 m\nF = BIl = 0,3 × 4 × 0,25 = 0,3 N",
+        "latex": "F = B \\cdot I \\cdot l \\cdot \\sin(90°) = 0{,}3 \\times 4 \\times 0{,}25 \\times 1 = 0{,}3 \\text{ N}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Applications technologiques",
+        "ar": "5. التطبيقات التكنولوجية"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Moteur électrique à courant continu : la force de Laplace crée un couple qui fait tourner le rotor",
+          "Haut-parleur : la force de Laplace fait vibrer la membrane pour produire le son",
+          "Lévitation magnétique (Maglev) : utilise les forces électromagnétiques pour la sustentation",
+          "Propulsion électromagnétique (rail gun) : accélération d'un projectile par force de Laplace"
+        ],
+        "ar": [
+          "المحرك الكهربائي ذو التيار المستمر: قوة لابلاس تُنشئ عزماً يُدير الدوار",
+          "مكبر الصوت: قوة لابلاس تُهز الغشاء لإنتاج الصوت",
+          "الرفع المغناطيسي (ماغليف): يستعمل القوى الكهرومغناطيسية للتعليق",
+          "الدفع الكهرومغناطيسي (مدفع السكة): تسريع قذيفة بقوة لابلاس"
+        ]
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Dans un moteur électrique, la force de Laplace convertit l'énergie électrique en énergie mécanique. Le couple moteur est proportionnel au courant I et au champ magnétique B.",
+        "ar": "في المحرك الكهربائي، قوة لابلاس تُحوّل الطاقة الكهربائية إلى طاقة ميكانيكية. عزم المحرك يتناسب مع التيار I والحقل المغناطيسي B."
+      }
+    }
+  ]
+}

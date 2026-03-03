@@ -1,0 +1,202 @@
+{
+  "id": "propagation-onde-lumineuse",
+  "title": { "fr": "Propagation d'une Onde Lumineuse", "ar": "انتشار الموجات الضوئية" },
+  "objectives": {
+    "fr": [
+      "Connaître la nature électromagnétique de la lumière",
+      "Connaître la vitesse de la lumière dans le vide et dans les milieux transparents",
+      "Énoncer et appliquer la loi de Snell-Descartes pour la réfraction",
+      "Expliquer le phénomène de dispersion de la lumière",
+      "Décrire le phénomène de diffraction et la condition d'observation",
+      "Expliquer le phénomène d'interférences (expérience de Young)"
+    ],
+    "ar": [
+      "معرفة الطبيعة الكهرومغناطيسية للضوء",
+      "معرفة سرعة الضوء في الفراغ وفي الأوساط الشفافة",
+      "صياغة وتطبيق قانون سنيل-ديكارت للانكسار",
+      "تفسير ظاهرة تبدد الضوء",
+      "وصف ظاهرة الحيود وشرط ملاحظتها",
+      "تفسير ظاهرة التداخل (تجربة يونغ)"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. La lumière : onde électromagnétique", "ar": "1. الضوء: موجة كهرومغناطيسية" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La lumière est une onde électromagnétique qui peut se propager dans le vide et dans les milieux transparents. Dans le vide, elle se propage à la célérité $c = 3{,}00 \\times 10^8\\,m/s$. La lumière visible correspond à des longueurs d'onde comprises entre $400\\,nm$ (violet) et $800\\,nm$ (rouge).",
+        "ar": "الضوء موجة كهرومغناطيسية يمكنها الانتشار في الفراغ وفي الأوساط الشفافة. في الفراغ، ينتشر بسرعة $c = 3{,}00 \\times 10^8\\,m/s$. الضوء المرئي يوافق أطوال موجية بين $400\\,nm$ (بنفسجي) و $800\\,nm$ (أحمر)."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Indice de réfraction", "ar": "معامل الانكسار" },
+      "text": {
+        "fr": "L'indice de réfraction $n$ d'un milieu transparent est le rapport de la vitesse de la lumière dans le vide à sa vitesse dans ce milieu : $n = \\frac{c}{v}$. L'indice est toujours supérieur ou égal à 1. Plus le milieu est réfringent, plus $n$ est grand et plus la lumière y est lente.",
+        "ar": "معامل الانكسار $n$ لوسط شفاف هو نسبة سرعة الضوء في الفراغ إلى سرعته في ذلك الوسط: $n = \\frac{c}{v}$. المعامل دائما أكبر من أو يساوي 1."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "n = \\frac{c}{v} \\quad \\Rightarrow \\quad v = \\frac{c}{n}",
+      "note": {
+        "fr": "n (sans unité), c = 3×10⁸ m/s, v = vitesse dans le milieu. Exemples : n(air) ≈ 1,00 ; n(eau) ≈ 1,33 ; n(verre) ≈ 1,50",
+        "ar": "n (بدون وحدة)، c = 3×10⁸ m/s، v = السرعة في الوسط. أمثلة: n(هواء) ≈ 1.00 ; n(ماء) ≈ 1.33 ; n(زجاج) ≈ 1.50"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Réfraction : loi de Snell-Descartes", "ar": "2. الانكسار: قانون سنيل-ديكارت" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Lorsqu'un rayon lumineux passe d'un milieu d'indice $n_1$ à un milieu d'indice $n_2$, il subit une déviation : c'est la réfraction. Le rayon incident, le rayon réfracté et la normale au point d'incidence sont dans le même plan. Les angles d'incidence $\\theta_1$ et de réfraction $\\theta_2$ sont liés par la deuxième loi de Snell-Descartes :",
+        "ar": "عندما ينتقل شعاع ضوئي من وسط ذي معامل $n_1$ إلى وسط ذي معامل $n_2$، ينحرف: هذا هو الانكسار. الشعاع الساقط والشعاع المنكسر والناظم في نقطة الورود يقعون في نفس المستوي. زاوية الورود $\\theta_1$ وزاوية الانكسار $\\theta_2$ مرتبطتان بقانون سنيل-ديكارت الثاني:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2",
+      "note": {
+        "fr": "θ₁ = angle d'incidence, θ₂ = angle de réfraction, mesurés par rapport à la normale à la surface de séparation.",
+        "ar": "θ₁ = زاوية الورود، θ₂ = زاوية الانكسار، مقاستان بالنسبة للناظم على سطح الفصل."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 1 : Réfraction air-eau", "ar": "مثال 1: الانكسار هواء-ماء" },
+      "problem": {
+        "fr": "Un rayon lumineux passe de l'air ($n_1 = 1{,}00$) à l'eau ($n_2 = 1{,}33$) avec un angle d'incidence $\\theta_1 = 45°$. Calculer l'angle de réfraction $\\theta_2$.",
+        "ar": "شعاع ضوئي ينتقل من الهواء ($n_1 = 1{,}00$) إلى الماء ($n_2 = 1{,}33$) بزاوية ورود $\\theta_1 = 45°$. احسب زاوية الانكسار $\\theta_2$."
+      },
+      "solution": {
+        "fr": "Le rayon se rapproche de la normale en passant dans le milieu plus réfringent.",
+        "latex": "\\sin\\theta_2 = \\frac{n_1}{n_2}\\sin\\theta_1 = \\frac{1{,}00}{1{,}33} \\times \\sin 45° = \\frac{0{,}707}{1{,}33} = 0{,}532 \\\\[6pt] \\theta_2 = \\arcsin(0{,}532) \\approx 32{,}1°"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Dispersion de la lumière", "ar": "3. تبدد الضوء" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La dispersion est la décomposition de la lumière blanche en ses différentes composantes colorées lors de la traversée d'un milieu dispersif (prisme, goutte d'eau). L'indice de réfraction $n$ d'un milieu dispersif dépend de la longueur d'onde : $n$ est plus grand pour le violet ($\\lambda$ petit) que pour le rouge ($\\lambda$ grand). C'est pourquoi le violet est plus dévié que le rouge.",
+        "ar": "التبدد هو تفكيك الضوء الأبيض إلى مكوناته اللونية المختلفة عند عبوره وسطا مبددا (موشور، قطرة ماء). معامل الانكسار $n$ لوسط مبدد يعتمد على الطول الموجي: $n$ أكبر للبنفسجي ($\\lambda$ صغير) منه للأحمر ($\\lambda$ كبير)."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Dans un milieu dispersif : $n_{violet} > n_{rouge}$, donc le violet est plus dévié que le rouge. La longueur d'onde dans le milieu change ($\\lambda_{milieu} = \\frac{\\lambda_0}{n}$) mais la fréquence reste constante.",
+        "ar": "في وسط مبدد: $n_{بنفسجي} > n_{أحمر}$، لذلك البنفسجي ينحرف أكثر من الأحمر. الطول الموجي في الوسط يتغير ($\\lambda_{وسط} = \\frac{\\lambda_0}{n}$) لكن التردد يبقى ثابتا."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Diffraction de la lumière", "ar": "4. حيود الضوء" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La diffraction est le phénomène d'étalement d'une onde lorsqu'elle rencontre un obstacle ou une ouverture dont la dimension est du même ordre de grandeur que sa longueur d'onde. Pour une fente de largeur $a$, l'angle de diffraction $\\theta$ du premier minimum est donné par :",
+        "ar": "الحيود هو ظاهرة انتشار الموجة عندما تصادف عائقا أو فتحة بأبعاد من نفس رتبة طولها الموجي. بالنسبة لشق بعرض $a$، زاوية الحيود $\\theta$ للحد الأدنى الأول تُعطى بـ:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\sin\\theta = \\frac{\\lambda}{a}",
+      "note": {
+        "fr": "θ = demi-angle d'ouverture de la tache centrale (en rad), λ = longueur d'onde (m), a = largeur de la fente (m). Pour les petits angles : θ ≈ λ/a.",
+        "ar": "θ = نصف زاوية فتحة البقعة المركزية (بالراد)، λ = الطول الموجي (m)، a = عرض الشق (m). للزوايا الصغيرة: θ ≈ λ/a."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La largeur de la tache centrale de diffraction sur un écran situé à la distance $D$ de la fente est : $L = 2D\\tan\\theta \\approx \\frac{2D\\lambda}{a}$ (pour les petits angles). Plus la fente est étroite, plus la tache est large (plus la diffraction est importante).",
+        "ar": "عرض البقعة المركزية للحيود على شاشة تبعد $D$ عن الشق هو: $L = 2D\\tan\\theta \\approx \\frac{2D\\lambda}{a}$ (للزوايا الصغيرة). كلما كان الشق أضيق، كانت البقعة أعرض."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Interférences lumineuses : expérience de Young", "ar": "5. التداخل الضوئي: تجربة يونغ" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'expérience des fentes de Young consiste à éclairer deux fentes fines parallèles avec une source de lumière monochromatique cohérente. Sur un écran placé en face, on observe des franges alternativement brillantes et sombres : ce sont des franges d'interférences.",
+        "ar": "تجربة شقي يونغ تتمثل في إضاءة شقين رفيعين متوازيين بمصدر ضوئي أحادي اللون ومتسق. على شاشة موضوعة أمامهما، نلاحظ أهدابا متناوبة مضيئة ومظلمة: هذه أهداب التداخل."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Interfrange", "ar": "البين-هدبي" },
+      "text": {
+        "fr": "L'interfrange $i$ est la distance entre deux franges brillantes (ou sombres) consécutives. Elle est donnée par la formule :",
+        "ar": "البين-هدبي $i$ هو المسافة بين هدبين مضيئين (أو مظلمين) متتاليين. يُعطى بالصيغة:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "i = \\frac{\\lambda \\cdot D}{a}",
+      "note": {
+        "fr": "i = interfrange (m), λ = longueur d'onde (m), D = distance fentes-écran (m), a = distance entre les deux fentes (m).",
+        "ar": "i = البين-هدبي (m)، λ = الطول الموجي (m)، D = المسافة بين الشقين والشاشة (m)، a = المسافة بين الشقين (m)."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "<strong>Frange brillante</strong> (interférence constructive) : différence de marche $\\delta = n\\lambda$ (n entier)",
+          "<strong>Frange sombre</strong> (interférence destructive) : différence de marche $\\delta = (2n+1)\\frac{\\lambda}{2}$",
+          "La différence de marche au point M de coordonnée $x$ sur l'écran est : $\\delta = \\frac{a \\cdot x}{D}$"
+        ],
+        "ar": [
+          "<strong>هدب مضيء</strong> (تداخل بنّاء): فرق المسير $\\delta = n\\lambda$ (n عدد صحيح)",
+          "<strong>هدب مظلم</strong> (تداخل هدّام): فرق المسير $\\delta = (2n+1)\\frac{\\lambda}{2}$",
+          "فرق المسير عند النقطة M ذات الإحداثية $x$ على الشاشة هو: $\\delta = \\frac{a \\cdot x}{D}$"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Exemples d'application", "ar": "6. أمثلة تطبيقية" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 2 : Diffraction par une fente", "ar": "مثال 2: الحيود بواسطة شق" },
+      "problem": {
+        "fr": "Un faisceau laser de longueur d'onde $\\lambda = 633\\,nm$ éclaire une fente de largeur $a = 0{,}1\\,mm$. L'écran est placé à $D = 2\\,m$. Calculer la largeur de la tache centrale de diffraction.",
+        "ar": "حزمة ليزر بطول موجي $\\lambda = 633\\,nm$ تضيء شقا بعرض $a = 0{,}1\\,mm$. الشاشة موضوعة على بعد $D = 2\\,m$. احسب عرض البقعة المركزية للحيود."
+      },
+      "solution": {
+        "fr": "On utilise la formule de la largeur de la tache centrale.",
+        "latex": "L = \\frac{2D\\lambda}{a} = \\frac{2 \\times 2 \\times 633 \\times 10^{-9}}{0{,}1 \\times 10^{-3}} = \\frac{2{,}532 \\times 10^{-6}}{10^{-4}} = 2{,}53 \\times 10^{-2}\\,m \\approx 2{,}53\\,cm"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 3 : Interfrange de Young", "ar": "مثال 3: البين-هدبي ليونغ" },
+      "problem": {
+        "fr": "Deux fentes de Young sont séparées de $a = 0{,}2\\,mm$. L'écran est à $D = 1{,}5\\,m$. On utilise une lumière monochromatique de longueur d'onde $\\lambda = 600\\,nm$. Calculer l'interfrange.",
+        "ar": "شقا يونغ يفصلهما $a = 0{,}2\\,mm$. الشاشة على بعد $D = 1{,}5\\,m$. نستخدم ضوءا أحادي اللون بطول موجي $\\lambda = 600\\,nm$. احسب البين-هدبي."
+      },
+      "solution": {
+        "fr": "On applique la formule de l'interfrange.",
+        "latex": "i = \\frac{\\lambda D}{a} = \\frac{600 \\times 10^{-9} \\times 1{,}5}{0{,}2 \\times 10^{-3}} = \\frac{9 \\times 10^{-7}}{2 \\times 10^{-4}} = 4{,}5 \\times 10^{-3}\\,m = 4{,}5\\,mm"
+      }
+    }
+  ]
+}

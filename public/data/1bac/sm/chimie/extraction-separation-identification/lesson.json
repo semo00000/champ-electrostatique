@@ -1,0 +1,151 @@
+{
+  "id": "extraction-separation-identification",
+  "title": {
+    "fr": "Extraction, séparation et identification des espèces chimiques",
+    "ar": "الاستخلاص والفصل والتعرف على الأنواع الكيميائية"
+  },
+  "objectives": {
+    "fr": [
+      "Connaître les techniques d'extraction liquide-liquide et solide-liquide",
+      "Comprendre le principe de la chromatographie sur couche mince (CCM)",
+      "Décrire les techniques de distillation et de recristallisation",
+      "Identifier une espèce chimique par ses propriétés physiques",
+      "Calculer un rapport frontal Rf en chromatographie"
+    ],
+    "ar": [
+      "معرفة تقنيات الاستخلاص سائل-سائل وصلب-سائل",
+      "فهم مبدأ الكروماتوغرافيا على طبقة رقيقة (CCM)",
+      "وصف تقنيات التقطير وإعادة التبلور",
+      "التعرف على نوع كيميائي من خصائصه الفيزيائية",
+      "حساب النسبة الأمامية Rf في الكروماتوغرافيا"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Extraction liquide-liquide",
+        "ar": "1. الاستخلاص سائل-سائل"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Extraction liquide-liquide", "ar": "الاستخلاص سائل-سائل" },
+      "text": {
+        "fr": "Technique permettant de transférer un soluté d'un solvant à un autre en utilisant une ampoule à décanter. Le soluté passe dans le solvant où il est le plus soluble. Les deux solvants doivent être non miscibles.",
+        "ar": "تقنية تمكن من نقل مادة مذابة من مذيب إلى آخر باستعمال قمع الفصل. تنتقل المادة المذابة إلى المذيب الذي تكون فيه أكثر ذوبانا. يجب أن يكون المذيبان غير قابلين للامتزاج."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "On utilise une ampoule à décanter pour séparer les deux phases liquides non miscibles. Le solvant extracteur doit : être non miscible avec le solvant initial, mieux dissoudre l'espèce à extraire, et avoir une densité différente. Après agitation et décantation, on récupère la phase contenant l'espèce extraite. On peut améliorer le rendement en répétant l'extraction plusieurs fois.",
+        "ar": "نستعمل قمع الفصل لفصل الطورين السائلين غير القابلين للامتزاج. يجب أن يكون المذيب المستخلص: غير قابل للامتزاج مع المذيب الأصلي، يذيب النوع المراد استخلاصه بشكل أفضل، وله كثافة مختلفة. بعد الرج والترسب، نسترجع الطور المحتوي على النوع المستخلص."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Extraction solide-liquide",
+        "ar": "2. الاستخلاص صلب-سائل"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'extraction solide-liquide consiste à extraire une espèce chimique d'un solide à l'aide d'un solvant. Exemples courants : la décoction (faire bouillir un solide dans un solvant), l'infusion (verser un solvant chaud sur le solide, comme le thé), la macération (laisser tremper le solide dans un solvant à froid pendant longtemps). L'hydrodistillation (entraînement à la vapeur) est aussi utilisée pour extraire les huiles essentielles des plantes.",
+        "ar": "يتمثل الاستخلاص صلب-سائل في استخلاص نوع كيميائي من مادة صلبة بواسطة مذيب. أمثلة شائعة: الإغلاء (غلي مادة صلبة في مذيب)، النقيع (صب مذيب ساخن على المادة الصلبة، كالشاي)، النقع (ترك المادة الصلبة في مذيب بارد لمدة طويلة). يُستعمل التقطير المائي أيضا لاستخلاص الزيوت الأساسية من النباتات."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. La chromatographie sur couche mince (CCM)",
+        "ar": "3. الكروماتوغرافيا على طبقة رقيقة (CCM)"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Chromatographie", "ar": "الكروماتوغرافيا" },
+      "text": {
+        "fr": "Technique de séparation des constituants d'un mélange basée sur leur migration différentielle entre une phase fixe (stationnaire) et une phase mobile (éluant). Chaque espèce migre à une vitesse différente selon son affinité pour les deux phases.",
+        "ar": "تقنية فصل مكونات خليط تعتمد على هجرتها التفاضلية بين طور ثابت وطور متحرك (مُسيّل). كل نوع يهاجر بسرعة مختلفة حسب ألفته للطورين."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "R_f = \\frac{d_{\\text{espèce}}}{d_{\\text{éluant}}} = \\frac{\\text{distance parcourue par l'espèce}}{\\text{distance parcourue par le front de l'éluant}}",
+      "note": {
+        "fr": "Le rapport frontal Rf est caractéristique d'une espèce dans des conditions données (0 < Rf < 1)",
+        "ar": "النسبة الأمامية Rf مميزة لنوع كيميائي في شروط معينة (0 < Rf < 1)"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Deux espèces qui ont le même Rf dans les mêmes conditions chromatographiques (même éluant, même phase fixe) sont probablement identiques. La CCM permet de vérifier la pureté d'un produit : un corps pur donne une seule tache.",
+        "ar": "نوعان كيميائيان لهما نفس Rf في نفس شروط الكروماتوغرافيا (نفس المُسيّل، نفس الطور الثابت) هما على الأرجح متماثلان. تمكن CCM من التحقق من نقاوة منتج: جسم خالص يعطي بقعة واحدة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. La distillation",
+        "ar": "4. التقطير"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La distillation permet de séparer les liquides d'un mélange homogène en exploitant leurs différences de température d'ébullition. Le mélange est chauffé, le constituant le plus volatil (température d'ébullition la plus basse) s'évapore en premier, la vapeur est condensée dans un réfrigérant et récupérée sous forme de distillat. L'hydrodistillation (entraînement à la vapeur d'eau) est utilisée pour extraire les huiles essentielles de produits naturels.",
+        "ar": "يمكن التقطير من فصل سوائل خليط متجانس باستغلال اختلاف درجات غليانها. يُسخن الخليط، يتبخر المكون الأكثر تطايرا (درجة غليان أدنى) أولا، يتكاثف البخار في مبرد ويُسترجع على شكل مقطّر. يُستعمل التقطير المائي لاستخلاص الزيوت الأساسية من المنتجات الطبيعية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. La recristallisation et la filtration",
+        "ar": "5. إعادة التبلور والترشيح"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La recristallisation est une technique de purification qui exploite la variation de solubilité d'un solide avec la température. On dissout le produit impur dans un minimum de solvant chaud, on filtre à chaud pour éliminer les impuretés insolubles, puis on laisse refroidir lentement : le produit pur cristallise tandis que les impuretés restent en solution. On récupère les cristaux par filtration sous vide (filtration sur Büchner).",
+        "ar": "إعادة التبلور تقنية لتنقية استغلال تغير الذوبانية مع الحرارة. نذيب المنتج غير النقي في أقل كمية من مذيب ساخن، نرشح ساخِنا لإزالة الشوائب غير الذائبة، ثم نترك يبرد ببطء: المنتج النقي يتبلور بينما تبقى الشوائب في المحلول. نسترجع البلورات بالترشيح تحت الفراغ."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Identification par les propriétés physiques",
+        "ar": "6. التعرف بالخصائص الفيزيائية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "On peut identifier une espèce chimique en mesurant ses propriétés physiques et en les comparant aux valeurs tabulées : température de fusion (Tf), température d'ébullition (Teb), masse volumique (rho), indice de réfraction (n), et solubilité. Un corps pur présente un palier net lors des changements d'état (plateau sur la courbe T = f(t)), contrairement à un mélange.",
+        "ar": "يمكن التعرف على نوع كيميائي بقياس خصائصه الفيزيائية ومقارنتها بالقيم المجدولة: درجة الانصهار (Tf)، درجة الغليان (Teb)، الكتلة الحجمية (rho)، قرينة الانكسار (n)، والذوبانية. يُظهر الجسم الخالص مستوى واضحا أثناء تغيرات الحالة، خلافا للخليط."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Identification d'un liquide", "ar": "مثال: التعرف على سائل" },
+      "problem": {
+        "fr": "Un liquide incolore a Teb = 78°C et une masse volumique de 0,79 g/mL. Identifier ce liquide.",
+        "ar": "سائل عديم اللون له Teb = 78°C وكتلة حجمية 0,79 g/mL. حدد هذا السائل."
+      },
+      "solution": {
+        "fr": "En comparant aux tables : Teb = 78°C et rho = 0,79 g/mL correspondent à l'éthanol (C₂H₅OH). L'eau a Teb = 100°C et rho = 1,00 g/mL.",
+        "latex": "T_{eb} = 78°C, \\quad \\rho = 0{,}79\\,\\text{g/mL} \\quad \\Rightarrow \\quad \\text{éthanol } (\\text{C}_2\\text{H}_5\\text{OH})"
+      }
+    }
+  ]
+}

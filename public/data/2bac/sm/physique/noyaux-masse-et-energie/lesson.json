@@ -1,0 +1,205 @@
+{
+  "id": "noyaux-masse-et-energie",
+  "title": { "fr": "Noyaux, Masse et Énergie", "ar": "النوى والكتلة والطاقة" },
+  "objectives": {
+    "fr": [
+      "Calculer le défaut de masse Δm d'un noyau atomique",
+      "Calculer l'énergie de liaison E_l = Δm·c² d'un noyau",
+      "Déterminer l'énergie de liaison par nucléon E_l/A et interpréter la courbe d'Aston",
+      "Appliquer la relation d'Einstein E = mc² aux réactions nucléaires",
+      "Distinguer fission et fusion nucléaires et calculer l'énergie libérée"
+    ],
+    "ar": [
+      "حساب خلل الكتلة Δm لنواة ذرية",
+      "حساب طاقة الربط E_l = Δm·c² لنواة",
+      "تحديد طاقة الربط لكل نوكليون E_l/A وتفسير منحنى أستون",
+      "تطبيق علاقة أينشتاين E = mc² على التفاعلات النووية",
+      "التمييز بين الانشطار والاندماج النوويين وحساب الطاقة المحررة"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Rappels sur le noyau atomique", "ar": "1. تذكير حول النواة الذرية" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un noyau atomique $^{A}_{Z}X$ est constitué de $Z$ protons et de $N = A - Z$ neutrons, soit $A$ nucléons au total. Les masses des constituants sont : $m_p = 1{,}00728\\,u$ (proton), $m_n = 1{,}00866\\,u$ (neutron). L'unité de masse atomique est $1\\,u = 1{,}66054 \\times 10^{-27}\\,kg$, et son équivalent énergétique est $1\\,u \\cdot c^2 = 931{,}5\\,MeV$.",
+        "ar": "النواة الذرية $^{A}_{Z}X$ تتكون من $Z$ بروتون و $N = A - Z$ نيوترون، أي $A$ نوكليون إجمالاً. كتل المكونات: $m_p = 1{,}00728\\,u$ (بروتون)، $m_n = 1{,}00866\\,u$ (نيوترون). وحدة الكتلة الذرية هي $1\\,u = 1{,}66054 \\times 10^{-27}\\,kg$، ومكافئها الطاقي $1\\,u \\cdot c^2 = 931{,}5\\,MeV$."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Équivalence masse-énergie : relation d'Einstein", "ar": "2. تكافؤ الكتلة والطاقة: علاقة أينشتاين" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Einstein a montré en 1905 que la masse et l'énergie sont deux manifestations d'une même grandeur. Toute masse $m$ possède une énergie au repos $E = mc^2$, et réciproquement, toute variation d'énergie $\\Delta E$ d'un système s'accompagne d'une variation de masse $\\Delta m = \\Delta E / c^2$. En physique nucléaire, les énergies mises en jeu sont suffisamment grandes pour que les variations de masse soient mesurables.",
+        "ar": "بيّن أينشتاين عام 1905 أن الكتلة والطاقة مظهران لنفس الكمية. كل كتلة $m$ تملك طاقة سكون $E = mc^2$، وبالعكس كل تغير في الطاقة $\\Delta E$ لنظام يرافقه تغير في الكتلة $\\Delta m = \\Delta E / c^2$. في الفيزياء النووية، الطاقات المتضمنة كبيرة بما يكفي لقياس تغيرات الكتلة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E = mc^2 \\quad \\text{avec } c = 2{,}998 \\times 10^8\\,m/s",
+      "note": {
+        "fr": "E en Joules (J) si m en kg. Conversions utiles : 1 u·c² = 931,5 MeV ; 1 MeV = 1,602 × 10⁻¹³ J ; 1 eV = 1,602 × 10⁻¹⁹ J.",
+        "ar": "E بالجول (J) إذا كانت m بالـ kg. تحويلات مفيدة: 1 u·c² = 931.5 MeV ; 1 MeV = 1.602 × 10⁻¹³ J ; 1 eV = 1.602 × 10⁻¹⁹ J."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Défaut de masse", "ar": "3. خلل الكتلة" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Défaut de masse Δm", "ar": "خلل الكتلة Δm" },
+      "text": {
+        "fr": "Le défaut de masse $\\Delta m$ d'un noyau $^{A}_{Z}X$ est la différence entre la somme des masses des nucléons séparés et la masse du noyau. Il est toujours positif : la masse du noyau est inférieure à la somme des masses de ses constituants pris séparément. Cette masse «manquante» a été convertie en énergie de liaison lors de la formation du noyau.",
+        "ar": "خلل الكتلة $\\Delta m$ لنواة $^{A}_{Z}X$ هو الفرق بين مجموع كتل النوكليونات المنفصلة وكتلة النواة. يكون دائماً موجباً: كتلة النواة أقل من مجموع كتل مكوناتها المنفصلة. هذه الكتلة «المفقودة» تحولت إلى طاقة ربط عند تكوين النواة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\Delta m = Z \\cdot m_p + (A - Z) \\cdot m_n - m_{noyau}",
+      "note": {
+        "fr": "Δm en u ou en kg. Z = nombre de protons, A = nombre de masse, m_p = masse du proton, m_n = masse du neutron, m_noyau = masse du noyau.",
+        "ar": "Δm بوحدة u أو kg. Z = عدد البروتونات، A = عدد الكتلة، m_p = كتلة البروتون، m_n = كتلة النيوترون، m_noyau = كتلة النواة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Énergie de liaison", "ar": "4. طاقة الربط" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'énergie de liaison $E_\\ell$ est l'énergie qu'il faudrait fournir au noyau au repos pour le dissocier en ses nucléons libres, séparés et au repos. D'après la relation d'Einstein, cette énergie correspond au défaut de masse. Plus l'énergie de liaison est grande, plus le noyau est stable (fortement lié).",
+        "ar": "طاقة الربط $E_\\ell$ هي الطاقة اللازمة لتفكيك النواة الساكنة إلى نوكليوناتها الحرة المنفصلة والساكنة. حسب علاقة أينشتاين، هذه الطاقة توافق خلل الكتلة. كلما كانت طاقة الربط أكبر، كانت النواة أكثر استقراراً (أكثر ارتباطاً)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_\\ell = \\Delta m \\cdot c^2 = \\left[Z \\cdot m_p + (A-Z) \\cdot m_n - m_{noyau}\\right] \\cdot c^2",
+      "note": {
+        "fr": "Si Δm est en u : E_l = Δm × 931,5 MeV. Si Δm est en kg : E_l en Joules. L'énergie de liaison est toujours positive.",
+        "ar": "إذا كان Δm بـ u: E_l = Δm × 931.5 MeV. إذا كان Δm بـ kg: E_l بالجول. طاقة الربط دائماً موجبة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Énergie de liaison par nucléon et courbe d'Aston", "ar": "5. طاقة الربط لكل نوكليون ومنحنى أستون" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour comparer la stabilité de différents noyaux, on utilise l'énergie de liaison par nucléon $E_\\ell / A$. La courbe d'Aston représente $E_\\ell / A$ en fonction du nombre de masse $A$. Le maximum est atteint pour le fer 56 ($^{56}_{26}Fe$) avec $E_\\ell / A \\approx 8{,}8\\,MeV/nucléon$. Les noyaux légers (A petit) et les noyaux lourds (A grand) ont une énergie de liaison par nucléon plus faible et sont donc moins stables.",
+        "ar": "لمقارنة استقرار النوى المختلفة، نستخدم طاقة الربط لكل نوكليون $E_\\ell / A$. منحنى أستون يمثل $E_\\ell / A$ بدلالة عدد الكتلة $A$. القيمة القصوى تُبلغ عند الحديد 56 ($^{56}_{26}Fe$) مع $E_\\ell / A \\approx 8{,}8\\,MeV/نوكليون$. النوى الخفيفة (A صغير) والنوى الثقيلة (A كبير) لها طاقة ربط لكل نوكليون أضعف وبالتالي أقل استقراراً."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Les noyaux légers (A petit) peuvent gagner en stabilité par <strong>fusion</strong> (assemblage de noyaux légers). Les noyaux lourds (A grand) peuvent gagner en stabilité par <strong>fission</strong> (cassure d'un noyau lourd). Dans les deux cas, les produits ont une énergie de liaison par nucléon plus élevée que les réactifs, et de l'énergie est libérée.",
+        "ar": "النوى الخفيفة (A صغير) يمكنها زيادة استقرارها بـ<strong>الاندماج</strong> (تجميع نوى خفيفة). النوى الثقيلة (A كبير) يمكنها زيادة استقرارها بـ<strong>الانشطار</strong> (تكسير نواة ثقيلة). في الحالتين، النواتج لها طاقة ربط لكل نوكليون أعلى من المتفاعلات، وتُحرر طاقة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Fission et fusion nucléaires", "ar": "6. الانشطار والاندماج النوويان" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Fission nucléaire", "ar": "الانشطار النووي" },
+      "text": {
+        "fr": "La fission est la cassure d'un noyau lourd (A > 200) en deux noyaux plus légers, généralement provoquée par l'absorption d'un neutron lent. Exemple : $^{235}_{92}U + ^{1}_{0}n \\to ^{141}_{56}Ba + ^{92}_{36}Kr + 3\\,^{1}_{0}n$. Cette réaction libère environ 200 MeV par fission et des neutrons qui peuvent provoquer d'autres fissions (réaction en chaîne). La fission est utilisée dans les centrales nucléaires.",
+        "ar": "الانشطار هو تكسر نواة ثقيلة (A > 200) إلى نواتين أخف، يحدث عادة بامتصاص نيوترون بطيء. مثال: $^{235}_{92}U + ^{1}_{0}n \\to ^{141}_{56}Ba + ^{92}_{36}Kr + 3\\,^{1}_{0}n$. يحرر هذا التفاعل حوالي 200 MeV لكل انشطار ونيوترونات يمكنها التسبب في انشطارات أخرى (تفاعل متسلسل). يُستخدم الانشطار في المحطات النووية."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Fusion nucléaire", "ar": "الاندماج النووي" },
+      "text": {
+        "fr": "La fusion est l'assemblage de deux noyaux légers pour former un noyau plus lourd et plus stable. Exemple : $^{2}_{1}H + ^{3}_{1}H \\to ^{4}_{2}He + ^{1}_{0}n + 17{,}6\\,MeV$. Elle nécessite des températures extrêmement élevées (≈ 10⁸ K) pour vaincre la répulsion électrostatique entre les noyaux. C'est la réaction qui alimente les étoiles, dont le Soleil.",
+        "ar": "الاندماج هو تجميع نواتين خفيفتين لتشكيل نواة أثقل وأكثر استقراراً. مثال: $^{2}_{1}H + ^{3}_{1}H \\to ^{4}_{2}He + ^{1}_{0}n + 17{,}6\\,MeV$. يحتاج إلى درجات حرارة عالية جداً (≈ 10⁸ K) للتغلب على التنافر الكهروستاتيكي بين النوى. هو التفاعل الذي يغذي النجوم، بما في ذلك الشمس."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "7. Bilan énergétique d'une réaction nucléaire", "ar": "7. الحصيلة الطاقية لتفاعل نووي" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'énergie libérée lors d'une réaction nucléaire se calcule soit par la variation de masse, soit par la variation des énergies de liaison. Les deux méthodes sont équivalentes grâce à la conservation du nombre de nucléons :",
+        "ar": "الطاقة المحررة خلال تفاعل نووي تُحسب إما بتغير الكتلة أو بتغير طاقات الربط. الطريقتان متكافئتان بفضل انحفاظ عدد النوكليونات:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_{lib} = \\left(\\sum m_{\\text{réactifs}} - \\sum m_{\\text{produits}}\\right) \\cdot c^2 = \\sum E_{\\ell}(\\text{produits}) - \\sum E_{\\ell}(\\text{réactifs})",
+      "note": {
+        "fr": "Si E_lib > 0, la réaction est exoénergétique (libère de l'énergie). Si E_lib < 0, elle est endoénergétique (absorbe de l'énergie).",
+        "ar": "إذا كانت E_lib > 0، التفاعل ناشر للطاقة. إذا كانت E_lib < 0، التفاعل ماص للطاقة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "8. Exemples d'application", "ar": "8. أمثلة تطبيقية" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 1 : Énergie de liaison de l'hélium 4", "ar": "مثال 1: طاقة ربط الهيليوم 4" },
+      "problem": {
+        "fr": "Calculer l'énergie de liaison du noyau $^{4}_{2}He$ sachant que : $m_p = 1{,}00728\\,u$, $m_n = 1{,}00866\\,u$ et $m(^{4}_{2}He) = 4{,}00260\\,u$. En déduire l'énergie de liaison par nucléon.",
+        "ar": "احسب طاقة ربط النواة $^{4}_{2}He$ علماً أن: $m_p = 1{,}00728\\,u$، $m_n = 1{,}00866\\,u$ و $m(^{4}_{2}He) = 4{,}00260\\,u$. استنتج طاقة الربط لكل نوكليون."
+      },
+      "solution": {
+        "fr": "Défaut de masse : Δm = 2×m_p + 2×m_n − m(He) = 2(1,00728) + 2(1,00866) − 4,00260 = 4,03188 − 4,00260 = 0,02928 u. Énergie de liaison : E_l = 0,02928 × 931,5 = 27,28 MeV. Par nucléon : E_l/A = 27,28/4 = 6,82 MeV/nucléon.",
+        "latex": "\\Delta m = 2 \\times 1{,}00728 + 2 \\times 1{,}00866 - 4{,}00260 = 0{,}02928\\,u \\\\[6pt] E_\\ell = 0{,}02928 \\times 931{,}5 = 27{,}28\\,\\text{MeV} \\\\[6pt] \\frac{E_\\ell}{A} = \\frac{27{,}28}{4} = 6{,}82\\,\\text{MeV/nucléon}"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple 2 : Énergie libérée par fusion", "ar": "مثال 2: الطاقة المحررة بالاندماج" },
+      "problem": {
+        "fr": "Calculer l'énergie libérée lors de la fusion : $^{2}_{1}H + ^{3}_{1}H \\to ^{4}_{2}He + ^{1}_{0}n$. Masses : $m(^{2}_{1}H) = 2{,}01410\\,u$, $m(^{3}_{1}H) = 3{,}01605\\,u$, $m(^{4}_{2}He) = 4{,}00260\\,u$, $m_n = 1{,}00866\\,u$.",
+        "ar": "احسب الطاقة المحررة خلال الاندماج: $^{2}_{1}H + ^{3}_{1}H \\to ^{4}_{2}He + ^{1}_{0}n$. الكتل: $m(^{2}_{1}H) = 2{,}01410\\,u$، $m(^{3}_{1}H) = 3{,}01605\\,u$، $m(^{4}_{2}He) = 4{,}00260\\,u$، $m_n = 1{,}00866\\,u$."
+      },
+      "solution": {
+        "fr": "Variation de masse : Δm = (2,01410 + 3,01605) − (4,00260 + 1,00866) = 5,03015 − 5,01126 = 0,01889 u. Énergie libérée : E = 0,01889 × 931,5 = 17,6 MeV.",
+        "latex": "\\Delta m = (2{,}01410 + 3{,}01605) - (4{,}00260 + 1{,}00866) = 0{,}01889\\,u \\\\[6pt] E_{lib} = 0{,}01889 \\times 931{,}5 = 17{,}6\\,\\text{MeV}"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "1 u = 1,66054 × 10⁻²⁷ kg (unité de masse atomique)",
+          "1 u·c² = 931,5 MeV (équivalent énergétique)",
+          "1 MeV = 10⁶ eV = 1,602 × 10⁻¹³ J",
+          "Le fer 56 est le noyau le plus stable (E_l/A ≈ 8,8 MeV/nucléon)",
+          "Fission : noyaux lourds → noyaux moyens + énergie",
+          "Fusion : noyaux légers → noyau moyen + énergie"
+        ],
+        "ar": [
+          "1 u = 1.66054 × 10⁻²⁷ kg (وحدة الكتلة الذرية)",
+          "1 u·c² = 931.5 MeV (المكافئ الطاقي)",
+          "1 MeV = 10⁶ eV = 1.602 × 10⁻¹³ J",
+          "الحديد 56 هو النواة الأكثر استقراراً (E_l/A ≈ 8.8 MeV/نوكليون)",
+          "الانشطار: نوى ثقيلة → نوى متوسطة + طاقة",
+          "الاندماج: نوى خفيفة → نواة متوسطة + طاقة"
+        ]
+      }
+    }
+  ]
+}

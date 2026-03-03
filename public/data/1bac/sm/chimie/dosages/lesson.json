@@ -1,0 +1,163 @@
+{
+  "id": "dosages",
+  "title": {
+    "fr": "Les dosages (titrages)",
+    "ar": "المعايرات (الجرعات)"
+  },
+  "objectives": {
+    "fr": [
+      "Comprendre le principe d'un dosage (titrage)",
+      "Definir le point d'equivalence",
+      "Determiner la concentration inconnue a l'equivalence",
+      "Choisir et utiliser un indicateur colore",
+      "Realiser un dosage acido-basique",
+      "Realiser un dosage d'oxydoreduction"
+    ],
+    "ar": [
+      "فهم مبدأ المعايرة",
+      "تعريف نقطة التكافؤ",
+      "تحديد التركيز المجهول عند التكافؤ",
+      "اختيار واستعمال كاشف لوني",
+      "إنجاز معايرة حمض-قاعدة",
+      "إنجاز معايرة أكسدة-اختزال"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Principe du dosage",
+        "ar": "1. مبدأ المعايرة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Dosage (titrage)" },
+      "text": { "fr": "Un dosage est une technique experimentale qui permet de determiner la concentration inconnue d'une espece chimique en solution (le titre) en la faisant reagir avec une solution de concentration connue (solution titrante). La reaction utilisee doit etre rapide, totale et unique." }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "On verse progressivement la solution titrante (de concentration connue Cₜ) depuis une burette dans un erlenmeyer contenant un volume VA de la solution a doser (de concentration inconnue CA). On repere le point d'equivalence ou les reactifs sont dans les proportions stoechiometriques.",
+        "ar": "نسكب تدريجيا المحلول المعاير (ذو التركيز المعروف Cₜ) من السحاحة في دورق مخروطي يحتوي على حجم VA من المحلول المراد معايرته (ذو التركيز المجهول CA). نحدد نقطة التكافؤ حيث تكون المتفاعلات في النسب الستوكيومترية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Point d'equivalence",
+        "ar": "2. نقطة التكافؤ"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Equivalence" },
+      "text": { "fr": "Le point d'equivalence est atteint lorsque les reactifs ont ete melanges dans les proportions stoechiometriques : les quantites de matiere des reactifs sont dans le rapport impose par l'equation de la reaction." }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour une reaction du type : a·A + b·B → produits, l'equivalence est atteinte quand n(A)/a = n(B)/b. Si a = b = 1 (reaction mole a mole), alors CA·VA = Cₜ·Vₜ,eq. On note Vₜ,eq le volume de titrant verse a l'equivalence.",
+        "ar": "بالنسبة لتفاعل من النوع: a·A + b·B → نواتج، تتحقق نقطة التكافؤ عندما n(A)/a = n(B)/b. إذا كان a = b = 1 (تفاعل مول لمول)، فإن CA·VA = Cₜ·Vₜ,eq. نرمز بـ Vₜ,eq لحجم المحلول المعاير المسكوب عند التكافؤ."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\frac{n(A)}{a} = \\frac{n(B)}{b} \\quad \\Rightarrow \\quad \\frac{C_A \\cdot V_A}{a} = \\frac{C_t \\cdot V_{t,\\text{eq}}}{b}",
+      "note": { "fr": "Relation a l'equivalence pour la reaction aA + bB → produits" }
+    },
+    {
+      "type": "formula",
+      "latex": "C_A = \\frac{a \\cdot C_t \\cdot V_{t,\\text{eq}}}{b \\cdot V_A}",
+      "note": { "fr": "Expression de la concentration inconnue CA" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Reperage du point d'equivalence",
+        "ar": "3. تحديد نقطة التكافؤ"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le point d'equivalence peut etre repere de plusieurs manieres : (1) par un indicateur colore qui change de couleur a l'equivalence, (2) par suivi pH-metrique (courbe pH = f(V) avec un saut de pH), (3) par suivi conductimetrique (changement de pente de la courbe σ = f(V)), (4) par changement de couleur naturel des reactifs ou produits.",
+        "ar": "يمكن تحديد نقطة التكافؤ بعدة طرق: (1) بكاشف لوني يتغير لونه عند التكافؤ، (2) بمتابعة قياس pH (منحنى pH = f(V) مع قفزة في pH)، (3) بمتابعة قياس الناقلية (تغير ميل منحنى σ = f(V))، (4) بتغير لون طبيعي للمتفاعلات أو النواتج."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Phenolphtaleine : incolore en milieu acide, rose en milieu basique (zone de virage pH 8,2-10)",
+          "Bleu de bromothymol (BBT) : jaune (acide), vert (neutre), bleu (basique) (zone de virage pH 6,0-7,6)",
+          "Helianthine : rouge (acide), orange (neutre), jaune (basique) (zone de virage pH 3,1-4,4)",
+          "L'indicateur est adapte quand sa zone de virage contient le pH a l'equivalence"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Dosage acido-basique",
+        "ar": "4. معايرة حمض-قاعدة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Dans un dosage acido-basique, on fait reagir un acide avec une base. Exemple classique : dosage d'une solution d'acide chlorhydrique (HCl, concentration inconnue CA) par une solution d'hydroxyde de sodium (NaOH, concentration connue Cₜ). La reaction est : H₃O⁺ + OH⁻ → 2H₂O.",
+        "ar": "في معايرة حمض-قاعدة، نجعل حمضا يتفاعل مع قاعدة. مثال كلاسيكي: معايرة محلول حمض الكلوريدريك (HCl، تركيز مجهول CA) بمحلول هيدروكسيد الصوديوم (NaOH، تركيز معروف Cₜ). التفاعل هو: H₃O⁺ + OH⁻ → 2H₂O."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Dosage acide fort - base forte" },
+      "problem": { "fr": "On dose VA = 20 mL de HCl de concentration CA inconnue par une solution de NaOH de concentration Cₜ = 0,1 mol/L. Le virage de l'indicateur a lieu pour Vₜ,eq = 15 mL. Determiner CA." },
+      "solution": {
+        "fr": "Reaction mole a mole (a = b = 1) : CA·VA = Cₜ·Vₜ,eq. CA = (0,1 × 15)/20 = 0,075 mol/L.",
+        "latex": "C_A = \\frac{C_t \\cdot V_{t,\\text{eq}}}{V_A} = \\frac{0{,}1 \\times 15}{20} = 0{,}075 \\text{ mol/L}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Dosage d'oxydoreduction",
+        "ar": "5. معايرة الأكسدة والاختزال"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Dans un dosage redox, on utilise une reaction d'oxydoreduction. Un exemple courant est le dosage des ions Fe²⁺ par le permanganate de potassium KMnO₄. La reaction est : MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O. Le point d'equivalence est repere par la persistance de la couleur violette du permanganate en exces.",
+        "ar": "في معايرة الأكسدة-الاختزال، نستعمل تفاعل أكسدة-اختزال. مثال شائع هو معايرة أيونات Fe²⁺ ببرمنغنات البوتاسيوم KMnO₄. التفاعل هو: MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O. تُحدد نقطة التكافؤ باستمرار اللون البنفسجي للبرمنغنات الزائدة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{MnO}_4^- + 5\\text{Fe}^{2+} + 8\\text{H}^+ \\rightarrow \\text{Mn}^{2+} + 5\\text{Fe}^{3+} + 4\\text{H}_2\\text{O}",
+      "note": { "fr": "Equation bilan du dosage permanganimetrique des ions ferreux" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Dosage permanganimetrique" },
+      "problem": { "fr": "On dose V = 20 mL de FeSO₄ de concentration C inconnue par KMnO₄ de concentration Cₜ = 0,02 mol/L. L'equivalence est atteinte pour Vₜ,eq = 10 mL. Calculer C." },
+      "solution": {
+        "fr": "D'apres la stoechiometrie : n(MnO₄⁻) = n(Fe²⁺)/5. A l'equivalence : Cₜ·Vₜ,eq = C·V/5. Donc C = 5·Cₜ·Vₜ,eq/V = 5 × 0,02 × 10/20 = 0,05 mol/L.",
+        "latex": "C = \\frac{5 \\cdot C_t \\cdot V_{t,\\text{eq}}}{V} = \\frac{5 \\times 0{,}02 \\times 10}{20} = 0{,}05 \\text{ mol/L}"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Pour qu'une reaction serve de dosage, elle doit etre : rapide (resultat instantane), totale (reaction complete), et unique (pas de reactions parasites).",
+        "ar": "لكي يصلح تفاعل للمعايرة، يجب أن يكون: سريعا (نتيجة فورية)، تاما (تفاعل كامل)، ووحيدا (بدون تفاعلات جانبية)."
+      }
+    }
+  ]
+}

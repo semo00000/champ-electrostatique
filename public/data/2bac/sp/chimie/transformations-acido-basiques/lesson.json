@@ -1,0 +1,202 @@
+{
+  "id": "transformations-acido-basiques",
+  "title": {
+    "fr": "Transformations acido-basiques",
+    "ar": "التحولات الحمضية-القاعدية"
+  },
+  "objectives": {
+    "fr": [
+      "Connaître la définition de Brønsted d'un acide et d'une base",
+      "Identifier les couples acide/base conjugués",
+      "Mesurer et interpréter le pH d'une solution",
+      "Définir et utiliser les constantes Ka et pKa",
+      "Distinguer acides forts / faibles et bases fortes / faibles",
+      "Comprendre le fonctionnement d'une solution tampon"
+    ],
+    "ar": [
+      "معرفة تعريف برونشتد للحمض والقاعدة",
+      "تحديد الأزواج حمض/قاعدة المرافقة",
+      "قياس وتفسير pH محلول",
+      "تعريف واستخدام ثوابت Ka وpKa",
+      "التمييز بين الأحماض القوية/الضعيفة والقواعد القوية/الضعيفة",
+      "فهم عمل المحلول المنظم (المحلول الدارئ)"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Théorie de Brønsted",
+        "ar": "1. نظرية برونشتد"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Acide selon Brønsted", "ar": "حمض حسب برونشتد" },
+      "text": {
+        "fr": "Un acide selon Brønsted est une espèce chimique capable de céder (donner) un ou plusieurs protons H⁺ à une autre espèce chimique. Exemple : HCl, CH₃COOH, H₂SO₄.",
+        "ar": "الحمض حسب برونشتد هو نوع كيميائي قادر على منح بروتون واحد أو أكثر H⁺ لنوع كيميائي آخر. مثال: HCl, CH₃COOH, H₂SO₄."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Base selon Brønsted", "ar": "قاعدة حسب برونشتد" },
+      "text": {
+        "fr": "Une base selon Brønsted est une espèce chimique capable de capter (accepter) un ou plusieurs protons H⁺. Exemple : NH₃, HO⁻, CH₃COO⁻.",
+        "ar": "القاعدة حسب برونشتد هي نوع كيميائي قادر على التقاط (قبول) بروتون واحد أو أكثر H⁺. مثال: NH₃, HO⁻, CH₃COO⁻."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Couple acide/base conjugué", "ar": "زوج حمض/قاعدة مرافق" },
+      "text": {
+        "fr": "Un couple acide/base est noté AH/A⁻. L'acide AH et la base conjuguée A⁻ sont liés par la demi-équation protonique : AH ⇌ A⁻ + H⁺. Exemples : CH₃COOH/CH₃COO⁻, NH₄⁺/NH₃, H₃O⁺/H₂O, H₂O/HO⁻.",
+        "ar": "يُرمز لزوج حمض/قاعدة بـ AH/A⁻. الحمض AH والقاعدة المرافقة A⁻ مرتبطان بنصف المعادلة البروتونية: AH ⇌ A⁻ + H⁺. أمثلة: CH₃COOH/CH₃COO⁻, NH₄⁺/NH₃, H₃O⁺/H₂O, H₂O/HO⁻."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Le pH d'une solution aqueuse",
+        "ar": "2. الرقم الهيدروجيني pH لمحلول مائي"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "pH = -\\log[H_3O^+]",
+      "note": {
+        "fr": "Le pH est une grandeur sans unité. [H₃O⁺] est la concentration en ions oxonium en mol/L. À 25°C, le pH d'une solution aqueuse est compris entre 0 et 14. Si pH < 7 la solution est acide, si pH = 7 elle est neutre, si pH > 7 elle est basique.",
+        "ar": "pH هو مقدار بدون وحدة. [H₃O⁺] هو تركيز أيونات الأوكسونيوم بـ mol/L. عند 25°C، يتراوح pH محلول مائي بين 0 و14. إذا كان pH < 7 فالمحلول حمضي، إذا pH = 7 فهو متعادل، إذا pH > 7 فهو قاعدي."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "[H_3O^+] = 10^{-pH}",
+      "note": {
+        "fr": "Cette relation permet de calculer la concentration en ions oxonium à partir de la mesure du pH.",
+        "ar": "تسمح هذه العلاقة بحساب تركيز أيونات الأوكسونيوم انطلاقاً من قياس pH."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Constante d'acidité Ka et pKa",
+        "ar": "3. ثابت الحموضة Ka وpKa"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour un couple acide/base AH/A⁻, la réaction de l'acide avec l'eau s'écrit : AH + H₂O ⇌ A⁻ + H₃O⁺. La constante d'acidité Ka caractérise la force d'un acide dans l'eau à une température donnée. Elle ne dépend que de la température et de la nature du couple.",
+        "ar": "لزوج حمض/قاعدة AH/A⁻، يُكتب تفاعل الحمض مع الماء: AH + H₂O ⇌ A⁻ + H₃O⁺. ثابت الحموضة Ka يميّز قوة حمض في الماء عند درجة حرارة معينة. يعتمد فقط على درجة الحرارة وطبيعة الزوج."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "K_a = \\frac{[A^-]_{eq} \\cdot [H_3O^+]_{eq}}{[AH]_{eq}}",
+      "note": {
+        "fr": "Ka est une constante sans unité (les concentrations sont exprimées par rapport à la concentration standard C° = 1 mol/L). Plus Ka est grande, plus l'acide est fort (il se dissocie davantage).",
+        "ar": "Ka ثابت بدون وحدة (التراكيز معبّر عنها بالنسبة للتركيز القياسي C° = 1 mol/L). كلما كان Ka أكبر، كان الحمض أقوى (ينفصل أكثر)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "pK_a = -\\log K_a \\quad \\Leftrightarrow \\quad K_a = 10^{-pK_a}",
+      "note": {
+        "fr": "Plus le pKa est petit, plus l'acide est fort. Exemple : pKa(CH₃COOH/CH₃COO⁻) = 4,8 ; pKa(NH₄⁺/NH₃) = 9,2.",
+        "ar": "كلما كان pKa أصغر، كان الحمض أقوى. مثال: pKa(CH₃COOH/CH₃COO⁻) = 4,8 ; pKa(NH₄⁺/NH₃) = 9,2."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Relation de Henderson-Hasselbalch",
+        "ar": "4. علاقة هندرسون-هاسلبالخ"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "pH = pK_a + \\log\\frac{[A^-]}{[AH]}",
+      "note": {
+        "fr": "Cette relation relie le pH d'une solution au pKa du couple et au rapport des concentrations de la base conjuguée et de l'acide. Si [A⁻] = [AH], alors pH = pKa (demi-équivalence).",
+        "ar": "تربط هذه العلاقة pH محلول بـ pKa الزوج ونسبة تركيزي القاعدة المرافقة والحمض. إذا كان [A⁻] = [AH]، فإن pH = pKa (نصف التكافؤ)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Acides forts, acides faibles, bases fortes, bases faibles",
+        "ar": "5. الأحماض القوية، الأحماض الضعيفة، القواعد القوية، القواعد الضعيفة"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Acide fort : sa réaction avec l'eau est totale (τ = 1). Exemples : HCl, HNO₃, H₂SO₄. Le pH d'une solution d'acide fort de concentration C est : pH = -log C.",
+          "Acide faible : sa réaction avec l'eau est non totale (τ < 1). Exemples : CH₃COOH (pKa = 4,8), HF (pKa = 3,2). Le pH vérifie : pH > -log C.",
+          "Base forte : sa réaction avec l'eau est totale (τ = 1). Exemple : NaOH, KOH. Le pH vérifie : pH = 14 + log C.",
+          "Base faible : sa réaction avec l'eau est non totale (τ < 1). Exemples : NH₃ (pKa du conjugué = 9,2), CH₃COO⁻. Le pH vérifie : pH < 14 + log C."
+        ],
+        "ar": [
+          "حمض قوي: تفاعله مع الماء تام (τ = 1). أمثلة: HCl, HNO₃, H₂SO₄. يكون pH = -log C.",
+          "حمض ضعيف: تفاعله مع الماء غير تام (τ < 1). أمثلة: CH₃COOH (pKa = 4,8). يكون pH > -log C.",
+          "قاعدة قوية: تفاعلها مع الماء تام (τ = 1). أمثلة: NaOH, KOH. يكون pH = 14 + log C.",
+          "قاعدة ضعيفة: تفاعلها مع الماء غير تام (τ < 1). أمثلة: NH₃. يكون pH < 14 + log C."
+        ]
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : pH d'un acide fort", "ar": "مثال: pH حمض قوي" },
+      "problem": {
+        "fr": "Calculer le pH d'une solution d'acide chlorhydrique HCl de concentration C = 2,0×10⁻³ mol/L.",
+        "ar": "احسب pH محلول حمض كلور الماء HCl بتركيز C = 2,0×10⁻³ mol/L."
+      },
+      "solution": {
+        "fr": "HCl est un acide fort : sa dissociation dans l'eau est totale. HCl + H₂O → Cl⁻ + H₃O⁺. Donc [H₃O⁺] = C = 2,0×10⁻³ mol/L. pH = -log(2,0×10⁻³) = -log(2,0) - log(10⁻³) = -0,30 + 3 = 2,7.",
+        "latex": "pH = -\\log C = -\\log(2{,}0 \\times 10^{-3}) = 2{,}7"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Solutions tampons",
+        "ar": "6. المحاليل المنظمة (الدارئة)"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Solution tampon", "ar": "محلول منظم (دارئ)" },
+      "text": {
+        "fr": "Une solution tampon est une solution dont le pH varie très peu par ajout modéré d'un acide, d'une base ou par dilution. Elle est constituée d'un mélange d'un acide faible AH et de sa base conjuguée A⁻ en concentrations voisines. Le pH d'une solution tampon est voisin du pKa du couple AH/A⁻.",
+        "ar": "المحلول المنظم هو محلول يتغير pH الخاص به بشكل طفيف جداً عند إضافة كمية معتدلة من حمض أو قاعدة أو عند التخفيف. يتكون من خليط حمض ضعيف AH وقاعدته المرافقة A⁻ بتراكيز متقاربة. يكون pH المحلول المنظم قريباً من pKa الزوج AH/A⁻."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Propriétés d'une solution tampon : (1) Son pH varie peu par ajout modéré d'acide ou de base. (2) Son pH varie peu par dilution modérée. (3) Son pH est voisin du pKa du couple acide/base qui la constitue. (4) Le pouvoir tampon est maximal quand [AH] = [A⁻], soit pH = pKa.",
+        "ar": "خصائص المحلول المنظم: (1) يتغير pH قليلاً عند إضافة كمية معتدلة من حمض أو قاعدة. (2) يتغير pH قليلاً عند التخفيف المعتدل. (3) pH قريب من pKa الزوج المكوّن له. (4) القدرة التنظيمية تكون أقصى عندما [AH] = [A⁻] أي pH = pKa."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Solution tampon acétique", "ar": "مثال: محلول منظم خلاتي" },
+      "problem": {
+        "fr": "On mélange V₁ = 100 mL de CH₃COOH à C₁ = 0,10 mol/L avec V₂ = 100 mL de CH₃COONa à C₂ = 0,10 mol/L. Calculer le pH sachant que pKa(CH₃COOH/CH₃COO⁻) = 4,8.",
+        "ar": "نمزج V₁ = 100 mL من CH₃COOH بتركيز C₁ = 0,10 mol/L مع V₂ = 100 mL من CH₃COONa بتركيز C₂ = 0,10 mol/L. احسب pH علماً أن pKa = 4,8."
+      },
+      "solution": {
+        "fr": "On a [CH₃COOH] = [CH₃COO⁻] = 0,050 mol/L (dilution par 2). En appliquant Henderson-Hasselbalch : pH = pKa + log([A⁻]/[AH]) = 4,8 + log(1) = 4,8. Le pH de cette solution tampon est 4,8.",
+        "latex": "pH = pK_a + \\log\\frac{[CH_3COO^-]}{[CH_3COOH]} = 4{,}8 + \\log(1) = 4{,}8"
+      }
+    }
+  ]
+}

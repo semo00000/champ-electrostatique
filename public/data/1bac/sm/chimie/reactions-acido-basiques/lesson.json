@@ -1,0 +1,170 @@
+{
+  "id": "reactions-acido-basiques",
+  "title": {
+    "fr": "Les reactions acido-basiques",
+    "ar": "التفاعلات حمض-قاعدة"
+  },
+  "objectives": {
+    "fr": [
+      "Definir un acide et une base selon Bronsted",
+      "Identifier les couples acide/base conjugues",
+      "Calculer le pH d'une solution a partir de [H₃O⁺]",
+      "Utiliser le produit ionique de l'eau Ke",
+      "Distinguer acides/bases forts et faibles",
+      "Ecrire l'equation d'une reaction de neutralisation"
+    ],
+    "ar": [
+      "تعريف حمض وقاعدة حسب برونشتد",
+      "تحديد الأزواج حمض/قاعدة المرافقة",
+      "حساب pH محلول انطلاقا من تركيز H₃O⁺",
+      "استعمال الجداء الأيوني للماء Ke",
+      "التمييز بين الأحماض/القواعد القوية والضعيفة",
+      "كتابة معادلة تفاعل المعايرة"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Theorie de Bronsted",
+        "ar": "1. نظرية برونشتد"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Acide de Bronsted" },
+      "text": { "fr": "Un acide de Bronsted est une espece chimique capable de ceder (donner) un proton H⁺ a une autre espece chimique." }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Base de Bronsted" },
+      "text": { "fr": "Une base de Bronsted est une espece chimique capable de capter (accepter) un proton H⁺ d'une autre espece chimique." }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un couple acide/base est note AH/A⁻ ou la demi-equation protonique s'ecrit : AH ⇌ A⁻ + H⁺. L'acide AH et la base A⁻ sont dits conjugues. Toute reaction acido-basique met en jeu deux couples acide/base : l'acide d'un couple reagit avec la base de l'autre couple.",
+        "ar": "يُرمز لزوج حمض/قاعدة بـ AH/A⁻ حيث نصف المعادلة البروتونية تُكتب: AH ⇌ A⁻ + H⁺. الحمض AH والقاعدة A⁻ يُقال عنهما مرافقان. كل تفاعل حمض-قاعدة يتضمن زوجين حمض/قاعدة: حمض أحد الزوجين يتفاعل مع قاعدة الزوج الآخر."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{AH} \\rightleftharpoons \\text{A}^- + \\text{H}^+",
+      "note": { "fr": "Demi-equation protonique du couple AH/A⁻" }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Couple CH₃COOH / CH₃COO⁻ : acide ethanoique / ion ethanoate",
+          "Couple NH₄⁺ / NH₃ : ion ammonium / ammoniac",
+          "Couple H₃O⁺ / H₂O : ion hydronium / eau",
+          "Couple H₂O / OH⁻ : eau / ion hydroxyde",
+          "L'eau est amphotere (amphiprote) : elle peut jouer le role d'acide ou de base"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Le pH d'une solution aqueuse",
+        "ar": "2. الرقم الهيدروجيني pH لمحلول مائي"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{pH} = -\\log[\\text{H}_3\\text{O}^+]",
+      "note": { "fr": "pH : sans unite, [H₃O⁺] en mol/L" }
+    },
+    {
+      "type": "formula",
+      "latex": "[\\text{H}_3\\text{O}^+] = 10^{-\\text{pH}}",
+      "note": { "fr": "Relation inverse : calculer la concentration a partir du pH" }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "A 25°C : si pH < 7, la solution est acide ; si pH = 7, elle est neutre ; si pH > 7, elle est basique. L'echelle du pH va de 0 a 14 pour les solutions diluees.",
+        "ar": "عند 25°C: إذا كان pH < 7 فالمحلول حمضي؛ إذا كان pH = 7 فهو متعادل؛ إذا كان pH > 7 فهو قاعدي. سلم pH يمتد من 0 إلى 14 للمحاليل المخففة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Produit ionique de l'eau",
+        "ar": "3. الجداء الأيوني للماء"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'eau pure subit une autoprotolyse tres faible : 2H₂O ⇌ H₃O⁺ + OH⁻. Le produit ionique de l'eau Ke est defini par le produit des concentrations des ions hydronium et hydroxyde.",
+        "ar": "يخضع الماء النقي لتحلل ذاتي ضعيف جدا: 2H₂O ⇌ H₃O⁺ + OH⁻. يُعرَّف الجداء الأيوني للماء Ke بجداء تركيزي أيونات الهيدرونيوم والهيدروكسيد."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "K_e = [\\text{H}_3\\text{O}^+] \\cdot [\\text{OH}^-] = 10^{-14} \\quad \\text{a 25°C}",
+      "note": { "fr": "Ke est une constante qui ne depend que de la temperature" }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{pH} + \\text{pOH} = 14 \\quad \\text{avec} \\quad \\text{pOH} = -\\log[\\text{OH}^-]",
+      "note": { "fr": "Relation entre pH et pOH a 25°C" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Acides et bases forts / faibles",
+        "ar": "4. الأحماض والقواعد القوية / الضعيفة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un acide fort se dissocie totalement dans l'eau : HA + H₂O → H₃O⁺ + A⁻. Dans ce cas, [H₃O⁺] = C (concentration apportee) et pH = -log C. Exemples : HCl, HNO₃, H₂SO₄. Un acide faible ne se dissocie que partiellement : [H₃O⁺] < C et pH > -log C. Exemple : CH₃COOH.",
+        "ar": "ينفصل الحمض القوي كليا في الماء: HA + H₂O → H₃O⁺ + A⁻. في هذه الحالة [H₃O⁺] = C و pH = -log C. أمثلة: HCl, HNO₃, H₂SO₄. أما الحمض الضعيف فلا ينفصل إلا جزئيا: [H₃O⁺] < C و pH > -log C. مثال: CH₃COOH."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Une base forte se dissocie totalement : B + H₂O → BH⁺ + OH⁻. Alors [OH⁻] = C et pH = 14 + log C. Exemples : NaOH, KOH. Une base faible se dissocie partiellement : [OH⁻] < C. Exemple : NH₃.",
+        "ar": "تنفصل القاعدة القوية كليا: B + H₂O → BH⁺ + OH⁻. إذن [OH⁻] = C و pH = 14 + log C. أمثلة: NaOH, KOH. أما القاعدة الضعيفة فتنفصل جزئيا: [OH⁻] < C. مثال: NH₃."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "pH d'un acide fort" },
+      "problem": { "fr": "Calculer le pH d'une solution d'acide chlorhydrique HCl de concentration C = 0,01 mol/L." },
+      "solution": {
+        "fr": "HCl est un acide fort : dissociation totale. [H₃O⁺] = C = 0,01 mol/L = 10⁻² mol/L. pH = -log(10⁻²) = 2.",
+        "latex": "\\text{pH} = -\\log(10^{-2}) = 2"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Reaction de neutralisation",
+        "ar": "5. تفاعل المعايرة (التعديل)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La neutralisation est la reaction entre un acide et une base. Pour un acide fort et une base forte, la reaction est totale : H₃O⁺ + OH⁻ → 2H₂O. A l'equivalence, les reactifs sont dans les proportions stoechiometriques et le pH vaut 7 (a 25°C, si acide fort + base forte).",
+        "ar": "المعايرة هي التفاعل بين حمض وقاعدة. بالنسبة لحمض قوي وقاعدة قوية، التفاعل تام: H₃O⁺ + OH⁻ → 2H₂O. عند نقطة التكافؤ، المتفاعلات تكون في النسب الستوكيومترية و pH = 7 (عند 25°C لحمض قوي + قاعدة قوية)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{H}_3\\text{O}^+ + \\text{OH}^- \\rightarrow 2\\text{H}_2\\text{O}",
+      "note": { "fr": "Equation bilan de la neutralisation acide fort / base forte" }
+    }
+  ]
+}

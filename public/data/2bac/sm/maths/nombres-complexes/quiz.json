@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer le module de z = 3 + 4i.",
+        "ar": "احسب معامل z = 3 + 4i."
+      },
+      "answer": 5,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": {
+        "fr": "|z| = √(a² + b²) avec a = 3 et b = 4.",
+        "ar": "|z| = √(a² + b²) حيث a = 3 و b = 4."
+      },
+      "explanation": {
+        "fr": "|z| = √(3² + 4²) = √(9 + 16) = √25 = 5.",
+        "ar": "|z| = √(3² + 4²) = √(9 + 16) = √25 = 5."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel est le conjugué de z = 2 − 3i ?",
+        "ar": "ما هو مرافق z = 2 − 3i ؟"
+      },
+      "choices": [
+        { "fr": "−2 + 3i", "ar": "−2 + 3i" },
+        { "fr": "2 + 3i", "ar": "2 + 3i" },
+        { "fr": "−2 − 3i", "ar": "−2 − 3i" },
+        { "fr": "3 − 2i", "ar": "3 − 2i" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le conjugué de z = a + bi est z̄ = a − bi. Ici z = 2 + (−3)i, donc z̄ = 2 − (−3)i = 2 + 3i.",
+        "ar": "مرافق z = a + bi هو z̄ = a − bi. هنا z = 2 + (−3)i، إذن z̄ = 2 − (−3)i = 2 + 3i."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Calculer (1 + i)².",
+        "ar": "احسب (1 + i)²."
+      },
+      "choices": [
+        { "fr": "2", "ar": "2" },
+        { "fr": "2i", "ar": "2i" },
+        { "fr": "−2", "ar": "−2" },
+        { "fr": "1 + 2i", "ar": "1 + 2i" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "(1 + i)² = 1 + 2i + i² = 1 + 2i − 1 = 2i.",
+        "ar": "(1 + i)² = 1 + 2i + i² = 1 + 2i − 1 = 2i."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La forme exponentielle de z = −1 est :",
+        "ar": "الشكل الأسي لـ z = −1 هو:"
+      },
+      "choices": [
+        { "fr": "e^{i\\pi/2}", "ar": "e^{i\\pi/2}" },
+        { "fr": "e^{i\\pi}", "ar": "e^{i\\pi}" },
+        { "fr": "e^{2i\\pi}", "ar": "e^{2i\\pi}" },
+        { "fr": "e^{-i\\pi/2}", "ar": "e^{-i\\pi/2}" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "z = −1 a pour module |z| = 1 et pour argument θ = π. Donc z = 1·e^{iπ} = e^{iπ}. C'est la célèbre identité d'Euler : e^{iπ} + 1 = 0.",
+        "ar": "z = −1 معامله |z| = 1 وعمدته θ = π. إذن z = e^{iπ}. هذه هي متطابقة أويلر الشهيرة: e^{iπ} + 1 = 0."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Selon la formule de De Moivre, (cosθ + i·sinθ)⁴ est égal à :",
+        "ar": "حسب صيغة دو موافر، (cosθ + i·sinθ)⁴ يساوي:"
+      },
+      "choices": [
+        { "fr": "\\cos(\\theta^4) + i\\sin(\\theta^4)", "ar": "\\cos(\\theta^4) + i\\sin(\\theta^4)" },
+        { "fr": "4\\cos\\theta + 4i\\sin\\theta", "ar": "4\\cos\\theta + 4i\\sin\\theta" },
+        { "fr": "\\cos(4\\theta) + i\\sin(4\\theta)", "ar": "\\cos(4\\theta) + i\\sin(4\\theta)" },
+        { "fr": "\\cos^4\\theta + i\\sin^4\\theta", "ar": "\\cos^4\\theta + i\\sin^4\\theta" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "La formule de De Moivre dit que (cosθ + i·sinθ)^n = cos(nθ) + i·sin(nθ). Avec n = 4 : cos(4θ) + i·sin(4θ).",
+        "ar": "صيغة دو موافر تقول (cosθ + i·sinθ)^n = cos(nθ) + i·sin(nθ). مع n = 4: cos(4θ) + i·sin(4θ)."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Combien de racines 6-ièmes de l'unité existe-t-il dans ℂ ?",
+        "ar": "كم عدد الجذور السداسية للوحدة في ℂ ؟"
+      },
+      "answer": 6,
+      "tolerance": 0,
+      "unit": "",
+      "hint": {
+        "fr": "L'équation z^n = 1 admet exactement n solutions dans ℂ.",
+        "ar": "المعادلة z^n = 1 تقبل بالضبط n حلا في ℂ."
+      },
+      "explanation": {
+        "fr": "L'équation z^n = 1 admet exactement n racines dans ℂ. Ici n = 6, donc il y a 6 racines 6-ièmes de l'unité : e^{2ikπ/6} pour k = 0, 1, 2, 3, 4, 5.",
+        "ar": "المعادلة z^n = 1 تقبل بالضبط n جذرا في ℂ. هنا n = 6، إذن هناك 6 جذور سداسية للوحدة: e^{2ikπ/6} حيث k = 0, 1, 2, 3, 4, 5."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer le module de z = (1 + i)^6.",
+        "ar": "احسب معامل z = (1 + i)^6."
+      },
+      "answer": 8,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": {
+        "fr": "Utilisez |z^n| = |z|^n. Calculez d'abord |1 + i|.",
+        "ar": "استعمل |z^n| = |z|^n. احسب أولا |1 + i|."
+      },
+      "explanation": {
+        "fr": "|1 + i| = √(1² + 1²) = √2. Donc |(1 + i)^6| = |1 + i|^6 = (√2)^6 = 2^3 = 8.",
+        "ar": "|1 + i| = √(1² + 1²) = √2. إذن |(1 + i)^6| = |1 + i|^6 = (√2)^6 = 2^3 = 8."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La partie imaginaire du nombre complexe z = (2 + i)(1 − 3i) est :",
+        "ar": "الجزء التخيلي للعدد المركب z = (2 + i)(1 − 3i) هو:"
+      },
+      "choices": [
+        { "fr": "5", "ar": "5" },
+        { "fr": "−5", "ar": "−5" },
+        { "fr": "−7", "ar": "−7" },
+        { "fr": "7", "ar": "7" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "z = (2 + i)(1 − 3i) = 2 − 6i + i − 3i² = 2 − 5i + 3 = 5 − 5i. La partie imaginaire est Im(z) = −5.",
+        "ar": "z = (2 + i)(1 − 3i) = 2 − 6i + i − 3i² = 2 − 5i + 3 = 5 − 5i. الجزء التخيلي هو Im(z) = −5."
+      }
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Qu'est-ce qu'une espece chimique ?",
+        "ar": "ما هو النوع الكيميائي؟"
+      },
+      "choices": [
+        { "fr": "Un instrument de laboratoire", "ar": "أداة مخبرية" },
+        { "fr": "Un ensemble d'entites chimiques identiques (atomes, molecules ou ions)", "ar": "مجموعة من الكيانات الكيميائية المتماثلة (ذرات، جزيئات أو أيونات)" },
+        { "fr": "Un melange de plusieurs corps", "ar": "خليط من عدة أجسام" },
+        { "fr": "Une reaction chimique", "ar": "تفاعل كيميائي" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Une espece chimique est un ensemble d'entites chimiques identiques : atomes, molecules ou ions. Par exemple, l'eau est une espece chimique constituee de molecules H2O identiques.",
+        "ar": "النوع الكيميائي هو مجموعة من الكيانات الكيميائية المتماثلة: ذرات، جزيئات أو أيونات. مثلا، الماء نوع كيميائي يتكون من جزيئات H2O متماثلة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Un corps pur est constitue :",
+        "ar": "الجسم الخالص يتكون من:"
+      },
+      "choices": [
+        { "fr": "D'une seule espece chimique", "ar": "نوع كيميائي واحد" },
+        { "fr": "De deux especes chimiques au minimum", "ar": "نوعين كيميائيين على الأقل" },
+        { "fr": "D'un seul atome", "ar": "ذرة واحدة فقط" },
+        { "fr": "De plusieurs phases differentes", "ar": "عدة أطوار مختلفة" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Un corps pur est constitue d'une seule espece chimique. Exemple : l'eau distillee ne contient que des molecules H2O. Un melange contient au moins deux especes chimiques.",
+        "ar": "الجسم الخالص يتكون من نوع كيميائي واحد فقط. مثال: الماء المقطر لا يحتوي إلا على جزيئات H2O. الخليط يحتوي على نوعين كيميائيين على الأقل."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Parmi les proprietes suivantes, laquelle est une propriete physique caracteristique permettant d'identifier une espece chimique ?",
+        "ar": "من بين الخصائص التالية، أيها خاصية فيزيائية مميزة تسمح بتحديد نوع كيميائي؟"
+      },
+      "choices": [
+        { "fr": "La couleur du flacon", "ar": "لون القارورة" },
+        { "fr": "Le prix du produit", "ar": "ثمن المنتج" },
+        { "fr": "La temperature d'ebullition sous pression atmospherique normale", "ar": "درجة حرارة الغليان تحت الضغط الجوي العادي" },
+        { "fr": "Le volume du recipient", "ar": "حجم الإناء" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "La temperature d'ebullition (ainsi que la temperature de fusion, la masse volumique, l'indice de refraction, etc.) est une propriete physique caracteristique qui permet d'identifier une espece chimique. Les proprietes du recipient ne sont pas des proprietes de l'espece chimique.",
+        "ar": "درجة حرارة الغليان (وكذلك درجة حرارة الانصهار، الكتلة الحجمية، قرينة الانكسار...) هي خاصية فيزيائية مميزة تسمح بتحديد النوع الكيميائي. خصائص الإناء ليست خصائص النوع الكيميائي."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Un melange heterogene se distingue d'un melange homogene par :",
+        "ar": "الخليط غير المتجانس يتميز عن الخليط المتجانس بـ:"
+      },
+      "choices": [
+        { "fr": "Il ne contient qu'une seule espece chimique", "ar": "لا يحتوي إلا على نوع كيميائي واحد" },
+        { "fr": "Il est toujours liquide", "ar": "يكون دائما سائلا" },
+        { "fr": "Il est toujours gazeux", "ar": "يكون دائما غازيا" },
+        { "fr": "On peut y distinguer plusieurs phases a l'oeil nu", "ar": "يمكن تمييز عدة أطوار فيه بالعين المجردة" }
+      ],
+      "answer": 3,
+      "explanation": {
+        "fr": "Un melange heterogene presente plusieurs phases visibles a l'oeil nu (eau + huile, eau + sable...). Un melange homogene ne presente qu'une seule phase visible (eau salee, air...).",
+        "ar": "الخليط غير المتجانس يقدم عدة أطوار مرئية بالعين المجردة (ماء + زيت، ماء + رمل...). الخليط المتجانس لا يقدم إلا طورا واحدا مرئيا (ماء مالح، هواء...)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Lors du changement d'etat d'un corps pur, la temperature :",
+        "ar": "أثناء تغير حالة جسم خالص، درجة الحرارة:"
+      },
+      "choices": [
+        { "fr": "Augmente continuellement", "ar": "تزداد باستمرار" },
+        { "fr": "Reste constante (palier de temperature)", "ar": "تبقى ثابتة (مستوى في درجة الحرارة)" },
+        { "fr": "Diminue puis augmente", "ar": "تنقص ثم تزداد" },
+        { "fr": "Varie de maniere aleatoire", "ar": "تتغير بشكل عشوائي" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Un corps pur presente un palier de temperature lors d'un changement d'etat : la temperature reste constante pendant toute la duree du changement d'etat. Ce palier est une propriete caracteristique du corps pur. Un melange ne presente pas de palier net.",
+        "ar": "الجسم الخالص يقدم مستوى في درجة الحرارة أثناء تغير الحالة: تبقى ثابتة طوال مدة تغير الحالة. هذا المستوى خاصية مميزة للجسم الخالص. الخليط لا يقدم مستوى واضحا."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "L'eau pure bout a quelle temperature (en degres C) sous pression atmospherique normale (1 atm) ?",
+        "ar": "عند أي درجة حرارة (بالدرجة المئوية) يغلي الماء الخالص تحت الضغط الجوي العادي (1 atm)؟"
+      },
+      "answer": 100,
+      "tolerance": 0,
+      "unit": "°C",
+      "hint": {
+        "fr": "C'est une valeur de reference fondamentale en chimie.",
+        "ar": "هي قيمة مرجعية أساسية في الكيمياء."
+      },
+      "explanation": {
+        "fr": "L'eau pure bout a exactement 100 degres C sous pression atmospherique normale (1 atm = 1013 hPa). Cette temperature d'ebullition est une propriete physique caracteristique de l'eau.",
+        "ar": "الماء الخالص يغلي عند 100 درجة مئوية بالضبط تحت الضغط الجوي العادي (1 atm = 1013 hPa). درجة حرارة الغليان هذه خاصية فيزيائية مميزة للماء."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'indice de refraction d'un milieu transparent est defini par :",
+        "ar": "قرينة انكسار وسط شفاف تُعرّف بـ:"
+      },
+      "choices": [
+        { "fr": "Le rapport de la masse sur le volume du milieu", "ar": "نسبة الكتلة إلى حجم الوسط" },
+        { "fr": "Le rapport c/v ou c est la vitesse de la lumiere dans le vide et v sa vitesse dans le milieu", "ar": "النسبة c/v حيث c سرعة الضوء في الفراغ و v سرعته في الوسط" },
+        { "fr": "La temperature de fusion du milieu", "ar": "درجة حرارة انصهار الوسط" },
+        { "fr": "Le volume molaire du milieu", "ar": "الحجم المولي للوسط" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "L'indice de refraction est n = c/v, ou c = 3 x 10^8 m/s est la vitesse de la lumiere dans le vide et v la vitesse de la lumiere dans le milieu considere. C'est un nombre sans unite, toujours superieur ou egal a 1. C'est une propriete caracteristique qui permet d'identifier un milieu transparent.",
+        "ar": "قرينة الانكسار هي n = c/v، حيث c = 3 x 10^8 m/s سرعة الضوء في الفراغ و v سرعة الضوء في الوسط المعني. هي عدد بدون وحدة، دائما أكبر من أو يساوي 1. وهي خاصية مميزة تسمح بتحديد وسط شفاف."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'eau de mer est :",
+        "ar": "ماء البحر هو:"
+      },
+      "choices": [
+        { "fr": "Un corps pur compose", "ar": "جسم خالص مركب" },
+        { "fr": "Un corps pur simple", "ar": "جسم خالص بسيط" },
+        { "fr": "Un melange heterogene", "ar": "خليط غير متجانس" },
+        { "fr": "Un melange homogene", "ar": "خليط متجانس" }
+      ],
+      "answer": 3,
+      "explanation": {
+        "fr": "L'eau de mer est un melange homogene : elle contient plusieurs especes chimiques (eau, NaCl, MgCl2, etc.) mais ne presente qu'une seule phase visible. On ne distingue pas les differents constituants a l'oeil nu.",
+        "ar": "ماء البحر خليط متجانس: يحتوي على عدة أنواع كيميائية (ماء، NaCl، MgCl2...) لكنه لا يقدم إلا طورا واحدا مرئيا. لا نميز المكونات المختلفة بالعين المجردة."
+      }
+    }
+  ]
+}

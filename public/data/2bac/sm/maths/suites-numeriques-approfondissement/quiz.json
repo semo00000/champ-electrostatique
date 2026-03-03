@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Soit (uₙ) définie par uₙ = (2n + 1)/(n + 3). Quelle est la limite de (uₙ) quand n → +∞ ?" },
+      "choices": [
+        { "fr": "1" },
+        { "fr": "2" },
+        { "fr": "3" },
+        { "fr": "+∞" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "On divise numérateur et dénominateur par n : uₙ = (2 + 1/n)/(1 + 3/n). Quand n → +∞, on obtient 2/1 = 2." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est la somme de la série géométrique ∑(k=0,+∞) (1/2)ᵏ ?" },
+      "choices": [
+        { "fr": "1" },
+        { "fr": "3/2" },
+        { "fr": "2" },
+        { "fr": "La série diverge" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "C'est une série géométrique de raison r = 1/2 et de premier terme a = 1. Comme |r| < 1, S = a/(1−r) = 1/(1−1/2) = 2." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Soit (uₙ) définie par u₀ = 1 et uₙ₊₁ = uₙ/2 + 1. Quelle est la limite ℓ de cette suite ?" },
+      "answer": 2,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": { "fr": "La limite vérifie ℓ = ℓ/2 + 1." },
+      "explanation": { "fr": "Si (uₙ) converge vers ℓ, alors ℓ = ℓ/2 + 1, donc ℓ/2 = 1, d'où ℓ = 2." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Soit (uₙ) croissante et (vₙ) décroissante telles que lim(vₙ − uₙ) = 0. Que peut-on affirmer ?" },
+      "choices": [
+        { "fr": "Les deux suites divergent" },
+        { "fr": "(uₙ) converge mais pas (vₙ)" },
+        { "fr": "Les deux suites convergent vers une même limite" },
+        { "fr": "On ne peut rien conclure" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "Ce sont des suites adjacentes. Par le théorème des suites adjacentes, elles convergent vers une même limite ℓ." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer la somme S = ∑(k=0, +∞) 3·(−1/4)ᵏ." },
+      "answer": 2.4,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": { "fr": "Utiliser S = a/(1−r) avec a = 3 et r = −1/4." },
+      "explanation": { "fr": "S = 3/(1−(−1/4)) = 3/(5/4) = 3 × 4/5 = 12/5 = 2.4." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Laquelle de ces suites est bornée ?" },
+      "choices": [
+        { "fr": "uₙ = n²" },
+        { "fr": "uₙ = (−1)ⁿ" },
+        { "fr": "uₙ = 2ⁿ" },
+        { "fr": "uₙ = n·sin(n)" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "uₙ = (−1)ⁿ prend les valeurs −1 et 1 alternativement, donc |uₙ| ≤ 1 pour tout n : elle est bornée. Les autres suites ne sont pas bornées." }
+    }
+  ]
+}

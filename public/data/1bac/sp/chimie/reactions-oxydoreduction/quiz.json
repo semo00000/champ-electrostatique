@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Dans la reaction Zn + Cu²⁺ → Zn²⁺ + Cu, quel est le reducteur ?" },
+      "choices": [
+        { "fr": "Cu²⁺" },
+        { "fr": "Zn²⁺" },
+        { "fr": "Zn" },
+        { "fr": "Cu" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "Le zinc Zn perd 2 electrons (Zn → Zn²⁺ + 2e⁻) : c'est le reducteur (donneur d'electrons). Le Cu²⁺ gagne 2 electrons : c'est l'oxydant." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est la demi-equation electronique du couple Fe³⁺/Fe²⁺ ?" },
+      "choices": [
+        { "fr": "Fe³⁺ + 3e⁻ → Fe" },
+        { "fr": "Fe²⁺ → Fe³⁺ + e⁻" },
+        { "fr": "Fe³⁺ + e⁻ → Fe²⁺" },
+        { "fr": "Fe²⁺ + 2e⁻ → Fe" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "Le couple Fe³⁺/Fe²⁺ a pour demi-equation : Fe³⁺ + e⁻ ⇌ Fe²⁺. L'oxydant Fe³⁺ gagne 1 electron pour donner le reducteur Fe²⁺." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Parmi les metaux suivants, lequel peut deplacer le fer de sa solution (c'est-a-dire reduire Fe²⁺) ?" },
+      "choices": [
+        { "fr": "Cu" },
+        { "fr": "Ag" },
+        { "fr": "Zn" },
+        { "fr": "Au" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "Le zinc est au-dessus du fer dans la classification electrochimique (plus reducteur). Il peut donc ceder ses electrons a Fe²⁺ : Zn + Fe²⁺ → Zn²⁺ + Fe. Le cuivre, l'argent et l'or sont en dessous du fer." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Combien d'electrons interviennent dans la demi-equation du couple MnO₄⁻/Mn²⁺ en milieu acide ?" },
+      "choices": [
+        { "fr": "2" },
+        { "fr": "3" },
+        { "fr": "5" },
+        { "fr": "7" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O. Le manganese passe de +VII a +II, soit un gain de 5 electrons." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Le cuivre metallique Cu ne reagit pas avec l'acide chlorhydrique HCl car :" },
+      "choices": [
+        { "fr": "Le cuivre est un isolant" },
+        { "fr": "Le cuivre est situe en dessous de H₂ dans la classification electrochimique" },
+        { "fr": "L'acide chlorhydrique n'est pas un acide" },
+        { "fr": "Le cuivre est situe au-dessus de H₂ dans la classification electrochimique" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Le cuivre est un reducteur plus faible que H₂ (il est en dessous dans la classification). Il ne peut donc pas reduire H⁺ en H₂. Seuls les metaux situes au-dessus de H₂ (comme Zn, Fe, Al) reagissent avec les acides non oxydants." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Lors de l'equilibrage d'une demi-equation en milieu acide, les atomes d'oxygene sont equilibres en ajoutant :" },
+      "choices": [
+        { "fr": "Des ions OH⁻" },
+        { "fr": "Des molecules d'eau H₂O" },
+        { "fr": "Des atomes d'oxygene O" },
+        { "fr": "Des electrons e⁻" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "En milieu acide, on equilibre les atomes d'oxygene avec des molecules H₂O, puis les atomes d'hydrogene avec des ions H⁺, et enfin les charges avec des electrons e⁻." }
+    }
+  ]
+}

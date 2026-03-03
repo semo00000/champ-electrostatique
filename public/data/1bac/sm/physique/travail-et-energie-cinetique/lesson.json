@@ -1,0 +1,133 @@
+{
+  "id": "travail-et-energie-cinetique",
+  "title": {
+    "fr": "Travail et énergie cinétique",
+    "ar": "الشغل والطاقة الحركية"
+  },
+  "objectives": {
+    "fr": [
+      "Définir l'énergie cinétique d'un solide en translation",
+      "Énoncer et appliquer le théorème de l'énergie cinétique",
+      "Résoudre des problèmes faisant intervenir le théorème de l'énergie cinétique",
+      "Calculer la vitesse ou la distance d'arrêt d'un mobile"
+    ],
+    "ar": [
+      "تعريف الطاقة الحركية لجسم صلب في انسحاب",
+      "صياغة وتطبيق مبرهنة الطاقة الحركية",
+      "حل مسائل تتضمن مبرهنة الطاقة الحركية",
+      "حساب السرعة أو مسافة التوقف لمتحرك"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Énergie cinétique",
+        "ar": "1. الطاقة الحركية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Énergie cinétique",
+        "ar": "الطاقة الحركية"
+      },
+      "text": {
+        "fr": "L'énergie cinétique d'un solide de masse m en translation à la vitesse v est l'énergie associée à son mouvement. Elle est toujours positive ou nulle.",
+        "ar": "الطاقة الحركية لجسم صلب كتلته m في حركة انسحابية بسرعة v هي الطاقة المرتبطة بحركته. وهي دائماً موجبة أو معدومة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_c = \\frac{1}{2} m v^2",
+      "note": {
+        "fr": "Ec en Joules (J), m en kg, v en m/s. Attention : v doit être en m/s (1 km/h = 1/3,6 m/s).",
+        "ar": "Ec بالجول (J)، m بالكيلوغرام، v بـ m/s. انتبه: v يجب أن تكون بـ m/s (1 km/h = 1/3.6 m/s)."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "L'énergie cinétique est proportionnelle au carré de la vitesse. Si la vitesse est doublée, l'énergie cinétique est multipliée par 4. C'est pourquoi la distance de freinage augmente considérablement avec la vitesse.",
+        "ar": "الطاقة الحركية تتناسب مع مربع السرعة. إذا تضاعفت السرعة، تتضاعف الطاقة الحركية 4 مرات. لهذا تزداد مسافة الكبح بشكل كبير مع السرعة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Théorème de l'énergie cinétique (TEC)",
+        "ar": "2. مبرهنة الطاقة الحركية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le théorème de l'énergie cinétique est un outil fondamental en mécanique. Il relie la variation d'énergie cinétique au travail total des forces extérieures appliquées au système.",
+        "ar": "مبرهنة الطاقة الحركية أداة أساسية في الميكانيك. تربط تغير الطاقة الحركية بالشغل الكلي للقوى الخارجية المطبقة على الجملة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\Delta E_c = E_{c_B} - E_{c_A} = \\sum W_{AB}(\\vec{F_{ext}})",
+      "note": {
+        "fr": "La variation d'énergie cinétique entre A et B est égale à la somme algébrique des travaux de toutes les forces extérieures entre A et B.",
+        "ar": "تغير الطاقة الحركية بين A و B يساوي المجموع الجبري لأشغال جميع القوى الخارجية بين A و B."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\frac{1}{2} m v_B^2 - \\frac{1}{2} m v_A^2 = W_{AB}(\\vec{P}) + W_{AB}(\\vec{R_N}) + W_{AB}(\\vec{f}) + ...",
+      "note": {
+        "fr": "On somme les travaux du poids, de la réaction normale (nul car perpendiculaire), du frottement, et de toute autre force.",
+        "ar": "نجمع أشغال الثقل، رد الفعل العمودي (معدوم لأنه عمودي)، الاحتكاك، وأي قوة أخرى."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Applications du TEC",
+        "ar": "3. تطبيقات مبرهنة الطاقة الحركية"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 1 : Distance de freinage",
+        "ar": "مثال 1: مسافة الكبح"
+      },
+      "problem": {
+        "fr": "Une voiture de masse m = 1200 kg roule à v₀ = 90 km/h. Elle freine et s'arrête. La force de freinage est constante f = 6000 N. Calculer la distance de freinage.",
+        "ar": "سيارة كتلتها m = 1200 kg تسير بسرعة v₀ = 90 km/h. تكبح وتتوقف. قوة الكبح ثابتة f = 6000 N. احسب مسافة الكبح."
+      },
+      "solution": {
+        "fr": "v₀ = 90 km/h = 90/3,6 = 25 m/s ; v_f = 0\nTEC : ΔEc = W(f)\n½mv²_f - ½mv²₀ = -f·d\n0 - ½ × 1200 × 25² = -6000 × d\n-375 000 = -6000d\nd = 375 000 / 6000 = 62,5 m",
+        "latex": "d = \\frac{\\frac{1}{2} m v_0^2}{f} = \\frac{\\frac{1}{2} \\times 1200 \\times 25^2}{6000} = \\frac{375000}{6000} = 62{,}5 \\text{ m}"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 2 : Vitesse en bas d'un plan incliné",
+        "ar": "مثال 2: السرعة أسفل مستوى مائل"
+      },
+      "problem": {
+        "fr": "Un bloc de 2 kg part du repos et glisse sans frottement sur un plan incliné de hauteur h = 3 m. Quelle est sa vitesse en bas ? (g = 9,8 m/s²)",
+        "ar": "كتلة 2 kg تنطلق من السكون وتنزلق بدون احتكاك على مستوى مائل ارتفاعه h = 3 m. ما سرعتها أسفلاً؟ (g = 9.8 m/s²)"
+      },
+      "solution": {
+        "fr": "TEC : ½mv² - 0 = W(P) = mgh\n½mv² = mgh\nv = √(2gh) = √(2 × 9,8 × 3) = √58,8 ≈ 7,67 m/s",
+        "latex": "v = \\sqrt{2gh} = \\sqrt{2 \\times 9{,}8 \\times 3} = \\sqrt{58{,}8} \\approx 7{,}67 \\text{ m/s}"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Le TEC est valable pour tout type de mouvement (rectiligne, curviligne). Il permet de relier vitesse et position sans passer par l'étude du mouvement (accélération). C'est un bilan énergétique.",
+        "ar": "مبرهنة الطاقة الحركية صالحة لكل أنواع الحركة (مستقيمية، منحنية). تسمح بربط السرعة بالموضع دون دراسة الحركة (التسارع). إنها حصيلة طاقوية."
+      }
+    }
+  ]
+}

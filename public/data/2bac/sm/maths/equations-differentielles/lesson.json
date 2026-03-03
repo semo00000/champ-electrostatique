@@ -1,0 +1,233 @@
+{
+  "id": "equations-differentielles",
+  "title": {
+    "fr": "Equations Différentielles",
+    "ar": "المعادلات التفاضلية"
+  },
+  "objectives": {
+    "fr": [
+      "Résoudre une équation différentielle du type y' = ay + b",
+      "Résoudre l'équation homogène y' + ay = 0 et déterminer la solution générale",
+      "Résoudre y' + ay = f(x) par la méthode de variation de la constante",
+      "Résoudre l'équation du second ordre y'' + ω²y = 0",
+      "Déterminer la solution particulière vérifiant des conditions initiales"
+    ],
+    "ar": [
+      "حل معادلة تفاضلية من النوع y' = ay + b",
+      "حل المعادلة المتجانسة y' + ay = 0 وتحديد الحل العام",
+      "حل y' + ay = f(x) بطريقة تغيير الثابت",
+      "حل المعادلة التفاضلية من الرتبة الثانية y'' + ω²y = 0",
+      "تحديد الحل الخاص الذي يحقق الشروط الابتدائية"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Equation différentielle y' + ay = 0 (équation homogène)",
+        "ar": "1. المعادلة التفاضلية y' + ay = 0 (المعادلة المتجانسة)"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Equation différentielle linéaire du premier ordre homogène",
+        "ar": "معادلة تفاضلية خطية من الرتبة الأولى متجانسة"
+      },
+      "text": {
+        "fr": "L'équation y' + ay = 0, où a est une constante réelle non nulle, est appelée équation différentielle linéaire du premier ordre homogène (sans second membre). L'inconnue est une fonction dérivable y définie sur ℝ.",
+        "ar": "المعادلة y' + ay = 0، حيث a عدد حقيقي غير منعدم، تسمى معادلة تفاضلية خطية من الرتبة الأولى متجانسة (بدون طرف ثان). المجهول هو دالة قابلة للاشتقاق y معرفة على ℝ."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Théorème : Les solutions de l'équation y' + ay = 0 sont les fonctions de la forme y(x) = Ce^{−ax}, où C est une constante réelle quelconque. L'ensemble des solutions forme un espace vectoriel de dimension 1.",
+        "ar": "مبرهنة: حلول المعادلة y' + ay = 0 هي الدوال من الشكل y(x) = Ce^{−ax}، حيث C ثابت حقيقي كيفما كان. مجموعة الحلول تشكل فضاء شعاعيا من البعد 1."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "y' + ay = 0 \\iff y(x) = C \\, e^{-ax}, \\quad C \\in \\mathbb{R}",
+      "note": {
+        "fr": "Solution générale de l'équation homogène",
+        "ar": "الحل العام للمعادلة المتجانسة"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 1 : Résolution avec condition initiale",
+        "ar": "مثال 1: الحل بشرط ابتدائي"
+      },
+      "problem": {
+        "fr": "Résoudre y' + 3y = 0 avec y(0) = 5.",
+        "ar": "حل y' + 3y = 0 مع y(0) = 5."
+      },
+      "solution": {
+        "fr": "La solution générale est y(x) = Ce^{−3x}. La condition y(0) = 5 donne C·e^0 = C = 5. Donc la solution particulière est y(x) = 5e^{−3x}.",
+        "latex": "y(x) = Ce^{-3x},\\quad y(0)=5 \\Rightarrow C=5 \\Rightarrow y(x) = 5e^{-3x}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Equation y' = ay + b (second membre constant)",
+        "ar": "2. المعادلة y' = ay + b (الطرف الثاني ثابت)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour résoudre y' = ay + b (équivalent à y' − ay = b), on cherche d'abord une solution particulière constante y₀. Si y₀ = k, alors y'₀ = 0, donc 0 = ak + b, d'où k = −b/a (si a ≠ 0). La solution générale est la somme de la solution particulière et de la solution homogène.",
+        "ar": "لحل y' = ay + b (مكافئة لـ y' − ay = b)، نبحث أولا عن حل خاص ثابت y₀. إذا كان y₀ = k، فإن y'₀ = 0، إذن 0 = ak + b، ومنه k = −b/a (إذا كان a ≠ 0). الحل العام هو مجموع الحل الخاص والحل المتجانس."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "y' = ay + b \\iff y(x) = Ce^{ax} - \\frac{b}{a}, \\quad C \\in \\mathbb{R}",
+      "note": {
+        "fr": "Solution générale = solution homogène + solution particulière constante (−b/a)",
+        "ar": "الحل العام = الحل المتجانس + الحل الخاص الثابت (−b/a)"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 2 : Résolution de y' = 2y − 6 avec condition initiale",
+        "ar": "مثال 2: حل y' = 2y − 6 بشرط ابتدائي"
+      },
+      "problem": {
+        "fr": "Résoudre y' = 2y − 6 avec y(0) = 5.",
+        "ar": "حل y' = 2y − 6 مع y(0) = 5."
+      },
+      "solution": {
+        "fr": "On a a = 2 et b = −6. Solution particulière constante : y₀ = −(−6)/2 = 3. Solution générale : y(x) = Ce^{2x} + 3. Condition initiale : y(0) = C + 3 = 5, donc C = 2. Solution : y(x) = 2e^{2x} + 3.",
+        "latex": "y(x) = Ce^{2x} + 3,\\quad y(0) = C + 3 = 5 \\Rightarrow C = 2 \\Rightarrow y(x) = 2e^{2x} + 3"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Méthode de variation de la constante pour y' + ay = f(x)",
+        "ar": "3. طريقة تغيير الثابت للمعادلة y' + ay = f(x)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour résoudre y' + ay = f(x) avec f(x) non constant, on utilise la méthode de variation de la constante. On part de la solution homogène y_h = Ce^{−ax} et on remplace C par une fonction inconnue C(x). On cherche y(x) = C(x)·e^{−ax}. En substituant dans l'équation, on obtient C'(x) = f(x)·e^{ax}, puis on intègre.",
+        "ar": "لحل y' + ay = f(x) حيث f(x) ليست ثابتة، نستعمل طريقة تغيير الثابت. ننطلق من الحل المتجانس y_h = Ce^{−ax} ونعوض C بدالة مجهولة C(x). نبحث عن y(x) = C(x)·e^{−ax}. بالتعويض في المعادلة، نحصل على C'(x) = f(x)·e^{ax}، ثم نكامل."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "y(x) = C(x)\\cdot e^{-ax}, \\quad C'(x) = f(x)\\cdot e^{ax}, \\quad C(x) = \\int f(x)\\,e^{ax}\\,dx",
+      "note": {
+        "fr": "Méthode de variation de la constante : on substitue puis on intègre pour trouver C(x)",
+        "ar": "طريقة تغيير الثابت: نعوض ثم نكامل لإيجاد C(x)"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 3 : Résoudre y' − y = x par variation de la constante",
+        "ar": "مثال 3: حل y' − y = x بطريقة تغيير الثابت"
+      },
+      "problem": {
+        "fr": "Résoudre l'équation différentielle y' − y = x.",
+        "ar": "حل المعادلة التفاضلية y' − y = x."
+      },
+      "solution": {
+        "fr": "Solution homogène : y_h = Ce^x. On pose y = C(x)e^x. Alors y' = C'(x)e^x + C(x)e^x. En substituant : C'(x)e^x = x, donc C'(x) = xe^{−x}. Par intégration par parties : C(x) = −xe^{−x} − e^{−x} + K = −(x+1)e^{−x} + K. Donc y(x) = [−(x+1)e^{−x} + K]e^x = −(x+1) + Ke^x.",
+        "latex": "C'(x) = xe^{-x} \\Rightarrow C(x) = -(x+1)e^{-x} + K \\Rightarrow y(x) = Ke^x - x - 1"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Equation du second ordre y'' + ω²y = 0",
+        "ar": "4. المعادلة من الرتبة الثانية y'' + ω²y = 0"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Equation de l'oscillateur harmonique",
+        "ar": "معادلة المذبذب التوافقي"
+      },
+      "text": {
+        "fr": "L'équation y'' + ω²y = 0 (avec ω > 0) est une équation différentielle linéaire du second ordre à coefficients constants. Elle modélise les oscillations harmoniques en physique (pendule simple, circuit LC, ressort). L'équation caractéristique r² + ω² = 0 admet deux racines complexes conjuguées r = ±iω.",
+        "ar": "المعادلة y'' + ω²y = 0 (حيث ω > 0) هي معادلة تفاضلية خطية من الرتبة الثانية بمعاملات ثابتة. تنمذج التذبذبات التوافقية في الفيزياء (البندول البسيط، دارة LC، نابض). المعادلة المميزة r² + ω² = 0 تقبل جذرين مركبين مترافقين r = ±iω."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La solution générale de y'' + ω²y = 0 est y(x) = A·cos(ωx) + B·sin(ωx), où A et B sont deux constantes réelles. Forme alternative : y(x) = R·cos(ωx + φ) avec R = √(A² + B²) et tan(φ) = −B/A.",
+        "ar": "الحل العام للمعادلة y'' + ω²y = 0 هو y(x) = A·cos(ωx) + B·sin(ωx)، حيث A و B ثابتان حقيقيان. الشكل البديل: y(x) = R·cos(ωx + φ) حيث R = √(A² + B²) و tan(φ) = −B/A."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "y'' + \\omega^2 y = 0 \\iff y(x) = A\\cos(\\omega x) + B\\sin(\\omega x), \\quad A, B \\in \\mathbb{R}",
+      "note": {
+        "fr": "Solution générale de l'équation de l'oscillateur harmonique",
+        "ar": "الحل العام لمعادلة المذبذب التوافقي"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 4 : Résoudre y'' + 4y = 0 avec conditions initiales",
+        "ar": "مثال 4: حل y'' + 4y = 0 بشروط ابتدائية"
+      },
+      "problem": {
+        "fr": "Résoudre y'' + 4y = 0 avec y(0) = 3 et y'(0) = −2.",
+        "ar": "حل y'' + 4y = 0 مع y(0) = 3 و y'(0) = −2."
+      },
+      "solution": {
+        "fr": "On a ω² = 4, donc ω = 2. La solution générale est y(x) = Acos(2x) + Bsin(2x). Condition y(0) = 3 : A·cos(0) + B·sin(0) = A = 3. Dérivée : y'(x) = −2Asin(2x) + 2Bcos(2x). Condition y'(0) = −2 : 2B = −2, donc B = −1. Solution : y(x) = 3cos(2x) − sin(2x).",
+        "latex": "y(x) = A\\cos(2x) + B\\sin(2x),\\quad A=3,\\; B=-1 \\Rightarrow y(x) = 3\\cos(2x) - \\sin(2x)"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Conditions initiales et unicité de la solution",
+        "ar": "5. الشروط الابتدائية ووحدانية الحل"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Pour une équation du premier ordre y' + ay = f(x), une seule condition initiale y(x₀) = y₀ suffit à déterminer l'unique solution (problème de Cauchy). Pour une équation du second ordre y'' + ω²y = 0, il faut deux conditions initiales y(x₀) = y₀ et y'(x₀) = y₁ pour déterminer les deux constantes A et B.",
+        "ar": "بالنسبة لمعادلة من الرتبة الأولى y' + ay = f(x)، شرط ابتدائي واحد y(x₀) = y₀ يكفي لتحديد الحل الوحيد (مسألة كوشي). بالنسبة لمعادلة من الرتبة الثانية y'' + ω²y = 0، نحتاج شرطين ابتدائيين y(x₀) = y₀ و y'(x₀) = y₁ لتحديد الثابتين A و B."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Identifier le type d'équation (premier ou second ordre, homogène ou avec second membre)",
+          "Résoudre l'équation homogène associée pour trouver y_h",
+          "Si l'équation a un second membre, chercher une solution particulière y_p",
+          "La solution générale est y = y_h + y_p",
+          "Appliquer les conditions initiales pour déterminer les constantes"
+        ],
+        "ar": [
+          "تحديد نوع المعادلة (الرتبة الأولى أو الثانية، متجانسة أو بطرف ثان)",
+          "حل المعادلة المتجانسة المرتبطة لإيجاد y_h",
+          "إذا كان للمعادلة طرف ثان، البحث عن حل خاص y_p",
+          "الحل العام هو y = y_h + y_p",
+          "تطبيق الشروط الابتدائية لتحديد الثوابت"
+        ]
+      }
+    }
+  ]
+}

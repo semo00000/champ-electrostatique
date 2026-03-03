@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La gélifraction (cryoclastie) est un mécanisme d'altération :",
+        "ar": "التجمد-الذوبان هو آلية تجوية:"
+      },
+      "choices": [
+        { "fr": "Chimique, par dissolution du calcaire", "ar": "كيميائية، بإذابة الكلس" },
+        { "fr": "Physique, par le gel de l'eau dans les fissures", "ar": "فيزيائية، بتجمد الماء في الشقوق" },
+        { "fr": "Biologique, par l'action des bactéries", "ar": "بيولوجية، بفعل البكتيريا" },
+        { "fr": "Chimique, par oxydation des minéraux", "ar": "كيميائية، بأكسدة المعادن" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La gélifraction est une altération physique (mécanique). L'eau qui s'infiltre dans les fissures gèle et augmente de volume d'environ 9%, exerçant une pression qui fait éclater la roche.",
+        "ar": "التجمد-الذوبان آلية تجوية فيزيائية. الماء الذي يتسرب في الشقوق يتجمد ويزداد حجمه بنحو 9%، ممارسا ضغطا يفجر الصخرة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La dissolution du calcaire par l'eau chargée en CO₂ est un exemple d'altération :",
+        "ar": "إذابة الكلس بالماء المحمّل بـ CO₂ مثال على تجوية:"
+      },
+      "choices": [
+        { "fr": "Physique (mécanique)", "ar": "فيزيائية (ميكانيكية)" },
+        { "fr": "Chimique", "ar": "كيميائية" },
+        { "fr": "Glaciaire", "ar": "جليدية" },
+        { "fr": "Éolienne", "ar": "ريحية" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La dissolution du calcaire (CaCO₃ + H₂O + CO₂ → Ca²⁺ + 2HCO₃⁻) est une altération chimique. L'eau acide dissout la roche calcaire, formant des grottes et des dolines (relief karstique).",
+        "ar": "إذابة الكلس هي تجوية كيميائية. الماء الحمضي يذيب الصخرة الكلسية مكوّنا كهوفا ودولينات (تضاريس كارستية)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le mode de transport des ions Ca²⁺ et HCO₃⁻ par l'eau est :",
+        "ar": "نمط نقل أيونات Ca²⁺ و HCO₃⁻ بالماء هو:"
+      },
+      "choices": [
+        { "fr": "Le charriage (sur le fond)", "ar": "الجر (على القاع)" },
+        { "fr": "La suspension", "ar": "التعليق" },
+        { "fr": "La dissolution (en solution)", "ar": "الإذابة (في المحلول)" },
+        { "fr": "La saltation (par bonds)", "ar": "القفز" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Les ions dissous (Ca²⁺, HCO₃⁻, Na⁺, Cl⁻...) sont transportés en solution. C'est un transport invisible, contrairement aux particules en suspension ou au charriage.",
+        "ar": "الأيونات المذابة تُنقل في المحلول (إذابة). هذا نقل غير مرئي، على عكس الجسيمات المعلقة أو المجرورة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le granoclassement dans une strate sédimentaire signifie que :",
+        "ar": "التصنيف الحبيبي في طبقة رسوبية يعني أن:"
+      },
+      "choices": [
+        { "fr": "Toutes les particules ont la même taille", "ar": "كل الجسيمات لها نفس الحجم" },
+        { "fr": "Les particules les plus grossières sont à la base et les plus fines au sommet", "ar": "الجسيمات الأخشن في القاعدة والأدق في القمة" },
+        { "fr": "Les particules sont mélangées aléatoirement", "ar": "الجسيمات مختلطة عشوائيا" },
+        { "fr": "Les particules fines sont à la base", "ar": "الجسيمات الدقيقة في القاعدة" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le granoclassement normal montre les particules les plus grossières à la base et les plus fines au sommet. Les éléments lourds se déposent en premier puis les plus légers.",
+        "ar": "التصنيف الحبيبي العادي يُظهر الجسيمات الأخشن في القاعدة والأدق في القمة. العناصر الثقيلة تتوضع أولا ثم الأخف."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La diagenèse comprend deux processus principaux :",
+        "ar": "يشمل التحجر عمليتين أساسيتين:"
+      },
+      "choices": [
+        { "fr": "L'érosion et le transport", "ar": "التعرية والنقل" },
+        { "fr": "La compaction et la cimentation", "ar": "الانضغاط والتلحيم" },
+        { "fr": "La fusion et la cristallisation", "ar": "الانصهار والتبلور" },
+        { "fr": "L'altération et la dissolution", "ar": "التجوية والإذابة" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La diagenèse transforme les sédiments meubles en roches solides par compaction (expulsion de l'eau sous le poids des couches) et cimentation (cristallisation de minéraux entre les grains).",
+        "ar": "التحجر يحول الرواسب الهشة إلى صخور صلبة بالانضغاط (طرد الماء) والتلحيم (تبلور معادن بين الحبيبات)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le grès est une roche sédimentaire :",
+        "ar": "الحجر الرملي صخرة رسوبية:"
+      },
+      "choices": [
+        { "fr": "Chimique, formée par précipitation", "ar": "كيميائية، مكونة بالترسيب" },
+        { "fr": "Détritique, formée de grains de sable cimentés", "ar": "حتاتية، مكونة من حبيبات رمل ملحومة" },
+        { "fr": "Biochimique, formée par des organismes", "ar": "بيوكيميائية، مكونة بفعل كائنات حية" },
+        { "fr": "Magmatique, formée par refroidissement", "ar": "صهارية، مكونة بالتبريد" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le grès est une roche sédimentaire détritique formée par la compaction et la cimentation de grains de sable (quartz principalement).",
+        "ar": "الحجر الرملي صخرة رسوبية حتاتية مكونة من انضغاط وتلحيم حبيبات الرمل (كوارتز أساسا)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel facteur favorise principalement l'altération chimique des roches ?",
+        "ar": "أي عامل يفضّل أساسا التجوية الكيميائية للصخور؟"
+      },
+      "choices": [
+        { "fr": "Un climat froid et sec", "ar": "مناخ بارد وجاف" },
+        { "fr": "Un climat chaud et humide", "ar": "مناخ حار ورطب" },
+        { "fr": "L'absence de végétation", "ar": "غياب الغطاء النباتي" },
+        { "fr": "Une altitude élevée uniquement", "ar": "الارتفاع الكبير فقط" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Un climat chaud et humide favorise l'altération chimique car la chaleur accélère les réactions chimiques et l'eau abondante est le principal agent de l'hydrolyse et de la dissolution.",
+        "ar": "المناخ الحار والرطب يفضّل التجوية الكيميائية لأن الحرارة تسرّع التفاعلات الكيميائية والماء الوفير هو العامل الأساسي للحلمأة والإذابة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Selon le principe de superposition, dans une série sédimentaire non déformée :",
+        "ar": "حسب مبدأ التراكب، في سلسلة رسوبية غير مشوهة:"
+      },
+      "choices": [
+        { "fr": "Les couches les plus récentes sont en bas", "ar": "الطبقات الأحدث في الأسفل" },
+        { "fr": "Les couches les plus anciennes sont en bas et les plus récentes en haut", "ar": "الطبقات الأقدم في الأسفل والأحدث في الأعلى" },
+        { "fr": "Toutes les couches ont le même âge", "ar": "كل الطبقات لها نفس العمر" },
+        { "fr": "L'âge des couches est aléatoire", "ar": "عمر الطبقات عشوائي" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le principe de superposition stipule que dans une série sédimentaire non perturbée, chaque couche est plus récente que celle qu'elle recouvre. Les strates les plus anciennes sont en bas.",
+        "ar": "ينص مبدأ التراكب على أن في سلسلة رسوبية غير مضطربة، كل طبقة أحدث من التي تغطيها. الطبقات الأقدم في الأسفل."
+      }
+    }
+  ]
+}

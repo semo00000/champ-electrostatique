@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Parmi les réactions suivantes, laquelle est une transformation rapide ?" },
+      "choices": [
+        { "fr": "L'oxydation du fer à l'air humide" },
+        { "fr": "La précipitation de AgCl par mélange de Ag⁺ et Cl⁻" },
+        { "fr": "La réaction de l'acide oxalique avec le permanganate à 20°C" },
+        { "fr": "L'estérification de l'acide éthanoïque par l'éthanol" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "La précipitation de AgCl est une réaction ionique en solution aqueuse qui se produit instantanément dès le mélange des réactifs. Les autres réactions sont des transformations lentes." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quel facteur cinétique n'influence PAS la vitesse d'une réaction chimique ?" },
+      "choices": [
+        { "fr": "La température du milieu réactionnel" },
+        { "fr": "La concentration initiale des réactifs" },
+        { "fr": "La couleur du récipient utilisé" },
+        { "fr": "La présence d'un catalyseur" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "La couleur du récipient n'a aucune influence sur la vitesse de la réaction. Les facteurs cinétiques sont : la température, la concentration des réactifs, la surface de contact et la présence d'un catalyseur." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Un catalyseur agit en :" },
+      "choices": [
+        { "fr": "Augmentant l'énergie d'activation de la réaction" },
+        { "fr": "Diminuant l'énergie d'activation de la réaction" },
+        { "fr": "Modifiant l'état d'équilibre final de la réaction" },
+        { "fr": "Augmentant la concentration des réactifs" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Un catalyseur abaisse l'énergie d'activation en proposant un chemin réactionnel alternatif de plus basse énergie. Il ne modifie ni l'état d'équilibre ni la composition finale du système." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "La réaction entre les ions permanganate MnO₄⁻ et l'acide oxalique H₂C₂O₄ est accélérée par :" },
+      "choices": [
+        { "fr": "Une diminution de la température" },
+        { "fr": "Une dilution des réactifs" },
+        { "fr": "L'ajout d'ions Mn²⁺ comme catalyseur" },
+        { "fr": "L'ajout d'eau distillée" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "Les ions Mn²⁺, produits de la réaction, jouent le rôle de catalyseur (autocatalyse). Leur ajout accélère la réaction. La diminution de température et la dilution la ralentissent." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Dans la loi d'Arrhenius k = A·exp(−Ea/RT), que se passe-t-il quand la température T augmente ?" },
+      "choices": [
+        { "fr": "La constante de vitesse k diminue" },
+        { "fr": "La constante de vitesse k reste constante" },
+        { "fr": "La constante de vitesse k augmente" },
+        { "fr": "L'énergie d'activation Ea augmente" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "Quand T augmente, le terme −Ea/(RT) devient moins négatif, donc exp(−Ea/RT) augmente, et par conséquent k augmente. La réaction est donc plus rapide à température plus élevée." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "On dit qu'une catalyse est homogène lorsque :" },
+      "choices": [
+        { "fr": "Le catalyseur et les réactifs sont dans des phases différentes" },
+        { "fr": "Le catalyseur et les réactifs sont dans la même phase" },
+        { "fr": "Le catalyseur est une enzyme" },
+        { "fr": "Le catalyseur est consommé au cours de la réaction" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "La catalyse homogène correspond au cas où le catalyseur et les réactifs se trouvent dans la même phase (par exemple tous en solution aqueuse). Quand ils sont dans des phases différentes, c'est une catalyse hétérogène." }
+    }
+  ]
+}

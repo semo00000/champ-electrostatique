@@ -1,0 +1,73 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Pour la réaction aA + bB ⇌ cC + dD, le quotient de réaction Qr s'écrit :" },
+      "choices": [
+        { "fr": "Qr = ([A]ᵃ·[B]ᵇ) / ([C]ᶜ·[D]ᵈ)" },
+        { "fr": "Qr = ([C]ᶜ·[D]ᵈ) / ([A]ᵃ·[B]ᵇ)" },
+        { "fr": "Qr = ([C]+[D]) / ([A]+[B])" },
+        { "fr": "Qr = (c·[C]·d·[D]) / (a·[A]·b·[B])" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Le quotient de réaction place les produits au numérateur et les réactifs au dénominateur, chaque concentration étant élevée à la puissance de son coefficient stœchiométrique : Qr = [C]ᶜ·[D]ᵈ / ([A]ᵃ·[B]ᵇ)." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Si Qr,i < K, le système chimique évolue spontanément :" },
+      "choices": [
+        { "fr": "Dans le sens inverse (sens 2)" },
+        { "fr": "Dans le sens direct (sens 1)" },
+        { "fr": "Le système est à l'équilibre" },
+        { "fr": "On ne peut pas prévoir le sens d'évolution" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Quand Qr,i < K, le système doit augmenter Qr pour atteindre K. Il évolue donc dans le sens direct (sens 1) qui consomme les réactifs et forme les produits, ce qui fait augmenter le numérateur et diminuer le dénominateur de Qr." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "La constante d'équilibre K dépend de :" },
+      "choices": [
+        { "fr": "La concentration initiale des réactifs" },
+        { "fr": "La température et de l'équation de la réaction" },
+        { "fr": "La présence d'un catalyseur" },
+        { "fr": "Le volume de la solution" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "La constante d'équilibre K ne dépend que de la température et de l'écriture de l'équation-bilan de la réaction. Elle est indépendante des concentrations initiales, du volume et de la présence d'un catalyseur." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Pour la réaction A(aq) ⇌ B(aq) + C(aq), avec [A] = 0,50 mol/L, [B] = 0,10 mol/L et [C] = 0,20 mol/L, calculer Qr (×10⁻²)." },
+      "answer": 4.0,
+      "tolerance": 0.1,
+      "unit": "×10⁻²",
+      "hint": { "fr": "Qr = [B]·[C]/[A]" },
+      "explanation": { "fr": "Qr = [B]·[C]/[A] = (0,10 × 0,20)/0,50 = 0,020/0,50 = 0,040 = 4,0×10⁻²." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Selon le principe de Le Chatelier, si on ajoute un réactif à un système en équilibre :" },
+      "choices": [
+        { "fr": "Le système évolue dans le sens inverse" },
+        { "fr": "Le système évolue dans le sens direct" },
+        { "fr": "L'équilibre n'est pas perturbé" },
+        { "fr": "La constante K augmente" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "L'ajout d'un réactif augmente la concentration au dénominateur de Qr, donc Qr diminue et devient inférieur à K. Le système évolue dans le sens direct (sens 1) pour consommer l'excès de réactif ajouté et rétablir l'équilibre." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Si pour une réaction donnée K = 10⁸, on peut dire que :" },
+      "choices": [
+        { "fr": "La réaction est très peu avancée, elle favorise les réactifs" },
+        { "fr": "La réaction est quasi-totale, elle favorise fortement les produits" },
+        { "fr": "La réaction n'a pas lieu" },
+        { "fr": "La réaction est à l'équilibre dès le départ" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Une valeur très grande de K (K >> 1) signifie qu'à l'équilibre, les concentrations des produits sont très supérieures à celles des réactifs. La réaction est quasi-totale dans le sens direct." }
+    }
+  ]
+}

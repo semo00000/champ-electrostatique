@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est la solution générale de l'équation y' + 2y = 0 ?",
+        "ar": "ما هو الحل العام للمعادلة y' + 2y = 0 ؟"
+      },
+      "choices": [
+        { "fr": "y = Ce^{2x}", "ar": "y = Ce^{2x}" },
+        { "fr": "y = Ce^{-2x}", "ar": "y = Ce^{-2x}" },
+        { "fr": "y = C \\cdot 2x", "ar": "y = C \\cdot 2x" },
+        { "fr": "y = Ce^{-x/2}", "ar": "y = Ce^{-x/2}" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "L'équation y' + ay = 0 a pour solution générale y = Ce^{−ax}. Ici a = 2, donc y = Ce^{−2x}.",
+        "ar": "المعادلة y' + ay = 0 حلها العام هو y = Ce^{−ax}. هنا a = 2، إذن y = Ce^{−2x}."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On considère y' + y = 4 avec y(0) = 0. Quelle est la limite de y(x) quand x tend vers +∞ ?",
+        "ar": "نعتبر y' + y = 4 مع y(0) = 0. ما هي نهاية y(x) عندما x يؤول إلى +∞ ؟"
+      },
+      "answer": 4,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": {
+        "fr": "La solution générale est y = 4 + Ce^{−x}. Utilisez y(0) = 0 pour trouver C.",
+        "ar": "الحل العام هو y = 4 + Ce^{−x}. استعمل y(0) = 0 لإيجاد C."
+      },
+      "explanation": {
+        "fr": "Solution : y(x) = 4 + Ce^{−x}. y(0) = 0 donne 4 + C = 0, C = −4. Donc y(x) = 4 − 4e^{−x}. Quand x → +∞, e^{−x} → 0, donc y → 4.",
+        "ar": "الحل: y(x) = 4 + Ce^{−x}. من y(0) = 0 نجد 4 + C = 0، أي C = −4. إذن y(x) = 4 − 4e^{−x}. عندما x → +∞، فإن e^{−x} → 0، إذن y → 4."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La solution particulière constante de l'équation y' + 5y = 15 est :",
+        "ar": "الحل الخاص الثابت للمعادلة y' + 5y = 15 هو:"
+      },
+      "choices": [
+        { "fr": "y_p = 15", "ar": "y_p = 15" },
+        { "fr": "y_p = 5", "ar": "y_p = 5" },
+        { "fr": "y_p = 3", "ar": "y_p = 3" },
+        { "fr": "y_p = 75", "ar": "y_p = 75" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Si y_p est constante, y'_p = 0. On substitue : 0 + 5y_p = 15, donc y_p = 15/5 = 3.",
+        "ar": "إذا كان y_p ثابتا، فإن y'_p = 0. بالتعويض: 0 + 5y_p = 15، إذن y_p = 15/5 = 3."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La solution générale de l'équation y'' + 9y = 0 est :",
+        "ar": "الحل العام للمعادلة y'' + 9y = 0 هو:"
+      },
+      "choices": [
+        { "fr": "y = Ae^{3x} + Be^{-3x}", "ar": "y = Ae^{3x} + Be^{-3x}" },
+        { "fr": "y = A\\cos(9x) + B\\sin(9x)", "ar": "y = A\\cos(9x) + B\\sin(9x)" },
+        { "fr": "y = A\\cos(3x) + B\\sin(3x)", "ar": "y = A\\cos(3x) + B\\sin(3x)" },
+        { "fr": "y = (A + Bx)e^{3x}", "ar": "y = (A + Bx)e^{3x}" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Pour y'' + ω²y = 0, on a ω² = 9, donc ω = 3. La solution est y = Acos(3x) + Bsin(3x).",
+        "ar": "بالنسبة للمعادلة y'' + ω²y = 0، لدينا ω² = 9، إذن ω = 3. الحل هو y = Acos(3x) + Bsin(3x)."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Résoudre y' − 3y = 0 avec y(0) = 2. Calculer y(1) (arrondir à 0,1 près).",
+        "ar": "حل y' − 3y = 0 مع y(0) = 2. احسب y(1) (قرّب إلى 0.1)."
+      },
+      "answer": 40.2,
+      "tolerance": 0.5,
+      "unit": "",
+      "hint": {
+        "fr": "La solution est y = Ce^{3x}. Trouvez C avec y(0) = 2, puis calculez y(1) = 2e^3.",
+        "ar": "الحل هو y = Ce^{3x}. جد C من y(0) = 2، ثم احسب y(1) = 2e^3."
+      },
+      "explanation": {
+        "fr": "Solution : y = Ce^{3x}. y(0) = C = 2. Donc y(1) = 2e^3 ≈ 2 × 20,086 ≈ 40,2.",
+        "ar": "الحل: y = Ce^{3x}. من y(0) = C = 2. إذن y(1) = 2e^3 ≈ 2 × 20.086 ≈ 40.2."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La méthode de variation de la constante pour résoudre y' + ay = f(x) consiste à chercher y sous la forme :",
+        "ar": "طريقة تغيير الثابت لحل y' + ay = f(x) تتمثل في البحث عن y على الشكل:"
+      },
+      "choices": [
+        { "fr": "y = A + Be^{-ax}", "ar": "y = A + Be^{-ax}" },
+        { "fr": "y = C(x) \\cdot e^{-ax} \\text{ où } C(x) \\text{ est à déterminer}", "ar": "y = C(x) \\cdot e^{-ax} \\text{ حيث } C(x) \\text{ يُحدَّد}" },
+        { "fr": "y = f(x) \\cdot e^{-ax}", "ar": "y = f(x) \\cdot e^{-ax}" },
+        { "fr": "y = \\int f(x)\\,dx", "ar": "y = \\int f(x)\\,dx" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "On remplace la constante C de la solution homogène par une fonction C(x). En substituant dans l'équation, on obtient C'(x) = f(x)·e^{ax}, que l'on intègre.",
+        "ar": "نعوض الثابت C في الحل المتجانس بدالة C(x). بالتعويض في المعادلة، نحصل على C'(x) = f(x)·e^{ax}، ثم نكامل."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On considère y'' + 4y = 0 avec y(0) = 1 et y'(0) = 0. Calculer y(π/4).",
+        "ar": "نعتبر y'' + 4y = 0 مع y(0) = 1 و y'(0) = 0. احسب y(π/4)."
+      },
+      "answer": 0,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": {
+        "fr": "La solution est y = Acos(2x) + Bsin(2x). Utilisez les conditions initiales pour trouver A et B.",
+        "ar": "الحل هو y = Acos(2x) + Bsin(2x). استعمل الشروط الابتدائية لإيجاد A و B."
+      },
+      "explanation": {
+        "fr": "ω = 2, y = Acos(2x) + Bsin(2x). y(0) = A = 1. y'(x) = −2Asin(2x) + 2Bcos(2x). y'(0) = 2B = 0, donc B = 0. Ainsi y = cos(2x). y(π/4) = cos(π/2) = 0.",
+        "ar": "ω = 2، y = Acos(2x) + Bsin(2x). من y(0) = A = 1. y'(x) = −2Asin(2x) + 2Bcos(2x). من y'(0) = 2B = 0، إذن B = 0. ومنه y = cos(2x). y(π/4) = cos(π/2) = 0."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Soit l'équation y' = −2y + 8. La solution vérifiant y(0) = 0 est :",
+        "ar": "لتكن المعادلة y' = −2y + 8. الحل الذي يحقق y(0) = 0 هو:"
+      },
+      "choices": [
+        { "fr": "y(x) = 4(1 - e^{-2x})", "ar": "y(x) = 4(1 - e^{-2x})" },
+        { "fr": "y(x) = 8(1 - e^{-2x})", "ar": "y(x) = 8(1 - e^{-2x})" },
+        { "fr": "y(x) = 4e^{-2x}", "ar": "y(x) = 4e^{-2x}" },
+        { "fr": "y(x) = 4(e^{2x} - 1)", "ar": "y(x) = 4(e^{2x} - 1)" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "y' = −2y + 8, donc a = −2 et b = 8. Solution particulière : y₀ = −b/a = −8/(−2) = 4. Solution générale : y = Ce^{−2x} + 4. y(0) = C + 4 = 0, donc C = −4. y(x) = −4e^{−2x} + 4 = 4(1 − e^{−2x}).",
+        "ar": "y' = −2y + 8، إذن a = −2 و b = 8. الحل الخاص: y₀ = −b/a = −8/(−2) = 4. الحل العام: y = Ce^{−2x} + 4. من y(0) = C + 4 = 0، إذن C = −4. y(x) = 4(1 − e^{−2x})."
+      }
+    }
+  ]
+}

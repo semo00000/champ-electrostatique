@@ -1,0 +1,167 @@
+{
+  "id": "derivabilite-et-etude-de-fonctions",
+  "title": {
+    "fr": "Dérivabilité et étude de fonctions",
+    "ar": "الاشتقاقية ودراسة الدوال"
+  },
+  "objectives": {
+    "fr": [
+      "Vérifier la dérivabilité d'une fonction en un point",
+      "Appliquer les règles de dérivation",
+      "Utiliser la règle de L'Hôpital pour lever des indéterminations",
+      "Énoncer et appliquer le théorème de Rolle et le théorème des accroissements finis (TAF)",
+      "Mener une étude complète de fonction (domaine, limites, dérivée, tableau de variations, extrema, points d'inflexion, courbe)"
+    ],
+    "ar": [
+      "التحقق من اشتقاقية دالة في نقطة",
+      "تطبيق قواعد الاشتقاق",
+      "استعمال قاعدة لوبيتال لرفع حالات عدم التعيين",
+      "صياغة وتطبيق مبرهنة رول ومبرهنة القيم الوسطى",
+      "إنجاز دراسة كاملة لدالة"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Dérivabilité en un point",
+        "ar": "١. الاشتقاقية في نقطة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Nombre dérivé" },
+      "text": { "fr": "f est dérivable en a si la limite suivante existe et est finie : f'(a) = lim(x→a) [f(x) − f(a)]/(x − a). Ce nombre f'(a) est le nombre dérivé de f en a. Géométriquement, c'est la pente de la tangente à la courbe de f au point d'abscisse a." }
+    },
+    {
+      "type": "formula",
+      "latex": "f'(a) = \\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a} = \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}",
+      "note": { "fr": "Définition du nombre dérivé" }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Si f est dérivable en a, alors f est continue en a. La réciproque est fausse : x ↦ |x| est continue en 0 mais non dérivable en 0." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Règles de dérivation",
+        "ar": "٢. قواعد الاشتقاق"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "(xⁿ)' = nxⁿ⁻¹",
+          "(f + g)' = f' + g'  et  (λf)' = λf'",
+          "(fg)' = f'g + fg'  (produit)",
+          "(f/g)' = (f'g − fg')/g²  (quotient)",
+          "(f ∘ g)' = (f' ∘ g) × g'  (composée / règle de la chaîne)",
+          "(√f)' = f'/(2√f),  (1/f)' = −f'/f²"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Règle de L'Hôpital",
+        "ar": "٣. قاعدة لوبيتال"
+      }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Règle de L'Hôpital : Si lim(x→a) f(x) = lim(x→a) g(x) = 0 (ou ±∞), et si lim(x→a) f'(x)/g'(x) = L (finie ou infinie), alors lim(x→a) f(x)/g(x) = L." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{Si } \\frac{f(x)}{g(x)} \\to \\frac{0}{0} \\text{ ou } \\frac{\\pm\\infty}{\\pm\\infty}, \\quad \\text{alors } \\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\lim_{x \\to a} \\frac{f'(x)}{g'(x)}",
+      "note": { "fr": "Sous réserve que la limite du second membre existe" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Application de L'Hôpital" },
+      "problem": { "fr": "Calculer lim(x→0) (eˣ − 1)/x." },
+      "solution": {
+        "fr": "Forme 0/0. Par L'Hôpital : lim(x→0) (eˣ − 1)/x = lim(x→0) eˣ/1 = e⁰ = 1.",
+        "latex": "\\lim_{x \\to 0} \\frac{e^x - 1}{x} = \\lim_{x \\to 0} \\frac{(e^x)'}{(x)'} = \\lim_{x \\to 0} \\frac{e^x}{1} = 1"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Théorème de Rolle et théorème des accroissements finis",
+        "ar": "٤. مبرهنة رول ومبرهنة التزايدات المنتهية"
+      }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Théorème de Rolle : Si f est continue sur [a, b], dérivable sur ]a, b[, et f(a) = f(b), alors il existe c ∈ ]a, b[ tel que f'(c) = 0." }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Théorème des accroissements finis (TAF) : Si f est continue sur [a, b] et dérivable sur ]a, b[, alors il existe c ∈ ]a, b[ tel que f'(c) = [f(b) − f(a)]/(b − a)." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\exists \\, c \\in \\,]a,b[ \\quad \\text{tel que} \\quad f'(c) = \\frac{f(b) - f(a)}{b - a}",
+      "note": { "fr": "Théorème des accroissements finis" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Étude complète d'une fonction",
+        "ar": "٥. الدراسة الكاملة لدالة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "L'étude complète d'une fonction f suit les étapes suivantes :" }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "1. Domaine de définition Df",
+          "2. Limites aux bornes du domaine (asymptotes horizontales, verticales, obliques)",
+          "3. Calcul de f'(x) et résolution de f'(x) = 0",
+          "4. Signe de f'(x) et tableau de variations",
+          "5. Extrema locaux et globaux",
+          "6. Calcul de f''(x), signe et points d'inflexion",
+          "7. Tracé de la courbe représentative"
+        ]
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Étude de fonction" },
+      "problem": { "fr": "Étudier f(x) = x³ − 3x + 2." },
+      "solution": {
+        "fr": "Df = ℝ. Limites : f(x) → −∞ quand x → −∞, f(x) → +∞ quand x → +∞. f'(x) = 3x² − 3 = 3(x − 1)(x + 1). f'(x) = 0 pour x = −1 et x = 1. f'(x) > 0 sur ]−∞, −1[ ∪ ]1, +∞[ et f'(x) < 0 sur ]−1, 1[. Maximum local en x = −1 : f(−1) = 4. Minimum local en x = 1 : f(1) = 0. f''(x) = 6x, point d'inflexion en x = 0 : f(0) = 2.",
+        "latex": "f'(x) = 3x^2 - 3 = 3(x-1)(x+1), \\quad f''(x) = 6x"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Tangente et position relative",
+        "ar": "٦. المماس والوضع النسبي"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "T_a : \\quad y = f(a) + f'(a)(x - a)",
+      "note": { "fr": "Équation de la tangente au point d'abscisse a" }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Pour étudier la position de la courbe par rapport à sa tangente en a, on étudie le signe de d(x) = f(x) − [f(a) + f'(a)(x − a)]. Si d change de signe en a, le point (a, f(a)) est un point d'inflexion." }
+    }
+  ]
+}

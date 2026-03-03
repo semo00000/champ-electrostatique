@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La membrane plasmique est principalement constituée de :",
+        "ar": "يتكون الغشاء الهيولي أساسا من:"
+      },
+      "choices": [
+        { "fr": "Une couche simple de phospholipides et de glucides", "ar": "طبقة بسيطة من الفوسفوليبيدات والسكريات" },
+        { "fr": "Une bicouche de phospholipides avec des protéines insérées", "ar": "طبقة مزدوجة من الفوسفوليبيدات مع بروتينات مدمجة" },
+        { "fr": "Une double couche de protéines uniquement", "ar": "طبقة مزدوجة من البروتينات فقط" },
+        { "fr": "Une paroi de cellulose et de protéines", "ar": "جدار من السيليلوز والبروتينات" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Selon le modèle de la mosaïque fluide de Singer et Nicolson (1972), la membrane plasmique est constituée d'une bicouche de phospholipides dans laquelle sont insérées des protéines intrinsèques et extrinsèques.",
+        "ar": "حسب نموذج الفسيفساء المائعة لسينجر ونيكولسون (1972)، يتكون الغشاء الهيولي من طبقة مزدوجة من الفوسفوليبيدات تتخللها بروتينات جوهرية وسطحية."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'osmose est le déplacement de :",
+        "ar": "التناضح هو انتقال:"
+      },
+      "choices": [
+        { "fr": "Solutés du milieu hypertonique vers le milieu hypotonique", "ar": "المذاب من الوسط مفرط التوتر نحو الوسط ناقص التوتر" },
+        { "fr": "Eau du milieu hypertonique vers le milieu hypotonique", "ar": "الماء من الوسط مفرط التوتر نحو الوسط ناقص التوتر" },
+        { "fr": "Eau du milieu hypotonique vers le milieu hypertonique", "ar": "الماء من الوسط ناقص التوتر نحو الوسط مفرط التوتر" },
+        { "fr": "Ions du milieu hypotonique vers le milieu hypertonique", "ar": "الأيونات من الوسط ناقص التوتر نحو الوسط مفرط التوتر" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "L'osmose est la diffusion de l'eau à travers une membrane semi-perméable, du milieu hypotonique (moins concentré en solutés, donc plus riche en eau) vers le milieu hypertonique (plus concentré en solutés).",
+        "ar": "التناضح هو انتشار الماء عبر غشاء نصف نفوذ، من الوسط ناقص التوتر (أقل تركيزا في المذاب) نحو الوسط مفرط التوتر (أكثر تركيزا في المذاب)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La diffusion facilitée se distingue de la diffusion simple par :",
+        "ar": "يتميز الانتشار الميسّر عن الانتشار البسيط بـ:"
+      },
+      "choices": [
+        { "fr": "Elle nécessite un apport d'ATP", "ar": "يحتاج إلى طاقة ATP" },
+        { "fr": "Elle fait intervenir des protéines membranaires", "ar": "يتدخل فيه بروتينات غشائية" },
+        { "fr": "Elle se fait contre le gradient de concentration", "ar": "يتم عكس تدرج التركيز" },
+        { "fr": "Elle ne concerne que l'eau", "ar": "يخص الماء فقط" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La diffusion facilitée est un transport passif (sans ATP, dans le sens du gradient) mais elle fait intervenir des protéines membranaires (canaux ou perméases) pour permettre le passage de molécules polaires ou d'ions.",
+        "ar": "الانتشار الميسّر هو نقل سلبي (بدون ATP، في اتجاه التدرج) لكنه يتدخل فيه بروتينات غشائية (قنوات أو بيرمياز) لتمكين مرور الجزيئات القطبية أو الأيونات."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La pompe Na⁺/K⁺–ATPase expulse par cycle :",
+        "ar": "تطرد مضخة Na⁺/K⁺–ATPase في كل دورة:"
+      },
+      "choices": [
+        { "fr": "2 Na⁺ et fait entrer 3 K⁺", "ar": "2 Na⁺ وتُدخل 3 K⁺" },
+        { "fr": "3 Na⁺ et fait entrer 2 K⁺", "ar": "3 Na⁺ وتُدخل 2 K⁺" },
+        { "fr": "3 Na⁺ et fait entrer 3 K⁺", "ar": "3 Na⁺ وتُدخل 3 K⁺" },
+        { "fr": "2 Na⁺ et fait entrer 2 K⁺", "ar": "2 Na⁺ وتُدخل 2 K⁺" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La pompe Na⁺/K⁺–ATPase expulse 3 ions Na⁺ hors de la cellule et fait entrer 2 ions K⁺, en hydrolysant une molécule d'ATP. Ce transport est actif car il se fait contre le gradient de concentration.",
+        "ar": "تطرد مضخة Na⁺/K⁺–ATPase ثلاثة أيونات Na⁺ خارج الخلية وتُدخل أيونَي K⁺، مع تحلل جزيئة ATP واحدة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Une cellule végétale placée en milieu hypertonique subit :",
+        "ar": "خلية نباتية توضع في وسط مفرط التوتر تتعرض لـ:"
+      },
+      "choices": [
+        { "fr": "Une turgescence", "ar": "انتباج" },
+        { "fr": "Une plasmolyse", "ar": "بلزمة" },
+        { "fr": "Une lyse cellulaire", "ar": "انحلال خلوي" },
+        { "fr": "Aucun changement", "ar": "لا تغيير" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "En milieu hypertonique, l'eau sort de la cellule par osmose. La cellule végétale perd de l'eau, le cytoplasme se rétracte et la membrane se décolle de la paroi : c'est la plasmolyse.",
+        "ar": "في وسط مفرط التوتر، يخرج الماء من الخلية بالتناضح. تفقد الخلية النباتية الماء، وينكمش السيتوبلازم وينفصل الغشاء عن الجدار: هذه هي البلزمة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'exocytose est le mécanisme par lequel :",
+        "ar": "الإخراج الخلوي هو الآلية التي:"
+      },
+      "choices": [
+        { "fr": "La cellule absorbe des particules solides par phagocytose", "ar": "تمتص الخلية جسيمات صلبة بالبلعمة" },
+        { "fr": "Des vésicules intracellulaires fusionnent avec la membrane pour libérer leur contenu", "ar": "تلتحم حويصلات داخل خلوية مع الغشاء لتحرير محتواها" },
+        { "fr": "Des ions traversent les canaux protéiques", "ar": "تعبر الأيونات القنوات البروتينية" },
+        { "fr": "L'eau entre dans la cellule par osmose", "ar": "يدخل الماء إلى الخلية بالتناضح" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "L'exocytose est le processus de sécrétion où une vésicule intracellulaire fusionne avec la membrane plasmique, libérant son contenu (hormones, neurotransmetteurs, enzymes) dans le milieu extracellulaire.",
+        "ar": "الإخراج الخلوي هو عملية إفراز حيث تلتحم حويصلة داخل خلوية مع الغشاء الهيولي، محررة محتواها (هرمونات، ناقلات عصبية، إنزيمات) في الوسط خارج الخلوي."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel type de molécule peut traverser la bicouche lipidique par diffusion simple ?",
+        "ar": "أي نوع من الجزيئات يمكنه عبور الطبقة المزدوجة الليبيدية بالانتشار البسيط؟"
+      },
+      "choices": [
+        { "fr": "Le glucose (molécule polaire)", "ar": "الجلوكوز (جزيئة قطبية)" },
+        { "fr": "Les ions Na⁺ (chargés)", "ar": "أيونات Na⁺ (مشحونة)" },
+        { "fr": "Le dioxygène O₂ (petite molécule apolaire)", "ar": "ثنائي الأكسجين O₂ (جزيئة صغيرة لاقطبية)" },
+        { "fr": "Les protéines (grosses molécules)", "ar": "البروتينات (جزيئات كبيرة)" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Seules les petites molécules non chargées et apolaires (O₂, CO₂, N₂, éthanol) peuvent traverser la bicouche lipidique par diffusion simple. Les molécules polaires et les ions nécessitent des protéines de transport (diffusion facilitée).",
+        "ar": "فقط الجزيئات الصغيرة غير المشحونة واللاقطبية (O₂, CO₂, N₂, إيثانول) يمكنها عبور الطبقة المزدوجة الليبيدية بالانتشار البسيط. الجزيئات القطبية والأيونات تحتاج إلى بروتينات نقل."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La phagocytose est une forme d'endocytose qui permet l'absorption de :",
+        "ar": "البلعمة هي شكل من أشكال الإدخال الخلوي تسمح بامتصاص:"
+      },
+      "choices": [
+        { "fr": "Gouttelettes de liquide", "ar": "قطيرات سائلة" },
+        { "fr": "Ions et petites molécules", "ar": "أيونات وجزيئات صغيرة" },
+        { "fr": "Grosses particules solides (bactéries, débris)", "ar": "جسيمات صلبة كبيرة (بكتيريا، حطام)" },
+        { "fr": "Molécules d'eau uniquement", "ar": "جزيئات الماء فقط" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "La phagocytose (du grec phagein = manger) permet l'absorption de grosses particules solides comme les bactéries ou les débris cellulaires. La pinocytose concerne les gouttelettes de liquide. L'endocytose médiée par récepteur concerne des molécules spécifiques.",
+        "ar": "البلعمة (من اليونانية phagein = يأكل) تسمح بامتصاص جسيمات صلبة كبيرة كالبكتيريا أو الحطام الخلوي. الاحتساء يخص القطيرات السائلة. والإدخال بوساطة المستقبلات يخص جزيئات محددة."
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Simplifier ln(8) − ln(2)." },
+      "choices": [
+        { "fr": "ln(6)" },
+        { "fr": "ln(4)" },
+        { "fr": "ln(10)" },
+        { "fr": "ln(16)" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "ln(8) − ln(2) = ln(8/2) = ln(4). On utilise la propriété ln(a) − ln(b) = ln(a/b)." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer la dérivée de f(x) = ln(3x) en x = 2." },
+      "answer": 0.5,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": { "fr": "Utiliser (ln u)' = u'/u avec u = 3x." },
+      "explanation": { "fr": "f'(x) = (3x)'/3x = 3/(3x) = 1/x. Donc f'(2) = 1/2 = 0,5." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est la limite de ln(x)/x quand x → +∞ ?" },
+      "choices": [
+        { "fr": "+∞" },
+        { "fr": "1" },
+        { "fr": "0" },
+        { "fr": "−∞" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "Par la croissance comparée, ln(x) croît beaucoup plus lentement que x. Donc lim(x→+∞) ln(x)/x = 0." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Résoudre l'inéquation ln(x) ≥ 1." },
+      "choices": [
+        { "fr": "x ≥ 1" },
+        { "fr": "x ≥ e" },
+        { "fr": "x ≥ 10" },
+        { "fr": "x > 0" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "ln(x) ≥ 1 = ln(e). Comme ln est croissante, cela équivaut à x ≥ e (avec x > 0 automatiquement vérifié car e > 0)." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer log₂(32)." },
+      "answer": 5,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": { "fr": "32 = 2⁵." },
+      "explanation": { "fr": "log₂(32) = log₂(2⁵) = 5·log₂(2) = 5." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "La courbe de ln est :" },
+      "choices": [
+        { "fr": "Convexe sur ]0, +∞[" },
+        { "fr": "Concave sur ]0, +∞[" },
+        { "fr": "Ni convexe ni concave" },
+        { "fr": "Convexe sur ]0, 1[ et concave sur ]1, +∞[" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "ln''(x) = −1/x² < 0 pour tout x > 0. La dérivée seconde est négative, donc la courbe est concave sur tout son domaine." }
+    }
+  ]
+}

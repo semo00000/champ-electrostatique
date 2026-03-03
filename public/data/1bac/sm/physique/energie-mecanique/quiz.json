@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'énergie mécanique d'un système est définie par :",
+        "ar": "الطاقة الميكانيكية لجملة تُعرَّف بـ :"
+      },
+      "choices": [
+        { "fr": "Em = Ec + Ep", "ar": "Em = Ec + Ep" },
+        { "fr": "Em = Ec - Ep", "ar": "Em = Ec - Ep" },
+        { "fr": "Em = Ec × Ep", "ar": "Em = Ec × Ep" },
+        { "fr": "Em = Ec / Ep", "ar": "Em = Ec / Ep" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "L'énergie mécanique est la somme de l'énergie cinétique et de l'énergie potentielle : Em = Ec + Ep.",
+        "ar": "الطاقة الميكانيكية هي مجموع الطاقة الحركية وطاقة الوضع: Em = Ec + Ep."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'énergie mécanique se conserve lorsque :",
+        "ar": "الطاقة الميكانيكية تنحفظ عندما :"
+      },
+      "choices": [
+        { "fr": "Seules des forces conservatives travaillent", "ar": "فقط قوى محافظة تعمل" },
+        { "fr": "Il y a des forces de frottement", "ar": "توجد قوى احتكاك" },
+        { "fr": "La vitesse est constante", "ar": "السرعة ثابتة" },
+        { "fr": "L'énergie cinétique est nulle", "ar": "الطاقة الحركية معدومة" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "L'énergie mécanique se conserve quand seules des forces conservatives (poids, force de rappel) travaillent. Pas de frottement.",
+        "ar": "الطاقة الميكانيكية تنحفظ عندما تعمل فقط قوى محافظة (الثقل، قوة الاسترجاع). بدون احتكاك."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un objet de 0,5 kg est lâché sans vitesse initiale d'une hauteur de 20 m (sans frottement). Calculer sa vitesse au sol en m/s. (g = 9,8 m/s²)",
+        "ar": "جسم كتلته 0.5 kg يُترك بدون سرعة ابتدائية من ارتفاع 20 m (بدون احتكاك). احسب سرعته عند الأرض بـ m/s. (g = 9.8 m/s²)"
+      },
+      "answer": 19.8,
+      "tolerance": 0.2,
+      "unit": "m/s",
+      "hint": {
+        "fr": "Conservation de Em : mgh = ½mv², donc v = √(2gh).",
+        "ar": "انحفاظ Em: mgh = ½mv²، إذن v = √(2gh)."
+      },
+      "explanation": {
+        "fr": "v = √(2gh) = √(2 × 9,8 × 20) = √392 ≈ 19,8 m/s. La masse se simplifie.",
+        "ar": "v = √(2gh) = √(2 × 9.8 × 20) = √392 ≈ 19.8 m/s. الكتلة تتبسط."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "En présence de frottements, l'énergie mécanique :",
+        "ar": "بوجود الاحتكاك، الطاقة الميكانيكية :"
+      },
+      "choices": [
+        { "fr": "Diminue (ΔEm < 0)", "ar": "تنقص (ΔEm < 0)" },
+        { "fr": "Augmente", "ar": "تزداد" },
+        { "fr": "Reste constante", "ar": "تبقى ثابتة" },
+        { "fr": "Devient nulle", "ar": "تصبح معدومة" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Les frottements dissipent l'énergie mécanique en chaleur. ΔEm = W(f_nc) < 0 puisque le travail du frottement est toujours négatif.",
+        "ar": "الاحتكاك يبدد الطاقة الميكانيكية إلى حرارة. ΔEm = W(f_nc) < 0 لأن شغل الاحتكاك سالب دائماً."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Une balle de 0,1 kg est lancée verticalement vers le haut à 15 m/s (sans frottement). Calculer la hauteur maximale atteinte en mètres. (g = 9,8 m/s²)",
+        "ar": "كرة كتلتها 0.1 kg تُلقى عمودياً نحو الأعلى بسرعة 15 m/s (بدون احتكاك). احسب الارتفاع الأقصى بالمتر. (g = 9.8 m/s²)"
+      },
+      "answer": 11.48,
+      "tolerance": 0.2,
+      "unit": "m",
+      "hint": {
+        "fr": "Au sommet, v = 0. Conservation : ½mv₀² = mgh_max, donc h_max = v₀²/(2g).",
+        "ar": "في القمة، v = 0. انحفاظ: ½mv₀² = mgh_max، إذن h_max = v₀²/(2g)."
+      },
+      "explanation": {
+        "fr": "h_max = v₀²/(2g) = 15²/(2 × 9,8) = 225/19,6 ≈ 11,48 m.",
+        "ar": "h_max = v₀²/(2g) = 15²/(2 × 9.8) = 225/19.6 ≈ 11.48 m."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un bloc de 2 kg glisse sur 6 m d'un plan horizontal avec frottement f = 5 N. Vitesse initiale v₀ = 8 m/s. Calculer la vitesse finale en m/s.",
+        "ar": "كتلة 2 kg تنزلق على 6 m من مستوى أفقي مع احتكاك f = 5 N. السرعة الابتدائية v₀ = 8 m/s. احسب السرعة النهائية بـ m/s."
+      },
+      "answer": 6.56,
+      "tolerance": 0.1,
+      "unit": "m/s",
+      "hint": {
+        "fr": "ΔEm = W(f). ½mv² - ½mv₀² = -f·d. Résoudre pour v.",
+        "ar": "ΔEm = W(f). ½mv² - ½mv₀² = -f·d. أوجد v."
+      },
+      "explanation": {
+        "fr": "½ × 2 × v² - ½ × 2 × 8² = -5 × 6 → v² - 64 = -30 → v² = 34 → v ≈ 6,56 m/s. (Sur plan horizontal, Ep ne change pas.)",
+        "ar": "½ × 2 × v² - ½ × 2 × 8² = -5 × 6 → v² - 64 = -30 → v² = 34 → v ≈ 6.56 m/s."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Pendant la chute libre (sans frottement) d'un objet :",
+        "ar": "خلال السقوط الحر (بدون احتكاك) لجسم :"
+      },
+      "choices": [
+        { "fr": "Ec augmente et Ep diminue, Em reste constante", "ar": "Ec تزداد و Ep تنقص، Em تبقى ثابتة" },
+        { "fr": "Ec et Ep augmentent toutes les deux", "ar": "Ec و Ep يزدادان معاً" },
+        { "fr": "Ec diminue et Ep augmente", "ar": "Ec تنقص و Ep تزداد" },
+        { "fr": "Ec, Ep et Em restent constantes", "ar": "Ec و Ep و Em تبقى ثابتة" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "En chute libre, l'objet perd de l'altitude (Ep diminue) et gagne de la vitesse (Ec augmente), mais Em = Ec + Ep reste constante.",
+        "ar": "في السقوط الحر، يفقد الجسم ارتفاعاً (Ep تنقص) ويكتسب سرعة (Ec تزداد)، لكن Em = Ec + Ep تبقى ثابتة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un pendule simple de longueur L = 1 m est écarté d'un angle θ = 60° puis lâché. Calculer la vitesse au point le plus bas en m/s. (g = 9,8 m/s²)",
+        "ar": "بندول بسيط طوله L = 1 m يُبعد بزاوية θ = 60° ثم يُترك. احسب السرعة في النقطة الأدنى بـ m/s. (g = 9.8 m/s²)"
+      },
+      "answer": 3.13,
+      "tolerance": 0.1,
+      "unit": "m/s",
+      "hint": {
+        "fr": "Hauteur : h = L(1 - cos θ) = 1 × (1 - cos 60°) = 0,5 m. Puis v = √(2gh).",
+        "ar": "الارتفاع: h = L(1 - cos θ) = 1 × (1 - cos 60°) = 0.5 m. ثم v = √(2gh)."
+      },
+      "explanation": {
+        "fr": "h = L(1 - cos 60°) = 1 × (1 - 0,5) = 0,5 m. Conservation : v = √(2gh) = √(2 × 9,8 × 0,5) = √9,8 ≈ 3,13 m/s.",
+        "ar": "h = L(1 - cos 60°) = 1 × (1 - 0.5) = 0.5 m. انحفاظ: v = √(2gh) = √(2 × 9.8 × 0.5) = √9.8 ≈ 3.13 m/s."
+      }
+    }
+  ]
+}

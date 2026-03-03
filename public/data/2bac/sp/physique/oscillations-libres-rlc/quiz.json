@@ -1,0 +1,98 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est l'équation différentielle régissant les oscillations d'un circuit LC idéal en termes de charge q ?",
+        "ar": "ما هي المعادلة التفاضلية التي تحكم تذبذبات دارة LC مثالية بدلالة الشحنة q؟"
+      },
+      "choices": [
+        { "fr": "d²q/dt² + (R/L)(dq/dt) + q/(LC) = 0" },
+        { "fr": "d²q/dt² + q/(LC) = 0" },
+        { "fr": "dq/dt + q/(LC) = 0" },
+        { "fr": "d²q/dt² + (1/LC)²·q = 0" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Pour un circuit LC idéal (R = 0), l'équation différentielle est d²q/dt² + q/(LC) = 0, c'est l'équation d'un oscillateur harmonique de pulsation propre ω₀ = 1/√(LC)."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer la fréquence propre f₀ (en Hz) d'un circuit LC avec L = 40 mH et C = 10 μF.",
+        "ar": "احسب التردد الذاتي f₀ (بالهرتز) لدارة LC حيث L = 40 mH و C = 10 μF."
+      },
+      "answer": 252,
+      "tolerance": 3,
+      "unit": "Hz",
+      "explanation": {
+        "fr": "f₀ = 1/(2π√(LC)) = 1/(2π√(40×10⁻³ × 10×10⁻⁶)) = 1/(2π√(4×10⁻⁷)) = 1/(2π × 6,32×10⁻⁴) ≈ 252 Hz."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Dans un circuit RLC série, le régime pseudo-périodique a lieu lorsque :",
+        "ar": "في دارة RLC متوالية، يحدث النظام شبه الدوري عندما:"
+      },
+      "choices": [
+        { "fr": "R > 2√(L/C)" },
+        { "fr": "R = 2√(L/C)" },
+        { "fr": "R < 2√(L/C)" },
+        { "fr": "R = 0" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "Le régime pseudo-périodique se produit lorsque R < R_c = 2√(L/C). Le circuit oscille avec une amplitude décroissante. Pour R = 0, on retrouve le cas idéal LC (oscillations non amorties)."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un circuit RLC a L = 0,2 H, C = 5 μF et R = 40 Ω. Calculer le facteur de qualité Q (sans unité).",
+        "ar": "دارة RLC لها L = 0,2 H و C = 5 μF و R = 40 Ω. احسب عامل الجودة Q (بدون وحدة)."
+      },
+      "answer": 5,
+      "tolerance": 0.1,
+      "unit": "",
+      "explanation": {
+        "fr": "Q = (1/R)√(L/C) = (1/40)√(0,2 / 5×10⁻⁶) = (1/40)√(4×10⁴) = (1/40) × 200 = 5."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Dans un circuit LC idéal, l'énergie totale du circuit :",
+        "ar": "في دارة LC مثالية، الطاقة الكلية للدارة:"
+      },
+      "choices": [
+        { "fr": "Diminue au cours du temps" },
+        { "fr": "Augmente au cours du temps" },
+        { "fr": "Reste constante au cours du temps" },
+        { "fr": "Oscille avec une amplitude croissante" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "Dans un circuit LC idéal (sans résistance), il n'y a pas de dissipation d'énergie. L'énergie totale E = ½q²/C + ½Li² reste constante. Elle se transforme périodiquement entre énergie électrique et énergie magnétique."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le rôle de la résistance R dans un circuit RLC série est :",
+        "ar": "دور المقاومة R في دارة RLC متوالية هو:"
+      },
+      "choices": [
+        { "fr": "D'augmenter la fréquence des oscillations" },
+        { "fr": "De fournir de l'énergie au circuit" },
+        { "fr": "De dissiper l'énergie du circuit sous forme de chaleur (effet Joule)" },
+        { "fr": "De stocker l'énergie sous forme électrique" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "La résistance R dissipe l'énergie du circuit par effet Joule (P = Ri²), ce qui provoque l'amortissement des oscillations. Plus R est grande, plus l'amortissement est important."
+      }
+    }
+  ]
+}

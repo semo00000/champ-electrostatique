@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Deux parents sains ont un enfant atteint d'une maladie génétique. Quel est le mode de transmission le plus probable ?",
+        "ar": "أبوان سليمان أنجبا طفلًا مصابًا بمرض وراثي. ما هو نمط الانتقال الأكثر احتمالًا؟"
+      },
+      "choices": [
+        { "fr": "Autosomique dominant", "ar": "صبغي جسمي سائد" },
+        { "fr": "Autosomique récessif", "ar": "صبغي جسمي متنحي" },
+        { "fr": "Dominant lié au X", "ar": "سائد مرتبط بالصبغي X" },
+        { "fr": "Anomalie chromosomique", "ar": "شذوذ صبغي" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Si deux parents sains ont un enfant atteint, les parents sont porteurs hétérozygotes (Aa). La maladie s'exprime chez l'homozygote récessif (aa). C'est caractéristique d'une transmission autosomique récessive.",
+        "ar": "إذا كان أبوان سليمان أنجبا طفلًا مصابًا، فالأبوان حاملان متغايرا اللواقح (Aa). المرض يظهر عند متماثل اللواقح المتنحي (aa). هذا مميز للانتقال الصبغي الجسمي المتنحي."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Un homme daltonien (X^d Y) épouse une femme non daltonienne porteuse (X^D X^d). Quelle proportion de leurs fils sera daltonienne ?",
+        "ar": "رجل مصاب بعمى الألوان (X^d Y) تزوج امرأة غير مصابة حاملة (X^D X^d). ما نسبة أبنائهم الذكور المصابين؟"
+      },
+      "choices": [
+        { "fr": "0%", "ar": "0%" },
+        { "fr": "25%", "ar": "25%" },
+        { "fr": "50%", "ar": "50%" },
+        { "fr": "100%", "ar": "100%" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "La mère porteuse (X^D X^d) transmet X^D ou X^d avec probabilité 1/2 chacun. Les fils reçoivent Y du père. Donc 50% des fils reçoivent X^d et sont daltoniens, 50% reçoivent X^D et sont sains.",
+        "ar": "الأم الحاملة (X^D X^d) تنقل X^D أو X^d باحتمال 1/2 لكل منهما. الأبناء الذكور يتلقون Y من الأب. إذن 50% من الأبناء يتلقون X^d ويكونون مصابين، و50% يتلقون X^D ويكونون سليمين."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quels sont les génotypes possibles d'un individu de groupe sanguin A ?",
+        "ar": "ما هي الأنماط الوراثية الممكنة لفرد من الزمرة الدموية A؟"
+      },
+      "choices": [
+        { "fr": "I^A I^A uniquement", "ar": "I^A I^A فقط" },
+        { "fr": "I^A I^A ou I^A i", "ar": "I^A I^A أو I^A i" },
+        { "fr": "I^A I^B", "ar": "I^A I^B" },
+        { "fr": "I^A i uniquement", "ar": "I^A i فقط" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le groupe A correspond au génotype I^A I^A (homozygote) ou I^A i (hétérozygote), car l'allèle I^A est dominant sur i. Le génotype I^A I^B donne le groupe AB par codominance.",
+        "ar": "الزمرة A تقابل النمط الوراثي I^A I^A (متماثل اللواقح) أو I^A i (متغاير اللواقح)، لأن الأليل I^A سائد على i. النمط I^A I^B يعطي الزمرة AB بالسيادة المشتركة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'hémophilie est une maladie récessive liée au chromosome X. Un père hémophile et une mère saine non porteuse auront :",
+        "ar": "الناعور مرض متنحي مرتبط بالصبغي X. أب مصاب بالناعور وأم سليمة غير حاملة سينجبان:"
+      },
+      "choices": [
+        { "fr": "Tous les enfants sains, mais toutes les filles porteuses", "ar": "جميع الأطفال سليمون، لكن جميع البنات حاملات" },
+        { "fr": "50% de fils hémophiles", "ar": "50% من الأبناء الذكور مصابون" },
+        { "fr": "Toutes les filles hémophiles", "ar": "جميع البنات مصابات" },
+        { "fr": "Tous les garçons hémophiles", "ar": "جميع الأبناء الذكور مصابون" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Le père (X^h Y) transmet X^h à toutes ses filles et Y à tous ses fils. La mère (X^H X^H) transmet X^H à tous. Résultat : filles X^H X^h (porteuses saines), fils X^H Y (sains). Aucun enfant n'est atteint.",
+        "ar": "الأب (X^h Y) ينقل X^h لجميع بناته و Y لجميع أبنائه. الأم (X^H X^H) تنقل X^H للجميع. النتيجة: البنات X^H X^h (حاملات سليمات)، الأبناء X^H Y (سليمون). لا يوجد طفل مصاب."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La trisomie 21 est due à :",
+        "ar": "تثلث الصبغي 21 ناتج عن:"
+      },
+      "choices": [
+        { "fr": "Une mutation ponctuelle sur le chromosome 21", "ar": "طفرة نقطية على الصبغي 21" },
+        { "fr": "La présence de 3 chromosomes 21 au lieu de 2", "ar": "وجود 3 صبغيات 21 بدلًا من 2" },
+        { "fr": "L'absence d'un chromosome 21", "ar": "غياب صبغي 21" },
+        { "fr": "Un allèle récessif sur le chromosome 21", "ar": "أليل متنحي على الصبغي 21" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La trisomie 21 (syndrome de Down) résulte de la non-disjonction des chromosomes 21 pendant la méiose, donnant 3 copies du chromosome 21 (47 chromosomes au total au lieu de 46). Ce n'est pas une maladie héréditaire classique.",
+        "ar": "تثلث الصبغي 21 (متلازمة داون) ينتج عن عدم انفصال الصبغيات 21 أثناء الانقسام الاختزالي، مما يعطي 3 نسخ من الصبغي 21 (47 صبغيًا بدلًا من 46). ليس مرضًا وراثيًا تقليديًا."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Un couple : mère de groupe O (ii) et père de groupe AB (I^A I^B). Quels groupes sanguins sont possibles chez leurs enfants ?",
+        "ar": "زوجان: الأم من الزمرة O (ii) والأب من الزمرة AB (I^A I^B). ما هي الزمر الدموية الممكنة لأطفالهما؟"
+      },
+      "choices": [
+        { "fr": "A ou B uniquement", "ar": "A أو B فقط" },
+        { "fr": "A, B ou AB", "ar": "A أو B أو AB" },
+        { "fr": "O uniquement", "ar": "O فقط" },
+        { "fr": "A, B, AB ou O", "ar": "A أو B أو AB أو O" }
+      ],
+      "answer": 0,
+      "explanation": {
+        "fr": "Le père AB (I^A I^B) transmet I^A ou I^B. La mère O (ii) transmet i. Enfants possibles : I^A i (groupe A) ou I^B i (groupe B). Les groupes AB et O sont impossibles chez ces enfants.",
+        "ar": "الأب AB (I^A I^B) ينقل I^A أو I^B. الأم O (ii) تنقل i. الأطفال الممكنون: I^A i (زمرة A) أو I^B i (زمرة B). الزمرتان AB و O مستحيلتان عند هؤلاء الأطفال."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel critère permet de distinguer une maladie autosomique d'une maladie liée au sexe dans un arbre généalogique ?",
+        "ar": "ما هو المعيار الذي يسمح بالتمييز بين مرض صبغي جسمي ومرض مرتبط بالجنس في شجرة النسب؟"
+      },
+      "choices": [
+        { "fr": "La maladie saute des générations", "ar": "المرض يقفز أجيالًا" },
+        { "fr": "La maladie atteint uniquement ou préférentiellement un seul sexe", "ar": "المرض يصيب فقط أو بشكل تفضيلي جنسًا واحدًا" },
+        { "fr": "Les deux parents sont toujours atteints", "ar": "كلا الأبوين مصابان دائمًا" },
+        { "fr": "L'enfant atteint est toujours le premier-né", "ar": "الطفل المصاب دائمًا هو البكر" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Une maladie liée au chromosome X touche principalement les garçons (récessif lié à l'X). Si la maladie atteint les deux sexes de façon égale, elle est probablement autosomique. La prédominance masculine est le critère clé.",
+        "ar": "المرض المرتبط بالصبغي X يصيب بشكل رئيسي الذكور (متنحي مرتبط بـ X). إذا أصاب المرض الجنسين بالتساوي فهو على الأرجح صبغي جسمي. غلبة الإصابة عند الذكور هي المعيار الأساسي."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La drépanocytose est causée par :",
+        "ar": "فقر الدم المنجلي ناتج عن:"
+      },
+      "choices": [
+        { "fr": "Une mutation dominante du gène de l'hémoglobine", "ar": "طفرة سائدة في مورثة الهيموغلوبين" },
+        { "fr": "Une mutation récessive du gène de la bêta-globine (HbS)", "ar": "طفرة متنحية في مورثة البيتا غلوبين (HbS)" },
+        { "fr": "Un chromosome surnuméraire", "ar": "صبغي زائد" },
+        { "fr": "Un gène récessif lié au chromosome X", "ar": "مورثة متنحية مرتبطة بالصبغي X" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La drépanocytose est une maladie autosomique récessive causée par une mutation ponctuelle du gène de la bêta-globine (chromosome 11), produisant l'hémoglobine S (HbS). Les hétérozygotes (HbA/HbS) sont porteurs sains avec une certaine résistance au paludisme.",
+        "ar": "فقر الدم المنجلي مرض صبغي جسمي متنحي ناتج عن طفرة نقطية في مورثة البيتا غلوبين (الصبغي 11)، مما ينتج الهيموغلوبين S (HbS). متغايرو اللواقح (HbA/HbS) حاملون سليمون مع مقاومة نسبية للملاريا."
+      }
+    }
+  ]
+}

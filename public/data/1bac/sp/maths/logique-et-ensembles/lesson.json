@@ -1,0 +1,141 @@
+{
+  "id": "logique-et-ensembles",
+  "title": { "fr": "Logique mathématique et ensembles", "ar": "المنطق الرياضي والمجموعات" },
+  "objectives": {
+    "fr": [
+      "Maîtriser les connecteurs logiques (et, ou, non) et les tables de vérité",
+      "Utiliser l'implication et l'équivalence dans un raisonnement",
+      "Manipuler les quantificateurs universel (∀) et existentiel (∃)",
+      "Effectuer des opérations sur les ensembles (∪, ∩, ∖, complémentaire)",
+      "Appliquer les lois de De Morgan",
+      "Connaître les méthodes de démonstration (directe, contraposée, absurde)"
+    ],
+    "ar": [
+      "التحكم في الروابط المنطقية (و، أو، النفي) وجداول الحقيقة",
+      "استخدام الاستلزام والتكافؤ في الاستدلال",
+      "التعامل مع المحددات الكلية (∀) والوجودية (∃)",
+      "إجراء العمليات على المجموعات (∪، ∩، ∖، المتمم)",
+      "تطبيق قوانين دي مورغان",
+      "معرفة طرق البرهان (مباشر، بالمعكوس، بالخلف)"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Propositions et connecteurs logiques", "ar": "١. القضايا والروابط المنطقية" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Proposition" },
+      "text": { "fr": "Une proposition est un énoncé mathématique qui est soit vrai (V), soit faux (F). On note sa valeur de vérité V ou F." }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Les connecteurs logiques fondamentaux sont : la conjonction (et, notée ∧), la disjonction (ou, notée ∨) et la négation (non, notée ¬). La table de vérité de P ∧ Q est vraie uniquement quand P et Q sont toutes les deux vraies. La table de vérité de P ∨ Q est fausse uniquement quand P et Q sont toutes les deux fausses.",
+        "ar": "الروابط المنطقية الأساسية هي: العطف (و، يُرمز لها ∧)، الفصل (أو، يُرمز له ∨) والنفي (ليس، يُرمز له ¬)."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Négation : ¬(P ∧ Q) ⟺ (¬P) ∨ (¬Q) et ¬(P ∨ Q) ⟺ (¬P) ∧ (¬Q) — ce sont les lois de De Morgan.",
+        "ar": "النفي: ¬(P ∧ Q) ⟺ (¬P) ∨ (¬Q) و ¬(P ∨ Q) ⟺ (¬P) ∧ (¬Q) — هذه هي قوانين دي مورغان."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Implication et équivalence", "ar": "٢. الاستلزام والتكافؤ" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Implication" },
+      "text": { "fr": "L'implication P ⟹ Q signifie « si P alors Q ». Elle est fausse uniquement lorsque P est vraie et Q est fausse. La contraposée de (P ⟹ Q) est (¬Q ⟹ ¬P), et elles ont la même valeur de vérité." }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Équivalence" },
+      "text": { "fr": "L'équivalence P ⟺ Q signifie que P ⟹ Q et Q ⟹ P sont toutes les deux vraies. On dit que P est vraie si et seulement si Q est vraie." }
+    },
+    {
+      "type": "formula",
+      "latex": "P \\Rightarrow Q \\;\\equiv\\; \\neg P \\lor Q",
+      "note": { "fr": "L'implication peut s'écrire à l'aide de la disjonction et de la négation." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Quantificateurs", "ar": "٣. المحددات الكمية" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le quantificateur universel ∀ (« pour tout ») et le quantificateur existentiel ∃ (« il existe ») permettent de formuler des propositions portant sur des ensembles. Exemple : ∀x ∈ ℝ, x² ≥ 0 signifie que le carré de tout réel est positif ou nul.",
+        "ar": "المحدد الكلي ∀ (لكل) والمحدد الوجودي ∃ (يوجد) يسمحان بصياغة قضايا تتعلق بالمجموعات."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Négation des quantificateurs : ¬(∀x, P(x)) ⟺ ∃x, ¬P(x) et ¬(∃x, P(x)) ⟺ ∀x, ¬P(x).",
+        "ar": "نفي المحددات: ¬(∀x, P(x)) ⟺ ∃x, ¬P(x) و ¬(∃x, P(x)) ⟺ ∀x, ¬P(x)."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Négation d'une proposition quantifiée" },
+      "problem": { "fr": "Donner la négation de : ∀x ∈ ℝ, ∃y ∈ ℝ, x + y > 0." },
+      "solution": { "fr": "La négation est : ∃x ∈ ℝ, ∀y ∈ ℝ, x + y ≤ 0.", "latex": "\\exists x \\in \\mathbb{R},\\; \\forall y \\in \\mathbb{R},\\; x + y \\leq 0" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Ensembles et opérations", "ar": "٤. المجموعات والعمليات" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Appartenance et inclusion" },
+      "text": { "fr": "On note x ∈ A si x est un élément de A. On note A ⊂ B si tout élément de A est aussi élément de B (A est inclus dans B)." }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Union : A ∪ B = {x | x ∈ A ou x ∈ B}",
+          "Intersection : A ∩ B = {x | x ∈ A et x ∈ B}",
+          "Différence : A ∖ B = {x | x ∈ A et x ∉ B}",
+          "Complémentaire : si A ⊂ E, alors Aᶜ = E ∖ A"
+        ]
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\overline{A \\cup B} = \\overline{A} \\cap \\overline{B} \\quad;\\quad \\overline{A \\cap B} = \\overline{A} \\cup \\overline{B}",
+      "note": { "fr": "Lois de De Morgan pour les ensembles." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Méthodes de démonstration", "ar": "٥. طرق البرهان" }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Démonstration directe : on suppose P vraie et on montre que Q est vraie.",
+          "Démonstration par contraposée : pour montrer P ⟹ Q, on montre ¬Q ⟹ ¬P.",
+          "Démonstration par l'absurde : on suppose ¬Q et on aboutit à une contradiction.",
+          "Démonstration par récurrence : on montre P(n₀), puis P(n) ⟹ P(n+1)."
+        ]
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Démonstration par contraposée" },
+      "problem": { "fr": "Montrer que pour tout n ∈ ℕ, si n² est pair alors n est pair." },
+      "solution": { "fr": "On montre la contraposée : si n est impair alors n² est impair. Si n est impair, alors n = 2k+1, donc n² = 4k²+4k+1 = 2(2k²+2k)+1, qui est impair. Donc par contraposée, si n² est pair alors n est pair.", "latex": "n = 2k+1 \\Rightarrow n^2 = (2k+1)^2 = 4k^2+4k+1 = 2(2k^2+2k)+1" }
+    }
+  ]
+}

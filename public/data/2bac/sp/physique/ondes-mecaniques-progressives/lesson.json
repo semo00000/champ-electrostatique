@@ -1,0 +1,195 @@
+{
+  "id": "ondes-mecaniques-progressives",
+  "title": { "fr": "Les Ondes Mécaniques Progressives", "ar": "الموجات الميكانيكية المتقدمة" },
+  "objectives": {
+    "fr": [
+      "Définir une onde mécanique progressive",
+      "Distinguer onde transversale et onde longitudinale",
+      "Déterminer la célérité de propagation d'une onde",
+      "Connaître la notion de front d'onde",
+      "Savoir que l'onde transporte de l'énergie sans transport de matière",
+      "Identifier les propriétés du milieu influençant la propagation"
+    ],
+    "ar": [
+      "تعريف الموجة الميكانيكية المتقدمة",
+      "التمييز بين الموجة المستعرضة والموجة الطولية",
+      "تحديد سرعة انتشار الموجة",
+      "معرفة مفهوم جبهة الموجة",
+      "معرفة أن الموجة تنقل الطاقة دون نقل المادة",
+      "تحديد خصائص الوسط المؤثرة في الانتشار"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Définition d'une onde mécanique progressive", "ar": "1. تعريف الموجة الميكانيكية المتقدمة" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Onde mécanique progressive", "ar": "الموجة الميكانيكية المتقدمة" },
+      "text": {
+        "fr": "Une onde mécanique progressive est le phénomène de propagation d'une perturbation dans un milieu matériel, sans transport de matière mais avec transport d'énergie. La perturbation se propage de proche en proche dans le milieu.",
+        "ar": "الموجة الميكانيكية المتقدمة هي ظاهرة انتشار اضطراب في وسط مادي، دون نقل المادة ولكن مع نقل الطاقة. ينتشر الاضطراب تدريجيا في الوسط."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Une onde mécanique nécessite un milieu matériel pour se propager. Elle ne peut pas se propager dans le vide. Exemples : les ondes à la surface de l'eau, les ondes sonores dans l'air, les ondes le long d'une corde.",
+        "ar": "تحتاج الموجة الميكانيكية إلى وسط مادي للانتشار، ولا يمكنها الانتشار في الفراغ. أمثلة: الموجات على سطح الماء، الموجات الصوتية في الهواء، الموجات على طول حبل."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Lors de la propagation d'une onde mécanique, chaque point du milieu reproduit la perturbation de la source avec un retard temporel qui dépend de la distance à la source. Il y a transport d'énergie sans transport de matière.",
+        "ar": "أثناء انتشار الموجة الميكانيكية، كل نقطة من الوسط تعيد إنتاج اضطراب المنبع بتأخر زمني يعتمد على المسافة من المنبع. ينتقل الطاقة دون نقل المادة."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Ondes transversales et longitudinales", "ar": "2. الموجات المستعرضة والطولية" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Onde transversale", "ar": "موجة مستعرضة" },
+      "text": {
+        "fr": "Une onde transversale est une onde dont la direction de la perturbation est perpendiculaire à la direction de propagation. Exemple : onde le long d'une corde, onde à la surface de l'eau.",
+        "ar": "الموجة المستعرضة هي موجة يكون فيها اتجاه الاضطراب عموديا على اتجاه الانتشار. مثال: موجة على طول حبل، موجة على سطح الماء."
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Onde longitudinale", "ar": "موجة طولية" },
+      "text": {
+        "fr": "Une onde longitudinale est une onde dont la direction de la perturbation est parallèle (même direction) à la direction de propagation. Exemple : onde sonore dans l'air, onde de compression dans un ressort.",
+        "ar": "الموجة الطولية هي موجة يكون فيها اتجاه الاضطراب موازيا لاتجاه الانتشار. مثال: الموجة الصوتية في الهواء، موجة الضغط في نابض."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "<strong>Onde transversale</strong> : perturbation ⊥ propagation (corde, surface de l'eau)",
+          "<strong>Onde longitudinale</strong> : perturbation ∥ propagation (son, ressort)",
+          "Certaines ondes peuvent avoir les deux composantes (ondes sismiques)"
+        ],
+        "ar": [
+          "<strong>موجة مستعرضة</strong>: الاضطراب ⊥ الانتشار (حبل، سطح الماء)",
+          "<strong>موجة طولية</strong>: الاضطراب ∥ الانتشار (صوت، نابض)",
+          "بعض الموجات يمكن أن تجمع بين النوعين (الموجات الزلزالية)"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Célérité de propagation", "ar": "3. سرعة الانتشار" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La célérité (ou vitesse de propagation) d'une onde est la vitesse à laquelle la perturbation se déplace dans le milieu. Elle se mesure en mètres par seconde (m/s). Pour la déterminer, on mesure la distance $d$ parcourue par la perturbation pendant une durée $\\Delta t$.",
+        "ar": "سرعة انتشار الموجة هي السرعة التي ينتقل بها الاضطراب في الوسط. تقاس بالمتر لكل ثانية (m/s). لتحديدها، نقيس المسافة $d$ التي يقطعها الاضطراب خلال مدة $\\Delta t$."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "v = \\frac{d}{\\Delta t}",
+      "note": {
+        "fr": "v = célérité en m/s, d = distance en m, Δt = durée de propagation en s. La célérité dépend du milieu de propagation mais pas de la forme de la perturbation.",
+        "ar": "v = السرعة بوحدة m/s، d = المسافة بوحدة m، Δt = مدة الانتشار بوحدة s. تعتمد السرعة على وسط الانتشار وليس على شكل الاضطراب."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le retard temporel $\\tau$ entre la source S et un point M situé à la distance $d$ de la source est : $\\tau = \\frac{d}{v}$. Le point M reproduit le mouvement de la source avec le retard $\\tau$ : $y_M(t) = y_S(t - \\tau)$.",
+        "ar": "التأخر الزمني $\\tau$ بين المنبع S ونقطة M تبعد مسافة $d$ عن المنبع هو: $\\tau = \\frac{d}{v}$. تعيد النقطة M إنتاج حركة المنبع بتأخر $\\tau$: $y_M(t) = y_S(t - \\tau)$."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\tau = \\frac{d}{v} \\quad \\Rightarrow \\quad y_M(t) = y_S\\left(t - \\frac{d}{v}\\right)",
+      "note": {
+        "fr": "τ = retard temporel en s. Cette relation est fondamentale : elle relie l'élongation d'un point quelconque à celle de la source.",
+        "ar": "τ = التأخر الزمني بوحدة s. هذه العلاقة أساسية: تربط استطالة أي نقطة باستطالة المنبع."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Front d'onde", "ar": "4. جبهة الموجة" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Front d'onde", "ar": "جبهة الموجة" },
+      "text": {
+        "fr": "Le front d'onde est l'ensemble des points du milieu atteints par la perturbation au même instant. Tous les points du front d'onde vibrent en phase. Dans un milieu homogène et isotrope, les fronts d'onde sont des cercles (2D) ou des sphères (3D) centrés sur la source.",
+        "ar": "جبهة الموجة هي مجموعة النقاط من الوسط التي يصلها الاضطراب في نفس اللحظة. جميع نقاط جبهة الموجة تهتز بنفس الطور. في وسط متجانس ومتماثل الخواص، تكون جبهات الموجة دوائر (2D) أو كرات (3D) مركزها المنبع."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Propriétés du milieu de propagation", "ar": "5. خصائص وسط الانتشار" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La célérité d'une onde mécanique dépend des propriétés du milieu de propagation. Elle ne dépend ni de la forme ni de l'amplitude de la perturbation.",
+        "ar": "تعتمد سرعة الموجة الميكانيكية على خصائص وسط الانتشار. ولا تعتمد على شكل الاضطراب ولا على سعته."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Pour une corde : $v$ dépend de la tension $F$ et de la masse linéique $\\mu$ : $v = \\sqrt{\\frac{F}{\\mu}}$",
+          "Pour le son dans l'air : $v \\approx 340\\,m/s$ à 20°C, la célérité augmente avec la température",
+          "Pour le son dans l'eau : $v \\approx 1500\\,m/s$ (plus rapide que dans l'air)",
+          "Pour le son dans l'acier : $v \\approx 5000\\,m/s$ (encore plus rapide)",
+          "Un milieu est dit <strong>dispersif</strong> si la célérité dépend de la fréquence de l'onde"
+        ],
+        "ar": [
+          "بالنسبة لحبل: $v$ تعتمد على الشد $F$ والكتلة الخطية $\\mu$: $v = \\sqrt{\\frac{F}{\\mu}}$",
+          "بالنسبة للصوت في الهواء: $v \\approx 340\\,m/s$ عند 20°C",
+          "بالنسبة للصوت في الماء: $v \\approx 1500\\,m/s$",
+          "بالنسبة للصوت في الفولاذ: $v \\approx 5000\\,m/s$",
+          "الوسط يسمى <strong>مبدد</strong> إذا كانت السرعة تعتمد على تردد الموجة"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "6. Exemple d'application", "ar": "6. مثال تطبيقي" }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Mesure de la célérité d'une onde sonore", "ar": "مثال: قياس سرعة الموجة الصوتية" },
+      "problem": {
+        "fr": "Lors d'un orage, un observateur voit l'éclair puis entend le tonnerre $\\Delta t = 6\\,s$ plus tard. La célérité du son dans l'air est $v = 340\\,m/s$. Calculer la distance $d$ entre l'observateur et l'endroit où la foudre est tombée.",
+        "ar": "أثناء عاصفة رعدية، يرى مراقب البرق ثم يسمع الرعد بعد $\\Delta t = 6\\,s$. سرعة الصوت في الهواء $v = 340\\,m/s$. احسب المسافة $d$ بين المراقب ومكان سقوط الصاعقة."
+      },
+      "solution": {
+        "fr": "La lumière se propage quasi instantanément par rapport au son, donc le retard correspond au temps de propagation du son.",
+        "latex": "d = v \\times \\Delta t = 340 \\times 6 = 2040\\,\\text{m} \\approx 2{,}04\\,\\text{km}"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Exemple : Retard temporel le long d'une corde", "ar": "مثال: التأخر الزمني على طول حبل" },
+      "problem": {
+        "fr": "Une perturbation se propage le long d'une corde à la célérité $v = 5\\,m/s$. Un point M est situé à $d = 2\\,m$ de la source S. Calculer le retard temporel entre S et M.",
+        "ar": "ينتشر اضطراب على طول حبل بسرعة $v = 5\\,m/s$. نقطة M تبعد $d = 2\\,m$ عن المنبع S. احسب التأخر الزمني بين S و M."
+      },
+      "solution": {
+        "fr": "Le point M reproduit le mouvement de S avec un retard de 0,4 s.",
+        "latex": "\\tau = \\frac{d}{v} = \\frac{2}{5} = 0{,}4\\,\\text{s}"
+      }
+    }
+  ]
+}

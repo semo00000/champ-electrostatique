@@ -1,0 +1,98 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est l'unité du champ magnétique B dans le système international ?",
+        "ar": "ما هي وحدة الحقل المغناطيسي B في النظام الدولي؟"
+      },
+      "choices": [
+        { "fr": "Le Weber (Wb)" },
+        { "fr": "Le Tesla (T)" },
+        { "fr": "Le Gauss (G)" },
+        { "fr": "L'Ampère par mètre (A/m)" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "L'unité du champ magnétique B dans le SI est le Tesla (T). Le Gauss est une unité CGS (1 T = 10⁴ G). Le Weber est l'unité du flux magnétique. L'A/m est l'unité de l'excitation magnétique H."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un solénoïde de 1000 spires et de longueur 50 cm est parcouru par un courant de 4 A. Calculer le champ magnétique B à l'intérieur en millitesla (mT). (μ₀ = 4π×10⁻⁷ T·m/A)",
+        "ar": "ملف لولبي من 1000 لفة وطوله 50 cm يمر به تيار شدته 4 A. احسب الحقل المغناطيسي B داخله بالميلي تسلا (mT)."
+      },
+      "answer": 10.05,
+      "tolerance": 0.2,
+      "unit": "mT",
+      "explanation": {
+        "fr": "B = μ₀(N/l)I = 4π×10⁻⁷ × (1000/0,5) × 4 = 4π×10⁻⁷ × 2000 × 4 = 4π×10⁻⁷ × 8000 = 1,005×10⁻² T ≈ 10,05 mT."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La force de Lorentz magnétique F⃗ = qv⃗ × B⃗ est toujours :",
+        "ar": "قوة لورنتز المغناطيسية F⃗ = qv⃗ × B⃗ تكون دائمًا:"
+      },
+      "choices": [
+        { "fr": "Parallèle à la vitesse de la particule" },
+        { "fr": "Parallèle au champ magnétique" },
+        { "fr": "Perpendiculaire à la fois à v⃗ et à B⃗" },
+        { "fr": "Dans le sens opposé au mouvement" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "La force de Lorentz magnétique F⃗ = qv⃗ × B⃗ est le résultat d'un produit vectoriel, elle est donc toujours perpendiculaire au plan formé par v⃗ et B⃗. Elle ne travaille pas et ne modifie pas l'énergie cinétique."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Un fil conducteur de longueur 20 cm, parcouru par un courant de 5 A, est placé dans un champ magnétique uniforme B = 0,3 T, perpendiculairement aux lignes de champ. Calculer la force de Laplace en newtons (N).",
+        "ar": "ناقل مستقيمي طوله 20 cm يمر به تيار شدته 5 A، موضوع في حقل مغناطيسي منتظم B = 0,3 T عموديًا على خطوط الحقل. احسب قوة لابلاس بالنيوتن (N)."
+      },
+      "answer": 0.3,
+      "tolerance": 0.01,
+      "unit": "N",
+      "explanation": {
+        "fr": "F = BIl·sin(α) = 0,3 × 5 × 0,2 × sin(90°) = 0,3 × 5 × 0,2 × 1 = 0,3 N."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Une particule chargée se déplace perpendiculairement à un champ magnétique uniforme. Sa trajectoire est :",
+        "ar": "جسيم مشحون يتحرك عموديًا على حقل مغناطيسي منتظم. مساره يكون:"
+      },
+      "choices": [
+        { "fr": "Rectiligne" },
+        { "fr": "Parabolique" },
+        { "fr": "Circulaire" },
+        { "fr": "Hélicoïdale" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "Lorsque v⃗ ⊥ B⃗, la force de Lorentz est constante en module et toujours perpendiculaire à v⃗. Elle joue le rôle de force centripète, d'où une trajectoire circulaire de rayon r = mv/(|q|B)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'effet Hall permet de mesurer :",
+        "ar": "يسمح تأثير هول بقياس:"
+      },
+      "choices": [
+        { "fr": "La résistance électrique d'un conducteur" },
+        { "fr": "L'inductance d'une bobine" },
+        { "fr": "Le champ magnétique grâce à la tension transversale créée" },
+        { "fr": "La capacité d'un condensateur" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "L'effet Hall crée une tension transversale U_H proportionnelle au champ magnétique B et au courant I. Les sondes de Hall sont donc utilisées pour mesurer les champs magnétiques."
+      }
+    }
+  ]
+}

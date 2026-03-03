@@ -1,0 +1,185 @@
+{
+  "id": "fonctions-logarithmiques",
+  "title": {
+    "fr": "Fonctions logarithmiques",
+    "ar": "الدوال اللوغاريتمية"
+  },
+  "objectives": {
+    "fr": [
+      "Définir la fonction logarithme népérien ln",
+      "Connaître et appliquer les propriétés algébriques de ln",
+      "Calculer la dérivée de ln et de fonctions composées avec ln",
+      "Étudier les limites de la fonction ln",
+      "Résoudre des équations et inéquations logarithmiques",
+      "Mener l'étude complète de x ↦ ln(x)"
+    ],
+    "ar": [
+      "تعريف دالة اللوغاريتم النيبيري",
+      "معرفة وتطبيق الخاصيات الجبرية للوغاريتم",
+      "حساب مشتقة ln والدوال المركبة مع ln",
+      "دراسة نهايات الدالة ln",
+      "حل معادلات ومتراجحات لوغاريتمية",
+      "إنجاز دراسة كاملة للدالة x ↦ ln(x)"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Définition du logarithme népérien",
+        "ar": "١. تعريف اللوغاريتم النيبيري"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Logarithme népérien" },
+      "text": { "fr": "La fonction logarithme népérien, notée ln, est définie sur ]0, +∞[ comme la primitive de x ↦ 1/x qui s'annule en 1. Autrement dit, ln est l'unique fonction définie sur ]0, +∞[ telle que ln'(x) = 1/x et ln(1) = 0." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\ln(x) = \\int_1^x \\frac{1}{t} \\, dt \\quad \\text{pour } x > 0",
+      "note": { "fr": "Définition intégrale du logarithme népérien" }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Le nombre e est défini par ln(e) = 1. On a e ≈ 2,71828." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Propriétés algébriques",
+        "ar": "٢. الخاصيات الجبرية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Pour tous réels a > 0, b > 0 et tout entier relatif n :" }
+    },
+    {
+      "type": "formula",
+      "latex": "\\ln(ab) = \\ln(a) + \\ln(b)",
+      "note": { "fr": "Le logarithme transforme un produit en somme" }
+    },
+    {
+      "type": "formula",
+      "latex": "\\ln\\!\\left(\\frac{a}{b}\\right) = \\ln(a) - \\ln(b), \\qquad \\ln(a^n) = n\\ln(a), \\qquad \\ln\\!\\left(\\frac{1}{a}\\right) = -\\ln(a)",
+      "note": { "fr": "Propriétés fondamentales du logarithme" }
+    },
+    {
+      "type": "formula",
+      "latex": "\\ln(\\sqrt{a}) = \\frac{1}{2}\\ln(a)",
+      "note": { "fr": "Logarithme d'une racine carrée" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Dérivée et sens de variation",
+        "ar": "٣. المشتقة واتجاه التغير"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "(\\ln x)' = \\frac{1}{x} \\quad (x > 0), \\qquad (\\ln u)' = \\frac{u'}{u} \\quad (u > 0)",
+      "note": { "fr": "Dérivée du logarithme et de la composée" }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Comme 1/x > 0 pour tout x > 0, la fonction ln est strictement croissante sur ]0, +∞[. Cela signifie que : ln(a) < ln(b) ⟺ 0 < a < b." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Dérivée d'une composée" },
+      "problem": { "fr": "Calculer la dérivée de f(x) = ln(x² + 1)." },
+      "solution": {
+        "fr": "On a u(x) = x² + 1, donc u'(x) = 2x. Ainsi f'(x) = u'/u = 2x/(x² + 1).",
+        "latex": "f'(x) = \\frac{(x^2+1)'}{x^2+1} = \\frac{2x}{x^2+1}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Limites fondamentales",
+        "ar": "٤. النهايات الأساسية"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\lim_{x \\to +\\infty} \\ln(x) = +\\infty, \\qquad \\lim_{x \\to 0^+} \\ln(x) = -\\infty",
+      "note": { "fr": "Limites aux bornes du domaine" }
+    },
+    {
+      "type": "important",
+      "text": { "fr": "Croissances comparées : pour tout n ≥ 1, lim(x→+∞) ln(x)/xⁿ = 0 et lim(x→0⁺) xⁿ·ln(x) = 0. Le logarithme croît moins vite que toute puissance." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\lim_{x \\to +\\infty} \\frac{\\ln x}{x^n} = 0, \\qquad \\lim_{x \\to 0^+} x^n \\ln x = 0, \\qquad \\lim_{x \\to 0} \\frac{\\ln(1+x)}{x} = 1",
+      "note": { "fr": "Limites de croissances comparées et limite usuelle" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Logarithme en base a",
+        "ar": "٥. اللوغاريتم ذو الأساس a"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Logarithme en base a" },
+      "text": { "fr": "Pour a > 0 et a ≠ 1, le logarithme en base a est défini par : logₐ(x) = ln(x)/ln(a). En particulier, log₁₀(x) = ln(x)/ln(10) (logarithme décimal) et log₂(x) = ln(x)/ln(2) (logarithme binaire)." }
+    },
+    {
+      "type": "formula",
+      "latex": "\\log_a(x) = \\frac{\\ln(x)}{\\ln(a)}",
+      "note": { "fr": "Formule de changement de base" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Équations et inéquations logarithmiques",
+        "ar": "٦. المعادلات والمتراجحات اللوغاريتمية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Pour résoudre des équations ou inéquations avec ln, on utilise les propriétés suivantes (pour a, b > 0) : ln(a) = ln(b) ⟺ a = b ; ln(a) ≤ ln(b) ⟺ a ≤ b (car ln est croissante)." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Résolution d'une équation logarithmique" },
+      "problem": { "fr": "Résoudre ln(2x − 1) = ln(x + 3)." },
+      "solution": {
+        "fr": "Condition d'existence : 2x − 1 > 0 et x + 3 > 0, donc x > 1/2. L'équation donne 2x − 1 = x + 3, soit x = 4. Vérification : 2(4) − 1 = 7 > 0 et 4 + 3 = 7 > 0. Solution : x = 4.",
+        "latex": "\\ln(2x-1) = \\ln(x+3) \\iff 2x - 1 = x + 3 \\iff x = 4"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "7. Étude de la fonction ln",
+        "ar": "٧. دراسة الدالة ln"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Domaine : ]0, +∞[",
+          "ln est continue et dérivable sur ]0, +∞[",
+          "ln'(x) = 1/x > 0 : ln est strictement croissante",
+          "ln(1) = 0, ln(e) = 1",
+          "Limites : lim(x→0⁺) ln(x) = −∞, lim(x→+∞) ln(x) = +∞",
+          "ln''(x) = −1/x² < 0 : la courbe est concave",
+          "Asymptote verticale : x = 0 (axe des ordonnées)"
+        ]
+      }
+    }
+  ]
+}

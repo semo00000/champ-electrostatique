@@ -1,0 +1,175 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est l'unité du champ électrique dans le Système International ?",
+        "ar": "ما هي وحدة الحقل الكهربائي في النظام الدولي؟"
+      },
+      "choices": [
+        { "fr": "Volt (V)", "ar": "فولت (V)" },
+        { "fr": "Newton par Coulomb (N/C)", "ar": "نيوتن لكل كولوم (N/C)" },
+        { "fr": "Joule (J)", "ar": "جول (J)" },
+        { "fr": "Coulomb (C)", "ar": "كولوم (C)" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Le champ électrique E se mesure en N/C ou de manière équivalente en V/m. En effet, $E = \\frac{F}{q}$ donc $[E] = \\frac{N}{C}$.",
+        "ar": "يُقاس الحقل الكهربائي E بوحدة N/C أو ما يعادلها V/m."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Deux charges ponctuelles $q_1 = +2\\,\\mu C$ et $q_2 = -3\\,\\mu C$ sont séparées par une distance $r$. La force de Coulomb entre elles est :",
+        "ar": "شحنتان نقطيتان $q_1 = +2\\,\\mu C$ و $q_2 = -3\\,\\mu C$ مفصولتان بمسافة $r$. قوة كولوم بينهما هي:"
+      },
+      "choices": [
+        { "fr": "Répulsive", "ar": "تنافرية" },
+        { "fr": "Attractive", "ar": "تجاذبية" },
+        { "fr": "Nulle", "ar": "معدومة" },
+        { "fr": "Perpendiculaire à la droite joignant les charges", "ar": "عمودية على الخط الواصل بين الشحنتين" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Les charges sont de signes opposés ($q_1 > 0$ et $q_2 < 0$), donc la force est attractive. La loi de Coulomb donne une force dirigée le long de la droite joignant les charges.",
+        "ar": "الشحنتان مختلفتا الإشارة، لذلك القوة تجاذبية."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer la norme de la force de Coulomb entre deux charges $q_1 = 4\\,\\mu C$ et $q_2 = 6\\,\\mu C$ séparées de $d = 30\\,cm$. Donner la réponse en Newton (arrondir à 0.1 N près).",
+        "ar": "احسب شدة قوة كولوم بين شحنتين $q_1 = 4\\,\\mu C$ و $q_2 = 6\\,\\mu C$ مفصولتين بمسافة $d = 30\\,cm$. أعط الإجابة بالنيوتن."
+      },
+      "answer": 2.4,
+      "tolerance": 0.1,
+      "unit": "N",
+      "hint": {
+        "fr": "Utilisez $F = k\\frac{|q_1 \\cdot q_2|}{r^2}$ avec $k = 8.99 \\times 10^9$ N·m²/C²",
+        "ar": "استخدم $F = k\\frac{|q_1 \\cdot q_2|}{r^2}$"
+      },
+      "explanation": {
+        "fr": "$F = 8.99 \\times 10^9 \\times \\frac{4 \\times 10^{-6} \\times 6 \\times 10^{-6}}{(0.3)^2} = \\frac{8.99 \\times 10^9 \\times 24 \\times 10^{-12}}{0.09} \\approx 2.4\\,N$"
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le champ électrostatique créé par une charge ponctuelle positive est :",
+        "ar": "الحقل الكهروستاتيكي المُنشأ بواسطة شحنة نقطية موجبة يكون:"
+      },
+      "choices": [
+        { "fr": "Dirigé vers la charge", "ar": "موجه نحو الشحنة" },
+        { "fr": "Dirigé en s'éloignant de la charge", "ar": "موجه بعيدا عن الشحنة" },
+        { "fr": "Tangent aux surfaces équipotentielles", "ar": "مماس للسطوح متساوية الكمون" },
+        { "fr": "Nul en tout point", "ar": "معدوم في كل نقطة" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Le champ électrostatique créé par une charge positive est radial et dirigé vers l'extérieur (en s'éloignant de la charge). Pour une charge négative, il serait dirigé vers la charge.",
+        "ar": "الحقل الكهروستاتيكي المُنشأ بواسطة شحنة موجبة يكون شعاعيا وموجها نحو الخارج."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Les lignes de champ électrostatique sont :",
+        "ar": "خطوط الحقل الكهروستاتيكي:"
+      },
+      "choices": [
+        { "fr": "Toujours des droites parallèles", "ar": "دائما خطوط مستقيمة متوازية" },
+        { "fr": "Toujours des cercles", "ar": "دائما دوائر" },
+        { "fr": "Orientées des potentiels élevés vers les potentiels faibles", "ar": "موجهة من الكمون المرتفع نحو الكمون المنخفض" },
+        { "fr": "Tangentes aux surfaces équipotentielles", "ar": "مماسة للسطوح متساوية الكمون" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "Les lignes de champ vont des régions de potentiel élevé vers les régions de potentiel faible. Elles sont perpendiculaires (et non tangentes) aux surfaces équipotentielles.",
+        "ar": "خطوط الحقل تتجه من مناطق الكمون المرتفع نحو مناطق الكمون المنخفض، وهي عمودية على السطوح متساوية الكمون."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer la norme du champ électrostatique créé par une charge $q = 5\\,\\mu C$ en un point situé à $r = 20\\,cm$ de la charge. Donner la réponse en kN/C (arrondir à l'entier).",
+        "ar": "احسب شدة الحقل الكهروستاتيكي المُنشأ بواسطة شحنة $q = 5\\,\\mu C$ في نقطة تبعد $r = 20\\,cm$ عن الشحنة. أعط الإجابة بـ kN/C."
+      },
+      "answer": 1124,
+      "tolerance": 10,
+      "unit": "kN/C",
+      "hint": {
+        "fr": "Utilisez $E = k\\frac{|q|}{r^2}$ avec les unités SI ($r$ en mètres, $q$ en Coulombs)",
+        "ar": "استخدم $E = k\\frac{|q|}{r^2}$ مع الوحدات الدولية"
+      },
+      "explanation": {
+        "fr": "$E = 8.99 \\times 10^9 \\times \\frac{5 \\times 10^{-6}}{(0.2)^2} = \\frac{44950}{0.04} \\approx 1\\,124\\,kN/C$"
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le potentiel électrique $V$ créé par une charge ponctuelle positive :",
+        "ar": "الكمون الكهربائي $V$ المُنشأ بواسطة شحنة نقطية موجبة:"
+      },
+      "choices": [
+        { "fr": "Est toujours positif et décroît avec la distance", "ar": "دائما موجب ويتناقص مع المسافة" },
+        { "fr": "Est toujours négatif", "ar": "دائما سالب" },
+        { "fr": "Ne dépend pas de la distance", "ar": "لا يعتمد على المسافة" },
+        { "fr": "Est nul à l'infini et maximal au centre de la charge", "ar": "معدوم في اللانهاية وأقصى في مركز الشحنة" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "fr": "Pour une charge positive, $V = k\\frac{q}{r} > 0$ et $V$ décroît quand $r$ augmente (en $1/r$). Le potentiel tend vers 0 à l'infini.",
+        "ar": "لشحنة موجبة $V = k\\frac{q}{r} > 0$ ويتناقص $V$ مع زيادة $r$."
+      }
+    },
+    {
+      "type": "fill-in",
+      "question": {
+        "fr": "Le travail de la force électrostatique pour déplacer une charge $q$ du point A au point B s'écrit : $W_{A \\to B} = q \\times (V_A - V_B)$. Ce travail ne dépend que des points de départ et d'arrivée, on dit que la force est ___.",
+        "ar": "شغل القوة الكهروستاتيكية لنقل شحنة $q$ من النقطة A إلى النقطة B يُكتب: $W_{A \\to B} = q \\times (V_A - V_B)$. هذا الشغل لا يعتمد إلا على نقطة البداية ونقطة النهاية، نقول أن القوة ___."
+      },
+      "answer": ["conservative", "conservatrice"],
+      "explanation": {
+        "fr": "La force électrostatique est une force conservative car son travail ne dépend pas du chemin suivi mais uniquement des positions initiale et finale. On peut donc lui associer une énergie potentielle.",
+        "ar": "القوة الكهروستاتيكية هي قوة محافظة لأن شغلها لا يعتمد على المسار بل فقط على الموضع الابتدائي والنهائي."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Une charge $q = 2\\,\\mu C$ se déplace d'un point A où $V_A = 100\\,V$ à un point B où $V_B = 40\\,V$. Calculer le travail de la force électrostatique en microjoules ($\\mu J$).",
+        "ar": "شحنة $q = 2\\,\\mu C$ تنتقل من نقطة A حيث $V_A = 100\\,V$ إلى نقطة B حيث $V_B = 40\\,V$. احسب شغل القوة الكهروستاتيكية بالميكروجول."
+      },
+      "answer": 120,
+      "tolerance": 1,
+      "unit": "μJ",
+      "hint": {
+        "fr": "Appliquez $W = q(V_A - V_B)$ en utilisant les unités cohérentes",
+        "ar": "طبق $W = q(V_A - V_B)$"
+      },
+      "explanation": {
+        "fr": "$W = q(V_A - V_B) = 2 \\times 10^{-6} \\times (100 - 40) = 2 \\times 10^{-6} \\times 60 = 120 \\times 10^{-6}\\,J = 120\\,\\mu J$"
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le théorème de Gauss relie :",
+        "ar": "نظرية غاوس تربط بين:"
+      },
+      "choices": [
+        { "fr": "La force et la distance", "ar": "القوة والمسافة" },
+        { "fr": "Le flux du champ à travers une surface fermée et la charge totale intérieure", "ar": "تدفق الحقل عبر سطح مغلق والشحنة الكلية الداخلية" },
+        { "fr": "Le potentiel et le courant", "ar": "الكمون والتيار" },
+        { "fr": "L'énergie et la température", "ar": "الطاقة والحرارة" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "Le théorème de Gauss établit que le flux du champ électrique à travers une surface fermée (surface de Gauss) est égal à la charge totale enfermée divisée par $\\varepsilon_0$ : $\\Phi = \\oint \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{enc}}{\\varepsilon_0}$",
+        "ar": "تنص نظرية غاوس على أن تدفق الحقل الكهربائي عبر سطح مغلق يساوي الشحنة الكلية المحتواة مقسومة على $\\varepsilon_0$."
+      }
+    }
+  ]
+}

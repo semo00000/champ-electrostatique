@@ -1,0 +1,162 @@
+{
+  "id": "travail-et-energie",
+  "title": {
+    "fr": "Travail d'une force",
+    "ar": "شغل قوة"
+  },
+  "objectives": {
+    "fr": [
+      "Définir le travail d'une force constante",
+      "Calculer le travail d'une force à l'aide de W = F·d·cos(α)",
+      "Calculer le travail du poids d'un corps",
+      "Calculer le travail d'une force de frottement",
+      "Définir et calculer la puissance d'une force"
+    ],
+    "ar": [
+      "تعريف شغل قوة ثابتة",
+      "حساب شغل قوة باستعمال W = F·d·cos(α)",
+      "حساب شغل ثقل جسم",
+      "حساب شغل قوة الاحتكاك",
+      "تعريف وحساب استطاعة قوة"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Travail d'une force constante",
+        "ar": "1. شغل قوة ثابتة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Travail d'une force",
+        "ar": "شغل قوة"
+      },
+      "text": {
+        "fr": "Le travail d'une force constante F lors d'un déplacement rectiligne AB est le produit scalaire de la force par le vecteur déplacement.",
+        "ar": "شغل قوة ثابتة F خلال انتقال مستقيمي AB هو الجداء السلّمي للقوة بشعاع الانتقال."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "W_{AB}(\\vec{F}) = \\vec{F} \\cdot \\overrightarrow{AB} = F \\cdot AB \\cdot \\cos(\\alpha)",
+      "note": {
+        "fr": "α est l'angle entre la force F et le déplacement AB. W s'exprime en Joules (J). F en N, AB en m.",
+        "ar": "α هي الزاوية بين القوة F والانتقال AB. W يُعبَّر عنه بالجول (J). F بالنيوتن، AB بالمتر."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Si α < 90° : W > 0, le travail est moteur (la force favorise le mouvement)",
+          "Si α = 90° : W = 0, le travail est nul (force perpendiculaire au déplacement)",
+          "Si α > 90° : W < 0, le travail est résistant (la force s'oppose au mouvement)"
+        ],
+        "ar": [
+          "إذا α < 90° : W > 0، الشغل محرّك (القوة تساعد الحركة)",
+          "إذا α = 90° : W = 0، الشغل معدوم (القوة عمودية على الانتقال)",
+          "إذا α > 90° : W < 0، الشغل مقاوم (القوة تعارض الحركة)"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Travail du poids",
+        "ar": "2. شغل الثقل"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le travail du poids d'un corps de masse m lors d'un déplacement entre un point A (d'altitude z_A) et un point B (d'altitude z_B) ne dépend que de la différence d'altitude. Le poids est une force conservative.",
+        "ar": "شغل ثقل جسم كتلته m خلال انتقال بين نقطة A (ارتفاعها z_A) ونقطة B (ارتفاعها z_B) يعتمد فقط على فرق الارتفاع. الثقل قوة محافظة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "W_{AB}(\\vec{P}) = m \\cdot g \\cdot (z_A - z_B)",
+      "note": {
+        "fr": "Si le corps descend (z_A > z_B) : W > 0 (travail moteur). Si le corps monte (z_A < z_B) : W < 0 (travail résistant).",
+        "ar": "إذا نزل الجسم (z_A > z_B) : W > 0 (شغل محرّك). إذا صعد الجسم (z_A < z_B) : W < 0 (شغل مقاوم)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Travail d'une force de frottement",
+        "ar": "3. شغل قوة الاحتكاك"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Une force de frottement est toujours opposée au déplacement (α = 180°). Son travail est toujours négatif (résistant). Il dépend du chemin suivi : la force de frottement n'est pas conservative.",
+        "ar": "قوة الاحتكاك تكون دائماً معاكسة للانتقال (α = 180°). شغلها دائماً سالب (مقاوم). يعتمد على المسار المتبع: قوة الاحتكاك ليست محافظة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "W_{AB}(\\vec{f}) = -f \\cdot AB",
+      "note": {
+        "fr": "f est l'intensité de la force de frottement et AB la distance parcourue. Le signe négatif traduit le caractère résistant.",
+        "ar": "f شدة قوة الاحتكاك و AB المسافة المقطوعة. الإشارة السالبة تعبر عن الطابع المقاوم."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Travail des forces sur un plan incliné",
+        "ar": "مثال: شغل القوى على مستوى مائل"
+      },
+      "problem": {
+        "fr": "Un bloc de masse m = 5 kg glisse sur un plan incliné d'angle θ = 30° sur une distance d = 4 m. La force de frottement vaut f = 8 N. Calculer le travail du poids et le travail de la force de frottement. (g = 9,8 N/kg)",
+        "ar": "كتلة m = 5 kg تنزلق على مستوى مائل بزاوية θ = 30° على مسافة d = 4 m. قوة الاحتكاك f = 8 N. احسب شغل الثقل وشغل قوة الاحتكاك. (g = 9.8 N/kg)"
+      },
+      "solution": {
+        "fr": "Travail du poids :\nLa dénivellation est Δz = d·sin(θ) = 4 × sin(30°) = 4 × 0,5 = 2 m\nW(P) = m·g·Δz = 5 × 9,8 × 2 = 98 J (moteur, le bloc descend)\n\nTravail du frottement :\nW(f) = -f·d = -8 × 4 = -32 J (résistant)",
+        "latex": "W(\\vec{P}) = m g d \\sin\\theta = 5 \\times 9{,}8 \\times 4 \\times \\sin 30° = 98 \\text{ J} \\quad ; \\quad W(\\vec{f}) = -f \\cdot d = -8 \\times 4 = -32 \\text{ J}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Puissance d'une force",
+        "ar": "4. استطاعة قوة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Puissance",
+        "ar": "الاستطاعة"
+      },
+      "text": {
+        "fr": "La puissance moyenne d'une force est le quotient du travail effectué par la durée du déplacement. Elle s'exprime en Watts (W).",
+        "ar": "الاستطاعة المتوسطة لقوة هي حاصل قسمة الشغل المنجز على مدة الانتقال. تُعبَّر بالواط (W)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "P_{moy} = \\frac{W}{\\Delta t} = F \\cdot v \\cdot \\cos(\\alpha)",
+      "note": {
+        "fr": "P en Watts (W), W en Joules (J), Δt en secondes (s), v en m/s. Pour une force colinéaire à la vitesse : P = F·v.",
+        "ar": "P بالواط (W)، W بالجول (J)، Δt بالثواني (s)، v بـ m/s. لقوة على خط السرعة: P = F·v."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Le travail total des forces appliquées à un système est la somme algébrique des travaux de chaque force : W_total = ΣW(Fi). Le signe du travail total indique si les forces favorisent ou freinent le mouvement globalement.",
+        "ar": "الشغل الكلي للقوى المطبقة على جملة هو المجموع الجبري لأشغال كل قوة: W_total = ΣW(Fi). إشارة الشغل الكلي تدل على ما إذا كانت القوى تساعد أو تعيق الحركة إجمالياً."
+      }
+    }
+  ]
+}

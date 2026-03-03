@@ -1,0 +1,298 @@
+{
+  "id": "denombrement",
+  "title": {
+    "fr": "Dénombrement",
+    "ar": "التعداد"
+  },
+  "objectives": {
+    "fr": [
+      "Appliquer les principes additif et multiplicatif du dénombrement",
+      "Calculer le nombre de permutations d'un ensemble",
+      "Calculer le nombre d'arrangements de p éléments parmi n",
+      "Calculer le nombre de combinaisons et utiliser le triangle de Pascal",
+      "Appliquer la formule du binôme de Newton"
+    ],
+    "ar": [
+      "تطبيق مبدأي الجمع والضرب في التعداد",
+      "حساب عدد التبديلات لمجموعة",
+      "حساب عدد الترتيبات لـ p عنصر من بين n",
+      "حساب عدد التوافيق واستخدام مثلث باسكال",
+      "تطبيق صيغة ثنائي الحد لنيوتن"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Principes fondamentaux du dénombrement",
+        "ar": "1. المبادئ الأساسية للتعداد"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Principe additif",
+        "ar": "مبدأ الجمع"
+      },
+      "text": {
+        "fr": "Si un choix peut se faire de m manières OU de n manières (alternatives disjointes, c'est-à-dire mutuellement exclusives), le nombre total de façons est m + n. Plus généralement, si A₁, A₂, ..., Aₖ sont des ensembles finis deux à deux disjoints, alors |A₁ ∪ A₂ ∪ ... ∪ Aₖ| = |A₁| + |A₂| + ... + |Aₖ|.",
+        "ar": "إذا كان اختيار ما يمكن أن يتم بـ m طريقة أو بـ n طريقة (بدائل منفصلة، أي متنافية)، فإن العدد الإجمالي للطرق هو m + n. بشكل أعم، إذا كانت A₁, A₂, ..., Aₖ مجموعات منتهية متنافية مثنى مثنى، فإن |A₁ ∪ A₂ ∪ ... ∪ Aₖ| = |A₁| + |A₂| + ... + |Aₖ|."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Principe multiplicatif",
+        "ar": "مبدأ الضرب"
+      },
+      "text": {
+        "fr": "Si une expérience se décompose en deux étapes successives, la première pouvant se réaliser de m façons ET la seconde de n façons (indépendamment de la première), le nombre total de réalisations est m × n.",
+        "ar": "إذا تفككت تجربة إلى مرحلتين متتاليتين، الأولى يمكن إنجازها بـ m طريقة والثانية بـ n طريقة (بشكل مستقل عن الأولى)، فإن العدد الإجمالي للإنجازات هو m × n."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Principe multiplicatif",
+        "ar": "مثال: مبدأ الضرب"
+      },
+      "problem": {
+        "fr": "Un restaurant propose 3 entrées, 5 plats principaux et 4 desserts. Combien de menus complets (entrée + plat + dessert) peut-on composer ?",
+        "ar": "يقدم مطعم 3 مقبلات و5 أطباق رئيسية و4 حلويات. كم عدد القوائم الكاملة (مقبلة + طبق + حلوى) التي يمكن تكوينها؟"
+      },
+      "solution": {
+        "fr": "Par le principe multiplicatif : 3 × 5 × 4 = 60 menus possibles.",
+        "latex": "3 \\times 5 \\times 4 = 60"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Factorielle et permutations",
+        "ar": "2. المضروب والتبديلات"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Factorielle",
+        "ar": "المضروب"
+      },
+      "text": {
+        "fr": "La factorielle de n, notée n!, est le produit de tous les entiers de 1 à n : n! = 1 × 2 × 3 × ... × n. Par convention, 0! = 1. La factorielle croît très rapidement : 5! = 120, 10! = 3 628 800.",
+        "ar": "مضروب العدد n، يُرمز له n!، هو جداء جميع الأعداد الصحيحة من 1 إلى n : n! = 1 × 2 × 3 × ... × n. بالاتفاق: 0! = 1. المضروب يتزايد بسرعة كبيرة: 5! = 120، 10! = 3 628 800."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "n! = n \\times (n-1) \\times (n-2) \\times \\cdots \\times 2 \\times 1 \\qquad \\text{et} \\quad 0! = 1",
+      "note": {
+        "fr": "Relation de récurrence : n! = n × (n−1)!",
+        "ar": "علاقة الاسترجاع: n! = n × (n−1)!"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Permutation",
+        "ar": "تبديلة"
+      },
+      "text": {
+        "fr": "Une permutation d'un ensemble de n éléments est un arrangement de tous ces éléments. Le nombre de permutations de n éléments est n!. Une permutation correspond à un ordonnancement complet de l'ensemble.",
+        "ar": "تبديلة مجموعة من n عنصرًا هي ترتيب لجميع هذه العناصر. عدد تبديلات n عنصر هو n!. التبديلة تُعبّر عن ترتيب كامل للمجموعة."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Permutations",
+        "ar": "مثال: التبديلات"
+      },
+      "problem": {
+        "fr": "De combien de manières peut-on ranger 6 livres différents sur une étagère ?",
+        "ar": "بكم طريقة يمكن ترتيب 6 كتب مختلفة على رف؟"
+      },
+      "solution": {
+        "fr": "C'est le nombre de permutations de 6 éléments : 6! = 720 arrangements possibles.",
+        "latex": "6! = 6 \\times 5 \\times 4 \\times 3 \\times 2 \\times 1 = 720"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Arrangements",
+        "ar": "3. الترتيبات"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Arrangement",
+        "ar": "ترتيب"
+      },
+      "text": {
+        "fr": "Un arrangement de p éléments parmi n (avec p ≤ n) est un choix ordonné de p éléments distincts pris dans un ensemble de n éléments. L'ordre dans lequel on choisit les éléments compte.",
+        "ar": "ترتيب p عنصر من بين n (مع p ≤ n) هو اختيار مرتب لـ p عنصر متمايز من مجموعة ذات n عنصر. الترتيب الذي يتم به الاختيار مهم."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "A_n^p = \\frac{n!}{(n-p)!} = n \\times (n-1) \\times (n-2) \\times \\cdots \\times (n-p+1)",
+      "note": {
+        "fr": "Nombre d'arrangements de p éléments parmi n. Cas particulier : A_n^n = n! (permutations)",
+        "ar": "عدد الترتيبات لـ p عنصر من بين n. حالة خاصة: A_n^n = n! (تبديلات)"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Arrangements",
+        "ar": "مثال: الترتيبات"
+      },
+      "problem": {
+        "fr": "De combien de manières peut-on choisir un président, un vice-président et un secrétaire parmi 10 personnes ?",
+        "ar": "بكم طريقة يمكن اختيار رئيس ونائب رئيس وكاتب من بين 10 أشخاص؟"
+      },
+      "solution": {
+        "fr": "C'est un arrangement de 3 parmi 10 (l'ordre compte car les rôles sont différents) : A₁₀³ = 10 × 9 × 8 = 720.",
+        "latex": "A_{10}^3 = \\frac{10!}{7!} = 10 \\times 9 \\times 8 = 720"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Combinaisons",
+        "ar": "4. التوافيق"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Combinaison",
+        "ar": "توفيقة"
+      },
+      "text": {
+        "fr": "Une combinaison de p éléments parmi n est un choix non ordonné de p éléments distincts parmi n. Contrairement aux arrangements, l'ordre ne compte pas. On la note C_n^p ou (n p) (coefficient binomial).",
+        "ar": "توفيقة p عنصر من بين n هي اختيار غير مرتب لـ p عنصر متمايز من بين n. على عكس الترتيبات، الترتيب لا يهم. نرمز لها بـ C_n^p أو (n p) (المعامل الثنائي)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "C_n^p = \\binom{n}{p} = \\frac{n!}{p!\\,(n-p)!} = \\frac{A_n^p}{p!}",
+      "note": {
+        "fr": "Nombre de combinaisons de p éléments parmi n (coefficient binomial)",
+        "ar": "عدد التوافيق لـ p عنصر من بين n (المعامل الثنائي)"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "C(n, 0) = C(n, n) = 1",
+          "C(n, 1) = C(n, n−1) = n",
+          "C(n, p) = C(n, n−p) (symétrie)",
+          "Formule de Pascal : C(n+1, p) = C(n, p−1) + C(n, p)",
+          "Somme d'une ligne : C(n,0) + C(n,1) + ... + C(n,n) = 2ⁿ"
+        ],
+        "ar": [
+          "C(n, 0) = C(n, n) = 1",
+          "C(n, 1) = C(n, n−1) = n",
+          "C(n, p) = C(n, n−p) (التناظر)",
+          "صيغة باسكال: C(n+1, p) = C(n, p−1) + C(n, p)",
+          "مجموع السطر: C(n,0) + C(n,1) + ... + C(n,n) = 2ⁿ"
+        ]
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Combinaisons",
+        "ar": "مثال: التوافيق"
+      },
+      "problem": {
+        "fr": "De combien de manières peut-on choisir un comité de 3 personnes parmi 8 ?",
+        "ar": "بكم طريقة يمكن اختيار لجنة من 3 أشخاص من بين 8؟"
+      },
+      "solution": {
+        "fr": "C'est une combinaison (l'ordre ne compte pas) : C(8, 3) = 8! / (3! × 5!) = (8 × 7 × 6) / (3 × 2 × 1) = 56.",
+        "latex": "\\binom{8}{3} = \\frac{8!}{3!\\,5!} = \\frac{8 \\times 7 \\times 6}{6} = 56"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Triangle de Pascal",
+        "ar": "5. مثلث باسكال"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le triangle de Pascal est un tableau triangulaire où chaque nombre est la somme des deux nombres situés au-dessus de lui. La ligne n (en partant de n = 0) contient les coefficients C(n, 0), C(n, 1), ..., C(n, n). Les bords du triangle valent toujours 1. Ce triangle permet de lire directement les coefficients binomiaux sans calcul de factorielles.",
+        "ar": "مثلث باسكال هو جدول مثلثي حيث كل عدد هو مجموع العددين الموجودين فوقه. السطر n (ابتداءً من n = 0) يحتوي على المعاملات C(n, 0), C(n, 1), ..., C(n, n). حواف المثلث تساوي دائمًا 1. هذا المثلث يتيح قراءة المعاملات الثنائية مباشرة دون حساب المضروب."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\binom{n+1}{p} = \\binom{n}{p-1} + \\binom{n}{p}",
+      "note": {
+        "fr": "Formule de Pascal : chaque coefficient est la somme des deux au-dessus",
+        "ar": "صيغة باسكال: كل معامل هو مجموع المعاملين فوقه"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Binôme de Newton",
+        "ar": "6. ثنائي الحد لنيوتن"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Formule du binôme de Newton",
+        "ar": "صيغة ثنائي الحد لنيوتن"
+      },
+      "text": {
+        "fr": "Pour tous réels a et b et tout entier naturel n, le développement de (a + b)ⁿ est donné par la somme des termes C(n, k) × aⁿ⁻ᵏ × bᵏ pour k allant de 0 à n. Les coefficients C(n, k) sont les coefficients binomiaux lus dans le triangle de Pascal.",
+        "ar": "لكل عددين حقيقيين a و b ولكل عدد طبيعي n، يُعطى تفكيك (a + b)ⁿ بمجموع الحدود C(n, k) × aⁿ⁻ᵏ × bᵏ حيث k يأخذ القيم من 0 إلى n. المعاملات C(n, k) هي المعاملات الثنائية المقروءة من مثلث باسكال."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "(a+b)^n = \\sum_{k=0}^{n} \\binom{n}{k}\\, a^{n-k}\\, b^k",
+      "note": {
+        "fr": "Formule du binôme de Newton",
+        "ar": "صيغة ثنائي الحد لنيوتن"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Application du binôme",
+        "ar": "مثال: تطبيق ثنائي الحد"
+      },
+      "problem": {
+        "fr": "Développer (x + 2)⁴ en utilisant la formule du binôme de Newton.",
+        "ar": "فكّك (x + 2)⁴ باستخدام صيغة ثنائي الحد لنيوتن."
+      },
+      "solution": {
+        "fr": "(x+2)⁴ = C(4,0)x⁴ + C(4,1)x³(2) + C(4,2)x²(2²) + C(4,3)x(2³) + C(4,4)(2⁴) = x⁴ + 8x³ + 24x² + 32x + 16.",
+        "latex": "(x+2)^4 = x^4 + 4 \\cdot 2x^3 + 6 \\cdot 4x^2 + 4 \\cdot 8x + 16 = x^4 + 8x^3 + 24x^2 + 32x + 16"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Applications classiques du binôme : en posant a = 1, b = 1 on obtient 2ⁿ = Σ C(n,k) ; en posant a = 1, b = −1 on obtient 0 = Σ (−1)ᵏ C(n,k), ce qui donne la somme des coefficients pairs = somme des coefficients impairs = 2ⁿ⁻¹.",
+        "ar": "تطبيقات كلاسيكية للثنائي: بوضع a = 1, b = 1 نحصل على 2ⁿ = Σ C(n,k)؛ بوضع a = 1, b = −1 نحصل على 0 = Σ (−1)ᵏ C(n,k)، مما يعطي مجموع المعاملات الزوجية = مجموع المعاملات الفردية = 2ⁿ⁻¹."
+      }
+    }
+  ]
+}

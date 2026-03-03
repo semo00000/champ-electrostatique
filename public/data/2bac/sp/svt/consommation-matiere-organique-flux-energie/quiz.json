@@ -1,0 +1,112 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel est le lieu de deroulement de la glycolyse dans la cellule ?",
+        "ar": "ما هو مكان حدوث تحلل الغلوكوز في الخلية؟"
+      },
+      "choices": [
+        { "fr": "Le hyaloplasme (cytosol)", "ar": "الهيالوبلازم (السيتوزول)" },
+        { "fr": "La matrice mitochondriale", "ar": "ماتريكس الميتوكندري" },
+        { "fr": "La membrane interne de la mitochondrie", "ar": "الغشاء الداخلي للميتوكندري" },
+        { "fr": "Le noyau cellulaire", "ar": "النواة الخلوية" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "fr": "La glycolyse se deroule dans le hyaloplasme (cytosol). C'est une voie metabolique anaerobique commune a toutes les cellules vivantes, independante de la mitochondrie.",
+        "ar": "يتم تحلل الغلوكوز في الهيالوبلازم (السيتوزول). إنه مسلك أيضي لاهوائي مشترك بين جميع الخلايا الحية، مستقل عن الميتوكندري."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Combien de molecules d'ATP sont produites (bilan net) lors de la glycolyse d'une molecule de glucose ?",
+        "ar": "كم عدد جزيئات ATP المنتجة (الحصيلة الصافية) أثناء تحلل جزيئة غلوكوز واحدة؟"
+      },
+      "choices": [
+        { "fr": "4 ATP", "ar": "4 ATP" },
+        { "fr": "2 ATP", "ar": "2 ATP" },
+        { "fr": "36 ATP", "ar": "36 ATP" },
+        { "fr": "8 ATP", "ar": "8 ATP" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "La glycolyse produit 4 ATP au total, mais consomme 2 ATP dans la phase d'investissement. Le bilan net est donc de 2 ATP par molecule de glucose.",
+        "ar": "ينتج تحلل الغلوكوز 4 ATP إجمالا، لكنه يستهلك 2 ATP في مرحلة الاستثمار. الحصيلة الصافية إذن هي 2 ATP لكل جزيئة غلوكوز."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel est l'accepteur final d'electrons dans la chaine respiratoire mitochondriale ?",
+        "ar": "ما هو المستقبل النهائي للإلكترونات في السلسلة التنفسية الميتوكندرية؟"
+      },
+      "choices": [
+        { "fr": "Le NAD⁺", "ar": "NAD⁺" },
+        { "fr": "Le CO₂", "ar": "CO₂" },
+        { "fr": "L'oxygene moleculaire (O₂)", "ar": "الأكسجين الجزيئي (O₂)" },
+        { "fr": "L'acetyl-CoA", "ar": "الأسيتيل-CoA" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "L'oxygene moleculaire (O₂) est l'accepteur final d'electrons dans la chaine respiratoire. Il est reduit en eau (H₂O). C'est pourquoi la respiration cellulaire est dite aerobique.",
+        "ar": "الأكسجين الجزيئي (O₂) هو المستقبل النهائي للإلكترونات في السلسلة التنفسية. يُختزل إلى ماء (H₂O). لهذا يُقال إن التنفس الخلوي هوائي."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quel est le bilan energetique total (en ATP) de l'oxydation complete d'une molecule de glucose par la respiration cellulaire ?",
+        "ar": "ما هي الحصيلة الطاقية الإجمالية (بالـ ATP) للأكسدة الكاملة لجزيئة غلوكوز واحدة عن طريق التنفس الخلوي؟"
+      },
+      "choices": [
+        { "fr": "2 ATP", "ar": "2 ATP" },
+        { "fr": "12 ATP", "ar": "12 ATP" },
+        { "fr": "36 a 38 ATP", "ar": "36 إلى 38 ATP" },
+        { "fr": "100 ATP", "ar": "100 ATP" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "L'oxydation complete d'une molecule de glucose produit 36 a 38 ATP : 2 ATP (glycolyse) + 2 GTP (cycle de Krebs) + ~32-34 ATP (phosphorylation oxydative a partir des 10 NADH et 2 FADH₂).",
+        "ar": "تنتج الأكسدة الكاملة لجزيئة غلوكوز واحدة 36 إلى 38 ATP: 2 ATP (تحلل الغلوكوز) + 2 GTP (دورة كريبس) + ~32-34 ATP (فسفرة تأكسدية انطلاقا من 10 NADH و2 FADH₂)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Quelle est la difference principale entre la fermentation lactique et la fermentation alcoolique ?",
+        "ar": "ما الفرق الرئيسي بين التخمر اللبني والتخمر الكحولي؟"
+      },
+      "choices": [
+        { "fr": "La fermentation lactique produit plus d'ATP", "ar": "التخمر اللبني ينتج ATP أكثر" },
+        { "fr": "La fermentation lactique produit du lactate, la fermentation alcoolique produit de l'ethanol et du CO₂", "ar": "التخمر اللبني ينتج اللاكتات، والتخمر الكحولي ينتج الإيثانول وCO₂" },
+        { "fr": "La fermentation alcoolique necessite de l'oxygene", "ar": "التخمر الكحولي يتطلب الأكسجين" },
+        { "fr": "La fermentation lactique se deroule dans la mitochondrie", "ar": "التخمر اللبني يتم في الميتوكندري" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "fr": "La fermentation lactique transforme le pyruvate en lactate (dans les muscles, certaines bacteries). La fermentation alcoolique transforme le pyruvate en ethanol + CO₂ (chez les levures). Les deux produisent 2 ATP et se deroulent dans le cytoplasme.",
+        "ar": "يحول التخمر اللبني البيروفات إلى لاكتات (في العضلات وبعض البكتيريات). يحول التخمر الكحولي البيروفات إلى إيثانول + CO₂ (عند الخمائر). كلاهما ينتج 2 ATP ويتم في السيتوبلازم."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le cycle de Krebs se deroule dans :",
+        "ar": "تتم دورة كريبس في:"
+      },
+      "choices": [
+        { "fr": "Le cytoplasme", "ar": "السيتوبلازم" },
+        { "fr": "La membrane externe de la mitochondrie", "ar": "الغشاء الخارجي للميتوكندري" },
+        { "fr": "La matrice mitochondriale", "ar": "ماتريكس الميتوكندري" },
+        { "fr": "L'espace intermembranaire", "ar": "الفضاء بين الغشائي" }
+      ],
+      "correct": 2,
+      "explanation": {
+        "fr": "Le cycle de Krebs se deroule dans la matrice mitochondriale. L'acetyl-CoA y entre apres la decarboxylation du pyruvate et subit une serie de reactions d'oxydation pour produire des coenzymes reduits (NADH, FADH₂), du GTP et du CO₂.",
+        "ar": "تتم دورة كريبس في ماتريكس الميتوكندري. يدخل إليها الأسيتيل-CoA بعد نزع كربوكسيل البيروفات ويخضع لسلسلة من تفاعلات الأكسدة لإنتاج مرافقات إنزيمية مختزلة (NADH، FADH₂) وGTP وCO₂."
+      }
+    }
+  ]
+}

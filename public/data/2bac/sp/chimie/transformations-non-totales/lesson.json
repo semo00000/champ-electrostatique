@@ -1,0 +1,121 @@
+{
+  "id": "transformations-non-totales",
+  "title": {
+    "fr": "Transformations chimiques non totales",
+    "ar": "التحولات الكيميائية غير التامة"
+  },
+  "objectives": {
+    "fr": [
+      "Distinguer une transformation totale d'une transformation non totale",
+      "Définir l'état d'équilibre chimique",
+      "Calculer le taux d'avancement final τ = xf/xmax",
+      "Identifier les caractéristiques d'un état d'équilibre",
+      "Connaître des exemples de réactions non totales"
+    ],
+    "ar": [
+      "التمييز بين تحول تام وتحول غير تام",
+      "تعريف حالة التوازن الكيميائي",
+      "حساب نسبة التقدم النهائي",
+      "تحديد خصائص حالة التوازن",
+      "معرفة أمثلة على التفاعلات غير التامة"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Transformation totale et non totale",
+        "ar": "1. التحول التام وغير التام"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Transformation totale" },
+      "text": { "fr": "Une transformation est totale si, à l'état final, le réactif limitant a complètement disparu. L'avancement final xf est égal à l'avancement maximal xmax. Le taux d'avancement final vaut τ = 1 (ou 100%). La réaction est symbolisée par une flèche simple →." }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Transformation non totale" },
+      "text": { "fr": "Une transformation est non totale si, à l'état final, tous les réactifs et tous les produits coexistent dans le milieu réactionnel. L'avancement final xf est strictement inférieur à xmax. Le taux d'avancement final est τ < 1. La réaction est symbolisée par une double flèche ⇌." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Taux d'avancement final",
+        "ar": "2. نسبة التقدم النهائي"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\tau = \\frac{x_f}{x_{max}}",
+      "note": { "fr": "τ est le taux d'avancement final (sans unité, compris entre 0 et 1). xf est l'avancement final effectivement atteint, xmax est l'avancement maximal théorique (calculé en supposant la réaction totale)." }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Si τ = 1 : la transformation est totale. Le réactif limitant est entièrement consommé.",
+          "Si τ < 1 : la transformation est non totale (ou limitée). Le système atteint un état d'équilibre dynamique.",
+          "Plus τ est proche de 1, plus la réaction est avancée vers les produits."
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. L'état d'équilibre chimique",
+        "ar": "3. حالة التوازن الكيميائي"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "L'état d'équilibre chimique est un état dynamique dans lequel la réaction directe (sens 1) et la réaction inverse (sens 2) se produisent simultanément avec la même vitesse. Macroscopiquement, les concentrations de toutes les espèces restent constantes au cours du temps, bien qu'au niveau microscopique les réactions continuent." }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "À l'équilibre : la vitesse de la réaction directe est égale à la vitesse de la réaction inverse. Les concentrations sont constantes mais pas nécessairement égales. La composition du système ne dépend que de la constante d'équilibre K et des conditions initiales.",
+        "ar": "عند التوازن: سرعة التفاعل المباشر تساوي سرعة التفاعل العكسي. التراكيز ثابتة لكنها ليست بالضرورة متساوية. تركيبة النظام تعتمد فقط على ثابت التوازن K والشروط الأولية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Exemples de transformations non totales",
+        "ar": "4. أمثلة على التحولات غير التامة"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Dissociation d'un acide faible : l'acide éthanoïque" },
+      "problem": { "fr": "On prépare une solution d'acide éthanoïque CH₃COOH de concentration C = 1,0×10⁻² mol/L. Le pH mesuré est 3,4. Calculer le taux d'avancement final τ de la réaction de dissociation." },
+      "solution": {
+        "fr": "La réaction : CH₃COOH + H₂O ⇌ CH₃COO⁻ + H₃O⁺. On a [H₃O⁺] = 10⁻³·⁴ = 3,98×10⁻⁴ mol/L. L'avancement final : xf/V = [H₃O⁺] = 3,98×10⁻⁴ mol/L. L'avancement maximal : xmax/V = C = 1,0×10⁻² mol/L. Donc τ = xf/xmax = 3,98×10⁻⁴ / 1,0×10⁻² = 0,040 soit 4,0%. La réaction est très peu avancée : c'est bien un acide faible.",
+        "latex": "\\tau = \\frac{[H_3O^+]}{C} = \\frac{10^{-3,4}}{1{,}0 \\times 10^{-2}} = \\frac{3{,}98 \\times 10^{-4}}{1{,}0 \\times 10^{-2}} = 0{,}040"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Estérification : un autre exemple classique",
+        "ar": "5. الأسترة: مثال كلاسيكي آخر"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "L'estérification est la réaction entre un acide carboxylique et un alcool pour former un ester et de l'eau : R-COOH + R'-OH ⇌ R-COO-R' + H₂O. C'est une réaction lente, non totale et athermique. Si l'on part de quantités équimolaires d'acide et d'alcool, le taux d'avancement final est d'environ τ = 0,67 (soit 67%) pour un alcool primaire." }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Pour une transformation non totale, on utilise la double flèche ⇌ dans l'écriture de l'équation. Le système évolue jusqu'à un état d'équilibre qui résulte d'un compromis entre la réaction directe et la réaction inverse.",
+        "ar": "في التحول غير التام، نستخدم السهم المزدوج ⇌ في كتابة المعادلة. يتطور النظام حتى حالة توازن ناتجة عن التوفيق بين التفاعل المباشر والتفاعل العكسي."
+      }
+    }
+  ]
+}

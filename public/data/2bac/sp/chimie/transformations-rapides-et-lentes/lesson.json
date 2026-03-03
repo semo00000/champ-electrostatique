@@ -1,0 +1,144 @@
+{
+  "id": "transformations-rapides-et-lentes",
+  "title": {
+    "fr": "Transformations rapides et lentes",
+    "ar": "التحولات السريعة والبطيئة"
+  },
+  "objectives": {
+    "fr": [
+      "Distinguer une transformation rapide d'une transformation lente",
+      "Identifier les facteurs cinétiques influençant la vitesse d'une réaction",
+      "Comprendre le concept d'énergie d'activation",
+      "Connaître le rôle d'un catalyseur dans une réaction chimique"
+    ],
+    "ar": [
+      "التمييز بين تحول سريع وتحول بطيء",
+      "تحديد العوامل الحركية المؤثرة في سرعة التفاعل",
+      "فهم مفهوم طاقة التنشيط",
+      "معرفة دور الحفاز في التفاعل الكيميائي"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Transformation rapide et transformation lente",
+        "ar": "1. التحول السريع والتحول البطيء"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Transformation rapide" },
+      "text": { "fr": "Une transformation chimique est dite rapide lorsqu'elle semble se produire instantanément à l'échelle d'observation. Sa durée est trop courte pour être mesurée à l'œil nu (inférieure à une seconde). Exemple : réactions de précipitation, réactions acido-basiques en solution aqueuse." }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Transformation lente" },
+      "text": { "fr": "Une transformation chimique est dite lente lorsque son évolution peut être suivie à l'œil nu ou par des instruments de mesure. Sa durée va de quelques secondes à plusieurs heures, jours ou années. Exemple : oxydation du fer, réaction entre les ions permanganate MnO₄⁻ et l'acide oxalique H₂C₂O₄." }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La classification rapide/lente dépend de l'échelle de temps d'observation. Une transformation est considérée rapide si elle paraît terminée dès que les réactifs entrent en contact.",
+        "ar": "يعتمد تصنيف سريع/بطيء على مقياس زمن الملاحظة. يعتبر التحول سريعا إذا بدا منتهيا بمجرد تلامس المتفاعلات."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Les facteurs cinétiques",
+        "ar": "2. العوامل الحركية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Un facteur cinétique est un paramètre qui influence la vitesse d'une réaction chimique. Les principaux facteurs cinétiques sont : la température, la concentration des réactifs, la surface de contact et la présence d'un catalyseur." }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Température : l'augmentation de la température accélère la réaction. Les molécules possèdent une énergie cinétique plus grande, ce qui augmente la fréquence et l'efficacité des chocs moléculaires.",
+          "Concentration des réactifs : plus la concentration des réactifs est élevée, plus les chocs entre les molécules sont fréquents, et plus la vitesse de la réaction est grande.",
+          "Surface de contact : pour les réactions hétérogènes, diviser un solide en petits morceaux (augmenter sa surface de contact) accélère la réaction.",
+          "Catalyseur : substance qui augmente la vitesse d'une réaction sans être consommée. Il abaisse l'énergie d'activation de la réaction."
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Énergie d'activation",
+        "ar": "3. طاقة التنشيط"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Pour qu'une réaction chimique ait lieu, les molécules de réactifs doivent posséder une énergie minimale appelée énergie d'activation Ea. Seules les collisions dont l'énergie est supérieure ou égale à Ea sont efficaces et conduisent à la formation des produits." }
+    },
+    {
+      "type": "formula",
+      "latex": "k = A \\cdot e^{-\\frac{E_a}{RT}}",
+      "note": { "fr": "Loi d'Arrhenius : k est la constante de vitesse, A le facteur pré-exponentiel, Ea l'énergie d'activation (J·mol⁻¹), R la constante des gaz parfaits (8,314 J·mol⁻¹·K⁻¹) et T la température en Kelvin." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Les catalyseurs",
+        "ar": "4. الحفازات"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Catalyseur" },
+      "text": { "fr": "Un catalyseur est une espèce chimique qui augmente la vitesse d'une réaction sans apparaître dans l'équation-bilan. Il est intégralement régénéré à la fin de la réaction. Il abaisse l'énergie d'activation en offrant un chemin réactionnel alternatif." }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Catalyse homogène : le catalyseur et les réactifs sont dans la même phase. Exemple : ions Fe²⁺ catalysant la décomposition de H₂O₂.",
+          "Catalyse hétérogène : le catalyseur et les réactifs sont dans des phases différentes. Exemple : platine solide catalysant des réactions en phase gazeuse.",
+          "Catalyse enzymatique : catalyse biologique par des enzymes, très sélective et efficace. Exemple : la catalase décompose H₂O₂ dans l'organisme."
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Exemples de réactions rapides et lentes",
+        "ar": "5. أمثلة على التفاعلات السريعة والبطيئة"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Réaction rapide : précipitation du chlorure d'argent" },
+      "problem": { "fr": "On mélange une solution de nitrate d'argent AgNO₃ avec une solution de chlorure de sodium NaCl. Écrire l'équation de la réaction et justifier qu'elle est rapide." },
+      "solution": {
+        "fr": "L'équation de la réaction est : Ag⁺(aq) + Cl⁻(aq) → AgCl(s). Le précipité blanc apparaît instantanément dès le mélange des solutions. C'est une réaction ionique en solution aqueuse, donc rapide.",
+        "latex": "Ag^+(aq) + Cl^-(aq) \\rightarrow AgCl(s)"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Réaction lente : oxydation de l'acide oxalique par le permanganate" },
+      "problem": { "fr": "On verse de l'acide oxalique H₂C₂O₄ sur une solution acidifiée de permanganate de potassium KMnO₄. Décrire l'observation et expliquer." },
+      "solution": {
+        "fr": "La décoloration violette de la solution de permanganate est progressive et dure plusieurs minutes. La réaction est lente à température ambiante. L'augmentation de la température ou l'ajout d'ions Mn²⁺ (catalyseur) accélère cette décoloration.",
+        "latex": "2MnO_4^-(aq) + 5H_2C_2O_4(aq) + 6H^+(aq) \\rightarrow 2Mn^{2+}(aq) + 10CO_2(g) + 8H_2O(l)"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Un catalyseur ne modifie ni le sens d'évolution de la réaction, ni l'état d'équilibre. Il permet seulement d'atteindre cet état plus rapidement.",
+        "ar": "لا يغير الحفاز اتجاه تطور التفاعل ولا حالة التوازن. إنه يسمح فقط بالوصول إلى هذه الحالة بسرعة أكبر."
+      }
+    }
+  ]
+}

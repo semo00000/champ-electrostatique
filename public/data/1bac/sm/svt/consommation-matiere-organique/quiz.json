@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'équation bilan de la respiration cellulaire est :",
+        "ar": "المعادلة الإجمالية للتنفس الخلوي هي:"
+      },
+      "choices": [
+        { "fr": "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂", "ar": "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂" },
+        { "fr": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP", "ar": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP" },
+        { "fr": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂", "ar": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂" },
+        { "fr": "C₆H₁₂O₆ → 2CH₃CHOHCOOH", "ar": "C₆H₁₂O₆ → 2CH₃CHOHCOOH" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La respiration cellulaire dégrade le glucose en présence d'O₂ pour donner du CO₂, de l'eau et de l'énergie (ATP). La première équation est celle de la photosynthèse (réaction inverse).",
+        "ar": "التنفس الخلوي يفكك الجلوكوز بوجود O₂ لإعطاء CO₂ وماء وطاقة (ATP). المعادلة الأولى هي معادلة التركيب الضوئي (التفاعل العكسي)."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La glycolyse se déroule dans :",
+        "ar": "يجري تحلل الجلوكوز في:"
+      },
+      "choices": [
+        { "fr": "La matrice mitochondriale", "ar": "مطرس الميتوكوندري" },
+        { "fr": "La membrane interne de la mitochondrie", "ar": "الغشاء الداخلي للميتوكوندري" },
+        { "fr": "Le cytoplasme (hyaloplasme)", "ar": "الهيولى (السيتوبلازم)" },
+        { "fr": "Le noyau", "ar": "النواة" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "La glycolyse est la seule étape de la respiration qui se déroule dans le cytoplasme. Le cycle de Krebs a lieu dans la matrice mitochondriale et la chaîne respiratoire dans la membrane interne.",
+        "ar": "تحلل الجلوكوز هو المرحلة الوحيدة من التنفس التي تجري في الهيولى. دورة كريبس تجري في مطرس الميتوكوندري والسلسلة التنفسية في الغشاء الداخلي."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Combien de molécules d'ATP sont produites au total par la respiration cellulaire complète d'une molécule de glucose (valeur maximale) ?",
+        "ar": "كم عدد جزيئات ATP المنتجة إجمالا بالتنفس الخلوي الكامل لجزيئة جلوكوز واحدة (القيمة القصوى)؟"
+      },
+      "answer": 38,
+      "tolerance": 2,
+      "unit": "ATP",
+      "hint": {
+        "fr": "Additionnez les ATP de la glycolyse, du cycle de Krebs et de la chaîne respiratoire.",
+        "ar": "اجمع ATP من تحلل الجلوكوز ودورة كريبس والسلسلة التنفسية."
+      },
+      "explanation": {
+        "fr": "Glycolyse : 2 ATP. Cycle de Krebs : 2 ATP. Chaîne respiratoire : environ 34 ATP (10 NADH,H⁺ × 3 + 2 FADH₂ × 2 = 34). Total : 36 à 38 ATP.",
+        "ar": "تحلل الجلوكوز: 2 ATP. دورة كريبس: 2 ATP. السلسلة التنفسية: حوالي 34 ATP. المجموع: 36 إلى 38 ATP."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La fermentation alcoolique produit :",
+        "ar": "ينتج التخمر الكحولي:"
+      },
+      "choices": [
+        { "fr": "De l'acide lactique et du CO₂", "ar": "حمض اللبن و CO₂" },
+        { "fr": "De l'éthanol et du CO₂", "ar": "الإيثانول و CO₂" },
+        { "fr": "De l'éthanol et de l'O₂", "ar": "الإيثانول و O₂" },
+        { "fr": "Du CO₂ et de l'H₂O", "ar": "CO₂ و H₂O" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La fermentation alcoolique, réalisée par les levures, transforme le glucose en éthanol (C₂H₅OH) et en dioxyde de carbone (CO₂), avec production de 2 ATP.",
+        "ar": "التخمر الكحولي، الذي تقوم به الخمائر، يحول الجلوكوز إلى إيثانول (C₂H₅OH) وثاني أكسيد الكربون (CO₂)، مع إنتاج 2 ATP."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "L'accepteur final des électrons dans la chaîne respiratoire est :",
+        "ar": "المستقبل النهائي للإلكترونات في السلسلة التنفسية هو:"
+      },
+      "choices": [
+        { "fr": "Le NAD⁺", "ar": "NAD⁺" },
+        { "fr": "Le FAD", "ar": "FAD" },
+        { "fr": "Le dioxygène O₂", "ar": "ثنائي الأكسجين O₂" },
+        { "fr": "Le dioxyde de carbone CO₂", "ar": "ثنائي أكسيد الكربون CO₂" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "Le dioxygène O₂ est l'accepteur final des électrons dans la chaîne respiratoire. Il est réduit en eau H₂O. C'est pourquoi la respiration cellulaire nécessite de l'O₂ (aérobique).",
+        "ar": "ثنائي الأكسجين O₂ هو المستقبل النهائي للإلكترونات في السلسلة التنفسية. يُختزل إلى ماء H₂O. لهذا يحتاج التنفس الخلوي إلى O₂ (هوائي)."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Combien de molécules d'ATP sont produites au total par la fermentation d'une molécule de glucose ?",
+        "ar": "كم عدد جزيئات ATP المنتجة إجمالا بتخمر جزيئة جلوكوز واحدة؟"
+      },
+      "answer": 2,
+      "tolerance": 0,
+      "unit": "ATP",
+      "hint": {
+        "fr": "La fermentation ne comprend que la glycolyse comme étape productrice d'ATP.",
+        "ar": "لا يشمل التخمر سوى تحلل الجلوكوز كمرحلة منتجة لـ ATP."
+      },
+      "explanation": {
+        "fr": "La fermentation ne produit que 2 ATP par molécule de glucose (uniquement ceux de la glycolyse). Il n'y a ni cycle de Krebs ni chaîne respiratoire en l'absence d'O₂.",
+        "ar": "لا ينتج التخمر سوى 2 ATP لكل جزيئة جلوكوز (فقط من تحلل الجلوكوز). لا توجد دورة كريبس ولا سلسلة تنفسية في غياب O₂."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le cycle de Krebs se déroule dans :",
+        "ar": "تجري دورة كريبس في:"
+      },
+      "choices": [
+        { "fr": "Le cytoplasme", "ar": "الهيولى" },
+        { "fr": "La matrice mitochondriale", "ar": "مطرس الميتوكوندري" },
+        { "fr": "La membrane interne de la mitochondrie", "ar": "الغشاء الداخلي للميتوكوندري" },
+        { "fr": "Le réticulum endoplasmique", "ar": "الشبكة الإندوبلازمية" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le cycle de Krebs (cycle de l'acide citrique) se déroule dans la matrice mitochondriale. Le pyruvate y est d'abord converti en acétyl-CoA avant d'entrer dans le cycle.",
+        "ar": "تجري دورة كريبس (دورة حمض الستريك) في مطرس الميتوكوندري. يتحول البيروفات أولا إلى أسيتيل-CoA قبل دخول الدورة."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le rôle de la fermentation est principalement de :",
+        "ar": "الدور الرئيسي للتخمر هو:"
+      },
+      "choices": [
+        { "fr": "Produire un maximum d'ATP", "ar": "إنتاج أقصى كمية من ATP" },
+        { "fr": "Régénérer le NAD⁺ nécessaire à la glycolyse en absence d'O₂", "ar": "تجديد NAD⁺ الضروري لتحلل الجلوكوز في غياب O₂" },
+        { "fr": "Dégrader complètement le glucose en CO₂ et H₂O", "ar": "تفكيك الجلوكوز كليا إلى CO₂ و H₂O" },
+        { "fr": "Synthétiser du glucose à partir du CO₂", "ar": "تركيب الجلوكوز انطلاقا من CO₂" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le rôle principal de la fermentation est de régénérer le NAD⁺ (oxydé) à partir du NADH,H⁺ (réduit) en absence d'O₂, permettant ainsi à la glycolyse de continuer à fonctionner et de produire 2 ATP.",
+        "ar": "الدور الرئيسي للتخمر هو تجديد NAD⁺ (المؤكسد) انطلاقا من NADH,H⁺ (المختزل) في غياب O₂، مما يسمح لتحلل الجلوكوز بالاستمرار في العمل وإنتاج 2 ATP."
+      }
+    }
+  ]
+}

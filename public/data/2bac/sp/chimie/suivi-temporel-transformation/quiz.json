@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "La vitesse volumique d'une réaction chimique est définie par :" },
+      "choices": [
+        { "fr": "v = dx/dt" },
+        { "fr": "v = (1/V)·(dx/dt)" },
+        { "fr": "v = V·(dx/dt)" },
+        { "fr": "v = −d[R]/dt" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "La vitesse volumique de réaction est v = (1/V)·(dx/dt), où V est le volume du milieu réactionnel et x l'avancement de la réaction. L'expression v = −d[R]/dt n'est correcte que si le coefficient stœchiométrique du réactif R est 1." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Le temps de demi-réaction t½ correspond à l'instant où :" },
+      "choices": [
+        { "fr": "La moitié des réactifs a été introduite" },
+        { "fr": "L'avancement x atteint la moitié de l'avancement maximal théorique xmax" },
+        { "fr": "L'avancement x atteint la moitié de l'avancement final xf" },
+        { "fr": "La vitesse de réaction est divisée par deux" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "Par définition, le temps de demi-réaction t½ est la durée au bout de laquelle l'avancement atteint la moitié de sa valeur finale : x(t½) = xf/2. Attention : xf n'est pas toujours égal à xmax (cas des réactions non totales)." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "La spectrophotométrie permet de suivre une réaction chimique si :" },
+      "choices": [
+        { "fr": "Un des réactifs ou produits est un gaz" },
+        { "fr": "La réaction produit un précipité" },
+        { "fr": "Un des réactifs ou produits est une espèce colorée en solution" },
+        { "fr": "La réaction dégage de la chaleur" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "La spectrophotométrie mesure l'absorbance d'une solution à une longueur d'onde donnée. Elle nécessite qu'au moins un réactif ou produit soit coloré, car l'absorbance est liée à la concentration par la loi de Beer-Lambert : A = ε·l·[C]." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Pour la réaction 2A + B → C, si n₀(A) = 0,10 mol, n₀(B) = 0,08 mol dans V = 200 mL, quelle est l'avancement maximal xmax en mmol ?" },
+      "answer": 50,
+      "tolerance": 1,
+      "unit": "mmol",
+      "hint": { "fr": "xmax est limité par le réactif limitant. Pour A : xmax = n₀(A)/2. Pour B : xmax = n₀(B)/1. Comparer les deux valeurs." },
+      "explanation": { "fr": "Pour A : xmax = 0,10/2 = 0,050 mol = 50 mmol. Pour B : xmax = 0,08/1 = 0,08 mol = 80 mmol. Le réactif limitant est A, donc xmax = 50 mmol." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "La conductivité d'une solution contenant des ions Na⁺ (λ = 50,1 S·cm²·mol⁻¹) à la concentration 0,020 mol/L et des ions Cl⁻ (λ = 76,3 S·cm²·mol⁻¹) à la même concentration vaut (en mS·cm⁻¹) :" },
+      "answer": 2.53,
+      "tolerance": 0.05,
+      "unit": "mS·cm⁻¹",
+      "hint": { "fr": "σ = Σ λᵢ·[Xᵢ]. Attention aux unités : convertir S·cm²·mol⁻¹ × mol/L en mS·cm⁻¹." },
+      "explanation": { "fr": "σ = λ(Na⁺)·[Na⁺] + λ(Cl⁻)·[Cl⁻] = 50,1×0,020 + 76,3×0,020 = 1,002 + 1,526 = 2,528 mS·cm⁻¹ ≈ 2,53 mS·cm⁻¹. (en convertissant : S·cm²·mol⁻¹ × mol·L⁻¹ = S·cm²·L⁻¹ = 10⁻³ S·cm⁻¹ = mS·cm⁻¹)" }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Comment évolue la vitesse volumique d'une réaction au cours du temps ?" },
+      "choices": [
+        { "fr": "Elle augmente puis diminue" },
+        { "fr": "Elle reste constante tout au long de la réaction" },
+        { "fr": "Elle est maximale à t = 0 puis diminue continuellement" },
+        { "fr": "Elle est nulle à t = 0 puis augmente" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "La vitesse volumique est maximale à l'instant initial (v₀) car les concentrations des réactifs sont les plus élevées. Elle diminue ensuite continuellement car les réactifs sont consommés, jusqu'à s'annuler quand la réaction est terminée ou a atteint l'équilibre." }
+    }
+  ]
+}

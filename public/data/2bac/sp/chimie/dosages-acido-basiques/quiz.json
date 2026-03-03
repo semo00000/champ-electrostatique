@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "À l'équivalence d'un dosage acido-basique :",
+        "ar": "عند التكافؤ في معايرة حمضية-قاعدية:"
+      },
+      "choices": [
+        { "fr": "Le pH est toujours égal à 7", "ar": "pH يساوي دائماً 7" },
+        { "fr": "Les réactifs sont dans les proportions stœchiométriques", "ar": "المتفاعلات في النسب الستوكيومترية" },
+        { "fr": "La solution est toujours acide", "ar": "المحلول حمضي دائماً" },
+        { "fr": "La réaction de dosage est non totale", "ar": "تفاعل المعايرة غير تام" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "À l'équivalence, les réactifs ont été mélangés dans les proportions stœchiométriques : ils sont entièrement consommés. Le pH à l'équivalence dépend de la nature de l'acide et de la base (il n'est pas toujours 7).",
+        "ar": "عند التكافؤ، تم خلط المتفاعلات بالنسب الستوكيومترية: تُستهلك بالكامل. يعتمد pH عند التكافؤ على طبيعة الحمض والقاعدة (ليس دائماً 7)."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On dose 25,0 mL d'une solution d'acide chlorhydrique par de la soude à 0,050 mol/L. Le volume à l'équivalence est VE = 10,0 mL. Quelle est la concentration de l'acide (en mol/L) ?",
+        "ar": "نعاير 25,0 mL من محلول حمض كلور الماء بمحلول هيدروكسيد الصوديوم بتركيز 0,050 mol/L. حجم التكافؤ VE = 10,0 mL. ما تركيز الحمض (بـ mol/L)؟"
+      },
+      "answer": 0.020,
+      "tolerance": 0.001,
+      "unit": "mol/L",
+      "hint": {
+        "fr": "À l'équivalence : CA × VA = CB × VE",
+        "ar": "عند التكافؤ: CA × VA = CB × VE"
+      },
+      "explanation": {
+        "fr": "CA = CB × VE / VA = 0,050 × 10,0 / 25,0 = 0,020 mol/L.",
+        "ar": "CA = CB × VE / VA = 0,050 × 10,0 / 25,0 = 0,020 mol/L."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Pour le dosage d'un acide faible par une base forte, le pH à l'équivalence est :",
+        "ar": "عند معايرة حمض ضعيف بقاعدة قوية، pH عند التكافؤ يكون:"
+      },
+      "choices": [
+        { "fr": "Inférieur à 7", "ar": "أقل من 7" },
+        { "fr": "Égal à 7", "ar": "يساوي 7" },
+        { "fr": "Supérieur à 7", "ar": "أكبر من 7" },
+        { "fr": "Toujours égal au pKa", "ar": "يساوي دائماً pKa" }
+      ],
+      "answer": 2,
+      "explanation": {
+        "fr": "À l'équivalence du dosage d'un acide faible par une base forte, la solution contient la base conjuguée A⁻ de l'acide faible. Cette base faible rend le milieu basique, donc pH > 7.",
+        "ar": "عند تكافؤ معايرة حمض ضعيف بقاعدة قوية، يحتوي المحلول على القاعدة المرافقة A⁻ للحمض الضعيف. هذه القاعدة الضعيفة تجعل الوسط قاعدياً، إذن pH > 7."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "À la demi-équivalence du dosage d'un acide faible par une base forte :",
+        "ar": "عند نصف التكافؤ لمعايرة حمض ضعيف بقاعدة قوية:"
+      },
+      "choices": [
+        { "fr": "pH = 7", "ar": "pH = 7" },
+        { "fr": "pH = pKa", "ar": "pH = pKa" },
+        { "fr": "pH = 14 - pKa", "ar": "pH = 14 - pKa" },
+        { "fr": "pH = 2 × pKa", "ar": "pH = 2 × pKa" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "À la demi-équivalence (V = VE/2), la moitié de l'acide a réagi : [AH] = [A⁻]. D'après Henderson-Hasselbalch : pH = pKa + log(1) = pKa.",
+        "ar": "عند نصف التكافؤ (V = VE/2)، نصف الحمض تفاعل: [AH] = [A⁻]. حسب هندرسون-هاسلبالخ: pH = pKa + log(1) = pKa."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Pour le dosage d'un acide faible par une base forte, quel indicateur coloré est le plus adapté ?",
+        "ar": "لمعايرة حمض ضعيف بقاعدة قوية، أي كاشف لوني هو الأنسب؟"
+      },
+      "choices": [
+        { "fr": "Hélianthine (zone de virage 3,1-4,4)", "ar": "الهليانتين (منطقة التحول 3,1-4,4)" },
+        { "fr": "Rouge de méthyle (zone de virage 4,2-6,2)", "ar": "أحمر الميثيل (منطقة التحول 4,2-6,2)" },
+        { "fr": "Bleu de bromothymol (zone de virage 6,0-7,6)", "ar": "أزرق البروموثيمول (منطقة التحول 6,0-7,6)" },
+        { "fr": "Phénolphtaléine (zone de virage 8,2-10,0)", "ar": "الفينولفتالين (منطقة التحول 8,2-10,0)" }
+      ],
+      "answer": 3,
+      "explanation": {
+        "fr": "Le dosage d'un acide faible par une base forte donne un pH à l'équivalence supérieur à 7 (basique). La phénolphtaléine, avec sa zone de virage 8,2-10,0, encadre bien cette valeur.",
+        "ar": "معايرة حمض ضعيف بقاعدة قوية تعطي pH عند التكافؤ أكبر من 7 (قاعدي). الفينولفتالين بمنطقة تحوله 8,2-10,0 يحيط جيداً بهذه القيمة."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On dose 20,0 mL d'acide éthanoïque par NaOH à 0,10 mol/L. Le volume à l'équivalence est VE = 12,0 mL. Quel est le volume de solution titrante versé à la demi-équivalence (en mL) ?",
+        "ar": "نعاير 20,0 mL من حمض الإيثانويك بـ NaOH بتركيز 0,10 mol/L. حجم التكافؤ VE = 12,0 mL. ما حجم المحلول المعاير المضاف عند نصف التكافؤ (بـ mL)؟"
+      },
+      "answer": 6.0,
+      "tolerance": 0.1,
+      "unit": "mL",
+      "hint": {
+        "fr": "La demi-équivalence correspond à V = VE/2.",
+        "ar": "نصف التكافؤ يوافق V = VE/2."
+      },
+      "explanation": {
+        "fr": "La demi-équivalence correspond au volume V₁/₂ = VE/2 = 12,0/2 = 6,0 mL. À ce point, pH = pKa.",
+        "ar": "نصف التكافؤ يوافق الحجم V₁/₂ = VE/2 = 12,0/2 = 6,0 mL. عند هذه النقطة pH = pKa."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Le point d'équivalence sur une courbe de dosage pH = f(V) se détermine par :",
+        "ar": "تُحدد نقطة التكافؤ على منحنى المعايرة pH = f(V) بواسطة:"
+      },
+      "choices": [
+        { "fr": "Le point où pH = 7", "ar": "النقطة حيث pH = 7" },
+        { "fr": "Le point d'inflexion de la courbe (saut de pH)", "ar": "نقطة الانعطاف في المنحنى (قفزة pH)" },
+        { "fr": "Le début de la courbe", "ar": "بداية المنحنى" },
+        { "fr": "Le point où la courbe est horizontale", "ar": "النقطة حيث يكون المنحنى أفقياً" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Le point d'équivalence correspond au point d'inflexion de la courbe, situé au milieu du saut de pH. On peut le déterminer par la méthode des tangentes ou par le maximum de la dérivée |dpH/dV|.",
+        "ar": "تتوافق نقطة التكافؤ مع نقطة الانعطاف في المنحنى، الواقعة في منتصف قفزة pH. يمكن تحديدها بطريقة المماسات أو بالقيمة القصوى للمشتقة |dpH/dV|."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On dose 50,0 mL d'ammoniaque NH₃ (base faible) par HCl à 0,20 mol/L. Le volume à l'équivalence est VE = 25,0 mL. Calculer la concentration de NH₃ (en mol/L).",
+        "ar": "نعاير 50,0 mL من الأمونياك NH₃ (قاعدة ضعيفة) بـ HCl بتركيز 0,20 mol/L. حجم التكافؤ VE = 25,0 mL. احسب تركيز NH₃ (بـ mol/L)."
+      },
+      "answer": 0.10,
+      "tolerance": 0.01,
+      "unit": "mol/L",
+      "hint": {
+        "fr": "CB × VB = CA × VE. Ici l'ammoniaque est la base titrée et HCl est l'acide titrant.",
+        "ar": "CB × VB = CA × VE. هنا الأمونياك هو القاعدة المعايرة وHCl هو الحمض المعاير."
+      },
+      "explanation": {
+        "fr": "À l'équivalence : CB × VB = CA × VE. CB = CA × VE / VB = 0,20 × 25,0 / 50,0 = 0,10 mol/L.",
+        "ar": "عند التكافؤ: CB × VB = CA × VE. CB = CA × VE / VB = 0,20 × 25,0 / 50,0 = 0,10 mol/L."
+      }
+    }
+  ]
+}

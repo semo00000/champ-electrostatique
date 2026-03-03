@@ -1,0 +1,193 @@
+{
+  "id": "consommation-matiere-organique-flux-energie",
+  "title": {
+    "fr": "Consommation de la matiere organique et flux d'energie",
+    "ar": "استهلاك المادة العضوية وتدفق الطاقة"
+  },
+  "objectives": {
+    "fr": [
+      "Decrire les etapes de la respiration cellulaire (glycolyse, cycle de Krebs, chaine respiratoire)",
+      "Calculer le bilan energetique de l'oxydation complete du glucose (~36-38 ATP)",
+      "Comparer la respiration aerobique et la fermentation",
+      "Expliquer le role de l'ATP comme intermediaire energetique universel"
+    ],
+    "ar": [
+      "وصف مراحل التنفس الخلوي (تحلل الغلوكوز، دورة كريبس، السلسلة التنفسية)",
+      "حساب الحصيلة الطاقية للأكسدة الكاملة للغلوكوز (~36-38 ATP)",
+      "مقارنة التنفس الهوائي والتخمر",
+      "شرح دور ATP كوسيط طاقي عام"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Introduction : les voies metaboliques",
+        "ar": "1. مقدمة: المسالك الأيضية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Les cellules ont besoin d'energie pour assurer leurs fonctions vitales (division, synthese de molecules, transport actif, contraction musculaire). Cette energie provient de l'oxydation de la matiere organique, principalement le glucose (C₆H₁₂O₆). La degradation du glucose se fait selon deux voies principales : la respiration cellulaire (en presence d'O₂) et la fermentation (en absence d'O₂). L'energie liberee est stockee sous forme d'ATP (adenosine triphosphate).",
+        "ar": "تحتاج الخلايا إلى الطاقة لضمان وظائفها الحيوية (الانقسام، تركيب الجزيئات، النقل النشط، التقلص العضلي). تأتي هذه الطاقة من أكسدة المادة العضوية، خاصة الغلوكوز (C₆H₁₂O₆). يتم تفكيك الغلوكوز عبر مسلكين رئيسيين: التنفس الخلوي (بوجود O₂) والتخمر (بغياب O₂). يتم تخزين الطاقة المحررة على شكل ATP (أدينوزين ثلاثي الفوسفات)."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "ATP (Adenosine Triphosphate)",
+        "ar": "ATP (أدينوزين ثلاثي الفوسفات)"
+      },
+      "text": {
+        "fr": "Molecule universelle servant de monnaie energetique de la cellule. L'hydrolyse d'une molecule d'ATP en ADP + Pi libere environ 30,5 kJ/mol d'energie utilisable par la cellule.",
+        "ar": "جزيئة عامة تعمل كعملة طاقية للخلية. يحرر التحلل المائي لجزيئة ATP إلى ADP + Pi حوالي 30.5 كيلوجول/مول من الطاقة القابلة للاستعمال من طرف الخلية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. La glycolyse",
+        "ar": "2. تحلل الغلوكوز (الحلمأة السكرية)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La glycolyse est la premiere etape commune a la respiration et a la fermentation. Elle se deroule dans le hyaloplasme (cytosol) et ne necessite pas d'oxygene. Au cours de cette voie metabolique, une molecule de glucose (6 carbones) est transformee en deux molecules d'acide pyruvique (3 carbones chacune). La glycolyse comporte une phase d'investissement energetique (consommation de 2 ATP) et une phase de rendement energetique (production de 4 ATP), soit un gain net de 2 ATP. Deux molecules de NAD⁺ sont reduites en 2 NADH + H⁺.",
+        "ar": "تحلل الغلوكوز هو المرحلة الأولى المشتركة بين التنفس والتخمر. يتم في الهيالوبلازم (السيتوزول) ولا يتطلب الأكسجين. خلال هذا المسلك الأيضي، تتحول جزيئة غلوكوز (6 ذرات كربون) إلى جزيئتين من حمض البيروفيك (3 ذرات كربون لكل واحدة). يتضمن التحلل مرحلة استثمار طاقي (استهلاك 2 ATP) ومرحلة مردود طاقي (إنتاج 4 ATP)، أي ربح صاف قدره 2 ATP. يتم اختزال جزيئتين من NAD⁺ إلى 2 NADH + H⁺."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "C_6H_{12}O_6 + 2\\,NAD^+ + 2\\,ADP + 2\\,P_i \\rightarrow 2\\,C_3H_4O_3 + 2\\,NADH + 2\\,H^+ + 2\\,ATP",
+      "note": {
+        "fr": "Bilan global de la glycolyse : 1 glucose donne 2 pyruvates, 2 ATP nets et 2 NADH + H⁺"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La glycolyse est une voie anaerobique (ne necessite pas d'O₂). Elle se deroule dans le cytoplasme de toutes les cellules vivantes.",
+        "ar": "تحلل الغلوكوز مسلك لاهوائي (لا يتطلب O₂). يحدث في سيتوبلازم جميع الخلايا الحية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Le cycle de Krebs (cycle de l'acide citrique)",
+        "ar": "3. دورة كريبس (دورة حمض الستريك)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Avant d'entrer dans le cycle de Krebs, le pyruvate subit une decarboxylation oxydative dans la matrice mitochondriale : il est transforme en acetyl-CoA (2 carbones) avec liberation de CO₂ et reduction de NAD⁺ en NADH + H⁺. Cette reaction est catalysee par le complexe pyruvate deshydrogenase. Le cycle de Krebs se deroule dans la matrice mitochondriale. L'acetyl-CoA (2C) se combine avec l'oxaloacetate (4C) pour former le citrate (6C). A chaque tour du cycle, on obtient : 3 NADH + H⁺, 1 FADH₂, 1 GTP (equivalent a 1 ATP) et 2 CO₂. Comme chaque molecule de glucose produit 2 pyruvates, le cycle tourne deux fois par molecule de glucose.",
+        "ar": "قبل الدخول في دورة كريبس، يخضع البيروفات لنزع كربوكسيل تأكسدي في ماتريكس الميتوكندري: يتحول إلى أسيتيل-CoA (ذرتا كربون) مع تحرير CO₂ واختزال NAD⁺ إلى NADH + H⁺. يتم تحفيز هذا التفاعل بواسطة معقد بيروفات ديهيدروجيناز. تتم دورة كريبس في ماتريكس الميتوكندري. يتحد الأسيتيل-CoA (2C) مع الأوكزالوأسيتات (4C) لتكوين السيترات (6C). في كل دورة نحصل على: 3 NADH + H⁺ و1 FADH₂ و1 GTP (يعادل 1 ATP) و2 CO₂. بما أن كل جزيئة غلوكوز تنتج 2 بيروفات، تدور الدورة مرتين لكل جزيئة غلوكوز."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Bilan par tour : 3 NADH + H⁺, 1 FADH₂, 1 GTP, 2 CO₂",
+          "Bilan pour 1 glucose (2 tours) : 6 NADH + H⁺, 2 FADH₂, 2 GTP, 4 CO₂",
+          "En incluant la decarboxylation du pyruvate : +2 NADH + H⁺ et +2 CO₂ supplementaires"
+        ],
+        "ar": [
+          "حصيلة كل دورة: 3 NADH + H⁺، 1 FADH₂، 1 GTP، 2 CO₂",
+          "حصيلة لكل جزيئة غلوكوز (دورتان): 6 NADH + H⁺، 2 FADH₂، 2 GTP، 4 CO₂",
+          "بإضافة نزع الكربوكسيل للبيروفات: +2 NADH + H⁺ و+2 CO₂ إضافية"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. La chaine respiratoire et la phosphorylation oxydative",
+        "ar": "4. السلسلة التنفسية والفسفرة التأكسدية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La chaine respiratoire est localisee dans la membrane interne de la mitochondrie. Les transporteurs d'electrons (NADH et FADH₂) cedent leurs electrons a une serie de complexes proteiques (complexes I, II, III et IV). Le transfert d'electrons le long de cette chaine libere de l'energie qui sert a pomper des protons (H⁺) de la matrice vers l'espace intermembranaire, creant un gradient electrochimique (force proton-motrice). Les protons retournent dans la matrice a travers l'ATP synthase (complexe V), qui utilise ce flux pour synthetiser l'ATP a partir d'ADP + Pi. L'accepteur final des electrons est l'oxygene moleculaire (O₂), qui est reduit en eau (H₂O).",
+        "ar": "تتواجد السلسلة التنفسية في الغشاء الداخلي للميتوكندري. يتنازل الناقلون الإلكترونيون (NADH وFADH₂) عن إلكتروناتهم لسلسلة من المعقدات البروتينية (المعقدات I وII وIII وIV). يحرر انتقال الإلكترونات على طول هذه السلسلة طاقة تُستعمل لضخ البروتونات (H⁺) من الماتريكس نحو الفضاء بين الغشائي، مما يخلق تدرجا كهروكيميائيا (قوة محركة بروتونية). تعود البروتونات إلى الماتريكس عبر ATP سنثاز (المعقد V)، الذي يستعمل هذا التدفق لتركيب ATP انطلاقا من ADP + Pi. المستقبل النهائي للإلكترونات هو الأكسجين الجزيئي (O₂) الذي يُختزل إلى ماء (H₂O)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\text{NADH} + H^+ + \\tfrac{1}{2}O_2 \\rightarrow \\text{NAD}^+ + H_2O \\quad (\\approx 2{,}5 \\text{ ATP})",
+      "note": {
+        "fr": "Chaque NADH produit environ 2,5 ATP ; chaque FADH₂ produit environ 1,5 ATP via la chaine respiratoire"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Bilan energetique global de la respiration cellulaire",
+        "ar": "5. الحصيلة الطاقية الإجمالية للتنفس الخلوي"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le bilan complet de l'oxydation d'une molecule de glucose par la respiration cellulaire aerobique est le suivant :",
+        "ar": "الحصيلة الكاملة لأكسدة جزيئة واحدة من الغلوكوز عن طريق التنفس الخلوي الهوائي هي كالتالي:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "C_6H_{12}O_6 + 6\\,O_2 \\rightarrow 6\\,CO_2 + 6\\,H_2O + \\text{36 a 38 ATP}",
+      "note": {
+        "fr": "Equation bilan de la respiration cellulaire aerobique"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Glycolyse : 2 ATP + 2 NADH (→ ~5 ATP) = ~7 ATP",
+          "Decarboxylation du pyruvate : 2 NADH (→ ~5 ATP)",
+          "Cycle de Krebs (x2) : 2 GTP + 6 NADH (→ ~15 ATP) + 2 FADH₂ (→ ~3 ATP) = ~20 ATP",
+          "Total : ~32 a 34 ATP (phosphorylation oxydative) + 4 ATP (substrat) = 36 a 38 ATP",
+          "Rendement energetique : environ 40% (le reste est dissipe sous forme de chaleur)"
+        ],
+        "ar": [
+          "تحلل الغلوكوز: 2 ATP + 2 NADH (→ ~5 ATP) = ~7 ATP",
+          "نزع كربوكسيل البيروفات: 2 NADH (→ ~5 ATP)",
+          "دورة كريبس (x2): 2 GTP + 6 NADH (→ ~15 ATP) + 2 FADH₂ (→ ~3 ATP) = ~20 ATP",
+          "المجموع: ~32 إلى 34 ATP (فسفرة تأكسدية) + 4 ATP (مستوى ركيزة) = 36 إلى 38 ATP",
+          "المردود الطاقي: حوالي 40% (الباقي يُبدد على شكل حرارة)"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. La fermentation : voie anaerobique alternative",
+        "ar": "6. التخمر: مسلك لاهوائي بديل"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "En absence d'oxygene, les cellules utilisent la fermentation pour regenerer le NAD⁺ necessaire a la glycolyse. Il existe deux types principaux : la fermentation lactique (dans les muscles et certaines bacteries) ou le pyruvate est reduit en lactate, et la fermentation alcoolique (chez les levures) ou le pyruvate est decarboxyle en ethanol + CO₂. La fermentation ne produit que 2 ATP par glucose (uniquement ceux de la glycolyse), soit un rendement environ 19 fois plus faible que la respiration aerobique.",
+        "ar": "في غياب الأكسجين، تستخدم الخلايا التخمر لتجديد NAD⁺ الضروري لتحلل الغلوكوز. هناك نوعان رئيسيان: التخمر اللبني (في العضلات وبعض البكتيريات) حيث يُختزل البيروفات إلى لاكتات، والتخمر الكحولي (عند الخمائر) حيث يُنزع كربوكسيل البيروفات إلى إيثانول + CO₂. لا ينتج التخمر سوى 2 ATP لكل جزيئة غلوكوز (فقط تلك الناتجة عن التحلل)، أي مردود أضعف بحوالي 19 مرة من التنفس الهوائي."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Comparaison : Respiration aerobique = 36-38 ATP/glucose (rendement ~40%). Fermentation = 2 ATP/glucose (rendement ~2%). La mitochondrie est donc l'organite cle de la production energetique cellulaire.",
+        "ar": "مقارنة: التنفس الهوائي = 36-38 ATP/غلوكوز (مردود ~40%). التخمر = 2 ATP/غلوكوز (مردود ~2%). الميتوكندري إذن هي العضية المفتاحية للإنتاج الطاقي الخلوي."
+      }
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "id": "energie-mecanique",
+  "title": {
+    "fr": "Énergie mécanique et sa conservation",
+    "ar": "الطاقة الميكانيكية وانحفاظها"
+  },
+  "objectives": {
+    "fr": [
+      "Définir l'énergie mécanique d'un système",
+      "Énoncer le principe de conservation de l'énergie mécanique",
+      "Appliquer la conservation de l'énergie mécanique en l'absence de frottement",
+      "Déterminer la variation d'énergie mécanique en présence de forces non conservatives",
+      "Interpréter la dissipation d'énergie par frottement"
+    ],
+    "ar": [
+      "تعريف الطاقة الميكانيكية لجملة",
+      "صياغة مبدأ انحفاظ الطاقة الميكانيكية",
+      "تطبيق انحفاظ الطاقة الميكانيكية في غياب الاحتكاك",
+      "تحديد تغير الطاقة الميكانيكية بوجود قوى غير محافظة",
+      "تفسير تبدد الطاقة بالاحتكاك"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Définition de l'énergie mécanique",
+        "ar": "1. تعريف الطاقة الميكانيكية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Énergie mécanique",
+        "ar": "الطاقة الميكانيكية"
+      },
+      "text": {
+        "fr": "L'énergie mécanique d'un système est la somme de son énergie cinétique et de son énergie potentielle (de pesanteur et/ou élastique).",
+        "ar": "الطاقة الميكانيكية لجملة هي مجموع طاقتها الحركية وطاقة وضعها (الثقالية و/أو المرنة)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_m = E_c + E_p = \\frac{1}{2}mv^2 + mgz",
+      "note": {
+        "fr": "Em en Joules. Dans le cas général avec un ressort : Em = ½mv² + mgz + ½kx².",
+        "ar": "Em بالجول. في الحالة العامة مع نابض: Em = ½mv² + mgz + ½kx²."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Conservation de l'énergie mécanique",
+        "ar": "2. انحفاظ الطاقة الميكانيكية"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Lorsqu'un système n'est soumis qu'à des forces conservatives (poids, force de rappel d'un ressort), son énergie mécanique se conserve au cours du mouvement. Il y a conversion d'énergie cinétique en énergie potentielle et inversement, mais la somme reste constante.",
+        "ar": "عندما تخضع جملة فقط لقوى محافظة (الثقل، قوة استرجاع النابض)، فإن طاقتها الميكانيكية تنحفظ خلال الحركة. يحدث تحويل بين الطاقة الحركية وطاقة الوضع والعكس، لكن المجموع يبقى ثابتاً."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E_m(A) = E_m(B) \\quad \\Leftrightarrow \\quad \\frac{1}{2}mv_A^2 + mgz_A = \\frac{1}{2}mv_B^2 + mgz_B",
+      "note": {
+        "fr": "Condition : seules des forces conservatives s'exercent sur le système (pas de frottement).",
+        "ar": "الشرط: فقط قوى محافظة تؤثر على الجملة (بدون احتكاك)."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La conservation de l'énergie mécanique est un cas particulier du théorème de l'énergie cinétique. Quand les seules forces qui travaillent sont conservatives, ΔEm = 0.",
+        "ar": "انحفاظ الطاقة الميكانيكية حالة خاصة من مبرهنة الطاقة الحركية. عندما تكون القوى العاملة فقط محافظة، ΔEm = 0."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Chute libre et conservation de Em",
+        "ar": "مثال: السقوط الحر وانحفاظ Em"
+      },
+      "problem": {
+        "fr": "Une bille de masse m = 0,2 kg est lâchée sans vitesse initiale d'une hauteur h = 10 m. En supposant les frottements négligeables, calculer sa vitesse au moment de l'impact avec le sol. (g = 9,8 m/s²)",
+        "ar": "كرية كتلتها m = 0.2 kg تُترك بدون سرعة ابتدائية من ارتفاع h = 10 m. بافتراض إهمال الاحتكاك، احسب سرعتها لحظة الاصطدام بالأرض. (g = 9.8 m/s²)"
+      },
+      "solution": {
+        "fr": "Conservation de Em (référence : le sol, z_B = 0) :\nEm(A) = Em(B)\nmgz_A + 0 = 0 + ½mv²_B\nmgz_A = ½mv²_B → v_B = √(2gz_A)\nv_B = √(2 × 9,8 × 10) = √196 = 14 m/s",
+        "latex": "v_B = \\sqrt{2gz_A} = \\sqrt{2 \\times 9{,}8 \\times 10} = \\sqrt{196} = 14 \\text{ m/s}"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Non-conservation et dissipation d'énergie",
+        "ar": "3. عدم الانحفاظ وتبدد الطاقة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "En présence de forces non conservatives (frottements), l'énergie mécanique n'est plus conservée. La variation d'énergie mécanique est égale au travail des forces non conservatives.",
+        "ar": "بوجود قوى غير محافظة (الاحتكاك)، لا تنحفظ الطاقة الميكانيكية. تغير الطاقة الميكانيكية يساوي شغل القوى غير المحافظة."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\Delta E_m = E_m(B) - E_m(A) = W_{AB}(\\vec{f}_{\\text{nc}})",
+      "note": {
+        "fr": "Les forces de frottement dissipent l'énergie mécanique sous forme de chaleur. ΔEm < 0 en présence de frottement.",
+        "ar": "قوى الاحتكاك تبدد الطاقة الميكانيكية على شكل حرارة. ΔEm < 0 بوجود احتكاك."
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple : Glissement avec frottement",
+        "ar": "مثال: انزلاق مع احتكاك"
+      },
+      "problem": {
+        "fr": "Un bloc de 3 kg glisse de 5 m sur un plan incliné de 30° avec une force de frottement f = 10 N. Vitesse initiale nulle. Calculer la vitesse en bas. (g = 9,8 m/s²)",
+        "ar": "كتلة 3 kg تنزلق مسافة 5 m على مستوى مائل بزاوية 30° مع قوة احتكاك f = 10 N. السرعة الابتدائية معدومة. احسب السرعة أسفلاً. (g = 9.8 m/s²)"
+      },
+      "solution": {
+        "fr": "h = 5 × sin(30°) = 2,5 m\nΔEm = W(f) → Em(B) - Em(A) = -f·d\n½mv² + 0 - (0 + mgh) = -f·d\n½ × 3 × v² = 3 × 9,8 × 2,5 - 10 × 5\n1,5v² = 73,5 - 50 = 23,5\nv = √(23,5/1,5) = √15,67 ≈ 3,96 m/s",
+        "latex": "v = \\sqrt{\\frac{2(mgh - fd)}{m}} = \\sqrt{\\frac{2(73{,}5 - 50)}{3}} = \\sqrt{15{,}67} \\approx 3{,}96 \\text{ m/s}"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Bilan : Em se conserve si seules des forces conservatives travaillent. Em diminue si des frottements existent. La perte d'énergie mécanique correspond à l'énergie dissipée en chaleur : Q = |ΔEm| = f × d.",
+        "ar": "خلاصة: Em تنحفظ إذا كانت فقط قوى محافظة تعمل. Em تنقص بوجود احتكاك. ضياع الطاقة الميكانيكية يوافق الطاقة المتبددة كحرارة: Q = |ΔEm| = f × d."
+      }
+    }
+  ]
+}

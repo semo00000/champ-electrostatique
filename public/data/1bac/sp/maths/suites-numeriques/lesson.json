@@ -1,0 +1,98 @@
+{
+  "id": "suites-numeriques",
+  "title": { "fr": "Suites numériques", "ar": "المتتاليات العددية" },
+  "objectives": {
+    "fr": [
+      "Définir une suite numérique et ses modes de génération (explicite, par récurrence)",
+      "Reconnaître et étudier les suites arithmétiques et géométriques",
+      "Calculer la somme des termes d'une suite arithmétique ou géométrique",
+      "Étudier la monotonie et le caractère borné d'une suite",
+      "Étudier la convergence d'une suite géométrique"
+    ],
+    "ar": [
+      "تعريف متتالية عددية وطرق توليدها (صريحة، بالتراجع)",
+      "التعرف على المتتاليات الحسابية والهندسية ودراستها",
+      "حساب مجموع حدود متتالية حسابية أو هندسية",
+      "دراسة الرتابة والمحدودية لمتتالية",
+      "دراسة تقارب متتالية هندسية"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Généralités sur les suites numériques", "ar": "١. عموميات حول المتتاليات العددية" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Suite numérique" },
+      "text": { "fr": "Une suite numérique est une application de ℕ (ou d'une partie de ℕ) dans ℝ. On la note (uₙ)ₙ≥₀. Elle peut être définie de manière explicite uₙ = f(n) ou par récurrence uₙ₊₁ = f(uₙ) avec u₀ donné." }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Une suite (uₙ) est croissante si ∀n ∈ ℕ, uₙ₊₁ ≥ uₙ. Elle est décroissante si ∀n ∈ ℕ, uₙ₊₁ ≤ uₙ. Elle est monotone si elle est croissante ou décroissante. Elle est bornée s'il existe M > 0 tel que |uₙ| ≤ M pour tout n.",
+        "ar": "المتتالية (uₙ) تكون متزايدة إذا كان uₙ₊₁ ≥ uₙ لكل n. تكون متناقصة إذا كان uₙ₊₁ ≤ uₙ لكل n."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Suites arithmétiques", "ar": "٢. المتتاليات الحسابية" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Suite arithmétique" },
+      "text": { "fr": "Une suite (uₙ) est arithmétique de raison r si pour tout n ∈ ℕ : uₙ₊₁ = uₙ + r. Le terme général est uₙ = u₀ + n·r." }
+    },
+    {
+      "type": "formula",
+      "latex": "u_n = u_0 + n \\cdot r \\quad;\\quad S_n = \\sum_{k=0}^{n} u_k = \\frac{(n+1)(u_0 + u_n)}{2}",
+      "note": { "fr": "Terme général et somme des (n+1) premiers termes d'une suite arithmétique." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Calcul dans une suite arithmétique" },
+      "problem": { "fr": "Soit (uₙ) une suite arithmétique de premier terme u₀ = 3 et de raison r = 5. Calculer u₁₀ et S₁₀." },
+      "solution": { "fr": "u₁₀ = u₀ + 10r = 3 + 10×5 = 53. La somme S₁₀ = (10+1)(u₀ + u₁₀)/2 = 11 × (3+53)/2 = 11 × 28 = 308.", "latex": "u_{10} = 3 + 10 \\times 5 = 53 \\quad;\\quad S_{10} = \\frac{11 \\times (3+53)}{2} = 308" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Suites géométriques", "ar": "٣. المتتاليات الهندسية" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Suite géométrique" },
+      "text": { "fr": "Une suite (uₙ) est géométrique de raison q (q ≠ 0) si pour tout n ∈ ℕ : uₙ₊₁ = uₙ × q. Le terme général est uₙ = u₀ × qⁿ." }
+    },
+    {
+      "type": "formula",
+      "latex": "u_n = u_0 \\times q^n \\quad;\\quad S_n = \\sum_{k=0}^{n} u_k = u_0 \\cdot \\frac{1 - q^{n+1}}{1 - q} \\quad (q \\neq 1)",
+      "note": { "fr": "Terme général et somme des (n+1) premiers termes d'une suite géométrique (q ≠ 1)." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Calcul dans une suite géométrique" },
+      "problem": { "fr": "Soit (uₙ) une suite géométrique de premier terme u₀ = 2 et de raison q = 3. Calculer u₅ et S₅." },
+      "solution": { "fr": "u₅ = 2 × 3⁵ = 2 × 243 = 486. La somme S₅ = 2 × (1 - 3⁶)/(1 - 3) = 2 × (1 - 729)/(-2) = 728.", "latex": "u_5 = 2 \\times 3^5 = 486 \\quad;\\quad S_5 = 2 \\cdot \\frac{1-3^6}{1-3} = 728" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Convergence des suites géométriques", "ar": "٤. تقارب المتتاليات الهندسية" }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Si |q| < 1, alors la suite géométrique (u₀·qⁿ) converge vers 0. Si |q| > 1, la suite diverge. Si q = 1, la suite est constante. Si q = -1, la suite oscille.",
+        "ar": "إذا كان |q| < 1، فإن المتتالية الهندسية تتقارب نحو 0. إذا كان |q| > 1، فإنها تتباعد."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "|q| < 1 \\Rightarrow \\lim_{n \\to +\\infty} q^n = 0 \\quad;\\quad \\sum_{k=0}^{+\\infty} u_0 q^k = \\frac{u_0}{1-q}",
+      "note": { "fr": "Limite et somme d'une série géométrique convergente." }
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "id": "probabilites",
+  "title": {
+    "fr": "Probabilités",
+    "ar": "الاحتمالات"
+  },
+  "objectives": {
+    "fr": [
+      "Définir un espace probabilisé et calculer des probabilités d'événements",
+      "Appliquer les probabilités conditionnelles et le théorème de Bayes",
+      "Reconnaître et utiliser l'indépendance de deux événements",
+      "Définir une variable aléatoire discrète et calculer son espérance et sa variance",
+      "Reconnaître et appliquer la loi binomiale B(n, p)"
+    ],
+    "ar": [
+      "تعريف فضاء احتمالي وحساب احتمالات الأحداث",
+      "تطبيق الاحتمالات الشرطية ومبرهنة بايز",
+      "التعرف على استقلال حدثين واستعماله",
+      "تعريف متغير عشوائي منفصل وحساب أمله الرياضي وتباينه",
+      "التعرف على القانون الثنائي B(n, p) وتطبيقه"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Espace probabilisé",
+        "ar": "1. الفضاء الاحتمالي"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Univers et événements",
+        "ar": "الكون والأحداث"
+      },
+      "text": {
+        "fr": "L'univers Ω est l'ensemble de tous les résultats possibles d'une expérience aléatoire. Un événement A est un sous-ensemble de Ω. L'événement certain est Ω, l'événement impossible est l'ensemble vide ∅. Deux événements sont incompatibles si A ∩ B = ∅.",
+        "ar": "الكون Ω هو مجموعة جميع النتائج الممكنة لتجربة عشوائية. الحدث A هو جزء من Ω. الحدث المؤكد هو Ω، والحدث المستحيل هو المجموعة الفارغة ∅. حدثان متنافيان إذا كان A ∩ B = ∅."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+      "note": {
+        "fr": "Formule de la probabilité de la réunion de deux événements",
+        "ar": "صيغة احتمال اجتماع حدثين"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Propriétés fondamentales : 0 ≤ P(A) ≤ 1, P(Ω) = 1, P(∅) = 0. Si A et B sont incompatibles : P(A ∪ B) = P(A) + P(B). La probabilité de l'événement contraire est P(Ā) = 1 − P(A).",
+        "ar": "الخاصيات الأساسية: 0 ≤ P(A) ≤ 1، P(Ω) = 1، P(∅) = 0. إذا كان A و B متنافيين: P(A ∪ B) = P(A) + P(B). احتمال الحدث المكمل هو P(Ā) = 1 − P(A)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Probabilité conditionnelle",
+        "ar": "2. الاحتمال الشرطي"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Probabilité conditionnelle",
+        "ar": "الاحتمال الشرطي"
+      },
+      "text": {
+        "fr": "La probabilité conditionnelle de A sachant B (avec P(B) > 0) est P(A|B) = P(A ∩ B) / P(B). Elle représente la probabilité que A se réalise sachant que B s'est déjà réalisé. On en déduit la formule des probabilités composées : P(A ∩ B) = P(B) × P(A|B).",
+        "ar": "الاحتمال الشرطي لـ A علم B (حيث P(B) > 0) هو P(A|B) = P(A ∩ B) / P(B). يمثل احتمال تحقق A علما بأن B قد تحقق. نستنتج منه صيغة الاحتمالات المركبة: P(A ∩ B) = P(B) × P(A|B)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "P(A|B) = \\frac{P(A \\cap B)}{P(B)}, \\quad P(B) > 0",
+      "note": {
+        "fr": "Définition de la probabilité conditionnelle de A sachant B",
+        "ar": "تعريف الاحتمال الشرطي لـ A علم B"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Indépendance et théorème de Bayes",
+        "ar": "3. الاستقلال ومبرهنة بايز"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Evénements indépendants",
+        "ar": "أحداث مستقلة"
+      },
+      "text": {
+        "fr": "Deux événements A et B sont indépendants si et seulement si P(A ∩ B) = P(A) × P(B). L'indépendance signifie que la réalisation de l'un n'influence pas la probabilité de l'autre : P(A|B) = P(A) et P(B|A) = P(B).",
+        "ar": "حدثان A و B مستقلان إذا وفقط إذا P(A ∩ B) = P(A) × P(B). الاستقلال يعني أن تحقق أحدهما لا يؤثر على احتمال الآخر: P(A|B) = P(A) و P(B|A) = P(B)."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Théorème de Bayes : si B₁, B₂, ..., Bₙ forment une partition de Ω avec P(Bₖ) > 0, alors P(A) = Σ P(Bₖ)·P(A|Bₖ) (probabilités totales). Formule de Bayes : P(Bₖ|A) = P(Bₖ)·P(A|Bₖ) / P(A).",
+        "ar": "مبرهنة بايز: إذا شكّلت B₁, B₂, ..., Bₙ تجزئة لـ Ω مع P(Bₖ) > 0، فإن P(A) = Σ P(Bₖ)·P(A|Bₖ) (الاحتمالات الكلية). صيغة بايز: P(Bₖ|A) = P(Bₖ)·P(A|Bₖ) / P(A)."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "P(B_k|A) = \\frac{P(B_k) \\cdot P(A|B_k)}{\\sum_{i=1}^{n} P(B_i) \\cdot P(A|B_i)}",
+      "note": {
+        "fr": "Formule de Bayes : permet d'inverser le conditionnement",
+        "ar": "صيغة بايز: تمكّن من عكس الاشتراط"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 1 : Application du théorème de Bayes",
+        "ar": "مثال 1: تطبيق مبرهنة بايز"
+      },
+      "problem": {
+        "fr": "Une usine a deux machines M₁ et M₂. M₁ produit 60% des pièces avec 3% de défauts, M₂ produit 40% avec 5% de défauts. Une pièce prise au hasard est défectueuse. Quelle est la probabilité qu'elle vienne de M₁ ?",
+        "ar": "مصنع لديه آلتان M₁ و M₂. الآلة M₁ تنتج 60% من القطع بنسبة عيوب 3%، و M₂ تنتج 40% بنسبة عيوب 5%. قطعة مأخوذة عشوائيا تكون معيبة. ما احتمال أنها من M₁ ؟"
+      },
+      "solution": {
+        "fr": "P(D) = P(M₁)·P(D|M₁) + P(M₂)·P(D|M₂) = 0,6 × 0,03 + 0,4 × 0,05 = 0,018 + 0,02 = 0,038. Par Bayes : P(M₁|D) = 0,018/0,038 = 9/19 ≈ 0,474.",
+        "latex": "P(M_1|D) = \\frac{0{,}6 \\times 0{,}03}{0{,}6 \\times 0{,}03 + 0{,}4 \\times 0{,}05} = \\frac{0{,}018}{0{,}038} = \\frac{9}{19} \\approx 0{,}474"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Variable aléatoire discrète : espérance et variance",
+        "ar": "4. المتغير العشوائي المنفصل: الأمل الرياضي والتباين"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Variable aléatoire discrète",
+        "ar": "متغير عشوائي منفصل"
+      },
+      "text": {
+        "fr": "Une variable aléatoire discrète X est une application de Ω dans ℝ prenant un nombre fini ou dénombrable de valeurs. Sa loi de probabilité est donnée par les couples (xᵢ, P(X = xᵢ)). L'espérance mathématique E(X) est la moyenne pondérée des valeurs par leurs probabilités.",
+        "ar": "المتغير العشوائي المنفصل X هو تطبيق من Ω إلى ℝ يأخذ عددا منتهيا أو قابلا للعد من القيم. قانون احتماله يُعطى بالأزواج (xᵢ, P(X = xᵢ)). الأمل الرياضي E(X) هو المتوسط المرجح للقيم باحتمالاتها."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "E(X) = \\sum_{i} x_i \\cdot P(X = x_i), \\quad V(X) = E(X^2) - [E(X)]^2, \\quad \\sigma(X) = \\sqrt{V(X)}",
+      "note": {
+        "fr": "Espérance E(X), variance V(X) et écart-type σ(X) d'une variable aléatoire discrète",
+        "ar": "الأمل الرياضي E(X)، التباين V(X) والانحراف المعياري σ(X) لمتغير عشوائي منفصل"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Loi binomiale B(n, p)",
+        "ar": "5. القانون الثنائي B(n, p)"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Loi binomiale",
+        "ar": "القانون الثنائي"
+      },
+      "text": {
+        "fr": "Si on répète n fois de manière indépendante une épreuve de Bernoulli de paramètre p, le nombre de succès X suit la loi binomiale B(n, p). La probabilité d'obtenir exactement k succès est P(X = k) = C(n,k)·p^k·(1−p)^{n−k} pour k = 0, 1, ..., n.",
+        "ar": "إذا كررنا n مرة بشكل مستقل تجربة برنولي ذات الوسيط p، فإن عدد النجاحات X يتبع القانون الثنائي B(n, p). احتمال الحصول على بالضبط k نجاح هو P(X = k) = C(n,k)·p^k·(1−p)^{n−k} حيث k = 0, 1, ..., n."
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}, \\quad E(X) = np, \\quad V(X) = np(1-p)",
+      "note": {
+        "fr": "Loi binomiale B(n, p) : probabilité, espérance et variance",
+        "ar": "القانون الثنائي B(n, p): الاحتمال والأمل الرياضي والتباين"
+      }
+    },
+    {
+      "type": "example",
+      "title": {
+        "fr": "Exemple 2 : Calcul avec la loi binomiale",
+        "ar": "مثال 2: حساب بالقانون الثنائي"
+      },
+      "problem": {
+        "fr": "On lance une pièce équilibrée 5 fois. Calculer la probabilité d'obtenir exactement 3 fois pile.",
+        "ar": "نرمي قطعة نقدية متوازنة 5 مرات. احسب احتمال الحصول على الكتابة بالضبط 3 مرات."
+      },
+      "solution": {
+        "fr": "X ~ B(5, 1/2). P(X = 3) = C(5,3)·(1/2)³·(1/2)² = 10 × 1/32 = 10/32 = 5/16 = 0,3125.",
+        "latex": "P(X=3) = \\binom{5}{3} \\left(\\frac{1}{2}\\right)^3 \\left(\\frac{1}{2}\\right)^2 = 10 \\times \\frac{1}{32} = \\frac{5}{16} = 0{,}3125"
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Schéma de Bernoulli : n épreuves indépendantes avec même probabilité de succès p",
+          "X ~ B(n, p) : nombre total de succès parmi les n épreuves",
+          "E(X) = np est le nombre moyen de succès",
+          "V(X) = np(1−p) et σ(X) = √(np(1−p))",
+          "C(n, k) = n! / (k!(n−k)!) est le coefficient binomial"
+        ],
+        "ar": [
+          "مخطط برنولي: n تجربة مستقلة بنفس احتمال النجاح p",
+          "X ~ B(n, p): العدد الإجمالي للنجاحات من بين n تجربة",
+          "E(X) = np هو متوسط عدد النجاحات",
+          "V(X) = np(1−p) و σ(X) = √(np(1−p))",
+          "C(n, k) = n! / (k!(n−k)!) هو المعامل الثنائي"
+        ]
+      }
+    }
+  ]
+}

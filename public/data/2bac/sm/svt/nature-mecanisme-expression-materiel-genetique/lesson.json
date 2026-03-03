@@ -1,0 +1,134 @@
+{
+  "id": "nature-mecanisme-expression-materiel-genetique",
+  "title": {
+    "fr": "Nature et mecanisme de l'expression du materiel genetique",
+    "ar": "طبيعة وآلية التعبير عن المادة الوراثية"
+  },
+  "objectives": {
+    "fr": [
+      "Decrire la structure de l'ADN (double helice, complementarite des bases)",
+      "Expliquer le mecanisme de la replication semi-conservative de l'ADN",
+      "Decrire les etapes de la transcription et de la traduction",
+      "Connaitre les proprietes du code genetique et les types de mutations"
+    ],
+    "ar": [
+      "وصف بنية ADN (اللولب المزدوج، تكامل القواعد)",
+      "شرح آلية التضاعف نصف المحافظ للـ ADN",
+      "وصف مراحل الاستنساخ والترجمة",
+      "معرفة خصائص الشفرة الوراثية وأنواع الطفرات"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Structure de l'ADN",
+        "ar": "1. بنية الحمض النووي الريبي منقوص الأكسجين (ADN)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'ADN (acide desoxyribonucleique) est le support de l'information genetique. Il est constitue de deux brins de nucleotides enroules en double helice, decouverte par Watson et Crick en 1953. Chaque nucleotide est compose d'un groupement phosphate, d'un desoxyribose (sucre a 5 carbones) et d'une base azotee. Il existe quatre bases azotees : adenine (A), thymine (T), guanine (G) et cytosine (C). Les deux brins sont antiparalleles (sens 5'→3' et 3'→5') et lies par des liaisons hydrogene entre bases complementaires : A=T (2 liaisons H) et G≡C (3 liaisons H). C'est la regle de Chargaff.",
+        "ar": "الـ ADN (الحمض النووي الريبي منقوص الأكسجين) هو حامل المعلومة الوراثية. يتكون من شريطين من النوكليوتيدات ملفوفين في لولب مزدوج، اكتُشف من طرف واطسون وكريك سنة 1953. يتكون كل نوكليوتيد من مجموعة فوسفات وديزوكسي ريبوز (سكر خماسي الكربون) وقاعدة آزوتية. توجد أربع قواعد آزوتية: أدينين (A)، تيمين (T)، غوانين (G) وسيتوزين (C). الشريطان متعاكسا الاتجاه (5'→3' و3'→5') ومرتبطان بروابط هيدروجينية بين القواعد المتكاملة: A=T (رابطتان H) وG≡C (3 روابط H). هذه هي قاعدة شارغاف."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Gene",
+        "ar": "المورثة (الجين)"
+      },
+      "text": {
+        "fr": "Segment d'ADN qui porte l'information necessaire a la synthese d'une proteine (ou d'un ARN fonctionnel). Un gene est constitue d'une sequence specifique de nucleotides.",
+        "ar": "قطعة من ADN تحمل المعلومة الضرورية لتركيب بروتين (أو ARN وظيفي). تتكون المورثة من تتابع محدد من النوكليوتيدات."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. La replication de l'ADN",
+        "ar": "2. تضاعف الـ ADN"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La replication de l'ADN est semi-conservative, comme l'a demontre l'experience de Meselson et Stahl (1958) utilisant l'azote lourd (¹⁵N) et la centrifugation en gradient de densite de CsCl. Chaque molecule fille contient un brin ancien (parental) et un brin nouvellement synthetise. L'enzyme cle est l'ADN polymerase, qui synthetise le nouveau brin dans le sens 5'→3' en utilisant le brin matrice comme modele. L'helicase ouvre la double helice au niveau de la fourche de replication. La primase synthetise une amorce d'ARN. Sur le brin directeur, la synthese est continue ; sur le brin retarde, elle est discontinue (fragments d'Okazaki). La ligase relie ensuite les fragments.",
+        "ar": "تضاعف الـ ADN نصف محافظ، كما أثبتته تجربة ميزلسون وستال (1958) باستعمال الآزوت الثقيل (¹⁵N) والطرد المركزي في تدرج كثافة CsCl. كل جزيئة بنت تحتوي على شريط قديم (أبوي) وشريط مركب حديثا. الإنزيم الرئيسي هو ADN بوليميراز الذي يركب الشريط الجديد في الاتجاه 5'→3' مستعملا شريط القالب كنموذج. يفتح الهيليكاز اللولب المزدوج على مستوى شوكة التضاعف. يركب البريماز بادئة من ARN. على الشريط المتقدم، يكون التركيب متواصلا؛ وعلى الشريط المتأخر، يكون متقطعا (قطع أوكازاكي). يربط اللداز القطع فيما بعد."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Experience de Meselson et Stahl : Apres une generation en milieu ¹⁴N, toutes les molecules d'ADN ont une densite intermediaire (hybride). Apres deux generations, on obtient 50% de molecules hybrides et 50% de molecules legeres. Cela confirme le modele semi-conservatif.",
+        "ar": "تجربة ميزلسون وستال: بعد جيل واحد في وسط ¹⁴N، جميع جزيئات ADN لها كثافة وسطية (هجينة). بعد جيلين، نحصل على 50% جزيئات هجينة و50% جزيئات خفيفة. هذا يؤكد النموذج نصف المحافظ."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. La transcription : de l'ADN a l'ARNm",
+        "ar": "3. الاستنساخ: من ADN إلى ARNm"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La transcription est la synthese d'une molecule d'ARN messager (ARNm) a partir d'un brin d'ADN (brin matrice ou brin transcrit). Elle se deroule dans le noyau et est catalysee par l'ARN polymerase. L'enzyme se fixe sur le promoteur du gene, ouvre la double helice localement et synthetise l'ARNm dans le sens 5'→3', en utilisant les ribonucleotides libres (A, U, G, C). Attention : dans l'ARN, l'uracile (U) remplace la thymine (T). La transcription s'arrete au niveau du terminateur. Chez les eucaryotes, l'ARNm subit une maturation (ajout de la coiffe 5', queue poly-A, epissage des introns) avant d'etre exporte vers le cytoplasme.",
+        "ar": "الاستنساخ هو تركيب جزيئة من الحمض النووي الريبوزي الرسول (ARNm) انطلاقا من شريط ADN (شريط القالب أو الشريط المُستنسخ). يتم في النواة ويُحفز بواسطة ARN بوليميراز. يثبت الإنزيم على المحفز (البروموتر) للمورثة، ويفتح اللولب المزدوج محليا ويركب ARNm في الاتجاه 5'→3'، باستعمال الريبونوكليوتيدات الحرة (A, U, G, C). انتبه: في ARN، يحل اليوراسيل (U) محل التيمين (T). يتوقف الاستنساخ عند مستوى نهاية المورثة. عند حقيقيات النواة، يخضع ARNm للنضج (إضافة القلنسوة 5'، ذيل عديد A، تضفير الإنترونات) قبل تصديره نحو السيتوبلازم."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. La traduction : de l'ARNm a la proteine",
+        "ar": "4. الترجمة: من ARNm إلى البروتين"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La traduction est la synthese d'une chaine polypeptidique (proteine) a partir de l'ARNm. Elle se deroule dans le cytoplasme au niveau des ribosomes. L'ARNm est lu par triplets de nucleotides appeles codons. Chaque codon correspond a un acide amine specifique selon le code genetique. Les ARN de transfert (ARNt) portent un anticodon complementaire au codon et apportent l'acide amine correspondant. La traduction comporte trois etapes : l'initiation (fixation du ribosome sur le codon initiateur AUG qui code pour la methionine), l'elongation (lecture successive des codons et formation des liaisons peptidiques) et la terminaison (arret au niveau d'un codon stop : UAA, UAG ou UGA).",
+        "ar": "الترجمة هي تركيب سلسلة عديد الببتيد (بروتين) انطلاقا من ARNm. تتم في السيتوبلازم على مستوى الريبوزومات. يُقرأ ARNm بثلاثيات من النوكليوتيدات تسمى رامزات (كودونات). تتطابق كل رامزة مع حمض أميني محدد حسب الشفرة الوراثية. تحمل الحمض النووي الريبوزي الناقل (ARNt) رامزة مضادة مكملة للرامزة وتجلب الحمض الأميني المقابل. تتضمن الترجمة ثلاث مراحل: البدء (تثبيت الريبوزوم على رامزة البدء AUG التي تشفر للميثيونين)، الاستطالة (قراءة متتالية للرامزات وتشكيل الروابط الببتيدية) والانتهاء (التوقف عند رامزة توقف: UAA أو UAG أو UGA)."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Code genetique",
+        "ar": "الشفرة الوراثية"
+      },
+      "text": {
+        "fr": "Systeme de correspondance entre les codons de l'ARNm et les acides amines. Il est universel (commun a presque tous les etres vivants), degenere (plusieurs codons peuvent coder pour le meme acide amine), non chevauchant et non ambigu (un codon ne code que pour un seul acide amine).",
+        "ar": "نظام التوافق بين رامزات ARNm والأحماض الأمينية. هو عالمي (مشترك بين جميع الكائنات الحية تقريبا)، منحل (عدة رامزات قد تشفر لنفس الحمض الأميني)، غير متراكب وغير ملتبس (كل رامزة تشفر لحمض أميني واحد فقط)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Les mutations",
+        "ar": "5. الطفرات"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Une mutation est une modification de la sequence de nucleotides de l'ADN. Elle peut etre spontanee ou induite par des agents mutagenes (UV, rayons X, substances chimiques). On distingue trois types de mutations ponctuelles : la substitution (remplacement d'un nucleotide par un autre), l'addition (insertion d'un nucleotide supplementaire) et la deletion (perte d'un nucleotide). Les additions et deletions provoquent un decalage du cadre de lecture et modifient tous les acides amines en aval. Une substitution peut etre silencieuse (meme acide amine grace a la degenerescence du code), faux-sens (acide amine different) ou non-sens (apparition d'un codon stop premature).",
+        "ar": "الطفرة هي تغيير في تتابع نوكليوتيدات ADN. يمكن أن تكون تلقائية أو محدثة بعوامل مطفرة (أشعة فوق بنفسجية، أشعة سينية، مواد كيميائية). نميز ثلاثة أنواع من الطفرات النقطية: الاستبدال (تعويض نوكليوتيد بآخر)، الإضافة (إدراج نوكليوتيد إضافي) والحذف (فقدان نوكليوتيد). تسبب الإضافة والحذف انزياحا في إطار القراءة وتغيير جميع الأحماض الأمينية بعدها. قد يكون الاستبدال صامتا (نفس الحمض الأميني بفضل انحلال الشفرة)، أو مغلطا (حمض أميني مختلف) أو عديم المعنى (ظهور رامزة توقف سابقة لأوانها)."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Le dogme central de la biologie moleculaire : ADN → (transcription) → ARNm → (traduction) → Proteine. L'information genetique circule de l'ADN vers la proteine via l'ARNm.",
+        "ar": "المبدأ المركزي للبيولوجيا الجزيئية: ADN → (استنساخ) → ARNm → (ترجمة) → بروتين. تنتقل المعلومة الوراثية من ADN نحو البروتين عبر ARNm."
+      }
+    }
+  ]
+}

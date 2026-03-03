@@ -1,0 +1,177 @@
+{
+  "id": "champ-magnetique-2bac",
+  "title": {
+    "fr": "Champ magnétique",
+    "ar": "الحقل المغناطيسي"
+  },
+  "objectives": {
+    "fr": [
+      "Connaître les sources du champ magnétique et ses caractéristiques",
+      "Appliquer la relation de Biot-Savart pour un solénoïde : B = μ₀nI",
+      "Calculer la force exercée sur un conducteur rectiligne parcouru par un courant : F = BIl·sinα",
+      "Déterminer la force de Lorentz sur une charge en mouvement : F = qv×B",
+      "Connaître les bases de l'effet Hall",
+      "Appliquer les règles de la main droite"
+    ],
+    "ar": [
+      "معرفة مصادر الحقل المغناطيسي وخصائصه",
+      "تطبيق علاقة بيو-سافار لملف لولبي: B = μ₀nI",
+      "حساب القوة المؤثرة على ناقل مستقيمي يمر به تيار: F = BIl·sinα",
+      "تحديد قوة لورنتز على شحنة متحركة: F = qv×B",
+      "معرفة أساسيات تأثير هول",
+      "تطبيق قواعد اليد اليمنى"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Le champ magnétique : définition et sources",
+        "ar": "1. الحقل المغناطيسي: التعريف والمصادر"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Champ magnétique", "ar": "الحقل المغناطيسي" },
+      "text": {
+        "fr": "Le champ magnétique est une grandeur vectorielle notée B⃗ qui caractérise l'effet magnétique en tout point de l'espace. Son unité dans le SI est le Tesla (T). Il est créé par des aimants permanents ou par des courants électriques (électroaimants, fils conducteurs, solénoïdes)."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Les lignes de champ magnétique sont des courbes fermées orientées. À l'extérieur d'un aimant, elles vont du pôle Nord vers le pôle Sud. Le sens du champ magnétique créé par un courant est déterminé par la règle de la main droite (ou du tire-bouchon).",
+        "ar": "خطوط الحقل المغناطيسي هي منحنيات مغلقة موجهة. خارج المغناطيس، تذهب من القطب الشمالي نحو القطب الجنوبي. اتجاه الحقل المغناطيسي الناشئ عن تيار يُحدد بقاعدة اليد اليمنى."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Champ magnétique créé par un solénoïde",
+        "ar": "2. الحقل المغناطيسي الناشئ عن ملف لولبي"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un solénoïde est une bobine longue constituée de N spires enroulées sur une longueur l. À l'intérieur d'un solénoïde suffisamment long, le champ magnétique est uniforme, parallèle à l'axe du solénoïde. Son intensité est donnée par :",
+        "ar": "الملف اللولبي هو وشيعة طويلة تتكون من N لفة ملفوفة على طول l. داخل ملف لولبي طويل بما فيه الكفاية، يكون الحقل المغناطيسي منتظمًا وموازيًا لمحور الملف. شدته تُعطى بـ:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "B = \\mu_0 n I = \\mu_0 \\frac{N}{l} I",
+      "note": {
+        "fr": "μ₀ = 4π×10⁻⁷ T·m/A (perméabilité du vide), n = N/l le nombre de spires par unité de longueur, I l'intensité du courant"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "À l'extérieur du solénoïde, le champ magnétique est pratiquement nul. La direction du champ à l'intérieur est déterminée par la règle de la main droite : en enroulant les doigts dans le sens du courant, le pouce indique le sens de B⃗ (pôle Nord).",
+        "ar": "خارج الملف اللولبي، يكون الحقل المغناطيسي شبه منعدم. اتجاه الحقل داخله يُحدد بقاعدة اليد اليمنى: بلف الأصابع في اتجاه التيار، يشير الإبهام إلى اتجاه B⃗ (القطب الشمالي)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Force de Laplace sur un conducteur parcouru par un courant",
+        "ar": "3. قوة لابلاس على ناقل يمر به تيار"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Un conducteur rectiligne de longueur l, parcouru par un courant d'intensité I, placé dans un champ magnétique uniforme B⃗, subit une force appelée force de Laplace :",
+        "ar": "ناقل مستقيمي طوله l، يمر به تيار شدته I، موضوع في حقل مغناطيسي منتظم B⃗، يخضع لقوة تسمى قوة لابلاس:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\vec{F} = I\\,\\vec{l} \\times \\vec{B} \\qquad \\Rightarrow \\qquad F = BIl\\sin\\alpha",
+      "note": {
+        "fr": "α est l'angle entre le vecteur l⃗ (sens du courant) et B⃗. F est maximale quand α = 90° et nulle quand α = 0°"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Le sens de la force de Laplace est déterminé par la règle des trois doigts de la main droite : le pouce indique le sens du courant I, l'index le sens de B⃗, et le majeur donne le sens de F⃗.",
+        "ar": "اتجاه قوة لابلاس يُحدد بقاعدة الأصابع الثلاثة لليد اليمنى: الإبهام يشير لاتجاه التيار I، السبابة لاتجاه B⃗، والوسطى تعطي اتجاه F⃗."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Force de Lorentz sur une charge en mouvement",
+        "ar": "4. قوة لورنتز على شحنة متحركة"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Une particule de charge q, animée d'une vitesse v⃗ dans un champ magnétique uniforme B⃗, est soumise à la composante magnétique de la force de Lorentz :",
+        "ar": "جسيم شحنته q، متحرك بسرعة v⃗ في حقل مغناطيسي منتظم B⃗، يخضع للمركبة المغناطيسية لقوة لورنتز:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "\\vec{F} = q\\,\\vec{v} \\times \\vec{B} \\qquad \\Rightarrow \\qquad F = |q|\\,v\\,B\\sin\\theta",
+      "note": {
+        "fr": "θ est l'angle entre v⃗ et B⃗. La force est perpendiculaire au plan (v⃗, B⃗)"
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La force de Lorentz magnétique ne travaille jamais (puissance P = F⃗·v⃗ = 0 car F⃗ ⊥ v⃗). Elle ne modifie pas l'énergie cinétique de la particule mais modifie la direction de sa vitesse. Si v⃗ ⊥ B⃗, la trajectoire est circulaire de rayon r = mv/(|q|B).",
+        "ar": "قوة لورنتز المغناطيسية لا تعمل أبدًا (الاستطاعة P = F⃗·v⃗ = 0 لأن F⃗ ⊥ v⃗). لا تغير الطاقة الحركية للجسيم لكنها تغير اتجاه سرعته. إذا كانت v⃗ ⊥ B⃗، فالمسار دائري نصف قطره r = mv/(|q|B)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Effet Hall",
+        "ar": "5. تأثير هول"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'effet Hall se produit lorsqu'un conducteur (ou semi-conducteur) parcouru par un courant I est placé dans un champ magnétique B⃗ perpendiculaire au courant. La force de Lorentz dévie les porteurs de charge, créant une accumulation de charges sur un côté et donc une différence de potentiel transversale appelée tension de Hall :",
+        "ar": "يحدث تأثير هول عندما يُوضع ناقل (أو شبه ناقل) يمر به تيار I في حقل مغناطيسي B⃗ عمودي على التيار. قوة لورنتز تحرف حاملات الشحنة، مما يُحدث تراكمًا للشحنات على أحد الجانبين وبالتالي فرق جهد عرضي يسمى توتر هول:"
+      }
+    },
+    {
+      "type": "formula",
+      "latex": "U_H = \\frac{BI}{n_e \\cdot e \\cdot d}",
+      "note": {
+        "fr": "U_H : tension de Hall, n_e : densité volumique des porteurs, e : charge élémentaire, d : épaisseur du conducteur"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Exemple d'application",
+        "ar": "6. مثال تطبيقي"
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Force de Laplace et solénoïde" },
+      "problem": {
+        "fr": "1) Un solénoïde a 500 spires sur une longueur de 25 cm et est parcouru par un courant I = 2 A. Calculer le champ B à l'intérieur. 2) Un fil conducteur de longueur l = 10 cm, parcouru par un courant I₂ = 3 A, est placé perpendiculairement à ce champ B. Calculer la force de Laplace."
+      },
+      "solution": {
+        "fr": "1) n = N/l = 500/0,25 = 2000 spires/m. B = μ₀nI = 4π×10⁻⁷ × 2000 × 2 = 5,03×10⁻³ T ≈ 5 mT.\n2) F = BIl·sin(90°) = 5,03×10⁻³ × 3 × 0,1 × 1 = 1,51×10⁻³ N ≈ 1,5 mN.",
+        "latex": "B = \\mu_0 \\frac{N}{l} I = 4\\pi \\times 10^{-7} \\times 2000 \\times 2 \\approx 5{,}03 \\times 10^{-3}\\text{ T} \\quad;\\quad F = BIl = 1{,}51 \\times 10^{-3}\\text{ N}"
+      }
+    }
+  ]
+}

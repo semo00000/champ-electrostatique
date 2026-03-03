@@ -1,0 +1,225 @@
+{
+  "id": "geologie-interne",
+  "title": {
+    "fr": "La géologie interne",
+    "ar": "الجيولوجيا الداخلية"
+  },
+  "objectives": {
+    "fr": [
+      "Comprendre la théorie de la tectonique des plaques",
+      "Décrire les différents types de limites de plaques et leurs conséquences",
+      "Expliquer les mécanismes moteurs du mouvement des plaques",
+      "Comprendre l'origine des séismes et du volcanisme",
+      "Connaître les preuves de la dérive des continents et de l'expansion océanique"
+    ],
+    "ar": [
+      "فهم نظرية تكتونية الصفائح",
+      "وصف أنواع حدود الصفائح المختلفة ونتائجها",
+      "شرح الآليات المحركة لحركة الصفائح",
+      "فهم أصل الزلازل والبركانية",
+      "معرفة أدلة زحزحة القارات والتوسع المحيطي"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Structure interne de la Terre",
+        "ar": "1. البنية الداخلية للأرض"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "La Terre est composée de couches concentriques de nature et de propriétés physiques différentes. De l'extérieur vers l'intérieur : la croûte (continentale de 30-70 km, océanique de 5-10 km), le manteau (supérieur et inférieur, jusqu'à 2 900 km), le noyau externe (liquide, de 2 900 à 5 100 km) et la graine (noyau interne solide, de 5 100 à 6 370 km). La lithosphère (croûte + partie rigide du manteau supérieur) repose sur l'asthénosphère (zone ductile du manteau supérieur).",
+        "ar": "تتكون الأرض من طبقات متحدة المركز ذات طبيعة وخصائص فيزيائية مختلفة. من الخارج نحو الداخل: القشرة (القارية 30-70 كم، المحيطية 5-10 كم)، الوشاح (العلوي والسفلي، حتى 2900 كم)، النواة الخارجية (سائلة، من 2900 إلى 5100 كم) والنواة الداخلية (صلبة، من 5100 إلى 6370 كم). الغلاف الصخري (القشرة + الجزء الصلب من الوشاح العلوي) يرتكز على الأثينوسفير (المنطقة اللدنة من الوشاح العلوي)."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Les discontinuités principales : Moho (entre la croûte et le manteau, mise en évidence par Mohorovičić), Gutenberg (entre le manteau et le noyau externe, à 2 900 km) et Lehmann (entre le noyau externe et la graine, à 5 100 km). L'étude des ondes sismiques (P et S) a permis de déterminer cette structure.",
+        "ar": "الانقطاعات الرئيسية: موهو (بين القشرة والوشاح، كشفها موهوروفيتشيتش)، غوتنبرغ (بين الوشاح والنواة الخارجية، على عمق 2900 كم) وليمان (بين النواة الخارجية والنواة الداخلية، على عمق 5100 كم). دراسة الموجات الزلزالية (P و S) مكّنت من تحديد هذه البنية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. La dérive des continents (Wegener)",
+        "ar": "2. زحزحة القارات (فيغنر)"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Théorie de la dérive des continents",
+        "ar": "نظرية زحزحة القارات"
+      },
+      "text": {
+        "fr": "Proposée par Alfred Wegener en 1912, cette théorie affirme que les continents actuels étaient autrefois réunis en un supercontinent unique appelé la Pangée, qui s'est fragmenté et dont les morceaux ont dérivé pour atteindre leurs positions actuelles. Wegener s'est appuyé sur des arguments morphologiques, paléontologiques, paléoclimatiques et géologiques.",
+        "ar": "اقترحها ألفريد فيغنر عام 1912، تؤكد هذه النظرية أن القارات الحالية كانت فيما مضى مجتمعة في قارة عظمى واحدة تسمى بانجيا، التي تفككت وانجرفت أجزاؤها لتصل إلى مواقعها الحالية. استند فيغنر إلى حجج شكلية وأحفورية ومناخية قديمة وجيولوجية."
+      }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Argument morphologique : complémentarité des côtes (Afrique–Amérique du Sud)",
+          "Argument paléontologique : fossiles identiques sur des continents séparés (Mesosaurus, Glossopteris)",
+          "Argument paléoclimatique : traces de glaciation tropicale et de forêts tropicales en zones polaires",
+          "Argument géologique : continuité des chaînes de montagnes (Appalaches–Calédonides)"
+        ],
+        "ar": [
+          "حجة شكلية: تكامل السواحل (إفريقيا–أمريكا الجنوبية)",
+          "حجة أحفورية: أحافير متطابقة على قارات منفصلة (ميزوصوروس، غلوسوبتيريس)",
+          "حجة مناخية قديمة: آثار تجلد في المناطق الاستوائية وغابات استوائية في المناطق القطبية",
+          "حجة جيولوجية: استمرارية السلاسل الجبلية (الأبلاش–الكاليدونيدات)"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. L'expansion des fonds océaniques",
+        "ar": "3. التوسع المحيطي"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Dans les années 1960, Harry Hess a proposé la théorie de l'expansion des fonds océaniques (seafloor spreading). Au niveau des dorsales médio-océaniques, du magma remonte et crée une nouvelle croûte océanique qui s'éloigne de part et d'autre de la dorsale. Les preuves incluent : le paléomagnétisme (bandes magnétiques symétriques de part et d'autre des dorsales), l'âge croissant des sédiments en s'éloignant de la dorsale, et le flux de chaleur élevé au niveau des dorsales.",
+        "ar": "في الستينيات، اقترح هاري هيس نظرية التوسع المحيطي. على مستوى الأعراف المحيطية الوسطى، يصعد الصهير ويُنشئ قشرة محيطية جديدة تبتعد على جانبي العرف. الأدلة تشمل: المغناطيسية القديمة (أشرطة مغناطيسية متناظرة على جانبي الأعراف)، ازدياد عمر الرواسب بالابتعاد عن العرف، والتدفق الحراري المرتفع على مستوى الأعراف."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Paléomagnétisme",
+        "ar": "المغناطيسية القديمة"
+      },
+      "text": {
+        "fr": "Le paléomagnétisme est l'étude du champ magnétique terrestre enregistré dans les roches. Les minéraux magnétiques (magnétite) des basaltes océaniques s'orientent selon le champ magnétique lors de leur refroidissement. Le champ magnétique terrestre s'inverse périodiquement, créant des bandes d'aimantation normale et inverse, symétriques par rapport à la dorsale. Cette symétrie prouve la formation continue de croûte au niveau de la dorsale.",
+        "ar": "المغناطيسية القديمة هي دراسة الحقل المغناطيسي الأرضي المسجل في الصخور. المعادن المغناطيسية (المغنتيت) في البازلت المحيطي تتوجه حسب الحقل المغناطيسي أثناء تبردها. يتعرض الحقل المغناطيسي الأرضي لانقلابات دورية، مما يخلق أشرطة ذات مغناطيسية عادية ومعكوسة، متناظرة بالنسبة للعرف. هذا التناظر يثبت التشكل المستمر للقشرة على مستوى العرف."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. La tectonique des plaques",
+        "ar": "4. تكتونية الصفائح"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Plaque tectonique",
+        "ar": "الصفيحة التكتونية"
+      },
+      "text": {
+        "fr": "La surface de la Terre est divisée en une douzaine de grandes plaques lithosphériques rigides qui se déplacent les unes par rapport aux autres sur l'asthénosphère ductile. Les principales plaques sont : africaine, eurasiatique, nord-américaine, sud-américaine, pacifique, indo-australienne, antarctique. Les limites de plaques sont les zones les plus actives géologiquement (séismes, volcans, formation de montagnes).",
+        "ar": "سطح الأرض مقسم إلى عشرين صفيحة صخرية صلبة تقريبًا تتحرك بالنسبة لبعضها البعض فوق الأثينوسفير اللدن. الصفائح الرئيسية هي: الإفريقية، الأوراسية، أمريكا الشمالية، أمريكا الجنوبية، الهادئة، الهندو-أسترالية، القطبية الجنوبية. حدود الصفائح هي المناطق الأكثر نشاطًا جيولوجيًا (زلازل، براكين، تكوين الجبال)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Types de limites de plaques",
+        "ar": "5. أنواع حدود الصفائح"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Limites divergentes",
+        "ar": "الحدود المتباعدة"
+      },
+      "text": {
+        "fr": "Les plaques s'éloignent l'une de l'autre (mouvement d'extension). Le magma remonte, créant une nouvelle croûte océanique au niveau des dorsales médio-océaniques (exemple : dorsale médio-atlantique). Sur les continents, la divergence crée des rifts (exemple : rift est-africain). Le volcanisme associé est effusif (basalte).",
+        "ar": "تتباعد الصفائح عن بعضها البعض (حركة تمدد). يصعد الصهير مُنشئًا قشرة محيطية جديدة على مستوى الأعراف المحيطية الوسطى (مثال: العرف الأطلسي الأوسط). على القارات، يخلق التباعد أخاديد انهدامية (مثال: الأخدود الإفريقي الشرقي). البركانية المصاحبة انسكابية (بازلتية)."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Limites convergentes",
+        "ar": "الحدود المتقاربة"
+      },
+      "text": {
+        "fr": "Les plaques se rapprochent l'une de l'autre. Trois cas possibles : (1) Subduction océan-continent : la plaque océanique plus dense plonge sous la plaque continentale (ex : Andes, ceinture de feu du Pacifique), créant des fosses océaniques et un volcanisme explosif (andésite). (2) Subduction océan-océan : une plaque océanique plonge sous l'autre, formant des arcs insulaires (ex : Japon). (3) Collision continent-continent : formation de chaînes de montagnes (ex : Himalaya, Atlas).",
+        "ar": "تتقارب الصفائح نحو بعضها البعض. ثلاث حالات ممكنة: (1) الاندساس محيط-قارة: الصفيحة المحيطية الأكثر كثافة تغوص تحت الصفيحة القارية (مثال: الأنديز، حزام النار الهادئ)، مُنشئةً خنادق محيطية وبركانية انفجارية (أنديزيت). (2) الاندساس محيط-محيط: صفيحة محيطية تغوص تحت الأخرى مكوّنةً أقواسًا جزرية (مثال: اليابان). (3) التصادم قارة-قارة: تكوين سلاسل جبلية (مثال: الهيمالايا، الأطلس)."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Limites transformantes (coulissantes)",
+        "ar": "الحدود المحاذية (المنزلقة)"
+      },
+      "text": {
+        "fr": "Les plaques coulissent latéralement l'une contre l'autre le long de failles transformantes. Il n'y a ni création ni destruction de croûte, mais une intense activité sismique. Exemple célèbre : la faille de San Andreas en Californie, où la plaque pacifique glisse vers le nord-ouest par rapport à la plaque nord-américaine.",
+        "ar": "تنزلق الصفائح جانبيًا بالنسبة لبعضها على طول الفوالق المحاذية. لا يوجد خلق ولا تدمير للقشرة، لكن نشاطًا زلزاليًا شديدًا. المثال الشهير: فالق سان أندرياس في كاليفورنيا، حيث تنزلق الصفيحة الهادئة نحو الشمال الغربي بالنسبة للصفيحة الأمريكية الشمالية."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "6. Séismes et volcanisme",
+        "ar": "6. الزلازل والبركانية"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Séisme (tremblement de terre)",
+        "ar": "الزلزال"
+      },
+      "text": {
+        "fr": "Un séisme est une libération brusque d'énergie accumulée par la déformation des roches le long d'une faille. Le point de rupture en profondeur est le foyer (hypocentre), et le point en surface situé à la verticale du foyer est l'épicentre. Les séismes produisent des ondes sismiques : ondes P (compression, les plus rapides), ondes S (cisaillement, ne traversent pas les liquides) et ondes de surface (L et R). L'intensité se mesure par l'échelle de Richter (magnitude).",
+        "ar": "الزلزال هو تحرر مفاجئ للطاقة المتراكمة بسبب تشوه الصخور على طول فالق. نقطة الكسر في العمق هي البؤرة، والنقطة على السطح الواقعة عموديًا فوق البؤرة هي المركز السطحي. تنتج الزلازل موجات زلزالية: الموجات P (انضغاطية، الأسرع)، الموجات S (قصية، لا تعبر السوائل) وموجات السطح (L و R). تُقاس الشدة بمقياس ريختر (القدر)."
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Volcanisme",
+        "ar": "البركانية"
+      },
+      "text": {
+        "fr": "Le volcanisme résulte de la remontée de magma vers la surface. On distingue deux types principaux : (1) Volcanisme effusif : magma fluide (basaltique), éruptions calmes avec coulées de lave, typique des dorsales et des points chauds (ex : Hawaï). (2) Volcanisme explosif : magma visqueux (andésitique), éruptions violentes avec nuées ardentes et projections, typique des zones de subduction (ex : Vésuve, Mont St. Helens).",
+        "ar": "تنتج البركانية عن صعود الصهير نحو السطح. نميز نوعين رئيسيين: (1) بركانية انسكابية: صهير سائل (بازلتي)، انبعاثات هادئة مع تدفقات حممية، نموذجية للأعراف ونقاط الحرارة (مثال: هاواي). (2) بركانية انفجارية: صهير لزج (أنديزيتي)، انبعاثات عنيفة مع سحب ملتهبة ومقذوفات، نموذجية لمناطق الاندساس (مثال: فيزوف، جبل سانت هيلينز)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "7. Moteur de la tectonique des plaques",
+        "ar": "7. محرك تكتونية الصفائح"
+      }
+    },
+    {
+      "type": "definition",
+      "term": {
+        "fr": "Courants de convection",
+        "ar": "تيارات الحمل"
+      },
+      "text": {
+        "fr": "Le moteur principal du mouvement des plaques est la convection thermique dans le manteau. La chaleur interne de la Terre (due à la radioactivité et à la chaleur résiduelle) crée des mouvements de convection : le matériau chaud et moins dense monte vers la surface (au niveau des dorsales), se refroidit latéralement, puis redescend (au niveau des zones de subduction). Ces courants de convection exercent des forces de traction et de poussée sur les plaques lithosphériques.",
+        "ar": "المحرك الرئيسي لحركة الصفائح هو الحمل الحراري في الوشاح. الحرارة الداخلية للأرض (الناتجة عن النشاط الإشعاعي والحرارة المتبقية) تخلق حركات حمل: المادة الحارة والأقل كثافة تصعد نحو السطح (على مستوى الأعراف)، تبرد جانبيًا، ثم تنزل (على مستوى مناطق الاندساس). تمارس تيارات الحمل هذه قوى جر ودفع على الصفائح الصخرية."
+      }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "La tectonique des plaques unifie les observations de Wegener (dérive des continents), de Hess (expansion océanique) et de la sismologie. Elle explique la répartition des séismes et volcans aux limites des plaques, la formation des chaînes de montagnes, l'ouverture et la fermeture des océans (cycle de Wilson), et le recyclage de la croûte océanique par subduction.",
+        "ar": "تكتونية الصفائح توحد ملاحظات فيغنر (زحزحة القارات) وهيس (التوسع المحيطي) وعلم الزلازل. تفسر توزع الزلازل والبراكين على حدود الصفائح، تكوين السلاسل الجبلية، فتح وإغلاق المحيطات (دورة ويلسون)، وإعادة تدوير القشرة المحيطية بالاندساس."
+      }
+    }
+  ]
+}

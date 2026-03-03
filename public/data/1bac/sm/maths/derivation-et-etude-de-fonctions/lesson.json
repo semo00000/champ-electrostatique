@@ -1,0 +1,117 @@
+{
+  "id": "derivation-et-etude-de-fonctions",
+  "title": { "fr": "Dérivation et étude de fonctions", "ar": "الاشتقاق ودراسة الدوال" },
+  "objectives": {
+    "fr": [
+      "Connaître la définition du nombre dérivé et de la fonction dérivée",
+      "Maîtriser les règles de dérivation (somme, produit, quotient, composée)",
+      "Connaître le tableau des dérivées usuelles",
+      "Utiliser le signe de f' pour déterminer la monotonie de f",
+      "Déterminer les extrema locaux et globaux d'une fonction",
+      "Réaliser une étude complète de fonction et tracer sa courbe représentative"
+    ],
+    "ar": [
+      "معرفة تعريف العدد المشتق والدالة المشتقة",
+      "التحكم في قواعد الاشتقاق (مجموع، جداء، خارج القسمة، مركبة)",
+      "معرفة جدول المشتقات المعتادة",
+      "استخدام إشارة f' لتحديد رتابة f",
+      "تحديد القيم القصوى المحلية والمطلقة لدالة",
+      "إنجاز دراسة كاملة لدالة ورسم منحناها البياني"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "1. Nombre dérivé et fonction dérivée", "ar": "١. العدد المشتق والدالة المشتقة" }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Nombre dérivé" },
+      "text": { "fr": "Le nombre dérivé de f en a, noté f'(a), est la limite (si elle existe) du taux de variation de f en a : f'(a) = lim(h→0) [f(a+h) - f(a)] / h. Géométriquement, c'est la pente de la tangente à la courbe de f au point (a, f(a))." }
+    },
+    {
+      "type": "formula",
+      "latex": "f'(a) = \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h} = \\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a}",
+      "note": { "fr": "Les deux formes équivalentes de la définition du nombre dérivé." }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "L'équation de la tangente à la courbe de f au point d'abscisse a est : y = f'(a)(x - a) + f(a).",
+        "ar": "معادلة المماس لمنحنى f عند النقطة ذات الأفصول a هي: y = f'(a)(x - a) + f(a)."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "2. Tableau des dérivées usuelles", "ar": "٢. جدول المشتقات المعتادة" }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "(c)' = 0 (constante)",
+          "(x)' = 1",
+          "(xⁿ)' = nxⁿ⁻¹",
+          "(1/x)' = -1/x²",
+          "(√x)' = 1/(2√x)",
+          "(sin x)' = cos x",
+          "(cos x)' = -sin x",
+          "(tan x)' = 1 + tan²x = 1/cos²x"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "3. Règles de dérivation", "ar": "٣. قواعد الاشتقاق" }
+    },
+    {
+      "type": "formula",
+      "latex": "(u+v)' = u'+v' \\quad;\\quad (\\lambda u)' = \\lambda u' \\quad;\\quad (uv)' = u'v + uv' \\quad;\\quad \\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}",
+      "note": { "fr": "Règles de dérivation : somme, multiple scalaire, produit et quotient." }
+    },
+    {
+      "type": "formula",
+      "latex": "(g \\circ f)'(x) = f'(x) \\cdot g'(f(x))",
+      "note": { "fr": "Dérivée d'une fonction composée (règle de la chaîne)." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Dérivée d'un quotient" },
+      "problem": { "fr": "Calculer la dérivée de f(x) = (2x + 1)/(x² + 1)." },
+      "solution": { "fr": "On pose u = 2x+1, u' = 2, v = x²+1, v' = 2x. Alors f'(x) = (u'v - uv')/v² = [2(x²+1) - (2x+1)(2x)] / (x²+1)² = (2x²+2 - 4x²-2x) / (x²+1)² = (-2x²-2x+2) / (x²+1)².", "latex": "f'(x) = \\frac{2(x^2+1) - (2x+1)(2x)}{(x^2+1)^2} = \\frac{-2x^2-2x+2}{(x^2+1)^2}" }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "4. Signe de f' et sens de variation", "ar": "٤. إشارة f' واتجاه التغير" }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Si f'(x) > 0 sur un intervalle I, alors f est strictement croissante sur I. Si f'(x) < 0 sur I, alors f est strictement décroissante sur I. Si f'(x) = 0 sur I, alors f est constante sur I.",
+        "ar": "إذا كانت f'(x) > 0 على مجال I، فإن f متزايدة قطعا على I. إذا كانت f'(x) < 0 على I، فإن f متناقصة قطعا على I."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": { "fr": "5. Extrema et étude de fonctions", "ar": "٥. القيم القصوى ودراسة الدوال" }
+    },
+    {
+      "type": "paragraph",
+      "text": {
+        "fr": "Si f'(a) = 0 et f' change de signe en a : de + à -, f admet un maximum local en a ; de - à +, f admet un minimum local en a. L'étude complète d'une fonction comprend : domaine de définition, limites aux bornes, dérivée et tableau de variation, points remarquables et tracé de la courbe.",
+        "ar": "إذا كانت f'(a) = 0 وتغيرت إشارة f' عند a: من + إلى - فإن f تقبل حدا أقصى محلي عند a؛ من - إلى + فإن f تقبل حدا أدنى محلي عند a."
+      }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Étude de variation" },
+      "problem": { "fr": "Étudier les variations de f(x) = x³ - 3x + 2." },
+      "solution": { "fr": "f'(x) = 3x² - 3 = 3(x²-1) = 3(x-1)(x+1). f'(x) = 0 pour x = -1 et x = 1. f'(x) > 0 sur ]-∞,-1[ ∪ ]1,+∞[ et f'(x) < 0 sur ]-1,1[. Donc f est croissante sur ]-∞,-1], décroissante sur [-1,1], puis croissante sur [1,+∞[. Maximum local f(-1) = 4, minimum local f(1) = 0.", "latex": "f'(x) = 3(x-1)(x+1) \\quad;\\quad f(-1)=4 \\;(\\text{max})\\;,\\; f(1)=0 \\;(\\text{min})" }
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "Si P(A) = 0,3 et P(B) = 0,5 et A et B sont indépendants, que vaut P(A ∩ B) ?",
+        "ar": "إذا كان P(A) = 0.3 و P(B) = 0.5 و A و B مستقلان، ما قيمة P(A ∩ B) ؟"
+      },
+      "choices": [
+        { "fr": "0,8", "ar": "0.8" },
+        { "fr": "0,15", "ar": "0.15" },
+        { "fr": "0,2", "ar": "0.2" },
+        { "fr": "0,35", "ar": "0.35" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Si A et B sont indépendants, P(A ∩ B) = P(A) × P(B) = 0,3 × 0,5 = 0,15.",
+        "ar": "إذا كان A و B مستقلين، فإن P(A ∩ B) = P(A) × P(B) = 0.3 × 0.5 = 0.15."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On tire une carte dans un jeu de 52 cartes. Quelle est la probabilité d'obtenir un as ou un coeur ? (arrondir à 0,001)",
+        "ar": "نسحب ورقة من رزمة 52 ورقة. ما احتمال الحصول على آس أو قلب؟ (قرّب إلى 0.001)"
+      },
+      "answer": 0.308,
+      "tolerance": 0.005,
+      "unit": "",
+      "hint": {
+        "fr": "P(As ∪ Coeur) = P(As) + P(Coeur) − P(As ∩ Coeur). Il y a 4 as, 13 coeurs, et 1 as de coeur.",
+        "ar": "P(آس ∪ قلب) = P(آس) + P(قلب) − P(آس ∩ قلب). هناك 4 آسات، 13 قلبا، و1 آس قلب."
+      },
+      "explanation": {
+        "fr": "P(As ∪ Coeur) = 4/52 + 13/52 − 1/52 = 16/52 = 4/13 ≈ 0,308.",
+        "ar": "P(آس ∪ قلب) = 4/52 + 13/52 − 1/52 = 16/52 = 4/13 ≈ 0.308."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "X suit la loi B(20, 0,3). Que vaut E(X) ?",
+        "ar": "X يتبع القانون B(20, 0.3). ما قيمة E(X) ؟"
+      },
+      "choices": [
+        { "fr": "3", "ar": "3" },
+        { "fr": "6", "ar": "6" },
+        { "fr": "10", "ar": "10" },
+        { "fr": "0,3", "ar": "0.3" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "Pour X ~ B(n, p), E(X) = np = 20 × 0,3 = 6.",
+        "ar": "بالنسبة لـ X ~ B(n, p)، E(X) = np = 20 × 0.3 = 6."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "Calculer V(X) pour X ~ B(10, 0,4).",
+        "ar": "احسب V(X) لـ X ~ B(10, 0.4)."
+      },
+      "answer": 2.4,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": {
+        "fr": "V(X) = np(1 − p).",
+        "ar": "V(X) = np(1 − p)."
+      },
+      "explanation": {
+        "fr": "V(X) = np(1 − p) = 10 × 0,4 × 0,6 = 2,4.",
+        "ar": "V(X) = np(1 − p) = 10 × 0.4 × 0.6 = 2.4."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "La formule de Bayes permet de :",
+        "ar": "صيغة بايز تمكّن من:"
+      },
+      "choices": [
+        { "fr": "Calculer P(A ∪ B)", "ar": "حساب P(A ∪ B)" },
+        { "fr": "Inverser un conditionnement : calculer P(B|A) à partir de P(A|B)", "ar": "عكس الاشتراط: حساب P(B|A) انطلاقا من P(A|B)" },
+        { "fr": "Calculer la probabilité de l'événement contraire P(Ā)", "ar": "حساب احتمال الحدث المكمل P(Ā)" },
+        { "fr": "Calculer l'espérance E(X)", "ar": "حساب الأمل الرياضي E(X)" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "La formule de Bayes donne P(Bₖ|A) en fonction de P(A|Bₖ) et P(Bₖ). Elle permet d'inverser le sens du conditionnement.",
+        "ar": "صيغة بايز تعطي P(Bₖ|A) بدلالة P(A|Bₖ) و P(Bₖ). تمكّن من عكس اتجاه الاشتراط."
+      }
+    },
+    {
+      "type": "mcq",
+      "question": {
+        "fr": "On lance une pièce équilibrée 3 fois. Quelle est la probabilité d'obtenir exactement 2 fois pile ?",
+        "ar": "نرمي قطعة نقدية متوازنة 3 مرات. ما احتمال الحصول على الكتابة بالضبط مرتين؟"
+      },
+      "choices": [
+        { "fr": "1/4", "ar": "1/4" },
+        { "fr": "3/8", "ar": "3/8" },
+        { "fr": "1/2", "ar": "1/2" },
+        { "fr": "1/8", "ar": "1/8" }
+      ],
+      "answer": 1,
+      "explanation": {
+        "fr": "X ~ B(3, 1/2). P(X = 2) = C(3,2) × (1/2)² × (1/2)¹ = 3 × 1/4 × 1/2 = 3/8.",
+        "ar": "X ~ B(3, 1/2). P(X = 2) = C(3,2) × (1/2)² × (1/2)¹ = 3 × 1/4 × 1/2 = 3/8."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "On sait que P(A) = 0,4, P(B|A) = 0,5 et P(B|Ā) = 0,2. Calculer P(B) en utilisant la formule des probabilités totales.",
+        "ar": "نعلم أن P(A) = 0.4، P(B|A) = 0.5 و P(B|Ā) = 0.2. احسب P(B) باستعمال صيغة الاحتمالات الكلية."
+      },
+      "answer": 0.32,
+      "tolerance": 0.01,
+      "unit": "",
+      "hint": {
+        "fr": "P(B) = P(A)·P(B|A) + P(Ā)·P(B|Ā), avec P(Ā) = 1 − P(A).",
+        "ar": "P(B) = P(A)·P(B|A) + P(Ā)·P(B|Ā)، مع P(Ā) = 1 − P(A)."
+      },
+      "explanation": {
+        "fr": "P(B) = P(A)·P(B|A) + P(Ā)·P(B|Ā) = 0,4 × 0,5 + 0,6 × 0,2 = 0,20 + 0,12 = 0,32.",
+        "ar": "P(B) = P(A)·P(B|A) + P(Ā)·P(B|Ā) = 0.4 × 0.5 + 0.6 × 0.2 = 0.20 + 0.12 = 0.32."
+      }
+    },
+    {
+      "type": "numeric",
+      "question": {
+        "fr": "X suit la loi binomiale B(4, 0,3). Calculer P(X = 0) (arrondir à 0,001).",
+        "ar": "X يتبع القانون الثنائي B(4, 0.3). احسب P(X = 0) (قرّب إلى 0.001)."
+      },
+      "answer": 0.240,
+      "tolerance": 0.005,
+      "unit": "",
+      "hint": {
+        "fr": "P(X = 0) = C(4,0) × p⁰ × (1−p)⁴ = (1−p)⁴ = (0,7)⁴.",
+        "ar": "P(X = 0) = C(4,0) × p⁰ × (1−p)⁴ = (1−p)⁴ = (0.7)⁴."
+      },
+      "explanation": {
+        "fr": "P(X = 0) = C(4,0) × (0,3)⁰ × (0,7)⁴ = 1 × 1 × 0,2401 = 0,240.",
+        "ar": "P(X = 0) = C(4,0) × (0.3)⁰ × (0.7)⁴ = 1 × 1 × 0.2401 = 0.240."
+      }
+    }
+  ]
+}

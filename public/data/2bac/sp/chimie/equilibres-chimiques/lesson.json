@@ -1,0 +1,130 @@
+{
+  "id": "equilibres-chimiques",
+  "title": {
+    "fr": "Équilibres chimiques",
+    "ar": "التوازنات الكيميائية"
+  },
+  "objectives": {
+    "fr": [
+      "Écrire l'expression de la constante d'équilibre K",
+      "Distinguer Kc et Kp pour les équilibres en phase gazeuse",
+      "Étudier l'influence de la température, de la pression et de la concentration sur l'équilibre",
+      "Comprendre le concept de solution tampon"
+    ],
+    "ar": [
+      "كتابة تعبير ثابت التوازن K",
+      "التمييز بين Kc و Kp لتوازنات الطور الغازي",
+      "دراسة تأثير درجة الحرارة والضغط والتركيز على التوازن",
+      "فهم مفهوم المحلول المنظم"
+    ]
+  },
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "1. Expression de la constante d'équilibre K",
+        "ar": "1. تعبير ثابت التوازن K"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Pour une réaction à l'équilibre en solution aqueuse aA + bB ⇌ cC + dD, la constante d'équilibre K s'écrit en fonction des concentrations à l'équilibre. K est une grandeur sans dimension qui ne dépend que de la température." }
+    },
+    {
+      "type": "formula",
+      "latex": "K_c = \\frac{[C]_{\\text{éq}}^c \\cdot [D]_{\\text{éq}}^d}{[A]_{\\text{éq}}^a \\cdot [B]_{\\text{éq}}^b}",
+      "note": { "fr": "Kc est la constante d'équilibre exprimée en termes de concentrations molaires (en solution). Les solides purs et le solvant n'interviennent pas dans l'expression." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "2. Constante d'équilibre en phase gazeuse : Kp",
+        "ar": "2. ثابت التوازن في الطور الغازي: Kp"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "Pour les réactions en phase gazeuse, on peut exprimer la constante d'équilibre en fonction des pressions partielles des gaz. Chaque pression partielle est rapportée à la pression de référence P° = 1 bar." }
+    },
+    {
+      "type": "formula",
+      "latex": "K_p = \\frac{(P_C/P^\\circ)^c \\cdot (P_D/P^\\circ)^d}{(P_A/P^\\circ)^a \\cdot (P_B/P^\\circ)^b}",
+      "note": { "fr": "Kp est sans dimension. La relation entre Kp et Kc est : Kp = Kc·(RT/P°)^(Δn), où Δn = (c+d) − (a+b) est la variation du nombre de moles gazeuses." }
+    },
+    {
+      "type": "formula",
+      "latex": "K_p = K_c \\cdot \\left(\\frac{RT}{P^\\circ}\\right)^{\\Delta n}",
+      "note": { "fr": "avec Δn = Σ coefficients des produits gazeux − Σ coefficients des réactifs gazeux. Si Δn = 0, alors Kp = Kc." }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "3. Influence de la température sur l'équilibre",
+        "ar": "3. تأثير درجة الحرارة على التوازن"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "La température est le seul facteur qui modifie la valeur de la constante d'équilibre K. D'après la loi de Van't Hoff, pour une réaction exothermique (ΔrH° < 0), K diminue quand T augmente. Pour une réaction endothermique (ΔrH° > 0), K augmente quand T augmente." }
+    },
+    {
+      "type": "list",
+      "items": {
+        "fr": [
+          "Réaction exothermique (ΔrH° < 0) : une augmentation de T déplace l'équilibre dans le sens inverse (endothermique). K diminue.",
+          "Réaction endothermique (ΔrH° > 0) : une augmentation de T déplace l'équilibre dans le sens direct (endothermique). K augmente.",
+          "Le système s'oppose à la perturbation thermique conformément au principe de Le Chatelier."
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "4. Influence de la pression et de la concentration",
+        "ar": "4. تأثير الضغط والتركيز"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": { "fr": "La pression n'affecte que les équilibres en phase gazeuse impliquant un changement du nombre total de moles de gaz (Δn ≠ 0). Une augmentation de pression déplace l'équilibre dans le sens qui diminue le nombre de moles de gaz. Un changement de concentration ne modifie pas K, mais modifie Qr, ce qui provoque un déplacement de l'équilibre." }
+    },
+    {
+      "type": "important",
+      "text": {
+        "fr": "Seule la température modifie la valeur de K. La pression et la concentration provoquent un déplacement de l'équilibre (une évolution du système) mais la constante K reste inchangée.",
+        "ar": "درجة الحرارة وحدها تغير قيمة K. الضغط والتركيز يسببان انزياح التوازن (تطور النظام) لكن ثابت K يبقى دون تغيير."
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": {
+        "fr": "5. Solutions tampons",
+        "ar": "5. المحاليل المنظمة"
+      }
+    },
+    {
+      "type": "definition",
+      "term": { "fr": "Solution tampon" },
+      "text": { "fr": "Une solution tampon est une solution dont le pH varie très peu par dilution modérée ou par ajout de petites quantités d'acide fort ou de base forte. Elle est constituée d'un mélange d'un acide faible AH et de sa base conjuguée A⁻ en quantités comparables." }
+    },
+    {
+      "type": "formula",
+      "latex": "pH = pK_a + \\log\\frac{[A^-]}{[AH]}",
+      "note": { "fr": "Formule de Henderson-Hasselbalch. Le pH d'une solution tampon dépend du pKa du couple et du rapport des concentrations [A⁻]/[AH]. Si [A⁻] = [AH], alors pH = pKa." }
+    },
+    {
+      "type": "example",
+      "title": { "fr": "Synthèse de l'ammoniac (équilibre en phase gazeuse)" },
+      "problem": { "fr": "N₂(g) + 3H₂(g) ⇌ 2NH₃(g), ΔrH° = −92 kJ/mol. Comment déplacer l'équilibre pour maximiser la production de NH₃ ?" },
+      "solution": {
+        "fr": "1) Température : la réaction est exothermique, donc une diminution de T déplace l'équilibre vers la droite (sens de la production de NH₃). Mais une T trop basse ralentit la réaction, d'où le compromis industriel (T ≈ 450°C). 2) Pression : Δn = 2 − (1+3) = −2. Augmenter la pression déplace l'équilibre vers le sens qui diminue le nombre de moles de gaz, soit vers la droite. On utilise P ≈ 200 atm. 3) Catalyseur (Fe) : accélère l'atteinte de l'équilibre sans modifier K.",
+        "latex": "N_2(g) + 3H_2(g) \\rightleftharpoons 2NH_3(g) \\quad \\Delta n = 2 - 4 = -2"
+      }
+    }
+  ]
+}

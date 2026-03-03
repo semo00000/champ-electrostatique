@@ -1,0 +1,67 @@
+{
+  "questions": [
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer le produit scalaire u·v avec u(3, 4) et v(2, -1)." },
+      "answer": 2,
+      "tolerance": 0,
+      "unit": "",
+      "hint": { "fr": "u·v = x₁x₂ + y₁y₂ = 3×2 + 4×(-1)." },
+      "explanation": { "fr": "u·v = 3×2 + 4×(-1) = 6 - 4 = 2." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Deux vecteurs u et v sont orthogonaux si et seulement si :" },
+      "choices": [
+        { "fr": "u·v = 1" },
+        { "fr": "u·v = 0" },
+        { "fr": "||u|| = ||v||" },
+        { "fr": "u·v = -1" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Deux vecteurs sont orthogonaux (perpendiculaires) lorsque leur produit scalaire est nul." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Calculer la norme du vecteur u(5, 12)." },
+      "answer": 13,
+      "tolerance": 0,
+      "unit": "",
+      "hint": { "fr": "||u|| = √(x² + y²) = √(25 + 144)." },
+      "explanation": { "fr": "||u|| = √(5² + 12²) = √(25 + 144) = √169 = 13." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est la valeur de ||u + v||² en fonction du produit scalaire ?" },
+      "choices": [
+        { "fr": "||u||² + ||v||²" },
+        { "fr": "||u||² + 2u·v + ||v||²" },
+        { "fr": "||u||² - 2u·v + ||v||²" },
+        { "fr": "(u·v)²" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "||u+v||² = (u+v)·(u+v) = u·u + 2u·v + v·v = ||u||² + 2u·v + ||v||². C'est l'analogue vectoriel de l'identité remarquable (a+b)² = a²+2ab+b²." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "Les vecteurs u(2, k) et v(3, -6) sont orthogonaux. Quelle est la valeur de k ?" },
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "",
+      "hint": { "fr": "u·v = 0 donne 2×3 + k×(-6) = 0." },
+      "explanation": { "fr": "u·v = 6 - 6k = 0, donc 6k = 6, k = 1." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Si u·v = ||u|| × ||v||, quel est l'angle θ entre u et v ?" },
+      "choices": [
+        { "fr": "θ = π/2 (90°)" },
+        { "fr": "θ = 0 (0°)" },
+        { "fr": "θ = π (180°)" },
+        { "fr": "θ = π/4 (45°)" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "u·v = ||u||·||v||·cos θ = ||u||·||v|| implique cos θ = 1, donc θ = 0. Les vecteurs sont colinéaires de même sens." }
+    }
+  ]
+}

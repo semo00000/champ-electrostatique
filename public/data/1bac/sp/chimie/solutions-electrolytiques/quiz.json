@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "type": "mcq",
+      "question": { "fr": "Parmi les substances suivantes, laquelle est un electrolyte faible ?" },
+      "choices": [
+        { "fr": "NaCl" },
+        { "fr": "HCl" },
+        { "fr": "CH₃COOH" },
+        { "fr": "KOH" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "L'acide ethanoique CH₃COOH est un electrolyte faible car il ne se dissocie que partiellement dans l'eau. Les autres (NaCl, HCl, KOH) sont des electrolytes forts a dissociation totale." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quelle est l'equation de dissolution du sulfate de potassium K₂SO₄ dans l'eau ?" },
+      "choices": [
+        { "fr": "K₂SO₄ → K²⁺ + SO₄²⁻" },
+        { "fr": "K₂SO₄ → 2K⁺ + SO₄²⁻" },
+        { "fr": "K₂SO₄ → 2K⁺ + S²⁻ + 4O²⁻" },
+        { "fr": "K₂SO₄ → K⁺ + KSO₄⁻" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "K₂SO₄ se dissocie en 2 ions potassium K⁺ et 1 ion sulfate SO₄²⁻. L'ion sulfate est un ion polyatomique qui reste intact lors de la dissolution." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "On dissout 11,1 g de CaCl₂ (M = 111 g/mol) dans 250 mL d'eau. Quelle est la concentration molaire des ions Cl⁻ en mol/L ?" },
+      "answer": 0.8,
+      "tolerance": 0.01,
+      "unit": "mol/L",
+      "hint": { "fr": "Ecrivez d'abord l'equation de dissolution CaCl₂ → Ca²⁺ + 2Cl⁻, puis calculez C = n/V et [Cl⁻] = 2C." },
+      "explanation": { "fr": "n(CaCl₂) = 11,1/111 = 0,1 mol. C = 0,1/0,250 = 0,4 mol/L. D'apres CaCl₂ → Ca²⁺ + 2Cl⁻ : [Cl⁻] = 2C = 2 × 0,4 = 0,8 mol/L." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Une solution contient les ions Fe³⁺ a la concentration 0,1 mol/L et les ions SO₄²⁻. Par electroneutralite, quelle est [SO₄²⁻] ?" },
+      "choices": [
+        { "fr": "0,10 mol/L" },
+        { "fr": "0,15 mol/L" },
+        { "fr": "0,20 mol/L" },
+        { "fr": "0,30 mol/L" }
+      ],
+      "correct": 1,
+      "explanation": { "fr": "Electroneutralite : 3×[Fe³⁺] = 2×[SO₄²⁻]. Donc [SO₄²⁻] = 3×0,1/2 = 0,15 mol/L." }
+    },
+    {
+      "type": "mcq",
+      "question": { "fr": "Quel ion possede la conductivite molaire ionique la plus elevee ?" },
+      "choices": [
+        { "fr": "Na⁺" },
+        { "fr": "Cl⁻" },
+        { "fr": "H₃O⁺" },
+        { "fr": "OH⁻" }
+      ],
+      "correct": 2,
+      "explanation": { "fr": "L'ion hydronium H₃O⁺ possede la conductivite molaire ionique la plus elevee (λ = 349,8 × 10⁻⁴ S·m²·mol⁻¹) grace au mecanisme de Grotthuss (transfert de protons en chaine)." }
+    },
+    {
+      "type": "numeric",
+      "question": { "fr": "On prepare 2 L de solution en dissolvant 0,5 mol de Na₂SO₄. Quelle est la concentration des ions Na⁺ en mol/L ?" },
+      "answer": 0.5,
+      "tolerance": 0.01,
+      "unit": "mol/L",
+      "hint": { "fr": "Na₂SO₄ → 2Na⁺ + SO₄²⁻. Trouvez C puis [Na⁺] = 2C." },
+      "explanation": { "fr": "C = n/V = 0,5/2 = 0,25 mol/L. Na₂SO₄ → 2Na⁺ + SO₄²⁻, donc [Na⁺] = 2C = 2 × 0,25 = 0,50 mol/L." }
+    }
+  ]
+}
