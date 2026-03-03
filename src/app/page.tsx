@@ -1,245 +1,666 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
 import { useI18n } from "@/lib/i18n/context";
 import { getCurriculum } from "@/lib/curriculum";
+import {
+  Flame,
+  BookOpen,
+  Atom,
+  Beaker,
+  Calculator,
+  Zap,
+  PlaySquare,
+  ArrowRight,
+  BrainCircuit,
+  Activity,
+  CheckCircle2,
+  Layers,
+} from "lucide-react";
 
-const SUBJECT_CONFIG: Record<string, { gradient: string; icon: React.ReactNode }> = {
+/* 
+   DESIGN TOKENS
+    */
+
+const EASE_EXPO = [0.16, 1, 0.3, 1] as const;
+
+type SubjectCfg = { color: string; glow: string; icon: React.ReactNode };
+
+const SUBJECT_CONFIG: Record<string, SubjectCfg> = {
   physique: {
-    gradient: "from-indigo-500/20 to-indigo-600/5",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-        <path d="M2 12h20" />
-      </svg>
-    ),
+    color: "#6366f1",
+    glow: "rgba(99,102,241,0.25)",
+    icon: <Atom size={22} strokeWidth={1.6} />,
   },
   chimie: {
-    gradient: "from-emerald-500/20 to-emerald-600/5",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-        <path d="M9 3h6v7l5 8a2 2 0 0 1-1.7 3H5.7a2 2 0 0 1-1.7-3l5-8V3" />
-        <path d="M7 3h10" />
-      </svg>
-    ),
+    color: "#10b981",
+    glow: "rgba(16,185,129,0.25)",
+    icon: <Beaker size={22} strokeWidth={1.6} />,
   },
   maths: {
-    gradient: "from-violet-500/20 to-violet-600/5",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <line x1="12" y1="5" x2="12" y2="19" />
-        <line x1="5" y1="12" x2="19" y2="12" />
-      </svg>
-    ),
+    color: "#8b5cf6",
+    glow: "rgba(139,92,246,0.25)",
+    icon: <Calculator size={22} strokeWidth={1.6} />,
   },
   svt: {
-    gradient: "from-orange-500/20 to-orange-600/5",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
+    color: "#f97316",
+    glow: "rgba(249,115,22,0.25)",
+    icon: <Activity size={22} strokeWidth={1.6} />,
   },
 };
 
-const SUBJECT_COLOR: Record<string, string> = {
-  physique: "var(--color-physique)",
-  chimie: "var(--color-chimie)",
-  maths: "var(--color-maths)",
-  svt: "var(--color-svt)",
-};
+/* 
+   ANIMATED PARTICLE FIELD  SSR-safe (positions from useEffect)
+    */
 
-const container = { hidden: {}, visible: { transition: { staggerChildren: 0.06 } } };
-const fadeUp = {
-  hidden: { opacity: 0, y: 18 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
-};
+type Particle = { cx: number; cy: number; r: number; dur: number; delay: number };
+
+function ParticleField() {
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
+    // Deferred so React Compiler doesn't flag synchronous setState-in-effect,
+    // and avoids SSR/hydration mismatch for Math.random()
+    const id = requestAnimationFrame(() => {
+      setParticles(
+        Array.from({ length: 28 }, () => ({
+          cx: Math.random() * 100,
+          cy: Math.random() * 100,
+          r: 0.8 + Math.random() * 1.6,
+          dur: 4 + Math.random() * 6,
+          delay: Math.random() * 5,
+        }))
+      );
+    });
+    return () => cancelAnimationFrame(id);
+  }, []);
+
+  return (
+    <svg
+      className="absolute inset-0 w-full h-full pointer-events-none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Faint grid */}
+      <defs>
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.028)" strokeWidth="0.5" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)" />
+
+      {/* Orbiting glow rings */}
+      <motion.ellipse
+        cx="50%" cy="30%" rx="34%" ry="16%"
+        fill="none" stroke="rgba(99,102,241,0.07)" strokeWidth="1"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+        style={{ transformOrigin: "50% 30%" }}
+      />
+      <motion.ellipse
+        cx="50%" cy="30%" rx="22%" ry="9%"
+        fill="none" stroke="rgba(139,92,246,0.09)" strokeWidth="0.8"
+        animate={{ rotate: -360 }}
+        transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+        style={{ transformOrigin: "50% 30%" }}
+      />
+
+      {/* Floating particles */}
+      {particles.map((p, i) => (
+        <motion.circle
+          key={i}
+          cx={`${p.cx}%`}
+          cy={`${p.cy}%`}
+          r={p.r}
+          fill="currentColor"
+          className="text-indigo-400"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: [0.1, 0.55, 0.1], scale: [1, 1.6, 1] }}
+          transition={{ duration: p.dur, repeat: Infinity, delay: p.delay, ease: "easeInOut" }}
+        />
+      ))}
+
+      {/* Connecting lines between nearby particles (static aesthetic) */}
+      {particles.slice(0, 8).map((p, i) =>
+        particles.slice(i + 1, i + 3).map((q, j) => (
+          <line
+            key={`${i}-${j}`}
+            x1={`${p.cx}%`} y1={`${p.cy}%`}
+            x2={`${q.cx}%`} y2={`${q.cy}%`}
+            stroke="rgba(99,102,241,0.05)" strokeWidth="0.5"
+          />
+        ))
+      )}
+    </svg>
+  );
+}
+
+/* 
+   HERO BACKGROUND
+    */
+
+function HeroBackground() {
+  return (
+    <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+      {/* Base radial */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 110% 65% at 50% -5%, rgba(99,102,241,0.18) 0%, transparent 60%)",
+        }}
+      />
+      {/* Slow drifting orbs */}
+      <motion.div
+        animate={{ y: [-20, 20, -20], x: [-12, 12, -12] }}
+        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[5%] left-[10%] w-[500px] h-[500px] rounded-full"
+        style={{ background: "radial-gradient(circle, rgba(99,102,241,0.09) 0%, transparent 70%)" }}
+      />
+      <motion.div
+        animate={{ y: [18, -18, 18], x: [10, -10, 10] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[10%] right-[5%] w-[420px] h-[420px] rounded-full"
+        style={{ background: "radial-gradient(circle, rgba(139,92,246,0.09) 0%, transparent 70%)" }}
+      />
+      <motion.div
+        animate={{ y: [-8, 8, -8] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-[0%] left-[30%] w-[380px] h-[280px] rounded-full"
+        style={{ background: "radial-gradient(circle, rgba(16,185,129,0.05) 0%, transparent 70%)" }}
+      />
+      <ParticleField />
+    </div>
+  );
+}
+
+/* 
+   SPOTLIGHT CARD  cursor-following radial gradient
+    */
+
+function SpotlightCard({
+  children,
+  className = "",
+  spotlightColor = "rgba(99,102,241,0.18)",
+}: {
+  children: React.ReactNode;
+  className?: string;
+  spotlightColor?: string;
+}) {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  function onMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent<HTMLDivElement>) {
+    const { left, top } = currentTarget.getBoundingClientRect();
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  }
+
+  const bg = useMotionTemplate`radial-gradient(400px circle at ${mouseX}px ${mouseY}px, ${spotlightColor}, transparent 75%)`;
+
+  return (
+    <div
+      onMouseMove={onMouseMove}
+      className={`group relative overflow-hidden ${className}`}
+    >
+      {/* Spotlight layer */}
+      <motion.div
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{ background: bg }}
+      />
+      {/* Glass border highlight on hover */}
+      <div className="absolute inset-0 rounded-[inherit] border border-white/0 group-hover:border-white/10 transition-colors duration-300 pointer-events-none" />
+      <div className="relative z-10 h-full">{children}</div>
+    </div>
+  );
+}
+
+/* 
+   MAGNETIC BUTTON
+    */
+
+function MagneticCTA({
+  children,
+  href,
+  variant = "secondary",
+}: {
+  children: React.ReactNode;
+  href: string;
+  variant?: "primary" | "secondary";
+}) {
+  const ref = useRef<HTMLAnchorElement>(null);
+  const x = useSpring(0, { stiffness: 180, damping: 16, mass: 0.12 });
+  const y = useSpring(0, { stiffness: 180, damping: 16, mass: 0.12 });
+
+  const onMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const rect = ref.current!.getBoundingClientRect();
+    x.set((e.clientX - rect.left - rect.width / 2) * 0.18);
+    y.set((e.clientY - rect.top - rect.height / 2) * 0.18);
+  };
+  const onLeave = () => { x.set(0); y.set(0); };
+
+  const isPrimary = variant === "primary";
+
+  return (
+    <motion.a
+      ref={ref}
+      href={href}
+      style={{ x, y }}
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
+      whileTap={{ scale: 0.95 }}
+      className={`group relative inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-semibold text-sm tracking-wide transition-shadow duration-300 select-none ${
+        isPrimary
+          ? "text-white"
+          : "border border-[var(--border-glass-bright)] bg-white/[0.04] text-[var(--text-primary)] hover:bg-white/[0.08] backdrop-blur-md"
+      }`}
+    >
+      {isPrimary && (
+        <>
+          {/* Gradient fill */}
+          <span
+            className="absolute inset-0 rounded-full"
+            style={{ background: "var(--gradient-brand)" }}
+          />
+          {/* Glow halo */}
+          <span
+            className="absolute -inset-1 rounded-full blur-lg opacity-0 group-hover:opacity-70 transition-opacity duration-500"
+            style={{ background: "var(--gradient-brand)" }}
+          />
+        </>
+      )}
+      <span className="relative flex items-center gap-2.5">{children}</span>
+    </motion.a>
+  );
+}
+
+/* 
+   BENTO STAT CARD (reusable inner shell)
+    */
+
+function StatCard({
+  children,
+  className = "",
+  spotlightColor,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  spotlightColor?: string;
+}) {
+  return (
+    <SpotlightCard
+      spotlightColor={spotlightColor}
+      className={`rounded-3xl border border-[var(--border-glass)] bg-[var(--bg-card)] overflow-hidden ${className}`}
+    >
+      {children}
+    </SpotlightCard>
+  );
+}
+
+/* 
+   STREAK FLAME WIDGET
+    */
+
+function StreakWidget() {
+  const days = ["M", "T", "W", "T", "F", "S", "S"];
+  const completed = [true, true, true, true, true, true, false];
+
+  return (
+    <div className="flex flex-col h-full p-7 justify-between">
+      <div className="flex items-start justify-between">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-widest text-orange-500/70 mb-1">
+            Current Streak
+          </p>
+          <div className="flex items-end gap-2">
+            <span
+              className="text-5xl font-black leading-none"
+              style={{
+                background: "linear-gradient(135deg,#fb923c,#f43f5e)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              7
+            </span>
+            <span className="text-xl font-bold text-orange-400 mb-1">Days</span>
+          </div>
+        </div>
+        <motion.div
+          animate={{ scale: [1, 1.12, 1], rotate: [-4, 4, -4] }}
+          transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <Flame
+            size={52}
+            strokeWidth={1.4}
+            className="text-orange-500"
+            style={{ filter: "drop-shadow(0 0 18px rgba(249,115,22,0.6))" }}
+          />
+        </motion.div>
+      </div>
+
+      {/* Day pips */}
+      <div className="flex items-center gap-2 mt-4">
+        {days.map((d, i) => (
+          <div key={i} className="flex flex-col items-center gap-1.5 flex-1">
+            <motion.div
+              initial={{ scale: 0.6, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.06, duration: 0.4, ease: EASE_EXPO }}
+              className={`w-full h-7 rounded-lg flex items-center justify-center ${
+                completed[i]
+                  ? "bg-orange-500/20 border border-orange-500/40"
+                  : "bg-white/5 border border-white/8"
+              }`}
+            >
+              {completed[i] && (
+                <CheckCircle2 size={13} className="text-orange-400" strokeWidth={2.2} />
+              )}
+            </motion.div>
+            <span className="text-[10px] font-semibold text-[var(--text-muted)]">{d}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* 
+   PAGE
+    */
 
 export default function LandingPage() {
   const { t, localize } = useI18n();
   const curriculum = getCurriculum();
 
   return (
-    <div className="space-y-16 pb-8">
-      {/* ── Hero ── */}
-      <section className="relative text-center pt-10 pb-2 overflow-hidden">
-        <div
-          className="pointer-events-none absolute inset-0 -z-10"
-          style={{ background: "var(--gradient-hero)" }}
-        />
+    <div className="relative overflow-x-hidden">
 
+      {/*  HERO  */}
+      <section className="relative flex flex-col items-center justify-center text-center min-h-[88vh] pt-28 pb-20 px-4">
+        <HeroBackground />
+
+        {/* Staggered entrance */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-          className="space-y-6"
+          initial="hidden"
+          animate="show"
+          variants={{
+            hidden: {},
+            show: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } },
+          }}
+          className="relative z-10 max-w-4xl mx-auto space-y-7"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--color-info-border)] bg-[var(--color-info-bg)] text-xs font-semibold text-[var(--text-accent)] tracking-wider uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-info)] animate-pulse" />
+          <motion.div
+            variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: EASE_EXPO } } }}
+            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[var(--border-glass-bright)] bg-[var(--bg-elevated)] text-xs font-semibold tracking-wider uppercase text-[var(--text-accent)]"
+          >
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="animate-ping absolute h-full w-full rounded-full bg-[var(--color-info)] opacity-75" />
+              <span className="relative h-1.5 w-1.5 rounded-full bg-[var(--color-info)]" />
+            </span>
             {t("site.subtitle")}
-          </div>
+          </motion.div>
 
-          {/* Headline — first word normal, rest gradient (works for FR/AR/EN) */}
-          <h1 className="text-4xl md:text-[3.5rem] font-bold leading-[1.1] tracking-tight">
+          {/* Headline */}
+          <motion.h1
+            variants={{ hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: EASE_EXPO } } }}
+            className="text-[clamp(2.8rem,8vw,5.5rem)] font-extrabold leading-[0.98] tracking-[-0.03em] text-[var(--text-primary)]"
+          >
             {(() => {
               const words = t("hero.title").split(" ");
-              const first = words[0];
-              const rest = words.slice(1).join(" ");
+              const first = words.slice(0, -1).join(" ");
+              const last = words[words.length - 1];
               return (
                 <>
-                  <span className="text-[var(--text-primary)]">{first} </span>
-                  <span className="gradient-text">{rest}</span>
+                  {first}{" "}
+                  <span
+                    style={{
+                      background: "var(--gradient-brand)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    {last}
+                  </span>
                 </>
               );
             })()}
-          </h1>
+          </motion.h1>
 
-          <p className="text-base md:text-lg text-[var(--text-secondary)] max-w-xl mx-auto leading-relaxed">
+          {/* Sub */}
+          <motion.p
+            variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: EASE_EXPO } } }}
+            className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed"
+          >
             {t("hero.desc")}
-          </p>
+          </motion.p>
 
           {/* CTAs */}
-          <div className="flex items-center justify-center gap-3 flex-wrap pt-2">
-            <Link
-              href="/2bac"
-              className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-xl font-semibold text-sm text-white transition-all hover:scale-[1.03] active:scale-[0.97]"
-              style={{
-                background: "var(--gradient-brand)",
-                boxShadow: "var(--shadow-glow-indigo), var(--shadow-md)",
-              }}
-            >
+          <motion.div
+            variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: EASE_EXPO } } }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-3"
+          >
+            <MagneticCTA href="/2bac" variant="primary">
               {t("hero.browse")}
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="group-hover:translate-x-0.5 transition-transform">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </Link>
-            <Link
-              href="/2bac/sm/physique/champ-electrostatique/sim"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[var(--border-glass-bright)] bg-[var(--bg-elevated)] text-[var(--text-primary)] font-medium text-sm hover:bg-[var(--bg-hover)] hover:border-[var(--border-accent)] transition-all"
-            >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-info)" strokeWidth="2">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-              </svg>
+              <ArrowRight size={16} strokeWidth={2.5} className="translate-x-0 group-hover:translate-x-0.5 transition-transform" />
+            </MagneticCTA>
+            <MagneticCTA href="/2bac/sm/physique/champ-electrostatique/sim" variant="secondary">
+              <PlaySquare size={16} className="text-[var(--text-accent)]" />
               {t("hero.sim")}
-            </Link>
-          </div>
+            </MagneticCTA>
+          </motion.div>
+        </motion.div>
+
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 inset-x-0 h-32 pointer-events-none bg-gradient-to-t from-[var(--bg-primary)] to-transparent" />
+      </section>
+
+      {/*  BENTO STATS  */}
+      <section className="px-4 pb-24 max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 48 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: EASE_EXPO }}
+          className="grid gap-3.5"
+          style={{ gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gridTemplateRows: "200px 200px" }}
+        >
+          {/*  Streak  spans 2 cols  2 rows */}
+          <StatCard
+            className="col-span-2 row-span-2 border-orange-500/15 bg-gradient-to-br from-orange-500/[0.06] to-rose-500/[0.04]"
+            spotlightColor="rgba(249,115,22,0.14)"
+          >
+            <StreakWidget />
+          </StatCard>
+
+          {/*  Lessons */}
+          <StatCard className="col-span-2 row-span-1" spotlightColor="rgba(99,102,241,0.18)">
+            <div className="flex items-center gap-5 h-full p-7">
+              <div
+                className="shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center"
+                style={{ background: "var(--color-info-bg)", boxShadow: "var(--shadow-glow-indigo)" }}
+              >
+                <BookOpen size={26} className="text-[var(--color-info-bright)]" strokeWidth={1.6} />
+              </div>
+              <div>
+                <div className="text-[2.4rem] font-black leading-none tracking-tight text-[var(--text-primary)]">
+                  131<span className="text-[var(--text-accent)] text-3xl">+</span>
+                </div>
+                <div className="text-sm text-[var(--text-muted)] font-medium mt-1">{t("lessons")} interactives</div>
+              </div>
+            </div>
+          </StatCard>
+
+          {/*  Topics */}
+          <StatCard className="col-span-1 row-span-1" spotlightColor="rgba(139,92,246,0.18)">
+            <div className="flex flex-col items-start justify-between h-full p-6">
+              <div
+                className="w-10 h-10 rounded-xl flex items-center justify-center"
+                style={{ background: "var(--color-info-bg)" }}
+              >
+                <Layers size={20} className="text-[var(--color-info-bright)]" strokeWidth={1.6} />
+              </div>
+              <div>
+                <div className="text-3xl font-black leading-none text-[var(--text-primary)]">4</div>
+                <div className="text-xs text-[var(--text-muted)] font-medium mt-1">{t("topics")}</div>
+              </div>
+            </div>
+          </StatCard>
+
+          {/*  Simulations */}
+          <StatCard
+            className="col-span-1 row-span-1 border-cyan-500/15 bg-gradient-to-br from-cyan-500/[0.05] to-transparent"
+            spotlightColor="rgba(6,182,212,0.2)"
+          >
+            <div className="flex flex-col items-start justify-between h-full p-6">
+              <div
+                className="w-10 h-10 rounded-xl flex items-center justify-center"
+                style={{ background: "rgba(6,182,212,0.1)", boxShadow: "0 0 16px rgba(6,182,212,0.15)" }}
+              >
+                <Zap
+                  size={20}
+                  className="text-cyan-400"
+                  strokeWidth={1.6}
+                  style={{ filter: "drop-shadow(0 0 6px rgba(6,182,212,0.7))" }}
+                />
+              </div>
+              <div>
+                <div className="text-3xl font-black leading-none text-[var(--text-primary)]">3D</div>
+                <div className="text-xs text-[var(--text-muted)] font-medium mt-1">{t("simulations")} GPU</div>
+              </div>
+            </div>
+          </StatCard>
         </motion.div>
       </section>
 
-      {/* ── Stats ── */}
-      <motion.section
-        variants={container}
-        initial="hidden"
-        animate="visible"
-        className="grid grid-cols-2 md:grid-cols-4 gap-3"
-      >
-        {[
-          {
-            value: "131+", label: t("lessons"),
-            icon: <><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></>,
-          },
-          {
-            value: "131+", label: "Quiz",
-            icon: <><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></>,
-          },
-          {
-            value: "4", label: t("topics"),
-            icon: <><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></>,
-          },
-          {
-            value: "GPU", label: t("simulations"),
-            icon: <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>,
-          },
-        ].map((s) => (
-          <motion.div
-            key={s.label}
-            variants={fadeUp}
-            className="flex flex-col items-center gap-2.5 p-5 rounded-2xl border border-[var(--border-glass)] bg-[var(--bg-card)] hover:border-[var(--border-accent)] hover:-translate-y-0.5 hover:shadow-[var(--shadow-md)] transition-all"
-          >
-            <div className="w-9 h-9 rounded-xl bg-[var(--color-info-bg)] flex items-center justify-center text-[var(--text-accent)]">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                {s.icon}
-              </svg>
-            </div>
-            <div className="text-2xl font-bold text-[var(--text-primary)] leading-none">{s.value}</div>
-            <div className="text-xs text-[var(--text-muted)] font-medium">{s.label}</div>
-          </motion.div>
-        ))}
-      </motion.section>
-
-      {/* ── Year / Subject cards ── */}
-      <section className="space-y-14">
+      {/*  CURRICULUM  */}
+      <section className="px-4 pb-32 max-w-6xl mx-auto space-y-28">
         {Object.entries(curriculum.years).map(([yearId, year], yIdx) => (
-          <motion.div
-            key={yearId}
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: yIdx * 0.08, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <div className="flex items-center justify-between mb-5">
+          <div key={yearId}>
+            {/* Year header */}
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6, delay: yIdx * 0.05, ease: EASE_EXPO }}
+              className="flex items-end justify-between pb-6 mb-12 border-b border-[var(--border-glass)]"
+            >
               <div>
-                <h2 className="text-xl font-bold text-[var(--text-primary)]">{localize(year.title)}</h2>
-                <p className="text-sm text-[var(--text-muted)] mt-0.5">{t(`year.${yearId}.desc`)}</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)] mb-2">
+                  {t(`year.${yearId}.desc`)}
+                </p>
+                <h2 className="text-4xl md:text-5xl font-extrabold tracking-[-0.025em] text-[var(--text-primary)] leading-tight">
+                  {localize(year.title)}
+                </h2>
               </div>
               <Link
                 href={`/${yearId}`}
-                className="inline-flex items-center gap-1 text-xs font-semibold text-[var(--text-accent)] hover:text-[var(--text-accent-bright)] transition-colors"
+                className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--text-accent)] hover:text-[var(--text-accent-bright)] transition-colors"
               >
                 {t("nav.viewAll")}
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                <ArrowRight size={15} />
               </Link>
-            </div>
+            </motion.div>
 
-            <div className="space-y-7">
-              {Object.entries(year.filieres).map(([filiereId, filiere]) => (
-                <div key={filiereId}>
-                  <Link
-                    href={`/${yearId}/${filiereId}`}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--text-accent)] transition-colors mb-3"
-                  >
-                    {localize(filiere.title)}
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6"/></svg>
-                  </Link>
+            {/* Filieres */}
+            <div className="space-y-14">
+              {Object.entries(year.filieres).map(([filiereId, filiere], fIdx) => (
+                <motion.div
+                  key={filiereId}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.55, delay: fIdx * 0.06, ease: EASE_EXPO }}
+                  className="flex flex-col lg:flex-row gap-8"
+                >
+                  {/* Sidebar label */}
+                  <div className="lg:w-52 shrink-0 pt-1">
+                    <Link href={`/${yearId}/${filiereId}`} className="group inline-block">
+                      <div className="text-sm font-black uppercase tracking-[0.12em] text-[var(--text-secondary)] group-hover:text-[var(--text-accent)] transition-colors duration-200">
+                        {localize(filiere.title)}
+                      </div>
+                      <div className="flex items-center gap-1 mt-1.5 text-xs font-semibold text-[var(--text-muted)] opacity-0 -translate-x-1.5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
+                        Explore <ArrowRight size={11} />
+                      </div>
+                    </Link>
+                  </div>
 
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-                    {Object.entries(filiere.subjects).map(([subjectId, subject]) => {
-                      const cfg = SUBJECT_CONFIG[subjectId];
-                      const color = SUBJECT_COLOR[subjectId];
+                  {/* Subject cards */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 flex-1">
+                    {Object.entries(filiere.subjects).map(([subjectId, subject], sIdx) => {
+                      const cfg: SubjectCfg = SUBJECT_CONFIG[subjectId] ?? {
+                        color: "#818cf8",
+                        glow: "rgba(129,140,248,0.25)",
+                        icon: <BrainCircuit size={22} strokeWidth={1.6} />,
+                      };
+
                       return (
-                        <Link
+                        <motion.div
                           key={subjectId}
-                          href={`/${yearId}/${filiereId}/${subjectId}`}
-                          className="group relative p-5 rounded-2xl border border-[var(--border-glass)] bg-[var(--bg-card)] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-glass-bright)] hover:shadow-[var(--shadow-lg)]"
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true, margin: "-40px" }}
+                          transition={{ duration: 0.5, delay: sIdx * 0.07, ease: EASE_EXPO }}
                         >
-                          <div className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${cfg?.gradient}`} />
-                          <div
-                            className="relative w-10 h-10 rounded-xl flex items-center justify-center mb-4"
-                            style={{ background: `${color}18`, color }}
+                          <SpotlightCard
+                            spotlightColor={cfg.glow}
+                            className="h-full rounded-2xl border border-[var(--border-glass)] bg-[var(--bg-card)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-glass-bright)] hover:shadow-[var(--shadow-lg)]"
                           >
-                            {cfg?.icon}
-                          </div>
-                          <h3 className="relative text-sm font-semibold text-[var(--text-primary)] group-hover:text-[var(--text-accent)] transition-colors leading-snug">
-                            {localize(subject.title)}
-                          </h3>
-                          <p className="relative text-xs text-[var(--text-muted)] mt-1 font-medium">
-                            {subject.topics.length} {t("topics")}
-                          </p>
-                          <div
-                            className="absolute top-4 right-4 w-2 h-2 rounded-full"
-                            style={{ background: color, boxShadow: `0 0 8px ${color}80` }}
-                          />
-                        </Link>
+                            <Link
+                              href={`/${yearId}/${filiereId}/${subjectId}`}
+                              className="flex flex-col h-full p-6 min-h-[172px]"
+                            >
+                              {/* Icon row */}
+                              <div className="flex items-center justify-between mb-7">
+                                <div
+                                  className="w-11 h-11 rounded-xl flex items-center justify-center border border-white/5"
+                                  style={{
+                                    backgroundColor: `${cfg.color}18`,
+                                    color: cfg.color,
+                                    boxShadow: `inset 0 0 14px ${cfg.color}10`,
+                                  }}
+                                >
+                                  {cfg.icon}
+                                </div>
+                                <div
+                                  className="w-2 h-2 rounded-full"
+                                  style={{
+                                    backgroundColor: cfg.color,
+                                    boxShadow: `0 0 8px 1px ${cfg.color}`,
+                                  }}
+                                />
+                              </div>
+
+                              {/* Text */}
+                              <div className="mt-auto">
+                                <h3
+                                  className="text-base font-bold leading-snug mb-1"
+                                  style={{ color: "var(--text-primary)" }}
+                                >
+                                  {localize(subject.title)}
+                                </h3>
+                                <p className="text-xs font-semibold text-[var(--text-muted)]">
+                                  {subject.topics.length} {t("topics")}
+                                </p>
+                              </div>
+                            </Link>
+                          </SpotlightCard>
+                        </motion.div>
                       );
                     })}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         ))}
       </section>
     </div>
