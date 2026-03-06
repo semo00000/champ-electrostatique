@@ -25,10 +25,10 @@ export function ResultScreen({ score, total, topicTitle, backHref, onRetry, onRe
 
     import("canvas-confetti").then(({ default: fire }) => {
       if (percentage === 100) {
-        fire({ particleCount: 120, spread: 80, origin: { y: 0.55 }, colors: ["#FFD700", "#FFA500", "#6366f1", "#10b981"] });
-        setTimeout(() => fire({ particleCount: 60, spread: 120, origin: { y: 0.55 } }), 350);
+        fire({ particleCount: 120, spread: 80, origin: { y: 0.55 }, colors: ["#fbbf24", "#f59e0b", "#e11d48", "#10b981"] });
+        setTimeout(() => fire({ particleCount: 60, spread: 120, origin: { y: 0.55 }, colors: ["#fbbf24", "#e11d48", "#10b981", "#be123c"] }), 350);
       } else if (percentage >= 80) {
-        fire({ particleCount: 80, spread: 65, origin: { y: 0.6 }, colors: ["#6366f1", "#8b5cf6", "#10b981"] });
+        fire({ particleCount: 80, spread: 65, origin: { y: 0.6 }, colors: ["#e11d48", "#fbbf24", "#10b981"] });
       } else {
         fire({ particleCount: 40, spread: 45, origin: { y: 0.6 } });
       }
@@ -115,7 +115,7 @@ export function ResultScreen({ score, total, topicTitle, backHref, onRetry, onRe
         <button
           onClick={onRetry}
           className="w-full px-5 py-3 rounded-xl text-white font-semibold text-sm hover:opacity-90 active:scale-[0.98] transition-all"
-          style={{ background: "var(--gradient-brand)", boxShadow: "var(--shadow-glow-indigo)" }}
+          style={{ background: "var(--gradient-brand)", boxShadow: "var(--shadow-glow-crimson)" }}
         >
           {t("quiz.retry")}
         </button>

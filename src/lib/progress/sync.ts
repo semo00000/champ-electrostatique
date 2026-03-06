@@ -2,7 +2,7 @@
 
 import { databases, DATABASE_ID, COLLECTIONS } from "@/lib/appwrite";
 import { Query, Permission, Role, ID } from "appwrite";
-import type { TopicProgress, GamificationData } from "@/types/progress";
+import type { TopicProgress, GamificationData, RankId } from "@/types/progress";
 
 // ---------- Progress CRUD ----------
 
@@ -108,6 +108,12 @@ export async function fetchCloudGamification(
     streakDays: doc.streakDays as number,
     lastActiveDate: (doc.lastActiveDate as string) ?? null,
     activityMap: JSON.parse((doc.activityMap as string) || "{}"),
+    bacCoins: (doc.bacCoins as number) ?? 0,
+    streakFreezeCount: (doc.streakFreezeCount as number) ?? 0,
+    streakFreezeUsedAt: (doc.streakFreezeUsedAt as string) ?? null,
+    rank: (doc.rank as RankId) ?? "jid3_mouchtarak",
+    schoolId: (doc.schoolId as string) ?? null,
+    earnedRewards: JSON.parse((doc.earnedRewards as string) || "[]"),
   };
 }
 
@@ -128,6 +134,12 @@ export async function pushGamification(
     streakDays: data.streakDays,
     lastActiveDate: data.lastActiveDate,
     activityMap: JSON.stringify(data.activityMap),
+    bacCoins: data.bacCoins ?? 0,
+    streakFreezeCount: data.streakFreezeCount ?? 0,
+    streakFreezeUsedAt: data.streakFreezeUsedAt ?? null,
+    rank: data.rank ?? "jid3_mouchtarak",
+    schoolId: data.schoolId ?? null,
+    earnedRewards: JSON.stringify(data.earnedRewards ?? []),
   };
 
   if (existing.documents.length > 0) {
@@ -205,5 +217,11 @@ export function mergeGamification(
   return {
     ...winner,
     activityMap: mergedMap,
+    bacCoins: Math.max(local.bacCoins ?? 0, cloud.bacCoins ?? 0),
+    streakFreezeCount: Math.max(local.streakFreezeCount ?? 0, cloud.streakFreezeCount ?? 0),
+    streakFreezeUsedAt: local.streakFreezeUsedAt ?? cloud.streakFreezeUsedAt ?? null,
+    rank: winner.rank ?? "jid3_mouchtarak",
+    schoolId: local.schoolId ?? cloud.schoolId ?? null,
+    earnedRewards: Array.from(new Set([...(local.earnedRewards ?? []), ...(cloud.earnedRewards ?? [])])),
   };
 }

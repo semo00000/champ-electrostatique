@@ -1,13 +1,36 @@
-"use client";
-
-import Link from "next/link";
-import { useParams } from "next/navigation";
-import { useI18n } from "@/lib/i18n/context";
-import { getCurriculum, getYearData } from "@/lib/curriculum";
-import { Breadcrumb } from "@/components/layout/Breadcrumb";
+/**
+ * [year]/page.tsx — Server Component wrapper.
+ *
+ * Validates the year param server-side and calls notFound() properly
+ * (notFound() only works reliably in Server Components).
+ * The actual UI is rendered by YearPageClient which uses the i18n context.
+ */
 import { notFound } from "next/navigation";
+import { getYearData } from "@/lib/curriculum";
+import { YearPageClient } from "./YearPageClient";
 
-const SUBJECT_ICONS: Record<string, React.ReactNode> = {
+interface Props {
+  params: Promise<{ year: string }>;
+}
+
+export default async function YearPage({ params }: Props) {
+  const { year: yearId } = await params;
+  const year = getYearData(yearId);
+
+  if (!year) {
+    notFound();
+  }
+
+  return <YearPageClient yearId={yearId} year={year} />;
+}
+
+// ─── Legacy client-code removed ──────────────────────────────────────────────
+// All UI logic has been moved to YearPageClient.tsx so this file stays a
+// server component, allowing notFound() to work correctly.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// Keep static map below for potential server-side metadata use in the future.
+const _SUBJECT_ICONS_UNUSED: Record<string, React.ReactNode> = {
   physique: (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <circle cx="12" cy="12" r="10" />
@@ -46,6 +69,13 @@ const SUBJECT_BG_CLASSES: Record<string, string> = {
   chimie: "bg-[var(--color-chimie)]/10",
   maths: "bg-[var(--color-maths)]/10",
   svt: "bg-[var(--color-svt)]/10",
+};
+
+const SUBJECT_COLORS_SPOTLIGHT: Record<string, string> = {
+  physique: "rgba(99, 102, 241, 0.15)",
+  chimie: "rgba(16, 185, 129, 0.15)",
+  maths: "rgba(139, 92, 246, 0.15)",
+  svt: "rgba(245, 158, 11, 0.15)",
 };
 
 export default function YearPage() {
@@ -94,25 +124,26 @@ export default function YearPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {Object.entries(filiere.subjects).map(([subjectId, subject]) => (
-                <Link
-                  key={subjectId}
-                  href={`/${yearId}/${filiereId}/${subjectId}`}
-                  className="group relative p-5 rounded-xl border border-[var(--border-glass)] bg-[var(--bg-elevated)] hover:border-[var(--border-glass-bright)] hover:shadow-[var(--shadow-md)] transition-all"
-                >
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${SUBJECT_BG_CLASSES[subjectId] || "bg-gray-500/10"}`}>
-                    <span className={`text-[var(--color-${subjectId})]`}>
-                      {SUBJECT_ICONS[subjectId]}
-                    </span>
-                  </div>
-                  <h3 className="text-sm font-semibold text-[var(--text-primary)] group-hover:text-[var(--text-accent)] transition-colors">
-                    {localize(subject.title)}
-                  </h3>
-                  <p className="text-xs text-[var(--text-muted)] mt-1">
-                    {subject.topics.length} {t("topics")}
-                  </p>
-                  <div className="absolute top-3 right-3">
-                    <span className={`w-2 h-2 rounded-full inline-block ${SUBJECT_COLOR_CLASSES[subjectId] || "bg-gray-500"}`} />
-                  </div>
+                <Link key={subjectId} href={`/${yearId}/${filiereId}/${subjectId}`}>
+                  <SpotlightCard
+                    spotlightColor={SUBJECT_COLORS_SPOTLIGHT[subjectId] || "rgba(255,255,255,0.1)"}
+                    className="p-5 h-full"
+                  >
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${SUBJECT_BG_CLASSES[subjectId] || "bg-gray-500/10"}`}>
+                      <span className={`text-[var(--color-${subjectId})]`}>
+                        {SUBJECT_ICONS[subjectId]}
+                      </span>
+                    </div>
+                    <h3 className="text-sm font-semibold text-[var(--text-primary)] group-hover:text-[var(--text-accent)] transition-colors">
+                      {localize(subject.title)}
+                    </h3>
+                    <p className="text-xs text-[var(--text-muted)] mt-1">
+                      {subject.topics.length} {t("topics")}
+                    </p>
+                    <div className="absolute top-4 right-4">
+                      <span className={`w-2 h-2 rounded-full inline-block shadow-[0_0_8px_rgba(255,255,255,0.2)] ${SUBJECT_COLOR_CLASSES[subjectId] || "bg-gray-500"}`} />
+                    </div>
+                  </SpotlightCard>
                 </Link>
               ))}
             </div>

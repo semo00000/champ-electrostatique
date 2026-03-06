@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, IBM_Plex_Sans_Arabic, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, IBM_Plex_Sans_Arabic, JetBrains_Mono, Amiri } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -13,6 +13,7 @@ import { MobileNav } from "@/components/layout/MobileNav";
 import { LevelUpToast } from "@/components/gamification/LevelUpToast";
 import { ThemeTransition } from "@/components/layout/ThemeTransition";
 import { LangTransition } from "@/components/layout/LangTransition";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { getCurriculum } from "@/lib/curriculum";
 
 const spaceGrotesk = Space_Grotesk({
@@ -31,6 +32,13 @@ const ibmPlexArabic = IBM_Plex_Sans_Arabic({
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const amiri = Amiri({
+  variable: "--font-amiri",
+  weight: ["400", "700"],
+  subsets: ["arabic", "latin"],
   display: "swap",
 });
 
@@ -57,30 +65,32 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body
-        className={`${spaceGrotesk.variable} ${ibmPlexArabic.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${ibmPlexArabic.variable} ${jetbrainsMono.variable} ${amiri.variable} antialiased`}
       >
         <ThemeProvider>
+          <NuqsAdapter>
           <I18nProvider>
             <AuthProvider>
               <ProgressProvider>
                 <SubscriptionProvider>
-                <Header />
-                <div className="flex pt-[var(--spacing-header)]">
-                  <Sidebar curriculum={curriculum} />
-                  <main className="flex-1 md:ms-[var(--spacing-sidebar)] min-h-[calc(100vh-var(--spacing-header))] overflow-y-auto pb-16 md:pb-0">
-                    <div className="max-w-[var(--spacing-content-max)] mx-auto px-4 md:px-8 py-6">
-                      {children}
-                    </div>
-                  </main>
-                </div>
-                <MobileNav />
-                <LevelUpToast />
-                <ThemeTransition />
-                <LangTransition />
+                  <Header />
+                  <div className="flex pt-[var(--spacing-header)]">
+                    <Sidebar curriculum={curriculum} />
+                    <main className="flex-1 md:ms-[var(--spacing-sidebar)] min-h-[calc(100vh-var(--spacing-header))] overflow-y-auto pb-16 md:pb-0">
+                      <div className="max-w-[var(--spacing-content-max)] mx-auto px-4 md:px-8 py-6">
+                        {children}
+                      </div>
+                    </main>
+                  </div>
+                  <MobileNav />
+                  <LevelUpToast />
+                  <ThemeTransition />
+                  <LangTransition />
                 </SubscriptionProvider>
               </ProgressProvider>
             </AuthProvider>
           </I18nProvider>
+          </NuqsAdapter>
         </ThemeProvider>
       </body>
     </html>

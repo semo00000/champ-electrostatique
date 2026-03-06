@@ -25,4 +25,6 @@ export const COLLECTIONS = {
   PROGRESS: "progress",
   GAMIFICATION: "gamification",
   PAYMENTS: "payments",
+  FACTION_SCORES: "faction_scores",   // schoolId, userId, xpContributed, weeklyXP
+  BOSS_PROGRESS: "boss_progress",     // userId, bossId, status, bestScore, attempts
 } as const;

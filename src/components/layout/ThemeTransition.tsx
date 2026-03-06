@@ -10,8 +10,13 @@ import { useEffect, useRef, useState } from "react";
 export function ThemeTransition() {
   const { resolvedTheme } = useTheme();
   const isFirst = useRef(true);
+  const [mounted, setMounted] = useState(false);
   const [active, setActive] = useState(false);
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (isFirst.current) {
@@ -24,6 +29,8 @@ export function ThemeTransition() {
     return () => clearTimeout(t);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [resolvedTheme]);
+
+  if (!mounted) return null;
 
   return (
     <div

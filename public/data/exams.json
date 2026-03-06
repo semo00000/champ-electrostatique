@@ -1,0 +1,461 @@
+{
+  "exams": [
+    {
+      "title": "Examen National 2024 – Mathématiques SM Session Normale",
+      "titleAr": "الامتحان الوطني 2024 – الرياضيات SM الدورة العادية",
+      "year": 2024,
+      "subject": "maths",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "analyse",
+        "algèbre",
+        "probabilités",
+        "géométrie"
+      ],
+      "source": "static",
+      "id": "examen-national-2024-mathematiques-sm-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2024 – Mathématiques SM Session Rattrapage",
+      "titleAr": "الامتحان الوطني 2024 – الرياضيات SM دورة الاستدراك",
+      "year": 2024,
+      "subject": "maths",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "rattrapage",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "suites",
+        "intégration",
+        "équations différentielles"
+      ],
+      "source": "static",
+      "id": "examen-national-2024-mathematiques-sm-session-rattrapage",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2024 – Sciences Physiques SM Session Normale",
+      "titleAr": "الامتحان الوطني 2024 – العلوم الفيزيائية SM الدورة العادية",
+      "year": 2024,
+      "subject": "physique-chimie",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "électrostatique",
+        "mécanique",
+        "optique",
+        "chimie"
+      ],
+      "source": "static",
+      "id": "examen-national-2024-sciences-physiques-sm-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2024 – Sciences Physiques SM Session Rattrapage",
+      "titleAr": "الامتحان الوطني 2024 – العلوم الفيزيائية SM دورة الاستدراك",
+      "year": 2024,
+      "subject": "physique-chimie",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "rattrapage",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "électricité",
+        "ondes",
+        "chimie organique"
+      ],
+      "source": "static",
+      "id": "examen-national-2024-sciences-physiques-sm-session-rattrapage",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2024 – Sciences Physiques SP Session Normale",
+      "titleAr": "الامتحان الوطني 2024 – العلوم الفيزيائية SP الدورة العادية",
+      "year": 2024,
+      "subject": "physique-chimie",
+      "filiere": "sp",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "réactions chimiques",
+        "mécanique",
+        "électricité"
+      ],
+      "source": "static",
+      "id": "examen-national-2024-sciences-physiques-sp-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2024 – SVT SP Session Normale",
+      "titleAr": "الامتحان الوطني 2024 – علوم الحياة والأرض SP الدورة العادية",
+      "year": 2024,
+      "subject": "svt",
+      "filiere": "sp",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "génétique",
+        "immunologie",
+        "géologie"
+      ],
+      "source": "static",
+      "id": "examen-national-2024-svt-sp-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen Régional 2024 – Mathématiques SM – Fès-Meknès",
+      "titleAr": "الامتحان الجهوي 2024 – الرياضيات SM – فاس مكناس",
+      "year": 2024,
+      "subject": "maths",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "regional",
+      "session": "normale",
+      "region": "Fès-Meknès",
+      "hasCorrection": true,
+      "difficulty": 4,
+      "topics": [
+        "probabilités",
+        "suites"
+      ],
+      "source": "static",
+      "id": "examen-regional-2024-mathematiques-sm-fes-meknes",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen Régional 2024 – Mathématiques SM – Rabat-Salé-Kénitra",
+      "titleAr": "الامتحان الجهوي 2024 – الرياضيات SM – الرباط",
+      "year": 2024,
+      "subject": "maths",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "regional",
+      "session": "normale",
+      "region": "Rabat-Salé-Kénitra",
+      "hasCorrection": true,
+      "difficulty": 4,
+      "topics": [
+        "analyse",
+        "algèbre"
+      ],
+      "source": "static",
+      "id": "examen-regional-2024-mathematiques-sm-rabat-sale-kenitra",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen Régional 2024 – Sciences Physiques SM – Casablanca-Settat",
+      "titleAr": "الامتحان الجهوي 2024 – العلوم الفيزيائية SM – الدار البيضاء",
+      "year": 2024,
+      "subject": "physique-chimie",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "regional",
+      "session": "normale",
+      "region": "Casablanca-Settat",
+      "hasCorrection": true,
+      "difficulty": 4,
+      "topics": [
+        "électrostatique",
+        "mécanique"
+      ],
+      "source": "static",
+      "id": "examen-regional-2024-sciences-physiques-sm-casablanca-settat",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen Régional 2024 – Sciences Physiques SP – Marrakech-Safi",
+      "titleAr": "الامتحان الجهوي 2024 – العلوم الفيزيائية SP – مراكش",
+      "year": 2024,
+      "subject": "physique-chimie",
+      "filiere": "sp",
+      "level": "2bac",
+      "examType": "regional",
+      "session": "normale",
+      "region": "Marrakech-Safi",
+      "hasCorrection": true,
+      "difficulty": 4,
+      "topics": [
+        "chimie",
+        "ondes"
+      ],
+      "source": "static",
+      "id": "examen-regional-2024-sciences-physiques-sp-marrakech-safi",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2023 – Mathématiques SM Session Normale",
+      "titleAr": "الامتحان الوطني 2023 – الرياضيات SM الدورة العادية",
+      "year": 2023,
+      "subject": "maths",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "nombres complexes",
+        "intégrales",
+        "probabilités"
+      ],
+      "source": "static",
+      "id": "examen-national-2023-mathematiques-sm-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2023 – Sciences Physiques SM Session Normale",
+      "titleAr": "الامتحان الوطني 2023 – العلوم الفيزيائية SM الدورة العادية",
+      "year": 2023,
+      "subject": "physique-chimie",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "électrostatique",
+        "optique",
+        "thermodynamique"
+      ],
+      "source": "static",
+      "id": "examen-national-2023-sciences-physiques-sm-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2023 – Sciences Physiques SP Session Normale",
+      "titleAr": "الامتحان الوطني 2023 – العلوم الفيزيائية SP الدورة العادية",
+      "year": 2023,
+      "subject": "physique-chimie",
+      "filiere": "sp",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "électricité",
+        "mécanique quantique",
+        "chimie"
+      ],
+      "source": "static",
+      "id": "examen-national-2023-sciences-physiques-sp-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2023 – SVT SP Session Normale",
+      "titleAr": "الامتحان الوطني 2023 – علوم الحياة والأرض SP الدورة العادية",
+      "year": 2023,
+      "subject": "svt",
+      "filiere": "sp",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "neurobiologie",
+        "génétique moléculaire",
+        "géologie"
+      ],
+      "source": "static",
+      "id": "examen-national-2023-svt-sp-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2022 – Mathématiques SM Session Normale",
+      "titleAr": "الامتحان الوطني 2022 – الرياضيات SM الدورة العادية",
+      "year": 2022,
+      "subject": "maths",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "fonctions",
+        "limites",
+        "géométrie dans l'espace"
+      ],
+      "source": "static",
+      "id": "examen-national-2022-mathematiques-sm-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2022 – Sciences Physiques SM Session Normale",
+      "titleAr": "الامتحان الوطني 2022 – العلوم الفيزيائية SM الدورة العادية",
+      "year": 2022,
+      "subject": "physique-chimie",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "mécanique",
+        "ondes",
+        "noyau atomique"
+      ],
+      "source": "static",
+      "id": "examen-national-2022-sciences-physiques-sm-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2021 – Mathématiques SM Session Normale",
+      "titleAr": "الامتحان الوطني 2021 – الرياضيات SM الدورة العادية",
+      "year": 2021,
+      "subject": "maths",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "dérivées",
+        "coniques",
+        "suites récurrentes"
+      ],
+      "source": "static",
+      "id": "examen-national-2021-mathematiques-sm-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2021 – Sciences Physiques SM Session Normale",
+      "titleAr": "الامتحان الوطني 2021 – العلوم الفيزيائية SM الدورة العادية",
+      "year": 2021,
+      "subject": "physique-chimie",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "électricité",
+        "optique géométrique",
+        "acides/bases"
+      ],
+      "source": "static",
+      "id": "examen-national-2021-sciences-physiques-sm-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2020 – Mathématiques SM Session Rattrapage",
+      "titleAr": "الامتحان الوطني 2020 – الرياضيات SM دورة الاستدراك",
+      "year": 2020,
+      "subject": "maths",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "rattrapage",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "analyse",
+        "algèbre linéaire"
+      ],
+      "source": "static",
+      "id": "examen-national-2020-mathematiques-sm-session-rattrapage",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2020 – Sciences Physiques SM Session Normale",
+      "titleAr": "الامتحان الوطني 2020 – العلوم الفيزيائية SM الدورة العادية",
+      "year": 2020,
+      "subject": "physique-chimie",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "mécanique du solide",
+        "ondes sonores",
+        "oscillations électriques"
+      ],
+      "source": "static",
+      "id": "examen-national-2020-sciences-physiques-sm-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2019 – Mathématiques SM Session Normale",
+      "titleAr": "الامتحان الوطني 2019 – الرياضيات SM الدورة العادية",
+      "year": 2019,
+      "subject": "maths",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "logarithmes",
+        "exponentielles",
+        "géométrie analytique"
+      ],
+      "source": "static",
+      "id": "examen-national-2019-mathematiques-sm-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    },
+    {
+      "title": "Examen National 2019 – Sciences Physiques SM Session Normale",
+      "titleAr": "الامتحان الوطني 2019 – العلوم الفيزيائية SM الدورة العادية",
+      "year": 2019,
+      "subject": "physique-chimie",
+      "filiere": "sm",
+      "level": "2bac",
+      "examType": "national",
+      "session": "normale",
+      "hasCorrection": true,
+      "difficulty": 5,
+      "topics": [
+        "champ magnétique",
+        "induction",
+        "cinétique chimique"
+      ],
+      "source": "static",
+      "id": "examen-national-2019-sciences-physiques-sm-session-normale",
+      "scrapedAt": "2026-03-05T20:17:16.063Z"
+    }
+  ],
+  "lessons": [],
+  "scrapedAt": "2026-03-05T20:17:34.362Z",
+  "totalExams": 22,
+  "byYear": {
+    "2019": 2,
+    "2020": 2,
+    "2021": 2,
+    "2022": 2,
+    "2023": 4,
+    "2024": 10
+  },
+  "bySubject": {
+    "maths": 9,
+    "physique-chimie": 11,
+    "svt": 2
+  }
+}

@@ -6,12 +6,20 @@ import { useI18n } from "@/lib/i18n/context";
 import { getYearData, getFiliereData } from "@/lib/curriculum";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { notFound } from "next/navigation";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
 
 const SUBJECT_COLOR_CLASSES: Record<string, string> = {
   physique: "border-l-[var(--color-physique)]",
   chimie: "border-l-[var(--color-chimie)]",
   maths: "border-l-[var(--color-maths)]",
   svt: "border-l-[var(--color-svt)]",
+};
+
+const SUBJECT_COLORS_SPOTLIGHT: Record<string, string> = {
+  physique: "rgba(99, 102, 241, 0.15)",
+  chimie: "rgba(16, 185, 129, 0.15)",
+  maths: "rgba(139, 92, 246, 0.15)",
+  svt: "rgba(245, 158, 11, 0.15)",
 };
 
 const SUBJECT_DOT_CLASSES: Record<string, string> = {
@@ -54,47 +62,48 @@ export default function FilierePage() {
       </div>
 
       {/* Subjects */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-[minmax(0,1fr)]">
         {Object.entries(filiere.subjects).map(([subjectId, subject]) => (
-          <Link
-            key={subjectId}
-            href={`/${yearId}/${filiereId}/${subjectId}`}
-            className={`group p-6 rounded-xl border border-[var(--border-glass)] bg-[var(--bg-elevated)] hover:border-[var(--border-glass-bright)] hover:shadow-[var(--shadow-md)] transition-all border-l-4 ${SUBJECT_COLOR_CLASSES[subjectId] || ""}`}
-          >
-            <div className="flex items-start justify-between mb-4">
-              <div className="flex items-center gap-3">
-                <span className={`w-3 h-3 rounded-full ${SUBJECT_DOT_CLASSES[subjectId] || "bg-gray-500"}`} />
-                <h2 className="text-lg font-semibold text-[var(--text-primary)] group-hover:text-[var(--text-accent)] transition-colors">
-                  {localize(subject.title)}
-                </h2>
-              </div>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[var(--text-muted)] group-hover:text-[var(--text-accent)] transition-colors">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </div>
-
-            <div className="space-y-1">
-              {subject.topics.slice(0, 4).map((topic) => (
-                <div key={topic.id} className="flex items-center gap-2 text-xs text-[var(--text-secondary)]">
-                  <span className={`w-1.5 h-1.5 rounded-full ${topic.status === "complete" ? "bg-[var(--color-success)]" : "bg-[var(--text-muted)]"}`} />
-                  {localize(topic.title)}
+          <Link key={subjectId} href={`/${yearId}/${filiereId}/${subjectId}`}>
+            <SpotlightCard
+              spotlightColor={SUBJECT_COLORS_SPOTLIGHT[subjectId] || "rgba(255,255,255,0.1)"}
+              className={`p-6 h-full flex flex-col border-l-4 ${SUBJECT_COLOR_CLASSES[subjectId] || ""}`}
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <span className={`w-3 h-3 rounded-full ${SUBJECT_DOT_CLASSES[subjectId] || "bg-gray-500"}`} />
+                  <h2 className="text-lg font-semibold text-[var(--text-primary)] group-hover:text-[var(--text-accent)] transition-colors">
+                    {localize(subject.title)}
+                  </h2>
                 </div>
-              ))}
-              {subject.topics.length > 4 && (
-                <p className="text-xs text-[var(--text-muted)] mt-2">
-                  +{subject.topics.length - 4} {t("topics")}
-                </p>
-              )}
-            </div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[var(--text-muted)] group-hover:text-[var(--text-accent)] transition-colors">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </div>
 
-            <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[var(--border-glass)]">
-              <span className="text-xs text-[var(--text-muted)]">
-                {subject.topics.length} {t("topics")}
-              </span>
-              <span className="text-xs text-[var(--text-muted)]">
-                {subject.topics.filter((t) => t.status === "complete").length} {t("status.complete").toLowerCase()}
-              </span>
-            </div>
+              <div className="space-y-1 flex-1">
+                {subject.topics.slice(0, 4).map((topic) => (
+                  <div key={topic.id} className="flex items-center gap-2 text-xs text-[var(--text-secondary)]">
+                    <span className={`w-1.5 h-1.5 rounded-full ${topic.status === "complete" ? "bg-[var(--color-success)]" : "bg-[var(--text-muted)]"}`} />
+                    {localize(topic.title)}
+                  </div>
+                ))}
+                {subject.topics.length > 4 && (
+                  <p className="text-xs text-[var(--text-muted)] mt-2">
+                    +{subject.topics.length - 4} {t("topics")}
+                  </p>
+                )}
+              </div>
+
+              <div className="flex items-center gap-4 mt-6 pt-4 border-t border-[var(--border-glass)]">
+                <span className="text-xs text-[var(--text-muted)] font-medium">
+                  {subject.topics.length} {t("topics")}
+                </span>
+                <span className="text-xs text-[var(--text-muted)] font-medium">
+                  {subject.topics.filter((t) => t.status === "complete").length} {t("status.complete").toLowerCase()}
+                </span>
+              </div>
+            </SpotlightCard>
           </Link>
         ))}
       </div>

@@ -4,14 +4,18 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useProgress } from "@/lib/progress/context";
 import { useI18n } from "@/lib/i18n/context";
-import { levelProgress, xpForCurrentLevel, xpToNextLevel } from "@/lib/progress/xp";
+import { levelProgress, xpForCurrentLevel, xpToNextLevel, getRankInfo } from "@/lib/progress/xp";
 import { ActivityHeatmap } from "./ActivityHeatmap";
+import { BacCoinsDisplay } from "./BacCoinsDisplay";
+import { StreakFreezeModal } from "./StreakFreezeModal";
 
 export function GamificationDropdown() {
   const { gamification, allProgress } = useProgress();
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
+  const [freezeOpen, setFreezeOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const rankInfo = getRankInfo(gamification.xp);
 
   const progress = levelProgress(gamification.xp);
   const currentXP = xpForCurrentLevel(gamification.xp);
@@ -63,8 +67,8 @@ export function GamificationDropdown() {
             />
             <defs>
               <linearGradient id="xpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#6366f1"/>
-                <stop offset="100%" stopColor="#a78bfa"/>
+                <stop offset="0%" stopColor="#be123c"/>
+                <stop offset="100%" stopColor="#e11d48"/>
               </linearGradient>
             </defs>
           </svg>
@@ -77,6 +81,9 @@ export function GamificationDropdown() {
           <span className="text-xs font-semibold text-[var(--text-secondary)]">
             🔥{gamification.streakDays}
           </span>
+        )}
+        {gamification.bacCoins > 0 && (
+          <BacCoinsDisplay amount={gamification.bacCoins} size="sm" />
         )}
       </button>
 
@@ -119,7 +126,7 @@ export function GamificationDropdown() {
                   style={{
                     width: `${progress * 100}%`,
                     background: "var(--gradient-brand)",
-                    boxShadow: "var(--shadow-glow-indigo)",
+                    boxShadow: "var(--shadow-glow-crimson)",
                   }}
                 />
               </div>
@@ -159,6 +166,39 @@ export function GamificationDropdown() {
               ))}
             </div>
 
+            {/* BacCoins + Streak Freeze */}
+            <div className="flex items-center justify-between p-3 rounded-xl bg-[var(--bg-hover)] border border-[var(--border-glass)]">
+              <div className="flex items-center gap-2">
+                <span className="text-lg">🪙</span>
+                <div>
+                  <div className="text-xs font-semibold text-[var(--text-primary)]">
+                    {gamification.bacCoins} BacCoins
+                  </div>
+                  <div className="text-[10px] text-[var(--text-muted)]">🧊 {gamification.streakFreezeCount} freeze{gamification.streakFreezeCount !== 1 ? 's' : ''}</div>
+                </div>
+              </div>
+              <button
+                onClick={(e) => { e.stopPropagation(); setOpen(false); setFreezeOpen(true); }}
+                className="text-xs px-2.5 py-1 rounded-lg border border-[var(--border-glass)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[#be123c]/40 transition-all"
+              >
+                Boutique
+              </button>
+            </div>
+
+            {/* Rank  */}
+            {rankInfo && (
+              <div className="flex items-center justify-between p-3 rounded-xl bg-[var(--bg-hover)] border border-[var(--border-glass)]">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">{rankInfo.badgeEmoji}</span>
+                  <div>
+                    <div className="text-xs font-semibold text-[var(--text-primary)]">{rankInfo.label}</div>
+                    <div className="text-[10px] text-[var(--text-muted)]">Rang actuel</div>
+                  </div>
+                </div>
+                <div className="text-[10px] text-[var(--text-muted)]">{gamification.xp.toLocaleString()} XP</div>
+              </div>
+            )}
+
             {/* Activity heatmap */}
             <div>
               <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-2">
@@ -169,6 +209,7 @@ export function GamificationDropdown() {
           </motion.div>
         )}
       </AnimatePresence>
+      <StreakFreezeModal open={freezeOpen} onClose={() => setFreezeOpen(false)} />
     </div>
   );
 }

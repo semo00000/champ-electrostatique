@@ -161,7 +161,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                   {/* Status badges */}
                   <div className="flex items-center gap-1 flex-shrink-0">
                     {entry.hasSim && (
-                      <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-purple-500/20 text-purple-400">
+                      <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[#10b981]/20 text-[#10b981]">
                         SIM
                       </span>
                     )}

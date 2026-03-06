@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { useReducer, useCallback } from "react";
 import type { QuizQuestion, QuizState, QuizAction, UserAnswer } from "@/types/quiz";
 import { useI18n } from "@/lib/i18n/context";
+import { motion, AnimatePresence } from "framer-motion";
 import { QuestionCard } from "./QuestionCard";
 import { QuizProgress } from "./QuizProgress";
 import { ResultScreen } from "./ResultScreen";
@@ -180,12 +182,26 @@ export function QuizEngine({ questions, topicTitle, backHref }: QuizEngineProps)
       </div>
 
       {/* Question card */}
-      <QuestionCard
-        question={currentQuestion}
-        answered={state.answered}
-        userAnswer={state.userAnswers[state.currentIndex]}
-        onAnswer={(action) => dispatch(action)}
-      />
+      <div className="relative overflow-hidden min-h-[300px]">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={state.currentIndex}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="w-full absolute inset-0"
+            style={{ position: "relative" }}
+          >
+            <QuestionCard
+              question={currentQuestion}
+              answered={state.answered}
+              userAnswer={state.userAnswers[state.currentIndex]}
+              onAnswer={(action) => dispatch(action)}
+            />
+          </motion.div>
+        </AnimatePresence>
+      </div>
 
       {/* Next button (only visible after answering) */}
       {state.answered && (

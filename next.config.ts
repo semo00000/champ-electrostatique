@@ -8,7 +8,7 @@ const withSerwist = withSerwistInit({
 });
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  // No "standalone" output — Appwrite Sites runs Next.js natively from .next/
   // Acknowledge turbopack for next dev (serwist uses webpack, so build with --webpack)
   turbopack: {},
   // Prevent node-appwrite from being bundled into client code

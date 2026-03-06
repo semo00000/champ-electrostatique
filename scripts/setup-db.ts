@@ -11,6 +11,8 @@ const COLLECTIONS = {
   PROGRESS: "progress",
   GAMIFICATION: "gamification",
   PAYMENTS: "payments",
+  FACTION_SCORES: "faction_scores",
+  BOSS_PROGRESS: "boss_progress",
 } as const;
 
 async function main() {
@@ -45,6 +47,8 @@ async function main() {
   await setupProgress(db);
   await setupGamification(db);
   await setupPayments(db);
+  await setupFactionScores(db);
+  await setupBossProgress(db);
 
   console.log("\nDatabase setup complete.");
 }
@@ -266,6 +270,25 @@ async function setupGamification(db: Databases) {
   await tryCreate("attr activityMap", () =>
     db.createStringAttribute(DATABASE_ID, id, "activityMap", 100000, true)
   );
+  // New BacCoins / Faction / Rank attributes
+  await tryCreate("attr bacCoins", () =>
+    db.createIntegerAttribute(DATABASE_ID, id, "bacCoins", false, 0)
+  );
+  await tryCreate("attr streakFreezeCount", () =>
+    db.createIntegerAttribute(DATABASE_ID, id, "streakFreezeCount", false, 0)
+  );
+  await tryCreate("attr streakFreezeUsedAt", () =>
+    db.createStringAttribute(DATABASE_ID, id, "streakFreezeUsedAt", 30, false)
+  );
+  await tryCreate("attr rank", () =>
+    db.createStringAttribute(DATABASE_ID, id, "rank", 50, false)
+  );
+  await tryCreate("attr schoolId", () =>
+    db.createStringAttribute(DATABASE_ID, id, "schoolId", 100, false)
+  );
+  await tryCreate("attr earnedRewards", () =>
+    db.createStringAttribute(DATABASE_ID, id, "earnedRewards", 100000, false)
+  );
 
   await waitForAttributes(db, id);
 
@@ -346,6 +369,107 @@ async function setupPayments(db: Databases) {
     db.createIndex(DATABASE_ID, id, "by_subscription", IndexType.Key, [
       "stripeSubscriptionId",
     ])
+  );
+}
+
+// ---------------------------------------------------------------------------
+// faction_scores — per-user faction membership and contribution
+// ---------------------------------------------------------------------------
+async function setupFactionScores(db: Databases) {
+  const id = COLLECTIONS.FACTION_SCORES;
+  console.log(`\nSetting up collection: ${id}`);
+
+  await tryCreate("collection", () =>
+    db.createCollection(
+      DATABASE_ID,
+      id,
+      "Faction Scores",
+      [Permission.read(Role.any())],
+      true // documentSecurity enabled
+    )
+  );
+
+  await tryCreate("attr userId", () =>
+    db.createStringAttribute(DATABASE_ID, id, "userId", 36, true)
+  );
+  await tryCreate("attr schoolId", () =>
+    db.createStringAttribute(DATABASE_ID, id, "schoolId", 100, true)
+  );
+  await tryCreate("attr xpContributed", () =>
+    db.createIntegerAttribute(DATABASE_ID, id, "xpContributed", true, 0)
+  );
+  await tryCreate("attr weeklyXpContributed", () =>
+    db.createIntegerAttribute(DATABASE_ID, id, "weeklyXpContributed", true, 0)
+  );
+  await tryCreate("attr updatedAt", () =>
+    db.createStringAttribute(DATABASE_ID, id, "updatedAt", 30, true)
+  );
+
+  await waitForAttributes(db, id);
+
+  await tryCreate("idx by_user", () =>
+    db.createIndex(DATABASE_ID, id, "by_user", IndexType.Unique, ["userId"])
+  );
+  await tryCreate("idx by_school", () =>
+    db.createIndex(DATABASE_ID, id, "by_school", IndexType.Key, ["schoolId"])
+  );
+}
+
+// ---------------------------------------------------------------------------
+// boss_progress — per-user per-boss fight progress
+// ---------------------------------------------------------------------------
+async function setupBossProgress(db: Databases) {
+  const id = COLLECTIONS.BOSS_PROGRESS;
+  console.log(`\nSetting up collection: ${id}`);
+
+  await tryCreate("collection", () =>
+    db.createCollection(
+      DATABASE_ID,
+      id,
+      "Boss Progress",
+      [],
+      true // documentSecurity enabled
+    )
+  );
+
+  await tryCreate("attr userId", () =>
+    db.createStringAttribute(DATABASE_ID, id, "userId", 36, true)
+  );
+  await tryCreate("attr bossId", () =>
+    db.createStringAttribute(DATABASE_ID, id, "bossId", 100, true)
+  );
+  await tryCreate("attr status", () =>
+    db.createEnumAttribute(
+      DATABASE_ID,
+      id,
+      "status",
+      ["locked", "unlocked", "attempted", "defeated"],
+      true
+    )
+  );
+  await tryCreate("attr bestScore", () =>
+    db.createIntegerAttribute(DATABASE_ID, id, "bestScore", false)
+  );
+  await tryCreate("attr bestScoreDate", () =>
+    db.createStringAttribute(DATABASE_ID, id, "bestScoreDate", 30, false)
+  );
+  await tryCreate("attr attempts", () =>
+    db.createIntegerAttribute(DATABASE_ID, id, "attempts", true, 0)
+  );
+  await tryCreate("attr earnedRewards", () =>
+    db.createStringAttribute(DATABASE_ID, id, "earnedRewards", 10000, false)
+  );
+
+  await waitForAttributes(db, id);
+
+  await tryCreate("idx user_boss", () =>
+    db.createIndex(DATABASE_ID, id, "user_boss", IndexType.Unique, [
+      "userId",
+      "bossId",
+    ])
+  );
+  await tryCreate("idx by_user", () =>
+    db.createIndex(DATABASE_ID, id, "by_user", IndexType.Key, ["userId"])
   );
 }
 

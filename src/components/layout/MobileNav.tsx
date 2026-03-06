@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useI18n } from "@/lib/i18n/context";
+import { motion } from "framer-motion";
 
 const NAV_ITEMS = [
   {
@@ -36,6 +37,16 @@ const NAV_ITEMS = [
     ),
   },
   {
+    key: "nav.faction",
+    href: "/faction",
+    icon: (_active: boolean) => <span className="text-xl leading-none">⚔️</span>,
+  },
+  {
+    key: "nav.boss",
+    href: "/boss",
+    icon: (_active: boolean) => <span className="text-xl leading-none">💀</span>,
+  },
+  {
     key: "nav.profile",
     href: "/auth/login",
     icon: (active: boolean) => (
@@ -59,19 +70,6 @@ export function MobileNav() {
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 border-t border-[var(--border-glass)] bg-[var(--bg-glass)] backdrop-blur-xl backdrop-saturate-150 pb-[env(safe-area-inset-bottom)]">
       <div className="relative flex items-stretch h-14">
-        {/* Animated pill indicator */}
-        {activeIndex >= 0 && (
-          <div
-            className="absolute top-1 h-[calc(100%-8px)] rounded-xl transition-all duration-300 ease-out"
-            style={{
-              left: `calc(${activeIndex * 25}% + 4px)`,
-              width: "calc(25% - 8px)",
-              background: "var(--color-info-bg)",
-              border: "1px solid var(--color-info-border)",
-            }}
-          />
-        )}
-
         {NAV_ITEMS.map((item, idx) => {
           const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
           return (
@@ -82,8 +80,19 @@ export function MobileNav() {
                 isActive ? "text-[var(--text-accent)]" : "text-[var(--text-muted)]"
               }`}
             >
-              {item.icon(isActive)}
-              <span className={`transition-opacity ${isActive ? "opacity-100" : "opacity-70"}`}>
+              {isActive && (
+                <motion.div
+                  layoutId="mobileNavPill"
+                  className="absolute inset-x-1 inset-y-1 rounded-xl pointer-events-none"
+                  style={{
+                    background: "var(--color-info-bg)",
+                    border: "1px solid var(--color-info-border)",
+                  }}
+                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                />
+              )}
+              <span className="relative z-10">{item.icon(isActive)}</span>
+              <span className={`relative z-10 transition-opacity ${isActive ? "opacity-100" : "opacity-70"}`}>
                 {t(item.key)}
               </span>
             </Link>

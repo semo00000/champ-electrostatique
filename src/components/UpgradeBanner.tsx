@@ -29,7 +29,7 @@ export function UpgradeBanner({ isFirstTopic, hasQuiz }: UpgradeBannerProps) {
         {/* Icon */}
         <div
           className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center"
-          style={{ background: "var(--gradient-brand)", boxShadow: "var(--shadow-glow-indigo)" }}
+          style={{ background: "var(--gradient-moroccan)", boxShadow: "var(--shadow-glow-crimson)" }}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
@@ -46,7 +46,7 @@ export function UpgradeBanner({ isFirstTopic, hasQuiz }: UpgradeBannerProps) {
         <Link
           href={user ? "/pricing" : "/auth/login"}
           className="shrink-0 px-4 py-2 rounded-xl text-white text-xs font-bold hover:opacity-90 active:scale-[0.97] transition-all"
-          style={{ background: "var(--gradient-brand)", boxShadow: "var(--shadow-glow-indigo)" }}
+          style={{ background: "var(--gradient-moroccan)", boxShadow: "var(--shadow-glow-crimson)" }}
         >
           {t("paywall.unlock")}
         </Link>

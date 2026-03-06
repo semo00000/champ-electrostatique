@@ -1,0 +1,18 @@
+{
+  "servers": {
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "21st-dev": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@21st-dev/magic@latest", "API_KEY=\"6d323b643482ca8383d830ef8ee7be2190b61dad89b89a0a7a24282dd76d61c1\""]
+    },
+    "browser-tools": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["@agentdeskai/browser-tools-server@1.2.0"]
+    }
+  }
+}

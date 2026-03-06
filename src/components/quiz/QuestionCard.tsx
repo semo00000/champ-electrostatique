@@ -5,6 +5,7 @@ import { useI18n } from "@/lib/i18n/context";
 import { MathText } from "@/components/lesson/sections/MathText";
 import { BlockMath } from "react-katex";
 import type { QuizQuestion, QuizAction, UserAnswer } from "@/types/quiz";
+import { motion, AnimatePresence } from "framer-motion";
 import "katex/dist/katex.min.css";
 
 interface QuestionCardProps {
@@ -23,8 +24,19 @@ export function QuestionCard({ question, answered, userAnswer, onAnswer }: Quest
   const questionText = localize(question.question);
   const isCorrect = userAnswer?.correct;
 
+  // Shake animation for wrong answers, pulse for correct
+  const cardAnimation = answered
+    ? isCorrect
+      ? { scale: [1, 1.02, 1], boxShadow: ["0px 0px 0px rgba(0,0,0,0)", "0px 0px 20px rgba(16,185,129,0.3)", "0px 0px 0px rgba(0,0,0,0)"] }
+      : { x: [-10, 10, -10, 10, 0] }
+    : {};
+
   return (
-    <div className="rounded-2xl border border-[var(--border-glass)] bg-[var(--bg-card)] overflow-hidden transition-all">
+    <motion.div 
+      animate={cardAnimation}
+      transition={{ duration: 0.4 }}
+      className="rounded-2xl border border-[var(--border-glass)] bg-[var(--bg-card)] overflow-hidden transition-all shadow-[var(--shadow-md)]"
+    >
       {/* Question header */}
       <div className="p-6">
         <h3 className="text-base md:text-lg font-medium text-[var(--text-primary)] leading-relaxed">
@@ -164,7 +176,7 @@ export function QuestionCard({ question, answered, userAnswer, onAnswer }: Quest
           )}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
 

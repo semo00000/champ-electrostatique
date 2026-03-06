@@ -2,6 +2,7 @@
 
 import { useI18n } from "@/lib/i18n/context";
 import type { LessonData, LessonSection } from "@/types/lesson";
+import { motion } from "framer-motion";
 import { HeadingSection } from "./sections/HeadingSection";
 import { ParagraphSection } from "./sections/ParagraphSection";
 import { FormulaSection } from "./sections/FormulaSection";
@@ -67,12 +68,19 @@ export function LessonRenderer({ lesson, simulationUrl }: LessonRendererProps) {
 
       {/* Sections */}
       {lesson.sections.map((section, i) => (
-        <SectionRenderer
+        <motion.div
           key={i}
-          section={section}
-          headingId={section.type === "heading" ? getHeadingId() : undefined}
-          simulationUrl={simulationUrl}
-        />
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5, delay: Math.min(i * 0.05, 0.5) }}
+        >
+          <SectionRenderer
+            section={section}
+            headingId={section.type === "heading" ? getHeadingId() : undefined}
+            simulationUrl={simulationUrl}
+          />
+        </motion.div>
       ))}
     </article>
   );

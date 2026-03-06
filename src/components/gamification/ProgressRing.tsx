@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 interface ProgressRingProps {
   percent: number;
   size?: number;
@@ -22,8 +24,8 @@ export function ProgressRing({
   const center = size / 2;
 
   return (
-    <div className="relative" style={{ width: size, height: size }}>
-      <svg width={size} height={size} className="-rotate-90">
+    <div className="relative group" style={{ width: size, height: size }}>
+      <svg width={size} height={size} className="-rotate-90 drop-shadow-[0_0_8px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_0_12px_var(--color-info)] transition-all">
         <circle
           cx={center}
           cy={center}
@@ -32,7 +34,7 @@ export function ProgressRing({
           stroke="var(--bg-hover)"
           strokeWidth={strokeWidth}
         />
-        <circle
+        <motion.circle
           cx={center}
           cy={center}
           r={radius}
@@ -41,8 +43,9 @@ export function ProgressRing({
           strokeWidth={strokeWidth}
           strokeLinecap="round"
           strokeDasharray={circumference}
-          strokeDashoffset={offset}
-          className="transition-all duration-500"
+          initial={{ strokeDashoffset: circumference }}
+          animate={{ strokeDashoffset: offset }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
         />
       </svg>
       {label && (

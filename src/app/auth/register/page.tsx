@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth/context";
 import { useI18n } from "@/lib/i18n/context";
+import { MoroccanArchSVG, ZelligeSVG, GoldCornerAccent } from "@/components/ui/MoroccanDecor";
 
 export default function RegisterPage() {
   const { t } = useI18n();
@@ -31,15 +32,26 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-[70vh] flex items-center justify-center py-12 px-4">
-      <div className="w-full max-w-sm">
-        {/* Logo */}
-        <div className="flex flex-col items-center mb-8">
+    <div className="min-h-[80vh] flex items-center justify-center py-12 px-4">
+      {/* Background zellige watermark */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
+        <ZelligeSVG variant="8star" opacity={0.03} color="#d97706" size={80} />
+      </div>
+
+      <div className="w-full max-w-sm relative z-10">
+        {/* Arch + logo above card */}
+        <div className="flex flex-col items-center mb-6">
+          <MoroccanArchSVG
+            color="var(--text-gold)"
+            width={100}
+            height={64}
+            className="mb-3 opacity-60"
+          />
           <div
             className="w-12 h-12 rounded-2xl flex items-center justify-center text-white font-bold text-lg mb-4"
-            style={{ background: "var(--gradient-brand)", boxShadow: "var(--shadow-glow-indigo)" }}
+            style={{ background: "var(--gradient-moroccan)", boxShadow: "var(--shadow-glow-crimson)" }}
           >
-            B
+            ✦
           </div>
           <h1 className="text-2xl font-bold text-[var(--text-primary)] tracking-tight">
             {t("auth.register")}
@@ -48,8 +60,18 @@ export default function RegisterPage() {
         </div>
 
         {/* Card */}
-        <div className="p-6 rounded-2xl border border-[var(--border-glass)] bg-[var(--bg-card)]">
-          <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="relative p-6 rounded-2xl border border-[var(--border-glass)] bg-[var(--bg-card)] overflow-hidden">
+          {/* Zellige watermark inside card */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <ZelligeSVG variant="diamond" opacity={0.025} color="#be123c" size={48} />
+          </div>
+          {/* Gold corner accents */}
+          <GoldCornerAccent position="top-left" size={28} />
+          <GoldCornerAccent position="top-right" size={28} />
+          <GoldCornerAccent position="bottom-left" size={28} />
+          <GoldCornerAccent position="bottom-right" size={28} />
+
+          <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
             {error && (
               <div className="p-3.5 rounded-xl bg-[var(--color-error-bg)] border border-[var(--color-error-border)] text-sm text-[var(--color-error)] flex items-center gap-2">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0">
@@ -71,7 +93,7 @@ export default function RegisterPage() {
                 onChange={(e) => setName(e.target.value)}
                 required
                 autoComplete="name"
-                className="w-full px-4 py-3 rounded-xl border border-[var(--border-glass)] bg-[var(--bg-primary)] text-[var(--text-primary)] text-sm focus:outline-none focus:border-[var(--border-focus)] focus:shadow-[0_0_0_3px_var(--color-info-bg)] transition-all placeholder:text-[var(--text-muted)]"
+                className="w-full px-4 py-3 rounded-xl border border-[var(--border-glass)] bg-[var(--bg-primary)] text-[var(--text-primary)] text-sm focus:outline-none focus:border-[var(--border-focus)] focus:shadow-[0_0_0_3px_rgba(190,18,60,0.15)] transition-all placeholder:text-[var(--text-muted)]"
                 placeholder={t("auth.namePlaceholder")}
               />
             </div>
@@ -86,7 +108,7 @@ export default function RegisterPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 autoComplete="email"
-                className="w-full px-4 py-3 rounded-xl border border-[var(--border-glass)] bg-[var(--bg-primary)] text-[var(--text-primary)] text-sm focus:outline-none focus:border-[var(--border-focus)] focus:shadow-[0_0_0_3px_var(--color-info-bg)] transition-all placeholder:text-[var(--text-muted)]"
+                className="w-full px-4 py-3 rounded-xl border border-[var(--border-glass)] bg-[var(--bg-primary)] text-[var(--text-primary)] text-sm focus:outline-none focus:border-[var(--border-focus)] focus:shadow-[0_0_0_3px_rgba(190,18,60,0.15)] transition-all placeholder:text-[var(--text-muted)]"
                 placeholder={t("auth.emailPlaceholder")}
               />
             </div>
@@ -102,7 +124,7 @@ export default function RegisterPage() {
                 required
                 minLength={8}
                 autoComplete="new-password"
-                className="w-full px-4 py-3 rounded-xl border border-[var(--border-glass)] bg-[var(--bg-primary)] text-[var(--text-primary)] text-sm focus:outline-none focus:border-[var(--border-focus)] focus:shadow-[0_0_0_3px_var(--color-info-bg)] transition-all"
+                className="w-full px-4 py-3 rounded-xl border border-[var(--border-glass)] bg-[var(--bg-primary)] text-[var(--text-primary)] text-sm focus:outline-none focus:border-[var(--border-focus)] focus:shadow-[0_0_0_3px_rgba(190,18,60,0.15)] transition-all placeholder:text-[var(--text-muted)]"
                 placeholder={t("auth.passwordPlaceholder")}
               />
             </div>
@@ -111,7 +133,7 @@ export default function RegisterPage() {
               type="submit"
               disabled={loading}
               className="w-full py-3 rounded-xl text-white font-semibold text-sm hover:opacity-90 active:scale-[0.98] disabled:opacity-50 transition-all mt-2"
-              style={{ background: "var(--gradient-brand)", boxShadow: loading ? "none" : "var(--shadow-glow-indigo)" }}
+              style={{ background: "var(--gradient-moroccan)", boxShadow: loading ? "none" : "var(--shadow-glow-crimson)" }}
             >
               {loading ? (
                 <span className="inline-flex items-center gap-2 justify-center">
@@ -127,7 +149,7 @@ export default function RegisterPage() {
 
         <p className="text-sm text-center text-[var(--text-muted)] mt-5">
           {t("auth.alreadyHaveAccount")}{" "}
-          <Link href="/auth/login" className="text-[var(--text-accent)] font-semibold hover:text-[var(--text-accent-bright)] transition-colors">
+          <Link href="/auth/login" className="font-semibold transition-colors" style={{ color: "var(--text-accent)" }}>
             {t("auth.login")}
           </Link>
         </p>
