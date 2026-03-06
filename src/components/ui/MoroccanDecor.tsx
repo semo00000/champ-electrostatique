@@ -185,13 +185,19 @@ export function GoldCornerAccent({
 /**
  * MoroccanStarSeparator — ornamental star-dot divider line.
  */
-export function MoroccanStarSeparator({ className = "" }: { className?: string }) {
+export function MoroccanStarSeparator({
+  className = "",
+  color = "var(--text-gold)",
+}: {
+  className?: string;
+  color?: string;
+}) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[var(--border-glass-bright)] to-transparent" />
-      <span className="text-[var(--text-gold)] text-xs opacity-70">✦</span>
-      <span className="text-[var(--text-gold)] text-[10px] opacity-40">✦</span>
-      <span className="text-[var(--text-gold)] text-xs opacity-70">✦</span>
+      <span className="text-xs opacity-70" style={{ color }}>✦</span>
+      <span className="text-[10px] opacity-40" style={{ color }}>✦</span>
+      <span className="text-xs opacity-70" style={{ color }}>✦</span>
       <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[var(--border-glass-bright)] to-transparent" />
     </div>
   );
