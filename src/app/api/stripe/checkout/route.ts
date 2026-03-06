@@ -9,7 +9,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { stripe } from "@/lib/stripe";
+import { getStripe, isStripeConfigured } from "@/lib/stripe";
 import { PLANS } from "@/config/pricing";
 import { requireSession } from "@/lib/auth/verify-session";
 
@@ -18,6 +18,13 @@ const CheckoutSchema = z.object({
 });
 
 export async function POST(req: NextRequest) {
+  if (!isStripeConfigured()) {
+    return NextResponse.json(
+      { error: "Payments are currently disabled." },
+      { status: 503 }
+    );
+  }
+
   // 1. Verify Appwrite session — userId comes from the verified token, NOT the body
   let user: Awaited<ReturnType<typeof requireSession>>;
   try {
@@ -51,6 +58,7 @@ export async function POST(req: NextRequest) {
   // 4. Create Stripe Checkout Session
   try {
     const origin = req.headers.get("origin") ?? process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+    const stripe = getStripe();
 
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",

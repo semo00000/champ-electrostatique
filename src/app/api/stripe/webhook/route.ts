@@ -12,7 +12,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
-import { stripe } from "@/lib/stripe";
+import { getStripe, isStripeConfigured } from "@/lib/stripe";
 import { getServerDatabases } from "@/lib/appwrite-server";
 import { DATABASE_ID, COLLECTIONS } from "@/lib/appwrite";
 import { Query, ID, Permission, Role } from "node-appwrite";
@@ -26,6 +26,13 @@ export const config = {
 export async function POST(req: NextRequest) {
   const sig = req.headers.get("stripe-signature");
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+
+  if (!isStripeConfigured()) {
+    return NextResponse.json(
+      { error: "Payments are currently disabled." },
+      { status: 503 }
+    );
+  }
 
   if (!sig || !webhookSecret) {
     return NextResponse.json(
@@ -45,6 +52,7 @@ export async function POST(req: NextRequest) {
   // Verify the event came from Stripe (not forged)
   let event: Stripe.Event;
   try {
+    const stripe = getStripe();
     event = stripe.webhooks.constructEvent(rawBody, sig, webhookSecret);
   } catch (err) {
     const msg = err instanceof Error ? err.message : "Unknown error";
@@ -53,6 +61,7 @@ export async function POST(req: NextRequest) {
   }
 
   const db = getServerDatabases();
+  const stripe = getStripe();
 
   try {
     switch (event.type) {
